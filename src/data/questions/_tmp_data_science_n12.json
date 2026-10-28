@@ -1,0 +1,322 @@
+[
+  {
+    "id": "data_science-221",
+    "domaine": "data_science",
+    "sous_theme": "mlops",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le MLOps et quels problèmes résout-il ?",
+    "reponse_reference": "Le MLOps regroupe les pratiques, outils et processus qui industrialisent le cycle de vie des modèles de machine learning, de l'entraînement au déploiement et au suivi en production. Il répond aux problèmes de reproductibilité des expériences, de passage à l'échelle des déploiements et de dégradation silencieuse des modèles dans le temps. Il s'inspire du DevOps en y ajoutant la gestion des données, des modèles et des expérimentations.",
+    "mots_cles_attendus": [
+      "industrialiser",
+      "cycle de vie",
+      "reproductibilité",
+      "production",
+      "DevOps"
+    ]
+  },
+  {
+    "id": "data_science-222",
+    "domaine": "data_science",
+    "sous_theme": "monitoring",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la dérive de données et la dérive de concept, et en quoi diffèrent-elles ?",
+    "reponse_reference": "La dérive de données, ou data drift, survient quand la distribution des variables d'entrée change en production, par exemple si les montants moyens des transactions augmentent. La dérive de concept survient quand la relation entre les entrées et la cible change, par exemple si les clients réagissent différemment aux mêmes offres. La seconde est plus difficile à détecter car elle exige des étiquettes, et les deux justifient un suivi continu et des réentraînements planifiés.",
+    "mots_cles_attendus": [
+      "distribution des entrées",
+      "relation entrée-cible",
+      "étiquettes",
+      "suivi continu",
+      "réentraînement"
+    ]
+  },
+  {
+    "id": "data_science-223",
+    "domaine": "data_science",
+    "sous_theme": "mlops",
+    "niveau": 12,
+    "type": "definition",
+    "question": "En quoi la CI/CD appliquée au machine learning diffère-t-elle de la CI/CD logicielle classique ?",
+    "reponse_reference": "En plus des tests de code, le pipeline CI/CD de machine learning doit valider les données, réentraîner le modèle, évaluer ses performances sur un jeu de validation et les comparer au modèle en production avant tout déploiement. Il gère aussi la version des jeux de données, des hyperparamètres et des artefacts de modèles. Une étape de validation automatique bloque le déploiement si le nouveau modèle régresse sur une métrique garde-fou.",
+    "mots_cles_attendus": [
+      "valider les données",
+      "réentraîner",
+      "comparer au modèle en production",
+      "versionner",
+      "bloquer"
+    ]
+  },
+  {
+    "id": "data_science-224",
+    "domaine": "data_science",
+    "sous_theme": "mlops",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un feature store et quel problème récurrent résout-il ?",
+    "reponse_reference": "Un feature store centralise le calcul, le stockage et la distribution des variables utilisées par les modèles, avec versionnage et documentation. Il garantit que les mêmes variables, calculées de façon identique, sont utilisées à l'entraînement et à l'inférence en ligne et en batch. Il élimine la duplication des calculs entre équipes et réduit le risque d'incohérence entre environnements.",
+    "mots_cles_attendus": [
+      "centraliser",
+      "versionner",
+      "mêmes variables",
+      "entraînement et inférence",
+      "incohérence"
+    ]
+  },
+  {
+    "id": "data_science-225",
+    "domaine": "data_science",
+    "sous_theme": "explicabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'explicabilité d'un modèle et pourquoi devient-elle une exigence ?",
+    "reponse_reference": "L'explicabilité désigne la capacité à comprendre et à expliquer pourquoi un modèle produit une prédiction donnée. Elle devient une exigence réglementaire, par exemple avec l'AI Act européen, dans les domaines sensibles comme le crédit, le recrutement ou la santé. Elle permet aussi de diagnostiquer les erreurs, de détecter des biais et de bâtir la confiance des utilisateurs et des régulateurs.",
+    "mots_cles_attendus": [
+      "comprendre",
+      "pourquoi",
+      "réglementation",
+      "domaines sensibles",
+      "confiance"
+    ]
+  },
+  {
+    "id": "data_science-226",
+    "domaine": "data_science",
+    "sous_theme": "explicabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que SHAP et comment quantifie-t-il l'importance des variables ?",
+    "reponse_reference": "SHAP est une méthode d'explicabilité fondée sur les valeurs de Shapley de la théorie des jeux coopératifs, qui attribue à chaque variable une contribution additive à l'écart entre la prédiction et la prédiction moyenne. La somme des contributions de toutes les variables reconstitue exactement la prédiction du modèle. Les graphiques SHAP, comme les summary plots ou les waterfall plots, permettent d'expliquer une prédiction individuelle ou le comportement global du modèle.",
+    "mots_cles_attendus": [
+      "Shapley",
+      "contribution additive",
+      "écart à la moyenne",
+      "prédiction individuelle",
+      "waterfall"
+    ]
+  },
+  {
+    "id": "data_science-227",
+    "domaine": "data_science",
+    "sous_theme": "explicabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que LIME et en quoi son approche diffère-t-elle de celle de SHAP ?",
+    "reponse_reference": "LIME explique une prédiction individuelle en générant des perturbations locales de l'observation, en interrogeant le modèle boîte noire sur ces variantes, puis en ajustant un modèle simple et interprétable sur ce voisinage. Contrairement à SHAP, ses explications sont locales et approximatives, et peuvent varier selon l'échantillonnage des perturbations. SHAP offre des garanties théoriques plus fortes, mais LIME reste simple et indépendant du modèle.",
+    "mots_cles_attendus": [
+      "perturbations",
+      "voisinage",
+      "modèle simple",
+      "local",
+      "approximatif"
+    ]
+  },
+  {
+    "id": "data_science-228",
+    "domaine": "data_science",
+    "sous_theme": "ethique",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un biais algorithmique et quelles en sont les principales sources ?",
+    "reponse_reference": "Le biais algorithmique désigne des erreurs systématiques qui pénalisent ou favorisent certains groupes dans les prédictions d'un modèle. Ses sources principales sont les biais historiques présents dans les données d'entraînement, les échantillons non représentatifs, les variables proxy corrélées à des attributs sensibles, et les choix de modélisation. Un modèle n'est pas neutre par nature : il reproduit et peut amplifier les déséquilibres des données qu'on lui fournit.",
+    "mots_cles_attendus": [
+      "erreurs systématiques",
+      "groupes",
+      "biais historiques",
+      "variables proxy",
+      "amplifier"
+    ]
+  },
+  {
+    "id": "data_science-229",
+    "domaine": "data_science",
+    "sous_theme": "ethique",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le critère d'égalité des chances en équité algorithmique ?",
+    "reponse_reference": "L'égalité des chances exige que les taux de vrais positifs soient identiques entre groupes protégés : la proportion de candidats méritants correctement acceptés doit être la même pour tous. Elle tolère des taux de faux positifs différents, contrairement à d'autres critères comme la parité démographique qui impose des proportions de prédictions positives égales. Chaque critère d'équité incarne un choix normatif différent, et certains sont mathématiquement incompatibles entre eux sauf cas parfaits.",
+    "mots_cles_attendus": [
+      "taux de vrais positifs",
+      "groupes",
+      "faux positifs",
+      "choix normatif",
+      "incompatibles"
+    ]
+  },
+  {
+    "id": "data_science-230",
+    "domaine": "data_science",
+    "sous_theme": "mlops",
+    "niveau": 12,
+    "type": "definition",
+    "question": "À quoi sert le suivi des expériences avec des outils comme MLflow ?",
+    "reponse_reference": "Le suivi des expériences enregistre automatiquement, pour chaque essai, les paramètres, les métriques, les jeux de données utilisés et les artefacts produits, dont le modèle. Il permet de comparer les essais entre eux, de reproduire exactement un résultat passé et de tracer la provenance d'un modèle déployé. Sans ce suivi, la recherche d'hyperparamètres devient vite un désordre impossible à auditer.",
+    "mots_cles_attendus": [
+      "enregistrer",
+      "paramètres",
+      "métriques",
+      "reproduire",
+      "provenance"
+    ]
+  },
+  {
+    "id": "data_science-231",
+    "domaine": "data_science",
+    "sous_theme": "deploiement",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement en mode fantôme (shadow deployment) et un déploiement canari (canary) ?",
+    "reponse_reference": "Le déploiement fantôme fait tourner le nouveau modèle en parallèle du modèle en production sur les mêmes requêtes, sans que ses prédictions soient servies, pour évaluer ses performances en conditions réelles sans risque. Le déploiement canari route une petite fraction du trafic vers le nouveau modèle, puis augmente progressivement cette part en surveillant les métriques. Les deux stratégies limitent l'impact d'un modèle défaillant avant sa généralisation.",
+    "mots_cles_attendus": [
+      "en parallèle",
+      "sans servir",
+      "petite fraction",
+      "progressivement",
+      "risque limité"
+    ]
+  },
+  {
+    "id": "data_science-232",
+    "domaine": "data_science",
+    "sous_theme": "feature_engineering",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le feature engineering et quelles familles de transformations comprend-il ?",
+    "reponse_reference": "Le feature engineering consiste à construire, à partir des données brutes, des variables plus informatives pour le modèle. Il comprend les transformations numériques comme les logarithmes, l'encodage des catégories, les agrégations temporelles, les interactions entre variables et les variables de domaine construites avec les experts métier. Bien fait, il améliore souvent davantage la performance qu'un changement d'algorithme.",
+    "mots_cles_attendus": [
+      "construire des variables",
+      "transformations",
+      "agrégations",
+      "interactions",
+      "experts métier"
+    ]
+  },
+  {
+    "id": "data_science-233",
+    "domaine": "data_science",
+    "sous_theme": "monitoring",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Le modèle de scoring de crédit d'une banque voit son taux d'acceptation chuter brutalement en production, alors que rien n'a changé dans le code. Décrivez votre démarche de diagnostic et les causes probables.",
+    "reponse_reference": "Il faut d'abord comparer les distributions des variables d'entrée entre l'entraînement et la production pour détecter une dérive de données, par exemple une population de demandeurs différente ou un changement de système source. On examine ensuite les logs du pipeline, les valeurs manquantes et les éventuels changements dans les données amont, comme un nouveau formulaire. Si les entrées sont stables, on suspecte une dérive de concept nécessitant un réentraînement, et on déclenche un rollback ou un seuil conservateur en attendant.",
+    "mots_cles_attendus": [
+      "dérive de données",
+      "distributions",
+      "données amont",
+      "dérive de concept",
+      "rollback"
+    ]
+  },
+  {
+    "id": "data_science-234",
+    "domaine": "data_science",
+    "sous_theme": "ethique",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un audit révèle que votre modèle de recrutement accepte 30 % des candidats du groupe A contre 15 % du groupe B, alors que les performances réelles des candidats des deux groupes sont identiques. Comment quantifieriez-vous ce biais et quelles pistes de correction proposez-vous ?",
+    "reponse_reference": "Il faut mesurer l'écart entre les métriques d'équité, par exemple l'égalité des chances, en comparant les taux de vrais positifs et de faux positifs des deux groupes sur des données étiquetées. Les pistes incluent le rééquilibrage des données d'entraînement, la suppression de variables proxy sensibles, la régularisation d'équité pendant l'entraînement ou l'ajustement du seuil de décision par groupe. Aucune correction n'est neutre : chaque choix doit être validé avec les parties prenantes et documenté.",
+    "mots_cles_attendus": [
+      "égalité des chances",
+      "taux par groupe",
+      "rééquilibrer",
+      "proxy",
+      "seuil"
+    ]
+  },
+  {
+    "id": "data_science-235",
+    "domaine": "data_science",
+    "sous_theme": "feature_engineering",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Pour prédire le churn d'un service d'abonnement, quelles variables temporelles construiriez-vous à partir des dates de connexion des utilisateurs, et pourquoi sont-elles plus prédictives que la date brute ?",
+    "reponse_reference": "On construit des variables comme le nombre de connexions des 7 et 30 derniers jours, la tendance de ce nombre, le délai depuis la dernière connexion et la régularité des intervalles entre connexions. Ces agrégats captent l'engagement récent et son évolution, signaux directement liés au risque de churn, contrairement à une date brute que le modèle ne peut pas exploiter. Il faut veiller à ne calculer ces variables qu'à partir d'informations antérieures à la prédiction pour éviter toute fuite temporelle.",
+    "mots_cles_attendus": [
+      "agrégats glissants",
+      "délai depuis la dernière connexion",
+      "tendance",
+      "engagement",
+      "fuite temporelle"
+    ]
+  },
+  {
+    "id": "data_science-236",
+    "domaine": "data_science",
+    "sous_theme": "mlops",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Votre modèle entraîné en laboratoire performe très bien en validation mais déçoit une fois déployé, et vous découvrez que l'encodage de la variable « pays » n'est pas le même entre l'entraînement et le service. Comment ce problème s'appelle-t-il et comment l'éviter structurellement ?",
+    "reponse_reference": "C'est un train-serve skew : un décalage entre le code de prétraitement utilisé à l'entraînement et celui du service d'inférence, qui rend les prédictions incohérentes. La solution structurelle est de figer tout le prétraitement dans un pipeline versionné, serialisé avec le modèle et exécuté à l'identique des deux côtés. Les tests de cohérence entre environnement d'entraînement et production complètent le dispositif.",
+    "mots_cles_attendus": [
+      "train-serve skew",
+      "prétraitement",
+      "pipeline versionné",
+      "serialisé",
+      "cohérence"
+    ]
+  },
+  {
+    "id": "data_science-237",
+    "domaine": "data_science",
+    "sous_theme": "deploiement",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une équipe veut remplacer un modèle de recommandation en production par une version plus complexe dont elle ignore le comportement réel. Proposez une stratégie de déploiement progressive et les indicateurs à surveiller.",
+    "reponse_reference": "Un déploiement fantôme d'abord, pour comparer les prédictions du nouveau modèle à celles de l'ancien sur le trafic réel sans risque, puis un déploiement canari sur une petite fraction d'utilisateurs. On surveille les métriques business comme le taux de clic et les revenus, les métriques techniques comme la latence et le taux d'erreur, et la stabilité des distributions de sortie. Le déploiement est étendu progressivement, avec une procédure de rollback automatique prête en cas d'alerte.",
+    "mots_cles_attendus": [
+      "fantôme",
+      "canari",
+      "fraction",
+      "latence",
+      "rollback"
+    ]
+  },
+  {
+    "id": "data_science-238",
+    "domaine": "data_science",
+    "sous_theme": "explicabilite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un client conteste un refus de crédit automatisé et exige une explication. Comment SHAP vous aide-t-il à construire une réponse compréhensible, et quelles limites devez-vous garder à l'esprit ?",
+    "reponse_reference": "Les valeurs SHAP décomposent l'écart entre la prédiction du client et la prédiction moyenne en contributions par variable, par exemple -0,15 pour un taux d'endettement élevé et +0,05 pour l'ancienneté du compte. On peut alors expliquer les deux ou trois variables qui ont le plus pesé, en langage clair et sans jargon. Il faut toutefois rappeler que ces contributions décrivent le modèle, pas nécessairement la réalité causale du dossier, et rester dans le cadre des obligations réglementaires d'explication.",
+    "mots_cles_attendus": [
+      "contributions par variable",
+      "écart à la moyenne",
+      "variables principales",
+      "décrit le modèle",
+      "langage clair"
+    ]
+  },
+  {
+    "id": "data_science-239",
+    "domaine": "data_science",
+    "sous_theme": "monitoring",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "En production, les étiquettes réelles d'un modèle de détection de fraude n'arrivent qu'avec plusieurs semaines de retard. Comment surveiller la santé du modèle malgré l'absence d'étiquettes fraîches ?",
+    "reponse_reference": "On surveille les indicateurs disponibles sans étiquettes : la distribution des scores de prédiction, le taux d'alertes émis, la dérive des variables d'entrée par rapport à l'entraînement, et les volumes de transactions. Une chute brutale du taux d'alertes ou une forte dérive d'une variable clé déclenche une investigation. Les métriques de performance réelles sont calculées rétroactivement quand les étiquettes arrivent, et servent à valider ou déclencher le réentraînement.",
+    "mots_cles_attendus": [
+      "distribution des scores",
+      "taux d'alertes",
+      "dérive des entrées",
+      "rétroactif",
+      "sans étiquettes"
+    ]
+  },
+  {
+    "id": "data_science-240",
+    "domaine": "data_science",
+    "sous_theme": "ethique",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Votre direction veut lancer un modèle d'évaluation des candidats à la location en Europe. Quelles exigences réglementaires et éthiques devez-vous intégrer dès la conception, au-delà de la simple performance prédictive ?",
+    "reponse_reference": "Le règlement européen sur l'IA (AI Act) classe l'évaluation locative parmi les usages à risque, imposant documentation, gestion des risques, supervision humaine et transparence envers les personnes concernées. Il faut auditer les biais du modèle sur des attributs protégés, garantir l'explicabilité des décisions et prévoir un recours humain. La conformité au RGPD s'ajoute pour les données personnelles, avec minimisation, base légale et information des candidats.",
+    "mots_cles_attendus": [
+      "AI Act",
+      "usage à risque",
+      "supervision humaine",
+      "transparence",
+      "RGPD"
+    ]
+  }
+]

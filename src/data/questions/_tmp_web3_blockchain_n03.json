@@ -1,0 +1,202 @@
+[
+  {
+    "id": "web3_blockchain-041",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment fonctionne le consensus par preuve de travail (Proof of Work) ?",
+    "reponse_reference": "Les mineurs cherchent un nombre tel que le condensat du bloc, complété de ce nombre, soit inférieur à une cible fixée par la difficulté. Ce calcul, coûteux en énergie, est la preuve de travail : le premier mineur à trouver la solution fait valider son bloc par le réseau, qui continue à vérifier la solution. Ce mécanisme est résistant aux attaques sybil mais très énergivore.",
+    "mots_cles_attendus": ["minage", "difficulté", "nonce", "énergie", "résistance sybil"]
+  },
+  {
+    "id": "web3_blockchain-042",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment fonctionne le consensus par preuve d'enjeu (Proof of Stake) ?",
+    "reponse_reference": "Les validateurs immobilisent une quantité de jetons (mise) qui les qualifie pour proposer et valider des blocs selon un tirage pondéré par le montant misé. Un validateur qui se comporte de façon malveillante peut être sanctionné par confiscation d'une partie de sa mise, mécanisme appelé slashing, qui dissuade la triche.",
+    "mots_cles_attendus": ["validateurs", "mise", "tirage pondéré", "slashing"]
+  },
+  {
+    "id": "web3_blockchain-043",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un taux de hachage (hashrate) et que mesure-t-il ?",
+    "reponse_reference": "Le taux de hachage mesure la puissance de calcul totale du réseau de minage, généralement exprimée en hachages par seconde (H/s). Il détermine la probabilité de trouver un bloc et sert à convertir la difficulté du réseau en puissance nécessaire. Un hashrate élevé signifie une course plus serrée entre mineurs et une probabilité d'attaque à 51 % plus élevée pour un acteur majoritaire.",
+    "mots_cles_attendus": ["hachages par seconde", "puissance de calcul", "difficulté", "51 %"]
+  },
+  {
+    "id": "web3_blockchain-044",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un contrat intelligent (smart contract) ?",
+    "reponse_reference": "Un contrat intelligent est un programme déployé sur une blockchain qui s'exécute automatiquement de façon déterministe lorsque les conditions d'appel sont réunies. Il peut transférer des actifs, enregistrer des données ou appliquer une règle métier sans intervention d'un intermédiaire, et son code est public et immuable une fois déployé.",
+    "mots_cles_attendus": ["code déployé", "exécution automatique", "déterministe", "immuable", "public"]
+  },
+  {
+    "id": "web3_blockchain-045",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la machine virtuelle Ethereum (EVM) et pourquoi est-elle importante ?",
+    "reponse_reference": "L'EVM est une machine à registres déterministe qui exécute le bytecode des contrats intelligents de type Solidity ou Vyper. Sa standardisation est à l'origine de l'interopérabilité entre des centaines de chaînes compatibles EVM, qui partagent le même modèle de gas, de comptes et de bytecode, facilitant le portage des applications décentralisées.",
+    "mots_cles_attendus": ["machine virtuelle", "bytecode", "deterministe", "compatible evm", "interopérabilité"]
+  },
+  {
+    "id": "web3_blockchain-046",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le gas dans une blockchain compatible EVM et à quoi sert-il ?",
+    "reponse_reference": "Le gas est une unité de mesure de computation qui permet de facturer l'exécution des opérations en fonction de leur coût réel en ressources (calcul, stockage, accès disque). Chaque instruction du bytecode consomme un certain nombre de gaz, et la transaction échoue si la limite de gaz fournie est dépassée, ce qui protège le réseau contre les boucles infinies.",
+    "mots_cles_attendus": ["unité de computation", "opcode", "limite de gas", "échec", "protection"]
+  },
+  {
+    "id": "web3_blockchain-047",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un standard de token ERC-20 et que définit-il ?",
+    "reponse_reference": "ERC-20 est une norme d'interface pour les jetons fongibles sur Ethereum, qui définit un ensemble de fonctions comme totalSupply, balanceOf, transfer et approve, ainsi que les événements Transfer et Approval. Elle permet aux contrats, aux portefeuilles et aux marchés d'interagir de façon standardisée avec n'importe quel jeton fongible.",
+    "mots_cles_attendus": ["interface standard", "fongible", "transfer", "approve", "événements"]
+  },
+  {
+    "id": "web3_blockchain-048",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un contrat de marché décentralisé lève 100 000 ETH en une heure. Quelle weakness structurelle ce raz de liquidité révèle-t-il ?",
+    "reponse_reference": "Il révèle un risque de concentration des liquidités et de dépendance à quelques fournisseurs de liquidité. Un pool dont la totalité de la liquidité est retirable en un bloc devient facile à vider par arbitrage, ce qui provoque un effondrement du prix et des pertes pour les créanciers de actifs empruntés.",
+    "mots_cles_attendus": ["liquidité", "concentration", "arbitrage", "pool", "effondrement"]
+  },
+  {
+    "id": "web3_blockchain-049",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la finalité économique dans une blockchain à preuve d'enjeu ?",
+    "reponse_reference": "La finalité économique est la garantie qu'un bloc définitif ne sera jamais réorganisé parce que le coût de sa réorganisation (confiscation de la mise des validateurs fautifs) dépasse le gain attendu. Elle est plus rapide et plus déterministe que la finalité probabiliste de la preuve de travail, mais elle repose sur des hypothèses économiques et sur une distribution de mise suffisamment décentralisée.",
+    "mots_cles_attendus": ["coût de réorganisation", "slashing", "déterministe", "distribution de mise"]
+  },
+  {
+    "id": "web3_blockchain-050",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le stockage versus la mémoire (storage versus memory) dans l'EVM et pourquoi la différence est-elle coûteuse ?",
+    "reponse_reference": "Les variables déclarées en mémoire (memory) ne persistent qu pendant l'exécution de l'appel et coûtent relativement peu. Les variables de stockage (storage), elles, sont écrites dans l'état persistant de la chaîne : chaque écriture (SSTORE) coûte très cher car elle modifie un Merkle Patricia Trie global dont la racine est inscribed dans chaque bloc. Les modifications de stockage sont donc le principal poste de coût des contrats.",
+    "mots_cles_attendus": ["storage", "memory", "sstore", "merkle patricia trie", "coût"]
+  },
+  {
+    "id": "web3_blockchain-051",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un validateur est détecté comme ayant validé deux blocs contradictoires à la même hauteur. Que se passe-t-il ?",
+    "reponse_reference": "Le protocole détecte la double signature (equivocation) et déclenche une sanction : une partie de la mise est confisquée et le validateur est retiré du jeu, ce qui est appelé slashing. La preuve cryptographique de l'équivocation est elle-même diffusée sur le réseau, ce qui permet à n'importe qui de déclencher la sanction.",
+    "mots_cles_attendus": ["equivocation", "double signature", "slashing", "confiscation", "sanction"]
+  },
+  {
+    "id": "web3_blockchain-052",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un stablecoin et quelles sont ses deux principales modalités d'émission ?",
+    "reponse_reference": "Un stablecoin est un jeton conçu pour suivre la valeur d'un actif de référence, le plus souvent le dollar américain. Les stablecoins adossés à des réserves sont émis et brûlés par un émetteur qui dépose la contrepartie auprès d'un custodian, tandis que les stablecoins algorithmiques maintiennent leur parité par des mécanismes de mint/burn, de collatéralisation et de liquidations automatiques.",
+    "mots_cles_attendus": ["parité", "adossé aux réserves", "algorithmique", "collateralisation", "liquidations"]
+  },
+  {
+    "id": "web3_blockchain-053",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un appel de transaction (transaction call) et comment se distingue-t-il d'un appel de contrat à contrat ?",
+    "reponse_reference": "Un appel de transaction est une transaction signée par un compte externe (EOA) qui déclenche l'exécution d'un contrat. Un appel interne, à l'inverse, est l'invocation d'un contrat par un autre contrat via CALL ou DELEGATECALL, et il ne crée pas de transaction distincte mais un sous-appel dans la même exécution, partageant le même contexte de gas.",
+    "mots_cles_attendus": ["eoa", "appel externe", "appel interne", "delegatecall", "contexte de gas"]
+  },
+  {
+    "id": "web3_blockchain-054",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un groupe contrôle plus de 51 % du taux de hachage d'une blockchain à preuve de travail. Quelles attaques lui sont possibles ?",
+    "reponse_reference": "L'attaquant peut réorganiser les blocs récents (réécriture de l'historique), censurer des transactions en ne les incluant jamais, et de remplir des blocs vides pour exclure les transactions concurrentes. Ces attaques ne détectent pas directement le hash mais modifient la vision de la chaîne qu'ont les autres participants.",
+    "mots_cles_attendus": ["51 %", "réorganisation", "censure", "doubles dépenses", "puissance majoritaire"]
+  },
+  {
+    "id": "web3_blockchain-055",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un pool de liquidité et comment le prix d'un actif y est-il déterminé ?",
+    "reponse_reference": "Un pool de liquidité réunit deux actifs dans un smart contract afin de permettre des échanges instantanés. Dans un modèle à produit constant (x*y=k), le prix est déterminé par le rapport des quantités détenues ; les fournisseurs de liquidité gagnent les frais de transaction mais subissent un risque de perte impermanente lorsque les prix des deux actifs évoluent fortement.",
+    "mots_cles_attendus": ["pool", "x*y=k", "prix", "frais", "perte impermanente"]
+  },
+  {
+    "id": "web3_blockchain-056",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une epoch dans un protocole à preuve d'enjeu et à quoi sert-elle ?",
+    "reponse_reference": "Une epoch est une période de temps découpant l'activité du réseau, souvent de quelques minutes, pendant laquelle la configuration des validateurs est figée. Ce découpage permet de réorganiser les ensembles de validateurs, d'ajuster les récompenses et de déclencher les mécanismes de sortie et d'entrée des validateurs sans déstabiliser le protocole.",
+    "mots_cles_attendus": ["epoch", "validateurs", "réorganisation", "récompenses", "période"]
+  },
+  {
+    "id": "web3_blockchain-057",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un proxy de contrat et pourquoi cette architecture est-elle populaire ?",
+    "reponse_reference": "Un proxy est un contrat qui délègue l'exécution à un contrat d'implémentation, dont l'adresse est stockée dans l'état du proxy. Les appels sont exécutés via delegatecall, ce qui permet de corriger ou remplacer la logique sans changer l'adresse du proxy et sans migrer les fonds ni les positions des utilisateurs. Le risque majeur est qu'une implémentation compromise puisse être branchée sur le proxy.",
+    "mots_cles_attendus": ["proxy", "implémentation", "delegatecall", "adresse stable", "risque"]
+  },
+  {
+    "id": "web3_blockchain-058",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une dApp affiche « out of gas » alors que l'utilisateur a payé des frais très élevés. Que s'est-il passé ?",
+    "reponse_reference": "Le montant total payé en wei n'est pas la même chose que la limite de gas : les frais correspondent à gas utilisé × prix du gas. Si la limite de gas fixée est inférieure à celle requise par l'exécution, la transaction est annulée et le gas non consommé est remboursé. Un prix du gas élevé avec une limite insuffisante produit donc systématiquement cet échec.",
+    "mots_cles_attendus": ["out of gas", "limite de gas", "gas utilisé", "prix du gas", "remboursement"]
+  },
+  {
+    "id": "web3_blockchain-059",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'approbation de jetons (approve) et quels dangers présente-t-elle ?",
+    "reponse_reference": "L'approbation autorise un contrat à retirer un montant de jetons au nom du détenteur, sans transfert immédiat de fonds. Une approbation illimitée donnée à un contrat compromis ou malveillant ou malveillant permet à celui-ci de vider le compte dès qu'il le souhaite ; c'est pourquoi les interfaces modernes proposent des approbations par montant exact ou par expiration.",
+    "mots_cles_attendus": ["approve", "autorisation", "montant illimité", "revocation", "vol de jetons"]
+  },
+  {
+    "id": "web3_blockchain-060",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la « réorganisation » (reorg) d'une blockchain et quand se produit-elle ?",
+    "reponse_reference": "Une réorganisation se produit quand un nœud remplace la chaîne qu'il avait suivie par une chaîne concurrente plus lourde (preuve de travail) ou mieux justifiée (preuve d'enjeu). Elle concerne généralement les derniers blocs sur les chaînes à finalité probabiliste et nécessite plusieurs confirmations pour être considérée comme définitive.",
+    "mots_cles_attendus": ["reorg", "chaîne concurrente", "confirmations", "derniers blocs"]
+  }
+]

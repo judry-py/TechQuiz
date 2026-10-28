@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-141",
+    "domaine": "genie_logiciel",
+    "sous_theme": "maintenance_documentation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels sont les différents types de maintenance logicielle ?",
+    "reponse_reference": "La maintenance corrective répare les défauts constatés en production ; la maintenance adaptative fait suivre au logiciel l'évolution de son environnement (système, réglementation, dépendances) ; la maintenance évolutive ajoute ou modifie des fonctionnalités ; la maintenance préventive améliore la structure et la fiabilité avant l'apparition des problèmes. Dans la pratique, la maintenance évolutive représente souvent la majorité de l'effort sur un produit mature.",
+    "mots_cles_attendus": ["corrective", "adaptative", "évolutive", "préventive", "environnement"]
+  },
+  {
+    "id": "genie_logiciel-142",
+    "domaine": "genie_logiciel",
+    "sous_theme": "maintenance_documentation",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Vous héritez d'une application critique de dix ans, sans tests, dont plus personne ne connaît le fonctionnement. Par où commencez-vous ?",
+    "reponse_reference": "On commence par cartographier le système : architecture observée, points d'entrée, dépendances, données manipulées, en documentant ce que l'on découvre. On pose ensuite un filet de sécurité : tests de caractérisation sur les parcours critiques, surveillances et journaux pour observer le comportement réel. On ne modifie le code qu'après, par petits pas, en commençant par les zones les plus touchées et en documentant chaque découverte.",
+    "mots_cles_attendus": ["cartographie", "documentation", "tests de caractérisation", "observabilité", "petits pas"]
+  },
+  {
+    "id": "genie_logiciel-143",
+    "domaine": "genie_logiciel",
+    "sous_theme": "maintenance_documentation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ADR (Architecture Decision Record) et que contient-il ?",
+    "reponse_reference": "Un ADR est un court document versionné qui enregistre une décision d'architecture et son contexte : le problème posé, les options envisagées, la décision retenue, ses conséquences et son statut. Conservés dans le dépôt avec le code, les ADR forment la mémoire des choix techniques et évitent de redébattre des décisions déjà tranchées. Ils sont particulièrement utiles pour les nouveaux arrivants et lors des audits.",
+    "mots_cles_attendus": ["décision d'architecture", "contexte", "options", "conséquences", "mémoire"]
+  },
+  {
+    "id": "genie_logiciel-144",
+    "domaine": "genie_logiciel",
+    "sous_theme": "maintenance_documentation",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Six mois après un choix technique (bibliothèque d'accès aux données), un nouveau membre remet en cause la décision et l'équipe n'a plus trace des raisons initiales. Comment éviter cela à l'avenir ?",
+    "reponse_reference": "Il faut instituer la pratique des ADR : chaque décision d'architecture significative est consignée dans un document court et versionné, avec le contexte, les alternatives étudiées et les conséquences assumées. La remise en cause reste possible, mais elle part des raisons documentées et peut s'appuyer sur des éléments nouveaux (version, retour d'expérience). On relie l'ADR au code concerné pour que la découverte soit naturelle.",
+    "mots_cles_attendus": ["adr", "traçabilité", "contexte", "alternatives", "remise en cause éclairée"]
+  },
+  {
+    "id": "genie_logiciel-145",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que sont les exigences non fonctionnelles et pourquoi doivent-elles être mesurables ?",
+    "reponse_reference": "Les exigences non fonctionnelles décrivent les qualités du système : performance, disponibilité, sécurité, maintenabilité, compatibilité, conformité. Elles doivent être exprimées de façon mesurable et vérifiable, par exemple « 95 % des requêtes servies en moins de 200 ms », faute de quoi elles sont impossibles à tester et sources de litiges. On les collecte dès le cadrage, car elles influencent profondément l'architecture.",
+    "mots_cles_attendus": ["qualités", "performance", "disponibilité", "mesurable", "vérifiable"]
+  },
+  {
+    "id": "genie_logiciel-146",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la spécification par l'exemple (specification by example) ?",
+    "reponse_reference": "La spécification par l'exemple consiste à préciser une exigence en la déclinant en exemples concrets d'entrées et de résultats attendus, élaborés avec le métier avant le développement. Ces exemples deviennent ensuite des tests automatisés, formant une spécification vivante qui ne se périme pas. Cette approche révèle les ambiguïtés et les cas limites bien plus efficacement qu'une rédaction abstraite.",
+    "mots_cles_attendus": ["exemples concrets", "métier", "tests automatisés", "spécification vivante", "ambiguïtés"]
+  },
+  {
+    "id": "genie_logiciel-147",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Le métier vous demande un calcul de frais de livraison « raisonnables selon la distance et le poids ». Comment transformez-vous cette exigence floue en spécification utilisable ?",
+    "reponse_reference": "On organise un atelier de spécification par l'exemple avec le métier : on collecte des cas concrets (5 kg sur 20 km, 30 kg sur 200 km, colis fragile) et on demande pour chacun le montant attendu. Les désaccords entre participants révèlent les règles implicites (seuils de poids, majoration fragilité) qu'il faut expliciter. Le tableau d'exemples validé devient la référence et sera automatisé en tests d'acceptation.",
+    "mots_cles_attendus": ["atelier", "exemples", "règles implicites", "validation", "tests d'acceptation"]
+  },
+  {
+    "id": "genie_logiciel-148",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que sont les métriques DORA et que mesurent-elles ?",
+    "reponse_reference": "Les métriques DORA mesurent la performance de livraison logicielle d'une équipe : fréquence de déploiement, délai entre commit et mise en production (lead time), taux d'échec des changements et temps de restauration du service (MTTR). Elles sont issues d'une recherche annuelle menée par l'équipe DORA et corrélées à la performance organisationnelle. Elles servent de référentiel commun pour piloter l'amélioration des pratiques DevOps.",
+    "mots_cles_attendus": ["fréquence de déploiement", "lead time", "taux d'échec", "mttr", "devops"]
+  },
+  {
+    "id": "genie_logiciel-149",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle différence faites-vous entre lead time et cycle time dans un processus de développement ?",
+    "reponse_reference": "Le lead time mesure le délai total entre la demande d'une évolution et sa livraison en production, y compris le temps passé dans le backlog. Le cycle time mesure uniquement le temps de travail effectif, du début du développement à la mise en production. Le cycle time reflète l'efficacité du flux, tandis que l'écart entre les deux révèle le temps d'attente en file, souvent la principale source de lenteur.",
+    "mots_cles_attendus": ["délai total", "temps de travail", "file d'attente", "efficacité", "demande à livraison"]
+  },
+  {
+    "id": "genie_logiciel-150",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Le temps de cycle de votre équipe passe de 3 à 9 jours en deux mois, sans augmentation du travail demandé. Comment analysez-vous cette dérive ?",
+    "reponse_reference": "Il faut décomposer le cycle en étapes et chercher où le temps s'accumule : attente de revue, files de tests, dépendances externes, travail en cours excessif. On croise avec les données qualitatives : nouvelles contraintes, équipe surchargée de réunions, défauts qui reviennent. L'identification de l'étape goulet permet alors des actions ciblées, comme limiter le travail en cours ou renforcer l'automatisation de cette étape.",
+    "mots_cles_attendus": ["décomposition", "goulet", "travail en cours", "dépendances", "données qualitatives"]
+  },
+  {
+    "id": "genie_logiciel-151",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_clean",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelles couches distingue l'architecture propre (clean architecture) et quelle est sa règle de dépendance ?",
+    "reponse_reference": "La clean architecture organise le code en anneaux concentriques : au centre les entités (règles métier d'entreprise), puis les cas d'usage (règles applicatives), puis les adaptateurs d'interface, et à l'extérieur les frameworks et pilotes. Sa règle de dépendance impose que les dépendances pointent toujours vers l'intérieur : rien au centre ne connaît l'extérieur. Cette inversion rend le cœur métier testable et indépendant des frameworks, des bases de données et des interfaces.",
+    "mots_cles_attendus": ["anneaux", "entités", "cas d'usage", "règle de dépendance", "indépendance"]
+  },
+  {
+    "id": "genie_logiciel-152",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_clean",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quel rôle joue un cas d'usage (use case) dans la clean architecture ?",
+    "reponse_reference": "Le cas d'usage orchestre les règles applicatives propres à un scénario métier : il reçoit une requête, coordonne les entités et les ports de sortie, et produit un résultat ou un événement. Il ne contient ni code d'infrastructure ni logique de présentation, ce qui le rend testable avec des doubles. C'est lui qui matérialise l'intention de l'application, indépendamment du canal qui l'invoque (web, mobile, tâche planifiée).",
+    "mots_cles_attendus": ["orchestration", "règles applicatives", "entités", "ports", "testable"]
+  },
+  {
+    "id": "genie_logiciel-153",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_clean",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Votre modèle de domaine importe les annotations du framework web et ses entités héritent de classes techniques. Quels problèmes cela pose-t-il et comment y remédier ?",
+    "reponse_reference": "Le domaine devient prisonnier du framework : impossible de le tester sans l'infrastructure, migration coûteuse, règles métier mélangées aux détails techniques. On inverse la dépendance : le domaine est pur (aucune dépendance extérieure), et des adaptateurs transforment les entités du domaine en modèles propres au framework. La règle de dépendance de la clean architecture garantit alors que le cœur ne sait rien de l'extérieur.",
+    "mots_cles_attendus": ["domaine pur", "inversion de dépendance", "adaptateurs", "migration", "découplage"]
+  },
+  {
+    "id": "genie_logiciel-154",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la pyramide des tests et quel équilibre recommande-t-elle ?",
+    "reponse_reference": "La pyramide des tests hiérarchise les niveaux de test par coût et par volume : à la base, de nombreux tests unitaires rapides et isolés ; au milieu, moins de tests d'intégration couvrant les interactions entre composants ; au sommet, un petit nombre de tests de bout en bout traversant le système complet. Cet équilibre maximise le retour d'information rapide tout en maîtrisant la fragilité et la lenteur des tests de haut niveau. Une pyramide inversée, dominée par les tests de bout en bout, rend la suite lente et instable.",
+    "mots_cles_attendus": ["unitaires", "intégration", "bout en bout", "volume", "rapidité"]
+  },
+  {
+    "id": "genie_logiciel-155",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Votre suite de tests est dominée par 300 tests de bout en bout qui prennent deux heures et échouent au hasard. Comment rééquilibrez-vous ?",
+    "reponse_reference": "Il faut pousser chaque vérification au niveau le plus bas possible : ce qui teste une règle métier descend en test unitaire, ce qui teste un contrat entre deux composants devient un test d'intégration ciblé. On ne garde en bout en bout qu'une poignée de parcours critiques, lancés sur un environnement stable et parallélisés. On mesure ensuite la durée et la fiabilité de la suite pour valider le rééquilibrage.",
+    "mots_cles_attendus": ["niveau le plus bas", "parcours critiques", "parallélisme", "durée", "fiabilité"]
+  },
+  {
+    "id": "genie_logiciel-156",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels choix de conception rendent un système difficile à tester, et comment les éviter ?",
+    "reponse_reference": "La difficulté de test vient des dépendances cachées (instanciations directes, singletons, variables globales), du couplage au temps et à l'aléatoire, et des méthodes géantes mêlant logique métier et entrées-sorties. On les évite en injectant les dépendances via le constructeur, en injectant l'horloge et en séparant les fonctions pures des effets de bord. La testabilité devient alors un critère de conception, vérifié dès la revue de code.",
+    "mots_cles_attendus": ["dépendances cachées", "horloge injectée", "fonctions pures", "injection", "critère de conception"]
+  },
+  {
+    "id": "genie_logiciel-157",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un service lit l'heure système directement (new Date()) et les tests des transitions horaires échouent à certaines périodes de l'année. Que corrigez-vous ?",
+    "reponse_reference": "Il faut injecter l'horloge : le service reçoit une source de temps (horloge réelle en production, horloge figée en test) plutôt que d'appeler le système directement. Les tests peuvent alors simuler n'importe quel moment, y compris les changements d'heure ou les fins d'année, et restent déterministes. C'est l'application d'une couture au temps, l'une des dépendances les plus fréquentes à isoler.",
+    "mots_cles_attendus": ["injection de l'horloge", "déterminisme", "temps figé", "couture", "transitions horaires"]
+  },
+  {
+    "id": "genie_logiciel-158",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la définition de terminé (Definition of Done) et pourquoi doit-elle être partagée ?",
+    "reponse_reference": "La définition de terminé est la liste de critères vérifiables qu'un incrément doit satisfaire pour être considéré comme livrable : code revu, tests passés, documentation mise à jour, critères d'acceptation validés. Partagée par toute l'équipe, elle évite les malentendus sur ce que signifie « fini » et empêche de reporter silencieusement la qualité à plus tard. Elle doit évoluer avec la maturité de l'équipe et être appliquée sans exception, quitte à réduire le périmètre du sprint.",
+    "mots_cles_attendus": ["critères vérifiables", "livrable", "partagée", "qualité", "incrément"]
+  },
+  {
+    "id": "genie_logiciel-159",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "À chaque fin de sprint, des stories sont déclarées « presque finies » : le code fonctionne mais les tests manquent ou la documentation n'est pas à jour. Que changez-vous ?",
+    "reponse_reference": "Il faut rendre la définition de terminé explicite et non négociable : on l'affiche, on la rappelle en planification et on refuse de compter comme fini tout élément qui ne la satisfait pas. Les éléments « presque finis » retournent au backlog et la vélocité ne les comptabilise pas, ce qui rend le problème visible dans les indicateurs. Si la définition est irréaliste, on l'ajuste collectivement, mais jamais au cas par cas en fin de sprint.",
+    "mots_cles_attendus": ["definition of done", "non négociable", "vélocité", "visibilité", "ajustement collectif"]
+  },
+  {
+    "id": "genie_logiciel-160",
+    "domaine": "genie_logiciel",
+    "sous_theme": "maintenance_documentation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un runbook d'exploitation et que doit-il contenir ?",
+    "reponse_reference": "Un runbook est un guide opérationnel qui décrit les procédures à suivre pour exploiter un système : démarrage et arrêt, sauvegardes, surveillances, et surtout les actions à mener face à chaque type d'incident connu. Il doit être testé régulièrement, écrit pour un opérateur stressé (étapes numérotées, commandes exactes, critères de décision) et versionné avec le code. Un bon runbook réduit le temps de restauration et permet à toute personne d'astreinte d'agir sans dépendre d'un expert.",
+    "mots_cles_attendus": ["procédures", "incident", "exploitation", "versionné", "restauration"]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "reseau-037",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux ordinateurs PC1 et PC2 sont connectés au même switch par câble RJ45, mais ils ont la même adresse IP. Quel est le problème et comment le résoudre ?",
+    "reponse_reference": "C'est un conflit d'adresses IP : deux machines ne peuvent pas avoir la même adresse sur un réseau, donc le trafic est mal acheminé et les connexions deviennent instables ou échouent. Solution : attribuer une adresse unique à chaque machine, de préférence automatiquement via un serveur DHCP, ou corriger la configuration statique en doublon.",
+    "mots_cles_attendus": [
+      "conflit d'adresses IP",
+      "adresse unique",
+      "DHCP",
+      "configuration"
+    ]
+  },
+  {
+    "id": "reseau-038",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un ordinateur affiche une adresse en 169.254.x.x et n'accède à rien. Que s'est-il passé ?",
+    "reponse_reference": "L'ordinateur n'a pas réussi à obtenir d'adresse auprès d'un serveur DHCP et s'est attribué lui-même une adresse APIPA (169.254.x.x). Il faut vérifier le câble ou le Wi-Fi, que le serveur DHCP fonctionne, puis renouveler le bail.",
+    "mots_cles_attendus": [
+      "APIPA",
+      "DHCP",
+      "pas de réponse",
+      "renouveler"
+    ]
+  },
+  {
+    "id": "reseau-039",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur peut ouvrir un site en tapant son adresse IP mais pas en tapant son nom de domaine. Quelle est la cause probable ?",
+    "reponse_reference": "La connectivité réseau fonctionne, donc le problème vient de la résolution de noms : le serveur DNS configuré est injoignable ou défaillant, ou mal configuré sur la machine. On teste avec nslookup et on change de serveur DNS.",
+    "mots_cles_attendus": [
+      "DNS",
+      "résolution de noms",
+      "nslookup",
+      "serveur DNS"
+    ]
+  },
+  {
+    "id": "reseau-040",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un PC communique avec les autres machines du réseau local mais n'a pas accès à Internet. Quelles pistes vérifier ?",
+    "reponse_reference": "Vérifier la passerelle par défaut configurée, que le routeur est allumé et connecté à Internet, les paramètres DNS, et l'éventuel pare-feu ou filtrage. On teste avec ping vers la passerelle, puis vers une IP publique, puis vers un nom.",
+    "mots_cles_attendus": [
+      "passerelle par défaut",
+      "routeur",
+      "DNS",
+      "ping"
+    ]
+  },
+  {
+    "id": "reseau-041",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux ordinateurs branchés au même switch, mais dans des VLAN différents, ne peuvent pas communiquer. Pourquoi, et comment les faire communiquer ?",
+    "reponse_reference": "Les VLAN sont des réseaux logiquement séparés : le switch n'achemine pas le trafic entre eux. Il faut un routage inter-VLAN, via un routeur ou un switch de niveau 3, avec une passerelle par VLAN, éventuellement avec des règles de filtrage.",
+    "mots_cles_attendus": [
+      "VLAN séparés",
+      "routage inter-VLAN",
+      "routeur",
+      "passerelle"
+    ]
+  },
+  {
+    "id": "reseau-042",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Pendant qu'un collègue télécharge un gros fichier, les appels vidéo de toute l'équipe deviennent saccadés. Que se passe-t-il et que proposer ?",
+    "reponse_reference": "Le téléchargement sature la bande passante, ce qui augmente la latence et la perte de paquets pour la vidéo. On peut mettre en place de la QoS pour prioriser la voix et la vidéo, limiter le débit des téléchargements ou augmenter la capacité de la connexion.",
+    "mots_cles_attendus": [
+      "bande passante saturée",
+      "latence",
+      "QoS",
+      "priorité"
+    ]
+  },
+  {
+    "id": "reseau-043",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Des ordinateurs d'un bureau reçoivent des adresses IP inconnues et une mauvaise passerelle. On soupçonne un deuxième serveur DHCP. Qu'est-ce que c'est et comment s'en protéger ?",
+    "reponse_reference": "C'est un serveur DHCP pirate (rogue DHCP) branché sur le réseau, qui répond plus vite que le serveur légitime et distribue de mauvaises informations, avec un risque de détournement du trafic. On s'en protège avec le DHCP snooping sur les switchs et le contrôle des équipements branchés.",
+    "mots_cles_attendus": [
+      "DHCP pirate",
+      "mauvaise passerelle",
+      "DHCP snooping",
+      "switch"
+    ]
+  },
+  {
+    "id": "reseau-044",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert l'adresse de loopback 127.0.0.1 ?",
+    "reponse_reference": "C'est l'adresse qui désigne la machine elle-même (localhost). Le trafic envoyé à cette adresse ne sort pas sur le réseau : on l'utilise pour tester ses propres services et la pile réseau locale.",
+    "mots_cles_attendus": [
+      "machine elle-même",
+      "localhost",
+      "test",
+      "ne sort pas du réseau"
+    ]
+  },
+  {
+    "id": "reseau-045",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi certains pare-feux bloquent-ils le protocole ICMP, et quel est l'inconvénient ?",
+    "reponse_reference": "ICMP peut servir à cartographier un réseau (balayage de ping) ou à des attaques par saturation, donc certains le bloquent. L'inconvénient est que ping et traceroute ne marchent plus, ce qui complique le diagnostic, et certains messages utiles au bon fonctionnement du réseau sont perdus.",
+    "mots_cles_attendus": [
+      "ICMP",
+      "ping",
+      "diagnostic",
+      "reconnaissance"
+    ]
+  },
+  {
+    "id": "reseau-046",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la redirection de port (port forwarding) et dans quel cas l'utilise-t-on ?",
+    "reponse_reference": "C'est une règle sur le routeur qui redirige le trafic arrivant sur un port de l'adresse publique vers une machine et un port du réseau local. On l'utilise pour rendre accessible depuis Internet un service hébergé en interne (serveur web, jeu). Cela ouvre une exposition à sécuriser.",
+    "mots_cles_attendus": [
+      "routeur",
+      "port",
+      "réseau local",
+      "accessible depuis Internet"
+    ]
+  },
+  {
+    "id": "reseau-047",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel problème le protocole Spanning Tree (STP) résout-il ?",
+    "reponse_reference": "Quand des switchs sont reliés en boucle, les trames de diffusion tournent indéfiniment (tempête de diffusion) et saturent le réseau. STP désactive logiquement certains liens pour obtenir une topologie sans boucle, tout en les gardant comme secours.",
+    "mots_cles_attendus": [
+      "boucle",
+      "tempête de diffusion",
+      "liens désactivés",
+      "secours"
+    ]
+  },
+  {
+    "id": "reseau-048",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Combien d'appareils peut-on adresser dans le réseau 192.168.1.0/26 ?",
+    "reponse_reference": "/26 laisse 6 bits pour les hôtes, soit 64 adresses, dont 62 utilisables (on retire l'adresse du réseau et l'adresse de diffusion).",
+    "mots_cles_attendus": [
+      "6 bits",
+      "64 adresses",
+      "62",
+      "diffusion"
+    ]
+  },
+  {
+    "id": "reseau-085",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur en Wi-Fi se plaint de lenteurs. Un ping vers la passerelle montre 20 % de paquets perdus. Quelles causes envisager ?",
+    "reponse_reference": "Une perte de paquets vers la passerelle pointe vers un problème local : signal Wi-Fi faible ou interférences, borne surchargée, câble ou carte réseau défectueux. On teste en se rapprochant de la borne, en passant en filaire et en changeant de canal ou de bande.",
+    "mots_cles_attendus": [
+      "perte de paquets",
+      "signal faible",
+      "interférences",
+      "filaire"
+    ]
+  },
+  {
+    "id": "reseau-086",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Après un changement de fournisseur d'accès, un utilisateur ne peut plus envoyer d'emails avec son logiciel de messagerie mais peut en recevoir. Quelle est la cause probable ?",
+    "reponse_reference": "Beaucoup de FAI bloquent le port 25 sortant pour limiter le spam. Il faut configurer le serveur d'envoi (SMTP) sur le port 587 avec authentification et STARTTLS, ou le port 465 avec TLS.",
+    "mots_cles_attendus": [
+      "port 25 bloqué",
+      "SMTP",
+      "587",
+      "authentification"
+    ]
+  },
+  {
+    "id": "reseau-087",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un seul PC n'arrive plus à accéder au serveur de fichiers, alors que ses collègues y accèdent. Comment diagnostiquer méthodiquement ?",
+    "reponse_reference": "Procéder couche par couche : lien physique et voyants, adresse IP et passerelle (ipconfig), ping du serveur par IP puis par nom (DNS), pare-feu local, droits d'accès et compte utilisateur. La comparaison avec un poste qui fonctionne isole la différence.",
+    "mots_cles_attendus": [
+      "couche par couche",
+      "ping",
+      "DNS",
+      "comparer"
+    ]
+  },
+  {
+    "id": "reseau-088",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un câble réseau est branché sur un PC mais aucun voyant ne s'allume et il n'y a aucune connexion. Quelles vérifications faire ?",
+    "reponse_reference": "Vérifier la couche physique : câble défectueux ou mal serti, port du switch désactivé ou en panne, carte réseau désactivée ou sans pilote. On essaie un autre câble, un autre port et un autre appareil pour identifier l'élément en cause.",
+    "mots_cles_attendus": [
+      "couche physique",
+      "câble",
+      "port du switch",
+      "carte réseau"
+    ]
+  },
+  {
+    "id": "reseau-089",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre le half duplex et le full duplex ?",
+    "reponse_reference": "En half duplex, un appareil ne peut émettre ou recevoir qu'à tour de rôle (des collisions sont possibles). En full duplex, il émet et reçoit simultanément, sans collisions, ce qui est la norme avec les switchs modernes.",
+    "mots_cles_attendus": [
+      "à tour de rôle",
+      "simultanément",
+      "collisions",
+      "switch"
+    ]
+  },
+  {
+    "id": "reseau-090",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le PoE (Power over Ethernet) ?",
+    "reponse_reference": "Le PoE alimente un appareil (borne Wi-Fi, caméra, téléphone IP) par le câble réseau lui-même, qui transporte donc données et électricité. Il évite d'installer une prise électrique près de chaque équipement.",
+    "mots_cles_attendus": [
+      "alimentation électrique",
+      "câble réseau",
+      "borne Wi-Fi",
+      "caméra"
+    ]
+  },
+  {
+    "id": "reseau-091",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une route par défaut (0.0.0.0/0) ?",
+    "reponse_reference": "C'est la route utilisée quand aucune route plus précise ne correspond à la destination. Elle envoie le trafic vers la passerelle par défaut, typiquement pour atteindre Internet.",
+    "mots_cles_attendus": [
+      "aucune route plus précise",
+      "passerelle",
+      "Internet",
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "id": "reseau-092",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que se passe-t-il si les horloges de plusieurs serveurs ne sont pas synchronisées ?",
+    "reponse_reference": "Les journaux deviennent incohérents, les certificats ou jetons peuvent être refusés, certaines authentifications échouent et le diagnostic d'incidents est compliqué. On corrige avec NTP.",
+    "mots_cles_attendus": [
+      "journaux incohérents",
+      "certificats",
+      "authentification",
+      "NTP"
+    ]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "cyber-037",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un employé du service comptabilité reçoit un email qui semble venir du PDG lui demandant un virement urgent et confidentiel. Quel type d'attaque est-ce et que doit faire l'employé ?",
+    "reponse_reference": "C'est une fraude au président (compromission de messagerie professionnelle), une forme de phishing ciblé qui joue sur l'autorité et l'urgence. L'employé doit vérifier la demande par un autre canal (appel, en personne), ne pas agir seul, et signaler l'email au service sécurité.",
+    "mots_cles_attendus": [
+      "fraude au président",
+      "urgence",
+      "vérifier par un autre canal",
+      "signaler"
+    ]
+  },
+  {
+    "id": "cyber-038",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le site de l'entreprise devient soudainement indisponible, submergé par un très grand nombre de requêtes. Quelle attaque est-ce et quelles mesures prendre ?",
+    "reponse_reference": "C'est probablement une attaque DDoS. Mesures : activer une protection anti-DDoS ou un CDN, limiter le débit des requêtes, filtrer le trafic suspect, mettre en place de l'élasticité et prévenir l'hébergeur. À plus long terme, prévoir un plan de réponse.",
+    "mots_cles_attendus": [
+      "DDoS",
+      "limiter le débit",
+      "filtrer",
+      "CDN"
+    ]
+  },
+  {
+    "id": "cyber-039",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un employé constate que ses fichiers sont inaccessibles et qu'un message réclame une rançon. Quelles sont les premières actions à mener ?",
+    "reponse_reference": "Déconnecter immédiatement la machine du réseau pour stopper la propagation, ne pas éteindre sans consigne, prévenir le service sécurité, identifier le périmètre touché, restaurer depuis les sauvegardes saines et conserver des preuves. Il vaut mieux ne pas payer sans avis spécialisé.",
+    "mots_cles_attendus": [
+      "déconnecter",
+      "prévenir",
+      "sauvegardes",
+      "propagation"
+    ]
+  },
+  {
+    "id": "cyber-040",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un formulaire de connexion accepte la saisie ' OR '1'='1 comme identifiant et connecte l'attaquant. Quelle est la vulnérabilité et comment la corriger ?",
+    "reponse_reference": "C'est une injection SQL : l'entrée est insérée telle quelle dans la requête, donc l'attaquant en modifie la logique. Correction : utiliser des requêtes préparées (paramétrées), valider les entrées, limiter les droits du compte de base de données.",
+    "mots_cles_attendus": [
+      "injection SQL",
+      "requêtes préparées",
+      "validation",
+      "droits limités"
+    ]
+  },
+  {
+    "id": "cyber-041",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un collègue trouve une clé USB dans le parking et veut la brancher sur son poste pour voir ce qu'il y a dedans. Quels sont les risques et que lui conseiller ?",
+    "reponse_reference": "La clé peut contenir un malware qui s'exécute automatiquement ou émule un clavier pour prendre le contrôle du poste. Il ne faut pas la brancher et plutôt la remettre au service informatique, qui l'analysera dans un environnement isolé.",
+    "mots_cles_attendus": [
+      "malware",
+      "ne pas brancher",
+      "service informatique",
+      "environnement isolé"
+    ]
+  },
+  {
+    "id": "cyber-042",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur emploie le même mot de passe sur plusieurs sites, et l'un d'eux subit une fuite de données. Quel est le risque ?",
+    "reponse_reference": "Les attaquants testent les identifiants volés sur d'autres services (credential stuffing) et peuvent accéder à ses autres comptes. Il faut changer les mots de passe, utiliser un mot de passe unique par service avec un gestionnaire, et activer le MFA.",
+    "mots_cles_attendus": [
+      "credential stuffing",
+      "mot de passe unique",
+      "gestionnaire",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-043",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le compte administrateur d'un employé se connecte à 3 h du matin depuis un pays où l'entreprise n'a aucune activité. Que faire ?",
+    "reponse_reference": "Considérer le compte comme potentiellement compromis : le verrouiller ou réinitialiser le mot de passe, révoquer les sessions, vérifier les journaux pour voir ce qui a été fait, contacter l'employé et activer le MFA. Puis ouvrir un dossier d'incident.",
+    "mots_cles_attendus": [
+      "compte compromis",
+      "réinitialiser",
+      "journaux",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-044",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion des correctifs (patch management) et pourquoi est-elle critique ?",
+    "reponse_reference": "C'est le processus qui consiste à identifier, tester et déployer régulièrement les mises à jour de sécurité sur les systèmes et logiciels. Il réduit la fenêtre pendant laquelle une vulnérabilité connue peut être exploitée.",
+    "mots_cles_attendus": [
+      "mises à jour",
+      "déploiement",
+      "vulnérabilités connues",
+      "processus"
+    ]
+  },
+  {
+    "id": "cyber-045",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement de bout en bout ?",
+    "reponse_reference": "Les messages sont chiffrés sur l'appareil de l'expéditeur et ne peuvent être déchiffrés que par le destinataire. Même le fournisseur du service qui relaie les messages ne peut pas les lire.",
+    "mots_cles_attendus": [
+      "expéditeur",
+      "destinataire",
+      "le fournisseur ne peut pas lire",
+      "chiffré"
+    ]
+  },
+  {
+    "id": "cyber-046",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le contrôle d'accès basé sur les rôles (RBAC) ?",
+    "reponse_reference": "Les droits ne sont pas donnés individuellement mais attribués à des rôles (comptable, administrateur...), puis les utilisateurs reçoivent des rôles. Cela simplifie la gestion et facilite l'application du moindre privilège.",
+    "mots_cles_attendus": [
+      "rôles",
+      "droits",
+      "moindre privilège",
+      "gestion simplifiée"
+    ]
+  },
+  {
+    "id": "cyber-047",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SOC et quel est son rôle ?",
+    "reponse_reference": "Un SOC (Security Operations Center) est l'équipe, avec ses outils, qui surveille en continu les systèmes d'une organisation, détecte les incidents de sécurité, les analyse et coordonne la réponse.",
+    "mots_cles_attendus": [
+      "surveillance",
+      "détecte",
+      "incidents",
+      "réponse"
+    ]
+  },
+  {
+    "id": "cyber-048",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert un WAF (pare-feu applicatif web) ?",
+    "reponse_reference": "Un WAF filtre le trafic HTTP vers une application web pour bloquer les attaques courantes (injection SQL, XSS...). Il agit comme une couche de protection supplémentaire, sans remplacer la correction du code.",
+    "mots_cles_attendus": [
+      "application web",
+      "HTTP",
+      "injection SQL",
+      "couche supplémentaire"
+    ]
+  },
+  {
+    "id": "cyber-085",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Plusieurs employés reçoivent un SMS les invitant à se connecter à un site qui imite exactement le portail de l'entreprise. De quoi s'agit-il et que faire ?",
+    "reponse_reference": "C'est du smishing, un phishing par SMS. Il faut ne pas cliquer, signaler le message à l'équipe sécurité, prévenir les employés, faire bloquer le domaine frauduleux et changer le mot de passe de toute personne ayant saisi ses identifiants, avec le MFA activé.",
+    "mots_cles_attendus": [
+      "smishing",
+      "ne pas cliquer",
+      "signaler",
+      "changer le mot de passe"
+    ]
+  },
+  {
+    "id": "cyber-086",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un ordinateur portable contenant des données clients est volé. Quelle mesure préventive aurait limité les dégâts ?",
+    "reponse_reference": "Le chiffrement complet du disque (BitLocker, FileVault, LUKS) : sans la clé, les données sont illisibles. Compléter par un mot de passe fort, la gestion à distance (effacement), et en cas de vol, révoquer les accès et évaluer l'obligation de notification.",
+    "mots_cles_attendus": [
+      "chiffrement du disque",
+      "illisibles",
+      "effacement à distance",
+      "révoquer"
+    ]
+  },
+  {
+    "id": "cyber-087",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le navigateur d'un utilisateur affiche des publicités partout, redirige vers des sites inconnus et ralentit. Que s'est-il passé et comment réagir ?",
+    "reponse_reference": "Probablement un adware ou une extension malveillante installée avec un logiciel ou une pièce jointe. Supprimer l'extension et le programme suspect, lancer un antivirus, réinitialiser le navigateur, changer les mots de passe et ne plus installer de source non fiable.",
+    "mots_cles_attendus": [
+      "adware",
+      "extension malveillante",
+      "antivirus",
+      "réinitialiser"
+    ]
+  },
+  {
+    "id": "cyber-088",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Les journaux montrent un ordinateur interne qui tente de se connecter à tous les ports de plusieurs serveurs. Comment analyser et réagir ?",
+    "reponse_reference": "C'est un scan de ports interne, signe possible de machine compromise ou de reconnaissance avant attaque. Isoler le poste, identifier l'utilisateur et le processus, rechercher un malware, vérifier les accès aux serveurs ciblés et bloquer ce comportement.",
+    "mots_cles_attendus": [
+      "scan de ports",
+      "machine compromise",
+      "isoler",
+      "analyse"
+    ]
+  },
+  {
+    "id": "cyber-089",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la classification des données et pourquoi est-elle utile ?",
+    "reponse_reference": "C'est le fait de catégoriser les données selon leur sensibilité (publique, interne, confidentielle, secrète). Chaque catégorie reçoit des règles de protection adaptées, ce qui évite de sous-protéger l'essentiel ou de sur-protéger le reste.",
+    "mots_cles_attendus": [
+      "sensibilité",
+      "catégories",
+      "protection adaptée",
+      "confidentielle"
+    ]
+  },
+  {
+    "id": "cyber-090",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le BYOD et quels sont ses risques ?",
+    "reponse_reference": "Le BYOD (Bring Your Own Device) autorise les employés à utiliser leurs appareils personnels pour le travail. Les risques sont la fuite de données, des appareils non mis à jour ou infectés, la perte ou le vol. On les limite avec une gestion des appareils (MDM) et des politiques claires.",
+    "mots_cles_attendus": [
+      "appareils personnels",
+      "fuite de données",
+      "MDM",
+      "politique"
+    ]
+  },
+  {
+    "id": "cyber-091",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'authentification SSH par clé est-elle plus sûre que par mot de passe ?",
+    "reponse_reference": "Avec une paire de clés, la clé privée ne quitte jamais l'ordinateur de l'utilisateur et est impossible à deviner par force brute, contrairement à un mot de passe. On peut aussi la protéger par une phrase secrète et désactiver l'accès par mot de passe.",
+    "mots_cles_attendus": [
+      "clé privée",
+      "force brute",
+      "paire de clés",
+      "phrase secrète"
+    ]
+  },
+  {
+    "id": "cyber-092",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une politique de sécurité des systèmes d'information (PSSI) ?",
+    "reponse_reference": "C'est un document qui définit les règles, les responsabilités et les mesures de sécurité de l'organisation : usages acceptables, gestion des accès, incidents, sauvegardes. Il guide les décisions et doit être connu de tous.",
+    "mots_cles_attendus": [
+      "règles",
+      "responsabilités",
+      "document",
+      "mesures"
+    ]
+  }
+]

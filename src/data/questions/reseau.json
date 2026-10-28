@@ -1,0 +1,3761 @@
+[
+  {
+    "id": "reseau-001",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une adresse IP et à quoi sert-elle ?",
+    "reponse_reference": "Une adresse IP est un identifiant numérique attribué à chaque appareil connecté à un réseau. Elle permet de l'identifier et de lui envoyer des données au bon endroit.",
+    "mots_cles_attendus": [
+      "identifiant",
+      "appareil",
+      "réseau",
+      "communication"
+    ]
+  },
+  {
+    "id": "reseau-002",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un switch et un routeur ?",
+    "reponse_reference": "Un switch relie des appareils au sein d'un même réseau local et transmet les données selon les adresses MAC. Un routeur relie des réseaux différents entre eux (par exemple le réseau local et Internet) et achemine les paquets selon les adresses IP.",
+    "mots_cles_attendus": [
+      "réseau local",
+      "adresse MAC",
+      "réseaux différents",
+      "adresse IP",
+      "Internet"
+    ]
+  },
+  {
+    "id": "reseau-003",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une adresse MAC ?",
+    "reponse_reference": "Une adresse MAC est un identifiant physique unique attribué à une carte réseau par son fabricant. Elle sert à identifier un appareil au sein d'un réseau local.",
+    "mots_cles_attendus": [
+      "identifiant unique",
+      "carte réseau",
+      "physique",
+      "réseau local"
+    ]
+  },
+  {
+    "id": "reseau-004",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert le DNS ?",
+    "reponse_reference": "Le DNS traduit les noms de domaine lisibles par l'humain (comme exemple.com) en adresses IP que les machines utilisent pour se trouver.",
+    "mots_cles_attendus": [
+      "nom de domaine",
+      "adresse IP",
+      "traduit",
+      "résolution"
+    ]
+  },
+  {
+    "id": "reseau-005",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le DHCP et pourquoi est-il utile ?",
+    "reponse_reference": "Le DHCP est un protocole qui attribue automatiquement une adresse IP (et d'autres paramètres comme la passerelle et le DNS) aux appareils qui se connectent au réseau. Il évite de configurer chaque machine à la main et limite les conflits d'adresses.",
+    "mots_cles_attendus": [
+      "automatique",
+      "adresse IP",
+      "configuration",
+      "conflit"
+    ]
+  },
+  {
+    "id": "reseau-006",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un LAN et en quoi diffère-t-il d'un WAN ?",
+    "reponse_reference": "Un LAN (réseau local) couvre une zone restreinte comme une maison ou un bureau. Un WAN (réseau étendu) relie des réseaux sur de grandes distances ; Internet en est l'exemple le plus connu.",
+    "mots_cles_attendus": [
+      "zone restreinte",
+      "réseau local",
+      "grande distance",
+      "Internet"
+    ]
+  },
+  {
+    "id": "reseau-007",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert le modèle OSI ?",
+    "reponse_reference": "Le modèle OSI décrit la communication réseau en 7 couches (physique, liaison, réseau, transport, session, présentation, application). Il sert de référence commune pour comprendre, concevoir et dépanner les réseaux.",
+    "mots_cles_attendus": [
+      "7 couches",
+      "référence",
+      "communication",
+      "dépannage"
+    ]
+  },
+  {
+    "id": "reseau-008",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence principale entre TCP et UDP ?",
+    "reponse_reference": "TCP est fiable : il établit une connexion, vérifie la bonne réception et réordonne les données, au prix d'un peu de lenteur. UDP est plus rapide mais sans garantie de livraison, adapté au streaming ou aux jeux en ligne.",
+    "mots_cles_attendus": [
+      "fiable",
+      "connexion",
+      "rapide",
+      "sans garantie"
+    ]
+  },
+  {
+    "id": "reseau-009",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une passerelle par défaut (default gateway) ?",
+    "reponse_reference": "C'est l'adresse du routeur vers lequel un appareil envoie le trafic destiné à un autre réseau. Sans elle, l'appareil ne peut pas sortir de son réseau local, donc pas accéder à Internet.",
+    "mots_cles_attendus": [
+      "routeur",
+      "autre réseau",
+      "Internet",
+      "sortir"
+    ]
+  },
+  {
+    "id": "reseau-010",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre HTTP et HTTPS ?",
+    "reponse_reference": "HTTPS est HTTP chiffré avec TLS. Les données échangées sont protégées contre l'écoute et la modification, et l'identité du site est vérifiée par un certificat. HTTP transmet tout en clair.",
+    "mots_cles_attendus": [
+      "chiffré",
+      "TLS",
+      "certificat",
+      "en clair"
+    ]
+  },
+  {
+    "id": "reseau-011",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la bande passante d'un réseau ?",
+    "reponse_reference": "C'est la quantité maximale de données qui peut être transmise sur une connexion pendant un temps donné, généralement exprimée en bits par seconde (Mbit/s, Gbit/s).",
+    "mots_cles_attendus": [
+      "quantité de données",
+      "débit maximal",
+      "bits par seconde",
+      "temps"
+    ]
+  },
+  {
+    "id": "reseau-012",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert la commande ping ?",
+    "reponse_reference": "Ping envoie de petits paquets (ICMP) à une machine pour vérifier qu'elle est joignable et mesurer le temps de réponse (latence). C'est un premier test pour diagnostiquer un problème de connectivité.",
+    "mots_cles_attendus": [
+      "ICMP",
+      "joignable",
+      "latence",
+      "test",
+      "connectivité"
+    ]
+  },
+  {
+    "id": "reseau-061",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un réseau informatique ?",
+    "reponse_reference": "C'est un ensemble d'appareils (ordinateurs, téléphones, serveurs) reliés entre eux pour échanger des données et partager des ressources comme des fichiers, une imprimante ou une connexion Internet.",
+    "mots_cles_attendus": [
+      "appareils reliés",
+      "échanger des données",
+      "partager des ressources"
+    ]
+  },
+  {
+    "id": "reseau-062",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un client et un serveur ?",
+    "reponse_reference": "Le client est l'appareil ou le programme qui demande un service (par exemple un navigateur). Le serveur est la machine ou le programme qui répond à cette demande et fournit la ressource (une page web, un fichier).",
+    "mots_cles_attendus": [
+      "demande",
+      "répond",
+      "service",
+      "navigateur"
+    ]
+  },
+  {
+    "id": "reseau-063",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un paquet de données ?",
+    "reponse_reference": "Les données envoyées sur un réseau sont découpées en petits morceaux appelés paquets. Chacun contient une partie des données et des informations d'adressage (source, destination), puis ils sont réassemblés à l'arrivée.",
+    "mots_cles_attendus": [
+      "petits morceaux",
+      "adressage",
+      "destination",
+      "réassemblés"
+    ]
+  },
+  {
+    "id": "reseau-064",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un point d'accès Wi-Fi ?",
+    "reponse_reference": "C'est un équipement qui crée un réseau sans fil et relie les appareils Wi-Fi au réseau filaire. Il diffuse un nom de réseau (SSID) et gère la connexion des clients.",
+    "mots_cles_attendus": [
+      "sans fil",
+      "relie au réseau filaire",
+      "SSID"
+    ]
+  },
+  {
+    "id": "reseau-065",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un câble en cuivre et la fibre optique ?",
+    "reponse_reference": "Le câble en cuivre transmet des signaux électriques sur une distance limitée. La fibre optique transmet de la lumière : elle offre des débits bien plus élevés, sur de plus longues distances et sans sensibilité aux interférences électriques.",
+    "mots_cles_attendus": [
+      "signal électrique",
+      "lumière",
+      "débit",
+      "distance"
+    ]
+  },
+  {
+    "id": "reseau-066",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une URL ?",
+    "reponse_reference": "Une URL est l'adresse complète d'une ressource sur Internet. Elle contient le protocole (https), le nom de domaine, et souvent un chemin vers la page ou le fichier demandé.",
+    "mots_cles_attendus": [
+      "adresse",
+      "protocole",
+      "nom de domaine",
+      "chemin"
+    ]
+  },
+  {
+    "id": "reseau-067",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un fournisseur d'accès à Internet (FAI) ?",
+    "reponse_reference": "Un FAI est une entreprise qui fournit la connexion à Internet aux particuliers et aux organisations, via la fibre, l'ADSL ou la 4G/5G, en général avec une box ou un routeur.",
+    "mots_cles_attendus": [
+      "connexion à Internet",
+      "fournit",
+      "fibre",
+      "box"
+    ]
+  },
+  {
+    "id": "reseau-068",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre Internet et le Web ?",
+    "reponse_reference": "Internet est le réseau mondial qui relie des réseaux et des machines. Le Web est un service qui fonctionne sur Internet : l'ensemble des pages et sites accessibles par un navigateur. Le mail et le streaming utilisent aussi Internet sans être le Web.",
+    "mots_cles_attendus": [
+      "réseau mondial",
+      "service",
+      "navigateur",
+      "pages"
+    ]
+  },
+  {
+    "id": "reseau-013",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un masque de sous-réseau et à quoi sert-il ?",
+    "reponse_reference": "Le masque de sous-réseau indique quelle partie d'une adresse IP identifie le réseau et quelle partie identifie l'appareil. Il permet à une machine de savoir si une destination est dans son réseau local ou doit passer par la passerelle.",
+    "mots_cles_attendus": [
+      "partie réseau",
+      "partie machine",
+      "réseau local",
+      "passerelle"
+    ]
+  },
+  {
+    "id": "reseau-014",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre IPv4 et IPv6 ?",
+    "reponse_reference": "IPv4 utilise des adresses de 32 bits (environ 4,3 milliards, aujourd'hui insuffisantes). IPv6 utilise 128 bits, offrant un nombre d'adresses quasi illimité, avec une écriture en hexadécimal et des améliorations de configuration.",
+    "mots_cles_attendus": [
+      "32 bits",
+      "128 bits",
+      "pénurie d'adresses",
+      "hexadécimal"
+    ]
+  },
+  {
+    "id": "reseau-015",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre une adresse IP privée et une adresse IP publique ?",
+    "reponse_reference": "Une adresse privée (ex. 192.168.x.x) est utilisée dans un réseau local et n'est pas routée sur Internet. Une adresse publique est unique au niveau mondial et joignable depuis Internet.",
+    "mots_cles_attendus": [
+      "réseau local",
+      "non routée",
+      "Internet",
+      "unique"
+    ]
+  },
+  {
+    "id": "reseau-016",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le NAT et pourquoi est-il utilisé ?",
+    "reponse_reference": "Le NAT traduit les adresses IP privées du réseau local en une adresse publique pour accéder à Internet. Il permet à plusieurs appareils de partager une seule IP publique et masque en partie le réseau interne.",
+    "mots_cles_attendus": [
+      "traduction",
+      "adresse privée",
+      "adresse publique",
+      "partager"
+    ]
+  },
+  {
+    "id": "reseau-017",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un port réseau et à quoi sert-il ?",
+    "reponse_reference": "Un port est un numéro qui identifie un service ou une application sur une machine. L'adresse IP désigne la machine, le port désigne le service (ex. 80 pour HTTP, 443 pour HTTPS, 22 pour SSH).",
+    "mots_cles_attendus": [
+      "numéro",
+      "service",
+      "application",
+      "443"
+    ]
+  },
+  {
+    "id": "reseau-018",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un sous-réseau et pourquoi découper un réseau en sous-réseaux ?",
+    "reponse_reference": "Un sous-réseau est une subdivision d'un réseau IP. On découpe pour organiser les équipements, réduire le trafic de diffusion, améliorer la sécurité en isolant des groupes et mieux gérer les adresses.",
+    "mots_cles_attendus": [
+      "subdivision",
+      "isoler",
+      "sécurité",
+      "trafic de diffusion"
+    ]
+  },
+  {
+    "id": "reseau-019",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert le protocole ARP ?",
+    "reponse_reference": "ARP permet de retrouver l'adresse MAC correspondant à une adresse IP au sein d'un réseau local, afin d'envoyer les trames Ethernet au bon appareil.",
+    "mots_cles_attendus": [
+      "adresse MAC",
+      "adresse IP",
+      "réseau local",
+      "correspondance"
+    ]
+  },
+  {
+    "id": "reseau-020",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un hub et un switch ?",
+    "reponse_reference": "Un hub renvoie les données reçues vers tous ses ports, ce qui crée du trafic inutile et des collisions. Un switch apprend les adresses MAC et envoie les données uniquement au port du destinataire, il est plus efficace et plus sûr.",
+    "mots_cles_attendus": [
+      "tous les ports",
+      "adresse MAC",
+      "destinataire",
+      "collisions"
+    ]
+  },
+  {
+    "id": "reseau-021",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert la commande traceroute ?",
+    "reponse_reference": "Traceroute affiche le chemin suivi par les paquets jusqu'à une destination, routeur par routeur, avec le temps de réponse à chaque étape. Elle aide à localiser où se situe un ralentissement ou une coupure.",
+    "mots_cles_attendus": [
+      "chemin",
+      "routeurs",
+      "temps de réponse",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "reseau-022",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre latence et débit ?",
+    "reponse_reference": "Le débit est la quantité de données transférées par seconde. La latence est le délai que met un paquet pour aller d'un point à un autre. On peut avoir un débit élevé mais une latence élevée, ce qui pénalise surtout les jeux en ligne et les appels vidéo.",
+    "mots_cles_attendus": [
+      "quantité par seconde",
+      "délai",
+      "paquet",
+      "jeux en ligne"
+    ]
+  },
+  {
+    "id": "reseau-023",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels sont les avantages et inconvénients du Wi-Fi par rapport à Ethernet filaire ?",
+    "reponse_reference": "Le Wi-Fi offre la mobilité et évite les câbles, mais il est plus sensible aux interférences, à la distance et aux écoutes. L'Ethernet est plus stable, plus rapide à latence faible et plus sûr, mais nécessite des câbles.",
+    "mots_cles_attendus": [
+      "mobilité",
+      "interférences",
+      "stable",
+      "câble"
+    ]
+  },
+  {
+    "id": "reseau-024",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un serveur proxy ?",
+    "reponse_reference": "Un proxy est un intermédiaire entre un client et Internet. Il relaie les requêtes, peut les filtrer, mettre du contenu en cache pour accélérer et masquer l'adresse IP du client.",
+    "mots_cles_attendus": [
+      "intermédiaire",
+      "relaie",
+      "cache",
+      "filtrer"
+    ]
+  },
+  {
+    "id": "reseau-069",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quel est le rôle d'un pare-feu réseau et en quoi diffère-t-il d'un routeur ?",
+    "reponse_reference": "Un pare-feu filtre le trafic selon des règles pour autoriser ou bloquer des connexions. Un routeur, lui, achemine les paquets entre réseaux. Beaucoup de routeurs intègrent un pare-feu, mais les deux fonctions sont distinctes.",
+    "mots_cles_attendus": [
+      "filtre",
+      "règles",
+      "acheminer",
+      "routeur"
+    ]
+  },
+  {
+    "id": "reseau-070",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre FTP et SFTP ?",
+    "reponse_reference": "FTP transfère des fichiers mais envoie identifiants et données en clair. SFTP fonctionne au-dessus de SSH et chiffre toute la transmission, donc il est à préférer.",
+    "mots_cles_attendus": [
+      "transfert de fichiers",
+      "en clair",
+      "chiffré",
+      "SSH"
+    ]
+  },
+  {
+    "id": "reseau-071",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi servent les commandes ipconfig (Windows) ou ifconfig/ip (Linux) ?",
+    "reponse_reference": "Elles affichent la configuration réseau de la machine : adresse IP, masque, passerelle, adresse MAC, serveurs DNS. Elles servent aussi à renouveler un bail DHCP. C'est le premier outil de diagnostic.",
+    "mots_cles_attendus": [
+      "configuration réseau",
+      "adresse IP",
+      "passerelle",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "reseau-072",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre unicast, multicast et broadcast ?",
+    "reponse_reference": "Unicast : message envoyé à un seul destinataire. Multicast : envoyé à un groupe précis de destinataires intéressés. Broadcast : envoyé à tous les appareils du réseau local.",
+    "mots_cles_attendus": [
+      "un seul destinataire",
+      "groupe",
+      "tous",
+      "réseau local"
+    ]
+  },
+  {
+    "id": "reseau-073",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi servent les enregistrements DNS de type A, MX et CNAME ?",
+    "reponse_reference": "A associe un nom de domaine à une adresse IPv4. MX indique les serveurs de messagerie du domaine. CNAME crée un alias qui pointe un nom vers un autre nom.",
+    "mots_cles_attendus": [
+      "adresse IPv4",
+      "messagerie",
+      "alias",
+      "nom de domaine"
+    ]
+  },
+  {
+    "id": "reseau-074",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert le protocole NTP ?",
+    "reponse_reference": "NTP synchronise l'horloge des machines avec une source de temps fiable. Une heure cohérente est essentielle pour les journaux, les certificats, l'authentification et le diagnostic d'incidents.",
+    "mots_cles_attendus": [
+      "synchronise",
+      "horloge",
+      "journaux",
+      "certificats"
+    ]
+  },
+  {
+    "id": "reseau-075",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre une trame et un paquet ?",
+    "reponse_reference": "Un paquet est l'unité de données de la couche réseau (IP) avec adresses IP. Une trame est l'unité de la couche liaison (Ethernet) : elle encapsule le paquet avec des adresses MAC pour le transport sur un réseau local.",
+    "mots_cles_attendus": [
+      "couche réseau",
+      "couche liaison",
+      "adresse MAC",
+      "encapsule"
+    ]
+  },
+  {
+    "id": "reseau-076",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le MTU et que se passe-t-il quand un paquet est trop grand ?",
+    "reponse_reference": "Le MTU est la taille maximale d'un paquet transmissible sur un lien (souvent 1500 octets en Ethernet). Au-delà, le paquet est fragmenté en morceaux plus petits, ce qui ajoute de la charge et peut dégrader les performances.",
+    "mots_cles_attendus": [
+      "taille maximale",
+      "1500",
+      "fragmenté",
+      "performance"
+    ]
+  },
+  {
+    "id": "reseau-025",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que signifie la notation CIDR /24 et combien d'appareils peut-on adresser dans un tel réseau ?",
+    "reponse_reference": "/24 signifie que les 24 premiers bits de l'adresse identifient le réseau (masque 255.255.255.0). Il reste 8 bits pour les machines, soit 256 adresses dont 254 utilisables, car on réserve l'adresse du réseau et celle de diffusion.",
+    "mots_cles_attendus": [
+      "24 bits",
+      "255.255.255.0",
+      "254",
+      "diffusion"
+    ]
+  },
+  {
+    "id": "reseau-026",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment fonctionne la poignée de main TCP en trois temps ?",
+    "reponse_reference": "Le client envoie un SYN, le serveur répond SYN-ACK, puis le client confirme avec un ACK. La connexion est alors établie et les deux côtés ont synchronisé leurs numéros de séquence.",
+    "mots_cles_attendus": [
+      "SYN",
+      "SYN-ACK",
+      "ACK",
+      "connexion établie"
+    ]
+  },
+  {
+    "id": "reseau-027",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre routage statique et routage dynamique ?",
+    "reponse_reference": "En routage statique, l'administrateur configure les routes à la main : simple et prévisible, mais il ne s'adapte pas aux pannes. En routage dynamique, les routeurs échangent des informations via des protocoles (OSPF, BGP) et recalculent automatiquement les chemins.",
+    "mots_cles_attendus": [
+      "manuel",
+      "automatique",
+      "OSPF",
+      "pannes"
+    ]
+  },
+  {
+    "id": "reseau-028",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un VLAN et pourquoi l'utiliser ?",
+    "reponse_reference": "Un VLAN est un réseau local virtuel qui segmente logiquement un même switch en plusieurs réseaux isolés. Il améliore la sécurité, réduit le trafic de diffusion et permet d'organiser les équipements par service sans changer le câblage.",
+    "mots_cles_attendus": [
+      "réseau virtuel",
+      "segmenter",
+      "isolé",
+      "sécurité"
+    ]
+  },
+  {
+    "id": "reseau-029",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre SSH et Telnet ?",
+    "reponse_reference": "Les deux permettent de se connecter à distance à une machine en ligne de commande. Telnet transmet tout en clair, y compris les mots de passe. SSH chiffre la connexion et authentifie le serveur, donc on utilise SSH.",
+    "mots_cles_attendus": [
+      "accès à distance",
+      "en clair",
+      "chiffré",
+      "sécurité"
+    ]
+  },
+  {
+    "id": "reseau-030",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert le champ TTL d'un paquet IP ?",
+    "reponse_reference": "Le TTL (Time To Live) est un compteur décrémenté à chaque routeur traversé. Quand il atteint zéro, le paquet est détruit. Il évite que des paquets tournent indéfiniment dans une boucle de routage, et traceroute s'en sert pour découvrir le chemin.",
+    "mots_cles_attendus": [
+      "compteur",
+      "routeur",
+      "zéro",
+      "boucle"
+    ]
+  },
+  {
+    "id": "reseau-031",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre un serveur DNS récursif et un serveur DNS faisant autorité ?",
+    "reponse_reference": "Le serveur récursif reçoit la demande du client et interroge les autres serveurs étape par étape pour trouver la réponse, en la mettant en cache. Le serveur faisant autorité détient les enregistrements officiels d'une zone et donne la réponse définitive pour ce domaine.",
+    "mots_cles_attendus": [
+      "récursif",
+      "cache",
+      "faisant autorité",
+      "zone"
+    ]
+  },
+  {
+    "id": "reseau-032",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un domaine de diffusion (broadcast) et comment le limiter ?",
+    "reponse_reference": "C'est l'ensemble des appareils qui reçoivent un message de diffusion envoyé à tous. S'il est trop grand, le trafic inutile ralentit le réseau. On le limite en segmentant avec des routeurs ou des VLAN.",
+    "mots_cles_attendus": [
+      "diffusion",
+      "tous les appareils",
+      "segmenter",
+      "VLAN"
+    ]
+  },
+  {
+    "id": "reseau-033",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quel est le rôle des protocoles SMTP, POP3 et IMAP dans le courrier électronique ?",
+    "reponse_reference": "SMTP sert à envoyer les emails d'un client vers un serveur et entre serveurs. POP3 et IMAP servent à les récupérer : POP3 télécharge les messages localement, IMAP les garde sur le serveur et synchronise plusieurs appareils.",
+    "mots_cles_attendus": [
+      "SMTP",
+      "envoyer",
+      "IMAP",
+      "synchronise"
+    ]
+  },
+  {
+    "id": "reseau-034",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la QoS (qualité de service) et pourquoi est-elle utile ?",
+    "reponse_reference": "La QoS consiste à prioriser certains types de trafic (voix, visioconférence) sur d'autres quand le réseau est chargé. Elle garantit une latence et une fluidité suffisantes pour les applications sensibles.",
+    "mots_cles_attendus": [
+      "priorité",
+      "trafic",
+      "voix",
+      "latence"
+    ]
+  },
+  {
+    "id": "reseau-035",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une DMZ et quel est son intérêt ?",
+    "reponse_reference": "Une DMZ est une zone réseau intermédiaire entre Internet et le réseau interne, où l'on place les serveurs exposés (web, mail). Si l'un d'eux est compromis, l'attaquant n'accède pas directement au réseau interne.",
+    "mots_cles_attendus": [
+      "zone intermédiaire",
+      "serveurs exposés",
+      "réseau interne",
+      "isolation"
+    ]
+  },
+  {
+    "id": "reseau-036",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre un réseau en topologie en étoile et en bus ?",
+    "reponse_reference": "En étoile, tous les appareils sont reliés à un équipement central (switch) : une panne d'un câble n'affecte qu'un appareil. En bus, tous partagent un seul câble : une coupure du câble principal paralyse tout le réseau. L'étoile est la topologie utilisée aujourd'hui.",
+    "mots_cles_attendus": [
+      "équipement central",
+      "switch",
+      "câble unique",
+      "panne"
+    ]
+  },
+  {
+    "id": "reseau-077",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment se déroule, en grandes lignes, la poignée de main TLS qui sécurise une connexion HTTPS ?",
+    "reponse_reference": "Le client et le serveur s'accordent sur la version et les algorithmes, le serveur présente son certificat que le client vérifie, puis ils établissent ensemble une clé de session secrète. Les échanges suivants sont chiffrés avec cette clé.",
+    "mots_cles_attendus": [
+      "certificat",
+      "clé de session",
+      "algorithmes",
+      "chiffré"
+    ]
+  },
+  {
+    "id": "reseau-078",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'apporte HTTP/2 par rapport à HTTP/1.1 ?",
+    "reponse_reference": "HTTP/2 permet le multiplexage : plusieurs requêtes et réponses circulent en parallèle sur une même connexion. Il compresse aussi les en-têtes, ce qui accélère le chargement des pages.",
+    "mots_cles_attendus": [
+      "multiplexage",
+      "une seule connexion",
+      "en-têtes compressés",
+      "rapidité"
+    ]
+  },
+  {
+    "id": "reseau-079",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert un répartiteur de charge (load balancer) ?",
+    "reponse_reference": "Il répartit les requêtes entre plusieurs serveurs identiques pour éviter la surcharge, améliorer les performances et assurer la disponibilité : si un serveur tombe, le trafic est dirigé vers les autres.",
+    "mots_cles_attendus": [
+      "répartit",
+      "plusieurs serveurs",
+      "disponibilité",
+      "surcharge"
+    ]
+  },
+  {
+    "id": "reseau-080",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi servent les commandes nslookup et dig ?",
+    "reponse_reference": "Elles interrogent des serveurs DNS pour obtenir les enregistrements d'un nom de domaine (adresse IP, MX...). Elles servent à diagnostiquer les problèmes de résolution de noms.",
+    "mots_cles_attendus": [
+      "DNS",
+      "enregistrements",
+      "résolution",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "reseau-081",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un lien trunk et le protocole 802.1Q ?",
+    "reponse_reference": "Un trunk est un lien entre deux switchs qui transporte le trafic de plusieurs VLAN. Le protocole 802.1Q ajoute à chaque trame une étiquette (tag) indiquant son VLAN d'appartenance.",
+    "mots_cles_attendus": [
+      "plusieurs VLAN",
+      "étiquette",
+      "tag",
+      "lien entre switchs"
+    ]
+  },
+  {
+    "id": "reseau-082",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'agrégation de liens (link aggregation) ?",
+    "reponse_reference": "On regroupe plusieurs câbles physiques entre deux équipements en un seul lien logique, ce qui augmente la bande passante et assure la redondance : si un câble tombe, les autres continuent.",
+    "mots_cles_attendus": [
+      "plusieurs liens",
+      "lien logique",
+      "bande passante",
+      "redondance"
+    ]
+  },
+  {
+    "id": "reseau-083",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert le protocole SNMP ?",
+    "reponse_reference": "SNMP permet de superviser et d'interroger les équipements réseau (switchs, routeurs, imprimantes) pour récupérer leur état, leur charge et leurs alertes, via un système de supervision centralisé.",
+    "mots_cles_attendus": [
+      "supervision",
+      "équipements",
+      "état",
+      "alertes"
+    ]
+  },
+  {
+    "id": "reseau-084",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quand choisir une adresse IP statique plutôt que dynamique ?",
+    "reponse_reference": "On choisit une IP statique pour les équipements qui doivent toujours être joignables à la même adresse (serveurs, imprimantes, caméras, routeurs). L'IP dynamique via DHCP convient aux postes clients, plus simple à gérer.",
+    "mots_cles_attendus": [
+      "serveurs",
+      "même adresse",
+      "DHCP",
+      "postes clients"
+    ]
+  },
+  {
+    "id": "reseau-037",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux ordinateurs PC1 et PC2 sont connectés au même switch par câble RJ45, mais ils ont la même adresse IP. Quel est le problème et comment le résoudre ?",
+    "reponse_reference": "C'est un conflit d'adresses IP : deux machines ne peuvent pas avoir la même adresse sur un réseau, donc le trafic est mal acheminé et les connexions deviennent instables ou échouent. Solution : attribuer une adresse unique à chaque machine, de préférence automatiquement via un serveur DHCP, ou corriger la configuration statique en doublon.",
+    "mots_cles_attendus": [
+      "conflit d'adresses IP",
+      "adresse unique",
+      "DHCP",
+      "configuration"
+    ]
+  },
+  {
+    "id": "reseau-038",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un ordinateur affiche une adresse en 169.254.x.x et n'accède à rien. Que s'est-il passé ?",
+    "reponse_reference": "L'ordinateur n'a pas réussi à obtenir d'adresse auprès d'un serveur DHCP et s'est attribué lui-même une adresse APIPA (169.254.x.x). Il faut vérifier le câble ou le Wi-Fi, que le serveur DHCP fonctionne, puis renouveler le bail.",
+    "mots_cles_attendus": [
+      "APIPA",
+      "DHCP",
+      "pas de réponse",
+      "renouveler"
+    ]
+  },
+  {
+    "id": "reseau-039",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur peut ouvrir un site en tapant son adresse IP mais pas en tapant son nom de domaine. Quelle est la cause probable ?",
+    "reponse_reference": "La connectivité réseau fonctionne, donc le problème vient de la résolution de noms : le serveur DNS configuré est injoignable ou défaillant, ou mal configuré sur la machine. On teste avec nslookup et on change de serveur DNS.",
+    "mots_cles_attendus": [
+      "DNS",
+      "résolution de noms",
+      "nslookup",
+      "serveur DNS"
+    ]
+  },
+  {
+    "id": "reseau-040",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un PC communique avec les autres machines du réseau local mais n'a pas accès à Internet. Quelles pistes vérifier ?",
+    "reponse_reference": "Vérifier la passerelle par défaut configurée, que le routeur est allumé et connecté à Internet, les paramètres DNS, et l'éventuel pare-feu ou filtrage. On teste avec ping vers la passerelle, puis vers une IP publique, puis vers un nom.",
+    "mots_cles_attendus": [
+      "passerelle par défaut",
+      "routeur",
+      "DNS",
+      "ping"
+    ]
+  },
+  {
+    "id": "reseau-041",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux ordinateurs branchés au même switch, mais dans des VLAN différents, ne peuvent pas communiquer. Pourquoi, et comment les faire communiquer ?",
+    "reponse_reference": "Les VLAN sont des réseaux logiquement séparés : le switch n'achemine pas le trafic entre eux. Il faut un routage inter-VLAN, via un routeur ou un switch de niveau 3, avec une passerelle par VLAN, éventuellement avec des règles de filtrage.",
+    "mots_cles_attendus": [
+      "VLAN séparés",
+      "routage inter-VLAN",
+      "routeur",
+      "passerelle"
+    ]
+  },
+  {
+    "id": "reseau-042",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Pendant qu'un collègue télécharge un gros fichier, les appels vidéo de toute l'équipe deviennent saccadés. Que se passe-t-il et que proposer ?",
+    "reponse_reference": "Le téléchargement sature la bande passante, ce qui augmente la latence et la perte de paquets pour la vidéo. On peut mettre en place de la QoS pour prioriser la voix et la vidéo, limiter le débit des téléchargements ou augmenter la capacité de la connexion.",
+    "mots_cles_attendus": [
+      "bande passante saturée",
+      "latence",
+      "QoS",
+      "priorité"
+    ]
+  },
+  {
+    "id": "reseau-043",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Des ordinateurs d'un bureau reçoivent des adresses IP inconnues et une mauvaise passerelle. On soupçonne un deuxième serveur DHCP. Qu'est-ce que c'est et comment s'en protéger ?",
+    "reponse_reference": "C'est un serveur DHCP pirate (rogue DHCP) branché sur le réseau, qui répond plus vite que le serveur légitime et distribue de mauvaises informations, avec un risque de détournement du trafic. On s'en protège avec le DHCP snooping sur les switchs et le contrôle des équipements branchés.",
+    "mots_cles_attendus": [
+      "DHCP pirate",
+      "mauvaise passerelle",
+      "DHCP snooping",
+      "switch"
+    ]
+  },
+  {
+    "id": "reseau-044",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert l'adresse de loopback 127.0.0.1 ?",
+    "reponse_reference": "C'est l'adresse qui désigne la machine elle-même (localhost). Le trafic envoyé à cette adresse ne sort pas sur le réseau : on l'utilise pour tester ses propres services et la pile réseau locale.",
+    "mots_cles_attendus": [
+      "machine elle-même",
+      "localhost",
+      "test",
+      "ne sort pas du réseau"
+    ]
+  },
+  {
+    "id": "reseau-045",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi certains pare-feux bloquent-ils le protocole ICMP, et quel est l'inconvénient ?",
+    "reponse_reference": "ICMP peut servir à cartographier un réseau (balayage de ping) ou à des attaques par saturation, donc certains le bloquent. L'inconvénient est que ping et traceroute ne marchent plus, ce qui complique le diagnostic, et certains messages utiles au bon fonctionnement du réseau sont perdus.",
+    "mots_cles_attendus": [
+      "ICMP",
+      "ping",
+      "diagnostic",
+      "reconnaissance"
+    ]
+  },
+  {
+    "id": "reseau-046",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la redirection de port (port forwarding) et dans quel cas l'utilise-t-on ?",
+    "reponse_reference": "C'est une règle sur le routeur qui redirige le trafic arrivant sur un port de l'adresse publique vers une machine et un port du réseau local. On l'utilise pour rendre accessible depuis Internet un service hébergé en interne (serveur web, jeu). Cela ouvre une exposition à sécuriser.",
+    "mots_cles_attendus": [
+      "routeur",
+      "port",
+      "réseau local",
+      "accessible depuis Internet"
+    ]
+  },
+  {
+    "id": "reseau-047",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel problème le protocole Spanning Tree (STP) résout-il ?",
+    "reponse_reference": "Quand des switchs sont reliés en boucle, les trames de diffusion tournent indéfiniment (tempête de diffusion) et saturent le réseau. STP désactive logiquement certains liens pour obtenir une topologie sans boucle, tout en les gardant comme secours.",
+    "mots_cles_attendus": [
+      "boucle",
+      "tempête de diffusion",
+      "liens désactivés",
+      "secours"
+    ]
+  },
+  {
+    "id": "reseau-048",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Combien d'appareils peut-on adresser dans le réseau 192.168.1.0/26 ?",
+    "reponse_reference": "/26 laisse 6 bits pour les hôtes, soit 64 adresses, dont 62 utilisables (on retire l'adresse du réseau et l'adresse de diffusion).",
+    "mots_cles_attendus": [
+      "6 bits",
+      "64 adresses",
+      "62",
+      "diffusion"
+    ]
+  },
+  {
+    "id": "reseau-085",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur en Wi-Fi se plaint de lenteurs. Un ping vers la passerelle montre 20 % de paquets perdus. Quelles causes envisager ?",
+    "reponse_reference": "Une perte de paquets vers la passerelle pointe vers un problème local : signal Wi-Fi faible ou interférences, borne surchargée, câble ou carte réseau défectueux. On teste en se rapprochant de la borne, en passant en filaire et en changeant de canal ou de bande.",
+    "mots_cles_attendus": [
+      "perte de paquets",
+      "signal faible",
+      "interférences",
+      "filaire"
+    ]
+  },
+  {
+    "id": "reseau-086",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Après un changement de fournisseur d'accès, un utilisateur ne peut plus envoyer d'emails avec son logiciel de messagerie mais peut en recevoir. Quelle est la cause probable ?",
+    "reponse_reference": "Beaucoup de FAI bloquent le port 25 sortant pour limiter le spam. Il faut configurer le serveur d'envoi (SMTP) sur le port 587 avec authentification et STARTTLS, ou le port 465 avec TLS.",
+    "mots_cles_attendus": [
+      "port 25 bloqué",
+      "SMTP",
+      "587",
+      "authentification"
+    ]
+  },
+  {
+    "id": "reseau-087",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un seul PC n'arrive plus à accéder au serveur de fichiers, alors que ses collègues y accèdent. Comment diagnostiquer méthodiquement ?",
+    "reponse_reference": "Procéder couche par couche : lien physique et voyants, adresse IP et passerelle (ipconfig), ping du serveur par IP puis par nom (DNS), pare-feu local, droits d'accès et compte utilisateur. La comparaison avec un poste qui fonctionne isole la différence.",
+    "mots_cles_attendus": [
+      "couche par couche",
+      "ping",
+      "DNS",
+      "comparer"
+    ]
+  },
+  {
+    "id": "reseau-088",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un câble réseau est branché sur un PC mais aucun voyant ne s'allume et il n'y a aucune connexion. Quelles vérifications faire ?",
+    "reponse_reference": "Vérifier la couche physique : câble défectueux ou mal serti, port du switch désactivé ou en panne, carte réseau désactivée ou sans pilote. On essaie un autre câble, un autre port et un autre appareil pour identifier l'élément en cause.",
+    "mots_cles_attendus": [
+      "couche physique",
+      "câble",
+      "port du switch",
+      "carte réseau"
+    ]
+  },
+  {
+    "id": "reseau-089",
+    "domaine": "reseau",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre le half duplex et le full duplex ?",
+    "reponse_reference": "En half duplex, un appareil ne peut émettre ou recevoir qu'à tour de rôle (des collisions sont possibles). En full duplex, il émet et reçoit simultanément, sans collisions, ce qui est la norme avec les switchs modernes.",
+    "mots_cles_attendus": [
+      "à tour de rôle",
+      "simultanément",
+      "collisions",
+      "switch"
+    ]
+  },
+  {
+    "id": "reseau-090",
+    "domaine": "reseau",
+    "sous_theme": "equipements",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le PoE (Power over Ethernet) ?",
+    "reponse_reference": "Le PoE alimente un appareil (borne Wi-Fi, caméra, téléphone IP) par le câble réseau lui-même, qui transporte donc données et électricité. Il évite d'installer une prise électrique près de chaque équipement.",
+    "mots_cles_attendus": [
+      "alimentation électrique",
+      "câble réseau",
+      "borne Wi-Fi",
+      "caméra"
+    ]
+  },
+  {
+    "id": "reseau-091",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une route par défaut (0.0.0.0/0) ?",
+    "reponse_reference": "C'est la route utilisée quand aucune route plus précise ne correspond à la destination. Elle envoie le trafic vers la passerelle par défaut, typiquement pour atteindre Internet.",
+    "mots_cles_attendus": [
+      "aucune route plus précise",
+      "passerelle",
+      "Internet",
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "id": "reseau-092",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que se passe-t-il si les horloges de plusieurs serveurs ne sont pas synchronisées ?",
+    "reponse_reference": "Les journaux deviennent incohérents, les certificats ou jetons peuvent être refusés, certaines authentifications échouent et le diagnostic d'incidents est compliqué. On corrige avec NTP.",
+    "mots_cles_attendus": [
+      "journaux incohérents",
+      "certificats",
+      "authentification",
+      "NTP"
+    ]
+  },
+  {
+    "id": "reseau-049",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un site interne est accessible depuis le réseau du bureau mais pas depuis le Wi-Fi invité. Quelles pistes vérifier ?",
+    "reponse_reference": "Le Wi-Fi invité est probablement dans un VLAN séparé, volontairement isolé du réseau interne. Il faut vérifier les règles de pare-feu ou les ACL entre les deux réseaux, le routage inter-VLAN et le DNS fourni aux invités. L'isolation est souvent voulue : on n'ouvre l'accès que si c'est justifié.",
+    "mots_cles_attendus": [
+      "VLAN",
+      "isolé",
+      "ACL",
+      "pare-feu"
+    ]
+  },
+  {
+    "id": "reseau-050",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un serveur web situé en DMZ répond depuis le réseau interne mais plus depuis Internet. Quelles pistes vérifier ?",
+    "reponse_reference": "Vérifier la règle de redirection de port (NAT) sur le routeur ou le pare-feu, les règles de filtrage entrant sur le port 80/443, que l'adresse publique est toujours correcte, que le service écoute bien, et l'état de la connexion Internet ou du DNS public.",
+    "mots_cles_attendus": [
+      "NAT",
+      "redirection de port",
+      "pare-feu",
+      "DNS"
+    ]
+  },
+  {
+    "id": "reseau-051",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Les utilisateurs signalent des lenteurs uniquement vers un serveur précis. Comment utiliser ping et traceroute pour localiser le problème ?",
+    "reponse_reference": "Ping mesure la latence et la perte de paquets vers le serveur. Traceroute montre le chemin saut par saut : un saut où la latence augmente fortement ou où les paquets se perdent désigne l'équipement ou le lien suspect. On compare avec d'autres destinations pour savoir si le problème est local ou propre à ce serveur.",
+    "mots_cles_attendus": [
+      "latence",
+      "perte de paquets",
+      "saut",
+      "comparer"
+    ]
+  },
+  {
+    "id": "reseau-052",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise a trois sites et veut les relier de façon sécurisée en passant par Internet. Quelle solution proposer et pourquoi ?",
+    "reponse_reference": "Un VPN site à site (par exemple IPsec) crée un tunnel chiffré entre les routeurs ou pare-feux de chaque site. Les sites communiquent comme sur un même réseau privé, à moindre coût qu'une liaison dédiée, avec chiffrement et authentification.",
+    "mots_cles_attendus": [
+      "VPN site à site",
+      "tunnel chiffré",
+      "IPsec",
+      "moindre coût"
+    ]
+  },
+  {
+    "id": "reseau-053",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Après l'ajout d'un nouveau switch, tout le réseau ralentit et les voyants des ports clignotent frénétiquement. Que se passe-t-il ?",
+    "reponse_reference": "Une boucle de commutation s'est probablement formée (par exemple deux câbles entre les mêmes switchs), provoquant une tempête de diffusion qui sature le réseau. On débranche le lien en trop et on active le Spanning Tree (STP) pour prévenir ces boucles.",
+    "mots_cles_attendus": [
+      "boucle",
+      "tempête de diffusion",
+      "STP",
+      "câble"
+    ]
+  },
+  {
+    "id": "reseau-054",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Des machines reçoivent un message de conflit d'adresse alors que tout le monde utilise le DHCP. Quelle est la cause probable ?",
+    "reponse_reference": "Des appareils ont des adresses IP statiques situées dans la plage distribuée par le DHCP, qui peut donc les attribuer à une autre machine. Solution : exclure les adresses statiques de la plage DHCP ou utiliser des réservations DHCP basées sur l'adresse MAC.",
+    "mots_cles_attendus": [
+      "adresses statiques",
+      "plage DHCP",
+      "exclure",
+      "réservation"
+    ]
+  },
+  {
+    "id": "reseau-055",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un visiteur branche son portable sur une prise murale libre de la salle de réunion et accède directement au réseau interne. Quelles mesures mettre en place ?",
+    "reponse_reference": "Désactiver les ports inutilisés, appliquer le contrôle d'accès par port avec 802.1X (authentification avant l'accès), la sécurité de port (limiter les adresses MAC), et placer les prises publiques dans un VLAN invité isolé.",
+    "mots_cles_attendus": [
+      "802.1X",
+      "ports désactivés",
+      "port security",
+      "VLAN invité"
+    ]
+  },
+  {
+    "id": "reseau-056",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le Wi-Fi d'un open space de 60 personnes devient très lent aux heures de pointe. Quelles causes et solutions envisager ?",
+    "reponse_reference": "Causes possibles : trop de clients sur une seule borne, bande 2,4 GHz saturée, interférences entre canaux. Solutions : ajouter des bornes, favoriser la bande 5 GHz, répartir les canaux, ajuster la puissance d'émission et vérifier la capacité de la liaison montante.",
+    "mots_cles_attendus": [
+      "trop de clients",
+      "5 GHz",
+      "canaux",
+      "ajouter des bornes"
+    ]
+  },
+  {
+    "id": "reseau-057",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre OSPF et BGP, et dans quels cas les utilise-t-on ?",
+    "reponse_reference": "OSPF est un protocole de routage interne (IGP) utilisé à l'intérieur d'une organisation pour calculer les meilleurs chemins. BGP est un protocole de routage externe (EGP) qui échange les routes entre organisations indépendantes (systèmes autonomes) et fait fonctionner Internet.",
+    "mots_cles_attendus": [
+      "IGP",
+      "EGP",
+      "systèmes autonomes",
+      "Internet"
+    ]
+  },
+  {
+    "id": "reseau-058",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le PAT (NAT overload) ?",
+    "reponse_reference": "Le PAT permet à de nombreux appareils d'un réseau privé de partager une seule adresse IP publique : le routeur distingue chaque connexion grâce à un numéro de port source différent et garde une table de traduction.",
+    "mots_cles_attendus": [
+      "une seule adresse publique",
+      "ports",
+      "table de traduction",
+      "NAT"
+    ]
+  },
+  {
+    "id": "reseau-059",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une ACL (liste de contrôle d'accès) sur un routeur ou un pare-feu ?",
+    "reponse_reference": "Une ACL est une liste ordonnée de règles autorisant ou refusant le trafic selon des critères comme l'adresse source, l'adresse de destination, le protocole ou le port. Les règles sont évaluées dans l'ordre, la première qui correspond s'applique, et il y a un refus implicite à la fin.",
+    "mots_cles_attendus": [
+      "règles",
+      "autoriser ou refuser",
+      "ordre",
+      "refus implicite"
+    ]
+  },
+  {
+    "id": "reseau-060",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la haute disponibilité réseau et comment la met-on en place avec la redondance ?",
+    "reponse_reference": "C'est la capacité d'un réseau à continuer à fonctionner malgré une panne. On duplique les équipements et liens critiques, et des protocoles comme HSRP ou VRRP font basculer automatiquement la passerelle vers l'équipement de secours, évitant un point de défaillance unique.",
+    "mots_cles_attendus": [
+      "redondance",
+      "basculement automatique",
+      "VRRP",
+      "point de défaillance unique"
+    ]
+  },
+  {
+    "id": "reseau-093",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise veut séparer le réseau de la comptabilité, des RH et des invités. Comment concevoir cette segmentation ?",
+    "reponse_reference": "Créer un VLAN par groupe, chacun avec son sous-réseau, relier les VLAN via un routeur ou pare-feu et appliquer des ACL pour n'autoriser que les flux nécessaires. Les invités n'ont qu'un accès Internet, isolés du réseau interne.",
+    "mots_cles_attendus": [
+      "VLAN",
+      "sous-réseau",
+      "ACL",
+      "isoler"
+    ]
+  },
+  {
+    "id": "reseau-094",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le serveur DNS interne tombe en panne et plus personne ne peut naviguer. Comment éviter que cela se reproduise ?",
+    "reponse_reference": "Mettre en place au moins un serveur DNS secondaire, voire des serveurs répartis, configurés sur les clients et via DHCP, avec surveillance de leur état. Un cache DNS et un DNS externe de secours peuvent compléter.",
+    "mots_cles_attendus": [
+      "serveur secondaire",
+      "redondance",
+      "DHCP",
+      "supervision"
+    ]
+  },
+  {
+    "id": "reseau-095",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "On soupçonne qu'un appareil du réseau envoie du trafic suspect vers l'extérieur. Comment enquêter et réagir ?",
+    "reponse_reference": "Analyser les journaux du pare-feu et les flux (NetFlow, captures), identifier l'appareil et les destinations, isoler l'appareil du réseau, rechercher un malware, puis bloquer les destinations malveillantes et corriger la cause.",
+    "mots_cles_attendus": [
+      "journaux",
+      "flux",
+      "isoler",
+      "bloquer"
+    ]
+  },
+  {
+    "id": "reseau-096",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le lien WAN entre deux sites se coupe régulièrement et bloque le travail. Quelles solutions de fiabilisation proposer ?",
+    "reponse_reference": "Ajouter un second lien chez un autre opérateur avec basculement automatique (failover), éventuellement avec un VPN de secours ou une solution SD-WAN qui choisit le meilleur lien, et superviser la qualité du lien.",
+    "mots_cles_attendus": [
+      "second lien",
+      "failover",
+      "SD-WAN",
+      "supervision"
+    ]
+  },
+  {
+    "id": "reseau-097",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un nouveau serveur web doit être accessible depuis Internet en HTTPS. Comment l'exposer de façon sécurisée ?",
+    "reponse_reference": "Le placer en DMZ derrière un pare-feu, n'ouvrir que le port 443, utiliser éventuellement un reverse proxy ou un WAF, installer un certificat valide, limiter les flux de la DMZ vers le réseau interne et maintenir le serveur à jour.",
+    "mots_cles_attendus": [
+      "DMZ",
+      "port 443",
+      "reverse proxy",
+      "certificat"
+    ]
+  },
+  {
+    "id": "reseau-098",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le routage inter-VLAN et la configuration « router on a stick » ?",
+    "reponse_reference": "Pour faire communiquer des VLAN, un routeur relié au switch par un seul lien trunk utilise des sous-interfaces, une par VLAN, chacune servant de passerelle. C'est simple et économique, mais le lien unique peut devenir un goulot d'étranglement.",
+    "mots_cles_attendus": [
+      "sous-interfaces",
+      "trunk",
+      "passerelle",
+      "goulot d'étranglement"
+    ]
+  },
+  {
+    "id": "reseau-099",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que MPLS dans les grands réseaux d'opérateurs ?",
+    "reponse_reference": "MPLS achemine les paquets grâce à des étiquettes (labels) plutôt que par une analyse complète de l'adresse IP à chaque saut. Il permet de la rapidité, de l'ingénierie de trafic et de relier des sites avec des réseaux privés virtuels.",
+    "mots_cles_attendus": [
+      "étiquettes",
+      "labels",
+      "opérateurs",
+      "VPN"
+    ]
+  },
+  {
+    "id": "reseau-100",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'agrégation de routes (route summarization) et quel est son intérêt ?",
+    "reponse_reference": "Elle regroupe plusieurs routes contiguës en une seule route plus générale. Les tables de routage deviennent plus petites, plus rapides à traiter et plus stables car les changements locaux sont masqués.",
+    "mots_cles_attendus": [
+      "regrouper",
+      "tables de routage",
+      "plus petites",
+      "stabilité"
+    ]
+  },
+  {
+    "id": "reseau-101",
+    "domaine": "reseau",
+    "sous_theme": "vlan",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un VLAN et quels problèmes résout-il sur un réseau local ?",
+    "reponse_reference": "Un VLAN (réseau local virtuel) segmente logiquement un switch en plusieurs domaines de diffusion indépendants, sans changer le câblage. Il réduit la taille des domaines de broadcast, améliore la sécurité en isolant les services sensibles et simplifie la gestion des mouvements d'utilisateurs.",
+    "mots_cles_attendus": [
+      "segmentation logique",
+      "domaine de broadcast",
+      "sécurité",
+      "isolation"
+    ]
+  },
+  {
+    "id": "reseau-102",
+    "domaine": "reseau",
+    "sous_theme": "vlan",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu administres le réseau d'une PME où la comptabilité, la production et les invités partagent le même réseau plat. Les invités saturent le réseau et la comptabilité craint pour ses données. Que proposes-tu ?",
+    "reponse_reference": "Je crée trois VLAN distincts (comptabilité, production, invités) et j'affecte chaque port de switch au VLAN correspondant, éventuellement via 802.1X pour les postes fixes. Le trafic invité est ensuite routé vers Internet uniquement, sans route vers les VLAN internes, ce qui isole les flux sensibles.",
+    "mots_cles_attendus": [
+      "vlan",
+      "isolation",
+      "segmentation",
+      "routage filtré",
+      "invités"
+    ]
+  },
+  {
+    "id": "reseau-103",
+    "domaine": "reseau",
+    "sous_theme": "vlan",
+    "niveau": 6,
+    "type": "definition",
+    "question": "À quoi sert un trunk 802.1Q entre deux switches ?",
+    "reponse_reference": "Un trunk transporte les trames de plusieurs VLAN sur un même lien physique en ajoutant une étiquette 802.1Q qui identifie le VLAN d'appartenance. Sans trunk, il faudrait un lien physique par VLAN entre les deux équipements.",
+    "mots_cles_attendus": [
+      "trunk",
+      "802.1q",
+      "étiquette",
+      "plusieurs vlan",
+      "lien physique"
+    ]
+  },
+  {
+    "id": "reseau-104",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Deux machines dans les VLAN 10 et 20 sont sur le même switch mais ne peuvent pas communiquer. Pourquoi et comment rétablir la communication ?",
+    "reponse_reference": "Les VLAN sont des domaines de broadcast séparés : la communication inter-VLAN nécessite obligatoirement un routeur ou un switch de niveau 3. Il faut activer le routage inter-VLAN, soit avec un routeur en mode router-on-a-stick (sous-interfaces par VLAN sur un trunk), soit avec des interfaces SVI sur un switch L3.",
+    "mots_cles_attendus": [
+      "routage inter-vlan",
+      "niveau 3",
+      "router-on-a-stick",
+      "svi",
+      "trunk"
+    ]
+  },
+  {
+    "id": "reseau-105",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le NAT et dans quel cas l'utilise-t-on ?",
+    "reponse_reference": "Le NAT (Network Address Translation) traduit les adresses IP privées d'un réseau local en adresse(s) publique(s) pour joindre Internet. Il permet de faire communiquer des milliers de machines avec un espace d'adressage public limité et masque la topologie interne.",
+    "mots_cles_attendus": [
+      "traduction d'adresses",
+      "adresses privées",
+      "adresse publique",
+      "internet"
+    ]
+  },
+  {
+    "id": "reseau-106",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une entreprise de 200 postes dispose d'une seule adresse IP publique fournie par son FAI. Comment permettre à tous les postes d'accéder à Internet ?",
+    "reponse_reference": "On configure du PAT (NAT avec surcharge de ports, overload) : le routeur traduit les adresses privées vers l'adresse publique unique en distinguant chaque session par un port source différent. La table de translation garde la correspondance pour acheminer les réponses vers le bon poste interne.",
+    "mots_cles_attendus": [
+      "pat",
+      "surcharge",
+      "port source",
+      "table de translation",
+      "adresse unique"
+    ]
+  },
+  {
+    "id": "reseau-107",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment fonctionne OSPF et qu'apporte-t-il par rapport au routage statique ?",
+    "reponse_reference": "OSPF est un protocole de routage dynamique à état de liens : chaque routeur décrit ses liens, diffuse cette information à ses voisins et calcule avec l'algorithme SPF le plus court chemin (coût basé sur la bande passante) vers chaque réseau. Contrairement au statique, il recalcule automatiquement les routes après une panne et s'adapte aux changements de topologie.",
+    "mots_cles_attendus": [
+      "état de liens",
+      "algorithme spf",
+      "coût",
+      "convergence",
+      "bande passante"
+    ]
+  },
+  {
+    "id": "reseau-108",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Sur deux routeurs connectés en OSPF, la relation de voisinage reste bloquée à l'état EXSTART/EXCHANGE. Quelles causes vérifies-tu en priorité ?",
+    "reponse_reference": "Cet état indique un échec d'échange des bases de données, souvent dû à un MTU différent entre les deux interfaces. Je vérifie aussi la cohérence des paramètres d'interface : même réseau et même masque, même area, timers hello/dead identiques et absence de filtre bloquant les paquets OSPF.",
+    "mots_cles_attendus": [
+      "mtu",
+      "voisinage",
+      "timers",
+      "area",
+      "masque"
+    ]
+  },
+  {
+    "id": "reseau-109",
+    "domaine": "reseau",
+    "sous_theme": "qualite_service",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la QoS (qualité de service) sur un réseau ?",
+    "reponse_reference": "La QoS est un ensemble de mécanismes qui classent, priorisent et contrôlent les flux pour garantir un traitement adapté aux applications sensibles comme la voix ou la vidéo. Elle agit sur la latence, le jitter et les pertes lorsque les liens sont saturés, en réservant ou en priorisant de la bande passante.",
+    "mots_cles_attendus": [
+      "priorisation",
+      "classification",
+      "latence",
+      "jitter",
+      "bande passante"
+    ]
+  },
+  {
+    "id": "reseau-110",
+    "domaine": "reseau",
+    "sous_theme": "qualite_service",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une entreprise constate que la téléphonie VoIP devient hachée aux heures de pointe, quand les sauvegardes et les téléchargements saturent le lien WAN. Comment résous-tu le problème ?",
+    "reponse_reference": "Je mets en place une QoS : classification du trafic VoIP (par DSCP EF ou par port) et placement dans une file prioritaire à faible latence, tandis que les sauvegardes sont marquées en trafic de fond (scavenger) et limitées en débit. Ainsi la voix passe avant les flux élastiques même quand le lien est saturé.",
+    "mots_cles_attendus": [
+      "qos",
+      "file prioritaire",
+      "dscp",
+      "voip",
+      "saturation"
+    ]
+  },
+  {
+    "id": "reseau-111",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le contrôle de flux TCP (fenêtre glissante) ?",
+    "reponse_reference": "Le contrôle de flux TCP limite la quantité de données non acquittées qu'un émetteur peut envoyer, via le champ fenêtre annoncé par le récepteur. Il évite de submerger un récepteur plus lent que l'émetteur, indépendamment de la congestion du réseau.",
+    "mots_cles_attendus": [
+      "fenêtre",
+      "acquittement",
+      "récepteur",
+      "débit",
+      "submersion"
+    ]
+  },
+  {
+    "id": "reseau-112",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un transfert de fichiers entre deux sites reliés par un lien à forte latence (outre-mer) est très lent alors que la bande passante est élevée. Quelle est l'explication TCP probable et que faire ?",
+    "reponse_reference": "Avec une forte latence, le débit TCP est limité par la taille de fenêtre : débit ≈ fenêtre / RTT, donc une petite fenêtre bride le transfert malgré un lien rapide. Il faut augmenter la taille des tampons TCP (auto-tuning) pour remplir le produit délai-bande (BDP).",
+    "mots_cles_attendus": [
+      "taille de fenêtre",
+      "rtt",
+      "produit délai-bande",
+      "débit",
+      "tampons tcp"
+    ]
+  },
+  {
+    "id": "reseau-113",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le SLAAC en IPv6 ?",
+    "reponse_reference": "Le SLAAC (Stateless Address Autoconfiguration) permet à une machine IPv6 de configurer seule son adresse à partir des annonces de routeur (RA) : elle combine le préfixe réseau reçu avec un identifiant d'interface dérivé de son adresse MAC ou aléatoire. Aucun serveur d'adressage n'est nécessaire, contrairement au DHCP.",
+    "mots_cles_attendus": [
+      "slaac",
+      "annonces de routeur",
+      "préfixe",
+      "identifiant d'interface",
+      "autoconfiguration"
+    ]
+  },
+  {
+    "id": "reseau-114",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu dois déployer IPv6 dans une entreprise qui fonctionne entièrement en IPv4, sans interrompre les services. Quelle stratégie adoptes-tu ?",
+    "reponse_reference": "J'active le double pile (dual-stack) : les équipements et serveurs disposent simultanément d'adresses IPv4 et IPv6, et les applications utilisent IPv6 quand il est disponible. Je commence par le cœur de réseau et le DNS (enregistrements AAAA), puis j'étends progressivement aux sites, en conservant l'IPv4 tant que tous les services ne sont pas prêts.",
+    "mots_cles_attendus": [
+      "dual-stack",
+      "double pile",
+      "progressif",
+      "aaaa",
+      "transition"
+    ]
+  },
+  {
+    "id": "reseau-115",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quel est le rôle du protocole STP (Spanning Tree Protocol) ?",
+    "reponse_reference": "STP empêche les boucles de commutation dans un réseau avec liens redondants en bloquant logiquement certains ports, tout en conservant un chemin unique actif vers chaque segment. En cas de panne d'un lien, il recalcule l'arbre et débloque un port de secours pour rétablir la connectivité.",
+    "mots_cles_attendus": [
+      "boucles",
+      "redondance",
+      "ports bloqués",
+      "racine",
+      "recalcul"
+    ]
+  },
+  {
+    "id": "reseau-116",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Après le branchement d'un câble entre deux switches d'accès, tout le réseau ralentit brutalement et les LED des switches clignotent à l'unisson. Que se passe-t-il et comment l'éviter ?",
+    "reponse_reference": "Une boucle de commutation s'est créée : les trames de broadcast tournent en boucle et s'auto-amplifient (tempête de broadcast). Il faut activer STP (ou RSTP) sur tous les switches pour bloquer le port redondant, et ajouter des protections comme BPDU guard sur les ports d'accès.",
+    "mots_cles_attendus": [
+      "boucle",
+      "tempête de broadcast",
+      "stp",
+      "bpdu guard",
+      "port bloqué"
+    ]
+  },
+  {
+    "id": "reseau-117",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le relais DHCP (DHCP relay) et pourquoi est-il nécessaire avec des VLAN ?",
+    "reponse_reference": "Les requêtes DHCP sont des broadcasts qui ne traversent pas les routeurs ; avec des VLAN distincts, un serveur DHCP central ne recevrait jamais les requêtes des autres segments. L'agent relais DHCP (IP helper) intercepte ces broadcasts et les renvoie en unicast au serveur, en indiquant le segment d'origine pour que celui-ci attribue la bonne plage d'adresses.",
+    "mots_cles_attendus": [
+      "relais dhcp",
+      "broadcast",
+      "unicast",
+      "ip helper",
+      "vlan"
+    ]
+  },
+  {
+    "id": "reseau-118",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Le démarrage des connexions TCP vers un site distant est lent mais le débit augmente progressivement jusqu'à saturer le lien. Quel mécanisme TCP explique ce comportement ?",
+    "reponse_reference": "C'est le slow start : après l'établissement de la connexion, TCP commence avec une fenêtre de congestion petite et la double à chaque RTT jusqu'à atteindre le seuil de slow start ou détecter des pertes. Le démarrage est donc progressif, ce qui pénalise les transferts courts sur les liens à latence élevée.",
+    "mots_cles_attendus": [
+      "slow start",
+      "fenêtre de congestion",
+      "rtt",
+      "progressif",
+      "seuil"
+    ]
+  },
+  {
+    "id": "reseau-119",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu dois découper le réseau 192.168.10.0/24 en sous-réseaux pour quatre VLAN : 100 postes, 40 postes, 20 postes et 10 postes. Quelle approche d'adressage adoptes-tu ?",
+    "reponse_reference": "J'utilise du VLSM en allouant du plus grand au plus petit : /25 (126 hôtes) pour les 100 postes, /26 (62) pour les 40, /27 (30) pour les 20 et /28 (14) pour les 10. Cela évite le gaspillage d'adresses qu'imposerait un masque unique, et laisse de la place pour d'autres sous-réseaux.",
+    "mots_cles_attendus": [
+      "vlsm",
+      "masque variable",
+      "découpage",
+      "gaspillage",
+      "plan d'adressage"
+    ]
+  },
+  {
+    "id": "reseau-120",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la sécurité des ports (port security) sur un switch et que permet-elle ?",
+    "reponse_reference": "La port security limite sur un port de switch le nombre et l'identité des adresses MAC autorisées à communiquer. En cas de violation (machine inconnue branchée, hub connecté), le port peut être désactivé ou restreint, ce qui protège contre le branchement sauvage d'équipements et les attaques par usurpation MAC.",
+    "mots_cles_attendus": [
+      "port security",
+      "adresse mac",
+      "violation",
+      "port désactivé",
+      "accès non autorisé"
+    ]
+  },
+  {
+    "id": "reseau-121",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que BGP et pourquoi est-il appelé protocole de vecteur de chemin ?",
+    "reponse_reference": "BGP est le protocole de routage inter-domaines d'Internet : il échange entre systèmes autonomes (AS) des préfixes accompagnés de la liste complète des AS traversés (le chemin). On parle de vecteur de chemin car les décisions se prennent sur des politiques et des attributs (AS_PATH, préférence locale, MED) plutôt que sur une simple métrique de coût.",
+    "mots_cles_attendus": [
+      "bgp",
+      "système autonome",
+      "chemin",
+      "politiques",
+      "internet"
+    ]
+  },
+  {
+    "id": "reseau-122",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une entreprise se connecte à deux fournisseurs d'accès distincts. Quelle différence fais-tu entre les sessions eBGP et iBGP dans ce contexte ?",
+    "reponse_reference": "Les sessions avec les deux FAI sont en eBGP : on échange des routes entre systèmes autonomes différents, avec un TTL de 1 par défaut et modification du next-hop. Entre les routeurs internes de l'entreprise, on utilise iBGP pour propager ces routes au sein du même AS sans altérer l'AS_PATH, en full mesh ou via un route reflector.",
+    "mots_cles_attendus": [
+      "ebgp",
+      "ibgp",
+      "système autonome",
+      "next-hop",
+      "full mesh"
+    ]
+  },
+  {
+    "id": "reseau-123",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quel est le rôle du protocole NDP (Neighbor Discovery Protocol) en IPv6 ?",
+    "reponse_reference": "NDP remplace ARP en IPv6 : il fait la résolution d'adresses via les messages Neighbor Solicitation et Neighbor Advertisement en ICMPv6, et gère la découverte des routeurs et la détection d'adresses dupliquées (DAD). Il repose sur le multicast (adresses sollicitées) plutôt que sur le broadcast.",
+    "mots_cles_attendus": [
+      "ndp",
+      "icmpv6",
+      "résolution",
+      "neighbor solicitation",
+      "déduplication"
+    ]
+  },
+  {
+    "id": "reseau-124",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Ton fournisseur t'a attribué le préfixe IPv6 2001:db8:ab00::/40 pour l'entreprise. Comment organises-tu le plan d'adressage des sites ?",
+    "reponse_reference": "J'utilise les 16 bits restants du /40 pour numéroter les sites en /56 ou /64, par exemple 2001:db8:ab01::/48 pour le site 1, ab02 pour le site 2, etc., ce qui permet jusqu'à 256 sites. Je documente un plan structuré (bits de site, bits de VLAN) pour que l'adresse d'un réseau indique son emplacement, et je garde une réserve pour l'extension.",
+    "mots_cles_attendus": [
+      "préfixe",
+      "plan d'adressage",
+      "hiérarchie",
+      "sites",
+      "réservation"
+    ]
+  },
+  {
+    "id": "reseau-125",
+    "domaine": "reseau",
+    "sous_theme": "qualite_service",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle est la différence entre le marquage DSCP et le marquage CoS ?",
+    "reponse_reference": "CoS (classe de service, 802.1p) est un champ de 3 bits de l'étiquette VLAN, valable uniquement en couche 2 et perdu au routage. DSCP est un champ de 6 bits de l'en-tête IP, conservé de bout en bout à travers les routeurs ; on mappe généralement CoS vers DSCP en bordure de réseau.",
+    "mots_cles_attendus": [
+      "dscp",
+      "cos",
+      "couche 2",
+      "couche 3",
+      "marquage"
+    ]
+  },
+  {
+    "id": "reseau-126",
+    "domaine": "reseau",
+    "sous_theme": "qualite_service",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Sur un lien WAN saturé, tu dois limiter les flux de sauvegarde à 10 Mb/s tout en lissant les pics d'un flux vidéo. Explique la différence entre policing et shaping et lequel utiliser pour chaque cas.",
+    "reponse_reference": "Le policing (policeur) fait chuter ou remarquer brutalement les paquets qui dépassent le débit autorisé : adapté aux sauvegardes, on le limite à 10 Mb/s en drop. Le shaping met les paquets en file et lisse l'émission en respectant un débit moyen : adapté à la vidéo, il évite les pertes sèches et le jitter en étalant les rafales.",
+    "mots_cles_attendus": [
+      "policing",
+      "shaping",
+      "chute de paquets",
+      "file d'attente",
+      "lissage"
+    ]
+  },
+  {
+    "id": "reseau-127",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Comment TCP réagit-il à la perte de paquets et pourquoi cela réduit-il le débit ?",
+    "reponse_reference": "TCP interprète les pertes comme un signe de congestion : après trois acquittements dupliqués il retransmet et réduit fortement sa fenêtre de congestion (fast recovery), et après expiration du temporisateur il repart quasiment en slow start. Chaque perte casse donc l'augmentation de débit en cours, ce qui pénalise fortement les applications sur les liens avec pertes.",
+    "mots_cles_attendus": [
+      "congestion",
+      "retransmission",
+      "fenêtre",
+      "acquittements dupliqués",
+      "débit réduit"
+    ]
+  },
+  {
+    "id": "reseau-128",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Des utilisateurs signalent des coupures aléatoires d'applications vers le site distant. Une capture montre beaucoup de retransmissions TCP sans perte visible sur les liens. Quelle piste explores-tu en priorité ?",
+    "reponse_reference": "Je regarde si les retransmissions sont dues à des acquittements dupliqués ou à des timeouts, et si elles touchent un seul flux ou tous : cela distingue un problème de chemin (routage asymétrique, lien spécifique) d'un équipement défaillant. Je vérifie aussi les files d'attente saturées (drops en sortie d'interface) et les erreurs physiques (CRC) sur le trajet.",
+    "mots_cles_attendus": [
+      "retransmissions",
+      "acquittements dupliqués",
+      "routage asymétrique",
+      "files d'attente",
+      "erreurs crc"
+    ]
+  },
+  {
+    "id": "reseau-129",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un serveur web interne en adresse privée doit être joignible depuis Internet, mais tu n'utilises que du PAT en sortie. Comment configures-tu l'accès entrant ?",
+    "reponse_reference": "On configure une translation statique de port (NAT statique ou redirection de port) : les paquets arrivant sur l'IP publique et le port 443 sont traduits vers l'IP privée du serveur et son port 443. Il faut aussi ouvrir le flux dans le pare-feu et, idéalement, protéger le serveur exposé dans une DMZ.",
+    "mots_cles_attendus": [
+      "nat statique",
+      "redirection de port",
+      "dmz",
+      "pare-feu",
+      "ip publique"
+    ]
+  },
+  {
+    "id": "reseau-130",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Dans OSPF, le trafic entre deux routeurs d'un même site passe par un lien de secours lent au lieu du lien principal rapide. Comment corriges-tu ce choix de chemin ?",
+    "reponse_reference": "OSPF choisit la route de plus faible coût, calculé à partir de la bande passante : il faut vérifier que les coûts reflètent les débits réels (commande de référence de bande passante correcte, notamment avec des liens > 100 Mb/s) ou fixer manuellement un coût plus faible sur le lien principal. On peut aussi jouer sur les types de zones ou l'agrégation pour influencer le chemin.",
+    "mots_cles_attendus": [
+      "coût ospf",
+      "bande passante",
+      "lien principal",
+      "plus court chemin",
+      "configuration manuelle"
+    ]
+  },
+  {
+    "id": "reseau-131",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que VRRP (ou HSRP) et quel problème résout-il ?",
+    "reponse_reference": "VRRP et HSRP sont des protocoles de redondance de passerelle par défaut : plusieurs routeurs forment un groupe virtuel avec une IP et une MAC virtuelles, un maître actif et des sauvegardes. Si le routeur maître tombe, un backup prend le relais en quelques secondes sans que les postes, qui pointent vers l'IP virtuelle, n'aient à être reconfigurés.",
+    "mots_cles_attendus": [
+      "vrrp",
+      "passerelle virtuelle",
+      "maître",
+      "secours",
+      "bascule"
+    ]
+  },
+  {
+    "id": "reseau-132",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un des deux routeurs cœur de réseau tombe en panne et les utilisateurs du VLAN concerné perdent tout accès pendant plusieurs minutes alors que VRRP est configuré. Quelles causes investigues-tu ?",
+    "reponse_reference": "Je vérifie d'abord si la bascule VRRP a bien eu lieu (états maître/backup, priorités, preempt) : un backup mal priorisé ou sans preempt peut laisser deux maîtres ou aucune prise de relais propre. J'examine aussi les timers d'annonce, l'état du lien de suivi (track) et si le problème vient plutôt de la reconvergence du routage dynamique après la bascule.",
+    "mots_cles_attendus": [
+      "bascule",
+      "priorité",
+      "preempt",
+      "timers",
+      "reconvergence"
+    ]
+  },
+  {
+    "id": "reseau-133",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'agrégation de liens LACP et quels bénéfices apporte-t-elle ?",
+    "reponse_reference": "LACP négocie dynamiquement un groupe de liens physiques (EtherChannel/LAG) agrégés en un lien logique unique entre deux équipements. Cela augmente la bande passante totale, apporte de la redondance (la panne d'un lien membre est transparente) et évite les boucles puisque le groupe est vu comme un seul lien par STP.",
+    "mots_cles_attendus": [
+      "lacp",
+      "agrégation",
+      "bande passante",
+      "redondance",
+      "lien logique"
+    ]
+  },
+  {
+    "id": "reseau-134",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu câbles un LACP entre deux switches mais le groupe ne monte pas. Quelles vérifications fais-tu ?",
+    "reponse_reference": "Je contrôle que les deux extrémités utilisent le même mode (LACP active/passive, au moins un active), la même configuration des ports membres : même vitesse, duplex, VLAN natif et liste de VLAN autorisés sur les trunks. Je vérifie aussi l'identifiant de système et la clé LACP, ainsi que l'absence de port security ou d'errdisable sur les interfaces concernées.",
+    "mots_cles_attendus": [
+      "mode lacp",
+      "ports membres",
+      "vlan natif",
+      "vitesse duplex",
+      "errdisable"
+    ]
+  },
+  {
+    "id": "reseau-135",
+    "domaine": "reseau",
+    "sous_theme": "adressage_ip",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quels sont les grands mécanismes de transition IPv4 vers IPv6 (tunnels et traduction) ?",
+    "reponse_reference": "Les tunnels (6in4, 6to4, Teredo, GRE) encapsulent des paquets IPv6 dans IPv4 pour traverser un réseau IPv4, et les mécanismes de traduction (NAT64/DNS64) convertissent les flux entre les deux protocoles pour qu'un client purement IPv6 joigne des serveurs IPv4. Le dual-stack reste la cible à long terme, ces mécanismes servant de solutions transitoires.",
+    "mots_cles_attendus": [
+      "tunnel",
+      "encapsulation",
+      "nat64",
+      "traduction",
+      "transition"
+    ]
+  },
+  {
+    "id": "reseau-136",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Depuis la mise en place d'un VPN IPsec, les gros transferts échouent systématiquement alors que le ping et les petites pages web passent. Quel diagnostic poses-tu ?",
+    "reponse_reference": "C'est le classique problème de MTU : l'encapsulation IPsec ajoute des en-têtes, et si les gros paquets sont fragmentés et que les ICMP « fragmentation nécessaire » sont bloqués, on obtient un trou noir de MTU. Il faut activer la découverte du MTU de chemin (PMTUD), laisser passer ICMP type 3 code 4, ou réduire le MTU/clamper le MSS TCP aux extrémités du tunnel.",
+    "mots_cles_attendus": [
+      "mtu",
+      "fragmentation",
+      "icmp",
+      "mss",
+      "ipsec",
+      "trou noir"
+    ]
+  },
+  {
+    "id": "reseau-137",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la redistribution de routes entre protocoles de routage et quel risque majeur présente-t-elle ?",
+    "reponse_reference": "La redistribution consiste à injecter dans un protocole (par exemple OSPF) des routes apprises par un autre (par exemple BGP ou du statique), souvent avec filtrage et ajustement de métrique. Le risque majeur est la boucle de routage ou la réinjection de routes en double sens entre les deux protocoles, qu'il faut prévenir avec des filtres, des tags et des métriques cohérentes.",
+    "mots_cles_attendus": [
+      "redistribution",
+      "boucle de routage",
+      "filtres",
+      "métrique",
+      "tags"
+    ]
+  },
+  {
+    "id": "reseau-138",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Après avoir ajouté une redistribution OSPF vers RIP sur un routeur, des paquets font des allers-retours entre deux routeurs et les temps de réponse explosent. Que s'est-il passé et comment corriger ?",
+    "reponse_reference": "Une boucle de routage est apparue : une route RIP redistribuée dans OSPF a été réinjectée vers RIP par un autre routeur avec une meilleure métrique, et les deux protocoles se renvoient le préfixe. Il faut filtrer les routes redistribuées par tag ou par préfixe (ne jamais renvoyer une route vers son protocole d'origine) et aligner les distances administratives.",
+    "mots_cles_attendus": [
+      "boucle de routage",
+      "redistribution",
+      "filtrage par tag",
+      "distance administrative",
+      "réinjection"
+    ]
+  },
+  {
+    "id": "reseau-139",
+    "domaine": "reseau",
+    "sous_theme": "vlan",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu déploies des téléphones IP branchés derrière les PC des utilisateurs sur les mêmes ports de switch. Comment organises-tu le VLAN et la QoS pour ce cas ?",
+    "reponse_reference": "On configure un VLAN voix sur le port : le switch identifie les téléphones (via CDP/LLDP-MED) et étiquette leur trafic en 802.1Q avec le VLAN voix et une priorité CoS élevée, tandis que le PC reste en VLAN données non étiqueté. La QoS place ensuite la voix en file prioritaire pour éviter que le trafic PC ne dégrade les appels.",
+    "mots_cles_attendus": [
+      "vlan voix",
+      "lldp",
+      "cos",
+      "étiquetage",
+      "file prioritaire"
+    ]
+  },
+  {
+    "id": "reseau-140",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 7,
+    "type": "definition",
+    "question": "À quoi sert SNMP dans la supervision d'un réseau et que sont les MIB et les traps ?",
+    "reponse_reference": "SNMP permet à un système de supervision d'interroger les équipements réseau (compteurs d'interfaces, CPU, mémoire) et de recevoir des alertes asynchrones appelées traps. Les MIB sont les dictionnaires qui décrivent les objets interrogeables (OID) et leur signification pour chaque constructeur.",
+    "mots_cles_attendus": [
+      "snmp",
+      "supervision",
+      "traps",
+      "mib",
+      "compteurs"
+    ]
+  },
+  {
+    "id": "reseau-141",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels sont les principes de l'architecture réseau hiérarchique à trois couches (cœur, distribution, accès) ?",
+    "reponse_reference": "La couche accès connecte les utilisateurs et applique les politiques de port (VLAN, QoS, sécurité) ; la couche distribution agrège les switches d'accès, assure le routage inter-VLAN et les frontières de politique ; le cœur commute le trafic à très haute vitesse sans traitement complexe. Cette séparation des rôles améliore l'évolutivité, la prédictibilité du dépannage et la résilience.",
+    "mots_cles_attendus": [
+      "cœur",
+      "distribution",
+      "accès",
+      "hiérarchie",
+      "évolutivité"
+    ]
+  },
+  {
+    "id": "reseau-142",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu conçois le réseau d'un campus de trois bâtiments (200 postes chacun) avec serveurs locaux et sortie Internet unique. Quelles décisions structurantes prends-tu ?",
+    "reponse_reference": "Je mets en place une architecture hiérarchique : switches d'accès par bâtiment, une couche distribution/cœur redondante avec liens agrégés, et des VLAN étendus de façon cohérente avec un plan d'adressage documenté par bâtiment. J'ajoute un pare-feu en sortie avec DMZ pour les serveurs, du routage dynamique interne (OSPF) et une redondance de passerelle (VRRP) pour éviter tout point de défaillance unique.",
+    "mots_cles_attendus": [
+      "hiérarchique",
+      "redondance",
+      "vlan",
+      "dmz",
+      "plan d'adressage",
+      "point de défaillance unique"
+    ]
+  },
+  {
+    "id": "reseau-143",
+    "domaine": "reseau",
+    "sous_theme": "multicast",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quel est le rôle d'IGMP dans un réseau multicast ?",
+    "reponse_reference": "IGMP permet aux hôtes de signaler aux routeurs du segment local leur volonté de rejoindre (ou quitter) un groupe multicast. Les routeurs s'appuient sur ces rapports pour ne diffuser un flux que sur les segments où il y a des récepteurs ; IGMP snooping sur les switches joue le même rôle au niveau 2 pour éviter d'inonder tous les ports.",
+    "mots_cles_attendus": [
+      "igmp",
+      "groupe multicast",
+      "rapports",
+      "snooping",
+      "récepteurs"
+    ]
+  },
+  {
+    "id": "reseau-144",
+    "domaine": "reseau",
+    "sous_theme": "multicast",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment fonctionne PIM en mode sparse et qu'est-ce que le point de rendez-vous (RP) ?",
+    "reponse_reference": "PIM sparse-mode construit un arbre de distribution partagé en s'appuyant sur un routeur central, le RP : les récepteurs rejoignent l'arbre vers le RP et les sources y enregistrent leurs flux. Le trafic n'est acheminé que vers les branches qui l'ont demandé, et les routeurs peuvent ensuite basculer vers un arbre au plus court chemin (SPT) pour optimiser le trajet.",
+    "mots_cles_attendus": [
+      "pim",
+      "sparse-mode",
+      "point de rendez-vous",
+      "arbre partagé",
+      "spt"
+    ]
+  },
+  {
+    "id": "reseau-145",
+    "domaine": "reseau",
+    "sous_theme": "multicast",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une entreprise diffuse un flux vidéo interne vers 300 postes, mais en unicast : le serveur sature et le lien aussi. Comment repenses-tu la diffusion ?",
+    "reponse_reference": "Je passe en multicast : une seule copie du flux circule sur chaque lien, les switches ne la répliquant qu'aux ports intéressés. Il faut configurer IGMP snooping sur les switches d'accès, PIM (sparse-mode avec RP) sur le routage inter-VLAN, réserver une plage d'adresses multicast (par exemple 239.x, administrativement scopée) et vérifier que la QoS protège le flux vidéo.",
+    "mots_cles_attendus": [
+      "multicast",
+      "igmp snooping",
+      "pim",
+      "réplication",
+      "plage d'adresses"
+    ]
+  },
+  {
+    "id": "reseau-146",
+    "domaine": "reseau",
+    "sous_theme": "mpls",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que MPLS et à quoi servent les étiquettes (labels) ?",
+    "reponse_reference": "MPLS fait suivre les paquets dans un réseau opérateur grâce à de courtes étiquettes apposées en entrée et permutées à chaque saut (LSR), sans consultation de la table de routage IP complète à chaque nœud. Les labels permettent de créer des chemins (LSP), de transporter plusieurs VPN clients sur une même infrastructure et de faire de l'ingénierie de trafic.",
+    "mots_cles_attendus": [
+      "mpls",
+      "étiquette",
+      "lsp",
+      "permutation",
+      "opérateur"
+    ]
+  },
+  {
+    "id": "reseau-147",
+    "domaine": "reseau",
+    "sous_theme": "mpls",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une entreprise multi-sites souscrit à un service « VPN MPLS » chez un opérateur. Que fournit réellement ce service et quelles en sont les limites face à Internet ?",
+    "reponse_reference": "L'opérateur interconnecte les sites dans un VPN de couche 3 cloisonné : le trafic de l'entreprise est isolé des autres clients par des tables de routage dédiées (VRF), avec souvent des classes de service garanties. Les limites sont le coût élevé, la dépendance à un seul fournisseur et la rigidité pour les accès cloud ou distants, ce qui pousse aujourd'hui vers des approches hybrides ou SD-WAN.",
+    "mots_cles_attendus": [
+      "vpn mpls",
+      "vrf",
+      "isolation",
+      "opérateur",
+      "coût",
+      "sd-wan"
+    ]
+  },
+  {
+    "id": "reseau-148",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un utilisateur signale « le réseau ne marche pas » sans plus de détail. Décris ta méthode de dépannage structurée.",
+    "reponse_reference": "Je qualifie d'abord le problème : périmètre (un poste, un VLAN, tout un site ?), services touchés, depuis quand, changements récents. Je remonte ensuite le modèle OSI méthodiquement : physique (câble, LED, port up), niveau 2 (VLAN, MAC, STP), niveau 3 (adresse IP, masque, passerelle, routage) puis services (DNS, DHCP, pare-feu), en comparant avec un poste qui fonctionne et en documentant chaque test.",
+    "mots_cles_attendus": [
+      "périmètre",
+      "modèle osi",
+      "changements récents",
+      "méthodique",
+      "comparaison"
+    ]
+  },
+  {
+    "id": "reseau-149",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Des pertes de connexion intermittentes et non reproductibles frappent un site chaque jour vers 9h. Comment mènes-tu l'enquête ?",
+    "reponse_reference": "Je cherche la corrélation temporelle : ce qui démarre à 9h (arrivées des utilisateurs, sauvegardes, synchronisations, ouverture de l'accueil) et je surveille les compteurs (erreurs d'interfaces, saturations, CPU des équipements) autour de cette heure. Je mets en place des captures continues tournantes et du NetFlow pour capturer l'incident, puis je compare l'état avant/pendant pour isoler le déclencheur.",
+    "mots_cles_attendus": [
+      "corrélation",
+      "compteurs",
+      "capture tournante",
+      "netflow",
+      "intermittent"
+    ]
+  },
+  {
+    "id": "reseau-150",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle est la différence entre un IDS et un IPS, et où les placer dans le réseau ?",
+    "reponse_reference": "Un IDS (système de détection d'intrusion) analyse une copie du trafic et alerte sans bloquer ; un IPS (système de prévention) est placé en coupure et peut rejeter les paquets malveillants en temps réel. On place l'IDS/IPS aux frontières (Internet, DMZ) et entre zones internes sensibles, en veillant à ce que l'IPS en coupure soit dimensionné pour le débit et haute disponibilité.",
+    "mots_cles_attendus": [
+      "ids",
+      "ips",
+      "détection",
+      "prévention",
+      "en coupure"
+    ]
+  },
+  {
+    "id": "reseau-151",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu dois définir la politique de règles d'un pare-feu séparant le LAN, une DMZ de serveurs web et Internet. Quels principes appliques-tu ?",
+    "reponse_reference": "Je pars d'un refus par défaut (deny any any en dernière règle) et je n'autorise que les flux métier explicitement justifiés : LAN vers Internet pour les usages nécessaires, Internet vers DMZ uniquement sur les ports publiés (80/443), et jamais d'initiation de connexion de la DMZ ou d'Internet vers le LAN. Les règles sont écrites en termes de zones et de services, journalisées et révisées régulièrement.",
+    "mots_cles_attendus": [
+      "deny par défaut",
+      "dmz",
+      "flux justifiés",
+      "initiation",
+      "journalisation"
+    ]
+  },
+  {
+    "id": "reseau-152",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'authentification 802.1X et quel intérêt pour un réseau d'entreprise ?",
+    "reponse_reference": "802.1X est un mécanisme de contrôle d'accès au niveau du port : avant authentification réussie auprès d'un serveur RADIUS, le port switch n'autorise aucun trafic (ou seulement l'authentification). Il garantit que seuls les utilisateurs et machines connus se connectent, affecte dynamiquement le VLAN selon l'identité et bloque les équipements non autorisés.",
+    "mots_cles_attendus": [
+      "802.1x",
+      "radius",
+      "contrôle d'accès",
+      "vlan dynamique",
+      "authentification"
+    ]
+  },
+  {
+    "id": "reseau-153",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une entreprise découvre régulièrement des boîtiers personnels (routeurs Wi-Fi, hubs) branchés sur ses prises murales. Comment sécurises-tu l'accès réseau ?",
+    "reponse_reference": "Je déploie 802.1X avec un serveur RADIUS pour que seuls les équipements authentifiés obtiennent un accès complet, en complément de port security (limitation du nombre de MAC) et de BPDU guard/loop guard sur les ports d'accès. Les équipements non authentifiés basculent dans un VLAN d'isolement, et la détection d'usurpation (DHCP snooping, DAI) empêche les boîtiers pirates de servir d'infrastructure.",
+    "mots_cles_attendus": [
+      "802.1x",
+      "port security",
+      "vlan d'isolement",
+      "dhcp snooping",
+      "bpdu guard"
+    ]
+  },
+  {
+    "id": "reseau-154",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que NetFlow/sFlow et quelles informations ces technologies fournissent-elles ?",
+    "reponse_reference": "NetFlow et sFlow exportent des statistiques sur les flux qui traversent un équipement : adresses IP source/destination, ports, protocole, volume et durée, sans capturer le contenu des paquets. Ils permettent de savoir qui consomme la bande passante, de détecter des comportements anormaux (scan, exfiltration) et d'alimenter le dimensionnement du réseau.",
+    "mots_cles_attendus": [
+      "netflow",
+      "sflow",
+      "statistiques de flux",
+      "bande passante",
+      "anomalie"
+    ]
+  },
+  {
+    "id": "reseau-155",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Le lien WAN du siège sature tous les après-midis sans qu'on sache quel service est en cause. Comment identifies-tu le coupable avec les outils réseau ?",
+    "reponse_reference": "J'active NetFlow (ou sFlow) sur le routeur de bordure et j'analyse les top conversations avec un collecteur : les couples source/destination/port et volumes horodatés montrent immédiatement le flux dominant. Je recoupe avec les compteurs d'interface (drops en sortie) et, si nécessaire, une capture ciblée pour qualifier le trafic avant de décider (QoS, limitation, déplacement du service).",
+    "mots_cles_attendus": [
+      "netflow",
+      "top conversations",
+      "collecteur",
+      "compteurs d'interface",
+      "qualification"
+    ]
+  },
+  {
+    "id": "reseau-156",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "On te demande de choisir les uplinks de switches d'accès 48 ports 1 Gb/s vers la distribution d'un campus. Comment raisonnes-tu le dimensionnement, et qu'est-ce que le taux de surobjectivation (oversubscription) ?",
+    "reponse_reference": "Le taux de surobjectivation est le rapport entre la capacité offerte en accès (ici 48 Gb/s de ports utilisateurs) et la capacité réelle de remontée : par exemple 4 uplinks 10 Gb/s donnent du 1,2:1, alors qu'un bureau classique tolère souvent du 10:1. Ce ratio suppose que tous les utilisateurs n'émettent pas à pleine vitesse simultanément ; je le dimensionne à partir du trafic réellement mesuré (NetFlow, compteurs), des usages (bureautique, vidéo, serveurs), avec une marge pour la croissance et les pics.",
+    "mots_cles_attendus": [
+      "surobjectivation",
+      "uplinks",
+      "ratio",
+      "dimensionnement",
+      "pics"
+    ]
+  },
+  {
+    "id": "reseau-157",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "On te demande de dimensionner les liens WAN de trois sites régionaux (50 utilisateurs chacun) vers le datacenter qui héberge toutes les applications. Quelle démarche suis-tu ?",
+    "reponse_reference": "Je mesure d'abord le trafic réel existant (NetFlow, compteurs) pour connaître le profil horaire et les volumes par application, puis j'estime les besoins avec une marge de croissance (par exemple 30-50 %). Je vérifie que la somme des pics simultanés reste sous un seuil cible d'occupation (70 % environ), j'applique de la QoS pour les flux sensibles, et je prévoie une solution de secours (4G, second opérateur) avec test de bascule.",
+    "mots_cles_attendus": [
+      "mesure du trafic",
+      "marge de croissance",
+      "occupation cible",
+      "qos",
+      "lien de secours"
+    ]
+  },
+  {
+    "id": "reseau-158",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu reprends l'administration d'un réseau d'entreprise sans aucune documentation : schémas absents, configurations inconnues. Quelles sont tes premières actions ?",
+    "reponse_reference": "Je reconstruis d'abord l'état des lieux : inventaire des équipements (via LLDP/CDP et scans), schéma physique et logique, plan d'adressage réel observé, et sauvegarde immédiate de toutes les configurations en place. Je documente au fil de l'eau dans un référentiel versionné, puis j'identifie les incohérences et risques avant tout changement, pour éviter de casser des dépendances invisibles.",
+    "mots_cles_attendus": [
+      "inventaire",
+      "lldp",
+      "sauvegarde des configurations",
+      "schéma",
+      "état des lieux"
+    ]
+  },
+  {
+    "id": "reseau-159",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Pourquoi la gestion des changements est-elle critique dans l'exploitation d'un réseau ?",
+    "reponse_reference": "La majorité des incidents réseau suivent une modification de configuration : une procédure de changement (description, fenêtre, validation, sauvegarde de la config précédente, plan de retour arrière) réduit ce risque et accélère la résolution. Elle garantit aussi la traçabilité : quand un incident apparaît, on sait immédiatement quoi comparer et quoi annuler.",
+    "mots_cles_attendus": [
+      "gestion des changements",
+      "plan de retour arrière",
+      "traçabilité",
+      "sauvegarde",
+      "fenêtre de maintenance"
+    ]
+  },
+  {
+    "id": "reseau-160",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un poste du réseau interne commence à scanner toutes les machines en 445 et à joindre une IP externe inconnue. Comment réagis-tu, du point de vue réseau ?",
+    "reponse_reference": "J'isole immédiatement le poste : désactivation du port switch ou placement en VLAN de quarantaine, en conservant les traces (logs, capture). Je coupe au pare-feu la communication vers l'IP externe suspecte, j'analyse les journaux NetFlow pour vérifier si d'autres machines sont touchées, puis je remets le poste au processus de sécurité (antivirus, réinstallation) avant réintégration contrôlée.",
+    "mots_cles_attendus": [
+      "quarantaine",
+      "isolation du port",
+      "blocage pare-feu",
+      "logs",
+      "scan latéral"
+    ]
+  },
+  {
+    "id": "reseau-161",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu conçois la sortie Internet d'un datacenter avec deux pare-feux et deux routeurs redondés. Comment évites-tu le routage asymétrique qui casserait les sessions stateful ?",
+    "reponse_reference": "Je fais en sorte qu'un flux traverse toujours le même pare-feu dans les deux sens : répartition par session cohérente (ECMP basé sur le hachage du quintuplet), ou cluster actif/actif avec synchronisation d'état entre pare-feux, ou encore design actif/passif avec VRRP. Je vérifie aussi la cohérence des chemins de retour via les annonces de routage et je teste explicitement la bascule avec des sessions établies.",
+    "mots_cles_attendus": [
+      "routage asymétrique",
+      "stateful",
+      "synchronisation d'état",
+      "ecmp",
+      "cluster"
+    ]
+  },
+  {
+    "id": "reseau-162",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Pourquoi le routage asymétrique pose-t-il problème à un pare-feu stateful et à un IDS ?",
+    "reponse_reference": "Un pare-feu stateful suit l'état des connexions : si l'aller et le retour passent par des équipements différents, chacun ne voit qu'une moitié du flux et peut rejeter les paquets (pas de session correspondante). Un IDS perd aussi le contexte complet de la conversation, ce qui dégrade sa capacité de détection et génère faux positifs et pertes intermittentes.",
+    "mots_cles_attendus": [
+      "stateful",
+      "état de session",
+      "aller-retour",
+      "rejet",
+      "détection dégradée"
+    ]
+  },
+  {
+    "id": "reseau-163",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Le réseau OSPF d'une grande entreprise (60 routeurs, une seule area 0) devient lent à converger et les CPU des routeurs montent à chaque changement. Comment restructures-tu le protocole ?",
+    "reponse_reference": "Je passe à une conception hiérarchique multi-zones : une area backbone 0 réduite reliant des areas locales par site ou région, ce qui confine les recalculs SPF et les LSA aux zones concernées. J'ajoute de l'agrégation de routes aux ABR et je transforme les zones terminales en stub/NSSA pour supprimer la propagation de routes externes inutiles.",
+    "mots_cles_attendus": [
+      "area 0",
+      "multi-zones",
+      "abr",
+      "agrégation",
+      "convergence"
+    ]
+  },
+  {
+    "id": "reseau-164",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une zone OSPF de type stub et NSSA, et quand les utiliser ?",
+    "reponse_reference": "Une zone stub bloque les LSA externes (type 5) et les remplace par une route par défaut injectée par l'ABR, ce qui allège la table de routage des routeurs de la zone. Une NSSA autorise en plus la redistribution locale de routes externes via des LSA de type 7, convertis par l'ABR ; on les utilise pour les zones terminales qui n'ont pas besoin de connaître toutes les routes externes.",
+    "mots_cles_attendus": [
+      "zone stub",
+      "nssa",
+      "lsa externes",
+      "route par défaut",
+      "abr"
+    ]
+  },
+  {
+    "id": "reseau-165",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Deux datacenters doivent héberger la même application en actif/actif. Le client veut « étendre le VLAN de production » entre les deux sites. Quels arbitrages de conception présentes-tu ?",
+    "reponse_reference": "L'extension L2 (VXLAN/OTV, lien dédié) simplifie la migration de VM et le clustering, mais étend le domaine de défaillance et de broadcast, complique STP et ancre le trafic vers un seul site (tromboning). L'alternative L3 avec étirement via passerelle (routage, anycast de passerelle, orchestration IP) isole les pannes et optimise les chemins, mais impose à l'application de gérer l'état et les bascules ; le choix dépend des exigences RPO/RTO et de la conception de l'application.",
+    "mots_cles_attendus": [
+      "étirement vlan",
+      "vxlan",
+      "domaine de défaillance",
+      "routage",
+      "arbitrage"
+    ]
+  },
+  {
+    "id": "reseau-166",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une adresse anycast et quels usages en fait-on ?",
+    "reponse_reference": "Une adresse anycast est annoncée depuis plusieurs endroits du réseau (plusieurs AS ou sites) ; le routage envoie chaque client vers l'instance « la plus proche » au sens de la métrique de routage. C'est la base des racines DNS, des CDN et des services résilients : la panne d'un site retire simplement son annonce et le trafic converge vers les autres instances.",
+    "mots_cles_attendus": [
+      "anycast",
+      "annonces multiples",
+      "plus proche",
+      "résilience",
+      "dns"
+    ]
+  },
+  {
+    "id": "reseau-167",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Des utilisateurs en télétravail mesurent un ping correct (30 ms) au repos, mais 600 ms dès qu'un téléchargement tourne, et leurs visioconférences deviennent inutilisables. Quel phénomène diagnoses-tu et quelles solutions proposes-tu ?",
+    "reponse_reference": "C'est du bufferbloat : les files d'attente surdimensionnées de la box ou du routeur stockent les paquets au lieu de les écarter, ce qui gonfle la latence dès que le lien sature. Les solutions passent par des files intelligentes (FQ-CoDel, CAKE) sur le routeur, le shaping du débit sortant à ~90 % de la capacité, et la QoS pour protéger la voix/vidéo des flux élastiques.",
+    "mots_cles_attendus": [
+      "bufferbloat",
+      "file d'attente",
+      "latence",
+      "fq-codel",
+      "shaping"
+    ]
+  },
+  {
+    "id": "reseau-168",
+    "domaine": "reseau",
+    "sous_theme": "qualite_service",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'apportent les files d'attente équitables (fair queuing) par rapport à une file FIFO unique ?",
+    "reponse_reference": "Une file FIFO traite les paquets dans l'ordre d'arrivée : un flux glouton peut affamer les autres et toute la file accumule de la latence. Le fair queuing sépare les flux dans des sous-files et les sert équitablement, ce qui isole les flux entre eux, réduit la latence des petits paquets et améliore l'efficacité des AQM comme CoDel.",
+    "mots_cles_attendus": [
+      "fair queuing",
+      "fifo",
+      "équité entre flux",
+      "latence",
+      "isolation des flux"
+    ]
+  },
+  {
+    "id": "reseau-169",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Toute l'entreprise subit des lenteurs d'ouverture de pages par intermittence ; les accès IP directs sont rapides. Comment diagnostiques-tu un problème DNS à l'échelle ?",
+    "reponse_reference": "Lenteur sur les noms mais rapidité en IP pointe la résolution DNS : je mesure le temps de résolution (dig avec timings) vers chaque résolveur configuré, je vérifie les serveurs DNS internes (charge, zones, transferts, forwarders, saturation UDP/53) et les captures pour voir retransmissions ou timeouts DNS. Je teste aussi la cohérence des résolveurs distribués par DHCP et l'impact d'IPv6 (résolutions AAAA qui traînent).",
+    "mots_cles_attendus": [
+      "résolution dns",
+      "dig",
+      "retransmissions",
+      "forwarders",
+      "aaaa"
+    ]
+  },
+  {
+    "id": "reseau-170",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une session eBGP avec un opérateur oscille : elle monte puis tombe toutes les quelques minutes, provoquant des micro-coupures. Quelles causes vérifies-tu ?",
+    "reponse_reference": "Je regarde d'abord les logs et compteurs de la session : hold timer expiré (pertes de paquets keepalive sur le lien, congestion), réinitialisation par le pair, ou MTU insuffisant pour les grandes mises à jour BGP. Je vérifie la stabilité physique du lien (erreurs, duplex), la charge CPU du routeur qui pourrait retarder les keepalives, et si un filtre ou une limite de préfixes (maximum-prefix) se déclenche périodiquement.",
+    "mots_cles_attendus": [
+      "hold timer",
+      "keepalive",
+      "mtu",
+      "maximum-prefix",
+      "oscillation"
+    ]
+  },
+  {
+    "id": "reseau-171",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le route flapping et à quoi sert le dampening BGP ?",
+    "reponse_reference": "Le flapping désigne un préfixe ou une session qui apparaît et disparaît sans cesse du routage, provoquant des mises à jour incessantes qui chargent les routeurs. Le dampening BGP pénalise un préfixe instable à chaque retrait et le supprime temporairement s'il dépasse un seuil, afin de protéger le reste du réseau ; il s'utilise avec précaution car il peut masquer des pannes légitimes.",
+    "mots_cles_attendus": [
+      "flapping",
+      "dampening",
+      "pénalité",
+      "instabilité",
+      "mises à jour"
+    ]
+  },
+  {
+    "id": "reseau-172",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une entreprise autorise les appareils personnels (BYOD) sur son Wi-Fi. Comment conçois-tu la segmentation et le contrôle d'accès ?",
+    "reponse_reference": "Je sépare les appareils personnels dans des VLAN dédiés sans accès aux ressources internes, avec portail captif ou 802.1X (avec certificat ou identifiants) pour l'authentification, et j'isole les clients entre eux (client isolation sur le Wi-Fi). Les accès vers Internet sont filtrés, limités en débit, journalisés, et l'IDS surveille les comportements anormaux venant de cette zone à confiance réduite.",
+    "mots_cles_attendus": [
+      "byod",
+      "vlan dédié",
+      "portail captif",
+      "isolation client",
+      "filtrage"
+    ]
+  },
+  {
+    "id": "reseau-173",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la microsegmentation et en quoi dépasse-t-elle la segmentation classique par VLAN ?",
+    "reponse_reference": "La microsegmentation applique des politiques de filtrage au plus près de la charge de travail (par VM, conteneur ou hôte), et non plus seulement entre grands segments VLAN. Elle bloque les mouvements latéraux d'un attaquant même à l'intérieur d'un même sous-réseau, avec des règles déclaratives souvent portées par l'hyperviseur, le pare-feu d'hôte ou un tissu SDN.",
+    "mots_cles_attendus": [
+      "microsegmentation",
+      "mouvements latéraux",
+      "politiques par charge",
+      "vlan",
+      "pare-feu d'hôte"
+    ]
+  },
+  {
+    "id": "reseau-174",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "La direction annonce un doublement du trafic réseau sous 18 mois (nouveaux services vidéo). Comment prépares-tu le réseau sans tout remplacer d'un coup ?",
+    "reponse_reference": "J'établis des tendances précises à partir des historiques NetFlow/SNMP pour identifier les goulots réels (uplinks spécifiques, WAN, pare-feu) plutôt que de surdimensionner partout. Je planifie par étapes : agrégation de liens et cartes supplémentaires là où c'est possible, migration progressive vers du 10/25 G sur les uplinks saturés, vérification du forwarding réel (les débits de contrôle des équipements suivent-ils ?) et jalons de mesure pour déclencher chaque étape.",
+    "mots_cles_attendus": [
+      "tendances",
+      "goulots d'étranglement",
+      "uplinks",
+      "progressif",
+      "capacité de forwarding"
+    ]
+  },
+  {
+    "id": "reseau-175",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ingénierie de trafic (traffic engineering) et quels leviers utilise-t-elle ?",
+    "reponse_reference": "L'ingénierie de trafic consiste à contrôler explicitement les chemins empruntés par les flux pour équilibrer la charge, respecter des contraintes de latence ou de coût, plutôt que de suivre le plus court chemin. Ses leviers incluent les métriques/coûts, les politiques BGP (préférence locale, MED, communities), les tunnels (MPLS-TE, GRE) et les contrôleurs SDN qui programment les chemins de bout en bout.",
+    "mots_cles_attendus": [
+      "ingénierie de trafic",
+      "chemins explicites",
+      "équilibrage",
+      "politiques",
+      "tunnels"
+    ]
+  },
+  {
+    "id": "reseau-176",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Entre deux switches, les transferts sont lents et plein de collisions tardives apparaissent dans les compteurs. Quel problème classique suspectes-tu et comment le confirmes-tu ?",
+    "reponse_reference": "Une inadéquation de duplex (un côté en full-duplex forcé, l'autre en auto-négociation tombée en half-duplex) produit exactement ce tableau : collisions tardives, erreurs CRC et débit effondré sur les gros transferts. Je compare le mode négocié sur les deux interfaces, je vérifie la qualité du câble (paires abîmées) et je remets les deux côtés en auto-négociation ou en forçage cohérent.",
+    "mots_cles_attendus": [
+      "duplex",
+      "collisions tardives",
+      "auto-négociation",
+      "crc",
+      "câble"
+    ]
+  },
+  {
+    "id": "reseau-177",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu dois remplacer le switch cœur d'un campus en production, sans interruption de service perçue. Décris ta démarche.",
+    "reponse_reference": "Je prépare tout hors production : configuration du nouveau cœur (VLAN, routage, VRRP en priorité plus basse), pré-câblage et validation des liaisons. Pendant la fenêtre, je fais basculer le trafic en douceur (ajustement des priorités/poids, coupure des liens de l'ancien équipement un par un), je surveille la convergence et les sessions, et je garde l'ancien cœur opérationnel et câblé pour un retour arrière immédiat en cas d'anomalie.",
+    "mots_cles_attendus": [
+      "préparation",
+      "fenêtre de maintenance",
+      "bascule progressive",
+      "retour arrière",
+      "surveillance"
+    ]
+  },
+  {
+    "id": "reseau-178",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Que signifient RTO et RPO appliqués à la continuité d'un réseau, et comment influencent-ils la conception ?",
+    "reponse_reference": "Le RTO (Recovery Time Objective) est la durée maximale d'indisponibilité acceptable, le RPO (Recovery Point Objective) la perte de données/config maximale tolérée. Un RTO de quelques secondes impose de la redondance active (VRRP, liens doubles, cluster de pare-feux) et de la convergence rapide, tandis qu'un RPO court impose des sauvegardes de configuration automatisées et fréquentes.",
+    "mots_cles_attendus": [
+      "rto",
+      "rpo",
+      "indisponibilité",
+      "redondance",
+      "sauvegardes de configuration"
+    ]
+  },
+  {
+    "id": "reseau-179",
+    "domaine": "reseau",
+    "sous_theme": "multicast",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Après l'activation de PIM sur tout le réseau, tu découvres que du trafic multicast de test d'un site inonde le WAN et sature un lien. Comment contiens-tu le multicast ?",
+    "reponse_reference": "Je mets en place du scoping : limiter les groupes administratifs (plage 239.x) aux sites concernés, filtrer les groupes autorisés sur les interfaces WAN (ACL sur PIM et IGMP), et désactiver PIM sur les segments qui n'ont ni source ni récepteur. J'ajoute des limites de débit sur les flux multicast traversant le WAN et une supervision des compteurs multicast pour détecter les fuites.",
+    "mots_cles_attendus": [
+      "scoping",
+      "groupes administratifs",
+      "acl",
+      "filtrage pim",
+      "limites de débit"
+    ]
+  },
+  {
+    "id": "reseau-180",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Lors d'une revue de conception, tu découvres qu'un campus de 800 postes forme un unique domaine STP de niveau 2 avec un pare-feu unique en sortie. Quels risques signales-tu et que proposes-tu ?",
+    "reponse_reference": "Les risques majeurs : un grand domaine L2 unique signifie qu'une boucle ou une tempête de broadcast paralyse tout le campus, un STP massif converge lentement, et le pare-feu unique est un point de défaillance unique. Je propose de découper en plusieurs domaines L2 par bâtiment avec routage inter-VLAN en distribution (voire routé jusqu'à l'accès), un couple de pare-feux redondants, et de limiter l'étendue de STP avec des protections (BPDU guard, root guard).",
+    "mots_cles_attendus": [
+      "domaine de broadcast",
+      "point de défaillance unique",
+      "découpage",
+      "routage inter-vlan",
+      "protections stp"
+    ]
+  },
+  {
+    "id": "reseau-181",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que l'architecture spine-leaf d'un datacenter et pourquoi a-t-elle remplacé le modèle à trois couches dans ce contexte ?",
+    "reponse_reference": "Dans un fabric spine-leaf, chaque switch leaf (accès serveurs) est connecté à tous les switches spine, avec routage de bout en bout et ECMP sur les multiples chemins équivalents. Cela remplace l'arborescence cœur/distribution/accès, pénalisée par STP (liens bloqués, bande passante gaspillée) et par des chemins variables, alors que le trafic datacenter est majoritairement est-ouest avec besoin de latence faible et prévisible.",
+    "mots_cles_attendus": [
+      "spine-leaf",
+      "ecmp",
+      "est-ouest",
+      "routage de bout en bout",
+      "latence prévisible"
+    ]
+  },
+  {
+    "id": "reseau-182",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tu dois faire évoluer un datacenter traditionnel (cœur L2, agrégation, accès) vers un fabric moderne pour accueillir des VM qui migrent fréquemment. Quelle stratégie de migration proposes-tu ?",
+    "reponse_reference": "Je construis d'abord le fabric spine-leaf en parallèle de l'existant, je le raccorde à l'ancien cœur par des liens transitoires, puis je migre les racks par lots avec des fenêtres de maintenance, en déplaçant les passerelles par défaut vers les leaf (anycast gateway). Pendant la cohabitation, je maîtrise les étirements L2 nécessaires (VXLAN) pour la migration à chaud des VM, et je décommissionne l'ancien cœur en dernier après validation complète.",
+    "mots_cles_attendus": [
+      "fabric",
+      "migration progressive",
+      "anycast gateway",
+      "étirement l2",
+      "cohabitation"
+    ]
+  },
+  {
+    "id": "reseau-183",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que VXLAN et que désigne le VNI ?",
+    "reponse_reference": "VXLAN est un protocole d'overlay qui encapsule des trames Ethernet dans de l'UDP/IP pour les transporter sur un réseau routé sous-jacent, ce qui permet d'étendre des segments L2 au-delà d'un domaine de broadcast classique. Le VNI (VXLAN Network Identifier, 24 bits) identifie le segment virtuel, offrant jusqu'à 16 millions de réseaux isolés au lieu des 4094 VLAN.",
+    "mots_cles_attendus": [
+      "vxlan",
+      "overlay",
+      "encapsulation udp",
+      "vni",
+      "16 millions"
+    ]
+  },
+  {
+    "id": "reseau-184",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Des VM d'un même service doivent pouvoir migrer à chaud entre deux racks sans changer d'adresse IP, sur un fabric entièrement routé. Comment résous-tu cette contradiction apparente ?",
+    "reponse_reference": "J'utilise un overlay VXLAN (ou EVPN-VXLAN) : le segment L2 de la VM est virtualisé et transporté au-dessus du fabric routé, donc l'IP et la MAC de la VM restent inchangées quelle que soit sa position physique. Les VTEP des leaf encapsulent/désencapsulent le trafic, et avec EVPN la distribution des MAC/IP se fait par BGP au lieu d'inondations multicast.",
+    "mots_cles_attendus": [
+      "vxlan",
+      "evpn",
+      "vtep",
+      "migration à chaud",
+      "overlay"
+    ]
+  },
+  {
+    "id": "reseau-185",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "definition",
+    "question": "À quoi servent les communautés BGP et comment les exploite-t-on ?",
+    "reponse_reference": "Une communauté BGP est une étiquette (nombre 32 bits, souvent notée AS:valeur) attachée à un préfixe pour influencer son traitement chez soi ou chez ses pairs : préférence locale, export limité, agrégation. Les communautés well-known comme no-export ou no-advertise contrôlent la propagation ; on les applique via route-maps à l'import ou à l'export, ce qui rend les politiques modulaires et lisibles.",
+    "mots_cles_attendus": [
+      "communauté bgp",
+      "route-map",
+      "no-export",
+      "politique",
+      "étiquette"
+    ]
+  },
+  {
+    "id": "reseau-186",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une entreprise est multi-homée sur deux opérateurs et veut que son trafic sortant privilégie l'opérateur A, tandis que le trafic entrant vers ses serveurs arrive majoritairement par B. Comment configures-tu ces deux sens ?",
+    "reponse_reference": "Pour le sortant, j'ajuste la préférence locale (local-preference) des routes apprises via A à une valeur plus élevée, éventuellement affinée par communautés et route-maps selon les destinations. Pour l'entrant, les leviers sont indirects : préfixes annoncés plus spécifiques via B, AS-path prepending sur les annonces faites vers A pour rendre ce chemin moins attractif, ou communautés acceptées par les pairs ; je mesure ensuite le résultat depuis plusieurs points de l'Internet (RIPE Atlas, looking glass).",
+    "mots_cles_attendus": [
+      "préférence locale",
+      "as-path prepending",
+      "préfixes spécifiques",
+      "trafic entrant",
+      "mesure"
+    ]
+  },
+  {
+    "id": "reseau-187",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Dans une capture Wireshark d'un incident, tu observes une rafale de SYN sans SYN-ACK depuis des milliers d'adresses sources différentes, puis saturation de la file du serveur. Que conclues-tu et quelles parades réseau mets en place ?",
+    "reponse_reference": "C'est une attaque par déni de service SYN flood avec sources falsifiées : les demi-connexions épuisent la file d'acceptation du serveur. Côté réseau : activation des SYN cookies sur le serveur, limitation de débit (rate limiting/CPCAR) sur les SYN, filtrage anti-spoofing (uRPF) en bordure, et si le volume dépasse le lien, mitigation en amont chez l'opérateur ou via un service de scrubbing.",
+    "mots_cles_attendus": [
+      "syn flood",
+      "syn cookies",
+      "rate limiting",
+      "urpf",
+      "scrubbing"
+    ]
+  },
+  {
+    "id": "reseau-188",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ECMP et quelles précautions demande-t-il avec les équipements stateful et les captures ?",
+    "reponse_reference": "L'ECMP (Equal-Cost MultiPath) répartit le trafic entre plusieurs chemins de coût égal, par hachage des champs d'en-tête (généralement le quintuplet), ce qui équilibre les flux mais pas forcément les paquets d'un même flux. Les équipements stateful doivent voir les deux sens d'une session (hachage symétrique ou seed coordonné), et une capture sur un seul chemin peut donner une vue incomplète ou trompeuse du trafic.",
+    "mots_cles_attendus": [
+      "ecmp",
+      "hachage",
+      "quintuplet",
+      "stateful",
+      "hachage symétrique"
+    ]
+  },
+  {
+    "id": "reseau-189",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Sur un fabric spine-leaf avec ECMP, certaines sessions traversant un pare-feu en cluster tombent aléatoirement après la panne d'un lien spine. Comment expliques-tu et corriges-tu le phénomène ?",
+    "reponse_reference": "La panne du lien a modifié le hachage ECMP : des flux établis ont été réaffectés à un autre chemin et peuvent arriver au pare-feu dans l'autre sens qu'à l'aller, ou sur le membre du cluster qui n'a pas l'état de session. Les corrections passent par un hachage symétrique/cohérent, la synchronisation d'état du cluster, et idéalement un recalcul stable du hachage (résilience du bucket ECMP) pour ne pas redistribuer tous les flux quand un membre tombe.",
+    "mots_cles_attendus": [
+      "ecmp",
+      "hachage symétrique",
+      "synchronisation d'état",
+      "cluster",
+      "réaffectation des flux"
+    ]
+  },
+  {
+    "id": "reseau-190",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quels mécanismes permettent de se protéger des préfixes BGP illégitimes ou dangereux reçus d'un pair ?",
+    "reponse_reference": "On applique des filtres à l'import : listes de préfixes explicites (clients), limite maximum-prefix pour stopper une fuite massive, filtrage des préfixes bogons/martians et des préfixes trop larges (longueur maximale), et uRPF pour le plan de données. RPKI/ROA ajoute une validation cryptographique de l'origine (ROV) permettant de rejeter les annonces d'origine invalide.",
+    "mots_cles_attendus": [
+      "filtres à l'import",
+      "maximum-prefix",
+      "rpki",
+      "bogons",
+      "urpf"
+    ]
+  },
+  {
+    "id": "reseau-191",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Pour sa connexion multi-homée, une entreprise hésite entre recevoir la table Internet complète de ses deux opérateurs ou seulement une route par défaut. Quels critères font pencher la balance ?",
+    "reponse_reference": "La table complète (environ un million de préfixes) donne un contrôle fin du chemin par destination (préférence locale par préfixe, politiques de sortie), au prix de mémoire et de CPU plus élevés et d'une convergence plus longue ; la route par défaut est simple et légère mais délègue totalement le choix du chemin à l'opérateur. Un compromis courant : table complète sur un routeur, défaut+préfixes partiels ailleurs, ou défaut avec communautés de steering si l'opérateur le permet ; le choix dépend des exigences d'ingénierie de trafic et du matériel.",
+    "mots_cles_attendus": [
+      "table complète",
+      "route par défaut",
+      "mémoire",
+      "contrôle du chemin",
+      "préfixes partiels"
+    ]
+  },
+  {
+    "id": "reseau-192",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application métier critique souffre d'un temps de réponse élevé entre deux datacenters distés de 800 km (RTT 20 ms). L'analyse montre que chaque transaction effectue une nouvelle connexion TCP. Que proposes-tu au niveau réseau et applicatif ?",
+    "reponse_reference": "Le coût vient des handshakes répétés : 20 ms de RTT par connexion, plus le slow start à chaque transfert. Réseau : activer TCP Fast Open, maintenir des connexions persistantes (keep-alive, pooling), éventuellement MPTCP ou un accélérateur/WAN-optimization avec cache de connexions. Mais le vrai gain est applicatif : réutiliser les connexions (pooling HTTP/2, gRPC) et réduire le nombre d'allers-retours par transaction (pipelining, requêtes groupées).",
+    "mots_cles_attendus": [
+      "rtt",
+      "handshake",
+      "connexions persistantes",
+      "tcp fast open",
+      "pooling"
+    ]
+  },
+  {
+    "id": "reseau-193",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Dans une capture d'un transfert lent, tu vois le champ « window size » du serveur tomber à 0 régulièrement, suivi de « window update » après plusieurs secondes. Où est le problème : réseau ou serveur ?",
+    "reponse_reference": "Un window size à zéro signifie que le récepteur (ici le serveur) n'a plus de tampon libre : c'est le serveur qui est trop lent à consommer les données, pas le réseau qui perd des paquets. Il faut regarder côté serveur : CPU saturé, disque lent, application qui bloque, tampons TCP trop petits (autotuning désactivé) ; le réseau ne fait qu'attendre les window updates.",
+    "mots_cles_attendus": [
+      "zero window",
+      "récepteur saturé",
+      "tampons",
+      "serveur lent",
+      "window update"
+    ]
+  },
+  {
+    "id": "reseau-194",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tu dimensionnes un fabric spine-leaf pour une charge big data où le trafic est-ouest domine : des leaf à 48 ports 10G côté serveurs. Que signifie le ratio de surobjectivation et quelle cible retiens-tu ?",
+    "reponse_reference": "Le ratio compare la capacité descendante des leaf (48 × 10G = 480 Gb/s vers les serveurs) à leur capacité montante vers les spines : par exemple 6 uplinks 40G donnent 240 Gb/s, soit du 2:1. Pour un trafic est-ouest dominant (stockage distribué, big data, microservices), je vise du non-bloquant 1:1 (480 Gb/s d'uplinks, soit 12 × 40G ou équivalent en 100G), en validant le calcul par le trafic réellement mesuré entre serveurs et non par la capacité théorique des ports.",
+    "mots_cles_attendus": [
+      "surobjectivation",
+      "non-bloquant",
+      "uplinks",
+      "est-ouest",
+      "ratio"
+    ]
+  },
+  {
+    "id": "reseau-195",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelle différence de principe entre les algorithmes de contrôle de congestion CUBIC et BBR ?",
+    "reponse_reference": "CUBIC (longtemps défaut de Linux) est fondé sur les pertes : il augmente sa fenêtre jusqu'à provoquer des pertes, puis la réduit, ce qui remplit les files d'attente. BBR modélise activement le goulot (débit maximal et RTT minimal mesurés) et vise à émettre exactement à la capacité du chemin sans créer de file ; il résiste mieux aux pertes aléatoires (Wi-Fi, liens internationaux) mais cohabite parfois mal avec les flux CUBIC concurrents.",
+    "mots_cles_attendus": [
+      "cubic",
+      "bbr",
+      "pertes",
+      "modèle du goulot",
+      "file d'attente"
+    ]
+  },
+  {
+    "id": "reseau-196",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un pair de transit annonce par erreur la table Internet complète dans ton AS via iBGP sans filtrage, et tes routeurs internes reçoivent des routes incohérentes qui créent des boucles. Comment diagnostiques-tu et assainis-tu la situation ?",
+    "reponse_reference": "Je compare les tables BGP des routeurs (show bgp, vérification du next-hop et de l'origine des préfixes douteux) pour identifier le routeur qui réinjecte des routes externes en iBGP sans politique. Je corrige avec des filtres : seuls les routeurs de bordure parlent eBGP, redistribution contrôlée et route reflectors pour l'iBGP, préfix-listes d'import/export strictes par pair, et maximum-prefix partout ; je réinitialise ensuite les sessions concernées pour purger les routes fautives.",
+    "mots_cles_attendus": [
+      "fuite de routes",
+      "filtrage",
+      "route reflector",
+      "préfix-liste",
+      "next-hop"
+    ]
+  },
+  {
+    "id": "reseau-197",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelle différence entre une fuite de routes (route leak) et un détournement de routes (route hijack) en BGP ?",
+    "reponse_reference": "Une fuite de routes est la propagation non intentionnelle de préfixes au-delà de la portée prévue (par exemple un client réannonce ses pairs à son transit) : elle détourne du trafic par erreur et crée des boucles ou de la congestion. Un hijack est l'annonce délibérée ou usurpée d'un préfixe qui ne vous appartient pas, pour intercepter le trafic ; RPKI et les filtres d'origine réduisent les deux, mais le hijack reste une menace majeure de sécurité d'Internet.",
+    "mots_cles_attendus": [
+      "route leak",
+      "route hijack",
+      "propagation non intentionnelle",
+      "usurpation",
+      "rpki"
+    ]
+  },
+  {
+    "id": "reseau-198",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "On te demande de mesurer précisément la latence unidirectionnelle entre deux datacenters pour un arbitrage de placement d'application. Pourquoi le ping ne suffit-il pas et quelle méthode emploies-tu ?",
+    "reponse_reference": "Le ping mesure un aller-retour (RTT) et ne révèle pas l'asymétrie des chemins ni la latence dans un seul sens, qui exige des horloges synchronisées (GPS/PTP) aux deux extrémités. J'utilise des sondes de mesure unidirectionnelle avec timestamps synchronisés (OWAMP/TWAMP, ou des sondes de supervision réseau), complétées par du RTT pour la tendance générale, et je mesure sur la durée (percentiles, pas seulement la moyenne) aux heures de charge.",
+    "mots_cles_attendus": [
+      "latence unidirectionnelle",
+      "synchronisation d'horloge",
+      "twamp",
+      "rtt",
+      "percentiles"
+    ]
+  },
+  {
+    "id": "reseau-199",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Dans ton fabric datacenter, quelques flux « éléphants » (sauvegardes, réplication de stockage) saturent certains liens spine alors que d'autres restent vides. Pourquoi l'ECMP ne suffit-il pas et quelles solutions envisages-tu ?",
+    "reponse_reference": "L'ECMP hache par flux, pas par paquet : un flux énorme tombe sur un seul chemin et déséquilibre la charge, et un hachage par paquet casserait l'ordre des paquets TCP. Les solutions : équilibrage adaptatif (réaffectation dynamique des flux, par exemple par feedback de congestion ou par le contrôleur), ordonnancement des gros transferts (planification des sauvegardes), QoS pour les classer dans une file dédiée, et suivi fin du remplissage des liens par flux (NetFlow/IPFIX) pour détecter les déséquilibres.",
+    "mots_cles_attendus": [
+      "flux éléphants",
+      "ecmp",
+      "équilibrage adaptatif",
+      "ordonnancement",
+      "déséquilibre"
+    ]
+  },
+  {
+    "id": "reseau-200",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'apporte l'analyse par télémétrie en continu (streaming telemetry) par rapport au polling SNMP classique pour un réseau datacenter ?",
+    "reponse_reference": "Le SNMP interroge les équipements toutes les minutes au mieux, avec un coût CPU par requête et une granularité trop faible pour voir des micro-congestions de quelques secondes. La télémétrie en continu (gNMI/telemetry, capteurs poussés par les équipements) fournit des données à la seconde voire sub-seconde sur files d'attente, ECMP et compteurs, permettant de détecter microbursts et déséquilibres invisibles au polling, à condition d'avoir une chaîne de collecte et de stockage dimensionnée.",
+    "mots_cles_attendus": [
+      "télémétrie",
+      "polling",
+      "granularité",
+      "microbursts",
+      "gnmi"
+    ]
+  },
+  {
+    "id": "reseau-201",
+    "domaine": "reseau",
+    "sous_theme": "sdn",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le SDN et que change la séparation entre plan de contrôle et plan de données ?",
+    "reponse_reference": "Le SDN externalise l'intelligence du réseau : le plan de contrôle (calcul des chemins, décisions) est centralisé dans un contrôleur logiciel, tandis que les équipements ne font plus qu'appliquer les règles de forwarding programmées via des interfaces standardisées (OpenFlow, NETCONF, gRPC). Cela permet une configuration cohérente à l'échelle, une automatisation par API et une vue globale du réseau, au prix d'un contrôleur qui devient un élément critique à rendre hautement disponible.",
+    "mots_cles_attendus": [
+      "sdn",
+      "plan de contrôle",
+      "plan de données",
+      "contrôleur centralisé",
+      "api"
+    ]
+  },
+  {
+    "id": "reseau-202",
+    "domaine": "reseau",
+    "sous_theme": "sdn",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une entreprise veut déployer une solution SDN (type Cisco DNA/Catalyst Center ou équivalent) sur son campus existant. Quels bénéfices attends-tu, quels risques identifies-tu et quelles précautions prends-tu ?",
+    "reponse_reference": "Bénéfices : déploiement et conformité centralisés, segmentation automatique (VNID/politiques), visibilité applicative et réduction des erreurs de configuration manuelle. Risques : dépendance au contrôleur (disponibilité, montée de version), compatibilité limitée des équipements anciens, verrouillage constructeur et complexité de reprise d'un réseau déjà déployé. Précautions : cluster de contrôleurs redondants, projet pilote sur un bâtiment, sauvegardes et configurations exportées, plan de retour au mode manuel documenté.",
+    "mots_cles_attendus": [
+      "contrôleur",
+      "conformité",
+      "segmentation automatique",
+      "pilote",
+      "retour arrière",
+      "verrouillage constructeur"
+    ]
+  },
+  {
+    "id": "reseau-203",
+    "domaine": "reseau",
+    "sous_theme": "sdn",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Dans un réseau virtualisé, que distinguent les notions d'underlay et d'overlay ?",
+    "reponse_reference": "L'underlay est le réseau physique routé (switches, routeurs, liens IP) qui assure l'acheminement réel des paquets ; l'overlay est le réseau virtuel (tunnels VXLAN, Geneve, GRE, IPSec) construit au-dessus, qui offre aux applications et VM des segments logiques indépendants de la topologie physique. Le dépannage doit distinguer les deux : un problème d'overlay (VTEP injoignable, VNI mal mappé) peut venir de l'underlay (MTU, routage, ECMP) et inversement.",
+    "mots_cles_attendus": [
+      "underlay",
+      "overlay",
+      "tunnels",
+      "vtep",
+      "indépendance topologique"
+    ]
+  },
+  {
+    "id": "reseau-204",
+    "domaine": "reseau",
+    "sous_theme": "datacenter",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'apporte EVPN comme plan de contrôle à un overlay VXLAN par rapport au VXLAN multicast classique ?",
+    "reponse_reference": "EVPN utilise BGP pour distribuer les adresses MAC et IP apprises sur le fabric (routes MAC/IP, type 2), au lieu de l'inondation multicast et du flooding BUM du VXLAN traditionnel : apprentissage sélectif, absence de dépendance au multicast dans l'underlay, multi-homing actif/actif d'un serveur avec aliasing MAC. Cela améliore l'échelle, la convergence et l'exploitabilité, au prix d'une complexité BGP accrue sur les leaf.",
+    "mots_cles_attendus": [
+      "evpn",
+      "bgp",
+      "routes mac/ip",
+      "traffic bum",
+      "multi-homing"
+    ]
+  },
+  {
+    "id": "reseau-205",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Sur un fabric EVPN-VXLAN, deux VM dans le même VNI mais sur des leaf différents ne communiquent plus depuis une mise à jour. Décris ta démarche de diagnostic couche par couche.",
+    "reponse_reference": "Je vérifie d'abord l'underlay : joignabilité IP des VTEP (ping, MTU incluant la surcharge VXLAN, routes des loopbacks via BGP/IGP). Puis le plan de contrôle EVPN : sessions BGP EVPN établies, routes MAC/IP des deux VM bien présentes et apprises sur les bons leaf, RD/RT cohérents entre eux pour le VNI concerné. Enfin l'état local des VTEP et des interfaces serveurs (VNI mappé au bon VLAN, MAC appris), en comparant avec un couple de VM fonctionnel pour isoler la divergence introduite par la mise à jour.",
+    "mots_cles_attendus": [
+      "vtep",
+      "underlay",
+      "routes mac/ip",
+      "route distinguisher",
+      "route target",
+      "mtu"
+    ]
+  },
+  {
+    "id": "reseau-206",
+    "domaine": "reseau",
+    "sous_theme": "sdn",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une enseigne de 200 magasins reliés en MPLS veut réduire ses coûts et améliorer son accès cloud. On te consulte sur un déploiement SD-WAN. Que proposes-tu et quels points de vigilance soulignes-tu ?",
+    "reponse_reference": "Le SD-WAN permet d'agréger plusieurs accès (MPLS, Internet, 4G/5G) avec sélection dynamique du meilleur lien par application, chiffrement de bout en bout et gestion centralisée des 200 sites : économies substantielles en remplaçant une partie du MPLS et meilleur chemin direct vers le cloud. Vigilances : la qualité de l'Internet local conditionne les SLA (prévoir de la redondance et du FEC), la sécurité des sites passe d'un opérateur à l'entreprise (pare-feu intégré, segmentation), la migration doit être progressive site par site avec mesure avant/après, et l'orchestrateur devient critique.",
+    "mots_cles_attendus": [
+      "sd-wan",
+      "multi-liens",
+      "sélection par application",
+      "chiffrement",
+      "orchestrateur",
+      "migration progressive"
+    ]
+  },
+  {
+    "id": "reseau-207",
+    "domaine": "reseau",
+    "sous_theme": "sdn",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que l'automatisation par configuration déclarative (Ansible, NETCONF/YANG) appliquée au réseau, et pourquoi préfère-t-on YANG aux CLI scripts ?",
+    "reponse_reference": "La configuration déclarative décrit l'état cible du réseau (modèle YANG structuré) et laisse l'outil calculer les commandes pour l'atteindre, de façon idempotente : rejouer une configuration ne recrée pas de dérive. NETCONF/YANG donne un accès transactionnel, validé et lisible par machine, là où le scraping de CLI est fragile (syntaxes différentes par version/constructeur, pas de validation, pas d'atomicité).",
+    "mots_cles_attendus": [
+      "déclaratif",
+      "yang",
+      "netconf",
+      "idempotence",
+      "état cible"
+    ]
+  },
+  {
+    "id": "reseau-208",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Dans un parc de 300 switches, tu découvres que plusieurs équipements ont dérivé de la configuration de référence (drift) après des interventions en urgence. Comment fiabilises-tu la situation ?",
+    "reponse_reference": "Je mets en place une sauvegarde automatique et versionnée de toutes les configurations (outils dédiés ou Ansible + dépôt Git) et une comparaison périodique avec le référentiel pour détecter et alerter sur toute dérive. Chaque écart est analysé : soit il est légitime et intégré au référentiel via une demande de changement, soit il est annulé. À terme, la configuration n'est plus modifiable à la main qu'en mode secours documenté, tout passant par l'automatisation.",
+    "mots_cles_attendus": [
+      "dérive de configuration",
+      "référentiel",
+      "versionnage",
+      "sauvegarde automatique",
+      "comparaison"
+    ]
+  },
+  {
+    "id": "reseau-209",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Sur un réseau avec tunnels (overlay, VPN, VXLAN), tu observes des pertes aléatoires de sessions et des transferts qui se figent alors que le ping underlay est parfait. Quel coupable classique traques-tu et comment le prouves-tu ?",
+    "reponse_reference": "Le suspect classique est le MTU : les paquets encapsulés dépassent le MTU du chemin underlay, et si la fragmentation est désactivée (bit DF) ou inefficace, seuls les gros paquets tombent — d'où un ping OK mais des sessions qui se figent sur les gros transferts. Je le prouve avec des ping de taille croissante et bit DF (test de PMTU), en comparant le comportement avant/après tunnel, et je corrige via MTU adapté sur les interfaces tunnel, clamping du MSS TCP et laisser-passer ICMP « fragmentation needed ».",
+    "mots_cles_attendus": [
+      "mtu",
+      "encapsulation",
+      "bit df",
+      "clamping mss",
+      "icmp fragmentation needed",
+      "pmtu"
+    ]
+  },
+  {
+    "id": "reseau-210",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le segment routing et quelle simplification apporte-t-il par rapport à MPLS-TE classique ?",
+    "reponse_reference": "Le segment routing encode le chemin sous forme d'une liste de segments (identifiants de nœuds ou de liens) portée directement dans l'en-tête (SR-MPLS ou SRv6), sans protocole de signalisation séparé comme RSVP-TE : l'état des tunnels n'est plus maintenu au cœur du réseau. Les chemins sont calculés par les routeurs eux-mêmes ou par un contrôleur, ce qui simplifie l'exploitation et permet de la vraie ingénierie de trafic à l'échelle, y compris des politiques de protection rapides (TI-LFA).",
+    "mots_cles_attendus": [
+      "segment routing",
+      "segments",
+      "srv6",
+      "sans signalisation",
+      "ti-lfa"
+    ]
+  },
+  {
+    "id": "reseau-211",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un opérateur doit garantir qu'un flux de réplication critique entre deux villes passe par un chemin spécifique à faible latence, même si le plus court chemin IGP est plus rapide mais congestionné. Comment le segment routing répond-il à ce besoin ?",
+    "reponse_reference": "On définit une politique SR (candidate path) avec une liste explicite de segments qui force le chemin voulu, indépendamment du calcul IGP, et on y attache le flux concerné (par couleur BGP, correspondance de préfixes ou classification locale). Si le chemin explicite tombe, la politique rebascule sur un autre candidate path ou sur le chemin IGP, avec une protection TI-LFA sous 50 ms ; le tout est mesurable par télémétrie (compteurs par politique).",
+    "mots_cles_attendus": [
+      "politique sr",
+      "chemin explicite",
+      "couleur bgp",
+      "ti-lfa",
+      "protection"
+    ]
+  },
+  {
+    "id": "reseau-212",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Ta plateforme de streaming sort tout son trafic via un seul opérateur de transit ; les coûts explosent et certains utilisateurs loin du datacenter ont une mauvaise qualité. Quelles optimisations architecturales proposes-tu ?",
+    "reponse_reference": "Je réduis le transit payé en multipliant les accords de peering gratuit (notamment via un IXP) pour écouler le trafic vers les réseaux où sont les utilisateurs, et en déployant des caches/CDN (ou en adhérant à un CDN) au plus près des accès. J'ajoute du multi-homing avec politiques BGP (préférence par préfixe, communautés) pour sortir par le chemin le moins cher/le plus proche, et je mesure l'amélioration avec des sondes RUM et des tests depuis plusieurs réseaux d'utilisateurs.",
+    "mots_cles_attendus": [
+      "peering",
+      "ixp",
+      "cdn",
+      "transit",
+      "coûts",
+      "multi-homing"
+    ]
+  },
+  {
+    "id": "reseau-213",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un point d'échange Internet (IXP) et quel intérêt économique et technique pour un réseau qui s'y connecte ?",
+    "reponse_reference": "Un IXP est une infrastructure de commutation (souvent L2, avec route servers BGP) où les réseaux s'interconnectent directement pour échanger du trafic, sans payer de transit sur ces flux. Techniquement, les chemins sont plus courts et plus prévisibles (moins de sauts via des tiers) ; économiquement, chaque bit échangé en peering coûte bien moins cher que via un transitaire, à condition d'avoir le trafic et les pairs justifiant le port et la présence.",
+    "mots_cles_attendus": [
+      "ixp",
+      "peering",
+      "route server",
+      "coût du transit",
+      "interconnexion directe"
+    ]
+  },
+  {
+    "id": "reseau-214",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Après un changement de configuration sur ton routeur de bordure, la session BGP avec l'IXP ne remonte pas alors que le lien physique est up et que le ping de l'interface voisine passe. Que vérifies-tu dans l'ordre ?",
+    "reponse_reference": "Je compare la configuration de la session avec l'état avant changement (versionnée) : numéro d'AS distant, IP du pair, mot de passe MD5 éventuel, timers, et description des peer groups modifiée par erreur. Je regarde les logs BGP (messages NOTIFY : quelle cause, sous-code ?), je vérifie qu'aucune ACL ou un filtre de port TCP 179 n'a été touché, le MTU de l'interface, et en dernier recours une capture pour voir si les OPEN partent/arrivent et qui réinitialise la session.",
+    "mots_cles_attendus": [
+      "notify",
+      "as distant",
+      "md5",
+      "acl",
+      "capture",
+      "diff de configuration"
+    ]
+  },
+  {
+    "id": "reseau-215",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la validation de configuration par modèle (digital twin réseau, outils type Batfish) et quel problème résout-elle ?",
+    "reponse_reference": "Ces outils construisent un modèle logiciel du réseau à partir des configurations réelles et simulent le comportement (tables de routage, chemins, règles de pare-feu, domaines de défaillance) sans toucher la production. Ils permettent de tester l'impact d'un changement avant application, de rejouer un incident, de détecter des incohérences latentes (ACL qui bloquent des flux légitimes après modification) et d'automatiser la validation dans une chaîne d'intégration continue réseau.",
+    "mots_cles_attendus": [
+      "digital twin",
+      "simulation",
+      "pré-validation",
+      "intégration continue",
+      "modèle du réseau"
+    ]
+  },
+  {
+    "id": "reseau-216",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "L'équipe réseau et l'équipe applicative se renvoient la responsabilité d'une dégradation de service depuis des jours. Comment mets-tu en place une observabilité qui tranche objectivement ?",
+    "reponse_reference": "Je corrèle les trois plans de mesure sur une même frise temporelle : métriques réseau (télémétrie des interfaces, files, pertes, latence par chemin), flux (NetFlow/IPFIX par application) et mesures côté application (RUM, sondes synthétiques depuis les mêmes segments). Des sondes de bout en bout (HTTP/TCP horodatés depuis les postes utilisateurs vers les serveurs) donnent une référence indépendante ; quand réseau et application regardent les mêmes graphes alignés, la localisation du problème (segment précis, heure précise, composant précis) devient factuelle.",
+    "mots_cles_attendus": [
+      "corrélation",
+      "télémétrie",
+      "sondes synthétiques",
+      "rum",
+      "frise temporelle",
+      "localisation factuelle"
+    ]
+  },
+  {
+    "id": "reseau-217",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Des applications distribuées dans un datacenter subissent des latences en pic de quelques dizaines de millisecondes, invisibles sur les moyennes de supervision à la minute. Comment caractérises-tu et traites-tu ces microbursts ?",
+    "reponse_reference": "Les moyennes lissent les rafales : il faut une mesure fine — télémétrie à haute fréquence des files d'attente et compteurs de drops par interface, captures tournantes déclenchées sur seuil, et histogrammes de latence (percentiles p99/p999). Le traitement passe par le dimensionnement des tampons et leur gestion (AQM/WRED réglés, ECN pour les flux compatibles), l'équilibrage des flux ECMP responsables des rafales sur un même lien, et l'étalement applicatif (limitation de concurrence, ordonnancement des tâches synchronisées).",
+    "mots_cles_attendus": [
+      "microbursts",
+      "percentiles",
+      "files d'attente",
+      "ecn",
+      "wred",
+      "télémétrie haute fréquence"
+    ]
+  },
+  {
+    "id": "reseau-218",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "La DSI veut faire évoluer le réseau d'entreprise, aujourd'hui en « château fort » (périmètre unique, LAN plat de confiance), vers une architecture zero trust. Quelles transformations réseau cela implique-t-il ?",
+    "reponse_reference": "Le zero trust suppose qu'aucune zone n'est fiable par défaut : il faut segmenter finement (microsegmentation par charge de travail et par profil utilisateur), contrôler chaque accès par identité et contexte (802.1X, SASE/ZTNA pour le trafic applicatif plutôt que des tunnels VPN globaux), chiffrer de bout en bout et vérifier en continu. Concrètement le réseau passe d'un modèle périmétrique à des politiques distribuées au plus près des ressources, avec inventaire exhaustif, journalisation centrale et suppression progressive de la confiance implicite du LAN — une transformation par étapes priorisée par les actifs critiques.",
+    "mots_cles_attendus": [
+      "zero trust",
+      "microsegmentation",
+      "identité",
+      "sase",
+      "confiance implicite",
+      "journalisation"
+    ]
+  },
+  {
+    "id": "reseau-219",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Tu conçois le DNS d'un service mondial qui doit rester disponible et répondre vite depuis tous les continents. Quelle architecture DNS mets-tu en place ?",
+    "reponse_reference": "J'utilise des serveurs faisant autorité distribués en anycast sur plusieurs régions (ou un prestataire DNS managé équivalent), avec des zones signées DNSSEC, des TTL courts pour les enregistrements sensibles au trafic et une répartition géographique des réponses (geo-DNS ou latence-based routing) pointant vers la région la plus proche. Je complète par de la supervision externe multi-points (résolution et cohérence des réponses depuis plusieurs pays) et un second jeu de serveurs d'un autre opérateur pour survivre à une panne d'un fournisseur.",
+    "mots_cles_attendus": [
+      "anycast",
+      "dnssec",
+      "geo-dns",
+      "ttl",
+      "redondance multi-fournisseurs",
+      "supervision externe"
+    ]
+  },
+  {
+    "id": "reseau-220",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le GSLB (Global Server Load Balancing) et sur quels critères oriente-t-il les utilisateurs ?",
+    "reponse_reference": "Le GSLB répartit les utilisateurs entre plusieurs datacenters au niveau DNS (et parfois via redirections applicatives), en choisissant la réponse selon la proximité géographique, la latence mesurée, la disponibilité et la charge des sites (sondes de santé). Il sert autant la performance (diriger vers le site le plus proche) que la continuité (retirer un site tombé des réponses), avec des TTL adaptés pour que les changements soient appliqués rapidement.",
+    "mots_cles_attendus": [
+      "gslb",
+      "répartition dns",
+      "latence",
+      "sondes de santé",
+      "continuité"
+    ]
+  },
+  {
+    "id": "reseau-221",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un routeur reçoit des préfixes BGP corrects mais ne route aucun trafic vers eux, sans message d'erreur BGP. Quel mécanisme de résolution explique ce trou noir et comment le diagnostiques-tu ?",
+    "reponse_reference": "Un préfixe BGP n'est installable dans la table de forwarding que si son next-hop est résolvable via une route d'un autre protocole (IGP ou connecté) : si le next-hop est injoignable ou absent de la RIB, la route BGP est ignorée silencieusement, d'où le trou noir. Je vérifie avec show ip bgp (état du next-hop), show ip route next-hop, la présence du next-hop dans l'IGP, et selon le cas j'applique next-hop-self en iBGP ou j'ajoute une statique/route IGP vers la loopback du next-hop.",
+    "mots_cles_attendus": [
+      "next-hop",
+      "résolution récursive",
+      "rib",
+      "next-hop-self",
+      "forwarding"
+    ]
+  },
+  {
+    "id": "reseau-222",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Pourquoi utilise-t-on next-hop-self sur les route reflectors iBGP et quel problème cela résout-il ?",
+    "reponse_reference": "En eBGP, le next-hop annoncé est l'interface du pair externe, souvent inconnue des routeurs internes qui ne parlent pas eBGP avec ce pair. Le route reflector, en répercutant les routes iBGP, conserve ce next-hop d'origine ; avec next-hop-self il le remplace par sa propre adresse, garantissant que tous les clients du reflector peuvent résoudre le next-hop et installer la route, au prix d'un possible sous-optimalité de chemin (hot-potato routing).",
+    "mots_cles_attendus": [
+      "next-hop-self",
+      "route reflector",
+      "résolution",
+      "ibgp",
+      "hot-potato"
+    ]
+  },
+  {
+    "id": "reseau-223",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un datacenter entier devient partiellement injoignable pendant 20 minutes après la panne d'un seul lien spine ; le trafic ne rebascule pas proprement et des équipements se saturent en cascade. Comment mènes-tu l'analyse post-incident ?",
+    "reponse_reference": "Je reconstruis la chronologie exacte à partir des journaux, de la télémétrie et des tables de routage archivées : détection de la panne, convergence BGP/IGP, répartition ECMP résiduelle, puis saturation des liens survivants et drops. L'analyse cherche la cause racine (convergence trop lente, capacité N-1 insuffisante, tampons mal réglés, dépendance cachée au lien perdu) et vérifie par simulation que le N-1 était vraiment dimensionné ; le plan d'action corrige la capacité, les timers de convergence et ajoute des tests de panne réguliers (game days).",
+    "mots_cles_attendus": [
+      "chronologie",
+      "convergence",
+      "capacité n-1",
+      "cascade",
+      "cause racine",
+      "game day"
+    ]
+  },
+  {
+    "id": "reseau-224",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une défaillance en cascade dans un réseau et quels mécanismes la préviennent ?",
+    "reponse_reference": "Une cascade se produit quand la panne d'un élément reporte sa charge sur les éléments voisins qui tombent à leur tour, propagant l'indisponibilité (typique des congestions répétées ou des retraits de routes en boucle). Les parades : conception N-1/N-2 avec marges réelles, protections rapides locales (TI-LFA, fast reroute) qui absorbent la panne avant redistribution globale, délestage de charge (rate limiting, ECN, admission control) et cloisonnement par domaines de défaillance limités.",
+    "mots_cles_attendus": [
+      "cascade",
+      "n-1",
+      "fast reroute",
+      "délestage",
+      "domaines de défaillance"
+    ]
+  },
+  {
+    "id": "reseau-225",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Les utilisateurs d'une application SaaS interne signalent une dégradation progressive sur trois jours, sans aucun changement réseau déclaré, sur un chemin traversant underlay, pare-feux et overlay. Quelle méthodologie experte appliques-tu ?",
+    "reponse_reference": "Je compare l'état actuel aux références historiques : télémétrie des interfaces et files (y a-t-il un remplissage croissant ?), volumes NetFlow par application (un nouveau flux glouton est-il apparu ?), tables des équipements (ARP, NAT, sessions pare-feu, routes : une table se remplit-elle ?). Je segmente le chemin et mesure la latence/perte tronçon par tronçon (sondes, TWAMP, captures synchronisées aux deux extrémités), je recoupe avec les changements non déclarés (mises à jour automatiques, déploiements applicatifs) et je formule une hypothèse falsifiable que je teste avant toute action corrective.",
+    "mots_cles_attendus": [
+      "référence historique",
+      "segmentation du chemin",
+      "remplissage de tables",
+      "hypothèse falsifiable",
+      "captures synchronisées"
+    ]
+  },
+  {
+    "id": "reseau-226",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu dois concevoir la disponibilité multi-région d'un service critique : actif/actif sur deux régions distantes de 600 km. Quels arbitrages réseaux et applicatifs presentes-tu face à un actif/passif ?",
+    "reponse_reference": "L'actif/actif maximise l'utilisation des ressources et absorbe une région entière via DNS/anycast et GSLB, mais exige une application sans état partagé sensible à la latence (le RTT interrégional de 15-20 ms interdit un verrouillage synchrone naïf) et un routage utilisateur cohérent (session stickiness). L'actif/passif est plus simple et prévisible, mais gaspille une région et la bascule doit être testée réellement. Réseau : annonces anycast ou BGP par région avec préfixes spécifiques, chemins interrégionnels protégés, et tests de bascule périodiques en conditions réelles avec mesures des RTO atteints.",
+    "mots_cles_attendus": [
+      "actif/actif",
+      "gslb",
+      "latence interrégionale",
+      "stickiness",
+      "rto testé"
+    ]
+  },
+  {
+    "id": "reseau-227",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le split-brain dans un cluster haute disponibilité et comment le quorum le prévient-il ?",
+    "reponse_reference": "Le split-brain survient quand les liens de battement de cœur entre membres d'un cluster tombent alors que les nœuds fonctionnent : chaque partition se croit seule survivante et peut activer les mêmes ressources (IP virtuelle, écritures), corrompant l'état. Le quorum exige qu'une partition détienne une majorité de membres (ou un témoin tiers, quorum witness) pour rester active ; les partitions minoritaires se mettent en retrait (fencing/STONITH) pour garantir un seul maître.",
+    "mots_cles_attendus": [
+      "split-brain",
+      "quorum",
+      "témoin",
+      "fencing",
+      "majorité"
+    ]
+  },
+  {
+    "id": "reseau-228",
+    "domaine": "reseau",
+    "sous_theme": "haute_disponibilite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un cluster de pare-feux étiré sur deux datacenters perd son lien d'interconnexion ; les deux sites revendiquent l'IP virtuelle et le trafic part dans les deux sens. Que fais-tu dans l'immédiat et comment corriges-tu durablement ?",
+    "reponse_reference": "Dans l'immédiat, je force un site en passif (ou je fence le site minoritaire au sens du quorum) pour rétablir un maître unique et éviter la corruption des tables de sessions. Durablement : liens de battement de cœur redondants par chemins disjoints, témoin de quorum sur un tiers site ou cloud, mécanisme de fencing automatique, et surtout remise en cause de l'étirement du cluster — deux clusters indépendants par site avec bascule DNS/BGP sont souvent plus sûrs qu'un cluster étiré.",
+    "mots_cles_attendus": [
+      "fencing",
+      "quorum",
+      "liens redondants",
+      "témoin",
+      "clusters indépendants"
+    ]
+  },
+  {
+    "id": "reseau-229",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un service de réplication de stockage entre deux datacenters (RTT 40 ms, lien 10 Gb/s) n'atteint que 300 Mb/s par flux TCP. Fais le calcul qui explique la limite et décris le plan d'optimisation complet.",
+    "reponse_reference": "Le produit délai-bande vaut 10 Gb/s × 0,04 s = 400 Mb de données en vol, soit ~50 Mo de fenêtre nécessaire ; avec une fenêtre plafonnée (par exemple 4 Mo par défaut ou autotuning bridé), le débit max = fenêtre/RTT ≈ 800 Mb/s, et les pertes/ralentissements expliquent les 300 Mb/s. Optimisations : vérifier l'autotuning et les tampons noyau (rmem/wmem), réduire les pertes (QoS dédiée, files AQM), activer les acquittements avec SACK, paralléliser les flux si l'application le permet, tester un algorithme de congestion adapté (BBR) et mesurer itérativement chaque changement.",
+    "mots_cles_attendus": [
+      "produit délai-bande",
+      "fenêtre",
+      "autotuning",
+      "tampons",
+      "parallélisation",
+      "mesure itérative"
+    ]
+  },
+  {
+    "id": "reseau-230",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'apporte l'option de window scaling de TCP et dans quels contextes est-elle indispensable ?",
+    "reponse_reference": "L'en-tête TCP limite la fenêtre à 16 bits (64 Ko) ; le window scaling, négocié à l'ouverture de connexion, multiplie cette valeur par un facteur jusqu'à 2^14, permettant des fenêtres de plusieurs méga-octets. Elle est indispensable dès que le produit délai-bande dépasse 64 Ko — liaisons rapides à latence élevée (WAN, satellite, inter-datacenters) — et sa désactivation asymétrique ou son blocage par un équipement intermédiaire provoque des plafonds de débit inexpliqués.",
+    "mots_cles_attendus": [
+      "window scaling",
+      "64 ko",
+      "facteur d'échelle",
+      "produit délai-bande",
+      "négociation"
+    ]
+  },
+  {
+    "id": "reseau-231",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Ton service en ligne subit une attaque DDoS volumétrique de 80 Gb/s alors que tes liens totalisent 20 Gb/s. Décris le plan de mitigation en plusieurs couches que tu actives.",
+    "reponse_reference": "Le volume dépasse ma capacité : la première couche est donc en amont — activation du scrubbing (redirection BGP/FlowSpec vers les centres de nettoyage de l'opérateur ou d'un prestataire anti-DDoS, idéalement pré-provisionné avec des seuils d'activation automatiques). En attendant : filtration des paquets les plus grossiers en bordure (ACL, uRPF, rate-limit par préfixe source via FlowSpec/RTBH pour les sources attaquantes identifiées), protection des services par un CDN/WAF anycast qui absorbe les couches 3-7, et communication/monitoring en cellule de crise pour suivre l'efficacité des contre-mesures.",
+    "mots_cles_attendus": [
+      "scrubbing",
+      "flowspec",
+      "rtbh",
+      "cdn",
+      "amont",
+      "cellule de crise"
+    ]
+  },
+  {
+    "id": "reseau-232",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment l'anycast aide-t-il à absorber les attaques DDoS distribuées ?",
+    "reponse_reference": "En annonçant le même préfixe depuis de nombreux points de présence répartis, l'anycast dilue l'attaque : les paquets de chaque source attaquante sont absorbés par le PoP topologiquement le plus proche, répartissant le volume global sur toutes les capacités réunies au lieu de concentrer sur un lien. Combiné à du filtrage local par PoP et à du scrubbing lorsque le volume dépasse un site, c'est la base architecturale des grands services résilients (DNS racine, CDN).",
+    "mots_cles_attendus": [
+      "anycast",
+      "dilution",
+      "points de présence",
+      "capacité répartie",
+      "filtrage local"
+    ]
+  },
+  {
+    "id": "reseau-233",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Avant de modifier les politiques d'import BGP de tes deux transitaires (nouvelles préfix-listes et communautés), comment évalues-tu l'impact réel sur les chemins et le trafic, sans risque pour la production ?",
+    "reponse_reference": "Je simule d'abord le changement hors production : import des configurations actuelles et projetées dans un outil de modélisation (digital twin type Batfish, ou labo virtuel) et comparaison des RIB/BGP résultantes — préfixes gagnés/perdus, changements de chemin et de next-hop par destination. Je vérifie les compteurs attendus (nombre de préfixes par pair face aux limites maximum-prefix), je teste les scénarios de panne des pairs en simulation, puis j'applique en fenêtre avec retour arrière prêt (anciennes préfix-listes versionnées) et surveillance immédiate des tables et du trafic.",
+    "mots_cles_attendus": [
+      "simulation",
+      "diff de rib",
+      "préfix-liste",
+      "maximum-prefix",
+      "retour arrière",
+      "fenêtre de changement"
+    ]
+  },
+  {
+    "id": "reseau-234",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le graceful restart (NSF/GR) des protocoles de routage et que préserve-t-il exactement pendant un redémarrage de routeur ?",
+    "reponse_reference": "Le graceful restart permet de redémarrer le plan de contrôle (processus de routage, parfois le système) sans perturber le plan de données : les voisins conservent les routes et l'adjacence pendant un délai négocié, et le routeur resynchronise ses bases (LSA OSPF, RIB BGP via route refresh) au retour. Le forwarding continue donc sur les routes existantes ; la limite est qu'aucune adaptation aux changements de topologie n'est possible pendant la resynchronisation, d'où des fenêtres de trous noirs si un autre élément tombe au même moment.",
+    "mots_cles_attendus": [
+      "graceful restart",
+      "plan de contrôle",
+      "plan de données",
+      "resynchronisation",
+      "voisins"
+    ]
+  },
+  {
+    "id": "reseau-235",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un flux précis d'une application distribuée subit des pertes dans le fabric, alors que tous les tests génériques (ping, iperf entre les mêmes hôtes) passent. Comment isole-tu le problème propre à ce flux dans un environnement ECMP/overlay ?",
+    "reponse_reference": "Un seul flux est touché : le hachage ECMP l'affecte probablement à un chemin ou un membre précis dégradé. Je reproduis le flux avec exactement les mêmes ports source/destination pour contrôler le hachage, puis je fais varier le port source pour basculer de chemin et confirmer la corrélation chemin/panne. J'identifie ensuite le chemin réel (outils de chemin de données : traceroute avec mêmes en-têtes, analyse du hachage sur chaque nœud, télémétrie par interface/compteur de drops), et en overlay je teste aussi les deux sens (le retour peut emprunter un chemin différent) avant de corriger l'élément fautif ou d'exclure le lien du bundle.",
+    "mots_cles_attendus": [
+      "hachage ecmp",
+      "flux unique",
+      "port source",
+      "chemin réel",
+      "asymétrie",
+      "compteurs de drops"
+    ]
+  },
+  {
+    "id": "reseau-236",
+    "domaine": "reseau",
+    "sous_theme": "outils",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la télémétrie in-band (INT) et en quoi diffère-t-elle des mesures par sondes classiques ?",
+    "reponse_reference": "L'INT embarque des métadonnées de chaque équipement traversé (identifiant de nœud, file d'attente, horodatage, compteur de sauts) directement dans les paquets de données eux-mêmes, au lieu de mesurer à côté avec des sondes ou du polling. On obtient ainsi le chemin réel et l'état précis de chaque saut pour les flux de production, par paquet, ce qui permet de localiser micro-congestions, réordonnancements et chemins ECMP fautifs au niveau du flux — au prix d'une surcharge d'en-tête et d'une collecte à dimensionner.",
+    "mots_cles_attendus": [
+      "int",
+      "métadonnées embarquées",
+      "par paquet",
+      "chemin réel",
+      "surcharge"
+    ]
+  },
+  {
+    "id": "reseau-237",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un campus de 5 000 postes fonctionne en L2 étendu avec un cœur vieillissant ; on te demande une cible entièrement routée jusqu'à l'accès, sans fenêtre d'arrêt globale. Esquisse la stratégie de migration experte.",
+    "reponse_reference": "Je définis d'abord la cible (leaf-spine routé, passerelles anycast sur la distribution, OSPF/BGP au cœur, VLAN résiduels limités aux cas irréductibles) puis je cartographie les dépendances L2 réelles (clusters, applications legacy, diffusion multicast) — c'est elles qui dictent le séquencement. La migration se fait par domaines de défaillance : construction du nouveau cœur en parallèle, bascule bâtiment par bâtiment pendant des fenêtres courtes avec configuration pré-validée en maquette et retour arrière testé, traitement des îlots L2 résiduels par VXLAN/EVPN le temps de leur extinction, et mesure continue (avant/après par bâtiment) pour prouver la non-régression.",
+    "mots_cles_attendus": [
+      "cible routée",
+      "dépendances l2",
+      "séquencement",
+      "bascule par bâtiment",
+      "validation préalable",
+      "non-régression"
+    ]
+  },
+  {
+    "id": "reseau-238",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une capture montre des paquets TCP arrivant dans le désordre (réordonnancement) sur un flux traversant un agrégat de liens, avec retransmissions spurieuses et chute de débit. Que se passe-t-il et comment traiter le problème ?",
+    "reponse_reference": "Le réordonnancement vient d'un équilibrage par paquet (et non par flux) sur l'agrégat ou de chemins ECMP de longueurs inégales : TCP interprète les arrivées hors ordre comme des pertes et déclenche des retransmissions inutiles (fast retransmit spurieux) qui cassent la fenêtre. Corrections : hachage par flux cohérent sur tous les équipements du chemin (mêmes champs, idéalement seed symétrique), égalisation des longueurs de chemin, et côté hôtes s'assurer que SACK/DSACK et les seuils de réordonnancement sont actifs ; on valide en re-capturant la disparition des DUP-ACK anormaux.",
+    "mots_cles_attendus": [
+      "réordonnancement",
+      "hachage par flux",
+      "retransmissions spurieuses",
+      "sack",
+      "ecmp"
+    ]
+  },
+  {
+    "id": "reseau-239",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un service NATé de grande envergure (10 000 utilisateurs derrière un pool d'adresses publiques) présente des échecs de connexion aléatoires aux heures de pointe, alors que CPU et bande passante du routeur sont normaux. Quelle ressource invisible suspectes-tu et comment le confirmes-tu ?",
+    "reponse_reference": "Le suspect est l'épuisement des ports de translation : chaque NAT ne dispose que d'environ 64 000 ports par couple (IP publique, destination), et les sessions longues ou les timeouts trop lents saturent cette table bien avant le CPU. Je le confirme via les compteurs d'échec d'allocation NAT (logs « no port available », occupation de la table de translation, nombre de sessions par IP du pool) ; les remèdes : élargir le pool, réduire les timeouts (surtout TCP établis et UDP), activer le NAT à pool étendu/par préfixe, et pousser les services concernés vers IPv6 où la translation disparaît.",
+    "mots_cles_attendus": [
+      "épuisement des ports",
+      "table de translation",
+      "timeouts",
+      "pool",
+      "compteurs d'échec",
+      "ipv6"
+    ]
+  },
+  {
+    "id": "reseau-240",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "On te demande d'auditer la résilience globale du réseau d'une plateforme critique avant son pic annuel de charge (x5). Quels axes d'audit prioritaires couvres-tu et que produis-tu comme livrables ?",
+    "reponse_reference": "J'audite d'abord la capacité réelle en N-1 (pas théorique) sur tous les goulots : liens, tables (routes, sessions NAT/pare-feu, ARP/MAC), débit de forwarding des équipements sous charge, et files d'attente ; puis les dépendances cachées (DNS, contrôleurs SDN, NTP, management hors bande, certificats qui expirent) et les procédures (bascules testées récemment ? retour arrière documenté ?). Je fais réaliser des tests de panne volontaires en préproduction et en production contrôlée (game days), et je livre un rapport classé par risque avec plan de remédiation hiérarchisé (bloquants avant le pic), les marges mesurées par composant et les seuils d'alerte à surveiller pendant l'événement.",
+    "mots_cles_attendus": [
+      "capacité n-1",
+      "goulots d'étranglement",
+      "tables",
+      "dépendances cachées",
+      "game days",
+      "plan de remédiation"
+    ]
+  }
+]

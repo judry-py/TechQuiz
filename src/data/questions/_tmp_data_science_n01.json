@@ -1,0 +1,321 @@
+[
+  {
+    "id": "data_science-001",
+    "domaine": "data_science",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la data science ?",
+    "reponse_reference": "La data science est une discipline interdisciplinaire qui combine statistiques, informatique et connaissance métier pour extraire de la valeur à partir des données. Elle consiste à collecter, nettoyer, analyser et modéliser des données afin d'aider à la prise de décision. Le data scientist formule des questions, explore les données et construit des modèles prédictifs.",
+    "mots_cles_attendus": [
+      "interdisciplinaire",
+      "statistiques",
+      "informatique",
+      "extraire de la valeur",
+      "décision"
+    ]
+  },
+  {
+    "id": "data_science-002",
+    "domaine": "data_science",
+    "sous_theme": "types_de_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un jeu de données tabulaire ?",
+    "reponse_reference": "Un jeu de données tabulaire est un ensemble de données organisé en lignes et en colonnes, comme un tableau ou une feuille de calcul. Chaque ligne représente une observation (par exemple un client) et chaque colonne une variable (par exemple l'âge ou le montant des achats). C'est le format le plus courant pour analyser des données avec pandas ou un tableur.",
+    "mots_cles_attendus": [
+      "lignes",
+      "colonnes",
+      "observation",
+      "variable",
+      "tableau"
+    ]
+  },
+  {
+    "id": "data_science-003",
+    "domaine": "data_science",
+    "sous_theme": "types_de_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une variable quantitative continue et une variable quantitative discrète ?",
+    "reponse_reference": "Une variable quantitative est mesurée par des nombres. Elle est discrète si elle ne peut prendre que des valeurs isolées et dénombrables, comme le nombre d'enfants ou le nombre de commandes. Elle est continue si elle peut prendre n'importe quelle valeur dans un intervalle, comme la taille, la température ou le montant d'un achat.",
+    "mots_cles_attendus": [
+      "nombres",
+      "valeurs isolées",
+      "dénombrable",
+      "intervalle",
+      "mesurée"
+    ]
+  },
+  {
+    "id": "data_science-004",
+    "domaine": "data_science",
+    "sous_theme": "types_de_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une variable catégorielle nominale et une variable catégorielle ordinale ?",
+    "reponse_reference": "Une variable catégorielle décrit une appartenance à une catégorie plutôt qu'une quantité. Elle est nominale quand les catégories n'ont pas d'ordre naturel, comme la couleur des yeux ou le pays. Elle est ordinale quand les catégories peuvent être ordonnées, comme un niveau de satisfaction (faible, moyen, élevé) ou une taille de vêtement.",
+    "mots_cles_attendus": [
+      "catégorie",
+      "ordre naturel",
+      "nominale",
+      "ordonnée",
+      "satisfaction"
+    ]
+  },
+  {
+    "id": "data_science-005",
+    "domaine": "data_science",
+    "sous_theme": "tendance_centrale",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la moyenne arithmétique ?",
+    "reponse_reference": "La moyenne arithmétique est la somme de toutes les valeurs d'une série divisée par leur nombre. C'est la mesure de tendance centrale la plus utilisée pour résumer une variable quantitative. Elle est cependant très sensible aux valeurs extrêmes, qui peuvent la tirer fortement vers le haut ou vers le bas.",
+    "mots_cles_attendus": [
+      "somme",
+      "divisée par le nombre",
+      "tendance centrale",
+      "sensible aux valeurs extrêmes"
+    ]
+  },
+  {
+    "id": "data_science-006",
+    "domaine": "data_science",
+    "sous_theme": "tendance_centrale",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la médiane et quand est-il préférable de l'utiliser plutôt que la moyenne ?",
+    "reponse_reference": "La médiane est la valeur qui partage une série ordonnée en deux moitiés égales : 50 % des valeurs sont au-dessous, 50 % au-dessus. On la préfère à la moyenne quand la distribution est asymétrique ou contient des valeurs aberrantes, car elle n'est pas influencée par les extrêmes. Elle est aussi utilisable pour des variables ordinales.",
+    "mots_cles_attendus": [
+      "moitié",
+      "série ordonnée",
+      "valeurs aberrantes",
+      "distribution asymétrique",
+      "pas influencée"
+    ]
+  },
+  {
+    "id": "data_science-007",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la variance ?",
+    "reponse_reference": "La variance mesure la dispersion d'une variable en calculant la moyenne des carrés des écarts entre chaque valeur et la moyenne. Elle s'exprime dans l'unité de la variable au carré, ce qui la rend difficile à interpréter directement. Une variance nulle signifie que toutes les valeurs sont identiques.",
+    "mots_cles_attendus": [
+      "dispersion",
+      "carrés des écarts",
+      "moyenne",
+      "unité au carré",
+      "écarts"
+    ]
+  },
+  {
+    "id": "data_science-008",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que l'écart-type et pourquoi est-il plus facile à interpréter que la variance ?",
+    "reponse_reference": "L'écart-type est la racine carrée de la variance. Il mesure la dispersion des données autour de la moyenne et s'exprime dans la même unité que la variable, contrairement à la variance. Un petit écart-type indique que les valeurs sont concentrées autour de la moyenne, un grand écart-type qu'elles sont très étalées.",
+    "mots_cles_attendus": [
+      "racine carrée",
+      "même unité",
+      "dispersion",
+      "autour de la moyenne",
+      "étalées"
+    ]
+  },
+  {
+    "id": "data_science-009",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que sont les quartiles et l'écart interquartile ?",
+    "reponse_reference": "Les quartiles divisent une série ordonnée en quatre parts égales : Q1 laisse 25 % des valeurs en dessous, Q2 est la médiane, Q3 laisse 75 % des valeurs en dessous. L'écart interquartile est la différence entre Q3 et Q1 et mesure la dispersion de la moitié centrale des données. Il sert notamment à détecter les valeurs aberrantes.",
+    "mots_cles_attendus": [
+      "quatre parts",
+      "Q1",
+      "Q3",
+      "moitié centrale",
+      "valeurs aberrantes"
+    ]
+  },
+  {
+    "id": "data_science-010",
+    "domaine": "data_science",
+    "sous_theme": "statistique_descriptive",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une distribution de fréquences et à quoi sert un histogramme ?",
+    "reponse_reference": "Une distribution de fréquences indique combien d'observations tombent dans chaque intervalle ou catégorie d'une variable. L'histogramme est sa représentation graphique : des barres adjacentes dont la hauteur donne la fréquence de chaque intervalle. Il permet de visualiser la forme de la distribution, sa symétrie et la présence de valeurs aberrantes.",
+    "mots_cles_attendus": [
+      "fréquences",
+      "intervalles",
+      "barres",
+      "forme de la distribution",
+      "symétrie"
+    ]
+  },
+  {
+    "id": "data_science-011",
+    "domaine": "data_science",
+    "sous_theme": "statistique_descriptive",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une population et un échantillon ?",
+    "reponse_reference": "La population est l'ensemble complet des individus ou objets que l'on souhaite étudier, par exemple tous les clients d'une entreprise. L'échantillon est un sous-ensemble de cette population, sélectionné pour être analysé quand étudier toute la population est trop coûteux ou impossible. On généralise ensuite les résultats de l'échantillon à la population, avec une certaine incertitude.",
+    "mots_cles_attendus": [
+      "ensemble complet",
+      "sous-ensemble",
+      "généraliser",
+      "incertitude",
+      "étudier"
+    ]
+  },
+  {
+    "id": "data_science-012",
+    "domaine": "data_science",
+    "sous_theme": "statistique_descriptive",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre statistique descriptive et statistique inférentielle ?",
+    "reponse_reference": "La statistique descriptive résume et décrit les données observées à l'aide d'indicateurs comme la moyenne, la médiane ou des graphiques, sans dépasser l'échantillon étudié. La statistique inférentielle utilise un échantillon pour tirer des conclusions, estimer des paramètres ou tester des hypothèses sur la population entière. La seconde repose sur les probabilités et s'accompagne toujours d'une marge d'incertitude.",
+    "mots_cles_attendus": [
+      "résume",
+      "décrit",
+      "conclusions sur la population",
+      "probabilités",
+      "incertitude"
+    ]
+  },
+  {
+    "id": "data_science-013",
+    "domaine": "data_science",
+    "sous_theme": "tendance_centrale",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Dans une PME de 20 salariés, la moyenne des salaires est de 4 200 euros par mois, mais 19 employés gagnent entre 2 000 et 3 000 euros et le dirigeant gagne 25 000 euros. Quel indicateur de tendance centrale est le plus représentatif du salaire typique, et pourquoi ?",
+    "reponse_reference": "Le salaire du dirigeant est une valeur extrême qui gonfle fortement la moyenne, la rendant peu représentative du salaire typique. La médiane, qui vaut ici environ 2 500 euros, est le meilleur indicateur car elle n'est pas influencée par ce salaire exceptionnel. Il faut donc préférer la médiane à la moyenne pour décrire une distribution très asymétrique.",
+    "mots_cles_attendus": [
+      "médiane",
+      "valeur extrême",
+      "moyenne gonflée",
+      "asymétrique",
+      "représentatif"
+    ]
+  },
+  {
+    "id": "data_science-014",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un élève a obtenu les notes suivantes : 12, 14, 13, 15 et 16 sur 20. Calculez sa moyenne et expliquez ce que l'écart-type de cette série indiquerait sur la régularité de ses notes.",
+    "reponse_reference": "La moyenne est (12 + 14 + 13 + 15 + 16) divisé par 5, soit 14 sur 20. L'écart-type mesure la dispersion des notes autour de cette moyenne : ici les notes restent proches de 14, donc l'écart-type serait faible. Un élève avec la même moyenne mais des notes très contrastées (par exemple 8 et 20) aurait un écart-type beaucoup plus grand, signe d'irrégularité.",
+    "mots_cles_attendus": [
+      "moyenne 14",
+      "faible écart-type",
+      "régulier",
+      "dispersion",
+      "irrégularité"
+    ]
+  },
+  {
+    "id": "data_science-015",
+    "domaine": "data_science",
+    "sous_theme": "types_de_donnees",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une équipe installe des capteurs qui enregistrent la température toutes les minutes dans un entrepôt, avec parfois des valeurs extrêmes lors de l'ouverture des portes. De quel type de variable s'agit-il et quelles statistiques descriptives choisiriez-vous pour résumer ces données ?",
+    "reponse_reference": "La température est une variable quantitative continue, car elle peut prendre n'importe quelle valeur dans un intervalle. Pour la résumer malgré les valeurs extrêmes, on combinerait la médiane et l'écart interquartile, robustes aux valeurs aberrantes, avec un histogramme pour visualiser la distribution. La moyenne et l'écart-type seraient moins fiables ici à cause des pics liés aux ouvertures de portes.",
+    "mots_cles_attendus": [
+      "quantitative continue",
+      "médiane",
+      "écart interquartile",
+      "histogramme",
+      "robustes"
+    ]
+  },
+  {
+    "id": "data_science-016",
+    "domaine": "data_science",
+    "sous_theme": "types_de_donnees",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une enquête de satisfaction demande aux clients de noter leur expérience sur une échelle : « très insatisfait, insatisfait, neutre, satisfait, très satisfait ». De quel type de variable s'agit-il et quels indicateurs utiliseriez-vous pour résumer les réponses ?",
+    "reponse_reference": "Il s'agit d'une variable catégorielle ordinale, car les catégories ont un ordre naturel mais les écarts entre elles ne sont pas mesurables. On la résumerait avec le mode (catégorie la plus fréquente), la médiane (catégorie centrale) et un tableau de fréquences ou un diagramme en barres. Calculer une moyenne sur des libellés n'a pas de sens, même si une note numérique est parfois attribuée par convention.",
+    "mots_cles_attendus": [
+      "catégorielle ordinale",
+      "mode",
+      "médiane",
+      "fréquences",
+      "ordre naturel"
+    ]
+  },
+  {
+    "id": "data_science-017",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un jeu de données de prix immobiliers d'un quartier contient 100 logements entre 150 000 et 400 000 euros, plus un hôtel particulier à 2,5 millions d'euros. Comment détecteriez-vous formellement cette valeur aberrante à l'aide des quartiles ?",
+    "reponse_reference": "On calcule Q1, Q3 et l'écart interquartile (IQR = Q3 - Q1). Toute valeur inférieure à Q1 - 1,5 × IQR ou supérieure à Q3 + 1,5 × IQR est considérée comme aberrante selon la règle de Tukey. L'hôtel particulier dépasse largement la borne supérieure et sera donc signalé comme valeur aberrante. Il faudra ensuite décider de l'exclure, de la plafonner ou de la traiter séparément selon l'objectif de l'analyse.",
+    "mots_cles_attendus": [
+      "écart interquartile",
+      "1,5",
+      "borne supérieure",
+      "règle de Tukey",
+      "valeur aberrante"
+    ]
+  },
+  {
+    "id": "data_science-018",
+    "domaine": "data_science",
+    "sous_theme": "mesures_de_dispersion",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Deux classes de 30 élèves ont toutes deux une moyenne de 12 sur 20 en mathématiques, mais dans la classe A presque toutes les notes sont entre 10 et 14, tandis que dans la classe B les notes vont de 2 à 20. Comment décrire la différence entre ces deux classes ?",
+    "reponse_reference": "La moyenne ne suffit pas à décrire ces classes : il faut regarder la dispersion. La classe A a un écart-type faible, ce qui indique un niveau homogène, tandis que la classe B a un écart-type élevé, signe d'une grande hétérogénéité entre élèves. Cette information est essentielle pour décider d'une action pédagogique différenciée.",
+    "mots_cles_attendus": [
+      "dispersion",
+      "écart-type",
+      "homogène",
+      "hétérogène",
+      "moyenne insuffisante"
+    ]
+  },
+  {
+    "id": "data_science-019",
+    "domaine": "data_science",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un site e-commerce stocke pour chaque commande : montant, date, identifiant client, et collecte aussi des avis clients sous forme de texte libre. Quels types de données distinguez-vous dans cet ensemble et pourquoi le traitement diffère-t-il ?",
+    "reponse_reference": "Le montant, la date et l'identifiant client sont des données structurées, organisées en colonnes dans une table, directement analysables avec des statistiques. Les avis en texte libre sont des données non structurées, sans format tabulaire, qui nécessitent un traitement préalable comme la tokenisation ou l'analyse de sentiment. La data science combine ces deux familles de données pour enrichir la connaissance client.",
+    "mots_cles_attendus": [
+      "structurées",
+      "non structurées",
+      "texte libre",
+      "table",
+      "traitement préalable"
+    ]
+  },
+  {
+    "id": "data_science-020",
+    "domaine": "data_science",
+    "sous_theme": "statistique_descriptive",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Dans un questionnaire rempli par 500 clients, la question sur le revenu mensuel n'a été renseignée que par 400 personnes. Quel impact cela peut-il avoir sur la moyenne des revenus et que devez-vous faire avant de calculer vos indicateurs ?",
+    "reponse_reference": "Les 100 valeurs manquantes peuvent biaiser la moyenne si les non-répondants diffèrent systématiquement des répondants, par exemple si les hauts revenus répondent moins. Il faut d'abord analyser le mécanisme des données manquantes, puis choisir une stratégie : calculer sur les répondants en documentant la limite, imputer les valeurs ou exclure la variable. Ne rien faire et calculer quand même expose à des conclusions erronées.",
+    "mots_cles_attendus": [
+      "valeurs manquantes",
+      "biais",
+      "non-répondants",
+      "imputer",
+      "documenter"
+    ]
+  }
+]

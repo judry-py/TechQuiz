@@ -1,0 +1,202 @@
+[
+  {
+    "id": "web3_blockchain-061",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un event en Solidity et à quoi sert-il ?",
+    "reponse_reference": "Un event est une déclaration qui permet à un contrat d'émettre des entrées dans les journaux (logs) de la transaction, sans les stocker dans l'état du contrat. Les paramètres marqués indexed deviennent des topics interrogeables, ce qui permet aux applications hors chaîne (indexeurs, dApps) de surveiller l'activité du contrat à faible coût.",
+    "mots_cles_attendus": ["event", "logs", "indexed", "topics", "hors chaîne"]
+  },
+  {
+    "id": "web3_blockchain-062",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une fonction view, une fonction pure et une fonction qui modifie l'état en Solidity ?",
+    "reponse_reference": "Une fonction view peut lire l'état du contrat sans le modifier, une fonction pure ne lit ni ne modifie l'état, et une fonction classique peut le modifier. Les appels view et pure exécutés localement (eth_call) ne consomment pas de gas et ne produisent pas de transaction, contrairement à un appel qui modifie l'état.",
+    "mots_cles_attendus": ["view", "pure", "état", "eth_call", "gas"]
+  },
+  {
+    "id": "web3_blockchain-063",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre le prix du gas (gas price) et la limite de gas (gas limit) d'une transaction ?",
+    "reponse_reference": "Le prix du gas est le montant que l'expéditeur accepte de payer par unité de gas, tandis que la limite de gas est le maximum d'unités que la transaction est autorisée à consommer. Le coût total maximal est donc le produit des deux : le gas non consommé est remboursé, mais dépasser la limite fait échouer toute la transaction.",
+    "mots_cles_attendus": ["gas price", "gas limit", "unités", "remboursement", "échec"]
+  },
+  {
+    "id": "web3_blockchain-064",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un modifier en Solidity et quel est son usage typique ?",
+    "reponse_reference": "Un modifier est un morceau de code réutilisable exécuté avant ou après le corps d'une fonction, souvent utilisé pour contrôler l'accès (par exemple onlyOwner) ou valider des conditions. Il s'écrit avec le symbole _; qui marque l'emplacement où le corps de la fonction cible est inséré.",
+    "mots_cles_attendus": ["modifier", "contrôle d'accès", "réutilisable", "onlyOwner", "_;"]
+  },
+  {
+    "id": "web3_blockchain-065",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelles sont les fonctions imposées par le standard ERC-20 et quel est le rôle de chacune ?",
+    "reponse_reference": "L'ERC-20 impose totalSupply, balanceOf, transfer, transferFrom, approve et allowance, complétés par les événements Transfer et Approval. Les trois premières gèrent l'offre et les soldes, tandis que transferFrom, approve et allowance permettent à un tiers (un DEX par exemple) de dépenser des jetons au nom du détenteur.",
+    "mots_cles_attendus": ["totalSupply", "balanceOf", "transfer", "approve", "allowance"]
+  },
+  {
+    "id": "web3_blockchain-066",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un keystore chiffré (fichier JSON de portefeuille) et comment protège-t-il la clé privée ?",
+    "reponse_reference": "Un keystore est un fichier JSON contenant la clé privée chiffrée à l'aide d'un algorithme de dérivation de clé (souvent scrypt) à partir d'un mot de passe. La clé privée n'apparaît jamais en clair dans le fichier : il faut le mot de passe pour la déchiffrer, ce qui protège la clé en cas de vol du fichier, mais pas contre un mot de passe faible.",
+    "mots_cles_attendus": ["keystore", "chiffré", "scrypt", "mot de passe", "clé privée"]
+  },
+  {
+    "id": "web3_blockchain-067",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur envoie un simple transfert d'ETH avec une limite de gas de 21 000 exactement. La transaction échoue avec un statut « out of gas ». Comment expliquer cet échec ?",
+    "reponse_reference": "Un transfert simple d'ETH coûte exactement 21 000 unités de gas, mais toute donnée supplémentaire (calldata, passage par un contrat) augmente le coût. Si le portefeuille a joint des données ou si une mise à jour du protocole a relevé le coût d'une opération, la limite est dépassée et l'exécution est intégralement annulée.",
+    "mots_cles_attendus": ["21 000", "gas limit", "out of gas", "calldata", "annulée"]
+  },
+  {
+    "id": "web3_blockchain-068",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une interface en Solidity et pourquoi l'utiliser plutôt que de réécrire un contrat complet ?",
+    "reponse_reference": "Une interface déclare la signature des fonctions et des événements d'un contrat sans leur implémentation, ce qui permet d'appeler un contrat externe en ne connaissant que son interface. Elle réduit le code déployé, limite les erreurs et sert de contrat standard (IERC20 par exemple) que tous les contrats peuvent respecter.",
+    "mots_cles_attendus": ["interface", "signatures", "sans implémentation", "appel externe", "standard"]
+  },
+  {
+    "id": "web3_blockchain-069",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur a approuvé 1 000 USDC à un DEX quelques mois plus tôt. Le DEX est ensuite compromis par une faille. Ses jetons sont-ils en danger et pourquoi ?",
+    "reponse_reference": "Oui, si l'approbation est encore active (allowance non consommée), le contrat compromis peut appeler transferFrom pour déplacer les jetons de l'utilisateur sans nouvelle signature de sa part. C'est pourquoi il faut révoquer les approbations inutilisées ou utiliser des allowances exactes plutôt qu'illimitées.",
+    "mots_cles_attendus": ["allowance", "approve", "transferFrom", "révocation", "approbation illimitée"]
+  },
+  {
+    "id": "web3_blockchain-070",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un mapping en Solidity et quelles sont ses limites ?",
+    "reponse_reference": "Un mapping associe une clé (adresse, identifiant) à une valeur, comme un dictionnaire, et tout accès à une clé absente renvoie la valeur zéro du type. Il n'est ni itérable ni énumérable directement : pour lister les clés, il faut maintenir un tableau séparé, et il n'existe pas de fonction pour connaître sa taille.",
+    "mots_cles_attendus": ["mapping", "clé", "valeur zéro", "non itérable", "tableau séparé"]
+  },
+  {
+    "id": "web3_blockchain-071",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le calldata d'une transaction et quelle place occupe-t-il dans l'EVM ?",
+    "reponse_reference": "Le calldata est la zone de données immuable et peu coûteuse attachée à une transaction, qui contient le sélecteur de fonction et les arguments. Contrairement à la memory et au storage, il ne peut pas être modifié pendant l'exécution, et sa lecture coûte nettement moins cher que celle de la memory.",
+    "mots_cles_attendus": ["calldata", "immuable", "sélecteur", "arguments", "peu coûteux"]
+  },
+  {
+    "id": "web3_blockchain-072",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur perd son téléphone où était installé son portefeuille, mais il a conservé sa phrase de récupération de 12 mots. Peut-il récupérer ses fonds et comment ?",
+    "reponse_reference": "Oui : la phrase de récupération encode la graine (seed) à partir de laquelle toutes les clés privées sont dérivées de façon déterministe selon le standard BIP-39 et un chemin de dérivation BIP-32/44. En la saisissant dans un nouveau portefeuille compatible, il régénère exactement les mêmes comptes et retrouve l'accès à ses fonds.",
+    "mots_cles_attendus": ["seed phrase", "BIP-39", "dérivation déterministe", "restauration", "clés privées"]
+  },
+  {
+    "id": "web3_blockchain-073",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une fonction external et une fonction public en Solidity ?",
+    "reponse_reference": "Les deux sont appelables de l'extérieur, mais une fonction external ne peut être appelée depuis l'intérieur du contrat que via this.f(), tandis qu'une fonction public est directement appelable en interne. external permet une optimisation : les paramètres restent en calldata au lieu d'être copiés en memory, ce qui réduit le coût en gas.",
+    "mots_cles_attendus": ["external", "public", "calldata", "this.f()", "gas"]
+  },
+  {
+    "id": "web3_blockchain-074",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert le champ decimals d'un token ERC-20 et pourquoi ne faut-il pas le confondre avec le solde réel ?",
+    "reponse_reference": "decimals indique en combien de sous-unités le token est divisible : un solde stocké de 1 000 000 avec 6 decimals représente 1 token affichable. Les soldes et transferts sont exprimés en unités de base, et les interfaces doivent diviser par 10^decimals pour afficher la valeur lisible par l'humain.",
+    "mots_cles_attendus": ["decimals", "sous-unités", "divisibilité", "10^decimals", "affichage"]
+  },
+  {
+    "id": "web3_blockchain-075",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un contrat de loterie tire son gagnant en utilisant block.timestamp comme source d'aléa. Pourquoi cette approche est-elle dangereuse ?",
+    "reponse_reference": "block.timestamp est fixé par le validateur qui produit le bloc, lequel peut le manipuler dans une petite fenêtre pour influencer le résultat du tirage. L'aléa doit donc provenir d'une source externe vérifiable comme un VRF (Chainlink VRF) ou d'un schéma commit-reveal, jamais de données de bloc.",
+    "mots_cles_attendus": ["block.timestamp", "manipulation", "aléa", "VRF", "commit-reveal"]
+  },
+  {
+    "id": "web3_blockchain-076",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un constructor en Solidity et quelles opérations y réalise-t-on ?",
+    "reponse_reference": "Le constructor est une fonction spéciale exécutée une seule fois lors du déploiement du contrat, et qui ne fait pas partie du bytecode déployé. On l'utilise pour initialiser les variables d'état, définir le propriétaire, configurer les adresses de dépendances ou stocker des valeurs immuables.",
+    "mots_cles_attendus": ["constructor", "déploiement", "une seule fois", "initialisation", "état"]
+  },
+  {
+    "id": "web3_blockchain-077",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une dApp appelle transferFrom avec un montant supérieur à l'allowance accordée par l'utilisateur. Que se passe-t-il lors de l'exécution ?",
+    "reponse_reference": "L'appel échoue avec un revert : le contrat ERC-20 vérifie que le montant est inférieur ou égal à l'allowance et à la balance de l'expéditeur avant de décrémenter. Aucun jeton n'est déplacé et l'état reste inchangé, l'échec étant visible sur l'explorateur sous forme de transaction reverted.",
+    "mots_cles_attendus": ["transferFrom", "allowance", "revert", "état inchangé", "vérification"]
+  },
+  {
+    "id": "web3_blockchain-078",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'écriture en storage (SSTORE) est-elle l'opération la plus coûteuse de l'EVM ?",
+    "reponse_reference": "Le storage est persistant et répliqué sur tous les nœuds du réseau : chaque écriture doit être conservée indéfiniment et intégrée à l'état global, ce qui engendre un coût permanent. L'EVM facture donc cher l'écriture d'un slot non nul (20 000 unités) et accorde un remboursement limité lors de la remise à zéro pour inciter à nettoyer l'état.",
+    "mots_cles_attendus": ["SSTORE", "persistant", "réplication", "20 000", "remboursement"]
+  },
+  {
+    "id": "web3_blockchain-079",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un contrat contient une boucle for qui itère sur un tableau dynamique dont la taille augmente à chaque appel. Quel risque cette conception fait-elle courir ?",
+    "reponse_reference": "Le coût en gas croît avec la taille du tableau : au-delà d'un certain nombre d'itérations, la transaction dépasse la limite de gas du bloc et devient impossible à exécuter. Le contrat est alors bloqué (déni de service) pour cette fonction, et les fonds ou les états associés peuvent devenir inaccessibles.",
+    "mots_cles_attendus": ["boucle", "gas", "limite de bloc", "déni de service", "inaccessible"]
+  },
+  {
+    "id": "web3_blockchain-080",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un portefeuille matériel (hardware wallet) et comment protège-t-il la clé privée ?",
+    "reponse_reference": "Un portefeuille matériel est un petit appareil dédié qui stocke la clé privée dans un composant sécurisé isolé et signe les transactions en interne, sans jamais exposer la clé à l'ordinateur connecté. Même sur une machine infectée par un malware, l'attaquant ne peut ni lire la clé ni faire signer une transaction sans validation physique sur l'appareil.",
+    "mots_cles_attendus": ["hardware wallet", "clé isolée", "signature interne", "malware", "validation physique"]
+  }
+]

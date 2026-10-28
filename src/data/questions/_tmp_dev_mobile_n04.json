@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-061",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le package Provider dans Flutter et à quoi sert-il ?",
+    "reponse_reference": "Provider est une bibliothèque de gestion d'état et d'injection de dépendances fondée sur les InheritedWidget de Flutter. Elle expose des objets comme ChangeNotifier à l'arbre de widgets et ne reconstruit que les widgets qui les écoutent. Elle évite de passer les objets manuellement de constructeur en constructeur.",
+    "mots_cles_attendus": ["provider", "inheritedwidget", "changenotifier", "injection de dépendances"]
+  },
+  {
+    "id": "dev_mobile-062",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quels sont les trois principes fondamentaux de Redux ?",
+    "reponse_reference": "Redux repose sur une source de vérité unique : tout l'état de l'application vit dans un seul store. L'état est en lecture seule et ne change que par l'émission d'actions. Les changements sont appliqués par des fonctions pures appelées reducers, ce qui rend l'évolution de l'état prévisible et testable.",
+    "mots_cles_attendus": ["redux", "store", "actions", "reducers", "état immuable"]
+  },
+  {
+    "id": "dev_mobile-063",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern Bloc en Flutter et comment fonctionne-t-il ?",
+    "reponse_reference": "Le pattern Bloc (Business Logic Component) sépare la logique métier de l'interface. Le widget envoie des événements au bloc, qui les transforme en nouveaux états exposés sous forme de flux. L'interface se reconstruit uniquement à partir de ces états, ce qui rend la logique testable indépendamment de l'UI.",
+    "mots_cles_attendus": ["bloc", "événements", "états", "flux", "flutter"]
+  },
+  {
+    "id": "dev_mobile-064",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Dans une application Flutter, un compteur affiché sur deux écrans différents doit se mettre à jour simultanément. Comment structurer la gestion d'état ?",
+    "reponse_reference": "Il faut remonter l'état dans un objet partagé, typiquement un ChangeNotifier exposé par un Provider placé au-dessus des deux écrans. Chaque écran écoute ce même objet avec watch ou Consumer, et l'incrémentation passe par une méthode de l'objet qui appelle notifyListeners. Les deux écrans se reconstruisent alors automatiquement.",
+    "mots_cles_attendus": ["provider", "changenotifier", "état partagé", "notifylisteners"]
+  },
+  {
+    "id": "dev_mobile-065",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Room et quel rôle joue-t-il dans une application Android ?",
+    "reponse_reference": "Room est une bibliothèque de persistance qui encapsule SQLite pour Android. Elle décrit les données avec des entités annotées, les accès avec des DAO, et vérifie les requêtes SQL à la compilation. Elle fournit aussi le support natif des coroutines et des Flow pour observer les changements de données.",
+    "mots_cles_attendus": ["room", "sqlite", "entités", "dao", "compilation"]
+  },
+  {
+    "id": "dev_mobile-066",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un DAO dans Room et comment déclare-t-on une requête ?",
+    "reponse_reference": "Un DAO (Data Access Object) est une interface annotée qui regroupe toutes les opérations de lecture et d'écriture sur une entité. Les méthodes sont annotées avec @Insert, @Update, @Delete ou @Query, cette dernière contenant du SQL validé à la compilation. Elles peuvent être suspendues ou renvoyer un Flow pour la réactivité.",
+    "mots_cles_attendus": ["dao", "annotations", "query", "flow", "suspend"]
+  },
+  {
+    "id": "dev_mobile-067",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application de tâches doit stocker les tâches localement et les relire au démarrage, même sans réseau. Comment organiser la persistance sous Android ?",
+    "reponse_reference": "On crée une entité Task avec une base Room, un DAO exposant insert et getAll en Flow, et un repository qui masque la base à l'interface. Le ViewModel collecte le Flow et expose l'état de la liste à l'UI. Les écritures s'exécutent dans des coroutines sur un dispatcher d'E/S pour ne pas bloquer le thread principal.",
+    "mots_cles_attendus": ["room", "entité", "dao", "repository", "coroutines"]
+  },
+  {
+    "id": "dev_mobile-068",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Retrofit et comment déclare-t-on un appel réseau avec ?",
+    "reponse_reference": "Retrofit est un client HTTP pour Android qui transforme une interface Kotlin annotée en implémentation réseau. Chaque méthode décrit une requête avec @GET ou @POST, un chemin et des paramètres, et renvoie directement des objets grâce à un convertisseur JSON comme Moshi. Elle peut être suspend pour s'intégrer aux coroutines.",
+    "mots_cles_attendus": ["retrofit", "interface", "annotations", "moshi", "coroutines"]
+  },
+  {
+    "id": "dev_mobile-069",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Dio en Flutter et quelles fonctionnalités offre-t-il ?",
+    "reponse_reference": "Dio est un client HTTP pour Dart qui propose des intercepteurs, des délais d'expiration, l'annulation de requêtes et le téléchargement avec progression. Il gère FormData, les requêtes multi-parties et la transformation des réponses. Ses intercepteurs permettent de centraliser l'authentification et la journalisation.",
+    "mots_cles_attendus": ["dio", "intercepteurs", "timeout", "annulation", "http client"]
+  },
+  {
+    "id": "dev_mobile-070",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une API renvoie un JSON volumineux contenant une liste d'utilisateurs. Comment modéliser cette réponse dans une application Kotlin avec Retrofit ?",
+    "reponse_reference": "On déclare des data classes Kotlin reflétant la structure du JSON, par exemple UserResponse contenant une liste de User, avec les annotations de sérialisation nécessaires. Le convertisseur Moshi ou Kotlinx Serialization assure le mapping automatique des champs. La méthode Retrofit renvoie alors directement UserResponse, et les champs inconnus ou nuls sont gérés explicitement avec des valeurs par défaut.",
+    "mots_cles_attendus": ["data class", "moshi", "sérialisation", "json", "mapper"]
+  },
+  {
+    "id": "dev_mobile-071",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quels sont les principaux états du cycle de vie d'un Fragment Android ?",
+    "reponse_reference": "Un Fragment passe par onAttach, onCreate, onCreateView puis onViewCreated lorsqu'il est ajouté à une activité. Il entre ensuite dans les états onStart et onResume, avant de les quitter avec onPause et onStop. Sa vue est détruite dans onDestroyView alors que le Fragment lui-même survit dans la pile, jusqu'à onDestroy et onDetach.",
+    "mots_cles_attendus": ["fragment", "cycle de vie", "oncreateview", "backstack", "onattach"]
+  },
+  {
+    "id": "dev_mobile-072",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert onSaveInstanceState et pourquoi sa taille est-elle limitée ?",
+    "reponse_reference": "onSaveInstanceState permet de sauvegarder l'état transitoire de l'interface avant qu'une activité soit détruite par le système. Les données transitent par un Bundle sérialisé via un canal inter-processus Binder, dont le tampon est limité à environ un mégaoctet. Le dépasser déclenche une TransactionTooLargeException, d'où l'intérêt de n'y stocker que de petits identifiants ou valeurs simples.",
+    "mots_cles_attendus": ["onsavedinstancestate", "bundle", "binder", "transactiontoolarge"]
+  },
+  {
+    "id": "dev_mobile-073",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application Android est tuée par le système alors qu'elle est en arrière-plan, puis relancée par l'utilisateur. Comment restaurer son état ?",
+    "reponse_reference": "Le système recrée l'activité et lui transmet le Bundle sauvegardé dans onSaveInstanceState, qu'il faut relire dans onCreate. Pour les données plus riches, un ViewModel avec SavedStateHandle survit et restaure les valeurs sérialisables. Les données importantes doivent de toute façon être persistées dans Room ou DataStore dès leur saisie, car rien ne garantit la survie du processus.",
+    "mots_cles_attendus": ["savedstatehandle", "bundle", "restauration", "processus", "viewmodel"]
+  },
+  {
+    "id": "dev_mobile-074",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que se passe-t-il dans applicationWillTerminate sur iOS et pourquoi ne pas s'y fier ?",
+    "reponse_reference": "applicationWillTerminate est appelée lorsque l'application s'apprête à être arrêtée, par exemple lors d'une fermeture explicite depuis le sélecteur d'applications. Elle n'est pas garantie lorsque le système récupère de la mémoire ou lors d'un crash, et le temps d'exécution y est très limité. La sauvegarde doit donc être continue, au fil des actions, plutôt que repoussée à ce dernier moment.",
+    "mots_cles_attendus": ["applicationwillterminate", "sauvegarde", "arrêt", "mémoire"]
+  },
+  {
+    "id": "dev_mobile-075",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une permission runtime sur Android et depuis quelle version est-elle obligatoire ?",
+    "reponse_reference": "Depuis Android 6 (API 23), les permissions dangereuses comme la caméra ou la localisation ne sont plus accordées à l'installation. L'application doit les demander à l'exécution via requestPermissions et gérer la réponse de l'utilisateur. La déclaration dans le manifeste reste obligatoire, mais l'accord réel se fait au moment de l'usage.",
+    "mots_cles_attendus": ["permission runtime", "api 23", "manifeste", "requestpermissions"]
+  },
+  {
+    "id": "dev_mobile-076",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application doit accéder à la caméra sur un appareil Android récent. Quelles étapes faut-il respecter ?",
+    "reponse_reference": "Il faut déclarer CAMERA dans le manifeste, puis vérifier à l'exécution si la permission est accordée avec checkSelfPermission. Si ce n'est pas le cas, on lance requestPermissions en expliquant pourquoi l'accès est nécessaire, idéalement après un premier refus. Il faut aussi gérer le refus définitif avec « Ne plus demander » et rediriger l'utilisateur vers les réglages, ainsi que l'absence totale de caméra sur l'appareil.",
+    "mots_cles_attendus": ["camera", "checkselfpermission", "requestpermissions", "refus", "réglages"]
+  },
+  {
+    "id": "dev_mobile-077",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que SQLite et comment une application mobile l'utilise-t-elle ?",
+    "reponse_reference": "SQLite est un moteur de base de données relationnelle embarqué qui stocke les données dans un simple fichier local, sans serveur. Il est intégré nativement à Android et à iOS et sert de socle aux bibliothèques comme Room ou Core Data. Les transactions garantissent l'atomicité des écritures, ce qui évite les bases corrompues en cas d'interruption.",
+    "mots_cles_attendus": ["sqlite", "embarqué", "fichier", "transactions"]
+  },
+  {
+    "id": "dev_mobile-078",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une liste de 5 000 articles stockée en base locale doit s'afficher sans bloquer l'interface. Comment l'interroger efficacement ?",
+    "reponse_reference": "Il ne faut jamais charger les 5 000 lignes d'un coup : on pagine la requête avec LIMIT et OFFSET ou des curseurs par clé, et on n'ajoute que les pages nécessaires. Un index sur la colonne de tri accélère les recherches, et les requêtes s'exécutent hors du thread principal via des coroutines ou un Flow. L'UI côté RecyclerView ou LazyColumn recycle déjà les vues, la base ne doit fournir que ce qui est visible.",
+    "mots_cles_attendus": ["pagination", "limit", "index", "flow", "thread principal"]
+  },
+  {
+    "id": "dev_mobile-079",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un développeur doit ajouter un jeton d'authentification à toutes les requêtes d'une application. Où centraliser cette logique ?",
+    "reponse_reference": "La meilleure approche est d'utiliser un interceptor du client HTTP, comme un Interceptor OkHttp sous Retrofit ou un interceptor Dio sous Flutter. Il lit le jeton depuis un stockage sécurisé et l'ajoute à l'en-tête Authorization de chaque requête. On peut y gérer aussi le rafraîchissement du jeton expiré et la journalisation, sans dupliquer le code dans chaque appel.",
+    "mots_cles_attendus": ["interceptor", "okhttp", "dio", "authorization", "jeton"]
+  },
+  {
+    "id": "dev_mobile-080",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un appel API met trente secondes à échouer dès que le réseau est lent, bloquant un bouton. Comment améliorer l'expérience utilisateur ?",
+    "reponse_reference": "Il faut définir des délais d'expiration courts et adaptés, de quelques secondes pour la connexion et la lecture, et désactiver le bouton pendant l'appel en cours. On peut ajouter un nombre limité de tentatives avec un délai exponentiel pour les erreurs transitoires. Enfin, un message d'erreur clair avec une action « Réessayer » redonne la main à l'utilisateur au lieu de le laisser attendre.",
+    "mots_cles_attendus": ["timeout", "retry", "exponentiel", "expérience utilisateur"]
+  }
+]

@@ -1,0 +1,321 @@
+[
+  {
+    "id": "data_science-021",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une probabilité et quelles sont ses propriétés fondamentales ?",
+    "reponse_reference": "Une probabilité est un nombre compris entre 0 et 1 qui quantifie la chance qu'un événement se produise : 0 signifie l'événement impossible et 1 l'événement certain. La somme des probabilités de tous les événements élémentaires d'une expérience vaut 1. La probabilité d'un événement est la somme des probabilités de ses issues élémentaires.",
+    "mots_cles_attendus": [
+      "entre 0 et 1",
+      "chance",
+      "impossible",
+      "certain",
+      "somme vaut 1"
+    ]
+  },
+  {
+    "id": "data_science-022",
+    "domaine": "data_science",
+    "sous_theme": "variables_aleatoires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une variable aléatoire ?",
+    "reponse_reference": "Une variable aléatoire est une fonction qui associe un nombre à chaque issue d'une expérience aléatoire. Elle peut être discrète, prenant des valeurs dénombrables comme le résultat d'un dé, ou continue, prenant des valeurs dans un intervalle comme la durée d'attente. Sa loi de probabilité décrit les chances de chaque valeur ou intervalle de valeurs.",
+    "mots_cles_attendus": [
+      "issue",
+      "nombre",
+      "discrète",
+      "continue",
+      "loi de probabilité"
+    ]
+  },
+  {
+    "id": "data_science-023",
+    "domaine": "data_science",
+    "sous_theme": "variables_aleatoires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'espérance mathématique d'une variable aléatoire ?",
+    "reponse_reference": "L'espérance est la moyenne pondérée des valeurs possibles d'une variable aléatoire, chaque valeur étant pondérée par sa probabilité. Elle représente la valeur moyenne que l'on observerait si l'expérience était répétée un très grand nombre de fois. Pour une variable discrète, on la calcule en sommant chaque valeur multipliée par sa probabilité.",
+    "mots_cles_attendus": [
+      "moyenne pondérée",
+      "probabilité",
+      "valeur moyenne",
+      "long terme",
+      "répétée"
+    ]
+  },
+  {
+    "id": "data_science-024",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la loi binomiale et dans quelles situations s'applique-t-elle ?",
+    "reponse_reference": "La loi binomiale modélise le nombre de succès obtenus lors d'une série d'épreuves identiques et indépendantes, chacune ayant deux issues possibles (succès ou échec) avec une probabilité de succès constante. Elle dépend de deux paramètres : le nombre d'essais n et la probabilité de succès p. Elle sert par exemple à modéliser le nombre de clients qui cliquent sur une publicité parmi n visiteurs.",
+    "mots_cles_attendus": [
+      "succès",
+      "épreuves indépendantes",
+      "deux issues",
+      "n et p",
+      "probabilité constante"
+    ]
+  },
+  {
+    "id": "data_science-025",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la loi normale et pourquoi est-elle si importante en data science ?",
+    "reponse_reference": "La loi normale est une distribution continue en forme de cloche, symétrique autour de sa moyenne, définie par deux paramètres : la moyenne et l'écart-type. Environ 68 % des valeurs se trouvent à moins d'un écart-type de la moyenne et 95 % à moins de deux. Elle est centrale car de nombreux phénomènes naturels s'en approchent et le théorème central limite en fait la loi limite des moyennes d'échantillons.",
+    "mots_cles_attendus": [
+      "cloche",
+      "symétrique",
+      "moyenne et écart-type",
+      "68 %",
+      "95 %"
+    ]
+  },
+  {
+    "id": "data_science-026",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la loi de Poisson et à quel type de phénomène s'applique-t-elle ?",
+    "reponse_reference": "La loi de Poisson modélise le nombre d'événements rares survenant dans un intervalle de temps ou d'espace donné, comme les appels reçus par un standard en une heure. Elle est définie par un seul paramètre, lambda, qui est à la fois l'espérance et la variance du nombre d'événements. Elle suppose que les événements surviennent de façon indépendante et à un rythme moyen constant.",
+    "mots_cles_attendus": [
+      "événements rares",
+      "intervalle",
+      "lambda",
+      "espérance égale variance",
+      "indépendants"
+    ]
+  },
+  {
+    "id": "data_science-027",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la loi uniforme continue et que modélise-t-elle ?",
+    "reponse_reference": "La loi uniforme continue attribue la même densité de probabilité à toutes les valeurs d'un intervalle borné. Elle modélise des situations où toutes les issues sont équiprobables, comme l'instant d'arrivée d'un client dans une fenêtre de temps. Son espérance est le milieu de l'intervalle et elle sert aussi de base aux générateurs de nombres aléatoires.",
+    "mots_cles_attendus": [
+      "même probabilité",
+      "intervalle",
+      "équiprobables",
+      "milieu",
+      "nombres aléatoires"
+    ]
+  },
+  {
+    "id": "data_science-028",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifie l'indépendance entre deux événements ?",
+    "reponse_reference": "Deux événements sont indépendants si la réalisation de l'un n'apporte aucune information sur la probabilité de l'autre. Mathématiquement, la probabilité de leur intersection est le produit de leurs probabilités. Par exemple, obtenir pile au premier lancer et face au second sont des événements indépendants pour une pièce équilibrée.",
+    "mots_cles_attendus": [
+      "aucune information",
+      "produit des probabilités",
+      "intersection",
+      "l'un n'influence pas l'autre"
+    ]
+  },
+  {
+    "id": "data_science-029",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une probabilité conditionnelle ?",
+    "reponse_reference": "Une probabilité conditionnelle est la probabilité qu'un événement se produise sachant qu'un autre événement s'est déjà produit. Elle se note P(A|B) et se calcule comme le rapport entre la probabilité de l'intersection des deux événements et la probabilité de l'événement conditionnant. Elle permet de mettre à jour des croyances à mesure que de l'information arrive, ce qui est la base du théorème de Bayes.",
+    "mots_cles_attendus": [
+      "sachant que",
+      "P(A|B)",
+      "intersection",
+      "mise à jour",
+      "Bayes"
+    ]
+  },
+  {
+    "id": "data_science-030",
+    "domaine": "data_science",
+    "sous_theme": "theoremes_limites",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'énonce la loi des grands nombres ?",
+    "reponse_reference": "La loi des grands nombres énonce que la moyenne des résultats d'une expérience répétée de nombreuses fois se rapproche de l'espérance théorique quand le nombre d'essais augmente. Par exemple, la proportion de piles sur un grand nombre de lancers tend vers 0,5. Elle justifie l'utilisation de fréquences observées pour estimer des probabilités, à condition d'avoir suffisamment d'observations.",
+    "mots_cles_attendus": [
+      "moyenne",
+      "se rapproche",
+      "espérance",
+      "nombre d'essais",
+      "fréquences"
+    ]
+  },
+  {
+    "id": "data_science-031",
+    "domaine": "data_science",
+    "sous_theme": "theoremes_limites",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'énonce le théorème central limite et pourquoi est-il fondamental pour la data science ?",
+    "reponse_reference": "Le théorème central limite énonce que la somme ou la moyenne d'un grand nombre de variables aléatoires indépendantes et identiquement distribuées suit approximativement une loi normale, quelle que soit la distribution d'origine. C'est pourquoi les moyennes d'échantillons permettent de construire des intervalles de confiance et des tests d'hypothèses même sans connaître la loi exacte des données. Il fonde une grande partie de la statistique inférentielle classique.",
+    "mots_cles_attendus": [
+      "moyenne",
+      "loi normale",
+      "indépendantes",
+      "quelle que soit la distribution",
+      "inférence"
+    ]
+  },
+  {
+    "id": "data_science-032",
+    "domaine": "data_science",
+    "sous_theme": "variables_aleatoires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fonction de densité de probabilité ?",
+    "reponse_reference": "La fonction de densité décrit la loi d'une variable aléatoire continue : l'aire sous la courbe entre deux valeurs donne la probabilité que la variable tombe dans cet intervalle. L'aire totale sous la courbe vaut 1. Contrairement au cas discret, la probabilité d'une valeur exacte est nulle pour une variable continue.",
+    "mots_cles_attendus": [
+      "aire sous la courbe",
+      "intervalle",
+      "continue",
+      "totale vaut 1",
+      "valeur exacte nulle"
+    ]
+  },
+  {
+    "id": "data_science-033",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un serveur a une probabilité de panne de 0,05 chaque jour, indépendamment des jours précédents. Comment calculer la probabilité qu'il fonctionne sans panne pendant 10 jours consécutifs ?",
+    "reponse_reference": "La probabilité de ne pas tomber en panne un jour donné est 1 - 0,05 = 0,95. Comme les jours sont indépendants, la probabilité de 10 jours sans panne est le produit des probabilités : 0,95 puissance 10, soit environ 0,60. On utilise ici la règle du produit pour des événements indépendants et la probabilité complémentaire.",
+    "mots_cles_attendus": [
+      "complémentaire",
+      "0,95",
+      "produit",
+      "indépendance",
+      "puissance 10"
+    ]
+  },
+  {
+    "id": "data_science-034",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une campagne marketing est envoyée à 100 clients. La probabilité qu'un client ouvre l'email est de 0,2 et les comportements des clients sont indépendants. Quelle loi modélise le nombre d'ouvertures et quelle est son espérance ?",
+    "reponse_reference": "Le nombre d'ouvertures suit une loi binomiale de paramètres n = 100 et p = 0,2, car on compte des succès parmi des essais indépendants avec probabilité constante. L'espérance vaut n × p, soit 20 ouvertures en moyenne. La variance vaut n × p × (1 - p) = 16, ce qui permet de quantifier la variabilité attendue autour de cette moyenne.",
+    "mots_cles_attendus": [
+      "binomiale",
+      "n = 100",
+      "p = 0,2",
+      "espérance 20",
+      "indépendants"
+    ]
+  },
+  {
+    "id": "data_science-035",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un centre d'appels reçoit en moyenne 12 appels par heure, de façon aléatoire. Quelle loi utiliseriez-vous pour décrire le nombre d'appels reçus en une heure, et que vaut la probabilité de ne recevoir aucun appel ?",
+    "reponse_reference": "Le nombre d'appels par heure suit une loi de Poisson de paramètre lambda = 12, adaptée aux événements rares sur un intervalle de temps. La probabilité de ne recevoir aucun appel est e puissance -lambda, soit e puissance -12, une valeur extrêmement faible. Ce modèle permet de dimensionner l'équipe et de détecter des anomalies de trafic.",
+    "mots_cles_attendus": [
+      "Poisson",
+      "lambda = 12",
+      "e puissance -lambda",
+      "rare",
+      "dimensionner"
+    ]
+  },
+  {
+    "id": "data_science-036",
+    "domaine": "data_science",
+    "sous_theme": "lois_de_probabilite",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "La taille des hommes adultes d'une population suit une loi normale de moyenne 175 cm et d'écart-type 7 cm. Que peut-on dire de la proportion d'hommes mesurant entre 168 et 182 cm ?",
+    "reponse_reference": "L'intervalle de 168 à 182 cm correspond à la moyenne plus ou moins un écart-type, soit 175 ± 7 cm. Pour une loi normale, environ 68 % des individus se trouvent dans cet intervalle. Environ 95 % se situeraient entre 161 et 189 cm, c'est-à-dire à plus ou moins deux écarts-types de la moyenne.",
+    "mots_cles_attendus": [
+      "un écart-type",
+      "68 %",
+      "intervalle",
+      "loi normale",
+      "95 %"
+    ]
+  },
+  {
+    "id": "data_science-037",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une boutique en ligne observe que 60 % des visiteurs consultent la page d'un produit et que, parmi eux, 25 % l'ajoutent au panier. Quelle est la probabilité qu'un visiteur ajoute le produit au panier, et de quelle notion s'agit-il ?",
+    "reponse_reference": "La probabilité d'ajout au panier sachant que la page a été consultée est une probabilité conditionnelle de 0,25. La probabilité conjointe qu'un visiteur consulte la page puis ajoute le produit est 0,60 × 0,25 = 0,15, soit 15 %. C'est une application directe de la formule P(A et B) = P(A) × P(B|A).",
+    "mots_cles_attendus": [
+      "conditionnelle",
+      "0,15",
+      "produit",
+      "conjointe",
+      "15 %"
+    ]
+  },
+  {
+    "id": "data_science-038",
+    "domaine": "data_science",
+    "sous_theme": "probabilites",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une machine produit 3 % de pièces défectueuses. On prélève un lot de 50 pièces. Pourquoi la loi binomiale est-elle adaptée pour modéliser le nombre de pièces défectueuses du lot, et quelles sont ses hypothèses ?",
+    "reponse_reference": "Chaque pièce est une épreuve à deux issues (défectueuse ou non) avec une probabilité de succès p = 0,03 constante, et on suppose les pièces indépendantes entre elles. Le nombre de pièces défectueuses parmi 50 suit donc une loi binomiale de paramètres n = 50 et p = 0,03. En pratique, l'hypothèse d'indépendance peut être remise en cause si les défauts surviennent par séries à cause d'un problème machine.",
+    "mots_cles_attendus": [
+      "binomiale",
+      "deux issues",
+      "p constant",
+      "indépendance",
+      "séries de défauts"
+    ]
+  },
+  {
+    "id": "data_science-039",
+    "domaine": "data_science",
+    "sous_theme": "theoremes_limites",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application de livraison enregistre les durées de trajet de milliers de livreurs, dont la distribution est fortement asymétrique vers la droite. Pourquoi la distribution des moyennes de 50 trajets tirés au hasard est-elle approximativement normale ?",
+    "reponse_reference": "C'est une conséquence du théorème central limite : la moyenne d'un grand nombre de variables indépendantes et identiquement distribuées tend vers une loi normale, quelle que soit la distribution d'origine, même asymétrique. Avec des échantillons de 50 trajets, la distribution des moyennes devient approximativement une cloche. Cela permet d'utiliser la loi normale pour construire des intervalles de confiance sur la durée moyenne des trajets.",
+    "mots_cles_attendus": [
+      "théorème central limite",
+      "loi normale",
+      "moyennes",
+      "asymétrique",
+      "indépendantes"
+    ]
+  },
+  {
+    "id": "data_science-040",
+    "domaine": "data_science",
+    "sous_theme": "variables_aleatoires",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Pour estimer le revenu moyen des clients d'une banque, un data scientist simule 10 000 échantillons de 200 clients à partir des données historiques. Quelle notion probabiliste justifie cette approche et que lui apporte la simulation ?",
+    "reponse_reference": "La simulation s'appuie sur la loi des grands nombres et le théorème central limite : en répétant l'expérience d'échantillonnage un grand nombre de fois, la distribution des moyennes simulées se stabilise autour de la vraie moyenne. Elle permet de quantifier l'incertitude de l'estimation sans avoir à connaître analytiquement la loi de l'estimateur. Cette méthode de Monte-Carlo est très utilisée quand les calculs exacts sont trop complexes.",
+    "mots_cles_attendus": [
+      "loi des grands nombres",
+      "simulation",
+      "Monte-Carlo",
+      "incertitude",
+      "distribution des moyennes"
+    ]
+  }
+]

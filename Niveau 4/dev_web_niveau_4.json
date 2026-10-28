@@ -1,0 +1,302 @@
+[
+  {
+    "id": "web-037",
+    "domaine": "dev_web",
+    "sous_theme": "fiabilite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur a une mauvaise connexion et clique plusieurs fois sur « Payer ». Quand la connexion revient, le serveur traite toutes les requêtes et le débite plusieurs fois. Quel est le problème et quelles solutions proposer ?",
+    "reponse_reference": "Le problème est le manque d'idempotence : la même action est exécutée plusieurs fois. Solutions : envoyer une clé d'idempotence unique avec la requête et la vérifier côté serveur, désactiver le bouton après le premier clic, et rendre l'opération idempotente côté serveur.",
+    "mots_cles_attendus": [
+      "idempotence",
+      "clé unique",
+      "doublon",
+      "désactiver le bouton"
+    ]
+  },
+  {
+    "id": "web-038",
+    "domaine": "dev_web",
+    "sous_theme": "performance",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une page web se charge très lentement. Quelles pistes d'investigation proposez-vous ?",
+    "reponse_reference": "Analyser avec les outils du navigateur : images trop lourdes (compresser, formats modernes), JavaScript et CSS volumineux (minifier, charger à la demande), nombre de requêtes, absence de cache ou de CDN, requêtes serveur ou base de données lentes.",
+    "mots_cles_attendus": [
+      "images",
+      "JavaScript volumineux",
+      "cache",
+      "requêtes lentes"
+    ]
+  },
+  {
+    "id": "web-039",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un appel API depuis un site web est bloqué par le navigateur avec une erreur CORS, alors que la même requête fonctionne dans Postman. Pourquoi ?",
+    "reponse_reference": "Le CORS est une règle appliquée uniquement par les navigateurs. Postman n'est pas un navigateur et ne l'applique pas. Il faut configurer le serveur pour qu'il renvoie les en-têtes CORS autorisant l'origine du site.",
+    "mots_cles_attendus": [
+      "CORS",
+      "navigateur",
+      "en-têtes",
+      "origine autorisée"
+    ]
+  },
+  {
+    "id": "web-040",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur change dans l'URL /commande/123 en /commande/124 et voit la commande d'un autre client. Quelle est la faille et comment la corriger ?",
+    "reponse_reference": "C'est une référence directe non sécurisée à un objet (IDOR), un contrôle d'accès défaillant. Le serveur doit vérifier à chaque requête que la ressource appartient bien à l'utilisateur connecté, et on peut aussi utiliser des identifiants non devinables.",
+    "mots_cles_attendus": [
+      "IDOR",
+      "contrôle d'accès",
+      "vérifier le propriétaire",
+      "côté serveur"
+    ]
+  },
+  {
+    "id": "web-041",
+    "domaine": "dev_web",
+    "sous_theme": "deploiement",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Après un déploiement, certains utilisateurs voient encore l'ancienne version du site. Quelle est la cause probable et que faire ?",
+    "reponse_reference": "Les anciens fichiers sont conservés dans le cache du navigateur ou d'un CDN. On règle cela avec des noms de fichiers versionnés ou hachés (cache busting), des en-têtes Cache-Control adaptés et en purgeant le cache du CDN.",
+    "mots_cles_attendus": [
+      "cache",
+      "CDN",
+      "cache busting",
+      "versionnés"
+    ]
+  },
+  {
+    "id": "web-042",
+    "domaine": "dev_web",
+    "sous_theme": "base_de_donnees",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application ralentit beaucoup quand le nombre d'utilisateurs augmente, à cause d'une requête qui filtre sur une colonne non indexée. Que faire ?",
+    "reponse_reference": "Créer un index sur la colonne filtrée pour éviter le parcours complet de la table, vérifier le plan d'exécution de la requête, et éviter de charger plus de données que nécessaire. On surveille l'impact sur les écritures.",
+    "mots_cles_attendus": [
+      "index",
+      "colonne",
+      "plan d'exécution",
+      "parcours complet"
+    ]
+  },
+  {
+    "id": "web-043",
+    "domaine": "dev_web",
+    "sous_theme": "fiabilite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux utilisateurs modifient la même fiche en même temps et le dernier enregistrement écrase le travail du premier. Quel est le problème et comment l'éviter ?",
+    "reponse_reference": "C'est un problème d'accès concurrent (mises à jour perdues). On peut utiliser le verrouillage optimiste (numéro de version vérifié à l'enregistrement, avec erreur en cas de conflit) ou le verrouillage pessimiste, en prévenant l'utilisateur du conflit.",
+    "mots_cles_attendus": [
+      "accès concurrent",
+      "verrouillage optimiste",
+      "version",
+      "conflit"
+    ]
+  },
+  {
+    "id": "web-044",
+    "domaine": "dev_web",
+    "sous_theme": "api",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre les méthodes HTTP PUT et PATCH ?",
+    "reponse_reference": "PUT remplace entièrement une ressource par les données envoyées. PATCH ne modifie que les champs envoyés. PUT est idempotent par conception ; PATCH dépend de l'implémentation.",
+    "mots_cles_attendus": [
+      "remplace entièrement",
+      "modification partielle",
+      "idempotent",
+      "ressource"
+    ]
+  },
+  {
+    "id": "web-045",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un middleware dans une application backend ?",
+    "reponse_reference": "C'est une fonction qui s'exécute entre la réception de la requête et le traitement final : authentification, journalisation, validation, gestion des erreurs. Les middlewares s'enchaînent et évitent de dupliquer ce code.",
+    "mots_cles_attendus": [
+      "entre la requête et la réponse",
+      "authentification",
+      "journalisation",
+      "enchaîne"
+    ]
+  },
+  {
+    "id": "web-046",
+    "domaine": "dev_web",
+    "sous_theme": "performance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le lazy loading et pourquoi l'utiliser ?",
+    "reponse_reference": "Le chargement différé consiste à ne charger une ressource (image, composant, module) que lorsqu'elle devient nécessaire, par exemple quand elle apparaît à l'écran. Il accélère le premier affichage et économise de la bande passante.",
+    "mots_cles_attendus": [
+      "chargement différé",
+      "quand nécessaire",
+      "premier affichage",
+      "bande passante"
+    ]
+  },
+  {
+    "id": "web-047",
+    "domaine": "dev_web",
+    "sous_theme": "base_de_donnees",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ORM et quels sont ses avantages et limites ?",
+    "reponse_reference": "Un ORM fait correspondre les tables d'une base relationnelle à des objets du langage, ce qui permet de manipuler les données sans écrire du SQL à la main. Il accélère le développement, mais peut générer des requêtes peu efficaces, ce qui demande de rester attentif aux performances.",
+    "mots_cles_attendus": [
+      "objets",
+      "tables",
+      "SQL",
+      "performances"
+    ]
+  },
+  {
+    "id": "web-048",
+    "domaine": "dev_web",
+    "sous_theme": "base_de_donnees",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une migration de base de données ?",
+    "reponse_reference": "C'est un script versionné qui fait évoluer le schéma de la base (ajouter une table, une colonne) de façon reproductible. Il permet à toute l'équipe et tous les environnements de rester synchronisés et de revenir en arrière si besoin.",
+    "mots_cles_attendus": [
+      "schéma",
+      "script versionné",
+      "reproductible",
+      "environnements"
+    ]
+  },
+  {
+    "id": "web-085",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le formulaire d'inscription d'un site accepte des e-mails invalides, des champs vides et des textes de plusieurs mégaoctets. Comment le corriger ?",
+    "reponse_reference": "Mettre en place une validation côté client pour l'expérience utilisateur, et surtout une validation côté serveur, indispensable car le client peut être contourné. Vérifier le format, les champs obligatoires et les longueurs maximales avec une bibliothèque de validation.",
+    "mots_cles_attendus": [
+      "validation côté client",
+      "validation côté serveur",
+      "contourné",
+      "longueur maximale"
+    ]
+  },
+  {
+    "id": "web-086",
+    "domaine": "dev_web",
+    "sous_theme": "frontend",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un site s'affiche correctement sur Chrome mais mal sur Safari. Quelles pistes suivre ?",
+    "reponse_reference": "Vérifier la compatibilité des fonctionnalités CSS et JavaScript utilisées (caniuse), tester sur Safari et lire sa console, ajouter les préfixes ou polyfills nécessaires, et éviter les fonctionnalités trop récentes sans alternative.",
+    "mots_cles_attendus": [
+      "compatibilité",
+      "console",
+      "polyfill",
+      "tester sur Safari"
+    ]
+  },
+  {
+    "id": "web-087",
+    "domaine": "dev_web",
+    "sous_theme": "javascript",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application plante de temps en temps avec l'erreur « Cannot read properties of undefined ». Quelles causes et comment prévenir ?",
+    "reponse_reference": "Le code accède à une propriété d'une valeur absente, souvent des données pas encore chargées ou une réponse d'API incomplète. On prévient avec des vérifications, l'opérateur de chaînage optionnel (?.), des valeurs par défaut et la validation des données reçues.",
+    "mots_cles_attendus": [
+      "valeur undefined",
+      "données pas chargées",
+      "chaînage optionnel",
+      "validation"
+    ]
+  },
+  {
+    "id": "web-088",
+    "domaine": "dev_web",
+    "sous_theme": "performance",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une galerie de photos rend un site très lent sur mobile. Quelles solutions appliquer ?",
+    "reponse_reference": "Compresser et redimensionner les images, utiliser des formats modernes (WebP, AVIF), charger les images à la demande (lazy loading), servir des tailles adaptées (srcset) et utiliser un CDN.",
+    "mots_cles_attendus": [
+      "compresser",
+      "WebP",
+      "lazy loading",
+      "CDN"
+    ]
+  },
+  {
+    "id": "web-089",
+    "domaine": "dev_web",
+    "sous_theme": "javascript",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre debounce et throttle ?",
+    "reponse_reference": "Le debounce attend qu'une série d'événements s'arrête avant d'exécuter la fonction (utile pour une recherche pendant la frappe). Le throttle limite l'exécution à une fois par intervalle de temps (utile pour le scroll).",
+    "mots_cles_attendus": [
+      "attend",
+      "une fois par intervalle",
+      "recherche",
+      "scroll"
+    ]
+  },
+  {
+    "id": "web-090",
+    "domaine": "dev_web",
+    "sous_theme": "frontend",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que sont les variables CSS (custom properties) et à quoi servent-elles ?",
+    "reponse_reference": "Ce sont des valeurs réutilisables déclarées avec --nom et lues avec var(--nom). Elles centralisent couleurs, espacements et polices, et permettent de changer facilement de thème (clair, sombre) en un seul endroit.",
+    "mots_cles_attendus": [
+      "réutilisables",
+      "var()",
+      "thème",
+      "centraliser"
+    ]
+  },
+  {
+    "id": "web-091",
+    "domaine": "dev_web",
+    "sous_theme": "javascript",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel est l'intérêt de TypeScript par rapport à JavaScript ?",
+    "reponse_reference": "TypeScript ajoute un typage statique vérifié avant l'exécution : il détecte beaucoup d'erreurs à l'écriture, améliore l'autocomplétion et rend le code plus lisible et sûr, surtout dans les gros projets.",
+    "mots_cles_attendus": [
+      "typage statique",
+      "erreurs détectées",
+      "autocomplétion",
+      "gros projets"
+    ]
+  },
+  {
+    "id": "web-092",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une application monopage (SPA) et quels sont ses avantages et inconvénients ?",
+    "reponse_reference": "Une SPA charge une seule page puis met à jour l'affichage avec JavaScript. Avantages : navigation fluide et expérience proche d'une application. Inconvénients : chargement initial plus lourd et référencement plus délicat sans rendu côté serveur.",
+    "mots_cles_attendus": [
+      "une seule page",
+      "fluide",
+      "chargement initial",
+      "SEO"
+    ]
+  }
+]

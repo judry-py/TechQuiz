@@ -1,0 +1,202 @@
+[
+  {
+    "id": "systemes_embarques-161",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le secure boot et comment établit-il une chaîne de confiance ?",
+    "reponse_reference": "Le secure boot vérifie cryptographiquement chaque maillon logiciel avant de l'exécuter, en partant d'une racine de confiance immuable, typiquement le code ROM du fabricant ou une clé en matériel. Le premier chargeur vérifie la signature du bootloader, qui vérifie à son tour celle du firmware applicatif, chaque maillon ne s'exécutant que si la vérification réussit. Cette chaîne empêche l'exécution d'un code modifié ou injecté, à condition que la racine et les clés ne puissent jamais être altérées.",
+    "mots_cles_attendus": ["secure boot", "racine de confiance", "signature", "chaîne", "vérification"]
+  },
+  {
+    "id": "systemes_embarques-162",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment une mise à jour OTA sécurisée se déroule-t-elle de bout en bout ?",
+    "reponse_reference": "Le firmware signé est téléchargé par morceaux via une liaison authentifiée, puis l'intégrité de chaque morceau et la signature globale sont vérifiées avant tout basculement. L'image est écrite dans une banque inactive, validée, puis le bootloader bascule vers elle après une dernière vérification, avec retour automatique à l'ancienne version en cas d'échec au démarrage. L'ensemble protège contre la corruption réseau, les images falsifiées et les mises à jour interrompues.",
+    "mots_cles_attendus": ["ota", "signature", "banque inactive", "basculement", "retour arrière"]
+  },
+  {
+    "id": "systemes_embarques-163",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un secure element et pourquoi stocker les clés hors du microcontrôleur principal ?",
+    "reponse_reference": "Un secure element est un circuit dédié, comme les puces ATECC608, qui génère et conserve des clés privées dans une mémoire protégée et exécute des opérations cryptographiques sans jamais exposer la clé. Même un attaquant ayant compromis le microcontrôleur principal ne peut pas extraire la clé, qui ne sort jamais de la puce. Il résiste aux attaques physiques, glitchs, sondes et analyse de canaux auxiliaires, bien mieux qu'une clé stockée dans la Flash du processeur.",
+    "mots_cles_attendus": ["secure element", "clé privée", "atecc608", "extraction", "attaque physique"]
+  },
+  {
+    "id": "systemes_embarques-164",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment fonctionne la signature numérique ECDSA et pourquoi est-elle adaptée à l'embarqué ?",
+    "reponse_reference": "ECDSA utilise la cryptographie sur courbes elliptiques : le signataire possède une clé privée et publie la clé publique correspondante, et la signature prouve la possession de la clé privée sans la révéler. La vérification ne requiert que la clé publique et reste rapide, tandis que les courbes comme P-256 offrent une sécurité élevée avec des clés de seulement 256 bits. La taille réduite des clés et des signatures économise mémoire et bande passante, deux ressources rares en embarqué.",
+    "mots_cles_attendus": ["ecdsa", "courbe elliptique", "p-256", "clé publique", "signature"]
+  },
+  {
+    "id": "systemes_embarques-165",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment la MPU d'un Cortex-M protège-t-elle un RTOS contre les fautes d'une tâche ?",
+    "reponse_reference": "La MPU (Memory Protection Unit) définit des régions mémoire avec des droits d'accès par contexte : une tâche n'accède qu'à sa pile et à ses buffers, et toute violation hors région déclenche une faute mémoire immédiate. Le noyau et les données des autres tâches deviennent inaccessibles, ce qui transforme un écrasement sauvage en erreur détectable au lieu d'une corruption silencieuse. La commutation de contexte reprogramme les régions, ce qui isole aussi les tâches de criticité différente sur un même cœur.",
+    "mots_cles_attendus": ["mpu", "région", "droits d'accès", "faute mémoire", "isolation"]
+  },
+  {
+    "id": "systemes_embarques-166",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelle différence entre un système temps réel dur et un système temps réel mou ?",
+    "reponse_reference": "Dans un système temps réel dur, tout dépassement d'échéance constitue une défaillance fonctionnelle, potentiellement dangereuse, comme l'airbag qui doit se déclencher en quelques millisecondes. Dans un système temps réel mou, un dépassement occasionnel dégrade la qualité de service, vidéo ou interface, sans conséquence critique, et une valeur moyenne ou statistique suffit. La distinction change radicalement la conception, la validation et la preuve d'ordonnançabilité exigées.",
+    "mots_cles_attendus": ["temps réel dur", "temps réel mou", "échéance", "défaillance", "déterminisme"]
+  },
+  {
+    "id": "systemes_embarques-167",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ordonnancement Rate Monotonic et quel est son test de faisabilité classique ?",
+    "reponse_reference": "Le Rate Monotonic (RM) attribue les priorités aux tâches périodiques dans l'ordre inverse de leur période, la tâche la plus courte étant la plus prioritaire, sans dépendre de l'échéance relative. Pour des tâches indépendantes à échéance égale à la période, l'ensemble est ordonnançable si la somme des utilisations reste sous la borne de Liu et Layland, environ 69 % pour un grand nombre de tâches. Cette condition est suffisante mais pas nécessaire : des ensembles au-delà de la borne peuvent rester ordonnançables.",
+    "mots_cles_attendus": ["rate monotonic", "période", "utilisation", "liu et layland", "ordonnançabilité"]
+  },
+  {
+    "id": "systemes_embarques-168",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelles nouveautés MQTT 5 apporte-t-il par rapport à MQTT 3.1.1 ?",
+    "reponse_reference": "MQTT 5 ajoute des propriétés aux messages : expiration de session ou de message, sujet de réponse, type de contenu et corrélation, qui enrichissent les échanges sans nouveaux topics. Il introduit des codes de raison précis pour les acquittements, la gestion de la charge du broker par flow control, et des sessions qui peuvent expirer ou être reprises finement. Ces mécanismes simplifient les architectures requête-réponse et les déploiements à grande échelle.",
+    "mots_cles_attendus": ["mqtt 5", "propriétés", "session expiry", "codes de raison", "flow control"]
+  },
+  {
+    "id": "systemes_embarques-169",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "À quoi servent l'observation (observe) et les transferts par blocs (block-wise) dans CoAP ?",
+    "reponse_reference": "L'option observe transforme une requête GET en abonnement : le serveur notifie le client à chaque changement de la ressource, sans que le client ne réinterroge, ce qui économise énormément de trafic sur les réseaux contraints. Le mode block-wise découpe les ressources volumineuses en blocs numérotés transférés successivement, chaque bloc étant acquitté, pour contourner les limites de taille d'UDP et permettre la reprise après perte. Ces deux mécanismes rendent CoAP utilisable pour la télémétrie et les mises à jour de firmware.",
+    "mots_cles_attendus": ["coap", "observe", "block-wise", "notification", "reprise"]
+  },
+  {
+    "id": "systemes_embarques-170",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment le chiffrement symétrique et le chiffrement asymétrique se répartissent-ils les rôles en IoT ?",
+    "reponse_reference": "Le chiffrement symétrique, comme AES-GCM, est rapide et léger, et chiffre les données de session une fois la clé partagée établie. Le chiffrement asymétrique, ECDH ou ECDSA, coûteux en calcul, ne sert que ponctuellement : échanger la clé de session et vérifier signatures et certificats. Cette combinaison donne la sécurité d'une clé publique sans en payer le coût sur chaque message, et c'est exactement l'architecture d'une session TLS.",
+    "mots_cles_attendus": ["symétrique", "asymétrique", "aes", "échange de clés", "session"]
+  },
+  {
+    "id": "systemes_embarques-171",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque par canal auxiliaire et comment menace-t-elle un système embarqué ?",
+    "reponse_reference": "Une attaque par canal auxiliaire exploite les fuites physiques d'un calcul, consommation de courant, rayonnement électromagnétique ou temps d'exécution, plutôt qu'une faiblesse mathématique de l'algorithme. L'analyse différentielle de puissance (DPA) corrèle des milliers de traces de consommation avec les données traitées pour reconstituer progressivement une clé secrète. Les contre-mesures consistent à régulariser la consommation, masquer les données internes et insérer des opérations aléatoires ou de durée constante.",
+    "mots_cles_attendus": ["canal auxiliaire", "dpa", "consommation", "clé", "contre-mesure"]
+  },
+  {
+    "id": "systemes_embarques-172",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une mise à jour différentielle (delta) de firmware et quand la préférer à une image complète ?",
+    "reponse_reference": "La mise à jour delta ne transmet que les différences binaires entre la version installée et la nouvelle version, reconstruite sur le dispositif à l'aide d'un algorithme de patch. Elle réduit drastiquement le volume transféré, donc le coût cellulaire et la fenêtre d'exposition, ce qui la rend précieuse pour les flottes contraintes en bande passante. Elle exige en revanche de garantir l'intégrité et la signature de la version reconstruite avant basculement, ainsi qu'une base de versions précise côté serveur.",
+    "mots_cles_attendus": ["delta", "patch", "bande passante", "reconstruction", "signature"]
+  },
+  {
+    "id": "systemes_embarques-173",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Comment concevoir un mécanisme OTA avec retour arrière automatique si la nouvelle version ne démarre pas ?",
+    "reponse_reference": "On utilise deux banques et un compteur de tentatives : le bootloader bascule vers la nouvelle banque après vérification de signature, et l'application ne confirme son bon fonctionnement qu'une fois démarrée et stable. Si le démarrage échoue ou si le watchdog expire avant la confirmation, le bootloader incrémente un compteur d'échecs et revient à la banque précédente. Après plusieurs échecs, l'appareil reste sur la version connue et signale l'anomalie à la plateforme.",
+    "mots_cles_attendus": ["double banque", "confirmation", "watchdog", "compteur d'échecs", "retour arrière"]
+  },
+  {
+    "id": "systemes_embarques-174",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Comment organiser le provisionnement des certificats et clés d'une flotte d'objets en usine ?",
+    "reponse_reference": "Chaque objet reçoit en fabrication une identité unique et une paire de clés générée idéalement dans un secure element, dont la clé privée ne quitte jamais la puce, puis le certificat est signé par une autorité interne. Le provisionnement peut se faire en usine avec des équipements sécurisés ou à la première connexion via un mécanisme d'onboarding authentifié. La traçabilité du lot, la révocation et la rotation des certificats doivent être prévues dès la conception, car rattraper une fuite de clés après déploiement est coûteux.",
+    "mots_cles_attendus": ["provisionnement", "usine", "identité", "autorité interne", "rotation"]
+  },
+  {
+    "id": "systemes_embarques-175",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Trois tâches périodiques de 5 ms, 10 ms et 20 ms consomment respectivement 1 ms, 2 ms et 5 ms de CPU. Le système est-il ordonnançable en Rate Monotonic ?",
+    "reponse_reference": "Les utilisations valent 0,2, 0,2 et 0,25, soit une somme de 0,65, sous la borne de Liu et Layland pour trois tâches qui vaut environ 0,78, donc l'ensemble est ordonnançable. Il faut néanmoins vérifier les pires temps d'exécution réels, mesurés et non estimés, ainsi que les blocages éventuels sur ressources partagées. Les préemptions et les temps de commutation de contexte s'ajoutent au budget CPU et doivent être intégrés au calcul.",
+    "mots_cles_attendus": ["utilisation", "borne", "rate monotonic", "pire cas", "préemption"]
+  },
+  {
+    "id": "systemes_embarques-176",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un attaquant perturbe l'alimentation d'un dispositif pendant une vérification de signature pour la faire passer. Comment s'en prémunir ?",
+    "reponse_reference": "C'est une attaque par injection de faute : en provoquant un glitch de tension ou d'horloge, l'attaquant espère sauter une instruction de branchement et exécuter du code non vérifié. Les contre-mesures combinent détection matérielle des anomalies d'alimentation et d'horloge, redondance des vérifications critiques et conception du code de sécurité sans branchement unique contournable. Le durcissement du silicium, comme les capteurs de glitch intégrés, apporte la défense la plus solide face à ce type d'attaque.",
+    "mots_cles_attendus": ["injection de faute", "glitch", "vérification", "redondance", "détection"]
+  },
+  {
+    "id": "systemes_embarques-177",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un enregistreur de température doit échantillonner toutes les minutes pendant deux ans sur une pile bouton. Comment dimensionner le budget énergétique ?",
+    "reponse_reference": "On commence par le bilan : énergie d'une phase active, mesure plus éventuelle écriture non volatile, multipliée par le nombre de cycles sur deux ans, plus le courant de veille intégré sur toute la durée. Chaque bloc est chiffré à partir des fiches techniques et vérifié par mesure, en incluant les pertes des régulateurs et l'autodécharge de la pile. Le résultat se compare à la capacité utile de la pile en tenant compte de sa courbe de décharge et des températures extrêmes, avec une marge de sécurité de l'ordre de 20 à 30 %.",
+    "mots_cles_attendus": ["bilan énergétique", "capacité", "autodécharge", "marge", "mesure"]
+  },
+  {
+    "id": "systemes_embarques-178",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un capteur déployé sur site communique avec un serveur distant. Comment garantir confidentialité et authenticité de bout en bout malgré des intermédiaires non maîtrisés ?",
+    "reponse_reference": "La liaison transport est protégée par TLS avec authentification du serveur par certificat, et idéalement authentification mutuelle avec un certificat client issu du secure element. Pour les données elles-mêmes, un chiffrement applicatif de bout en bout garantit la confidentialité même si un intermédiaire, passerelle ou broker, est compromis. Les clés de session se renouvellent périodiquement et l'horloge du dispositif reste synchronisée pour valider les certificats.",
+    "mots_cles_attendus": ["tls mutuel", "certificat client", "chiffrement de bout en bout", "intermédiaire", "rotation"]
+  },
+  {
+    "id": "systemes_embarques-179",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une flotte de capteurs reçoit des mises à jour par liaison cellulaire coûteuse. Comment choisir entre image complète et mise à jour delta ?",
+    "reponse_reference": "Il faut comparer le coût de transmission du delta, souvent dix fois plus petit, avec la complexité et les risques de la reconstruction locale, qui exige de connaître précisément la version installée sur chaque appareil. Les flottes homogènes avec des versions bien suivies bénéficient pleinement du delta, tandis que les parcs hétérogènes ou aux versions inconnues imposent parfois l'image complète. Un mécanisme hybride, delta par défaut avec repli sur image complète en cas d'échec de reconstruction, couvre les deux situations.",
+    "mots_cles_attendus": ["delta", "image complète", "coût", "version installée", "repli"]
+  },
+  {
+    "id": "systemes_embarques-180",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Sous forte charge, une file de messages RTOS se remplit et des événements sont perdus. Quelles stratégies de conception éviter la perte ?",
+    "reponse_reference": "Il faut d'abord dimensionner la file sur la rafale maximale d'événements et le temps de traitement du consommateur, puis définir un comportement explicite au débordement : blocage du producteur avec timeout, agrégation des événements en compteurs, ou file de débordement de priorité moindre. L'analyse des priorités vérifie que le consommateur obtient bien le CPU avant saturation, et une supervision signale les approches de saturation. Perdre silencieusement des événements est la pire option pour un système temps réel.",
+    "mots_cles_attendus": ["saturation", "dimensionnement", "débordement", "agrégation", "supervision"]
+  }
+]

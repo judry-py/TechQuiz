@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-021",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une user story dans une méthode agile ?",
+    "reponse_reference": "Une user story est une description courte du besoin d'un utilisateur sous la forme : en tant que [rôle], je veux [action] afin de [bénéfice]. Elle sert d'unité de travail et de support de discussion ; elle n'est une spécification complète qu'associée à des critères d'acceptation.",
+    "mots_cles_attendus": ["utilisateur", "bénéfice", "discussion", "critères"]
+  },
+  {
+    "id": "genie_logiciel-022",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un critère d'acceptation ?",
+    "reponse_reference": "Un critère d'acceptation est une condition vérifiable qui définit ce qui doit être vrai pour qu'un besoin soit considéré comme satisfait. Il est formulé de façon objective et testable, ce qui permet d'automatiser la recette et d'éviter les interprétations subjectives.",
+    "mots_cles_attendus": ["condition", "vérifiable", "besoin", "test"]
+  },
+  {
+    "id": "genie_logiciel-023",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "DeuxCDM du projet revendiquent chacun leur priorité sur le même développement. Comment arbitrez-vous la priorisation ?",
+    "reponse_reference": "On applique une méthode de priorisation explicite et partagée, par exemple la méthode MoSCoW (must have, should have, could have, won't have) ou la méthode de points de poker. L'arbitrage se fait sur la valeur métier et le risque, puis la décision et son raisonnement sont tracés pour éviter les débats ultérieurs.",
+    "mots_cles_attendus": ["priorisation", "moscow", "valeur", "arbitrage", "traçabilité"]
+  },
+  {
+    "id": "genie_logiciel-024",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le modèle en V dans le cycle de vie du logiciel ?",
+    "reponse_reference": "Le modèle en V organise le développement en phases descendantes (spécifications, conception, implémentation) puis en phases ascendantes de validation qui leur correspondent (tests unitaires, tests d'intégration, recette). Chaque phase de développement possède ainsi une phase de vérification dédiée, ce qui donne une grande rigueur documentaire.",
+    "mots_cles_attendus": ["spécification", "conception", "tests", "traçabilité"]
+  },
+  {
+    "id": "genie_logiciel-025",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un cycle de vie séquentiel et un cycle de vie itératif ?",
+    "reponse_reference": "Un cycle séquentiel (en cascade, en V) livre une seule version à la fin d'un enchaînement de phases, chaque phase étant validée avant la suivante. Un cycle itératif advance par incréments successifs, livrant régulièrement une version utilisable et intégrant le retour de l'utilisateur entre chaque itération.",
+    "mots_cles_attendus": ["séquentiel", "itératif", "incrément", "retour utilisateur"]
+  },
+  {
+    "id": "genie_logiciel-026",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un clientèle du secteur public exige une traçabilité formelle des exigences, tandis qu'une équipe startup veut des livraisons toutes les deux semaines. Que proposez-vous ?",
+    "reponse_reference": "On peut adopter un cycle itératif (type scrum) tout en conservant une traçabilité formelle : chaque exigence est tracée dans un outil de gestion, chaque user story est reliée à des tests de recette et chaque livrable est documenté. On obtient ainsi la réactivité de l'itératif sans perdre la rigueur exigée par le contrat.",
+    "mots_cles_attendus": ["itératif", "traçabilité", "exigences", "recette", "compromis"]
+  },
+  {
+    "id": "genie_logiciel-027",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un merge et un rebase en Git ?",
+    "reponse_reference": "Le merge crée un commit de fusion qui réunit deux lignées et conserve l'historique tel quel. Le rebase rejoue les commits de la branche courante au sommet de la branche cible, produisant un historique linéaire mais réécrivant les identifiants de commits, ce qui impose de ne jamais rebaser une branche déjà publiée.",
+    "mots_cles_attendus": ["merge", "rebase", "historique linéaire", "réécriture"]
+  },
+  {
+    "id": "genie_logiciel-028",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le trunk based development par rapport à un workflow de type Gitflow ?",
+    "reponse_reference": "Le trunk based development consiste à intégrer fréquemment de petites modifications dans une branche principale unique, avec des branches très courtes. Gitflow, à l'inverse, impose des branches de longue durée (développement, release, hotfix) ; il est adapté aux versions publiées mais allonge le délai de mise en production.",
+    "mots_cles_attendus": ["trunk", "branches courtes", "intégration", "gitflow", "publication"]
+  },
+  {
+    "id": "genie_logiciel-029",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Deux développeurs modifient la même fonction et fusionnent en même temps, ce qui génère un conflit insoluble automatiquement. Comment procédez-vous ?",
+    "reponse_reference": "Il faut d'abord comprendre l'intention des deux modifications avant de résoudre, et non choisir arbitrairement un des deux codes. On peut utiliser la commande de comparaison de versions de Git pour examiner les différences, reconstruire une version correcte à la main, puis faire relire le résultat et le couvrir par un test de non-régression.",
+    "mots_cles_attendus": ["conflit", "comparaison", "intention", "test de non-régression", "revue"]
+  },
+  {
+    "id": "genie_logiciel-030",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un commit atomique et pourquoi cette règle est-elle importante ?",
+    "reponse_reference": "Un commit atomique contient une seule modification logique cohérente, qui peut être annulée ou reprise en un seul geste. Cette granularité facilite la revue, la sélection de commits (cherry-pick) et le retour arrière, et évite des commits impossibles à isoler lors d'un diagnostic.",
+    "mots_cles_attendus": ["atomicité", "granularité", "revue", "retour arrière"]
+  },
+  {
+    "id": "genie_logiciel-031",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un code smell ou « odeur de code » ?",
+    "reponse_reference": "Un code smell est un indice symptomatique d'un problème de conception qui ne provoque pas encore d'erreur mais rend le code fragile ou difficile à faire évoluer. Les duplications, les fonctions trop longues ou les dépendances excessives entre modules en sont des exemples classiques.",
+    "mots_cles_attendus": ["symptôme", "conception", "duplication", "fragilité"]
+  },
+  {
+    "id": "genie_logiciel-032",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi le nommage des variables, méthodes et classes est-il un enjeu de qualité majeur ?",
+    "reponse_reference": "Le nommage est le principal vecteur d'explication du code : un nom explicite évite de relire l'implémentation pour comprendre l'intention. Des conventions cohérentes (camel case, verbes pour les méthodes, noms au singulier pour les classes) rendent le code autodocumenté et facilitent la revue entre pairs.",
+    "mots_cles_attendus": ["intention", "convention", "autodocumentation", "revue"]
+  },
+  {
+    "id": "genie_logiciel-033",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Deux développeurs formattent différemment le même fichier et fusionnent des modifications qui touchent à tout le code. Que mettre en place ?",
+    "reponse_reference": "Il faut imposer un formateur de code unique (prettier, clang-format, gofmt) configuré dans le dépôt, exécuté automatiquement avant chaque commit ou via un hook. La couverture de tests et le linter doivent également tourner en intégration continue pour bloquer les régressions de style et de qualité dès la fusion.",
+    "mots_cles_attendus": ["formateur", "configuration", "intégration continue", "conflit", "style"]
+  },
+  {
+    "id": "genie_logiciel-034",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'indique la complexité cyclomatique d'une fonction ?",
+    "reponse_reference": "La complexité cyclomatique compte le nombre de chemins d'exécution possibles induits par les structures de contrôle (conditions, boucles, cas). Une valeur élevée signale une fonction difficile à tester exhaustivement et candidate naturelle au découpage en sous-fonctions.",
+    "mots_cles_attendus": ["chemins d'exécution", "conditions", "testabilité", "découpage"]
+  },
+  {
+    "id": "genie_logiciel-035",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un changelog et à quoi sert-il dans un projet logiciel ?",
+    "reponse_reference": "Le changelog est un document chronologique qui retrace les changements notables entre les versions : nouvelles fonctionnalités, corrections, ruptures de compatibilité. Il aide les utilisateurs à comprendre l'impact d'une mise à jour et sert de référence pour le support et la qualification.",
+    "mots_cles_attendus": ["chronologie", "versions", "rupture", "support"]
+  },
+  {
+    "id": "genie_logiciel-036",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifie l'approche « documentation as code » ?",
+    "reponse_reference": "Cette approche consiste à écrire la documentation dans des fichiers texte versionnés dans le dépôt, souvent générés par un moteur de site statique. La documentation suit alors le cycle de vie du code, est revue comme lui et se déploie automatiquement avec le projet.",
+    "mots_cles_attendus": ["versionnement", "moteur", "revue", "déploiement"]
+  },
+  {
+    "id": "genie_logiciel-037",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "L'équipe trouve un wiki interne de 200 pages dont personne ne se fie plus. Que proposez-vous pour corriger cela ?",
+    "reponse_reference": "Il faut opérer un recentrage : on identifie les pages réellement consultées, on supprime le reste et on migre les contenus utiles vers des fichiers versionnés à côté du code. On met en place une règle de propriété par page et une revue biannuelle, avec un indicateur de fraîcheur de la documentation.",
+    "mots_cles_attendus": ["audit", "nettoyage", "migration", "versionnement", "indicateur"]
+  },
+  {
+    "id": "genie_logiciel-038",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un jalon dans la planification d'un projet logiciel ?",
+    "reponse_reference": "Un jalon est un point de repère daté de la planification marquant une étape significative du projet, à laquelle sont associés des livrables vérifiables. Il sert à mesurer l'avancement, à synchroniser les équipes et à cadrer les revues de démonstration avec le client.",
+    "mots_cles_attendus": ["repère", "livrable", "avancement", "démonstration"]
+  },
+  {
+    "id": "genie_logiciel-039",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la traçabilité des exigences dans un projet logiciel ?",
+    "reponse_reference": "La traçabilité consiste à garder un lien explicite entre chaque exigence et les éléments du projet qui la réalisent : maquettes, modules, tests, documentation. Elle permet de vérifier la couverture du périmètre et d'évaluer l'impact d'un changement sur le projet.",
+    "mots_cles_attendus": ["lien", "exigence", "test", "couverture", "impact"]
+  },
+  {
+    "id": "genie_logiciel-040",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_des_erreurs",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre une erreur et une exception dans un programme ?",
+    "reponse_reference": "Une erreur est un problème bloquant qui empêche l'exécution de se poursuivre normalement, comme une division par zéro ou une référence nulle. Une exception est un mécanisme du langage qui signale une condition anormale et permet de la traiter de façon contrôlée via un bloc de capture.",
+    "mots_cles_attendus": ["erreur", "exception", "capture", "traitement"]
+  }
+]

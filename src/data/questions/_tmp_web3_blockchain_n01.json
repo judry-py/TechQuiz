@@ -1,0 +1,202 @@
+[
+  {
+    "id": "web3_blockchain-001",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une blockchain et à quoi sert-elle ?",
+    "reponse_reference": "Une blockchain est un registre de données découpé en blocs, répliqué sur de nombreux ordinateurs reliés entre eux. Chaque bloc est lié au précédent par un condensat cryptographique (hash), ce qui rend toute falsification immédiatement détectable. Elle sert à enregistrer des transactions de façon immuable, vérifiable et sans autorité centrale.",
+    "mots_cles_attendus": ["registre", "blocs", "hash", "répliqué", "immuable"]
+  },
+  {
+    "id": "web3_blockchain-002",
+    "domaine": "web3_blockchain",
+    "sous_theme": "registre_distribue",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un registre distribué (distributed ledger) et en quoi diffère-t-il d'une base de données classique ?",
+    "reponse_reference": "Un registre distribué est une base de données répliquée sur plusieurs nœuds indépendants qui valident leurs transactions selon un consensus plutôt que sur un serveur central. Contrairement à une base classique où un administrateur contrôle les écritures, chaque détenteur de nœud conserve une copie complète et vérifiable de l'historique.",
+    "mots_cles_attendus": ["répliqué", "nœuds", "consensus", "pas d'autorité centrale"]
+  },
+  {
+    "id": "web3_blockchain-003",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel est le rôle d'une fonction de hachage comme SHA-256 dans une blockchain ?",
+    "reponse_reference": "La fonction de hachage transforme une donnée de taille quelconque en une empreinte de longueur fixe, calculée déterministiquement et extrêmement difficile à inverser. Dans une blockchain, elle sert à condenser le contenu d'un bloc, à garantir son intégrité et à créer le lien avec le bloc précédent.",
+    "mots_cles_attendus": ["empreinte", "déterministe", "irréversible", "intégrité", "sha-256"]
+  },
+  {
+    "id": "web3_blockchain-004",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la cryptographie asymétrique et pourquoi est-elle utilisée en blockchain ?",
+    "reponse_reference": "La cryptographie asymétrique repose sur une paire de clés liées mathématiquement : une clé publique diffusable et une clé privée secrète. En blockchain, elle permet à chacun de signer ses transactions avec sa clé privée, tandis que n'importe qui peut vérifier la signature avec la clé publique correspondante.",
+    "mots_cles_attendus": ["clé publique", "clé privée", "signature", "vérification"]
+  },
+  {
+    "id": "web3_blockchain-005",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un portefeuille (wallet) en cryptomonnaie et que contient-il réellement ?",
+    "reponse_reference": "Un portefeuille est un outil logiciel ou matériel qui gère les clés privées associées à un ou plusieurs comptes. Il ne stocke généralement pas les cryptomonnaies elles-mêmes mais permet de signer des transactions et de consulter l'historique du compte sur la chaîne.",
+    "mots_cles_attendus": ["clés privées", "signer", "transactions", "compte"]
+  },
+  {
+    "id": "web3_blockchain-006",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une transaction sur une blockchain et quelles informations contient-elle ?",
+    "reponse_reference": "Une transaction est une demande d'enregistrement d'un transfert de valeur ou d'un appel à un contrat intelligent, signée cryptographiquement par l'expéditeur. Elle contient au minimum l'expéditeur, le destinataire, le montant, les frais (gas) et la signature, le tout étant diffusée dans le réseau pour être incluse dans un bloc.",
+    "mots_cles_attendus": ["transfert", "signature", "expéditeur", "destinataire", "gas"]
+  },
+  {
+    "id": "web3_blockchain-007",
+    "domaine": "web3_blockchain",
+    "sous_theme": "noeud",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un nœud (node) dans un réseau blockchain et à quoi sert-il ?",
+    "reponse_reference": "Un nœud est un programme qui participate au réseau en conservant une copie du registre, en propageant les transactions et en validant les blocs selon les règles du protocole. Les nœuds peuvent soit valider et relayer les transactions (full node), soit seulement les relayer (light node).",
+    "mots_cles_attendus": ["copie du registre", "validation", "propagation", "full node"]
+  },
+  {
+    "id": "web3_blockchain-008",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une collision de hachage et pourquoi est-ce un problème pour une blockchain ?",
+    "reponse_reference": "Une collision de hachage se produit lorsque deux données différentes produisent la même empreinte de hachage. Si cela arrivait pour le condensat d'un bloc, un attaquant pourrait substituer un contenu frauduleux sans que le lien de chaînage ne soit rompu, ce qui ruinerait la garantie d'intégrité.",
+    "mots_cles_attendus": ["collision", "même empreinte", "substitution", "intégrité"]
+  },
+  {
+    "id": "web3_blockchain-009",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un ami vous envoie 0,05 ETH sur l'adresse de votre portefeuille. La transaction n'apparaît pas immédiatement sur l'explorateur de blocs. Que se passe-t-il ?",
+    "reponse_reference": "La transaction a été diffusée dans le réseau mais n'est pas encore incluse dans un bloc : elle se trouve dans la mémoire d'attente (mempool) en attente de confirmation par les validateurs. Le délai dépend du temps de bloc, de la priorité donnée par les frais de gas et du niveau de congestion du réseau.",
+    "mots_cles_attendus": ["mempool", "en attente", "bloc", "frais de gas", "congestion"]
+  },
+  {
+    "id": "web3_blockchain-010",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une entreprise vous affirme qu'elle a déployé une blockchain parce que ses données sont sur une chaîne. Qu'est-ce qui manque généralement dans ce type de projet ?",
+    "reponse_reference": "Le plus souvent, il manque un véritable consensus décentralisé : la chaîne est en réalité un serveur unique (souvent une blockchain d'entreprise ou un réseau privé) et non un réseau répliqué. Stocker des données sur une chaîne publique ne suffit pas à créer de la décentralisation, il faut des validateurs indépendants et un mécanisme de consensus ouvert.",
+    "mots_cles_attendus": ["consensus décentralisé", "réplication", "validateurs indépendants", "chaîne privée"]
+  },
+  {
+    "id": "web3_blockchain-011",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un mécanisme de consensus dans une blockchain ?",
+    "reponse_reference": "Un mécanisme de consensus est la règle qui permet à des participants indépendants de s'accorder sur l'ordre et le contenu des blocs malgré la présence de participants malveillants ou de pannes réseau. Sans lui, chaque nœud pourrait détenir une version différente de l'historique.",
+    "mots_cles_attendus": ["accord", "ordre des blocs", "règle", "nœuds indépendants"]
+  },
+  {
+    "id": "web3_blockchain-012",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un portefeuille custodial et un portefeuille non custodial ?",
+    "reponse_reference": "Dans un portefeuille custodial (custody), un tiers détient les clés privées, par exemple une plateforme d'échange, ce qui simplifie l'usage mais crée un risque de contrepartie et de perte d'accès. Dans un portefeuille non custodial, l'utilisateur détient lui-même ses clés, ce qui supprime ce risque mais impose de sauvegarder la phrase de récupération.",
+    "mots_cles_attendus": ["custodial", "non custodial", "tiers", "phrase de récupération"]
+  },
+  {
+    "id": "web3_blockchain-013",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Vous copiez l'adresse de destination d'une transaction depuis un explorateur de blocs et l'envoyez à un tiers. Quel est le risque principal ?",
+    "reponse_reference": "Une adresse doit toujours être vérifiée caractère par caractère : une seule erreur ou une substitution par une adresse contrôlée par l'attaquant entraîne une perte irréversible des fonds. Les adresses tronquées ou mal copiées sont une cause classique de vol, car il n'existe aucun service central pour annuler une transaction.",
+    "mots_cles_attendus": ["adresse", "vérification", "perte irréversible", "fraude"]
+  },
+  {
+    "id": "web3_blockchain-014",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token (jeton) sur une blockchain ?",
+    "reponse_reference": "Un token est un actif numérique créé et géré par un contrat intelligent plutôt que par le protocole de la blockchain elle-même. Il peut représenter un droit, un actif, un point de vote ou une utilité, et ses règles d'émission et de transfert sont programmées dans le code du contrat.",
+    "mots_cles_attendus": ["contrat intelligent", "actif numérique", "émission", "droits"]
+  },
+  {
+    "id": "web3_blockchain-015",
+    "domaine": "web3_blockchain",
+    "sous_theme": "explorateur",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert un explorateur de blocs (block explorer) ?",
+    "reponse_reference": "Un explorateur de blocs est un site web qui indexe l'ensemble des transactions, des blocs, des comptes et des contrats d'une blockchain. Il permet de vérifier l'état d'une transaction, de consulter les soldes et le code d'un contrat, et de tracer le flux de fonds.",
+    "mots_cles_attendus": ["indexation", "transactions", "blocs", "comptes", "contrats"]
+  },
+  {
+    "id": "web3_blockchain-016",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un collègue vous explique que sa blockchain est décentralisée car personne ne possède le serveur qui héberge les données. Qu'est-ce qui manque dans son raisonnement ?",
+    "reponse_reference": "La décentralisation ne se résume pas à l'hébergement : elle concerne le contrôle des règles de validation. Si un seul opérateur peut réécrire l'historique ou censurer les transactions, la chaîne reste centralisée sur le plan du contrôle, même si les fichiers sont répliqués.",
+    "mots_cles_attendus": ["contrôle", "validation", "censure", "centralisé"]
+  },
+  {
+    "id": "web3_blockchain-017",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une phrase de récupération (seed phrase) et quels sont ses risques ?",
+    "reponse_reference": "Une phrase de récupération est une suite de mots, ordinairement 12 ou 24, qui encode la racine de votre portefeuille et permet de le reconstituer. Quiconque en prend connaissance peut voler tous les fonds associés, il faut donc la conserver hors ligne et ne jamais la saisir sur un site ou un service inconnu.",
+    "mots_cles_attendus": ["seed phrase", "mots", "hors ligne", "vol de fonds", "sauvegarde"]
+  },
+  {
+    "id": "web3_blockchain-018",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une blockchain publique et une blockchain privée ?",
+    "reponse_reference": "Une blockchain publique est ouverte à la lecture et à la participation : n'importe qui peut lire les transactions, exécuter des nœuds et, selon le protocole, valider des blocs. Une blockchain privée (ou permissionnée) impose une liste d'autorisés pour lire, écrire et valider, ce qui apporte de la performance mais réduit la décentralisation.",
+    "mots_cles_attendus": ["publique", "ouverte", "privée", "permissionnée", "autorisés"]
+  },
+  {
+    "id": "web3_blockchain-019",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une transaction reçoit 12 confirmations mais reste marquée « failed » sur l'explorateur. Que s'est-il passé ?",
+    "reponse_reference": "L'exécution de la transaction a été révoquée par la machine virtuelle, le plus souvent à cause d'un dépassement de gas ou d'une condition non satisfaite dans un contrat intelligent. Les confirmations indiquent seulement que le bloc qui la contient est définitif, elles ne garantissent pas la réussite de l'exécution.",
+    "mots_cles_attendus": ["échec d'exécution", "gas", "machine virtuelle", "confirmations"]
+  },
+  {
+    "id": "web3_blockchain-020",
+    "domaine": "web3_blockchain",
+    "sous_theme": "faucet",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un faucet (robinet) sur un réseau de test ?",
+    "reponse_reference": "Un faucet est un service qui distribue gratuitement de petites quantités de jeton de test aux développeurs. Il permet de s'entraîner sur un réseau de test sans argent réel, généralement en échange d'une adresse de portefeuille et d'un captcha.",
+    "mots_cles_attendus": ["jetons de test", "réseau de test", "gratuit", "développeurs"]
+  }
+]

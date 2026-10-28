@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-001",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un client vous demande de réaliser un logiciel de gestion de commandes. Par quelles phases commencez-vous avant d'écrire la première ligne de code ?",
+    "reponse_reference": "On commence par le recueil et l'expression des besoins, puis la spécification des fonctions attendues et des contraintes non fonctionnelles. Vient ensuite la conception (architecture, maquettes, modèle de données), puis le développement, les tests, le déploiement et enfin la maintenance. Un prototype ou un MVP peut être livré tôt pour valider l'hypothèse produit avant d'investir davantage.",
+    "mots_cles_attendus": ["besoins", "spécification", "conception", "tests", "déploiement"]
+  },
+  {
+    "id": "genie_logiciel-002",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une exigence fonctionnelle dans un cahier des charges ?",
+    "reponse_reference": "Une exigence fonctionnelle décrit ce que le logiciel doit faire, c'est-à-dire les services, les traitements ou les résultats attendus par l'utilisateur. Elle s'exprime en termes de comportements observables, par exemple : le système doit envoyer une confirmation par courriel après chaque commande validée.",
+    "mots_cles_attendus": ["fonctionnalité", "comportement", "utilisateur", "résultat"]
+  },
+  {
+    "id": "genie_logiciel-003",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel est le rôle d'un système de gestion de versions comme Git ?",
+    "reponse_reference": "Un système de gestion de versions conserve l'historique complet des modifications apportées aux fichiers d'un projet. Il permet de revenir à une version antérieure, de comparer les changements et de travailler à plusieurs sur le même code sans l'écraser.",
+    "mots_cles_attendus": ["historique", "modifications", "versions", "collaboration"]
+  },
+  {
+    "id": "genie_logiciel-004",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que désigne la qualité d'un code source ?",
+    "reponse_reference": "La qualité du code source désigne le degré de conformité du code à des règles de lisibilité, de simplicité et de robustesse. Un code de qualité est facile à lire, à comprendre, à tester et à faire évoluer, ce qui réduit le coût de maintenance à long terme.",
+    "mots_cles_attendus": ["lisibilité", "maintenabilité", "robustesse", "simplicité"]
+  },
+  {
+    "id": "genie_logiciel-005",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi la documentation technique est-elle considérée comme essentielle dans un projet logiciel ?",
+    "reponse_reference": "La documentation technique explique comment le logiciel est construit, installé, configuré et utilisé. Elle permet à un nouveau collaborateur d'être autonome rapidement, facilite la transmission du projet et réduit les erreurs liées à la méconnaissance de son fonctionnement.",
+    "mots_cles_attendus": ["explication", "utilisation", "maintenance", "transmission"]
+  },
+  {
+    "id": "genie_logiciel-006",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un MVP, ou produit minimum viable ?",
+    "reponse_reference": "Un MVP est la plus petite version d'un produit qui apporte une valeur réelle à un utilisateur et permet de tester une hypothèse de marché. Il ne s'agit pas d'un produit dégradé, mais d'une première livraison volontairement limitée en fonctionnalités.",
+    "mots_cles_attendus": ["prototype", "valeur", "hypothèse", "première version"]
+  },
+  {
+    "id": "genie_logiciel-007",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Comment distinguer un besoin utilisateur d'une fonctionnalité technique ?",
+    "reponse_reference": "Un besoin utilisateur décrit un problème à résoudre ou un objectif à atteindre, formulé du point de vue de l'utilisateur. Une fonctionnalité technique est la solution technique retenue pour y répondre ; elle n'a de sens que si elle est reliée à un besoin clairement identifié.",
+    "mots_cles_attendus": ["utilisateur", "problème", "objectif", "fonctionnalité"]
+  },
+  {
+    "id": "genie_logiciel-008",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un commit dans Git ?",
+    "reponse_reference": "Un commit est un point de sauvegarde versionné du projet qui enregistre les modifications apportées aux fichiers. Il possède un identifiant unique, un auteur, une date, un message explicite et pointe vers son parent, formant ainsi une chaîne historique du projet.",
+    "mots_cles_attendus": ["sauvegarde", "modifications", "identifiant", "historique"]
+  },
+  {
+    "id": "genie_logiciel-009",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une revue de code ?",
+    "reponse_reference": "Une revue de code est un examen du code source par un ou plusieurs pairs avant son intégration. Elle sert à détecter les erreurs, à vérifier le respect des conventions et à diffuser les bonnes pratiques au sein de l'équipe.",
+    "mots_cles_attendus": ["examen", "pairs", "erreurs", "conventions"]
+  },
+  {
+    "id": "genie_logiciel-010",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que contient typiquement la documentation technique d'un projet logiciel ?",
+    "reponse_reference": "Elle contient généralement une présentation du projet, une architecture, des instructions d'installation et de lancement, ainsi que les règles de contribution. On y ajoute souvent les conventions de code, les processus de déploiement et les contacts techniques.",
+    "mots_cles_attendus": ["architecture", "installation", "conventions", "déploiement"]
+  },
+  {
+    "id": "genie_logiciel-011",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un client vous dit simplement : « Je veux une application qui fonctionne bien sur mon téléphone ». Que lui répondez-vous pour démarrer correctement ?",
+    "reponse_reference": "Il faut le faire préciser par des questions ouvertes sur ses usages réels, ses contraintes de terrain et ses objectifs métier. On reformule ensuite par écrit des besoins priorisés et des critères d'acceptation mesurables, puis on propose un cadrage (périmètre, délai, budget) avant de concevoir quoi que ce soit.",
+    "mots_cles_attendus": ["questions", "besoins", "critères", "cadrage", "priorisation"]
+  },
+  {
+    "id": "genie_logiciel-012",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Votre équipe doit livrer une première version utilisable d'un site vitrine dans trois semaines. Comment organisez-vous le cycle de vie du projet ?",
+    "reponse_reference": "On cadre le périmètre minimal en trois semaines : quelques pages clés, un contenu validé et un formulaire de contact. La planification alterne conception rapide, développement, recette utilisateur courte et corrections ; la mise en production est planifiée dès le début pour éviter les surprises d'infrastructure.",
+    "mots_cles_attendus": ["périmètre", "planification", "recette", "mise en production"]
+  },
+  {
+    "id": "genie_logiciel-013",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un développeur a écrasé plusieurs commits pushes sur la branche principale d'un projet partagé. Que se passe-t-il et comment y remédier ?",
+    "reponse_reference": "Les commits ne sont pas perdus : ils restent accessibles via le reflog, qui journalise toutes les références de branches et permet de retrouver un identifiant de commit précis. Il suffit de réinitialiser la branche sur le bon commit puis de réappliquer les commits disparus ; en parallèle, on met en place une protection de branche interdisant les pushes directs.",
+    "mots_cles_attendus": ["reflog", "commit", "branche", "protection", "récupération"]
+  },
+  {
+    "id": "genie_logiciel-014",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un collègue livre une méthode de 400 lignes avec des variables mal nommées et des blocs dupliqués ailleurs dans le projet. Que lui recommandez-vous ?",
+    "reponse_reference": "On lui demande de découper la méthode en fonctions courtes portant des noms explicites et de supprimer le code dupliqué en factorisant la logique commune. L'objectif est d'obtenir une unité testable et lisible, quitte à faire une correction plus longue au départ pour être plus rapide ensuite.",
+    "mots_cles_attendus": ["découpage", "nommage", "duplication", "factorisation", "lisibilité"]
+  },
+  {
+    "id": "genie_logiciel-015",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un nouveau développeur rejoint l'équipe et ne comprend rien au code existant. Quel livrable/documente lui préparez-vous en priorité ?",
+    "reponse_reference": "Un fichier de présentation (readme) à jour, les instructions d'installation et d'exécution, puis un guide d'architecture d'une page. On l'accompagne d'une première correction simple à traiter pour le mettre en confiance et lui faire découvrir la chaîne complète (développement, revue, tests, livraison).",
+    "mots_cles_attendus": ["readme", "installation", "architecture", "intégration", "accompagnement"]
+  },
+  {
+    "id": "genie_logiciel-016",
+    "domaine": "genie_logiciel",
+    "sous_theme": "cycle_de_vie_logiciel",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une phase de développement et une phase de maintenance d'un logiciel ?",
+    "reponse_reference": "Le développement correspond à la création initiale du produit : conception, écriture du code, tests et première livraison. La maintenance intervient après la mise en production et consiste à corriger les anomalies, corriger l'obsolescence des dépendances et faire évoluer le produit.",
+    "mots_cles_attendus": ["développement", "maintenance", "correction", "évolution"]
+  },
+  {
+    "id": "genie_logiciel-017",
+    "domaine": "genie_logiciel",
+    "sous_theme": "expression_des_besoins",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un cahier des charges dans un projet logiciel ?",
+    "reponse_reference": "Le cahier des charges est le document contractuel qui formalise les besoins, les livrables attendus et les contraintes du projet. Il sert de référence commune au client, à l'équipe de développement et à la recette pour vérifier que le livrable est conforme.",
+    "mots_cles_attendus": ["document", "besoins", "livrables", "contraintes", "contrat"]
+  },
+  {
+    "id": "genie_logiciel-018",
+    "domaine": "genie_logiciel",
+    "sous_theme": "gestion_de_versions",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une branche dans Git et à quoi sert-elle ?",
+    "reponse_reference": "Une branche est une ligne de développement indépendante qui permet de travailler sur une fonctionnalité sans perturber la ligne principale. Une fois la fonctionnalité terminée et testée, elle est fusionnée dans la branche principale.",
+    "mots_cles_attendus": ["ligne de développement", "fonctionnalité", "fusion", "isolation"]
+  },
+  {
+    "id": "genie_logiciel-019",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_du_code",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que signifie le principe DRY dans l'écriture de code ?",
+    "reponse_reference": "DRY signifie ne pas se répéter : une règle de code ne doit être écrite qu'une seule fois dans le programme. Centraliser la logique dupliquée dans une fonction ou un composant unique permet de corriger un bug à un seul endroit et de gagner en cohérence.",
+    "mots_cles_attendus": ["répétition", "centralisation", "cohérence", "factorisation"]
+  },
+  {
+    "id": "genie_logiciel-020",
+    "domaine": "genie_logiciel",
+    "sous_theme": "documentation",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Avant une mise en production, la documentation du projet est obsolète : les procedures d'installation ne correspondent plus à l'infrastructure. Que faites-vous ?",
+    "reponse_reference": "Il faut mettre à jour la documentation avant la livraison, car une procédure erronée provoque des incidents et des pertes de temps en exploitation. On vérifie chaque commande sur l'environnement cible, on retire les informations périmées et on rattache la documentation au dépôt pour qu'elle soit versionnée avec le code.",
+    "mots_cles_attendus": ["mise à jour", "procédure", "vérification", "versionnage"]
+  }
+]

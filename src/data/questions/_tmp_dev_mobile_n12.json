@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-221",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la virtualisation des listes et pourquoi est-elle indispensable pour les très grandes listes ?",
+    "reponse_reference": "La virtualisation consiste à ne construire et ne dessiner que les éléments visibles d'une liste, plus une marge de préchargement, quelle que soit la taille des données. Les éléments sortis de l'écran sont détruits ou recyclés, ce qui maintient mémoire et temps de rendu constants. Sans elle, une liste de cent mille éléments saturerait la mémoire et bloquerait le premier affichage.",
+    "mots_cles_attendus": ["virtualisation", "fenêtrage", "recyclage", "préchargement", "mémoire"]
+  },
+  {
+    "id": "dev_mobile-222",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la concurrence structurée de Swift et quel rôle jouent les acteurs ?",
+    "reponse_reference": "La concurrence structurée de Swift organise les tâches asynchrones en hiérarchies avec async/await, en liant leur durée de vie à leur portée. Les acteurs sont des types qui sérialisent l'accès à leur état interne, empêchant les accès concurrents par conception. Le compilateur vérifie le partage de données entre tâches via le protocole Sendable, ce qui élimine une classe entière de courses de données.",
+    "mots_cles_attendus": ["swift concurrency", "acteurs", "async/await", "sendable", "course de données"]
+  },
+  {
+    "id": "dev_mobile-223",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application iOS subit des courses de données sur un état partagé entre plusieurs tâches asynchrones. Comment les éliminer avec les outils Swift modernes ?",
+    "reponse_reference": "Il faut isoler l'état dans un acteur, qui sérialise les accès en écriture et en lecture, ou rendre les types immuables et conformes à Sendable pour un partage sûr. Les mutations de l'interface doivent revenir sur le MainActor pour rester sur le thread principal. Le compilateur et l'outil d'analyse de concurrence signalent alors les partages non sûrs restants dès la compilation.",
+    "mots_cles_attendus": ["acteur", "sendable", "mainactor", "immuable", "thread principal"]
+  },
+  {
+    "id": "dev_mobile-224",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un événement unique, comme la navigation après un paiement, est rejoué après une rotation d'écran. Pourquoi et comment corriger ?",
+    "reponse_reference": "Un StateFlow conserve toujours sa dernière valeur : un nouvel abonné après la rotation reçoit l'événement déjà consommé. Les événements uniques doivent transiter par un canal ou un SharedFlow sans relecture, consommé une seule fois, tandis que l'état durable reste porté par un StateFlow. On distingue ainsi événements éphémères et état persistant, chacun avec son bon mécanisme.",
+    "mots_cles_attendus": ["stateflow", "sharedflow", "événement unique", "rejeu", "canal"]
+  },
+  {
+    "id": "dev_mobile-225",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un moteur de synchronisation embarqué et quand l'adopter ?",
+    "reponse_reference": "Un moteur de synchronisation embarqué réplique une partie de la base distante dans la base locale de l'appareil et propage les écritures dans les deux sens. Les produits de cette famille gèrent la file de changements, la reprise sur erreur et souvent les conflits, sans code de synchronisation sur mesure. On les adopte quand l'application exige un accès hors ligne complet à des données partagées entre plusieurs appareils.",
+    "mots_cles_attendus": ["sync engine", "réplication", "base embarquée", "conflits", "hors ligne"]
+  },
+  {
+    "id": "dev_mobile-226",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application doit synchroniser dix mille enregistrements par appareil avec de nombreux appareils hors ligne. Quelle architecture de synchronisation retenir ?",
+    "reponse_reference": "Une réplication incrémentale par curseurs ou par journal de changements évite de transférer les dix mille enregistrements à chaque fois. Le serveur conserve un journal par utilisateur, et chaque appareil reprend la synchronisation là où il s'est arrêté, avec des lots bornés. Les conflits se résolvent par des règles déterministes, et la réplication est priorisée et compressée pour tenir sur les réseaux mobiles.",
+    "mots_cles_attendus": ["réplication incrémentale", "curseur", "journal de changements", "lots", "conflits"]
+  },
+  {
+    "id": "dev_mobile-227",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Dans une application B2B multi-locataires, un utilisateur voit des données d'un autre locataire après une synchronisation. Quelle en est la cause probable et comment la corriger ?",
+    "reponse_reference": "La cause est presque toujours une requête ou un filtre de réplication sans clé de locataire, laissant fuiter des enregistrements d'un autre périmètre. Toutes les requêtes et règles de synchronisation doivent imposer le filtre de locataire côté serveur, et le stockage local doit être cloisonné par utilisateur. Un test de sécurité dédié, vérifiant l'absence de fuite entre comptes, doit rejoindre la suite de non-régression.",
+    "mots_cles_attendus": ["multi-locataire", "filtre", "cloisonnement", "fuite de données", "test de sécurité"]
+  },
+  {
+    "id": "dev_mobile-228",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le partitionnement des données par utilisateur dans le stockage local et la synchronisation ?",
+    "reponse_reference": "Le partitionnement consiste à isoler physiquement ou logiquement les données de chaque utilisateur : base distincte, préfixe de clé ou colonne de périmètre sur chaque enregistrement. Il empêche les fuites entre comptes sur un appareil partagé et simplifie la purge à la déconnexion. En synchronisation, il garantit que le périmètre téléchargé correspond strictement aux droits de l'utilisateur courant.",
+    "mots_cles_attendus": ["partitionnement", "isolation", "périmètre", "purge", "multi-comptes"]
+  },
+  {
+    "id": "dev_mobile-229",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un heap dump et comment chasser une fuite mémoire native avec ?",
+    "reponse_reference": "Un heap dump est un instantané de la mémoire du processus listant les objets vivants et leurs références. On y cherche les objets qui auraient dû disparaître, comme les écrans fermés, et la chaîne de références qui les retient. Pour les fuites natives, on croise le heap dump avec les outils de suivi d'allocations natifs, car une fuite en C n'apparaît pas dans les objets gérés.",
+    "mots_cles_attendus": ["heap dump", "fuite native", "références", "instantané", "allocations"]
+  },
+  {
+    "id": "dev_mobile-230",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La mémoire d'une application React Native croît après chaque écran visité et ne redescend jamais. Comment investiguer et corriger ?",
+    "reponse_reference": "Il faut prendre des instantanés de tas à différents moments pour identifier les objets qui s'accumulent : composants non démontés, listeners jamais retirés ou closures retenant de grands objets. Les bibliothèques qui s'abonnent à des événements sans se désabonner, comme les écouteurs de navigation ou de clavier, sont des suspects classiques. Après correction, un test automatisé mesurant la mémoire avant et après un parcours d'écrans détecte toute régression.",
+    "mots_cles_attendus": ["heap snapshot", "fuites", "listeners", "désabonnement", "parcours d'écrans"]
+  },
+  {
+    "id": "dev_mobile-231",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quels compromis impose le rendu à 120 Hz sur mobile ?",
+    "reponse_reference": "Le rendu à 120 Hz double le nombre de frames par rapport à 60 Hz, divisant par deux le budget de chaque frame et sollicitant davantage CPU et GPU. L'affichage consomme plus d'énergie, ce qui réduit l'autonomie, même si les taux de rafraîchissement adaptatifs compensent en partie. Les applications doivent éviter les animations inutiles et s'adapter au taux courant, mesurable à l'exécution.",
+    "mots_cles_attendus": ["120 hz", "taux de rafraîchissement", "batterie", "adaptatif", "budget de frame"]
+  },
+  {
+    "id": "dev_mobile-232",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le rendu partiel et les limites de repeinture dans un moteur de rendu mobile ?",
+    "reponse_reference": "Le rendu partiel ne redessine que les zones de l'écran réellement modifiées, au lieu de repeindre la scène entière. Les limites de repeinture, comme les repaint boundaries de Flutter, isolent les sous-arbres fréquemment animés du reste de l'interface. Bien placées, elles évitent qu'une petite animation invalide le rendu complet de l'écran à chaque frame.",
+    "mots_cles_attendus": ["rendu partiel", "repaint boundary", "zones modifiées", "invalidation", "peinture"]
+  },
+  {
+    "id": "dev_mobile-233",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la network security config sur Android et comment restreindre le trafic en clair ?",
+    "reponse_reference": "La network security config est un fichier XML qui définit la politique réseau de l'application : autorisation du trafic en clair, certificats de confiance et épinglage par domaine. Par défaut, les applications récentes refusent le HTTP non chiffré, et la configuration peut durcir ou assouplir ce comportement domaine par domaine. Le trafic en clair ne doit être autorisé que pour des cas précis, comme un environnement de développement local.",
+    "mots_cles_attendus": ["network security config", "cleartext", "tls", "domaine", "épinglage"]
+  },
+  {
+    "id": "dev_mobile-234",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment intégrer la biométrie sans jamais stocker le secret biométrique ?",
+    "reponse_reference": "La biométrie ne s'utilise que comme vérification locale : le système compare l'empreinte ou le visage à son modèle sécurisé et ne renvoie qu'un succès ou un échec. Le secret applicatif, comme une clé de déchiffrement, reste dans le Keystore ou le Secure Enclave et n'est libéré que si la vérification biométrique réussit. Un serveur ne peut pas vérifier lui-même la biométrie, il ne reçoit qu'un jeton ou une signature prouvant l'authentification locale.",
+    "mots_cles_attendus": ["biométrie", "biometricprompt", "secure enclave", "keystore", "vérification locale"]
+  },
+  {
+    "id": "dev_mobile-235",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application de paiement doit authentifier l'utilisateur par empreinte avant chaque transaction. Comment l'intégrer proprement ?",
+    "reponse_reference": "La transaction est signée ou déchiffrée par une clé du Keystore ou du Secure Enclave dont l'utilisation exige une authentification biométrique récente. Le BiometricPrompt ou le LocalAuthentication vérifie l'utilisateur, puis la clé débloquée signe la demande de paiement. Un repli par code de l'appareil ou mot de passe doit exister pour les utilisateurs sans biométrie, et la logique sensible reste validée côté serveur.",
+    "mots_cles_attendus": ["biometricprompt", "crypto object", "keystore", "repli", "signature"]
+  },
+  {
+    "id": "dev_mobile-236",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un test d'intrusion montre que l'application accepte des certificats auto-signés. Comment corriger et vérifier durablement ?",
+    "reponse_reference": "Il faut supprimer tout code qui désactive la validation des certificats, comme les gestionnaires de confiance permissifs, et n'utiliser que les autorités système. La network security config ou l'ATS sur iOS doit rester stricte, avec un épinglage éventuel pour les domaines sensibles. Un test automatisé vérifie ensuite que l'application refuse les connexions vers un serveur au certificat invalide, en CI comme en audit périodique.",
+    "mots_cles_attendus": ["certificat auto-signé", "validation", "ats", "épinglage", "test automatisé"]
+  },
+  {
+    "id": "dev_mobile-237",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles exigences imposent StoreKit 2 et Google Play Billing aux abonnements en 2026 ?",
+    "reponse_reference": "Les deux plateformes imposent leur facturation intégrée pour les biens numériques, avec des APIs modernes : StoreKit 2 côté Apple et la Billing Library côté Android. Les applications doivent gérer les statuts d'abonnement, les renouvellements, les périodes de grâce et les résiliations, ainsi que les notifications serveur signées. Les règles de remboursement, d'essais gratuits et de communication des prix aux utilisateurs sont strictement encadrées.",
+    "mots_cles_attendus": ["storekit 2", "play billing", "abonnements", "statuts", "conformité"]
+  },
+  {
+    "id": "dev_mobile-238",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la rétention et le LTV dans la monétisation mobile, et comment les mesurer ?",
+    "reponse_reference": "La rétention mesure la proportion d'utilisateurs qui reviennent dans l'application après un nombre de jours donné, généralement analysée par cohortes d'acquisition. Le LTV estime le revenu total qu'un utilisateur générera sur toute sa durée de vie, en croisant rétention et revenu moyen par utilisateur. Ces indicateurs se suivent par segment et par canal d'acquisition pour piloter les dépenses marketing et les expérimentations de monétisation.",
+    "mots_cles_attendus": ["rétention", "ltv", "cohortes", "revenu", "segments"]
+  },
+  {
+    "id": "dev_mobile-239",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application doit migrer ses abonnements existants vers les nouvelles règles de facturation des stores. Quels impacts techniques anticiper ?",
+    "reponse_reference": "Il faut migrer les produits vers les nouveaux modèles d'abonnement des consoles, en conservant la correspondance entre anciens et nouveaux identifiants pour les abonnés actifs. Le serveur doit consommer les nouvelles notifications d'événements et revalider les transactions avec les APIs récentes, sans couper les droits pendant la bascule. Les parcours d'achat, de restauration et de résiliation se retestent de bout en bout, y compris pour les abonnements créés avant la migration.",
+    "mots_cles_attendus": ["migration", "abonnés actifs", "webhooks", "revalidation", "restauration"]
+  },
+  {
+    "id": "dev_mobile-240",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le taux de désabonnement (churn) et comment le réduire ?",
+    "reponse_reference": "Le churn est le taux d'abonnés qui résilient leur abonnement sur une période donnée, l'inverse de la rétention des abonnés. On le réduit en analysant les motifs de résiliation, en proposant des pauses ou des offres de rétention ciblées, et en corrigeant les causes produit comme les échecs de facturation. Les échecs de renouvellement, cartes expirées notamment, se traitent par des relances et des périodes de grâce automatiques.",
+    "mots_cles_attendus": ["churn", "désabonnement", "rétention", "relance", "période de grâce"]
+  }
+]

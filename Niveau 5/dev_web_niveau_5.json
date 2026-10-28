@@ -1,0 +1,302 @@
+[
+  {
+    "id": "web-049",
+    "domaine": "dev_web",
+    "sous_theme": "performance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une page de liste exécute une requête pour récupérer les éléments, puis une requête supplémentaire par élément pour récupérer ses détails. Quel est le problème et comment le résoudre ?",
+    "reponse_reference": "C'est le problème N+1 : le nombre de requêtes augmente avec la taille de la liste, ce qui ralentit fortement l'application. On le résout avec une jointure ou un chargement groupé (eager loading), ou en récupérant les détails en une seule requête.",
+    "mots_cles_attendus": [
+      "N+1",
+      "nombre de requêtes",
+      "jointure",
+      "chargement groupé"
+    ]
+  },
+  {
+    "id": "web-050",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application tourne sur deux serveurs derrière un répartiteur de charge, et les utilisateurs sont déconnectés aléatoirement. Les sessions sont stockées en mémoire sur chaque serveur. Quelle est la cause et la solution ?",
+    "reponse_reference": "Une requête peut arriver sur un serveur qui ne connaît pas la session créée sur l'autre. Solutions : stocker les sessions dans un espace partagé (Redis, base de données), utiliser des jetons sans état comme les JWT, ou en dernier recours des sessions persistantes (sticky sessions) au niveau du répartiteur.",
+    "mots_cles_attendus": [
+      "sessions en mémoire",
+      "serveurs différents",
+      "stockage partagé",
+      "Redis"
+    ]
+  },
+  {
+    "id": "web-051",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un formulaire de commentaires affiche tel quel le texte saisi, et un utilisateur y a inséré un script qui s'exécute chez les autres visiteurs. Quelle est la faille et comment la corriger ?",
+    "reponse_reference": "C'est une faille XSS stockée. Il faut échapper ou encoder les données à l'affichage, éviter d'insérer du HTML brut, valider les entrées et ajouter une politique de sécurité du contenu (CSP) en complément.",
+    "mots_cles_attendus": [
+      "XSS",
+      "échapper",
+      "affichage",
+      "CSP"
+    ]
+  },
+  {
+    "id": "web-052",
+    "domaine": "dev_web",
+    "sous_theme": "api",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une API publique est surchargée par un client qui envoie des milliers de requêtes par minute. Que mettre en place ?",
+    "reponse_reference": "Mettre en place une limitation de débit (rate limiting) par clé API ou par IP, avec des réponses HTTP 429 (Too Many Requests), éventuellement des quotas, de la mise en cache et une protection au niveau du proxy ou du pare-feu.",
+    "mots_cles_attendus": [
+      "rate limiting",
+      "429",
+      "quota",
+      "cache"
+    ]
+  },
+  {
+    "id": "web-053",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "En consultant la base de données, on s'aperçoit que les mots de passe des utilisateurs sont stockés en clair. Quel est le problème et quelle est la bonne pratique ?",
+    "reponse_reference": "Si la base fuite, tous les mots de passe sont exposés. Il faut stocker uniquement des empreintes calculées avec un algorithme conçu pour les mots de passe (bcrypt, Argon2), avec un sel unique et un coût adapté, jamais le mot de passe lui-même.",
+    "mots_cles_attendus": [
+      "en clair",
+      "hachage",
+      "bcrypt",
+      "sel"
+    ]
+  },
+  {
+    "id": "web-054",
+    "domaine": "dev_web",
+    "sous_theme": "frontend",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Quand l'API échoue, l'utilisateur voit une page blanche après avoir cliqué sur un bouton. Comment améliorer cela ?",
+    "reponse_reference": "Gérer les erreurs de l'appel (try/catch, statut de la réponse), afficher un état de chargement puis un message d'erreur clair avec une possibilité de réessayer, et utiliser un composant de capture d'erreurs (error boundary) pour empêcher l'application entière de planter.",
+    "mots_cles_attendus": [
+      "gestion des erreurs",
+      "message clair",
+      "état de chargement",
+      "error boundary"
+    ]
+  },
+  {
+    "id": "web-055",
+    "domaine": "dev_web",
+    "sous_theme": "deploiement",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application fonctionne parfaitement en local mais échoue une fois déployée en production. Quelles pistes vérifier ?",
+    "reponse_reference": "Variables d'environnement manquantes ou différentes, versions de Node ou des dépendances, étape de build, configuration CORS, chemins ou URL en dur, accès à la base de données, et différences de configuration du serveur. On examine d'abord les journaux de production.",
+    "mots_cles_attendus": [
+      "variables d'environnement",
+      "versions",
+      "build",
+      "journaux"
+    ]
+  },
+  {
+    "id": "web-056",
+    "domaine": "dev_web",
+    "sous_theme": "base_de_donnees",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans une boutique en ligne, le débit du client puis la création de la commande sont deux étapes distinctes. Une panne survient entre les deux et les données deviennent incohérentes. Comment éviter cela ?",
+    "reponse_reference": "Regrouper les opérations dans une transaction atomique : soit toutes réussissent, soit toutes sont annulées (rollback). Dans un système distribué, on utilise des mécanismes de compensation ou le pattern saga avec idempotence.",
+    "mots_cles_attendus": [
+      "transaction",
+      "atomique",
+      "rollback",
+      "cohérence"
+    ]
+  },
+  {
+    "id": "web-057",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre une architecture monolithique et une architecture en microservices ?",
+    "reponse_reference": "Un monolithe regroupe toute l'application en un seul bloc déployé ensemble : simple au début mais plus difficile à faire évoluer à grande échelle. Les microservices découpent l'application en petits services indépendants, déployables séparément : plus flexibles et scalables, mais plus complexes à opérer.",
+    "mots_cles_attendus": [
+      "un seul bloc",
+      "services indépendants",
+      "scalabilité",
+      "complexité"
+    ]
+  },
+  {
+    "id": "web-058",
+    "domaine": "dev_web",
+    "sous_theme": "api",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre une API REST et GraphQL ?",
+    "reponse_reference": "Avec REST, chaque ressource a son URL et le serveur définit la forme des réponses, ce qui peut obliger à plusieurs appels ou renvoyer trop de données. Avec GraphQL, le client décrit précisément les champs voulus dans une seule requête, au prix d'un serveur plus complexe.",
+    "mots_cles_attendus": [
+      "ressources",
+      "une seule requête",
+      "champs demandés",
+      "flexibilité"
+    ]
+  },
+  {
+    "id": "web-059",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un WebSocket et dans quel cas l'utiliser ?",
+    "reponse_reference": "Un WebSocket ouvre une connexion bidirectionnelle persistante entre le client et le serveur, qui permet au serveur d'envoyer des données à tout moment sans que le client les redemande. Il convient au chat, aux notifications, aux jeux et aux tableaux de bord en temps réel.",
+    "mots_cles_attendus": [
+      "bidirectionnelle",
+      "persistante",
+      "temps réel",
+      "chat"
+    ]
+  },
+  {
+    "id": "web-060",
+    "domaine": "dev_web",
+    "sous_theme": "base_de_donnees",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifie ACID pour une base de données ?",
+    "reponse_reference": "ACID décrit les garanties d'une transaction : Atomicité (tout ou rien), Cohérence (les règles d'intégrité sont respectées), Isolation (les transactions simultanées n'interfèrent pas) et Durabilité (une fois validée, la donnée est conservée même en cas de panne).",
+    "mots_cles_attendus": [
+      "atomicité",
+      "cohérence",
+      "isolation",
+      "durabilité"
+    ]
+  },
+  {
+    "id": "web-093",
+    "domaine": "dev_web",
+    "sous_theme": "performance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application web fait exploser le coût de sa base de données car chaque page déclenche de nombreuses lectures. Quelles optimisations proposer ?",
+    "reponse_reference": "Mettre en cache les résultats fréquents (Redis ou cache applicatif), paginer et limiter les données lues, ajouter des index, éviter les requêtes redondantes et utiliser des réplicas de lecture si besoin.",
+    "mots_cles_attendus": [
+      "cache",
+      "Redis",
+      "pagination",
+      "index"
+    ]
+  },
+  {
+    "id": "web-094",
+    "domaine": "dev_web",
+    "sous_theme": "deploiement",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un déploiement casse la production. Quelles stratégies auraient permis de limiter l'impact et de revenir en arrière ?",
+    "reponse_reference": "Déployer progressivement (blue/green, canary), garder la version précédente prête pour un retour arrière rapide, utiliser des feature flags, exécuter les tests automatiques en CI et surveiller les erreurs après déploiement.",
+    "mots_cles_attendus": [
+      "retour arrière",
+      "blue/green",
+      "feature flags",
+      "tests en CI"
+    ]
+  },
+  {
+    "id": "web-095",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit supporter dix fois plus de trafic. Comment la faire passer à l'échelle ?",
+    "reponse_reference": "Rendre l'application sans état, la dupliquer derrière un répartiteur de charge (scalabilité horizontale), mettre en cache, utiliser un CDN pour les fichiers statiques, optimiser la base de données et surveiller pour trouver les goulots d'étranglement.",
+    "mots_cles_attendus": [
+      "sans état",
+      "répartiteur de charge",
+      "cache",
+      "CDN"
+    ]
+  },
+  {
+    "id": "web-096",
+    "domaine": "dev_web",
+    "sous_theme": "securite_web",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Les utilisateurs peuvent téléverser des fichiers sur un site. Quels risques et quelles mesures de protection ?",
+    "reponse_reference": "Risques : fichiers malveillants, exécution de code, saturation du stockage. Vérifier le type réel et la taille, renommer les fichiers, les stocker hors du répertoire exécutable ou sur un stockage objet, analyser avec un antivirus et ne jamais les exécuter.",
+    "mots_cles_attendus": [
+      "fichiers malveillants",
+      "vérifier le type",
+      "taille",
+      "stockage séparé"
+    ]
+  },
+  {
+    "id": "web-097",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un export de gros fichier lancé par un utilisateur bloque le serveur pendant plusieurs minutes. Comment redessiner ce traitement ?",
+    "reponse_reference": "Sortir le traitement de la requête HTTP : mettre la tâche dans une file de jobs traitée par des workers en arrière-plan, répondre tout de suite avec un identifiant de tâche, puis informer l'utilisateur (notification, sondage) quand c'est terminé.",
+    "mots_cles_attendus": [
+      "file de jobs",
+      "workers",
+      "arrière-plan",
+      "notification"
+    ]
+  },
+  {
+    "id": "web-098",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une file de messages (message queue) et à quoi sert-elle ?",
+    "reponse_reference": "C'est un composant qui stocke des messages envoyés par des producteurs et les remet à des consommateurs, qui les traitent à leur rythme. Elle découple les services, lisse les pics de charge et permet de réessayer en cas d'échec. Exemples : RabbitMQ, SQS.",
+    "mots_cles_attendus": [
+      "producteurs",
+      "consommateurs",
+      "découple",
+      "pics de charge"
+    ]
+  },
+  {
+    "id": "web-099",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'observabilité d'une application ?",
+    "reponse_reference": "C'est la capacité à comprendre ce qui se passe à l'intérieur d'un système à partir de ses sorties : journaux (logs), métriques et traces. Elle permet de détecter, diagnostiquer et résoudre rapidement les problèmes en production.",
+    "mots_cles_attendus": [
+      "logs",
+      "métriques",
+      "traces",
+      "diagnostiquer"
+    ]
+  },
+  {
+    "id": "web-100",
+    "domaine": "dev_web",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le principe du modèle d'architecture MVC ?",
+    "reponse_reference": "MVC sépare l'application en trois parties : le Modèle (données et règles métier), la Vue (affichage) et le Contrôleur (reçoit les actions, coordonne modèle et vue). Cette séparation facilite la maintenance et les tests.",
+    "mots_cles_attendus": [
+      "modèle",
+      "vue",
+      "contrôleur",
+      "séparation"
+    ]
+  }
+]

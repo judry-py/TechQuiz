@@ -1,0 +1,302 @@
+[
+  {
+    "id": "cyber-049",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_applicative",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application web affiche à l'utilisateur des messages d'erreur détaillés avec la trace complète de l'erreur. Pourquoi est-ce un risque et que faire ?",
+    "reponse_reference": "Ces messages divulguent des informations internes (chemins, versions, structure de la base) qui aident un attaquant. En production, il faut afficher un message d'erreur générique à l'utilisateur et enregistrer les détails seulement dans des journaux protégés.",
+    "mots_cles_attendus": [
+      "divulgation d'informations",
+      "message générique",
+      "journaux",
+      "production"
+    ]
+  },
+  {
+    "id": "cyber-050",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans les journaux d'un serveur, on voit des centaines d'échecs de connexion SSH depuis la même adresse IP, suivis d'une connexion réussie. Quelle est votre analyse et que faire ?",
+    "reponse_reference": "C'est une attaque par force brute qui semble avoir réussi : le serveur est probablement compromis. Il faut isoler la machine, bloquer l'adresse, réinitialiser les identifiants, analyser ce qui a été fait après la connexion, puis durcir SSH (clés plutôt que mots de passe, limitation des tentatives, MFA).",
+    "mots_cles_attendus": [
+      "force brute",
+      "compromis",
+      "isoler",
+      "clés SSH"
+    ]
+  },
+  {
+    "id": "cyber-051",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un développeur a publié par erreur une clé d'API dans un dépôt GitHub public. Quelles sont les actions immédiates ?",
+    "reponse_reference": "Révoquer et remplacer la clé immédiatement, car la supprimer du dépôt ne suffit pas, l'historique et des robots l'ont peut-être déjà copiée. Puis vérifier les journaux d'utilisation de la clé, nettoyer l'historique et mettre en place un gestionnaire de secrets et un contrôle des secrets avant publication.",
+    "mots_cles_attendus": [
+      "révoquer",
+      "remplacer la clé",
+      "historique",
+      "gestionnaire de secrets"
+    ]
+  },
+  {
+    "id": "cyber-052",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un prestataire externe demande un accès complet au réseau pour une maintenance ponctuelle. Comment gérer cette demande ?",
+    "reponse_reference": "Appliquer le moindre privilège : donner uniquement l'accès nécessaire aux systèmes concernés, pour une durée limitée, avec un compte nominatif et le MFA, en journalisant et surveillant ses actions, puis révoquer l'accès à la fin de l'intervention.",
+    "mots_cles_attendus": [
+      "moindre privilège",
+      "accès temporaire",
+      "journalisation",
+      "révoquer"
+    ]
+  },
+  {
+    "id": "cyber-053",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un employé reçoit un document Word qui lui demande d'« activer les macros » pour lire le contenu. Quel est le risque et quelles mesures prendre ?",
+    "reponse_reference": "Les macros peuvent exécuter du code malveillant qui installe un malware ou un ransomware. Il ne faut pas les activer. Mesures : bloquer les macros par défaut depuis Internet, filtrer les pièces jointes, sensibiliser les utilisateurs et signaler l'email.",
+    "mots_cles_attendus": [
+      "macros",
+      "code malveillant",
+      "bloquer par défaut",
+      "sensibilisation"
+    ]
+  },
+  {
+    "id": "cyber-054",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "L'entreprise découvre qu'une base de données clients a fuité. Quelles sont les premières étapes et obligations ?",
+    "reponse_reference": "Contenir la fuite, évaluer les données touchées et le nombre de personnes concernées, préserver les preuves et corriger la faille. Le RGPD impose de notifier l'autorité de protection des données sous 72 heures si le risque est avéré, et d'informer les personnes concernées si le risque est élevé.",
+    "mots_cles_attendus": [
+      "contenir",
+      "évaluer",
+      "72 heures",
+      "informer les personnes"
+    ]
+  },
+  {
+    "id": "cyber-055",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un employé se connecte à un site de l'entreprise via un formulaire de login en HTTP depuis le Wi-Fi d'un café. Quel est le risque et comment le corriger ?",
+    "reponse_reference": "En HTTP, les identifiants circulent en clair : toute personne sur le même Wi-Fi peut les intercepter. Il faut passer tout le site en HTTPS avec un certificat valide, forcer la redirection et activer HSTS, et recommander l'usage d'un VPN sur les réseaux publics.",
+    "mots_cles_attendus": [
+      "en clair",
+      "interception",
+      "HTTPS",
+      "HSTS"
+    ]
+  },
+  {
+    "id": "cyber-056",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un salarié quitte l'entreprise. Quelles actions de sécurité doivent être menées ?",
+    "reponse_reference": "Désactiver tous ses comptes et accès (messagerie, VPN, applications), récupérer le matériel, révoquer ses clés et jetons, transférer ses données et responsabilités, et surveiller les accès suspects. Un processus de départ (offboarding) formalisé évite les oublis.",
+    "mots_cles_attendus": [
+      "désactiver les comptes",
+      "récupérer le matériel",
+      "révoquer",
+      "offboarding"
+    ]
+  },
+  {
+    "id": "cyber-057",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion des identités et des accès (IAM) et le SSO ?",
+    "reponse_reference": "L'IAM regroupe les processus et outils qui gèrent les identités et leurs droits d'accès. Le SSO (authentification unique) permet de se connecter une seule fois pour accéder à plusieurs applications, ce qui améliore le confort et facilite la centralisation du contrôle et du MFA.",
+    "mots_cles_attendus": [
+      "identités",
+      "droits d'accès",
+      "authentification unique",
+      "centralisation"
+    ]
+  },
+  {
+    "id": "cyber-058",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le framework MITRE ATT&CK et à quoi sert-il ?",
+    "reponse_reference": "C'est une base de connaissances publique qui décrit les tactiques et techniques utilisées par les attaquants, organisées selon les phases d'une attaque. Elle aide à comprendre les menaces, évaluer ses détections et structurer les exercices de sécurité.",
+    "mots_cles_attendus": [
+      "tactiques",
+      "techniques",
+      "attaquants",
+      "détection"
+    ]
+  },
+  {
+    "id": "cyber-059",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre un PCA et un PRA ?",
+    "reponse_reference": "Le plan de continuité d'activité (PCA) vise à maintenir les activités essentielles pendant un incident. Le plan de reprise d'activité (PRA) décrit comment restaurer les systèmes et reprendre l'activité après une interruption, avec des objectifs de durée et de perte de données acceptables.",
+    "mots_cles_attendus": [
+      "continuité",
+      "reprise",
+      "interruption",
+      "restauration"
+    ]
+  },
+  {
+    "id": "cyber-060",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le durcissement (hardening) d'un système ?",
+    "reponse_reference": "C'est l'ensemble des actions qui réduisent la surface d'attaque d'un système : désactiver les services et comptes inutiles, changer les configurations par défaut, appliquer les correctifs, restreindre les droits et activer la journalisation.",
+    "mots_cles_attendus": [
+      "surface d'attaque",
+      "services inutiles",
+      "configuration par défaut",
+      "correctifs"
+    ]
+  },
+  {
+    "id": "cyber-093",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une PME veut stocker des données sensibles dans le cloud. Quels points de vigilance faut-il examiner ?",
+    "reponse_reference": "Comprendre la responsabilité partagée (le fournisseur sécurise l'infrastructure, le client ses données et ses accès), chiffrer les données, appliquer le moindre privilège et le MFA, vérifier la localisation des données et la conformité (RGPD), journaliser les accès et prévoir les sauvegardes.",
+    "mots_cles_attendus": [
+      "responsabilité partagée",
+      "chiffrement",
+      "MFA",
+      "RGPD"
+    ]
+  },
+  {
+    "id": "cyber-094",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un audit révèle de nombreux comptes d'anciens salariés encore actifs. Quel est le risque et quel processus mettre en place ?",
+    "reponse_reference": "Ces comptes sont des portes d'entrée oubliées pour un attaquant et un risque d'accès abusif. Il faut désactiver les comptes inutilisés, mettre en place un processus de départ automatisé et des revues périodiques des accès liées aux ressources humaines.",
+    "mots_cles_attendus": [
+      "comptes inactifs",
+      "désactiver",
+      "revue des accès",
+      "processus de départ"
+    ]
+  },
+  {
+    "id": "cyber-095",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un site e-commerce subit de nombreux vols de comptes par réutilisation de mots de passe volés ailleurs. Quelles contre-mesures proposer ?",
+    "reponse_reference": "Limiter le nombre de tentatives par IP et par compte, ajouter un captcha, détecter les connexions anormales, proposer ou imposer le MFA, vérifier les mots de passe contre les bases de fuites et prévenir les clients touchés.",
+    "mots_cles_attendus": [
+      "limitation des tentatives",
+      "MFA",
+      "mots de passe compromis",
+      "détection"
+    ]
+  },
+  {
+    "id": "cyber-096",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une alerte du SIEM montre qu'un poste contacte un serveur inconnu à intervalles très réguliers. Comment l'analyser et réagir ?",
+    "reponse_reference": "Ce schéma régulier ressemble à du beaconing, un malware contactant son serveur de commande et de contrôle. Isoler le poste, analyser le processus et le trafic, vérifier la réputation de l'adresse, bloquer le domaine et rechercher d'autres machines touchées.",
+    "mots_cles_attendus": [
+      "beaconing",
+      "commande et contrôle",
+      "isoler",
+      "bloquer"
+    ]
+  },
+  {
+    "id": "cyber-097",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_applicative",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un développeur veut ajouter une bibliothèque open source peu connue à l'application. Quels risques et quelles vérifications ?",
+    "reponse_reference": "Risque de chaîne d'approvisionnement : code malveillant ou vulnérable. Vérifier la popularité, la maintenance, la licence, les vulnérabilités connues, relire les dépendances, utiliser un outil d'analyse des dépendances et figer les versions.",
+    "mots_cles_attendus": [
+      "chaîne d'approvisionnement",
+      "maintenance",
+      "vulnérabilités connues",
+      "analyse des dépendances"
+    ]
+  },
+  {
+    "id": "cyber-098",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifient RPO et RTO dans un plan de reprise d'activité ?",
+    "reponse_reference": "Le RPO est la quantité maximale de données qu'on accepte de perdre, exprimée en temps. Le RTO est la durée maximale acceptable d'interruption avant le retour à la normale. Ils guident la fréquence des sauvegardes et le choix des solutions.",
+    "mots_cles_attendus": [
+      "perte de données maximale",
+      "durée d'interruption",
+      "sauvegardes",
+      "reprise"
+    ]
+  },
+  {
+    "id": "cyber-099",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre la red team et la blue team ?",
+    "reponse_reference": "La red team simule des attaquants pour tester la sécurité de l'organisation. La blue team défend : détection, réponse et durcissement. Leur collaboration, parfois appelée purple team, améliore les défenses.",
+    "mots_cles_attendus": [
+      "simule des attaquants",
+      "défend",
+      "détection",
+      "purple team"
+    ]
+  },
+  {
+    "id": "cyber-100",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le principe de séparation des tâches ?",
+    "reponse_reference": "Une opération sensible ne doit pas dépendre d'une seule personne : par exemple, celui qui demande un paiement n'est pas celui qui l'approuve. Cela limite les erreurs et la fraude interne.",
+    "mots_cles_attendus": [
+      "une seule personne",
+      "approuve",
+      "fraude",
+      "contrôle"
+    ]
+  }
+]

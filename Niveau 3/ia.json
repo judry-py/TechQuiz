@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "ia-001",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que l'intelligence artificielle ?",
+    "reponse_reference": "L'intelligence artificielle regroupe les techniques qui permettent à des machines d'accomplir des tâches qui demandent normalement de l'intelligence humaine : comprendre le langage, reconnaître des images, prendre des décisions, apprendre de l'expérience.",
+    "mots_cles_attendus": [
+      "machines",
+      "tâches",
+      "intelligence humaine",
+      "apprendre"
+    ]
+  },
+  {
+    "id": "ia-002",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le machine learning ?",
+    "reponse_reference": "Le machine learning est une branche de l'IA où un modèle apprend à partir de données pour faire des prédictions ou des décisions, au lieu d'être programmé avec des règles explicites pour chaque cas.",
+    "mots_cles_attendus": [
+      "données",
+      "apprend",
+      "prédictions",
+      "règles explicites"
+    ]
+  },
+  {
+    "id": "ia-003",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre machine learning et deep learning ?",
+    "reponse_reference": "Le deep learning est un sous-ensemble du machine learning qui utilise des réseaux de neurones à plusieurs couches. Il apprend lui-même des caractéristiques complexes à partir de grandes quantités de données, notamment pour les images, le son et le texte.",
+    "mots_cles_attendus": [
+      "réseaux de neurones",
+      "plusieurs couches",
+      "sous-ensemble",
+      "grandes quantités de données"
+    ]
+  },
+  {
+    "id": "ia-004",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un réseau de neurones artificiel ?",
+    "reponse_reference": "C'est un modèle composé de couches de neurones artificiels reliés entre eux, inspiré du cerveau. Chaque neurone calcule une somme pondérée de ses entrées puis applique une fonction ; l'entraînement ajuste les poids pour réduire l'erreur.",
+    "mots_cles_attendus": [
+      "couches",
+      "neurones",
+      "poids",
+      "entraînement"
+    ]
+  },
+  {
+    "id": "ia-005",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre apprentissage supervisé et non supervisé ?",
+    "reponse_reference": "En apprentissage supervisé, le modèle apprend à partir de données étiquetées (entrée et bonne réponse connue), par exemple classifier des emails en spam ou non. En non supervisé, les données n'ont pas d'étiquettes et le modèle cherche des structures lui-même, par exemple regrouper des clients similaires.",
+    "mots_cles_attendus": [
+      "étiquetées",
+      "sans étiquettes",
+      "classification",
+      "regroupement"
+    ]
+  },
+  {
+    "id": "ia-006",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un LLM ?",
+    "reponse_reference": "Un LLM (Large Language Model) est un modèle d'IA entraîné sur de très grandes quantités de texte pour comprendre et générer du langage. Il prédit les mots suivants d'un texte, ce qui lui permet de répondre à des questions, résumer, traduire ou écrire du code.",
+    "mots_cles_attendus": [
+      "modèle de langage",
+      "texte",
+      "génère",
+      "prédit"
+    ]
+  },
+  {
+    "id": "ia-007",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi servent les données d'entraînement ?",
+    "reponse_reference": "Les données d'entraînement sont les exemples à partir desquels un modèle apprend les motifs à reconnaître. Leur qualité et leur quantité influencent directement les performances du modèle.",
+    "mots_cles_attendus": [
+      "exemples",
+      "apprendre",
+      "qualité",
+      "performances"
+    ]
+  },
+  {
+    "id": "ia-008",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le surapprentissage (overfitting) ?",
+    "reponse_reference": "Le surapprentissage se produit quand un modèle apprend trop bien ses données d'entraînement, y compris le bruit, et généralise mal à de nouvelles données. Il a d'excellents résultats à l'entraînement mais de mauvais résultats en situation réelle.",
+    "mots_cles_attendus": [
+      "trop bien",
+      "données d'entraînement",
+      "généralise mal",
+      "nouvelles données"
+    ]
+  },
+  {
+    "id": "ia-009",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un prompt ?",
+    "reponse_reference": "Un prompt est l'instruction ou le texte que l'on donne à un modèle d'IA générative pour obtenir une réponse. La clarté et la précision du prompt influencent fortement la qualité du résultat.",
+    "mots_cles_attendus": [
+      "instruction",
+      "texte",
+      "modèle",
+      "réponse"
+    ]
+  },
+  {
+    "id": "ia-010",
+    "domaine": "ia",
+    "sous_theme": "nlp",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le traitement automatique du langage naturel (NLP) ?",
+    "reponse_reference": "Le NLP est le domaine de l'IA qui permet aux machines de comprendre, analyser et générer le langage humain. Exemples : traduction automatique, analyse de sentiments, chatbots, résumé de texte.",
+    "mots_cles_attendus": [
+      "langage humain",
+      "comprendre",
+      "traduction",
+      "chatbot"
+    ]
+  },
+  {
+    "id": "ia-011",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un biais dans un modèle d'IA et d'où peut-il venir ?",
+    "reponse_reference": "Un biais est une erreur systématique qui produit des résultats injustes ou inexacts pour certains groupes ou cas. Il vient souvent de données d'entraînement non représentatives ou reflétant des préjugés existants.",
+    "mots_cles_attendus": [
+      "erreur systématique",
+      "injuste",
+      "données non représentatives",
+      "préjugés"
+    ]
+  },
+  {
+    "id": "ia-012",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un modèle en machine learning ?",
+    "reponse_reference": "Un modèle est le résultat de l'entraînement : une fonction mathématique, avec des paramètres appris, qui prend des données en entrée et produit une sortie (prédiction, classe, texte). On l'utilise ensuite sur de nouvelles données.",
+    "mots_cles_attendus": [
+      "entraînement",
+      "paramètres",
+      "entrée",
+      "prédiction"
+    ]
+  },
+  {
+    "id": "ia-061",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un algorithme ?",
+    "reponse_reference": "Un algorithme est une suite d'instructions précises et ordonnées qui permet de résoudre un problème ou d'accomplir une tâche, comme une recette de cuisine. Les programmes informatiques sont des algorithmes écrits dans un langage.",
+    "mots_cles_attendus": [
+      "suite d'instructions",
+      "problème",
+      "ordonnées",
+      "recette"
+    ]
+  },
+  {
+    "id": "ia-062",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un chatbot ?",
+    "reponse_reference": "Un chatbot est un programme qui dialogue avec l'utilisateur par texte ou par voix. Il peut suivre des règles simples ou s'appuyer sur un modèle d'IA pour comprendre les questions et générer des réponses.",
+    "mots_cles_attendus": [
+      "dialogue",
+      "programme",
+      "texte",
+      "réponses"
+    ]
+  },
+  {
+    "id": "ia-063",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la vision par ordinateur ?",
+    "reponse_reference": "C'est le domaine de l'IA qui permet à une machine d'analyser et de comprendre des images ou des vidéos : reconnaître des visages, détecter des objets, lire du texte, assister le diagnostic médical.",
+    "mots_cles_attendus": [
+      "images",
+      "comprendre",
+      "détecter des objets",
+      "reconnaissance"
+    ]
+  },
+  {
+    "id": "ia-064",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une donnée étiquetée ?",
+    "reponse_reference": "C'est une donnée accompagnée de la bonne réponse, par exemple une image avec la mention « chat » ou un email marqué « spam ». Les modèles supervisés apprennent à partir de ces exemples.",
+    "mots_cles_attendus": [
+      "bonne réponse",
+      "étiquette",
+      "supervisé",
+      "exemples"
+    ]
+  },
+  {
+    "id": "ia-065",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une IA faible et une IA forte ?",
+    "reponse_reference": "Une IA faible est spécialisée dans une tâche précise (traduction, reconnaissance d'images) : toutes les IA actuelles. Une IA forte, ou générale, serait capable de comprendre et d'apprendre n'importe quelle tâche comme un humain : elle reste hypothétique.",
+    "mots_cles_attendus": [
+      "tâche précise",
+      "spécialisée",
+      "générale",
+      "hypothétique"
+    ]
+  },
+  {
+    "id": "ia-066",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Comment fonctionne, dans les grandes lignes, un assistant vocal ?",
+    "reponse_reference": "Il transforme la voix en texte (reconnaissance vocale), comprend l'intention de la demande (traitement du langage), exécute l'action ou cherche la réponse, puis la restitue à l'oral grâce à la synthèse vocale.",
+    "mots_cles_attendus": [
+      "reconnaissance vocale",
+      "intention",
+      "synthèse vocale",
+      "traitement du langage"
+    ]
+  },
+  {
+    "id": "ia-067",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une prédiction en machine learning ?",
+    "reponse_reference": "C'est la sortie d'un modèle entraîné pour une nouvelle donnée : une classe (spam), une valeur (un prix) ou une probabilité. Ce n'est pas une certitude mais une estimation basée sur ce que le modèle a appris.",
+    "mots_cles_attendus": [
+      "sortie du modèle",
+      "nouvelle donnée",
+      "estimation",
+      "probabilité"
+    ]
+  },
+  {
+    "id": "ia-068",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Citez des exemples d'utilisation de l'IA dans la vie quotidienne.",
+    "reponse_reference": "Recommandations de films ou de musique, filtres anti-spam, traduction automatique, assistants vocaux, reconnaissance faciale pour déverrouiller un téléphone, navigation GPS avec prévision du trafic, détection de fraude bancaire.",
+    "mots_cles_attendus": [
+      "recommandation",
+      "traduction",
+      "assistant vocal",
+      "détection de fraude"
+    ]
+  },
+  {
+    "id": "ia-013",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre classification et régression ?",
+    "reponse_reference": "La classification prédit une catégorie (spam ou non, chat ou chien). La régression prédit une valeur numérique continue (prix d'une maison, température).",
+    "mots_cles_attendus": [
+      "catégorie",
+      "valeur numérique",
+      "prédit",
+      "continue"
+    ]
+  },
+  {
+    "id": "ia-014",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi sépare-t-on les données en ensembles d'entraînement et de test ?",
+    "reponse_reference": "L'ensemble d'entraînement sert à apprendre, l'ensemble de test, jamais vu pendant l'entraînement, sert à évaluer honnêtement la capacité du modèle à généraliser. Cela permet de détecter le surapprentissage.",
+    "mots_cles_attendus": [
+      "entraînement",
+      "test",
+      "généraliser",
+      "surapprentissage"
+    ]
+  },
+  {
+    "id": "ia-015",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fonction de perte (loss) ?",
+    "reponse_reference": "C'est une mesure de l'écart entre les prédictions du modèle et les bonnes réponses. L'entraînement cherche à la minimiser en ajustant les paramètres du modèle.",
+    "mots_cles_attendus": [
+      "écart",
+      "prédictions",
+      "minimiser",
+      "erreur"
+    ]
+  },
+  {
+    "id": "ia-016",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est l'idée de la descente de gradient ?",
+    "reponse_reference": "C'est une méthode d'optimisation qui ajuste progressivement les paramètres du modèle dans la direction qui réduit le plus la fonction de perte, comme descendre une pente pas à pas jusqu'au point le plus bas.",
+    "mots_cles_attendus": [
+      "optimisation",
+      "paramètres",
+      "fonction de perte",
+      "pas à pas"
+    ]
+  },
+  {
+    "id": "ia-017",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est l'idée centrale de l'architecture Transformer ?",
+    "reponse_reference": "Le Transformer repose sur le mécanisme d'attention : chaque élément d'une séquence évalue l'importance de tous les autres pour construire sa représentation. Il traite les mots en parallèle et gère bien les dépendances à longue distance, ce qui est la base des LLM.",
+    "mots_cles_attendus": [
+      "attention",
+      "séquence",
+      "parallèle",
+      "dépendances"
+    ]
+  },
+  {
+    "id": "ia-018",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token dans un LLM ?",
+    "reponse_reference": "Un token est l'unité de texte traitée par le modèle : un mot, un morceau de mot ou un signe de ponctuation. Le texte est découpé en tokens avant d'être traité, et la taille du contexte se mesure en tokens.",
+    "mots_cles_attendus": [
+      "unité de texte",
+      "morceau de mot",
+      "découpé",
+      "contexte"
+    ]
+  },
+  {
+    "id": "ia-019",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi servent les réseaux de neurones convolutifs (CNN) ?",
+    "reponse_reference": "Les CNN sont spécialisés dans les données en grille comme les images. Leurs filtres convolutifs détectent des motifs locaux (contours, formes) puis des motifs de plus en plus complexes. Usages : reconnaissance d'images, détection d'objets, imagerie médicale.",
+    "mots_cles_attendus": [
+      "images",
+      "filtres",
+      "motifs",
+      "reconnaissance"
+    ]
+  },
+  {
+    "id": "ia-020",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le fine-tuning d'un modèle ?",
+    "reponse_reference": "Le fine-tuning consiste à reprendre un modèle déjà pré-entraîné et à le réentraîner sur un jeu de données plus petit et spécifique pour l'adapter à une tâche ou un domaine précis, plus vite et à moindre coût qu'un entraînement complet.",
+    "mots_cles_attendus": [
+      "pré-entraîné",
+      "données spécifiques",
+      "adapter",
+      "tâche"
+    ]
+  },
+  {
+    "id": "ia-021",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une hallucination chez un LLM ?",
+    "reponse_reference": "Une hallucination est une réponse qui paraît plausible et assurée mais qui est fausse ou inventée. Elle vient du fait que le modèle génère du texte vraisemblable sans vérifier les faits. Il faut donc vérifier les informations importantes.",
+    "mots_cles_attendus": [
+      "fausse",
+      "inventée",
+      "plausible",
+      "vérifier"
+    ]
+  },
+  {
+    "id": "ia-022",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre précision et rappel (recall) ?",
+    "reponse_reference": "La précision mesure, parmi les éléments prédits positifs, la part qui l'est vraiment. Le rappel mesure, parmi tous les vrais positifs, la part que le modèle a retrouvée. Le bon compromis dépend du cas : en détection de maladie on privilégie le rappel.",
+    "mots_cles_attendus": [
+      "prédits positifs",
+      "vrais positifs",
+      "compromis",
+      "faux négatifs"
+    ]
+  },
+  {
+    "id": "ia-023",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'apprentissage par renforcement ?",
+    "reponse_reference": "Un agent apprend par essais et erreurs en interagissant avec un environnement : il reçoit des récompenses ou des pénalités selon ses actions et apprend à maximiser sa récompense cumulée. Exemples : jeux, robotique.",
+    "mots_cles_attendus": [
+      "agent",
+      "récompense",
+      "essais et erreurs",
+      "environnement"
+    ]
+  },
+  {
+    "id": "ia-024",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'IA générative ?",
+    "reponse_reference": "L'IA générative regroupe les modèles capables de créer du contenu nouveau (texte, images, audio, code) à partir de ce qu'ils ont appris sur leurs données d'entraînement, par exemple les LLM ou les modèles de génération d'images.",
+    "mots_cles_attendus": [
+      "créer du contenu",
+      "texte",
+      "images",
+      "LLM"
+    ]
+  },
+  {
+    "id": "ia-069",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un paramètre et un hyperparamètre d'un modèle ?",
+    "reponse_reference": "Les paramètres (poids) sont appris automatiquement pendant l'entraînement. Les hyperparamètres (taux d'apprentissage, nombre de couches, taille de lot) sont fixés par le développeur avant l'entraînement et réglés par essais.",
+    "mots_cles_attendus": [
+      "appris",
+      "fixés avant",
+      "taux d'apprentissage",
+      "poids"
+    ]
+  },
+  {
+    "id": "ia-070",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est l'idée de la régression linéaire ?",
+    "reponse_reference": "Elle modélise la relation entre une variable à prédire et une ou plusieurs variables explicatives par une droite (ou un hyperplan), en ajustant les coefficients pour minimiser l'erreur. Exemple : prédire un prix selon la surface.",
+    "mots_cles_attendus": [
+      "droite",
+      "relation",
+      "variables explicatives",
+      "minimiser l'erreur"
+    ]
+  },
+  {
+    "id": "ia-071",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Comment fonctionne un arbre de décision ?",
+    "reponse_reference": "C'est un modèle qui pose une suite de questions oui/non sur les variables pour arriver à une décision, comme un organigramme. Il est facile à interpréter, mais peut surapprendre s'il est trop profond.",
+    "mots_cles_attendus": [
+      "questions",
+      "organigramme",
+      "interpréter",
+      "surapprendre"
+    ]
+  },
+  {
+    "id": "ia-072",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'exactitude (accuracy) et pourquoi peut-elle être trompeuse ?",
+    "reponse_reference": "L'exactitude est la proportion de prédictions correctes sur l'ensemble. Elle est trompeuse quand les classes sont déséquilibrées : un modèle qui prédit toujours la classe majoritaire obtient un score élevé sans rien détecter.",
+    "mots_cles_attendus": [
+      "prédictions correctes",
+      "classes déséquilibrées",
+      "trompeuse",
+      "majoritaire"
+    ]
+  },
+  {
+    "id": "ia-073",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le sous-apprentissage (underfitting) ?",
+    "reponse_reference": "C'est quand un modèle est trop simple pour capturer les relations dans les données : il est mauvais à l'entraînement comme en test. On le corrige avec un modèle plus complexe, de meilleures variables ou plus d'entraînement.",
+    "mots_cles_attendus": [
+      "trop simple",
+      "mauvais partout",
+      "modèle plus complexe",
+      "variables"
+    ]
+  },
+  {
+    "id": "ia-074",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le clustering ?",
+    "reponse_reference": "C'est une méthode non supervisée qui regroupe automatiquement des données similaires en groupes (clusters), sans étiquettes. Exemple : segmenter des clients selon leurs comportements d'achat.",
+    "mots_cles_attendus": [
+      "non supervisé",
+      "regroupe",
+      "similaires",
+      "segmenter"
+    ]
+  },
+  {
+    "id": "ia-075",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi utilise-t-on des GPU pour entraîner des modèles d'IA ?",
+    "reponse_reference": "Un GPU contient des milliers de petits cœurs qui font des calculs en parallèle, ce qui convient parfaitement aux opérations matricielles des réseaux de neurones. L'entraînement est ainsi beaucoup plus rapide que sur un processeur classique.",
+    "mots_cles_attendus": [
+      "calculs en parallèle",
+      "matrices",
+      "milliers de cœurs",
+      "plus rapide"
+    ]
+  },
+  {
+    "id": "ia-076",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert un jeu de validation, en plus du jeu d'entraînement et du jeu de test ?",
+    "reponse_reference": "Le jeu de validation sert à régler les hyperparamètres et à comparer les modèles pendant le développement, sans toucher au jeu de test. Le test reste réservé à l'évaluation finale pour une mesure honnête.",
+    "mots_cles_attendus": [
+      "hyperparamètres",
+      "comparer",
+      "test réservé",
+      "évaluation finale"
+    ]
+  },
+  {
+    "id": "ia-025",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la rétropropagation du gradient ?",
+    "reponse_reference": "C'est l'algorithme qui permet d'entraîner un réseau de neurones : après une prédiction, on calcule l'erreur, puis on la propage de la sortie vers l'entrée pour déterminer l'influence de chaque poids, que l'on ajuste avec la descente de gradient.",
+    "mots_cles_attendus": [
+      "erreur",
+      "propage",
+      "poids",
+      "descente de gradient"
+    ]
+  },
+  {
+    "id": "ia-026",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Pourquoi utilise-t-on des fonctions d'activation non linéaires dans un réseau de neurones ?",
+    "reponse_reference": "Sans non-linéarité, empiler des couches équivaudrait à une seule transformation linéaire. Les fonctions d'activation (ReLU, sigmoïde...) permettent au réseau d'apprendre des relations complexes et non linéaires.",
+    "mots_cles_attendus": [
+      "non linéaire",
+      "ReLU",
+      "relations complexes",
+      "couches"
+    ]
+  },
+  {
+    "id": "ia-027",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un embedding ?",
+    "reponse_reference": "Un embedding est une représentation d'un mot, d'une phrase ou d'une image sous forme de vecteur de nombres, de façon que les éléments de sens proche aient des vecteurs proches. Il permet aux modèles de manipuler le sens mathématiquement.",
+    "mots_cles_attendus": [
+      "vecteur",
+      "sens proche",
+      "représentation",
+      "nombres"
+    ]
+  },
+  {
+    "id": "ia-028",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le RAG et quel problème résout-il ?",
+    "reponse_reference": "Le RAG (génération augmentée par la récupération) recherche d'abord des documents pertinents dans une base, puis les fournit au LLM comme contexte pour répondre. Il réduit les hallucinations et permet d'utiliser des informations récentes ou privées sans réentraîner le modèle.",
+    "mots_cles_attendus": [
+      "recherche de documents",
+      "contexte",
+      "hallucinations",
+      "sans réentraîner"
+    ]
+  },
+  {
+    "id": "ia-029",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert la validation croisée ?",
+    "reponse_reference": "La validation croisée divise les données en plusieurs parties et entraîne puis évalue le modèle plusieurs fois en changeant la partie de test. Elle donne une estimation plus fiable de la performance et aide à choisir un modèle ou ses réglages.",
+    "mots_cles_attendus": [
+      "plusieurs parties",
+      "évaluer",
+      "performance fiable",
+      "choix du modèle"
+    ]
+  },
+  {
+    "id": "ia-030",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la régularisation et pourquoi l'utilise-t-on ?",
+    "reponse_reference": "La régularisation ajoute une contrainte ou une pénalité pendant l'entraînement pour empêcher le modèle d'être trop complexe. Elle réduit le surapprentissage et améliore la généralisation. Exemples : L1, L2, dropout.",
+    "mots_cles_attendus": [
+      "pénalité",
+      "surapprentissage",
+      "généralisation",
+      "dropout"
+    ]
+  },
+  {
+    "id": "ia-031",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que contrôle le paramètre de température d'un LLM ?",
+    "reponse_reference": "La température règle le caractère aléatoire de la génération. Une température basse rend les réponses plus déterministes et prévisibles ; une température haute les rend plus variées et créatives, mais plus risquées.",
+    "mots_cles_attendus": [
+      "aléatoire",
+      "déterministe",
+      "créatif",
+      "variété"
+    ]
+  },
+  {
+    "id": "ia-032",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le compromis biais-variance ?",
+    "reponse_reference": "Un modèle trop simple a un biais élevé (il sous-apprend). Un modèle trop complexe a une variance élevée (il surapprend et réagit trop aux données d'entraînement). L'objectif est de trouver l'équilibre qui généralise le mieux.",
+    "mots_cles_attendus": [
+      "biais",
+      "variance",
+      "sous-apprentissage",
+      "surapprentissage"
+    ]
+  },
+  {
+    "id": "ia-033",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le taux d'apprentissage (learning rate) et quel est l'effet d'une mauvaise valeur ?",
+    "reponse_reference": "C'est la taille des pas de mise à jour des poids pendant l'entraînement. Trop grand, le modèle oscille ou diverge ; trop petit, l'entraînement est très lent et peut rester bloqué.",
+    "mots_cles_attendus": [
+      "taille des pas",
+      "poids",
+      "diverge",
+      "lent"
+    ]
+  },
+  {
+    "id": "ia-034",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le transfer learning ?",
+    "reponse_reference": "Le transfer learning réutilise les connaissances d'un modèle entraîné sur une grande tâche générale pour résoudre une autre tâche proche, avec peu de données. On garde les couches apprises et on adapte la fin du modèle.",
+    "mots_cles_attendus": [
+      "réutilise",
+      "modèle pré-entraîné",
+      "peu de données",
+      "adapter"
+    ]
+  },
+  {
+    "id": "ia-035",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert une matrice de confusion ?",
+    "reponse_reference": "C'est un tableau qui compare les prédictions d'un modèle de classification aux vraies classes : vrais positifs, faux positifs, vrais négatifs, faux négatifs. Elle permet de calculer précision, rappel et de voir quels types d'erreurs sont commis.",
+    "mots_cles_attendus": [
+      "prédictions",
+      "vrais positifs",
+      "faux négatifs",
+      "erreurs"
+    ]
+  },
+  {
+    "id": "ia-036",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre le prompting zero-shot et few-shot ?",
+    "reponse_reference": "En zero-shot, on demande une tâche au modèle sans lui donner d'exemple. En few-shot, on inclut quelques exemples dans le prompt pour montrer le format ou le comportement attendu, ce qui améliore souvent la qualité.",
+    "mots_cles_attendus": [
+      "sans exemple",
+      "quelques exemples",
+      "prompt",
+      "format attendu"
+    ]
+  },
+  {
+    "id": "ia-077",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une forêt aléatoire (Random Forest) ?",
+    "reponse_reference": "C'est un ensemble de nombreux arbres de décision entraînés sur des échantillons différents, dont on combine les prédictions (vote ou moyenne). Elle est plus robuste et généralise mieux qu'un arbre seul.",
+    "mots_cles_attendus": [
+      "ensemble d'arbres",
+      "vote",
+      "robuste",
+      "généralise"
+    ]
+  },
+  {
+    "id": "ia-078",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert le dropout ?",
+    "reponse_reference": "Pendant l'entraînement, le dropout désactive aléatoirement une partie des neurones à chaque étape. Le réseau ne peut pas dépendre de quelques neurones, ce qui réduit le surapprentissage.",
+    "mots_cles_attendus": [
+      "neurones désactivés",
+      "aléatoire",
+      "surapprentissage",
+      "régularisation"
+    ]
+  },
+  {
+    "id": "ia-079",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que représentent la courbe ROC et l'AUC ?",
+    "reponse_reference": "La courbe ROC montre le taux de vrais positifs en fonction du taux de faux positifs pour tous les seuils possibles. L'AUC est l'aire sous cette courbe : plus elle est proche de 1, mieux le modèle distingue les classes.",
+    "mots_cles_attendus": [
+      "vrais positifs",
+      "faux positifs",
+      "seuils",
+      "aire sous la courbe"
+    ]
+  },
+  {
+    "id": "ia-080",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le problème de disparition du gradient ?",
+    "reponse_reference": "Dans les réseaux profonds, le gradient devient très petit en remontant vers les premières couches, qui n'apprennent presque plus. On l'atténue avec des activations comme ReLU, des connexions résiduelles et une bonne initialisation.",
+    "mots_cles_attendus": [
+      "gradient très petit",
+      "premières couches",
+      "ReLU",
+      "réseaux profonds"
+    ]
+  },
+  {
+    "id": "ia-081",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'optimiseur Adam ?",
+    "reponse_reference": "Adam est un algorithme d'optimisation qui adapte le pas d'apprentissage pour chaque paramètre à partir de moyennes des gradients passés. Il converge généralement vite et est très utilisé par défaut.",
+    "mots_cles_attendus": [
+      "optimiseur",
+      "pas adaptatif",
+      "gradients",
+      "converge"
+    ]
+  },
+  {
+    "id": "ia-082",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données vectorielle ?",
+    "reponse_reference": "Elle stocke des vecteurs (embeddings) et retrouve rapidement ceux qui sont les plus proches d'un vecteur de requête. Elle sert à la recherche sémantique et au RAG.",
+    "mots_cles_attendus": [
+      "vecteurs",
+      "embeddings",
+      "proximité",
+      "recherche sémantique"
+    ]
+  },
+  {
+    "id": "ia-083",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert le prompt système (system prompt) d'un LLM ?",
+    "reponse_reference": "C'est l'instruction de départ qui définit le rôle, le ton, les règles et les limites du modèle pour toute la conversation. L'utilisateur ne la voit en général pas, et elle oriente toutes les réponses.",
+    "mots_cles_attendus": [
+      "rôle",
+      "règles",
+      "instruction de départ",
+      "conversation"
+    ]
+  },
+  {
+    "id": "ia-084",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ingénierie des variables (feature engineering) ?",
+    "reponse_reference": "C'est la création ou la transformation de variables à partir des données brutes pour aider le modèle à apprendre : extraire le mois d'une date, combiner des colonnes, encoder des catégories. Elle influence beaucoup les performances.",
+    "mots_cles_attendus": [
+      "créer des variables",
+      "transformation",
+      "données brutes",
+      "performances"
+    ]
+  },
+  {
+    "id": "ia-037",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle atteint 99 % de précision sur les données d'entraînement mais seulement 60 % sur les données de test. Quel est le problème et comment l'améliorer ?",
+    "reponse_reference": "C'est du surapprentissage : le modèle a mémorisé les données d'entraînement au lieu de généraliser. On peut ajouter des données, simplifier le modèle, utiliser la régularisation (dropout, L2), faire de la validation croisée ou de l'arrêt précoce.",
+    "mots_cles_attendus": [
+      "surapprentissage",
+      "généraliser",
+      "régularisation",
+      "plus de données"
+    ]
+  },
+  {
+    "id": "ia-038",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Dans un jeu de données de détection de fraude, 1 % des transactions sont frauduleuses. Un modèle qui répond toujours « pas de fraude » obtient 99 % de précision globale. Pourquoi est-ce trompeur ?",
+    "reponse_reference": "Le jeu est très déséquilibré, donc la précision globale masque le fait que le modèle ne détecte aucune fraude. Il faut regarder le rappel, la précision sur la classe rare, le score F1 ou la matrice de confusion, et traiter le déséquilibre (rééchantillonnage, pondération).",
+    "mots_cles_attendus": [
+      "déséquilibre",
+      "rappel",
+      "matrice de confusion",
+      "classe rare"
+    ]
+  },
+  {
+    "id": "ia-039",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le chatbot interne d'une entreprise invente des procédures qui n'existent pas. Quelle est la cause et comment limiter le problème ?",
+    "reponse_reference": "Ce sont des hallucinations : le modèle génère du texte vraisemblable sans source fiable. On peut utiliser le RAG pour baser les réponses sur les documents officiels, demander de citer les sources, autoriser le modèle à dire qu'il ne sait pas et faire valider les réponses critiques.",
+    "mots_cles_attendus": [
+      "hallucination",
+      "RAG",
+      "sources",
+      "documents officiels"
+    ]
+  },
+  {
+    "id": "ia-040",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de présélection de CV favorise systématiquement les candidats masculins. Quelle est la cause probable et que faire ?",
+    "reponse_reference": "Le modèle a probablement appris le biais présent dans les données historiques de recrutement. Il faut auditer les données et les résultats par groupe, retirer ou corriger les variables problématiques, rééquilibrer les données, et garder un humain dans la décision.",
+    "mots_cles_attendus": [
+      "biais",
+      "données historiques",
+      "audit",
+      "humain dans la décision"
+    ]
+  },
+  {
+    "id": "ia-041",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle performant au lancement voit ses résultats se dégrader au fil des mois. Qu'est-ce qui peut l'expliquer et que mettre en place ?",
+    "reponse_reference": "Les données réelles ont évolué par rapport à celles de l'entraînement (dérive des données ou du concept). Il faut surveiller les performances et la distribution des données en production, puis réentraîner régulièrement le modèle sur des données récentes.",
+    "mots_cles_attendus": [
+      "dérive des données",
+      "surveillance",
+      "réentraîner",
+      "données récentes"
+    ]
+  },
+  {
+    "id": "ia-042",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Pendant l'entraînement d'un réseau de neurones, la perte ne diminue pas ou devient NaN. Quelles pistes vérifier ?",
+    "reponse_reference": "Un taux d'apprentissage trop élevé peut faire diverger l'entraînement, il faut le réduire. Vérifier aussi la normalisation des données, l'initialisation des poids, des valeurs aberrantes ou manquantes, et d'éventuelles erreurs dans la fonction de perte ou les étiquettes.",
+    "mots_cles_attendus": [
+      "taux d'apprentissage",
+      "normalisation",
+      "données",
+      "diverge"
+    ]
+  },
+  {
+    "id": "ia-043",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Vous devez classer des milliers d'avis clients par thème, mais vous n'avez aucune donnée étiquetée. Quelles options avez-vous ?",
+    "reponse_reference": "On peut utiliser l'apprentissage non supervisé (clustering ou topic modeling), un LLM en zero-shot ou few-shot pour classer sans entraînement, ou étiqueter à la main un petit échantillon pour amorcer un modèle supervisé.",
+    "mots_cles_attendus": [
+      "non supervisé",
+      "clustering",
+      "LLM",
+      "étiqueter un échantillon"
+    ]
+  },
+  {
+    "id": "ia-044",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la fuite de données (data leakage) dans un projet de machine learning ?",
+    "reponse_reference": "C'est le fait que des informations du jeu de test, ou du futur, se retrouvent dans l'entraînement, ce qui donne des performances artificiellement excellentes. Le modèle semble très bon en test mais échoue en production.",
+    "mots_cles_attendus": [
+      "informations du test",
+      "artificiellement bonnes",
+      "entraînement",
+      "production"
+    ]
+  },
+  {
+    "id": "ia-045",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi normalise-t-on souvent les données avant d'entraîner un modèle ?",
+    "reponse_reference": "Pour mettre les variables sur des échelles comparables : sinon celles aux grandes valeurs dominent l'apprentissage. La normalisation accélère et stabilise l'entraînement, surtout pour les réseaux de neurones et les méthodes à distance.",
+    "mots_cles_attendus": [
+      "échelles comparables",
+      "stabilise",
+      "accélère",
+      "variables"
+    ]
+  },
+  {
+    "id": "ia-046",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une epoch et un batch lors de l'entraînement ?",
+    "reponse_reference": "Un batch est un petit groupe d'exemples traité avant chaque mise à jour des poids. Une epoch est un passage complet sur l'ensemble des données d'entraînement, donc composée de plusieurs batchs.",
+    "mots_cles_attendus": [
+      "groupe d'exemples",
+      "passage complet",
+      "mise à jour des poids",
+      "données d'entraînement"
+    ]
+  },
+  {
+    "id": "ia-047",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la fenêtre de contexte d'un LLM et quelle est sa limite pratique ?",
+    "reponse_reference": "C'est la quantité maximale de texte (en tokens) que le modèle peut prendre en compte en une fois, prompt et réponse compris. Au-delà, les informations les plus anciennes sont perdues ou doivent être résumées, et un long contexte coûte plus cher en calcul.",
+    "mots_cles_attendus": [
+      "tokens",
+      "quantité maximale",
+      "contexte",
+      "informations perdues"
+    ]
+  },
+  {
+    "id": "ia-048",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre l'entraînement et l'inférence d'un modèle ?",
+    "reponse_reference": "L'entraînement ajuste les paramètres du modèle à partir des données, ce qui est long et coûteux. L'inférence utilise le modèle déjà entraîné pour produire des prédictions sur de nouvelles données, ce qui est beaucoup plus rapide et s'exécute en production.",
+    "mots_cles_attendus": [
+      "ajuste les paramètres",
+      "modèle entraîné",
+      "prédictions",
+      "production"
+    ]
+  },
+  {
+    "id": "ia-085",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de détection de défauts, entraîné sur des photos nettes d'usine, marche mal en production où les photos des opérateurs sont floues et mal éclairées. Quel est le problème et que faire ?",
+    "reponse_reference": "C'est un décalage de distribution entre les données d'entraînement et celles de production. On collecte des images réelles, on les ajoute à l'entraînement, on utilise l'augmentation de données (flou, luminosité) et on surveille les performances en production.",
+    "mots_cles_attendus": [
+      "décalage de distribution",
+      "données réelles",
+      "augmentation de données",
+      "surveiller"
+    ]
+  },
+  {
+    "id": "ia-086",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de prévision des ventes d'un magasin se trompe systématiquement en décembre et pendant les soldes. Comment l'améliorer ?",
+    "reponse_reference": "Il ne capture pas la saisonnalité. On ajoute des variables temporelles (mois, jour de la semaine, jours fériés, périodes de soldes), on utilise un modèle de séries temporelles adapté et on évalue sur des périodes saisonnières.",
+    "mots_cles_attendus": [
+      "saisonnalité",
+      "variables temporelles",
+      "jours fériés",
+      "séries temporelles"
+    ]
+  },
+  {
+    "id": "ia-087",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un assistant basé sur un LLM répond en anglais alors que l'entreprise veut du français. Comment corriger ?",
+    "reponse_reference": "Préciser la langue dans le prompt système (par exemple « réponds toujours en français »), ajouter quelques exemples de réponses attendues, et vérifier le comportement sur des cas variés. Si besoin, choisir un modèle plus performant en français.",
+    "mots_cles_attendus": [
+      "prompt système",
+      "consigne de langue",
+      "exemples",
+      "tester"
+    ]
+  },
+  {
+    "id": "ia-088",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un filtre anti-spam bloque parfois de vrais emails importants. Quel problème et quelle solution ?",
+    "reponse_reference": "Ce sont des faux positifs. On augmente le seuil de décision pour être plus prudent, on optimise la précision plutôt que le rappel, on propose un dossier de quarantaine consultable et on améliore les données d'entraînement.",
+    "mots_cles_attendus": [
+      "faux positifs",
+      "seuil de décision",
+      "précision",
+      "quarantaine"
+    ]
+  },
+  {
+    "id": "ia-089",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'arrêt précoce (early stopping) ?",
+    "reponse_reference": "On arrête l'entraînement quand la performance sur le jeu de validation cesse de s'améliorer, même si l'erreur d'entraînement continue de baisser. Cela évite le surapprentissage et économise du temps de calcul.",
+    "mots_cles_attendus": [
+      "jeu de validation",
+      "arrêter",
+      "surapprentissage",
+      "temps de calcul"
+    ]
+  },
+  {
+    "id": "ia-090",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'explicabilité d'un modèle d'IA et pourquoi est-elle importante ?",
+    "reponse_reference": "C'est la capacité à comprendre pourquoi un modèle a pris une décision (méthodes comme SHAP ou LIME). Elle est importante pour la confiance, la détection de biais, le débogage et le respect de la réglementation dans des domaines sensibles comme la santé ou le crédit.",
+    "mots_cles_attendus": [
+      "comprendre la décision",
+      "SHAP",
+      "biais",
+      "confiance"
+    ]
+  },
+  {
+    "id": "ia-091",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que représente le score de confiance d'un modèle et peut-on lui faire entièrement confiance ?",
+    "reponse_reference": "C'est la probabilité que le modèle associe à sa prédiction. Un score élevé n'est pas une garantie : un modèle peut être très confiant et se tromper, surtout hors de ses données d'entraînement. La calibration et le contrôle humain restent nécessaires.",
+    "mots_cles_attendus": [
+      "probabilité",
+      "pas une garantie",
+      "calibration",
+      "se tromper"
+    ]
+  },
+  {
+    "id": "ia-092",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel est le principe d'un modèle de diffusion pour générer des images ?",
+    "reponse_reference": "On apprend à retirer progressivement du bruit ajouté à des images. Pour générer, le modèle part d'un bruit aléatoire et le débruite étape par étape, guidé par un texte, jusqu'à obtenir une image cohérente.",
+    "mots_cles_attendus": [
+      "bruit",
+      "étape par étape",
+      "débruiter",
+      "texte"
+    ]
+  },
+  {
+    "id": "ia-049",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Vous devez prédire le prix de vente d'appartements. Quel type de problème est-ce, quelles données utiliser et comment évaluer le modèle ?",
+    "reponse_reference": "C'est un problème de régression supervisée. On utilise des variables comme la surface, le nombre de pièces, la localisation et l'état, avec les prix passés comme étiquettes. On évalue avec des métriques d'erreur comme la MAE ou la RMSE sur un jeu de test.",
+    "mots_cles_attendus": [
+      "régression",
+      "variables",
+      "MAE",
+      "jeu de test"
+    ]
+  },
+  {
+    "id": "ia-050",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans un modèle de diagnostic médical, rater un malade est bien plus grave que de faire une fausse alerte. Quelle métrique privilégier et comment ajuster le modèle ?",
+    "reponse_reference": "Il faut privilégier le rappel (sensibilité) pour limiter les faux négatifs. On peut abaisser le seuil de décision, au prix de plus de faux positifs, et utiliser des métriques adaptées comme la courbe précision-rappel, en gardant l'avis d'un médecin.",
+    "mots_cles_attendus": [
+      "rappel",
+      "faux négatifs",
+      "seuil de décision",
+      "faux positifs"
+    ]
+  },
+  {
+    "id": "ia-051",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un chatbot basé sur le RAG donne souvent des réponses hors sujet. Quelles pistes d'amélioration explorer ?",
+    "reponse_reference": "Vérifier la qualité de la récupération : découpage des documents en passages (chunking), modèle d'embeddings adapté, nombre de passages retournés, reclassement des résultats. Puis améliorer le prompt (consignes de s'appuyer sur le contexte) et évaluer avec des jeux de questions de test.",
+    "mots_cles_attendus": [
+      "récupération",
+      "chunking",
+      "embeddings",
+      "prompt"
+    ]
+  },
+  {
+    "id": "ia-052",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur obtient d'un assistant IA des informations personnelles sur une autre personne, apparemment issues des données d'entraînement. Quel est le risque et que faire ?",
+    "reponse_reference": "Il y a un risque de fuite de données personnelles et de non-conformité (RGPD). Mesures : nettoyer et anonymiser les données d'entraînement, filtrer les sorties, tester la mémorisation du modèle, limiter les informations sensibles dans les données et prévoir un processus de suppression.",
+    "mots_cles_attendus": [
+      "données personnelles",
+      "RGPD",
+      "anonymiser",
+      "filtrer les sorties"
+    ]
+  },
+  {
+    "id": "ia-053",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Vous disposez de seulement 200 images annotées pour détecter des défauts de fabrication. Comment procéder ?",
+    "reponse_reference": "Utiliser le transfer learning à partir d'un modèle d'images pré-entraîné et n'entraîner que les dernières couches, et appliquer de l'augmentation de données (rotations, recadrages, variations de luminosité) pour enrichir l'échantillon. On évalue avec une validation croisée.",
+    "mots_cles_attendus": [
+      "transfer learning",
+      "pré-entraîné",
+      "augmentation de données",
+      "peu de données"
+    ]
+  },
+  {
+    "id": "ia-054",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un système de recommandation ne propose que des produits populaires et ignore les nouveaux produits. Quels sont les problèmes et les solutions ?",
+    "reponse_reference": "Il souffre du biais de popularité et du démarrage à froid (cold start) pour les nouveaux produits ou utilisateurs. On peut ajouter des recommandations basées sur le contenu, de l'exploration (bandits), de la diversification et pondérer la popularité.",
+    "mots_cles_attendus": [
+      "biais de popularité",
+      "cold start",
+      "contenu",
+      "diversification"
+    ]
+  },
+  {
+    "id": "ia-055",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le coût d'inférence d'un LLM déployé par l'entreprise est beaucoup trop élevé. Quels leviers existent pour le réduire ?",
+    "reponse_reference": "Choisir un modèle plus petit adapté à la tâche, quantifier le modèle, mettre en cache les réponses fréquentes, raccourcir les prompts et le contexte, regrouper les requêtes et limiter la longueur des réponses.",
+    "mots_cles_attendus": [
+      "modèle plus petit",
+      "quantification",
+      "cache",
+      "prompts plus courts"
+    ]
+  },
+  {
+    "id": "ia-056",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur écrit « ignore tes instructions précédentes » dans un chatbot d'entreprise et obtient des informations internes. Qu'est-ce que c'est et comment s'en protéger ?",
+    "reponse_reference": "C'est une injection de prompt : l'utilisateur détourne les consignes du modèle. On réduit le risque en séparant clairement instructions et entrées utilisateur, en limitant les données et actions accessibles au modèle, en filtrant les entrées et sorties et en ne comptant pas sur le prompt seul pour sécuriser.",
+    "mots_cles_attendus": [
+      "injection de prompt",
+      "détourne",
+      "moindre accès",
+      "filtrer"
+    ]
+  },
+  {
+    "id": "ia-057",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'augmentation de données (data augmentation) ?",
+    "reponse_reference": "C'est la création de nouveaux exemples d'entraînement à partir des existants par des transformations (retournement, rotation, bruit, paraphrase), pour augmenter la diversité des données et réduire le surapprentissage.",
+    "mots_cles_attendus": [
+      "nouveaux exemples",
+      "transformations",
+      "diversité",
+      "surapprentissage"
+    ]
+  },
+  {
+    "id": "ia-058",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le principe de l'algorithme de clustering K-means ?",
+    "reponse_reference": "On choisit un nombre K de groupes, on place K centres, on associe chaque point au centre le plus proche, puis on recalcule les centres comme la moyenne de chaque groupe, et on répète jusqu'à stabilisation. C'est un apprentissage non supervisé.",
+    "mots_cles_attendus": [
+      "K groupes",
+      "centres",
+      "moyenne",
+      "non supervisé"
+    ]
+  },
+  {
+    "id": "ia-059",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le score F1 et quand l'utiliser ?",
+    "reponse_reference": "Le score F1 est la moyenne harmonique de la précision et du rappel. Il résume ces deux mesures en une seule valeur et est utile quand les classes sont déséquilibrées ou quand on doit trouver un compromis entre les faux positifs et les faux négatifs.",
+    "mots_cles_attendus": [
+      "moyenne harmonique",
+      "précision",
+      "rappel",
+      "classes déséquilibrées"
+    ]
+  },
+  {
+    "id": "ia-060",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le RLHF et à quoi sert-il pour les LLM ?",
+    "reponse_reference": "Le RLHF est un apprentissage par renforcement à partir de retours humains : des évaluateurs classent des réponses du modèle, un modèle de récompense apprend ces préférences, puis le LLM est ajusté pour produire des réponses plus utiles, plus sûres et mieux alignées avec les attentes humaines.",
+    "mots_cles_attendus": [
+      "retours humains",
+      "modèle de récompense",
+      "préférences",
+      "alignement"
+    ]
+  },
+  {
+    "id": "ia-093",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un chatbot fonctionne bien en démonstration, mais l'équipe veut s'assurer de sa qualité une fois en production. Que mettre en place ?",
+    "reponse_reference": "Un suivi continu : journaliser les échanges (en respectant la vie privée), collecter les retours des utilisateurs (pouces haut ou bas), évaluer régulièrement avec un jeu de questions de référence, détecter les dérives et améliorer les prompts ou les données.",
+    "mots_cles_attendus": [
+      "journalisation",
+      "retours utilisateurs",
+      "évaluation continue",
+      "jeu de référence"
+    ]
+  },
+  {
+    "id": "ia-094",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise veut entraîner un modèle avec les données personnelles de ses clients. Quelles obligations et précautions ?",
+    "reponse_reference": "Respecter le RGPD : base légale ou consentement, finalité claire, minimisation des données, anonymisation ou pseudonymisation, sécurité et droits des personnes (accès, suppression). Documenter le traitement et évaluer les risques.",
+    "mots_cles_attendus": [
+      "RGPD",
+      "consentement",
+      "anonymisation",
+      "minimisation"
+    ]
+  },
+  {
+    "id": "ia-095",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un modèle de vision confond systématiquement deux classes proches, par exemple deux espèces de plantes. Comment analyser et améliorer ?",
+    "reponse_reference": "Examiner la matrice de confusion et des exemples d'erreurs, vérifier la qualité des étiquettes, ajouter des données variées sur ces deux classes, utiliser des augmentations ciblées ou un modèle plus puissant, et évaluer à nouveau sur un jeu de test dédié.",
+    "mots_cles_attendus": [
+      "matrice de confusion",
+      "analyse d'erreurs",
+      "plus de données",
+      "étiquettes"
+    ]
+  },
+  {
+    "id": "ia-096",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "On veut un assistant qui puisse envoyer des emails ou modifier des données via un LLM. Quels garde-fous prévoir ?",
+    "reponse_reference": "Donner au modèle l'accès à des outils précis (function calling) avec des droits minimaux, valider les paramètres côté serveur, demander la confirmation humaine pour les actions sensibles, journaliser et se protéger contre l'injection de prompt.",
+    "mots_cles_attendus": [
+      "function calling",
+      "droits minimaux",
+      "confirmation humaine",
+      "injection de prompt"
+    ]
+  },
+  {
+    "id": "ia-097",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "L'équipe doit choisir entre deux modèles pour un produit. Comment les comparer correctement ?",
+    "reponse_reference": "Les évaluer sur le même jeu de test représentatif, avec les mêmes métriques adaptées au besoin, et comparer aussi la latence, le coût et la robustesse. Tester sur des cas réels et, si possible, faire un test A/B en production.",
+    "mots_cles_attendus": [
+      "même jeu de test",
+      "métriques",
+      "latence et coût",
+      "test A/B"
+    ]
+  },
+  {
+    "id": "ia-098",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un agent IA et le function calling ?",
+    "reponse_reference": "Un agent IA est un système où un LLM planifie et choisit des actions pour atteindre un objectif. Le function calling permet au modèle de demander l'exécution d'outils (recherche, calcul, API) avec des paramètres structurés, dont le résultat revient au modèle.",
+    "mots_cles_attendus": [
+      "LLM",
+      "outils",
+      "actions",
+      "paramètres structurés"
+    ]
+  },
+  {
+    "id": "ia-099",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la distillation de modèle ?",
+    "reponse_reference": "Un petit modèle (élève) est entraîné à imiter les sorties d'un grand modèle (professeur). On obtient un modèle plus léger et plus rapide, qui garde une grande partie de la performance.",
+    "mots_cles_attendus": [
+      "petit modèle",
+      "imite",
+      "grand modèle",
+      "plus léger"
+    ]
+  },
+  {
+    "id": "ia-100",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le MLOps ?",
+    "reponse_reference": "Le MLOps applique les pratiques DevOps au machine learning : automatiser l'entraînement, le test, le déploiement, la surveillance et le réentraînement des modèles, et versionner le code, les données et les modèles pour avoir un cycle fiable et reproductible.",
+    "mots_cles_attendus": [
+      "automatiser",
+      "déploiement",
+      "surveillance",
+      "versionner"
+    ]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-181",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_evolutive",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fitness function dans le cadre d'une architecture évolutive ?",
+    "reponse_reference": "Une fitness function est un test ou une mesure automatisée qui vérifie en continu qu'une propriété architecturale est respectée : temps de réponse, absence de dépendance entre modules, taille d'un composant. À la manière d'un test de non-régression, elle échoue dès qu'une évolution dégrade la propriété surveillée. Ce mécanisme transforme l'architecture en un objet mesurable et défendable au fil du temps, plutôt qu'en un document figé.",
+    "mots_cles_attendus": ["propriété architecturale", "mesure automatisée", "non-régression", "évolutive", "surveillance"]
+  },
+  {
+    "id": "genie_logiciel-182",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_evolutive",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la connascence et comment aide-t-elle à évaluer le couplage d'un code ?",
+    "reponse_reference": "La connascence mesure le degré auquel deux éléments de code doivent évoluer ensemble : connascence de nom (même nom de méthode), de type, de valeur ou d'ordre d'exécution. Un couplage fort se traduit par une connascence élevée entre éléments éloignés, qui multiplie les changements coordonnés. L'objectif est de réduire la connascence ou de la confiner à l'intérieur d'un module, là où elle est gérable.",
+    "mots_cles_attendus": ["couplage", "changement coordonné", "nom", "type", "confinement"]
+  },
+  {
+    "id": "genie_logiciel-183",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_evolutive",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que mesurent le couplage afférent et le couplage efférent d'un composant, et qu'est-ce que l'instabilité qui en découle ?",
+    "reponse_reference": "Le couplage afférent compte le nombre de composants qui dépendent de celui qu'on étudie, tandis que le couplage efférent compte ceux dont il dépend. Leur rapport définit l'instabilité : un composant très dépendu et peu dépendant est stable, car difficile à modifier sans casser les autres. Ces métriques issues des travaux de Robert Martin servent à repérer les dépendances contre-intuitives, comme un module stable dépendant d'un module instable.",
+    "mots_cles_attendus": ["afférent", "efférent", "instabilité", "stabilité", "dépendances"]
+  },
+  {
+    "id": "genie_logiciel-184",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_evolutive",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la métrique LCOM (lack of cohesion of methods) et que signale une valeur élevée ?",
+    "reponse_reference": "La métrique LCOM mesure le manque de cohésion d'une classe en comparant les paires de méthodes qui partagent des attributs à celles qui n'en partagent pas. Une valeur élevée indique qu'une classe regroupe des responsabilités sans rapport, signe d'un mauvais découpage. C'est un indice précieux pour repérer les classes candidates au refactoring, complémentaire de la lecture humaine du code.",
+    "mots_cles_attendus": ["cohésion", "attributs partagés", "découpage", "refactoring", "responsabilités"]
+  },
+  {
+    "id": "genie_logiciel-185",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_evolutive",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le module central de votre application a un couplage afférent de 40 : quarante autres modules en dépendent, et chaque changement y devient un projet. Comment réagissez-vous ?",
+    "reponse_reference": "Il faut d'abord réduire et stabiliser la surface exposée : n'exposer que des interfaces étroites et stables, et masquer les détails internes. Ensuite, on vérifie le sens des dépendances : si le module central dépend lui-même de modules instables, on inverse ces dépendances pour respecter le principe de dépendance stable. À terme, on peut aussi scinder le module en plusieurs composants aux responsabilités distinctes, ce qui diminue le couplage afférent de chacun.",
+    "mots_cles_attendus": ["surface exposée", "interfaces étroites", "inversion", "principe de dépendance stable", "scission"]
+  },
+  {
+    "id": "genie_logiciel-186",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_planification",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment une simulation de Monte-Carlo peut-elle améliorer la prévision des délais d'un projet ?",
+    "reponse_reference": "La simulation de Monte-Carlo tire des milliers de scénarios aléatoires à partir de la distribution des délais passés de l'équipe (par exemple les temps de cycle des dernières stories) et calcule la probabilité de terminer à chaque date. Elle produit une réponse en termes de confiance : « 85 % de chances de finir avant telle date », au lieu d'une date unique trompeuse. Elle exploite les données historiques réelles de l'équipe, ce qui la rend plus fiable que les estimations individuelles.",
+    "mots_cles_attendus": ["scénarios aléatoires", "distribution", "probabilité", "données historiques", "fourchette"]
+  },
+  {
+    "id": "genie_logiciel-187",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_planification",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "La direction exige une date ferme pour un périmètre flou, alors que l'équipe n'a encore jamais livré de fonctionnalité comparable. Que répondez-vous ?",
+    "reponse_reference": "Il faut refuser la date unique et proposer une prévision probabiliste : on décompose le périmètre en tranches, on estime la taille relative de chacune et on projette avec la vélocité historique, en fourchette (optimiste, probable, pessimiste). On explique que la précision augmentera avec les premiers sprints et que le périmètre, la date et la qualité ne peuvent pas être fixés tous les trois. On propose des jalons courts de réévaluation plutôt qu'un engagement unique précoce.",
+    "mots_cles_attendus": ["prévision probabiliste", "fourchette", "vélocité", "jalons", "triangle qualité"]
+  },
+  {
+    "id": "genie_logiciel-188",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un scénario d'attribut qualité (quality attribute scenario) et comment est-il structuré ?",
+    "reponse_reference": "Un scénario d'attribut qualité formalise une exigence non fonctionnelle de façon testable en précisant six éléments : la source du stimulus, le stimulus, l'artefact concerné, l'environnement, la réponse attendue et sa mesure. Par exemple : un utilisateur lance une recherche pendant les pics de charge, et le système doit afficher les résultats en moins d'une seconde dans 95 % des cas. Cette structure permet de transformer des exigences vagues en critères de test d'architecture.",
+    "mots_cles_attendus": ["stimulus", "artefact", "environnement", "réponse", "mesure"]
+  },
+  {
+    "id": "genie_logiciel-189",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le client exige une disponibilité de 99,9 % du service de paiement. Rédigez le scénario d'attribut qualité qui rend cette exigence testable.",
+    "reponse_reference": "On formule : la source est un client effectuant un paiement, le stimulus est une requête de paiement, l'artefact est le service de paiement, l'environnement est le fonctionnement nominal avec charge de pointe, la réponse est le traitement correct de la requête. La mesure associée est : le service est disponible 99,9 % du temps sur une fenêtre glissante d'un mois, soit moins de 43 minutes d'indisponibilité cumulée. Ce scénario devient le critère des tests de résilience et des engagements contractuels.",
+    "mots_cles_attendus": ["stimulus", "artefact", "mesure", "fenêtre glissante", "testable"]
+  },
+  {
+    "id": "genie_logiciel-190",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la définition de prêt (Definition of Ready) et comment la distinguer de la définition de terminé ?",
+    "reponse_reference": "La définition de prêt liste les conditions qu'un élément du backlog doit remplir avant qu'une équipe l'engage dans un sprint : besoin compris, critères d'acceptation écrits, dépendances levées, maquettes disponibles. La définition de terminé, elle, décrit les conditions pour que le travail soit considéré comme livrable en fin de sprint. L'une protège l'entrée du flux, l'autre sa sortie : un élément prêt mais jamais fini signale une définition de terminé trop exigeante ou une équipe surchargée.",
+    "mots_cles_attendus": ["conditions d'entrée", "critères d'acceptation", "dépendances", "entrée du flux", "sortie du flux"]
+  },
+  {
+    "id": "genie_logiciel-191",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_specifications",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "En planification de sprint, une story est engagée sans critères d'acceptation ni maquette, et bloque l'équipe dès le premier jour. Quel processus corrige ce problème ?",
+    "reponse_reference": "Il faut instituer une définition de prêt vérifiée avant la planification : chaque story doit avoir un besoin compris, des critères d'acceptation écrits, les dépendances identifiées et les éléments d'interface disponibles. Une session d'affinage en amont du sprint permet de vérifier ces conditions et de renvoyer au backlog ce qui n'est pas prêt. La planification ne retient alors que du travail réellement engageable, ce qui stabilise la vélocité.",
+    "mots_cles_attendus": ["definition of ready", "affinage", "critères d'acceptation", "backlog", "vélocité"]
+  },
+  {
+    "id": "genie_logiciel-192",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un diagramme de flux cumulé (cumulative flow diagram) et que permet-il de diagnostiquer ?",
+    "reponse_reference": "Un diagramme de flux cumulé superpose, pour chaque étape du processus (à faire, en cours, en test, livré), l'évolution du nombre d'éléments qui s'y trouvent. L'écart entre deux courbes donne la file d'attente de chaque étape : une bande qui s'élargit révèle un goulet d'étranglement. On y lit aussi le temps de cycle moyen et la stabilité du flux, ce qui en fait l'outil de diagnostic privilégié des équipes Kanban.",
+    "mots_cles_attendus": ["files d'attente", "étapes", "goulet", "temps de cycle", "kanban"]
+  },
+  {
+    "id": "genie_logiciel-193",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le diagramme de flux cumulé de votre équipe montre que la bande « en attente de test » s'élargit depuis six semaines alors que le développement reste stable. Que diagnostiquez-vous et que faites-vous ?",
+    "reponse_reference": "La bande qui s'élargit en attente de test révèle un goulet : la capacité de test est inférieure au débit du développement, ou les tests sont trop lents et fragiles. On peut rééquilibrer les compétences (développeurs qui participent aux tests), automatiser davantage ou limiter le travail en cours en amont pour ne pas engorger l'étape. Le diagramme permet ensuite de vérifier que la bande se stabilise et que le temps de cycle redescend.",
+    "mots_cles_attendus": ["goulet", "capacité de test", "travail en cours", "automatisation", "rééquilibrage"]
+  },
+  {
+    "id": "genie_logiciel-194",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'énonce la loi de Little et comment s'applique-t-elle au flux de développement ?",
+    "reponse_reference": "La loi de Little relie trois grandeurs : le temps de cycle est égal au travail en cours divisé par le débit de livraison. En développement, cela signifie que si une équipe livre en moyenne cinq éléments par semaine et que trente éléments sont en cours, le temps de cycle moyen est de six semaines. Pour livrer plus vite, on agit donc d'abord sur le travail en cours, en le limitant, plutôt que de demander aux gens d'aller plus vite.",
+    "mots_cles_attendus": ["temps de cycle", "travail en cours", "débit", "limitation", "prévision"]
+  },
+  {
+    "id": "genie_logiciel-195",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Votre équipe a 40 tâches en cours en permanence et livre deux tâches par semaine : les délais explosent. En appliquant la loi de Little, quelle est la première mesure que vous prenez ?",
+    "reponse_reference": "La loi de Little indique un temps de cycle moyen de vingt semaines : la première mesure est de réduire drastiquement le travail en cours, par exemple en instaurant une limite WIP de cinq à huit tâches et en terminant avant d'en commencer de nouvelles. On traite d'abord les tâches les plus anciennes pour purger les files d'attente. Le temps de cycle devrait chuter mécaniquement, sans demander à personne de travailler davantage.",
+    "mots_cles_attendus": ["loi de little", "limite wip", "finir avant de commencer", "files d'attente", "temps de cycle"]
+  },
+  {
+    "id": "genie_logiciel-196",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment la théorie des contraintes s'applique-t-elle à l'optimisation d'un processus de développement ?",
+    "reponse_reference": "La théorie des contraintes pose que le débit d'un système est limité par un petit nombre de contraintes, souvent une seule : optimiser ailleurs n'améliore rien, voire aggrave les files d'attente. On identifie donc la contrainte (l'étape la plus lente ou la plus chargée), on l'exploite au maximum, on lui subordonne le reste du flux, puis on l'élève si nécessaire. En développement, la contrainte est souvent la revue de code, les tests ou une compétence rare, et non l'écriture du code elle-même.",
+    "mots_cles_attendus": ["contrainte", "débit", "goulet", "subordination", "exploitation"]
+  },
+  {
+    "id": "genie_logiciel-197",
+    "domaine": "genie_logiciel",
+    "sous_theme": "metriques_et_flux",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "En rétrospective, l'équipe se plaint d'être débordée, mais les métriques montrent un débit stable. Comment utilisez-vous les données de flux pour orienter la discussion ?",
+    "reponse_reference": "On projette le diagramme de flux cumulé et le temps de cycle : si le débit est stable mais que le travail en cours augmente, le sentiment de débordement vient de la multiplication des tâches parallèles, pas d'un manque d'effort. La discussion se concentre alors sur les causes de cette accumulation : interruptions, tâches bloquées, démarrages prématurés. On débouche sur des actions mesurables, comme une limite WIP ou une politique d'interruption, dont l'effet se lira au sprint suivant.",
+    "mots_cles_attendus": ["données de flux", "travail en cours", "interruptions", "limite wip", "actions mesurables"]
+  },
+  {
+    "id": "genie_logiciel-198",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un release train (train de livraison) et dans quel contexte l'adopter ?",
+    "reponse_reference": "Un release train synchronise plusieurs équipes sur un calendrier commun de livraison : toutes embarquent leurs incréments dans une version publiée à dates fixes, comme des wagons sur un train. Il convient aux grands produits où de nombreuses équipes doivent coordonner leurs sorties et leurs dépendances. Le train impose une discipline de cadence : ce qui n'est pas prêt attend le train suivant, ce qui évite les intégrations chaotiques de fin de cycle.",
+    "mots_cles_attendus": ["synchronisation", "calendrier commun", "plusieurs équipes", "cadence", "dépendances"]
+  },
+  {
+    "id": "genie_logiciel-199",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un monorepo héberge 50 équipes : tout le monde pousse sur la même branche principale et le pipeline commun devient un goulet. Comment réorganisez-vous ?",
+    "reponse_reference": "Il faut découper l'intégration continue par zones de propriété : chaque équipe possède des répertoires et son pipeline ne se déclenche que sur les chemins qu'elle touche, avec des tests sélectifs sur les modules impactés. On garde un socle commun de validation sur la branche principale, plus léger, et des règles de propriété (CODEOWNERS) pour les revues croisées. La scalabilité d'un monorepo repose sur cet outillage : builds incrémentaux, cache distribué et exécuteurs dédiés par équipe.",
+    "mots_cles_attendus": ["propriété", "tests sélectifs", "pipeline par zone", "codeowners", "build incrémental"]
+  },
+  {
+    "id": "genie_logiciel-200",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une refonte majeure de l'algorithme de recherche doit être livrée sans risque, avec possibilité de revenir en arrière en quelques secondes. Quelle technique de déploiement mettez-vous en place ?",
+    "reponse_reference": "On déploie le nouvel algorithme en parallèle de l'ancien, masqué derrière un feature flag : d'abord invisible, puis activé pour un petit pourcentage d'utilisateurs, avec comparaison des métriques (pertinence, latence, erreurs). Le retour arrière est instantané par simple bascule du flag, sans redéploiement. Une fois la confiance établie, on augmente progressivement le trafic puis on supprime l'ancien code et le flag devenu inutile.",
+    "mots_cles_attendus": ["feature flag", "activation progressive", "métriques", "retour arrière instantané", "nettoyage du flag"]
+  }
+]

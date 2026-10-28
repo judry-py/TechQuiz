@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-221",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un contexte borné (bounded context) dans le Domain-Driven Design ?",
+    "reponse_reference": "Un contexte borné délimite un périmètre à l'intérieur duquel un modèle de domaine est cohérent et les termes ont un sens unique et précis. Le même mot peut désigner des concepts différents dans deux contextes : un « client » n'a pas le même sens pour l'équipe commerciale et pour l'équipe de facturation. Les contextes communiquent entre eux par des frontières explicites et des contrats, ce qui évite de fusionner des modèles incompatibles dans un méga-modèle.",
+    "mots_cles_attendus": ["périmètre", "modèle cohérent", "langage", "frontières", "contrats"]
+  },
+  {
+    "id": "genie_logiciel-222",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le langage omniprésent (ubiquitous language) du DDD et comment le faire vivre ?",
+    "reponse_reference": "Le langage omniprésent est le vocabulaire commun, validé par les experts métier et les développeurs, utilisé partout : discussions, spécifications, tests et surtout noms des classes et méthodes. Il élimine les traductions mentales permanentes entre le jargon technique et le vocabulaire métier. Il se fait vivre par des ateliers de modélisation, la relecture croisée des termes et la correction systématique du code qui s'en écarte.",
+    "mots_cles_attendus": ["vocabulaire commun", "métier", "code", "tests", "ateliers"]
+  },
+  {
+    "id": "genie_logiciel-223",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_experte",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Deux équipes se disputent un modèle unique de « client » : l'une y voit un prospect avec historique marketing, l'autre un débiteur avec échéances de paiement. Comment tranchez-vous ?",
+    "reponse_reference": "On reconnaît deux contextes bornés distincts : le client du marketing et le client de la facturation sont deux modèles différents qui partagent peut-être un identifiant commun. Chaque équipe possède son modèle, son langage et sa persistance, et les deux contextes échangent par des événements ou des API explicites (par exemple, la facturation réagit à la création d'un compte). On évite ainsi le modèle unique fourre-tout qui satisfait mal tout le monde et fige les évolutions.",
+    "mots_cles_attendus": ["contextes bornés", "modèles distincts", "identifiant partagé", "événements", "propriété"]
+  },
+  {
+    "id": "genie_logiciel-224",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Que sont les tests d'architecture (type ArchUnit) et quelle place occupent-ils dans la suite de tests ?",
+    "reponse_reference": "Les tests d'architecture vérifient automatiquement les règles structurelles du code : sens des dépendances entre modules, interdictions d'import, conventions de nommage, absence de cycles. Ils transforment les règles d'architecture en assertions exécutées dans la chaîne d'intégration continue, au même titre que les tests unitaires. Ils sont rapides, déterministes et protègent la structure choisie contre l'érosion silencieuse au fil des contributions.",
+    "mots_cles_attendus": ["règles structurelles", "dépendances", "assertions", "intégration continue", "érosion"]
+  },
+  {
+    "id": "genie_logiciel-225",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_experte",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Votre équipe a adopté la clean architecture, mais un développeur importe régulièrement le framework web directement dans le domaine lors des revues. Comment rendez-vous la règle infaillible ?",
+    "reponse_reference": "On encode la règle de dépendance en tests d'architecture : un test vérifie qu'aucune classe du paquet domaine n'importe le framework, un autre que les cas d'usage ne dépendent pas des adaptateurs, un troisième que les cycles entre modules sont interdits. Ces tests tournent dans la CI et échouent au premier écart, sans dépendre de la vigilance des relecteurs. La revue humaine peut alors se concentrer sur les décisions qui ne s'automatisent pas.",
+    "mots_cles_attendus": ["tests d'architecture", "règle de dépendance", "ci", "automatisation", "revue humaine"]
+  },
+  {
+    "id": "genie_logiciel-226",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_expertes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'event storming et à quelle étape de la découverte d'un domaine sert-il ?",
+    "reponse_reference": "L'event storming est un atelier de modélisation collaborative où les participants posent sur un mur des événements métier (au passé), puis les commandes qui les déclenchent, les acteurs, les règles et les points chauds. Il fait émerger rapidement une vision partagée d'un domaine complexe sans imposer de notation technique. Il sert en amont d'un projet ou d'une refonte pour aligner métier et technique et identifier les contextes bornés.",
+    "mots_cles_attendus": ["atelier collaboratif", "événements métier", "vision partagée", "règles", "contextes"]
+  },
+  {
+    "id": "genie_logiciel-227",
+    "domaine": "genie_logiciel",
+    "sous_theme": "exigences_expertes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Vous devez concevoir un système de gestion de sinistres d'assurance, un domaine que l'équipe technique ne connaît pas et sur lequel les experts eux-mêmes divergent. Comment démarrez-vous la découverte ?",
+    "reponse_reference": "On organise un event storming réunissant experts métier de plusieurs services et développeurs : on fait émerger les événements du cycle de vie d'un sinistre (déclaré, expertisé, indemnisé, contesté) et les règles qui les déclenchent. Les divergences entre experts deviennent visibles comme des points chauds à trancher, et non des bugs découverts après livraison. L'atelier débouche sur des contextes bornés (déclaration, expertise, indemnisation) et une première cartographie des règles à modéliser.",
+    "mots_cles_attendus": ["event storming", "événements", "experts métier", "points chauds", "contextes bornés"]
+  },
+  {
+    "id": "genie_logiciel-228",
+    "domaine": "genie_logiciel",
+    "sous_theme": "amelioration_continue_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment la méthode des cinq pourquoi aide-t-elle à traiter les causes racines d'un problème récurrent ?",
+    "reponse_reference": "La méthode des cinq pourquoi consiste à remonter d'un symptôme vers sa cause profonde en répétant la question « pourquoi ? », typiquement cinq fois, jusqu'à atteindre une cause sur laquelle on peut réellement agir. Elle évite les correctifs superficiels qui ne traitent que la manifestation du problème. Elle doit être pratiquée en collectif, sur des faits et non des suppositions, et se conclure par une action de prévention vérifiable.",
+    "mots_cles_attendus": ["cause racine", "remontée", "collectif", "prévention", "faits"]
+  },
+  {
+    "id": "genie_logiciel-229",
+    "domaine": "genie_logiciel",
+    "sous_theme": "amelioration_continue_experte",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un déploiement échoue pour la troisième fois ce mois-ci sur la même étape de migration de base de données. Au lieu d'un nouveau correctif rapide, comment analysez-vous durablement ?",
+    "reponse_reference": "On réunit l'équipe autour d'une analyse des cinq pourquoi : pourquoi la migration échoue-t-elle (contrainte violée) ; pourquoi la contrainte n'a-t-elle pas été vue (pas de test sur un volume réaliste) ; pourquoi (l'environnement de test n'a pas les données de production) ; et ainsi de suite jusqu'à la cause profonde. La réponse mène à des actions structurelles : données anonymisées représentatives en test, répétition des migrations en CI, revue systématique des migrations. On suit l'effet des actions sur les déploiements suivants.",
+    "mots_cles_attendus": ["cinq pourquoi", "cause racine", "environnement représentatif", "prévention", "suivi"]
+  },
+  {
+    "id": "genie_logiciel-230",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'estimation par affinités (affinity estimation) et quel avantage offre-t-elle sur le planning poker ?",
+    "reponse_reference": "L'estimation par affinités consiste à trier silencieusement toutes les stories en colonnes de taille relative, en les comparant deux à deux, jusqu'à obtenir des groupes homogènes auxquels on attribue ensuite des points. Elle traite un grand nombre d'éléments en peu de temps et fait ressortir naturellement les tailles aberrantes ou les stories floues. Comme le planning poker, elle repose sur la comparaison relative, mais elle est plus adaptée aux backlogs volumineux.",
+    "mots_cles_attendus": ["tri comparatif", "groupes homogènes", "taille relative", "backlog volumineux", "rapidité"]
+  },
+  {
+    "id": "genie_logiciel-231",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le mouvement no-estimates et sur quels arguments s'appuie-t-il ?",
+    "reponse_reference": "Le mouvement no-estimates remet en cause la valeur des estimations individuelles : elles consomment du temps, sont souvent fausses et créent de faux engagements. Ses tenants proposent de les remplacer par le découpage systématique du travail en tranches de taille homogène et par des prévisions statistiques fondées sur le débit historique réel. L'estimation ne disparaît pas totalement, mais elle devient un sous-produit du flux plutôt qu'un rituel préalable.",
+    "mots_cles_attendus": ["découpage homogène", "débit historique", "prévision statistique", "faux engagements", "coût des estimations"]
+  },
+  {
+    "id": "genie_logiciel-232",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_experte",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une équipe mature veut abandonner les estimations en points, mais la direction en dépend pour ses feuilles de route. Quelle transition proposez-vous ?",
+    "reponse_reference": "On propose une transition progressive : d'abord découper le travail en éléments de taille homogène et compter le débit réellement livré par semaine, ce qui donne une donnée fiable. On remplace ensuite les projections en points par des fourchettes statistiques issues de ce débit, tout en gardant temporairement le vocabulaire des points pour les comités de direction. La confiance se gagne par la qualité des prévisions produites, pas par un changement de doctrine brutal.",
+    "mots_cles_attendus": ["débit", "fourchettes statistiques", "transition", "feuille de route", "confiance"]
+  },
+  {
+    "id": "genie_logiciel-233",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche_expertes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelle différence faites-vous entre une branche de release (release branch) et une simple étiquette (tag) sur la branche principale ?",
+    "reponse_reference": "Une branche de release fige une ligne de code dédiée à la préparation d'une version, sur laquelle on applique des correctifs ciblés avant la sortie ; elle isole la version des évolutions en cours. Un tag pose simplement un repère immuable sur un commit de la branche principale, sans ligne séparée : la correction d'une version passée se fait alors par une branche de correctif recréée depuis le tag. Les branches de release sont utiles pour les longues phases de stabilisation, les tags suffisent quand la principale est toujours déployable.",
+    "mots_cles_attendus": ["release branch", "tag", "stabilisation", "correctifs", "branche principale"]
+  },
+  {
+    "id": "genie_logiciel-234",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche_expertes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un incident critique survient en production alors que la branche principale contient déjà du code non stabilisé. Comment organisez-vous le correctif ?",
+    "reponse_reference": "On crée une branche de correctif depuis le commit exact déployé en production, on y applique la correction avec ses tests, puis on la déploie après validation. On fusionne ensuite le correctif dans la branche principale, en résolvant les éventuels conflits, pour que le correctif ne soit pas perdu dans la prochaine version. Cette situation plaide pour une principale toujours déployable et des déploiements fréquents, qui réduisent l'écart entre production et développement.",
+    "mots_cles_attendus": ["branche de correctif", "commit déployé", "fusion dans la principale", "tests", "principale déployable"]
+  },
+  {
+    "id": "genie_logiciel-235",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche_expertes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement canari (canary release) et quelles conditions exigent-ils ?",
+    "reponse_reference": "Le déploiement canari consiste à diriger une petite fraction du trafic réel vers la nouvelle version, pendant que l'ancienne continue de servir le reste, puis à augmenter progressivement la part si les indicateurs restent bons. Il exige un routage de trafic fin, une observabilité solide (erreurs, latence, métriques métier) et une comparaison automatique entre versions. C'est la technique de réduction du risque par excellence pour les changements dont l'impact utilisateur est difficile à prévoir.",
+    "mots_cles_attendus": ["fraction de trafic", "augmentation progressive", "observabilité", "comparaison", "risque"]
+  },
+  {
+    "id": "genie_logiciel-236",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche_expertes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment fonctionne un déploiement bleu-vert et en quoi diffère-t-il d'un canari ?",
+    "reponse_reference": "Le déploiement bleu-vert maintient deux environnements complets : le bleu (version courante) et le vert (nouvelle version), et bascule tout le trafic de l'un à l'autre en un instant une fois le vert validé. Le retour arrière est immédiat, en rebasculant sur le bleu. À la différence du canari, la bascule est globale et non progressive : on n'expose qu'une version à la fois à l'ensemble des utilisateurs, ce qui suppose que le vert ait été validé au préalable.",
+    "mots_cles_attendus": ["deux environnements", "bascule instantanée", "retour arrière", "validation préalable", "trafic global"]
+  },
+  {
+    "id": "genie_logiciel-237",
+    "domaine": "genie_logiciel",
+    "sous_theme": "strategies_de_branche_expertes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Vous devez renommer une table en production, utilisée par plusieurs services qui se déploient indépendamment. Comment menez-vous l'opération sans coupure ?",
+    "reponse_reference": "On applique le pattern expand/contract : d'abord on crée la nouvelle table et l'on synchronise les écritures vers les deux tables, puis on migre progressivement les services lecteurs vers la nouvelle. Pendant la transition, une vue de compatibilité portant l'ancien nom peut masquer la différence aux services non migrés. La suppression de l'ancienne table n'a lieu qu'une fois que plus aucun service déployé ne s'y réfère, dans une migration séparée.",
+    "mots_cles_attendus": ["expand/contract", "double écriture", "vue de compatibilité", "migration des lecteurs", "suppression différée"]
+  },
+  {
+    "id": "genie_logiciel-238",
+    "domaine": "genie_logiciel",
+    "sous_theme": "amelioration_continue_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une rétrospective fondée sur les données et quelles métriques y mobiliser ?",
+    "reponse_reference": "Une rétrospective fondée sur les données part des faits mesurés plutôt que des impressions : temps de cycle, taux de défauts, délais de revue, métriques DORA, résultats de sondages d'équipe. Les métriques servent de point de départ à la discussion sur les causes et évitent les débats d'opinion. On les choisit peu nombreuses, stables dans le temps et comprises de tous, pour observer les effets des actions décidées d'un sprint à l'autre.",
+    "mots_cles_attendus": ["faits mesurés", "métriques", "causes", "stabilité", "suivi des effets"]
+  },
+  {
+    "id": "genie_logiciel-239",
+    "domaine": "genie_logiciel",
+    "sous_theme": "amelioration_continue_experte",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une communauté de pratique (guild) et quel rôle joue-t-elle dans l'amélioration continue d'une organisation ?",
+    "reponse_reference": "Une communauté de pratique regroupe, au-delà des équipes de livraison, les personnes partageant un même métier ou intérêt technique (qualité, frontend, sécurité) pour échanger, harmoniser les pratiques et porter des améliorations transverses. Elle fixe des standards là où les équipes seules divergeraient, tout en restant un lieu de partage volontaire et non hiérarchique. C'est un levier d'amélioration continue à l'échelle de l'organisation, complémentaire des rétrospectives d'équipe.",
+    "mots_cles_attendus": ["pratiques transverses", "standards", "partage volontaire", "organisation", "harmonisation"]
+  },
+  {
+    "id": "genie_logiciel-240",
+    "domaine": "genie_logiciel",
+    "sous_theme": "amelioration_continue_experte",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Le même anti-pattern (tests fragiles copiés-collés) apparaît dans quatre équipes malgré des rétrospectives locales. Quel dispositif transverse mettez-vous en place ?",
+    "reponse_reference": "On crée une communauté de pratique dédiée à la qualité des tests, avec des représentants des quatre équipes, qui documente le problème, propose un standard commun et des outils partagés (helpers, gabarits, règles d'analyse statique). La communauté teste la solution sur une équipe pilote, mesure le gain (stabilité de la suite), puis généralise avec un accompagnement. Les rétrospectives locales retrouvent ainsi leur efficacité pour les problèmes propres à chaque équipe.",
+    "mots_cles_attendus": ["communauté de pratique", "standard commun", "équipe pilote", "généralisation", "outillage partagé"]
+  }
+]

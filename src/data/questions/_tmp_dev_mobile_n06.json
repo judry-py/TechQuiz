@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-101",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelles différences entre un deep link, un web link et un App Link sur Android ?",
+    "reponse_reference": "Un deep link utilise un schéma d'URI personnalisé et n'ouvre l'application que si elle est installée. Un web link pointe vers une URL http ou https que l'application peut intercepter, avec un choix possible entre navigateur et application. Un App Link est un web link vérifié : le domaine est associé au certificat de l'application, qui s'ouvre alors directement sans dialogue de choix.",
+    "mots_cles_attendus": ["deep link", "app link", "web link", "uri", "vérification"]
+  },
+  {
+    "id": "dev_mobile-102",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment déclare-t-on un intent-filter pour un deep link sur Android ?",
+    "reponse_reference": "On ajoute dans le manifeste un intent-filter sur l'activité cible avec l'action VIEW, la catégorie BROWSABLE et la catégorie DEFAULT. Un élément data précise le schéma, l'hôte et éventuellement le chemin ou le préfixe de chemin acceptés. Pour un App Link vérifié, l'attribut autoVerify est activé et le domaine doit publier le fichier assetlinks.json correspondant.",
+    "mots_cles_attendus": ["intent-filter", "action view", "browsable", "auto-verify", "manifeste"]
+  },
+  {
+    "id": "dev_mobile-103",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un lien promotionnel envoyé par email doit ouvrir directement la fiche produit correspondante dans l'application. Décrire le dispositif complet.",
+    "reponse_reference": "On définit une route du type https://exemple.com/produit/{id} que l'application déclare dans son intent-filter ou son fichier d'association de domaine. Le lien ouvre l'application, qui parse l'URI pour extraire l'identifiant du produit et navigue vers la fiche. Il faut gérer les cas limites : application absente, lien obsolète ou produit supprimé, avec une redirection vers le site ou un écran d'erreur.",
+    "mots_cles_attendus": ["deep link", "app link", "association de domaine", "parsing d'uri", "fiche produit"]
+  },
+  {
+    "id": "dev_mobile-104",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Au clic sur un lien web, Android demande à l'utilisateur de choisir entre le navigateur et l'application. Comment faire ouvrir l'application directement ?",
+    "reponse_reference": "Il faut transformer le lien en App Link vérifié : déclarer autoVerify sur l'intent-filter et publier le fichier assetlinks.json à l'adresse https://domaine/.well-known/assetlinks.json contenant l'empreinte SHA-256 du certificat. La vérification s'effectue à l'installation et l'application devient alors le gestionnaire par défaut de ces liens, sans dialogue de choix. On peut contrôler l'état de la vérification avec la commande adb dédiée.",
+    "mots_cles_attendus": ["app link", "assetlinks.json", "auto-verify", "sha-256", "gestionnaire par défaut"]
+  },
+  {
+    "id": "dev_mobile-105",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment teste-t-on un Bloc Flutter avec bloc_test ?",
+    "reponse_reference": "La bibliothèque bloc_test fournit la fonction blocTest qui instancie le bloc et lui envoie une séquence d'événements prédéfinis. Elle vérifie ensuite que les états émis correspondent exactement à la liste attendue, y compris les états intermédiaires. Les dépendances comme les dépôts sont remplacées par des faux ou des simulacres pour isoler la logique métier du réseau.",
+    "mots_cles_attendus": ["bloc", "bloctest", "événements", "états", "isolation"]
+  },
+  {
+    "id": "dev_mobile-106",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la programmation réactive et quel lien avec les streams dans la gestion d'état mobile ?",
+    "reponse_reference": "La programmation réactive modélise les données comme des flux asynchrones que l'on transforme avec des opérateurs : map, filter, debounce ou combineLatest. En mobile, les streams de Kotlin Flow, RxDart ou RxJS alimentent les états de l'interface et se recomposent automatiquement à chaque nouvelle valeur. Les opérateurs permettent de gérer proprement la concurrence, l'annulation et la gestion d'erreurs.",
+    "mots_cles_attendus": ["programmation réactive", "streams", "opérateurs", "flow", "rxdart"]
+  },
+  {
+    "id": "dev_mobile-107",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application Flutter possède un formulaire d'inscription en trois étapes dont l'état doit être partagé entre les écrans. Quelle architecture d'état choisir et pourquoi ?",
+    "reponse_reference": "Un Bloc ou un Notifier Riverpod dédié au formulaire centralise les données saisies et l'étape courante. Chaque écran émet des événements de saisie et se reconstruit à partir de l'état global du formulaire, ce qui garantit qu'aucune donnée ne se perd entre les étapes. Cette approche permet aussi de valider chaque étape dans la couche métier et de tester le déroulé complet sans interface.",
+    "mots_cles_attendus": ["bloc", "riverpod", "état centralisé", "validation", "multi-étapes"]
+  },
+  {
+    "id": "dev_mobile-108",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le state hoisting dans les interfaces déclaratives ?",
+    "reponse_reference": "Le state hoisting consiste à remonter l'état d'un composant vers son parent ou vers un conteneur d'état partagé. Le composant devient sans état : il reçoit les valeurs et les callbacks en paramètres, ce qui le rend réutilisable et facile à tester. L'état vit alors à un seul endroit, la source de vérité unique, et les modifications redescendent par les paramètres.",
+    "mots_cles_attendus": ["state hoisting", "état remonté", "source unique", "composant sans état"]
+  },
+  {
+    "id": "dev_mobile-109",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement AES et où le mobile l'utilise-t-il ?",
+    "reponse_reference": "AES est un algorithme de chiffrement symétrique standardisé, utilisé en AES-256 pour chiffrer des données locales sensibles. La même clé sert à chiffrer et déchiffrer, d'où l'importance cruciale de sa protection dans un keystore matériel. Sur mobile, il protège les bases de données chiffrées, les fichiers sensibles et les échanges avec les serveurs via TLS.",
+    "mots_cles_attendus": ["aes", "chiffrement symétrique", "clé", "keystore", "aes-256"]
+  },
+  {
+    "id": "dev_mobile-110",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'Android Keystore et quels avantages offre-t-il par rapport à une clé stockée en dur ?",
+    "reponse_reference": "Android Keystore stocke les clés cryptographiques dans un conteneur système, idéalement adossé à un environnement d'exécution sécurisé du matériel. Les clés privées ne quittent jamais le conteneur : les opérations de signature ou de déchiffrement y sont exécutées directement. Une clé en dur dans le code peut être extraite par rétro-ingénierie, alors qu'une clé du Keystore est matériellement inextractible.",
+    "mots_cles_attendus": ["keystore", "tee", "clé privée", "inextractible", "matériel"]
+  },
+  {
+    "id": "dev_mobile-111",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application doit stocker un jeton d'accès utilisateur entre deux sessions. Quelles bonnes pratiques de sécurité appliquer ?",
+    "reponse_reference": "Le jeton ne doit jamais être écrit en clair : on le chiffre avec une clé générée dans le Keystore Android ou le Keychain iOS, ou on utilise un stockage chiffré dédié. Sa durée de vie doit être courte, avec un mécanisme de rafraîchissement et une révocation possible côté serveur. Il faut aussi le sortir des journaux et des captures réseau, et le purger à la déconnexion.",
+    "mots_cles_attendus": ["keystore", "keychain", "chiffrement", "révocation", "jeton"]
+  },
+  {
+    "id": "dev_mobile-112",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment le sandboxing isole-t-il les applications sur Android ?",
+    "reponse_reference": "Chaque application Android tourne dans son propre processus avec un identifiant utilisateur Linux unique attribué à l'installation. Les fichiers de l'application ne sont accessibles qu'à ce processus, sauf partage explicite par FileProvider ou ContentProvider. Ce cloisonnement limite l'impact d'une application compromise sur les données des autres applications.",
+    "mots_cles_attendus": ["sandbox", "uid", "processus", "isolation", "contentprovider"]
+  },
+  {
+    "id": "dev_mobile-113",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test unitaire mobile et que doit-on isoler pour le rendre rapide ?",
+    "reponse_reference": "Un test unitaire vérifie une unité de logique, comme une fonction, un ViewModel ou un reducer, sans appareil ni réseau. Il s'exécute sur la JVM ou la machine hôte en quelques millisecondes grâce au remplacement des dépendances externes par des mocks ou des fakes. Son isolation impose de sortir du code testé tout accès au système : base de données, horloge, réseau ou capteurs.",
+    "mots_cles_attendus": ["test unitaire", "jvm", "mock", "fake", "isolation"]
+  },
+  {
+    "id": "dev_mobile-114",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test instrumenté et quand le préférer au test unitaire ?",
+    "reponse_reference": "Un test instrumenté s'exécute sur un appareil ou un émulateur et a accès au vrai framework de la plateforme : activités, vues, base de données réelle. On l'utilise quand la logique dépend du système Android ou iOS, comme les cycles de vie, les composants d'interface ou les permissions. Il est plus lent et moins stable qu'un test unitaire, donc réservé à ce qui ne peut pas se tester sur la machine hôte.",
+    "mots_cles_attendus": ["test instrumenté", "émulateur", "androidx test", "cycle de vie", "ui"]
+  },
+  {
+    "id": "dev_mobile-115",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe doit tester la logique de calcul d'une remise : pourcentages, cumuls, plafonds et dates de validité. Quels types de tests et d'outils utiliser ?",
+    "reponse_reference": "La logique de remise doit être extraite dans une classe pure, sans dépendance au framework, puis couverte par des tests unitaires JUnit ou équivalents. On énumère les cas limites : remise nulle, cumul interdit, plafond dépassé, date limite incluse ou expirée, arrondis. Ces tests tournent en quelques secondes dans la CI à chaque commit, sans appareil ni serveur.",
+    "mots_cles_attendus": ["tests unitaires", "junit", "cas limites", "classe pure", "ci"]
+  },
+  {
+    "id": "dev_mobile-116",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un écran de connexion doit être validé sur plusieurs tailles d'écran et versions du système. Comment organiser les tests ?",
+    "reponse_reference": "La logique de validation se teste en unitaire, tandis que l'affichage se couvre par des tests instrumentés lancés sur une matrice d'émulateurs couvrant les tailles d'écran et versions cibles. Les tests vérifient que les champs restent accessibles, que le clavier ne masque pas le bouton et que les messages d'erreur s'affichent. La matrice s'automatise dans la CI avec des outils comme Gradle Managed Devices ou Firebase Test Lab.",
+    "mots_cles_attendus": ["test instrumenté", "matrice d'émulateurs", "firebase test lab", "taille d'écran"]
+  },
+  {
+    "id": "dev_mobile-117",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le jank et comment le détecter sur Android ?",
+    "reponse_reference": "Le jank désigne les saccades visibles quand le système rate ses échéances de rendu, au-delà de 16,6 millisecondes par image à 60 Hz. Il se détecte avec le profileur d'Android Studio, les traces système de Perfetto ou les rapports de Macrobenchmark. L'analyse identifie la cause : travail sur le thread principal, mesure de layout excessive ou allocations répétées.",
+    "mots_cles_attendus": ["jank", "frames", "16 ms", "perfetto", "thread principal"]
+  },
+  {
+    "id": "dev_mobile-118",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la réconciliation dans React Native et comment éviter les re-rendus inutiles ?",
+    "reponse_reference": "La réconciliation est le processus par lequel React compare le nouvel arbre d'éléments avec le précédent pour ne mettre à jour que ce qui a changé. Un composant se re-rend quand son état ou ses propriétés changent, ce qui peut cascader sur ses enfants. On limite les re-rendus avec React.memo, des callbacks stables via useCallback et des clés de liste correctes.",
+    "mots_cles_attendus": ["réconciliation", "react native", "memo", "usecallback", "clés"]
+  },
+  {
+    "id": "dev_mobile-119",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un écran Flutter reconstruit une centaine de widgets à chaque battement de l'horloge. Comment diagnostiquer et optimiser ?",
+    "reponse_reference": "Le DevTools de Flutter montre quels widgets se reconstruisent et pourquoi, et le Profiler mesure le coût de chaque frame. On stabilise alors l'arbre : constructeurs const pour les widgets immuables, découpage en petits widgets pour isoler les reconstructions, et sélecteurs pour ne réagir qu'aux valeurs réellement utilisées. Le repaintBoundary évite aussi de repeindre des zones qui ne changent pas.",
+    "mots_cles_attendus": ["const", "devtools", "repaintboundary", "reconstruction", "profiler"]
+  },
+  {
+    "id": "dev_mobile-120",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application React Native subit des saccades lors de transferts de données volumineux entre JavaScript et la partie native. Quelle en est la cause et comment l'atténuer ?",
+    "reponse_reference": "Les données transitent par le pont entre JavaScript et le natif, un canal asynchrone sérialisé qui devient un goulot d'étranglement sur de gros volumes. Il faut réduire les échanges : ne transférer que les champs utiles, découper les traitements en lots, et déléguer les traitements lourds au natif ou à des modules optimisés. L'architecture moderne avec JSI et les TurboModules réduit aussi la surcharge de sérialisation.",
+    "mots_cles_attendus": ["bridge", "sérialisation", "jsi", "turbo modules", "goulot d'étranglement"]
+  }
+]

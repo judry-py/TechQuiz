@@ -1,0 +1,202 @@
+[
+  {
+    "id": "web3_blockchain-081",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token non fongible selon le standard ERC-721 et que représente son tokenId ?",
+    "reponse_reference": "Un token ERC-721 est un actif unique et indivisible, identifié par un couple (adresse du contrat, tokenId) : chaque tokenId désigne un objet distinct qui n'est pas interchangeable avec un autre. Le standard définit les fonctions ownerOf, transferFrom, approve et balanceOf, ainsi que l'événement Transfer, pour suivre la propriété de chaque identifiant.",
+    "mots_cles_attendus": ["ERC-721", "non fongible", "tokenId", "unique", "ownerOf"]
+  },
+  {
+    "id": "web3_blockchain-082",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le standard ERC-1155 et en quoi se distingue-t-il de l'ERC-721 ?",
+    "reponse_reference": "L'ERC-1155 est un standard multi-token qui gère dans un seul contrat des actifs fongibles, non fongibles et semi-fongibles, chaque type étant identifié par un id associé à une quantité. Il permet des transferts par lots (batch transfer) de plusieurs types de tokens en une seule transaction, ce qui réduit fortement les coûts de gas par rapport à des contrats séparés.",
+    "mots_cles_attendus": ["ERC-1155", "multi-token", "semi-fongible", "batch transfer", "un seul contrat"]
+  },
+  {
+    "id": "web3_blockchain-083",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Où sont stockées les métadonnées d'un NFT et quel est le rôle de la fonction tokenURI ?",
+    "reponse_reference": "Les métadonnées (image, nom, attributs) ne sont généralement pas stockées dans le contrat, mais sur un stockage externe référencé par la fonction tokenURI, qui renvoie l'URL ou l'identifiant du fichier. Les bonnes pratiques utilisent un contenu adressé par son contenu, comme un CID IPFS, afin que le fichier ne puisse pas être modifié ou disparaître avec un serveur.",
+    "mots_cles_attendus": ["métadonnées", "tokenURI", "IPFS", "CID", "hors contrat"]
+  },
+  {
+    "id": "web3_blockchain-084",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionne un teneur de marché automatisé (AMM) à produit constant de type Uniswap ?",
+    "reponse_reference": "Un AMM remplace le carnet d'ordres par un pool de liquidité contenant deux actifs, régi par la formule x*y=k où x et y sont les réserves et k une constante. Un échange modifie les réserves de sorte que le produit reste constant, ce qui déplace mécaniquement le prix : plus l'échange est gros, plus le prix obtenu se dégrade (slippage).",
+    "mots_cles_attendus": ["AMM", "pool", "x*y=k", "réserves", "prix mécanique"]
+  },
+  {
+    "id": "web3_blockchain-085",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la perte impermanente (impermanent loss) d'un fournisseur de liquidité ?",
+    "reponse_reference": "La perte impermanente est l'écart entre la valeur des actifs détenus dans un pool AMM et leur valeur s'ils avaient été simplement conservés, causé par l'évolution des prix. Elle est dite impermanente car elle peut se résorber si les prix reviennent à leur niveau initial, mais elle devient définitive si le fournisseur retire sa liquidité entre-temps, et elle n'est pas compensée par les frais si l'écart de prix est trop grand.",
+    "mots_cles_attendus": ["impermanent loss", "pool", "écart de valeur", "prix", "frais"]
+  },
+  {
+    "id": "web3_blockchain-086",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un oracle dans une blockchain et pourquoi parle-t-on du « problème de l'oracle » ?",
+    "reponse_reference": "Un oracle est un service qui apporte à la chaîne des données externes (prix, météo, résultat sportif) qu'un contrat ne peut pas obtenir seul, la blockchain étant un système fermé. Le problème de l'oracle est que la donnée doit être fiable : un contrat ne vaut que ce que vaut sa source, d'où la nécessité de réseaux d'oracles décentralisés qui agrègent plusieurs sources et nœuds.",
+    "mots_cles_attendus": ["oracle", "données externes", "source fiable", "agrégation", "décentralisé"]
+  },
+  {
+    "id": "web3_blockchain-087",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Dans quels cas préférer l'ERC-1155 à l'ERC-721 pour un projet de collection ?",
+    "reponse_reference": "L'ERC-1155 est préférable pour les jeux ou les collections comportant de nombreux exemplaires du même objet (armes, cartes, skins), car un seul contrat gère tous les types et les transferts par lots réduisent les coûts. L'ERC-721 reste adapté aux œuvres réellement uniques où chaque jeton doit avoir sa propre histoire et ses propres métadonnées.",
+    "mots_cles_attendus": ["ERC-1155", "exemplaires", "jeux", "coûts", "ERC-721"]
+  },
+  {
+    "id": "web3_blockchain-088",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur dépose 1 ETH et 2 000 USDC dans un pool ETH/USDC. Quelques semaines plus tard, le prix de l'ETH a doublé. Que constate-t-il en retirant sa liquidité ?",
+    "reponse_reference": "Il récupère une quantité d'ETH inférieure et une quantité d'USDC supérieure à son dépôt initial, car le pool a vendu de l'ETH en hausse pour rééquilibrer les réserves. La valeur totale de ses parts est supérieure au dépôt mais inférieure à ce qu'il aurait eu en conservant simplement ses actifs : c'est la perte impermanente, partiellement compensée par les frais de trading perçus.",
+    "mots_cles_attendus": ["rééquilibrage", "perte impermanente", "frais de trading", "réserves", "valeur"]
+  },
+  {
+    "id": "web3_blockchain-089",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le slippage dans un échange sur AMM et comment s'en prémunir ?",
+    "reponse_reference": "Le slippage est l'écart entre le prix affiché au moment de la soumission et le prix réellement obtenu, dû au fait qu'un gros ordre déplace la courbe x*y=k et que d'autres transactions peuvent passer avant. On s'en prémunit en fixant un slippage maximal toléré : si le prix d'exécution s'en écarte trop, la transaction est annulée automatiquement.",
+    "mots_cles_attendus": ["slippage", "écart de prix", "tolérance", "annulation", "x*y=k"]
+  },
+  {
+    "id": "web3_blockchain-090",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un NFT acheté récemment ne s'affiche plus : son image est remplacée par un message d'erreur. Quelles causes techniques peuvent l'expliquer ?",
+    "reponse_reference": "Le plus souvent, les métadonnées pointaient vers un serveur centralisé (URL http) aujourd'hui hors ligne, ou vers un stockage dont l'opérateur a modifié ou supprimé le fichier. Le token existe toujours sur la chaîne, mais son visuel dépend d'un stockage externe : un projet sérieux référence un CID IPFS, adressé par le contenu, qui reste disponible tant qu'au moins un nœud IPFS l'héberge.",
+    "mots_cles_attendus": ["serveur centralisé", "hors ligne", "tokenURI", "IPFS", "métadonnées"]
+  },
+  {
+    "id": "web3_blockchain-091",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionnent les royalties d'un NFT et quel standard les encadre sur Ethereum ?",
+    "reponse_reference": "Les royalties reversent automatiquement à l'auteur un pourcentage du prix à chaque revente du NFT sur un marché compatible. Le standard EIP-2981 expose la fonction royaltyInfo qui renvoie le destinataire et le pourcentage dus, mais leur application dépend des places de marché, qui doivent choisir de les honorer lors du règlement.",
+    "mots_cles_attendus": ["royalties", "revente", "EIP-2981", "royaltyInfo", "pourcentage"]
+  },
+  {
+    "id": "web3_blockchain-092",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment un réseau d'oracles comme Chainlink produit-il un prix fiable pour un contrat DeFi ?",
+    "reponse_reference": "Chainlink fait rapporter un même prix par de nombreux nœuds indépendants qui puisent dans plusieurs sources (agrégateurs d'échanges, flux institutionnels), puis agrège leurs réponses en éliminant les valeurs aberrantes. Le résultat médian est publié dans un contrat agrégateur avec un horodatage et un seuil de fraîcheur, et les nœuds sont incités financièrement à répondre correctement.",
+    "mots_cles_attendus": ["nœuds", "agrégation", "médiane", "agrégateur", "fraîcheur"]
+  },
+  {
+    "id": "web3_blockchain-093",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur voit son swap échouer alors que le prix affiché était acceptable quelques secondes plus tôt. Que s'est-il probablement passé dans le mempool ?",
+    "reponse_reference": "Des transactions concurrentes ont probablement été exécutées juste avant la sienne, déplaçant le prix du pool au-delà de sa tolérance de slippage. Le protocole a alors annulé son échange pour le protéger d'un prix dégradé, éventuellement sous l'effet d'un robot de front-running qui exploite la visibilité des ordres dans le mempool.",
+    "mots_cles_attendus": ["mempool", "front-running", "slippage", "prix dégradé", "annulation"]
+  },
+  {
+    "id": "web3_blockchain-094",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le lazy minting d'un NFT et quel avantage économique apporte-t-il ?",
+    "reponse_reference": "Le lazy minting consiste à ne pas écrire le token dans le contrat à la création : l'auteur signe hors chaîne un bon (voucher) décrivant l'œuvre, et le NFT n'est frappé que lorsque l'acheteur paie. Le coût de la frappe est ainsi transféré à l'acheteur, et l'auteur peut lister des œuvres gratuitement sans payer de gas tant qu'elles ne se vendent pas.",
+    "mots_cles_attendus": ["lazy minting", "signature hors chaîne", "voucher", "gas", "à l'achat"]
+  },
+  {
+    "id": "web3_blockchain-095",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un protocole de prêt calcule les prix de ses garanties en lisant directement le solde de réserves d'un DEX. Pourquoi un auditeur qualifierait-il ce choix de dangereux ?",
+    "reponse_reference": "Le prix instantané d'un pool (spot price) peut être manipulé en une seule transaction : un attaquant fait un gros swap, fausse le prix lu, emprunte plus que la valeur réelle de la garantie puis s'enfuit avec les fonds. Un protocole doit utiliser un oracle résistant comme un prix moyen pondéré dans le temps (TWAP) ou un agrégateur décentralisé comme Chainlink.",
+    "mots_cles_attendus": ["spot price", "manipulation", "swap", "TWAP", "oracle décentralisé"]
+  },
+  {
+    "id": "web3_blockchain-096",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un jeton LP (liquidity provider token) et que représente-t-il ?",
+    "reponse_reference": "Un jeton LP est un token reçu en échange d'un dépôt de liquidité dans un pool, qui représente la part du déposant dans les réserves. Il peut être échangé, transféré ou déposé dans d'autres protocoles (farming), et doit être restitué au pool pour récupérer la part des réserves plus les frais accumulés.",
+    "mots_cles_attendus": ["jeton LP", "part du pool", "dépôt", "frais accumulés", "farming"]
+  },
+  {
+    "id": "web3_blockchain-097",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifie « brûler » (burn) un NFT et pourquoi le fait-on ?",
+    "reponse_reference": "Brûler un NFT consiste à l'envoyer à une adresse sans clé privée (adresse de gravure) ou à appeler une fonction burn du contrat, ce qui le rend définitivement inutilisable. On le fait pour réduire l'offre, pour échanger un ancien token contre une nouvelle version (migration) ou pour détruire une œuvre compromise.",
+    "mots_cles_attendus": ["burn", "adresse de gravure", "définitif", "réduire l'offre", "migration"]
+  },
+  {
+    "id": "web3_blockchain-098",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux NFT d'une même collection affichent exactement la même image et les mêmes métadonnées, mais possèdent des tokenId différents. Sont-ils interchangeables et qu'est-ce que cela révèle ?",
+    "reponse_reference": "Non : ils restent distincts sur la chaîne car chaque tokenId est unique et traçable, mais le fait qu'ils partagent les mêmes métadonnées affaiblit la rareté affichée de la collection. Cela révèle souvent une génération d'images mal gérée ou une collection semi-fongible qui aurait dû utiliser l'ERC-1155 plutôt qu'un ERC-721 avec des doublons visuels.",
+    "mots_cles_attendus": ["tokenId", "unicité", "métadonnées identiques", "rareté", "ERC-1155"]
+  },
+  {
+    "id": "web3_blockchain-099",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle différence existe-t-il entre un AMM à produit constant et un pool de type stableswap ?",
+    "reponse_reference": "Le produit constant (x*y=k) fonctionne pour toutes les paires mais entraîne un fort slippage près du prix d'équilibre. Un stableswap (comme Curve) combine le produit constant avec un invariant linéaire pour concentrer la liquidité autour d'un prix cible, ce qui donne un slippage minimal pour des actifs de valeur proche comme des stablecoins.",
+    "mots_cles_attendus": ["produit constant", "stableswap", "slippage", "stablecoins", "invariant"]
+  },
+  {
+    "id": "web3_blockchain-100",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un protocole de liquidation lit un prix d'oracle mis à jour il y a plusieurs heures, alors que le marché vient de chuter brutalement. Quel risque cela crée-t-il ?",
+    "reponse_reference": "Un prix obsolète (stale) sous-évalue la baisse : les positions sous-garanties ne sont pas liquidées à temps, et le protocole accumule de la dette irrécouvrable. Les contrats doivent donc vérifier l'horodatage et la fraîcheur du prix retourné par l'oracle, et déclencher un circuit breaker ou une mise à jour forcée avant d'agir.",
+    "mots_cles_attendus": ["prix obsolète", "stale", "liquidation", "dette irrécouvrable", "horodatage"]
+  }
+]

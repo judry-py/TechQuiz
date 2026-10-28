@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-201",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelle différence Martin Fowler fait-il entre un script de transaction (transaction script) et un modèle de domaine (domain model) ?",
+    "reponse_reference": "Le script de transaction organise la logique métier en procédures qui traitent chaque requête de bout en bout, directement sur les données ; il est simple et adapté à une logique pauvre. Le modèle de domaine distribue les règles dans des objets métier riches qui collaborent, capturant la complexité par la modélisation. Le coût du modèle de domaine se justifie quand les règles sont nombreuses, changeantes et interdépendantes ; sinon, le script de transaction reste plus économique.",
+    "mots_cles_attendus": ["procédure", "objets métier", "complexité", "règles", "coût"]
+  },
+  {
+    "id": "genie_logiciel-202",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une application de réservation d'hôtels doit gérer des règles entremêlées : surclassement, tarifs dynamiques, fidélité, surréservation. Choisissez-vous un script de transaction ou un modèle de domaine ? Justifiez.",
+    "reponse_reference": "Le modèle de domaine s'impose : les règles sont nombreuses, entremêlées et évoluent ensemble, ce qui rendrait un script de transaction illisible et dupliqué. On modélise des objets riches (Réservation, Tarif, Client) portant leurs propres règles et collaborant, avec des services de domaine pour les calculs transverses. La complexité est alors répartie là où elle a du sens, et chaque règle se teste isolément avant les scénarios d'ensemble.",
+    "mots_cles_attendus": ["modèle de domaine", "règles entremêlées", "objets riches", "testabilité", "répartition"]
+  },
+  {
+    "id": "genie_logiciel-203",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le patron Spécification (Specification) et quel problème de règles métier résout-il ?",
+    "reponse_reference": "Le patron Spécification encapsule une règle métier dans un objet qui répond à la question « cet objet satisfait-il le critère ? », et offre des opérations de combinaison : et, ou, non. Il permet de composer des règles complexes à partir de règles élémentaires testables, sans dupliquer la logique de sélection. On l'utilise pour la validation, le filtrage de collections ou l'éligibilité, là où les conditions proliféreraient dans le code.",
+    "mots_cles_attendus": ["règle encapsulée", "combinaison", "et/ou/non", "testabilité", "éligibilité"]
+  },
+  {
+    "id": "genie_logiciel-204",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "L'éligibilité à une offre commerciale combine une dizaine de critères (âge du compte, montant, catégorie de produit, période) qui changent chaque trimestre. Comment structurez-vous ces règles ?",
+    "reponse_reference": "On applique le patron Spécification : chaque critère devient une spécification élémentaire (CompteAncien, MontantMinimum, ProduitEligible) avec sa propre méthode de test et ses propres tests unitaires. Les règles trimestrielles s'expriment comme des combinaisons de ces spécifications via des opérateurs et, ou, non, voire une petite DSL interne lisible par le métier. Ajouter ou retirer un critère revient à recomposer la formule, sans toucher aux spécifications existantes.",
+    "mots_cles_attendus": ["spécification", "critères élémentaires", "composition", "tests unitaires", "évolutivité"]
+  },
+  {
+    "id": "genie_logiciel-205",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment fonctionne le patron Chaîne de responsabilité et quels sont ses pièges ?",
+    "reponse_reference": "Le patron Chaîne de responsabilité fait circuler une requête le long d'une suite de gestionnaires, chacun décidant de la traiter ou de la transmettre au suivant. Il permet d'ajouter, retirer ou réordonner des traitements sans modifier le code client, utile pour les validations successives ou les filtres. Ses pièges sont une requête qui tombe en bout de chaîne sans traitement et des chaînes trop longues difficiles à déboguer, d'où l'intérêt de journaliser chaque étape.",
+    "mots_cles_attendus": ["gestionnaires", "transmission", "ordonnancement", "validation", "bout de chaîne"]
+  },
+  {
+    "id": "genie_logiciel-206",
+    "domaine": "genie_logiciel",
+    "sous_theme": "patrons_de_conception_experts",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une demande de remboursement doit passer par des validations successives dont l'ordre et les seuils changent selon la politique du moment (montant, manager, contrôle financier). Quelle structure choisissez-vous ?",
+    "reponse_reference": "On applique la chaîne de responsabilité : chaque étape de validation (contrôle du montant, approbation du manager, contrôle financier) est un gestionnaire qui traite la demande ou la transmet. La chaîne est assemblée par configuration, ce qui permet de changer l'ordre ou les seuils sans modifier les gestionnaires existants. On s'assure qu'un gestionnaire terminal produit toujours une décision explicite pour éviter les demandes perdues.",
+    "mots_cles_attendus": ["chaîne de responsabilité", "gestionnaires", "configuration", "seuils", "décision terminale"]
+  },
+  {
+    "id": "genie_logiciel-207",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale_experte",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles règles pratiques garantissent qu'un domaine hexagonal reste réellement indépendant de l'infrastructure ?",
+    "reponse_reference": "Le domaine n'importe aucune dépendance vers des frameworks, des pilotes de base ou des bibliothèques d'infrastructure ; il ne manipule ni requêtes SQL, ni objets HTTP, ni formats de sérialisation externes. Toute communication sortante passe par des ports définis par le domaine, et les conversions de format vivent dans les adaptateurs. Ces règles se vérifient mécaniquement par des tests d'architecture qui analysent les dépendances entre paquets, faute de quoi l'hexagone se dégrade silencieusement.",
+    "mots_cles_attendus": ["aucune dépendance externe", "ports", "adaptateurs", "tests d'architecture", "pureté"]
+  },
+  {
+    "id": "genie_logiciel-208",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale_experte",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un nouveau moyen de paiement (portefeuille électronique) doit être ajouté à une application en architecture hexagonale. Décrivez les changements, du domaine aux adaptateurs.",
+    "reponse_reference": "Le domaine définit déjà un port piloté PaiementPort avec ses cas d'usage : rien n'y change, ce qui prouve l'indépendance du cœur métier. On développe un adaptateur piloté pour le portefeuille électronique, implémentant le port et traduisant ses protocoles vers le langage du domaine, avec ses propres tests contre des fixtures du prestataire. L'adaptateur est ensuite branché par configuration, sans toucher ni aux règles métier ni aux autres moyens de paiement.",
+    "mots_cles_attendus": ["port piloté", "adaptateur", "configuration", "domaine inchangé", "fixtures"]
+  },
+  {
+    "id": "genie_logiciel-209",
+    "domaine": "genie_logiciel",
+    "sous_theme": "refactoring_expert",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la conception évolutive de base de données (evolutionary database design) et comment fonctionnent les migrations ?",
+    "reponse_reference": "La conception évolutive de base de données applique le changement progressif au schéma : chaque évolution est une migration versionnée, additive par défaut, appliquée dans l'ordre par un outil dédié. Le schéma évolue ainsi au même rythme que le code, dans le même dépôt, et chaque environnement rejoue les migrations de façon reproductible. Les opérations destructrices (suppression de colonne) sont différées et exécutées en plusieurs temps pour rester compatibles avec les versions en cours d'exécution.",
+    "mots_cles_attendus": ["migrations versionnées", "additif", "reproductible", "dépôt", "compatibilité"]
+  },
+  {
+    "id": "genie_logiciel-210",
+    "domaine": "genie_logiciel",
+    "sous_theme": "refactoring_expert",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Vous devez remplacer une colonne JSON par une table relationnelle dans une base de production servie en continu. Comment procédez-vous sans coupure ?",
+    "reponse_reference": "On applique le pattern expand/contract : d'abord on étend le schéma en créant la nouvelle table, et le code écrit en double (ancienne colonne et nouvelle table), avec migration progressive des données existantes. Ensuite on bascule la lecture vers la nouvelle table, en surveillant les écarts entre les deux sources. La contraction n'intervient qu'en dernier, quand plus aucun code ne lit l'ancienne colonne : on la supprime alors dans une migration séparée.",
+    "mots_cles_attendus": ["expand/contract", "double écriture", "bascule de lecture", "migration progressive", "contraction"]
+  },
+  {
+    "id": "genie_logiciel-211",
+    "domaine": "genie_logiciel",
+    "sous_theme": "refactoring_expert",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment piloter un refactoring de grande ampleur touchant plusieurs équipes sans bloquer la livraison ?",
+    "reponse_reference": "On découpe le grand refactoring en étapes de changement parallèle (parallel change) : chaque étape ajoute la nouvelle structure à côté de l'ancienne, bascule les consommateurs progressivement, puis retire l'ancienne une fois qu'elle n'a plus d'utilisateur. Chaque étape est fusionnable dans la branche principale sans casser le système, souvent en s'appuyant sur l'expand/contract et des interfaces de compatibilité. Un suivi explicite (ADR, backlog dédié) coordonne les équipes sur l'ordre des étapes.",
+    "mots_cles_attendus": ["parallel change", "étapes", "bascule progressive", "compatibilité", "coordination"]
+  },
+  {
+    "id": "genie_logiciel-212",
+    "domaine": "genie_logiciel",
+    "sous_theme": "refactoring_expert",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un module utilitaire est utilisé par cinq équipes, et vous devez en changer complètement l'interface. Comment menez-vous cette migration sans geler personne ?",
+    "reponse_reference": "On procède par changement parallèle : on publie la nouvelle interface à côté de l'ancienne, qui reste fonctionnelle et marquée dépréciée avec une date butoir. Chaque équipe migre ses usages à son rythme, guidée par un document de migration et des tests de compatibilité. L'ancienne interface n'est supprimée que lorsque les statistiques de dépendance montrent qu'aucune équipe ne l'utilise plus, ce qui évite tout gel coordonné.",
+    "mots_cles_attendus": ["changement parallèle", "dépréciation", "migration autonome", "date butoir", "suppression différée"]
+  },
+  {
+    "id": "genie_logiciel-213",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un quality gate dans un pipeline et comment le configurer intelligemment ?",
+    "reponse_reference": "Un quality gate est un point de contrôle automatisé qui bloque le pipeline si des seuils de qualité ne sont pas atteints : couverture minimale, absence de vulnérabilité critique, complexité sous limite, tests verts. Il se configure avec des seuils d'échec et des seuils d'alerte distincts, et des règles qui n'admettent pas d'exception pour les nouveaux défauts. Pour être accepté, il doit être stable, rapide et mesurer des choses sur lesquelles l'équipe peut réellement agir.",
+    "mots_cles_attendus": ["seuil", "blocage", "pipeline", "nouveaux défauts", "stabilité"]
+  },
+  {
+    "id": "genie_logiciel-214",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Le quality gate exige 80 % de couverture, mais un module legacy tire la moyenne vers le bas et les équipes contournent la règle en excluant des fichiers. Quelle politique mettez-vous en place ?",
+    "reponse_reference": "Il faut remplacer la moyenne globale par des règles locales : la couverture des lignes modifiées ou nouvelles doit être élevée (par exemple 90 %), tandis que le legacy est mesuré à part avec un objectif de progression, jamais de régression. Les exclusions doivent être explicites, versionnées et revues, non pas ajoutées à la volée. On aligne ainsi le gate sur l'amélioration continue réelle au lieu de créer une course au contournement.",
+    "mots_cles_attendus": ["couverture des lignes modifiées", "legacy à part", "exclusions revues", "progression", "contournement"]
+  },
+  {
+    "id": "genie_logiciel-215",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles métriques indiquent une faible testabilité d'une classe, avant même d'écrire des tests ?",
+    "reponse_reference": "La testabilité se lit dans la structure : un constructeur avec de nombreux paramètres, des dépendances instanciées à l'intérieur des méthodes, des appels statiques ou à l'horloge, et des méthodes longues aux nombreux chemins. Le nombre de doubles nécessaires pour isoler une classe en test est un bon indicateur de son couplage. Ces signaux, mesurables par des outils d'analyse, désignent les candidats prioritaires au refactoring.",
+    "mots_cles_attendus": ["constructeur", "dépendances cachées", "appels statiques", "doubles nécessaires", "couplage"]
+  },
+  {
+    "id": "genie_logiciel-216",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une classe a un constructeur de douze paramètres, dont plusieurs sont des singletons et des appels statiques. Quel diagnostic posez-vous et par où commencez-vous ?",
+    "reponse_reference": "Le diagnostic est un défaut de cohésion et de testabilité : la classe agrège trop de responsabilités et ses dépendances sont mal délimitées. On commence par regrouper les paramètres en objets cohérents (regroupement par concept), puis on remplace les singletons par des dépendances injectées. Si la classe reste énorme, on la scinde par responsabilités, en s'appuyant sur des tests de caractérisation pour garantir le comportement pendant l'opération.",
+    "mots_cles_attendus": ["cohésion", "regroupement", "injection", "scission", "tests de caractérisation"]
+  },
+  {
+    "id": "genie_logiciel-217",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le code mort et comment le détecter de façon fiable ?",
+    "reponse_reference": "Le code mort est du code qui n'est plus jamais exécuté : fonctions non appelées, branches inaccessibles, fonctionnalités remplacées, exports non utilisés. On le détecte par analyse statique, par suivi de couverture en production et par les journaux d'accès, en recoupant plusieurs sources avant de conclure. Il alourdit la maintenance et donne une fausse image de la complexité du système, d'où l'intérêt de le supprimer par petites étapes tracées.",
+    "mots_cles_attendus": ["jamais exécuté", "analyse statique", "couverture en production", "maintenance", "suppression"]
+  },
+  {
+    "id": "genie_logiciel-218",
+    "domaine": "genie_logiciel",
+    "sous_theme": "qualite_experte",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "L'analyse révèle 30 % de code mort dans un module, y compris des branches entières de fonctionnalités jamais activées. Faut-il tout supprimer ? Comment décidez-vous ?",
+    "reponse_reference": "Il ne faut pas supprimer aveuglément : on classe le code mort entre ce qui est réellement obsolète, ce qui est temporairement inactif (derrière un flag ou en attente de lancement) et ce qui est du code de secours utile. Pour chaque candidat à la suppression, on vérifie les journaux d'usage, on informe les parties prenantes et on supprime par petits commits réversibles. Le code derrière feature flag fait l'objet d'une décision produit : activer, lancer ou abandonner.",
+    "mots_cles_attendus": ["classification", "usage réel", "feature flags", "petits commits", "décision produit"]
+  },
+  {
+    "id": "genie_logiciel-219",
+    "domaine": "genie_logiciel",
+    "sous_theme": "principes_de_conception_experts",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'énonce la loi de Déméter et quel défaut de conception signale sa violation systématique ?",
+    "reponse_reference": "La loi de Déméter recommande de ne parler qu'à ses amis immédiats : un objet ne doit pas traverser plusieurs niveaux de structure interne d'un autre objet pour agir. Un enchaînement du type client.getAdresse().getVille().getNom() viole cette loi en exposant la structure interne. Sa violation systématique signale un couplage excessif et appelle le principe inverse « tell, don't ask » : demander à l'objet d'agir plutôt que de fouiller dans ses entrailles.",
+    "mots_cles_attendus": ["amis immédiats", "traversée de structure", "couplage", "tell don't ask", "encapsulation"]
+  },
+  {
+    "id": "genie_logiciel-220",
+    "domaine": "genie_logiciel",
+    "sous_theme": "principes_de_conception_experts",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Le code est truffé d'enchaînements du type commande.getClient().getAdresse().getPays().getCodeIso(). Quels problèmes cela pose-t-il et comment refactorisez-vous ?",
+    "reponse_reference": "Ces enchaînements violent la loi de Déméter : le code dépend de toute la chaîne de structure interne, et le moindre changement de modèle (adresse optionnelle, renommage) casse des dizaines d'endroits. On refactorise vers « tell, don't ask » : chaque objet expose des méthodes signifiantes, comme commande.expliqueLivraisonDans(pays) ou client.resideDans(pays), qui cachent leur structure. Les règles métier se retrouvent alors à l'intérieur des objets concernés, là où elles sont réutilisables et testables.",
+    "mots_cles_attendus": ["loi de déméter", "dépendance structurelle", "tell don't ask", "encapsulation", "règles métier localisées"]
+  }
+]

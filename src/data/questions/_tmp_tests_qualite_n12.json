@@ -1,0 +1,202 @@
+[
+  {
+    "id": "tests_qualite-221",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment la norme ISO 25010 structure-t-elle la qualité d'un produit logiciel ?",
+    "reponse_reference": "ISO 25010 organise la qualité en huit caractéristiques principales (adéquation fonctionnelle, performance, compatibilité, utilisabilité, fiabilité, sécurité, maintenabilité, portabilité), chacune déclinée en sous-caractéristiques mesurables. Ce modèle permet de décliner les exigences de qualité en critères concrets et vérifiables par les tests.",
+    "mots_cles_attendus": ["huit caractéristiques", "sous-caractéristiques", "critères mesurables", "vérifiable"]
+  },
+  {
+    "id": "tests_qualite-222",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quels niveaux de certification ISTQB existent et à quels profils s'adressent-ils ?",
+    "reponse_reference": "Le niveau Foundation pose les bases communes, puis les niveaux avancés spécialisent : Test Manager, Test Analyst, Technical Test Analyst. Des certifications dédiées existent aussi pour l'agilité, l'automatisation des tests, la sécurité et le testing IA, afin d'accompagner les évolutions des métiers du test.",
+    "mots_cles_attendus": ["Foundation", "Test Manager", "spécialisations", "automatisation"]
+  },
+  {
+    "id": "tests_qualite-223",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la qualification d'outils de test dans un contexte réglementaire ?",
+    "reponse_reference": "La qualification d'outils consiste à démontrer, preuves à l'appui, qu'un outil utilisé dans le processus de test ou de production fonctionne conformément à son usage prévu. Elle est exigée dans des secteurs réglementés comme la santé ou l'aéronautique, où l'outillage lui-même doit être validé et tracé.",
+    "mots_cles_attendus": ["preuves", "usage prévu", "secteurs réglementés", "traçabilité"]
+  },
+  {
+    "id": "tests_qualite-224",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un éditeur vise un marché réglementé de la santé. Quelles exigences de traçabilité des tests doit-il mettre en place ?",
+    "reponse_reference": "Il doit établir une traçabilité complète entre exigences, risques, cas de test, exécutions et anomalies, avec versions des documents et signatures des validations. Chaque évolution doit démontrer que les exigences réglementaires restent couvertes par des tests rejouables, audités et archivés.",
+    "mots_cles_attendus": ["traçabilité", "exigences", "archivage", "audit"]
+  },
+  {
+    "id": "tests_qualite-225",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un audit de qualité selon ISO 25010 approche. Comment préparer un dossier de preuves convaincant ?",
+    "reponse_reference": "Il faut cartographier chaque caractéristique retenue vers les exigences, les tests associés et leurs résultats, en montrant les tendances dans le temps. Le dossier doit inclure les non-conformités connues et leurs plans de traitement, car l'audit valorise davantage la maîtrise que la perfection affichée.",
+    "mots_cles_attendus": ["cartographie", "résultats", "tendances", "non-conformités maîtrisées"]
+  },
+  {
+    "id": "tests_qualite-226",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la matrice de traçabilité des exigences et à quoi sert-elle ?",
+    "reponse_reference": "La matrice de traçabilité relie chaque exigence aux cas de test qui la vérifient et aux résultats obtenus, dans les deux sens. Elle permet de prouver qu'aucune exigence n'est restée sans test et de mesurer l'impact d'un changement sur le périmètre à re-tester.",
+    "mots_cles_attendus": ["exigences", "cas de test", "bidirectionnelle", "analyse d'impact"]
+  },
+  {
+    "id": "tests_qualite-227",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la couverture MC/DC et dans quels domaines est-elle exigée ?",
+    "reponse_reference": "La couverture MC/DC (Modified Condition/Decision Coverage) exige que chaque condition d'une décision ait été démontrée capable d'influencer seule le résultat. Elle est imposée par des normes comme DO-178C en aéronautique ou ISO 26262 en automobile, où la criticité justifie ce niveau d'exigence.",
+    "mots_cles_attendus": ["condition indépendante", "décision", "DO-178C", "ISO 26262"]
+  },
+  {
+    "id": "tests_qualite-228",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Pourquoi la couverture de code doit-elle être traitée comme un indicateur d'équipe plutôt qu'un objectif individuel ?",
+    "reponse_reference": "Fixer un pourcentage par développeur encourage le gonflage artificiel : tests sans assertions, cas triviaux ou code blindé de branches inutiles. Au niveau de l'équipe, la couverture sert à repérer les zones à risque et à piloter la tendance, sans détourner l'effort vers l'optimisation du chiffre.",
+    "mots_cles_attendus": ["gonflage artificiel", "zones à risque", "tendance", "détournement d'effort"]
+  },
+  {
+    "id": "tests_qualite-229",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La couverture globale baisse alors que l'équipe ajoute des tests chaque semaine. Comment expliquer et corriger cette tendance ?",
+    "reponse_reference": "Le code nouveau croît plus vite que les tests : les nouvelles fonctionnalités arrivent avec une couverture inférieure à la moyenne. Il faut mesurer la couverture sur le code nouveau séparément, fixer un seuil sur ce périmètre et analyser les branches jamais exercées des anciens modules critiques.",
+    "mots_cles_attendus": ["code nouveau", "seuil par périmètre", "croissance du code", "branches non exercées"]
+  },
+  {
+    "id": "tests_qualite-230",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La direction exige 100 % de couverture de code. Comment argumenter pour un objectif plus pertinent ?",
+    "reponse_reference": "Il faut expliquer que le 100 % coûte très cher pour un gain décroissant : code trivial, getters ou cas défensifs, et que la couverture ne mesure pas la qualité des assertions. On propose à la place un seuil élevé sur le code critique et nouveau, complété par du mutation testing et un suivi des défauts échappés.",
+    "mots_cles_attendus": ["gain décroissant", "coût", "mutation testing", "défauts échappés"]
+  },
+  {
+    "id": "tests_qualite-231",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la modélisation des menaces et comment alimente-t-elle les tests de sécurité ?",
+    "reponse_reference": "La modélisation des menaces (threat modeling) identifie systématiquement les actifs, les points d'entrée et les scénarios d'attaque possibles, par exemple avec STRIDE. Elle produit une liste priorisée de menaces qui devient le référentiel des tests de sécurité à exécuter, plutôt que de tester au hasard.",
+    "mots_cles_attendus": ["actifs", "scénarios d'attaque", "STRIDE", "liste priorisée"]
+  },
+  {
+    "id": "tests_qualite-232",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'OWASP ASVS et comment définit-il des niveaux d'assurance ?",
+    "reponse_reference": "L'ASVS (Application Security Verification Standard) est un référentiel de vérifications de sécurité organisé en trois niveaux : basique, standard et avancé, selon la criticité de l'application. Il permet de définir précisément ce qui doit être testé et de mesurer objectivement le niveau de conformité atteint.",
+    "mots_cles_attendus": ["vérifications", "trois niveaux", "criticité", "conformité mesurable"]
+  },
+  {
+    "id": "tests_qualite-233",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles vulnérabilités spécifiques cibler dans les tests de sécurité des API ?",
+    "reponse_reference": "Les tests d'API doivent cibler la vérification de l'identité et des autorisations par objet (BOLA), les injections, la mauvaise gestion des secrets, le rate limiting et l'exposition excessive de données. Chaque endpoint doit être testé avec des identités et des rôles différents pour vérifier que les contrôles d'accès sont réellement appliqués.",
+    "mots_cles_attendus": ["BOLA", "autorisations", "contrôles d'accès", "exposition de données"]
+  },
+  {
+    "id": "tests_qualite-234",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un testeur découvre qu'en changeant l'identifiant dans une URL, un utilisateur peut lire les données d'un autre (BOLA). Quelle démarche de test et de correction ?",
+    "reponse_reference": "Il faut confirmer la faille sur plusieurs ressources, évaluer l'étendue de l'exposition, puis corriger par des contrôles d'autorisation systématiques côté serveur, jamais par la seule dissimulation de l'identifiant. Des tests de non-régression automatisés, exécutés avec plusieurs comptes de rôles différents, verrouillent ensuite chaque endpoint.",
+    "mots_cles_attendus": ["contrôles côté serveur", "étendue", "rôles différents", "non-régression"]
+  },
+  {
+    "id": "tests_qualite-235",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Comment intégrer la modélisation des menaces dans le cycle de développement d'une nouvelle fonctionnalité ?",
+    "reponse_reference": "Il faut organiser une session de threat modeling dès la conception, avec l'équipe, pour identifier les menaces sur les flux de données, puis traduire chaque menace en cas de test. Les menaces résiduelles acceptées sont documentées, et la revue est rejouée à chaque évolution significative du périmètre.",
+    "mots_cles_attendus": ["dès la conception", "flux de données", "cas de test dérivés", "menaces résiduelles"]
+  },
+  {
+    "id": "tests_qualite-236",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment appliquer le versionnement sémantique aux contrats d'API ?",
+    "reponse_reference": "Le versionnement sémantique distingue les corrections sans impact, les ajouts compatibles et les changements cassants qui imposent une nouvelle version majeure du contrat. Les tests de contrats automatisent cette classification en vérifiant la compatibilité de chaque évolution avec les consommateurs existants.",
+    "mots_cles_attendus": ["compatible", "changement cassant", "version majeure", "classification automatisée"]
+  },
+  {
+    "id": "tests_qualite-237",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que les tests de compatibilité ascendante et descendante d'une API ?",
+    "reponse_reference": "La compatibilité descendante vérifie qu'un nouveau fournisseur continue de servir les anciens consommateurs, tandis que la compatibilité ascendante vérifie qu'un ancien fournisseur supporte les nouveaux consommateurs. Tester les deux directions est indispensable lors des déploiements progressifs où plusieurs versions coexistent.",
+    "mots_cles_attendus": ["nouveau fournisseur", "anciens consommateurs", "versions coexistantes", "déploiements progressifs"]
+  },
+  {
+    "id": "tests_qualite-238",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment tester les contrats dans un maillage complexe de services interdépendants ?",
+    "reponse_reference": "Il faut maintenir un registre central des contrats publiés, faire vérifier chaque service contre les contrats de ses consommateurs et de ses fournisseurs, et cartographier les dépendances pour comprendre l'impact d'un changement. L'exécution s'automatise dans chaque pipeline, avec vérification croisée avant tout déploiement.",
+    "mots_cles_attendus": ["registre central", "vérification croisée", "cartographie des dépendances", "pipeline"]
+  },
+  {
+    "id": "tests_qualite-239",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un fournisseur d'API doit faire évoluer un champ sans casser ses vingt applications consommatrices, déployées à des rythmes différents. Quelle démarche adopter ?",
+    "reponse_reference": "Il faut déployer l'évolution de façon compatible : ajouter le nouveau champ ou une nouvelle version en parallèle, maintenir l'ancien format, et vérifier les contrats de tous les consommateurs avant chaque étape. Une fois tous les consommateurs migrés et vérifiés, l'ancien format peut être retiré avec un préavis.",
+    "mots_cles_attendus": ["évolution compatible", "ancien format maintenu", "contrats vérifiés", "retrait progressif"]
+  },
+  {
+    "id": "tests_qualite-240",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une équipe génère ses tests de contrats automatiquement depuis une spécification OpenAPI. Quels avantages et quelles limites ?",
+    "reponse_reference": "La génération garantit la cohérence entre la documentation et les tests, et couvre rapidement la structure des endpoints. Ses limites : elle ne vérifie que ce qui est déclaré, pas les règles métier ni les combinaisons implicites, donc il faut la compléter par des scénarios métier et une revue de la qualité de la spécification elle-même.",
+    "mots_cles_attendus": ["cohérence documentation", "structure couverte", "règles métier absentes", "complément nécessaire"]
+  }
+]

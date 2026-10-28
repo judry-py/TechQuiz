@@ -1,0 +1,322 @@
+[
+  {
+    "id": "data_science-141",
+    "domaine": "data_science",
+    "sous_theme": "classification",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la classification supervisée et comment fonctionne son principe général ?",
+    "reponse_reference": "La classification supervisée consiste à apprendre, à partir d'exemples étiquetés, une fonction qui associe à chaque observation une catégorie prédite. Le modèle est entraîné sur des données dont la classe est connue, puis évalué sur des données jamais vues. La classification est binaire quand il y a deux classes, comme churn ou non-churn, et multiclasses quand il y en a davantage.",
+    "mots_cles_attendus": [
+      "exemples étiquetés",
+      "catégorie prédite",
+      "entraîné",
+      "binaire",
+      "multiclasses"
+    ]
+  },
+  {
+    "id": "data_science-142",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une matrice de confusion et quelles informations contient-elle ?",
+    "reponse_reference": "La matrice de confusion croise les classes prédites et les classes réelles dans un tableau : vrais positifs, faux positifs, vrais négatifs et faux négatifs. Elle permet de visualiser la nature des erreurs du modèle, et pas seulement leur quantité. Toutes les métriques de classification, comme la précision ou le rappel, se calculent à partir de ses quatre cases.",
+    "mots_cles_attendus": [
+      "prédites",
+      "réelles",
+      "vrais positifs",
+      "faux positifs",
+      "faux négatifs"
+    ]
+  },
+  {
+    "id": "data_science-143",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la précision (precision) en classification et dans quels cas est-elle la métrique clé ?",
+    "reponse_reference": "La précision est la proportion de vraies classes positives parmi toutes les prédictions positives du modèle. Elle mesure la fiabilité des alertes émises : une précision élevée signifie que le modèle se trompe rarement quand il prédit la classe positive. Elle est prioritaire quand le coût d'un faux positif est élevé, par exemple signaler à tort une transaction comme frauduleuse et bloquer un client légitime.",
+    "mots_cles_attendus": [
+      "prédictions positives",
+      "fiabilité",
+      "faux positifs",
+      "se trompe rarement",
+      "coût élevé"
+    ]
+  },
+  {
+    "id": "data_science-144",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le rappel (recall) en classification et quand le privilégier ?",
+    "reponse_reference": "Le rappel, ou sensibilité, est la proportion de vraies classes positives correctement détectées par le modèle. Il mesure la capacité du modèle à ne pas laisser passer de cas positifs : un rappel élevé signifie peu de faux négatifs. On le privilégie quand manquer un cas positif est très coûteux, comme rater une maladie grave ou une fraude importante.",
+    "mots_cles_attendus": [
+      "détectées",
+      "faux négatifs",
+      "ne rien manquer",
+      "sensibilité",
+      "coût élevé"
+    ]
+  },
+  {
+    "id": "data_science-145",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le F1-score et pourquoi l'utilise-t-on ?",
+    "reponse_reference": "Le F1-score est la moyenne harmonique de la précision et du rappel, qui pénalise fortement les déséquilibres entre les deux. Il fournit un compromis unique utile quand on veut un modèle ni trop laxiste ni trop strict, en particulier sur des classes déséquilibrées. Contrairement à l'accuracy, il reste informatif même quand la classe positive est rare.",
+    "mots_cles_attendus": [
+      "moyenne harmonique",
+      "précision et rappel",
+      "compromis",
+      "classes déséquilibrées",
+      "pénalise"
+    ]
+  },
+  {
+    "id": "data_science-146",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la courbe ROC et que mesure l'AUC ?",
+    "reponse_reference": "La courbe ROC trace le taux de vrais positifs contre le taux de faux positifs pour tous les seuils de décision possibles du modèle. L'AUC, aire sous cette courbe, vaut 1 pour un classifieur parfait et 0,5 pour un classifieur aléatoire. Elle mesure la capacité du modèle à ordonner correctement les observations, indépendamment du seuil choisi.",
+    "mots_cles_attendus": [
+      "taux de vrais positifs",
+      "taux de faux positifs",
+      "tous les seuils",
+      "0,5 aléatoire",
+      "ordonner"
+    ]
+  },
+  {
+    "id": "data_science-147",
+    "domaine": "data_science",
+    "sous_theme": "validation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la validation croisée k-fold et à quoi sert-elle ?",
+    "reponse_reference": "La validation croisée k-fold découpe les données d'entraînement en k sous-ensembles : le modèle est entraîné sur k-1 d'entre eux et évalué sur le dernier, et l'opération est répétée k fois en changeant de sous-ensemble de test. La moyenne des k scores donne une estimation plus fiable de la performance en généralisation qu'un simple découpage. Elle sert aussi à sélectionner les hyperparamètres sans gaspiller de données.",
+    "mots_cles_attendus": [
+      "k sous-ensembles",
+      "entraîné k fois",
+      "moyenne des scores",
+      "généralisation",
+      "hyperparamètres"
+    ]
+  },
+  {
+    "id": "data_science-148",
+    "domaine": "data_science",
+    "sous_theme": "generalisation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le surapprentissage et comment le détecte-t-on ?",
+    "reponse_reference": "Le surapprentissage se produit quand le modèle mémorise les particularités et le bruit des données d'entraînement au lieu d'apprendre les motifs généralisables. Il se détecte par un écart important entre la performance d'entraînement, excellente, et la performance de validation ou de test, médiocre. Les remèdes incluent plus de données, une régularisation, une réduction de la complexité du modèle ou des ensembles de modèles.",
+    "mots_cles_attendus": [
+      "mémorise",
+      "bruit",
+      "écart entraînement-validation",
+      "généralisation",
+      "régularisation"
+    ]
+  },
+  {
+    "id": "data_science-149",
+    "domaine": "data_science",
+    "sous_theme": "modeles",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un arbre de décision et comment réalise-t-il une classification ?",
+    "reponse_reference": "Un arbre de décision partitionne l'espace des variables par une succession de tests simples du type « montant > 100 ? », chaque nœud interne posant une question et chaque feuille donnant une prédiction. Il choisit à chaque étape la variable et le seuil qui séparent le mieux les classes selon un critère comme l'impureté de Gini ou l'entropie. C'est un modèle très interprétable mais instable, sensible aux variations des données.",
+    "mots_cles_attendus": [
+      "partitionne",
+      "tests",
+      "feuilles",
+      "Gini",
+      "interprétable"
+    ]
+  },
+  {
+    "id": "data_science-150",
+    "domaine": "data_science",
+    "sous_theme": "modeles",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une forêt aléatoire et comment réduit-elle la variance d'un arbre unique ?",
+    "reponse_reference": "Une forêt aléatoire entraîne de nombreux arbres de décision sur des échantillons bootstrapés des données et en ne considérant qu'un sous-ensemble aléatoire de variables à chaque nœud. La prédiction finale est obtenue par vote majoritaire, ce qui moyenne les erreurs des arbres individuels. Cette décorrélation des arbres réduit fortement la variance et le surapprentissage, au prix d'une interprétabilité moindre.",
+    "mots_cles_attendus": [
+      "bootstrap",
+      "sous-ensemble de variables",
+      "vote majoritaire",
+      "variance",
+      "décorrélation"
+    ]
+  },
+  {
+    "id": "data_science-151",
+    "domaine": "data_science",
+    "sous_theme": "validation",
+    "niveau": 8,
+    "type": "definition",
+    "question": "À quoi servent les jeux d'entraînement, de validation et de test, et pourquoi faut-il les séparer ?",
+    "reponse_reference": "Le jeu d'entraînement sert à ajuster les paramètres du modèle, le jeu de validation à comparer les modèles et régler les hyperparamètres, et le jeu de test à estimer une seule fois la performance finale en conditions réelles. Évaluer un modèle sur des données vues à l'entraînement donne une estimation trop optimiste, et régler les hyperparamètres sur le test fuit de l'information. La séparation stricte garantit une estimation honnête de la généralisation.",
+    "mots_cles_attendus": [
+      "ajuster",
+      "hyperparamètres",
+      "estimation finale",
+      "trop optimiste",
+      "séparation stricte"
+    ]
+  },
+  {
+    "id": "data_science-152",
+    "domaine": "data_science",
+    "sous_theme": "fuite_de_donnees",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fuite de données (data leakage) en machine learning ?",
+    "reponse_reference": "La fuite de données survient quand de l'information sur la cible, qui ne serait pas disponible au moment de la prédiction en production, s'infiltre dans l'entraînement. Exemples classiques : standardiser les variables sur l'ensemble des données avant le découpage, ou utiliser des variables construites après l'événement prédit. Le modèle affiche alors des performances artificiellement élevées en validation qui s'effondrent en production.",
+    "mots_cles_attendus": [
+      "information sur la cible",
+      "indisponible en production",
+      "standardisation avant split",
+      "performances gonflées",
+      "effondrement"
+    ]
+  },
+  {
+    "id": "data_science-153",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un modèle de détection de fraude atteint 99,5 % d'accuracy sur un jeu où seulement 0,5 % des transactions sont frauduleuses. Pourquoi cette métrique est-elle trompeuse et que faut-il regarder à la place ?",
+    "reponse_reference": "Un classifieur qui prédit systématiquement « non frauduleux » atteindrait déjà 99,5 % d'accuracy sans détecter aucune fraude : la métrique est dominée par la classe majoritaire. Sur des classes aussi déséquilibrées, il faut regarder le rappel, la précision, le F1-score ou l'aire sous la courbe précision-rappel. Le modèle actuel est probablement inutile en pratique malgré son accuracy flatteuse.",
+    "mots_cles_attendus": [
+      "classe majoritaire",
+      "accuracy trompeuse",
+      "déséquilibre",
+      "rappel",
+      "courbe précision-rappel"
+    ]
+  },
+  {
+    "id": "data_science-154",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Sur 1 000 clients testés, un modèle de churn prédit 120 churns alors que 100 ont réellement churné, et parmi ses 120 prédictions positives, 80 sont correctes. Calculez la précision et le rappel du modèle et interprétez-les.",
+    "reponse_reference": "La précision vaut 80 divisé par 120, soit environ 0,67 : deux tiers des clients signalés churnent effectivement, un tiers des alertes sont des faux positifs. Le rappel vaut 80 divisé par 100, soit 0,80 : le modèle détecte 80 % des churns réels mais en manque 20 %. Selon le coût d'une campagne de rétention inutile face au coût d'un churn manqué, on ajustera le seuil de décision.",
+    "mots_cles_attendus": [
+      "précision 0,67",
+      "rappel 0,80",
+      "faux positifs",
+      "20 % manqués",
+      "seuil"
+    ]
+  },
+  {
+    "id": "data_science-155",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Pour un filtre anti-spam, préférez-vous maximiser la précision ou le rappel, et pourquoi ? Comment la fonction de décision pourrait-elle combiner les deux objectifs ?",
+    "reponse_reference": "Pour un filtre anti-spam, la précision est prioritaire : un faux positif, c'est-à-dire un email légitime classé spam, est très coûteux car l'utilisateur risque de manquer un message important. Un rappel imparfait est plus acceptable puisqu'un spam laissé passer est une gêne mineure. On peut utiliser un score de probabilité de spam et choisir un seuil élevé, ou directement optimiser une métrique pondérant davantage les faux positifs.",
+    "mots_cles_attendus": [
+      "précision",
+      "email légitime classé spam",
+      "faux positif coûteux",
+      "rappel moins critique",
+      "seuil élevé"
+    ]
+  },
+  {
+    "id": "data_science-156",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Deux modèles de scoring de risque de crédit ont la même accuracy de 0,90, mais le premier a une AUC de 0,72 et le second de 0,88. Lequel choisiriez-vous et que cela révèle-t-il ?",
+    "reponse_reference": "Le second modèle est meilleur : son AUC plus élevée indique qu'il ordonne bien mieux les clients selon leur risque réel, même si son accuracy au seuil par défaut est identique. L'accuracy dépend du seuil de décision choisi, alors que l'AUC évalue la qualité du classement sur tous les seuils. En ajustant le seuil du second modèle, on peut obtenir un bien meilleur compromis opérationnel.",
+    "mots_cles_attendus": [
+      "AUC",
+      "ordonne mieux",
+      "seuil",
+      "accuracy dépend du seuil",
+      "compromis"
+    ]
+  },
+  {
+    "id": "data_science-157",
+    "domaine": "data_science",
+    "sous_theme": "validation",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Vous entraînez un classifieur sur un jeu de données où la classe positive ne représente que 1 % des lignes. Pourquoi utiliseriez-vous une validation croisée stratifiée plutôt qu'un simple k-fold aléatoire ?",
+    "reponse_reference": "Avec une classe aussi rare, un découpage aléatoire peut produire des sous-ensembles de test sans aucun exemple positif, ou avec des proportions très variables, rendant l'évaluation instable et peu fiable. La stratification répartit les classes dans chaque pli dans les mêmes proportions que le jeu complet, garantissant des métriques comparables. Sans stratification, on risque de conclure à tort qu'un modèle est bon ou mauvais selon le hasard du découpage.",
+    "mots_cles_attendus": [
+      "stratifiée",
+      "proportions conservées",
+      "pli sans positif",
+      "évaluation instable",
+      "fiable"
+    ]
+  },
+  {
+    "id": "data_science-158",
+    "domaine": "data_science",
+    "sous_theme": "fuite_de_donnees",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un collègue standardise ses variables avec la moyenne et l'écart-type calculés sur tout le jeu de données avant de le découper en entraînement et test, et obtient une AUC de 0,95. Quel problème voyez-vous et comment le corriger ?",
+    "reponse_reference": "C'est une fuite de données : la standardisation utilise des statistiques calculées sur le test, ce qui transmet indirectement de l'information de la cible du test au modèle. L'AUC de 0,95 est donc surestimée et risque de s'effondrer en production. Il faut découper d'abord, puis calculer moyenne et écart-type uniquement sur l'entraînement, et appliquer ces paramètres au test, par exemple avec un pipeline scikit-learn.",
+    "mots_cles_attendus": [
+      "fuite de données",
+      "statistiques du test",
+      "AUC surestimée",
+      "découper d'abord",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "data_science-159",
+    "domaine": "data_science",
+    "sous_theme": "modeles",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un arbre de décision sans limite de profondeur atteint 99 % d'accuracy à l'entraînement mais seulement 72 % en validation croisée. Diagnostiquez le problème et proposez au moins trois remèdes.",
+    "reponse_reference": "L'arbre est en surapprentissage : trop profond, il crée des feuilles pour des cas particuliers du jeu d'entraînement qui ne généralisent pas. On peut limiter la profondeur maximale, exiger un nombre minimal d'échantillons par feuille, ou élaguer l'arbre. Remplacer l'arbre unique par une forêt aléatoire ou un gradient boosting réduirait aussi la variance et améliorerait la généralisation.",
+    "mots_cles_attendus": [
+      "surapprentissage",
+      "profondeur maximale",
+      "échantillons par feuille",
+      "élaguer",
+      "forêt aléatoire"
+    ]
+  },
+  {
+    "id": "data_science-160",
+    "domaine": "data_science",
+    "sous_theme": "metriques",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Pour un dépistage médical automatisé, le coût de rater une maladie est très supérieur au coût d'examens complémentaires inutiles. Quelles métriques et quel choix de seuil guideraient votre modèle ?",
+    "reponse_reference": "Il faut maximiser le rappel, c'est-à-dire détecter la quasi-totalité des cas réellement malades, quitte à accepter davantage de faux positifs qui seront filtrés par des examens complémentaires. Concrètement, on abaisse le seuil de décision pour déclencher l'alerte plus facilement, ce qui augmente le rappel au détriment de la précision. On surveille la courbe ROC ou précision-rappel pour choisir le seuil qui garantit le niveau de sensibilité exigé par le protocole médical.",
+    "mots_cles_attendus": [
+      "rappel",
+      "ne rater aucun cas",
+      "faux positifs acceptés",
+      "abaisser le seuil",
+      "sensibilité"
+    ]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "systemes_embarques-101",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment se répartissent les consommations d'un nœud IoT entre les phases actives et les phases de veille ?",
+    "reponse_reference": "La consommation totale dépend du courant en phase active, du courant de veille et du rapport de temps entre les deux phases, appelé duty cycle. Un nœud qui émet rarement passe l'essentiel de sa vie en veille profonde, et c'est alors le courant de veille, souvent de quelques microampères, qui domine le bilan. La moyenne pondérée des courants par leurs durées donne le courant moyen, qui fixe directement l'autonomie de la batterie.",
+    "mots_cles_attendus": ["duty cycle", "courant de veille", "courant actif", "autonomie", "bilan énergétique"]
+  },
+  {
+    "id": "systemes_embarques-102",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le duty cycling et comment réduit-il la consommation d'un système embarqué ?",
+    "reponse_reference": "Le duty cycling consiste à faire fonctionner le système par courtes phases actives séparées par de longues périodes de sommeil, le rapport cyclique d'activité étant réduit au strict nécessaire. Pendant le sommeil, tous les blocs inutiles sont coupés et seul un réveil programmé, typiquement un RTC, subsiste. Le courant moyen chute alors proportionnellement au temps passé en veille, au prix d'une latence de réaction plus grande.",
+    "mots_cles_attendus": ["duty cycling", "sommeil", "réveil programmé", "courant moyen", "latence"]
+  },
+  {
+    "id": "systemes_embarques-103",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un watchdog fenêtré et quel avantage apporte-t-il par rapport à un watchdog simple ?",
+    "reponse_reference": "Le watchdog fenêtré impose de réarmer le compteur à l'intérieur d'une fenêtre temporelle : ni trop tard, ni trop tôt, le réarmement hors fenêtre déclenchant le reset comme un dépassement. Il détecte ainsi non seulement les blocages, mais aussi les boucles qui s'exécutent trop vite ou les réarmements placés dans une routine trop fréquente, ce qui renforce la couverture des défauts logiciels.",
+    "mots_cles_attendus": ["watchdog fenêtré", "fenêtre", "réarmement", "reset", "couverture"]
+  },
+  {
+    "id": "systemes_embarques-104",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la détection de chute de tension (brown-out) et pourquoi est-elle nécessaire ?",
+    "reponse_reference": "Le circuit de brown-out surveille la tension d'alimentation et place le microcontrôleur en reset dès qu'elle descend sous un seuil de sécurité, avant que la logique ne fonctionne de façon erratique. Il protège la mémoire et les périphériques contre les écritures corrompues lors d'une coupure lente ou d'une batterie qui s'épuise. Le seuil est configurable pour s'adapter à la plage de fonctionnement du circuit.",
+    "mots_cles_attendus": ["brown-out", "seuil", "reset", "sous-tension", "corruption"]
+  },
+  {
+    "id": "systemes_embarques-105",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quel est le rôle d'un bootloader dans un système embarqué et comment s'articule-t-il avec l'application ?",
+    "reponse_reference": "Le bootloader est un petit programme résident qui s'exécute au démarrage et décide quel code lancer, typiquement l'application principale ou un mode de mise à jour. Il peut vérifier l'intégrité et l'authenticité du firmware avant de sauter vers lui, ou rester à l'écoute d'une commande de mise à jour. Il doit être conçu pour ne jamais être écrasé par erreur, ce qui garantit une voie de récupération en cas d'application corrompue.",
+    "mots_cles_attendus": ["bootloader", "démarrage", "intégrité", "mise à jour", "récupération"]
+  },
+  {
+    "id": "systemes_embarques-106",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment la mémoire Flash est-elle organisée pour l'écriture et pourquoi parle-t-on d'usure ?",
+    "reponse_reference": "La Flash est découpée en pages ou secteurs que l'on doit effacer en bloc avant toute écriture, et chaque cellule ne supporte qu'un nombre limité de cycles d'effacement et de programmation, de l'ordre de dix mille à cent mille selon la technologie. Au-delà, la cellule ne retient plus correctement la charge et les données deviennent instables. Les stratégies de nivellement de l'usure répartissent les écritures sur toute la mémoire pour en prolonger la durée de vie.",
+    "mots_cles_attendus": ["flash", "page", "effacement", "cycles", "usure"]
+  },
+  {
+    "id": "systemes_embarques-107",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que sont les notifications de tâches dans FreeRTOS et pourquoi sont-elles plus rapides qu'une file ?",
+    "reponse_reference": "Les notifications de tâches sont un mécanisme de signalisation direct où chaque tâche possède une valeur de notification que les autres tâches ou les ISR peuvent modifier, sans objet intermédiaire en mémoire. Le réveil de la tâche destinataire se fait directement, sans copie de données ni allocation, ce qui en fait la primitive la plus rapide du noyau. Elles ne conviennent toutefois qu'à un unique destinataire, contrairement aux files qui acceptent plusieurs consommateurs.",
+    "mots_cles_attendus": ["notification de tâche", "direct", "isr", "rapide", "destinataire unique"]
+  },
+  {
+    "id": "systemes_embarques-108",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que sont les timers logiciels de FreeRTOS et dans quel contexte s'exécutent leurs fonctions de rappel ?",
+    "reponse_reference": "Les timers logiciels exécutent une fonction de rappel après un délai unique ou périodique, sans mobiliser de timer matériel par temporisation. Leurs rappels s'exécutent dans le contexte d'une tâche de service dédiée, la tâche du timer, et non dans une ISR : ils ne doivent donc pas bloquer et ne peuvent utiliser que les primitives sans blocage. Leur précision est celle du tick système, qui les alimente.",
+    "mots_cles_attendus": ["timer logiciel", "fonction de rappel", "tâche de service", "périodique", "tick"]
+  },
+  {
+    "id": "systemes_embarques-109",
+    "domaine": "systemes_embarques",
+    "sous_theme": "capteurs_actionneurs",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que l'hystérésis d'un seuil et pourquoi l'applique-t-on à une décision sur capteur ?",
+    "reponse_reference": "L'hystérésis consiste à utiliser deux seuils distincts pour franchir un état et pour en sortir, par exemple démarrer un ventilateur à 40 degrés et l'arrêter à 35 degrés. Elle empêche les basculements répétés lorsque la mesure oscille autour d'un seuil unique, phénomène appelé pompage, qui use les actionneurs et pollue les journaux. La bande morte entre les seuils est choisie plus grande que l'amplitude du bruit de mesure.",
+    "mots_cles_attendus": ["hystérésis", "seuil", "pompage", "bruit", "bande morte"]
+  },
+  {
+    "id": "systemes_embarques-110",
+    "domaine": "systemes_embarques",
+    "sous_theme": "capteurs_actionneurs",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un régulateur PID et que font respectivement ses trois termes ?",
+    "reponse_reference": "Un régulateur PID calcule une commande à partir de l'erreur entre la consigne et la mesure : le terme proportionnel réagit à l'erreur présente, le terme intégral élimine l'erreur statique en accumulant les erreurs passées, et le terme dérivé anticipe en tenant compte de la vitesse de variation. Les trois gains se règlent pour obtenir un compromis entre rapidité, stabilité et absence de dépassement, en tenant compte des saturations de l'actionneur.",
+    "mots_cles_attendus": ["pid", "proportionnel", "intégral", "dérivé", "erreur"]
+  },
+  {
+    "id": "systemes_embarques-111",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Où stocker les paramètres de configuration d'un produit embarqué et quelles sont les options ?",
+    "reponse_reference": "Les paramètres peuvent être conservés dans une zone dédiée de la Flash interne, dans une EEPROM interne ou externe, ou dans une mémoire non volatile externe comme une FRAM. La Flash interne est économique mais s'use vite et impose d'effacer des pages entières, l'EEPROM supporte bien plus de cycles, et la FRAM combine endurance et écriture octet par octet à faible énergie. Le choix dépend du nombre d'écritures attendues et de la robustesse exigée en cas de coupure.",
+    "mots_cles_attendus": ["eeprom", "flash", "fram", "non volatile", "cycles d'écriture"]
+  },
+  {
+    "id": "systemes_embarques-112",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "À quoi servent un CRC et un checksum dans un système embarqué, et en quoi diffèrent-ils ?",
+    "reponse_reference": "Un CRC ou un checksum est une empreinte courte calculée sur un bloc de données pour détecter les altérations lors d'un stockage ou d'une transmission. Le checksum, une simple somme, détecte les erreurs simples mais laisse passer des permutations, tandis que le CRC, basé sur une division polynomiale, détecte des combinaisons d'erreurs bien plus larges, y compris les rafales. Le CRC est donc privilégié pour valider un firmware ou une trame critique.",
+    "mots_cles_attendus": ["crc", "checksum", "intégrité", "polynôme", "détection d'erreur"]
+  },
+  {
+    "id": "systemes_embarques-113",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une mise à jour du firmware est interrompue par une coupure de courant et l'appareil ne démarre plus. Comment concevoir la mise à jour pour éviter ce blocage ?",
+    "reponse_reference": "Il faut adopter une stratégie à deux banques : le nouveau firmware est écrit dans une seconde zone Flash pendant que l'ancienne continue de fonctionner, et le basculement n'a lieu qu'après vérification complète de l'intégrité. Un drapeau de basculement et un bootloader robuste permettent de revenir à la banque valide si la nouvelle est incomplète ou corrompue. La zone du bootloader, elle, reste verrouillée pour garantir une voie de récupération permanente.",
+    "mots_cles_attendus": ["double banque", "basculement", "intégrité", "rollback", "bootloader"]
+  },
+  {
+    "id": "systemes_embarques-114",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un capteur sur pile doit durer cinq ans en émettant une mesure par heure. Comment structurer son cycle de fonctionnement ?",
+    "reponse_reference": "Le nœud dort en veille profonde pendant presque toute l'heure, réveillé uniquement par une alarme du RTC, puis il effectue la mesure, la transmet et se rendort, chaque phase active durant au plus quelques centaines de millisecondes. Le dimensionnement de la pile part du courant de veille, dominant ici, auquel s'ajoute l'énergie des phases actives multipliée par leur fréquence. Toute fuite, comme un régulateur non coupé ou une broche flottante, doit être traquée car elle ruine l'autonomie sur cinq ans.",
+    "mots_cles_attendus": ["veille profonde", "rtc", "autonomie", "courant de veille", "phase active"]
+  },
+  {
+    "id": "systemes_embarques-115",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un produit redémarre en boucle à cause du watchdog alors que le code fonctionne. Quelle erreur de conception est la plus probable ?",
+    "reponse_reference": "Le réarmement du watchdog est probablement placé dans une partie du code qui s'exécute toujours, par exemple une interruption périodique, de sorte que le chien est nourri même quand l'application principale est bloquée. Le réarmement doit être conditionné à la preuve que les tâches critiques ont réellement progressé, en vérifiant par exemple des compteurs de battement de chaque tâche. Un watchdog fenêtré empêche aussi les réarmements trop fréquents.",
+    "mots_cles_attendus": ["réarmement", "isr périodique", "battement", "vérification", "watchdog"]
+  },
+  {
+    "id": "systemes_embarques-116",
+    "domaine": "systemes_embarques",
+    "sous_theme": "capteurs_actionneurs",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Comment réguler la température d'une enceinte à 60 degrés avec un chauffage tout-ou-rien et un capteur de température ?",
+    "reponse_reference": "On implémente une boucle de régulation périodique, par exemple toutes les secondes, qui calcule l'erreur entre la consigne et la mesure et applique un algorithme PID ou un simple bang-bang avec hystérésis. Avec un actionneur tout-ou-rien, le PID pilote le rapport cyclique par modulation de largeur d'impulsion sur une période de quelques secondes. L'hystérésis ou l'anti-emballement intégral évitent les commutations frénétiques autour de la consigne.",
+    "mots_cles_attendus": ["régulation", "consigne", "hystérésis", "période", "actionneur"]
+  },
+  {
+    "id": "systemes_embarques-117",
+    "domaine": "systemes_embarques",
+    "sous_theme": "firmware_bootloader",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un paramètre de comptage est écrit en Flash à chaque incrément et la mémoire s'use prématurément. Comment concevoir un stockage durable ?",
+    "reponse_reference": "Il faut tamponner les incréments en RAM et ne les reporter en Flash que périodiquement ou lors d'un arrêt propre, afin de réduire le nombre d'écritures de plusieurs ordres de grandeur. Le nivellement de l'usure répartit ensuite les écritures sur plusieurs pages avec un compteur de séquence pour retrouver la version valide après coupure. Une EEPROM ou une FRAM, bien plus endurantes, peuvent aussi remplacer la Flash pour ce rôle.",
+    "mots_cles_attendus": ["tampon ram", "nivellement", "usure", "journalisation", "endurance"]
+  },
+  {
+    "id": "systemes_embarques-118",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une tâche de calcul prioritaire occupe le processeur en continu et les tâches d'affichage et de communication ne s'exécutent plus. Comment rétablir l'équilibre ?",
+    "reponse_reference": "C'est une famine des tâches de priorité inférieure, causée par une tâche prioritaire qui ne libère jamais le processeur. La tâche de calcul doit céder régulièrement, par exemple avec un délai d'attente, ou être rétrogradée en priorité, ou découpée en tranches de travail planifiées. Le dimensionnement des priorités se revoit globalement pour que les tâches urgentes restent prioritaires sans monopoliser le CPU.",
+    "mots_cles_attendus": ["famine", "priorité", "cession", "découpage", "monopole"]
+  },
+  {
+    "id": "systemes_embarques-119",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Comment mesurer la consommation réelle d'un prototype embarqué dont le courant varie fortement entre veille et activité ?",
+    "reponse_reference": "On insère une résistance de shunt dans l'alimentation et on observe la tension à ses bornes à l'oscilloscope, ou l'on utilise un analyseur de puissance adapté aux forts rapports de dynamique. L'intégration du courant sur un cycle complet de veille et d'activité donne la charge moyenne, plus représentative que des mesures ponctuelles. Pour les phases de veille à microampères, un multimètre précis en série complète la mesure car le shunt de l'oscilloscope n'est plus assez sensible.",
+    "mots_cles_attendus": ["shunt", "analyseur de puissance", "courant moyen", "dynamique", "intégration"]
+  },
+  {
+    "id": "systemes_embarques-120",
+    "domaine": "systemes_embarques",
+    "sous_theme": "energie",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un bouton doit réveiller un appareil en veille profonde alors que l'horloge système et le cœur sont arrêtés. Comment détecter l'appui ?",
+    "reponse_reference": "Il faut configurer la broche du bouton comme source de réveil externe : dans les veilles profondes, un circuit dédié surveille le front ou le niveau sur cette broche sans horloge système. À l'appui, le microcontrôleur sort de veille, redémarre ses horloges et reprend l'exécution, éventuellement en distinguant la cause du réveil dans un registre d'état. Un anti-rebond adapté reste nécessaire pour ne pas traiter plusieurs réveils pour un seul appui.",
+    "mots_cles_attendus": ["réveil externe", "veille profonde", "front", "registre de réveil", "anti-rebond"]
+  }
+]

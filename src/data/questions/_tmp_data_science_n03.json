@@ -1,0 +1,322 @@
+[
+  {
+    "id": "data_science-041",
+    "domaine": "data_science",
+    "sous_theme": "inference",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'inférence statistique ?",
+    "reponse_reference": "L'inférence statistique est l'ensemble des méthodes qui permettent de tirer des conclusions sur une population à partir des observations d'un échantillon. Elle comprend l'estimation ponctuelle, les intervalles de confiance et les tests d'hypothèses. Ses résultats comportent toujours une part d'incertitude, quantifiée par les probabilités.",
+    "mots_cles_attendus": [
+      "conclusions",
+      "population",
+      "échantillon",
+      "incertitude",
+      "estimation"
+    ]
+  },
+  {
+    "id": "data_science-042",
+    "domaine": "data_science",
+    "sous_theme": "echantillonnage",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un échantillon aléatoire simple et pourquoi est-il important ?",
+    "reponse_reference": "Un échantillon aléatoire simple est obtenu en tirant au sort des individus de la population de sorte que chaque individu ait la même chance d'être sélectionné, indépendamment des autres. Il garantit que l'échantillon est représentatif en espérance, ce qui permet de généraliser les résultats à la population. Sans tirage aléatoire, l'inférence statistique classique n'est plus valide.",
+    "mots_cles_attendus": [
+      "tirage au sort",
+      "même chance",
+      "représentatif",
+      "généraliser",
+      "aléatoire"
+    ]
+  },
+  {
+    "id": "data_science-043",
+    "domaine": "data_science",
+    "sous_theme": "estimation",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un estimateur ponctuel et quelles qualités recherche-t-on chez lui ?",
+    "reponse_reference": "Un estimateur ponctuel est une statistique calculée sur l'échantillon qui fournit une valeur unique pour estimer un paramètre inconnu de la population, comme la moyenne d'échantillon pour la moyenne de la population. On recherche des estimateurs sans biais, dont l'espérance égale le paramètre, et de variance minimale, c'est-à-dire précis. La moyenne d'échantillon est un estimateur sans biais de la moyenne de la population.",
+    "mots_cles_attendus": [
+      "valeur unique",
+      "paramètre",
+      "sans biais",
+      "variance minimale",
+      "précis"
+    ]
+  },
+  {
+    "id": "data_science-044",
+    "domaine": "data_science",
+    "sous_theme": "intervalles_de_confiance",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un intervalle de confiance ?",
+    "reponse_reference": "Un intervalle de confiance est une plage de valeurs calculée à partir de l'échantillon qui contient le paramètre inconnu de la population avec une probabilité fixée, par exemple 95 %. Il se construit autour de l'estimateur en ajoutant et retranchant une marge d'erreur qui dépend de l'erreur standard et du niveau de confiance. Un intervalle large signale une estimation peu précise, souvent liée à un petit échantillon.",
+    "mots_cles_attendus": [
+      "plage de valeurs",
+      "paramètre",
+      "95 %",
+      "marge d'erreur",
+      "précision"
+    ]
+  },
+  {
+    "id": "data_science-045",
+    "domaine": "data_science",
+    "sous_theme": "intervalles_de_confiance",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que signifie exactement un niveau de confiance de 95 % pour un intervalle de confiance ?",
+    "reponse_reference": "Cela signifie que si l'on répétait l'échantillonnage un très grand nombre de fois et que l'on calculait un intervalle à chaque fois, environ 95 % de ces intervalles contiendraient la vraie valeur du paramètre. Pour un intervalle unique déjà calculé, on ne peut pas dire qu'il contient le paramètre avec une probabilité de 95 %, car le paramètre est fixe. Le niveau de confiance décrit la fiabilité de la méthode, pas de l'intervalle particulier.",
+    "mots_cles_attendus": [
+      "répéter l'échantillonnage",
+      "95 % des intervalles",
+      "paramètre fixe",
+      "méthode",
+      "long terme"
+    ]
+  },
+  {
+    "id": "data_science-046",
+    "domaine": "data_science",
+    "sous_theme": "distribution_echantillonnage",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'erreur standard de la moyenne et comment évolue-t-elle avec la taille de l'échantillon ?",
+    "reponse_reference": "L'erreur standard de la moyenne est l'écart-type de la distribution d'échantillonnage des moyennes ; elle mesure la précision avec laquelle la moyenne d'échantillon estime la moyenne de la population. Elle vaut l'écart-type de la population divisé par la racine carrée de la taille de l'échantillon. Elle diminue donc quand l'échantillon grandit : quadrupler la taille divise l'erreur par deux.",
+    "mots_cles_attendus": [
+      "écart-type des moyennes",
+      "précision",
+      "divisé par racine de n",
+      "diminue",
+      "taille d'échantillon"
+    ]
+  },
+  {
+    "id": "data_science-047",
+    "domaine": "data_science",
+    "sous_theme": "echantillonnage",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un biais de sélection dans un échantillonnage ?",
+    "reponse_reference": "Le biais de sélection apparaît quand la méthode de constitution de l'échantillon favorise systématiquement certains profils de la population, de sorte que l'échantillon n'est plus représentatif. Par exemple, un sondage réalisé uniquement en ligne exclut les personnes sans accès internet. Les estimateurs calculés sur un tel échantillon sont alors biaisés et les conclusions ne peuvent pas être généralisées.",
+    "mots_cles_attendus": [
+      "favorise certains profils",
+      "non représentatif",
+      "méthode de sélection",
+      "généralisation impossible",
+      "biaisé"
+    ]
+  },
+  {
+    "id": "data_science-048",
+    "domaine": "data_science",
+    "sous_theme": "estimation",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que signifie le fait qu'un estimateur est sans biais ?",
+    "reponse_reference": "Un estimateur est sans biais si son espérance sur tous les échantillons possibles est égale à la vraie valeur du paramètre qu'il estime. La moyenne d'échantillon est sans biais pour la moyenne de la population. En revanche, la variance d'échantillon calculée en divisant par n sous-estime la variance de la population, c'est pourquoi on divise par n - 1 pour la rendre sans biais.",
+    "mots_cles_attendus": [
+      "espérance",
+      "vraie valeur",
+      "moyenne",
+      "n - 1",
+      "sous-estime"
+    ]
+  },
+  {
+    "id": "data_science-049",
+    "domaine": "data_science",
+    "sous_theme": "estimation",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le bootstrap et à quoi sert-il ?",
+    "reponse_reference": "Le bootstrap est une méthode de rééchantillonnage qui consiste à tirer un très grand nombre d'échantillons avec remise à partir de l'échantillon observé. La distribution des statistiques calculées sur ces rééchantillons permet d'estimer l'erreur standard ou de construire des intervalles de confiance sans formules analytiques. Il est très utile pour des estimateurs complexes comme la médiane ou des quantiles dont la loi est difficile à dériver.",
+    "mots_cles_attendus": [
+      "rééchantillonnage",
+      "avec remise",
+      "erreur standard",
+      "intervalle de confiance",
+      "sans formules"
+    ]
+  },
+  {
+    "id": "data_science-050",
+    "domaine": "data_science",
+    "sous_theme": "distribution_echantillonnage",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une distribution d'échantillonnage d'une statistique ?",
+    "reponse_reference": "La distribution d'échantillonnage est la distribution des valeurs que prend une statistique, comme la moyenne, sur tous les échantillons possibles de même taille tirés de la population. Elle est différente de la distribution des données elles-mêmes. Sa forme est décrite par le théorème central limite pour les moyennes et son écart-type est l'erreur standard, qui mesure la variabilité de l'estimateur.",
+    "mots_cles_attendus": [
+      "tous les échantillons",
+      "statistique",
+      "erreur standard",
+      "variabilité",
+      "différente des données"
+    ]
+  },
+  {
+    "id": "data_science-051",
+    "domaine": "data_science",
+    "sous_theme": "bayesien",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'énonce le théorème de Bayes et comment s'interprète-t-il ?",
+    "reponse_reference": "Le théorème de Bayes relie la probabilité d'une hypothèse sachant les données à la probabilité des données sachant l'hypothèse, en tenant compte de la probabilité a priori de l'hypothèse. Il formalise la mise à jour d'une croyance initiale à mesure que de nouvelles données arrivent. Il est à la base de l'inférence bayésienne, des filtres anti-spam et de nombreux systèmes de diagnostic.",
+    "mots_cles_attendus": [
+      "mise à jour",
+      "a priori",
+      "vraisemblance",
+      "croyance",
+      "données"
+    ]
+  },
+  {
+    "id": "data_science-052",
+    "domaine": "data_science",
+    "sous_theme": "intervalles_de_confiance",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un institut de sondage annonce qu'un candidat est crédité de 52 % d'intentions de vote, avec une marge d'erreur de 3 points au niveau de confiance de 95 %. Comment interpréter correctement ce résultat ?",
+    "reponse_reference": "L'intervalle de confiance à 95 % va de 49 % à 55 % : il est donc tout à fait possible que le candidat soit en réalité sous la barre des 50 %. La marge d'erreur de 3 points reflète l'incertitude due à l'échantillonnage et suppose un échantillon réellement aléatoire. Ce résultat ne doit pas être lu comme une certitude de victoire mais comme une estimation entachée d'incertitude.",
+    "mots_cles_attendus": [
+      "49 % à 55 %",
+      "intervalle de confiance",
+      "marge d'erreur",
+      "incertitude",
+      "pas une certitude"
+    ]
+  },
+  {
+    "id": "data_science-053",
+    "domaine": "data_science",
+    "sous_theme": "intervalles_de_confiance",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Sur un échantillon aléatoire de 400 clients, le panier moyen est de 60 euros avec un écart-type d'échantillon de 20 euros. Construisez l'intervalle de confiance à 95 % du panier moyen de la population et interprétez-le.",
+    "reponse_reference": "L'erreur standard vaut 20 divisé par racine de 400, soit 1 euro, et le coefficient de 95 % est environ 1,96, d'où une marge d'erreur de 1,96 euro. L'intervalle de confiance est donc environ 60 ± 1,96, soit [58,04 ; 61,96] euros. On peut dire qu'avec la méthode utilisée, environ 95 % des intervalles ainsi construits contiendraient le vrai panier moyen de la population.",
+    "mots_cles_attendus": [
+      "erreur standard",
+      "1,96",
+      "1,96 euro",
+      "58,04",
+      "61,96"
+    ]
+  },
+  {
+    "id": "data_science-054",
+    "domaine": "data_science",
+    "sous_theme": "echantillonnage",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une marque sonde ses clients via un questionnaire envoyé dans ses newsletters, et 8 % répondent. Pourquoi les résultats de ce sondage ne peuvent-ils pas être généralisés à l'ensemble des clients sans précaution ?",
+    "reponse_reference": "Il s'agit d'un échantillon de convenance ou auto-sélectionné : seuls les clients abonnés à la newsletter, engagés et motivés, répondent. Ce faible taux de réponse crée un biais de non-réponse et de sélection, les répondants n'étant probablement pas représentatifs de la clientèle entière. Les estimations issues de ce sondage seraient donc biaisées ; il faudrait pondérer ou tirer un échantillon aléatoire de la base clients.",
+    "mots_cles_attendus": [
+      "auto-sélection",
+      "biais de sélection",
+      "non-réponse",
+      "non représentatif",
+      "pondérer"
+    ]
+  },
+  {
+    "id": "data_science-055",
+    "domaine": "data_science",
+    "sous_theme": "estimation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un analyste veut estimer la médiane des dépenses mensuelles de 5 000 clients à partir d'un échantillon de 300 clients, mais il ne connaît pas de formule pour l'intervalle de confiance de la médiane. Quelle méthode moderne peut-il utiliser ?",
+    "reponse_reference": "Il peut utiliser le bootstrap : tirer des milliers d'échantillons avec remise de taille 300 à partir de son échantillon initial et calculer la médiane sur chacun. La distribution des médianes bootstrapées fournit un intervalle de confiance empirique, par exemple via les percentiles 2,5 % et 97,5 %. Cette méthode ne nécessite aucune hypothèse sur la loi des dépenses, ce qui la rend très souple.",
+    "mots_cles_attendus": [
+      "bootstrap",
+      "avec remise",
+      "percentiles",
+      "2,5 % et 97,5 %",
+      "sans hypothèse"
+    ]
+  },
+  {
+    "id": "data_science-056",
+    "domaine": "data_science",
+    "sous_theme": "echantillonnage",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une entreprise veut estimer la proportion de clients satisfaits avec une marge d'erreur de 5 points et un niveau de confiance de 95 %. Pourquoi la taille d'échantillon minimale se calcule-t-elle environ comme 1 divisé par la marge d'erreur au carré ?",
+    "reponse_reference": "La marge d'erreur d'une proportion vaut environ 1,96 fois la racine de p(1-p)/n. Dans le pire cas, p(1-p) vaut 0,25, et en arrondissant 1,96 à 2, la marge vaut environ 1/racine(n). Pour une marge de 5 %, soit 0,05, il faut donc n proche de 1/0,05² = 400 répondants. Cette approximation rapide montre que la précision s'améliore lentement : diviser la marge par deux exige quatre fois plus de répondants.",
+    "mots_cles_attendus": [
+      "pire cas 0,25",
+      "1 divisé par marge²",
+      "400",
+      "quatre fois plus",
+      "taille d'échantillon"
+    ]
+  },
+  {
+    "id": "data_science-057",
+    "domaine": "data_science",
+    "sous_theme": "bayesien",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une maladie touche 1 personne sur 1 000. Un test la détecte dans 99 % des cas chez les malades et donne 2 % de faux positifs chez les sains. Si le test est positif, quelle est la probabilité d'être réellement malade, et pourquoi ce résultat surprend-il ?",
+    "reponse_reference": "D'après le théorème de Bayes, la probabilité d'être malade sachant un test positif vaut environ 4,7 % : sur 1 000 personnes, il y a environ 1 vrai malade détecté et environ 20 faux positifs. La rareté de la maladie explique qu'un test positif soit le plus souvent un faux positif malgré la bonne sensibilité du test. C'est le paradoxe du faux positif, qui illustre l'importance de la prévalence dans l'interprétation d'un test.",
+    "mots_cles_attendus": [
+      "Bayes",
+      "prévalence",
+      "4,7 %",
+      "faux positif",
+      "rareté"
+    ]
+  },
+  {
+    "id": "data_science-058",
+    "domaine": "data_science",
+    "sous_theme": "estimation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Pour estimer le salaire moyen d'une entreprise à distribution très asymétrique, faut-il utiliser la moyenne ou la médiane de l'échantillon ? Comparez leurs propriétés d'estimateur.",
+    "reponse_reference": "La moyenne d'échantillon est un estimateur sans biais du salaire moyen, mais sa variance est élevée quand la distribution est asymétrique, car quelques gros salaires la font beaucoup varier d'un échantillon à l'autre. La médiane est plus robuste et sa variance est plus faible ici, mais elle estime le salaire médian, pas le salaire moyen. Le choix dépend donc de la question métier : salaire moyen total ou salaire typique du salarié.",
+    "mots_cles_attendus": [
+      "sans biais",
+      "variance élevée",
+      "robuste",
+      "paramètre différent",
+      "question métier"
+    ]
+  },
+  {
+    "id": "data_science-059",
+    "domaine": "data_science",
+    "sous_theme": "intervalles_de_confiance",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Deux analystes estiment le taux de conversion d'une boutique en ligne : le premier sur 100 visiteurs obtient 10 % avec un intervalle de 95 % de [4 % ; 16 %], le second sur 10 000 visiteurs obtient 10,2 % avec un intervalle de [9,6 % ; 10,8 %]. Que nous apprennent ces deux résultats ?",
+    "reponse_reference": "Les deux estimations sont compatibles, mais la seconde est beaucoup plus précise car l'erreur standard diminue avec la taille de l'échantillon. Le premier intervalle est trop large pour prendre une décision, par exemple lancer une campagne sur la base d'un taux de 10 %. Cela illustre l'arbitrage entre coût de collecte des données et précision de l'estimation.",
+    "mots_cles_attendus": [
+      "précision",
+      "taille de l'échantillon",
+      "erreur standard",
+      "compatibles",
+      "arbitrage"
+    ]
+  },
+  {
+    "id": "data_science-060",
+    "domaine": "data_science",
+    "sous_theme": "echantillonnage",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un data scientist tire un échantillon aléatoire de 200 lignes d'une table de 1 million de transactions pour analyser les montants. Quelles précautions doit-il prendre pour que ses estimations puissent être généralisées à l'ensemble de la table ?",
+    "reponse_reference": "Le tirage doit être réellement aléatoire et couvrir toute la table, sans se limiter à une période récente qui introduirait un biais temporel. Il doit vérifier que l'échantillon ressemble à la population sur des variables clés, par exemple la répartition des montants ou des types de clients. Enfin, il doit quantifier l'incertitude de ses estimations avec des intervalles de confiance plutôt que de donner des valeurs ponctuelles comme si elles étaient exactes.",
+    "mots_cles_attendus": [
+      "aléatoire",
+      "toute la table",
+      "biais temporel",
+      "représentativité",
+      "intervalles de confiance"
+    ]
+  }
+]

@@ -1,0 +1,3837 @@
+[
+  {
+    "id": "devops-001",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un shell Linux et à quoi sert-il ?",
+    "reponse_reference": "Un shell est l'interpréteur de commandes de Linux qui fait l'interface entre l'utilisateur et le noyau du système. Il permet d'exécuter des commandes, de lancer des programmes et d'automatiser des tâches via des scripts.",
+    "mots_cles_attendus": [
+      "interpréteur",
+      "commandes",
+      "noyau",
+      "système",
+      "scripts"
+    ]
+  },
+  {
+    "id": "devops-002",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que font les commandes cd, ls et pwd dans un terminal Linux ?",
+    "reponse_reference": "pwd affiche le répertoire courant, ls liste les fichiers et dossiers qu'il contient, et cd permet de changer de répertoire. Ce sont les commandes de base pour naviguer dans l'arborescence de fichiers.",
+    "mots_cles_attendus": [
+      "répertoire courant",
+      "lister",
+      "changer",
+      "navigation",
+      "fichiers"
+    ]
+  },
+  {
+    "id": "devops-003",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu veux afficher les 20 dernières lignes d'un fichier de logs très volumineux sans tout ouvrir. Quelle commande utilises-tu et pourquoi ?",
+    "reponse_reference": "On utilise tail -n 20 fichier.log, éventuellement avec l'option -f pour suivre les nouvelles lignes en temps réel. Cela évite de charger tout le fichier en mémoire comme le ferait un éditeur de texte.",
+    "mots_cles_attendus": [
+      "tail",
+      "dernières lignes",
+      "temps réel",
+      "logs"
+    ]
+  },
+  {
+    "id": "devops-004",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre IaaS, PaaS et SaaS ?",
+    "reponse_reference": "L'IaaS fournit l'infrastructure (machines virtuelles, réseau, stockage), le PaaS fournit une plateforme prête pour déployer du code sans gérer les serveurs, et le SaaS fournit des applications complètes utilisables directement. Plus on monte dans les couches, moins l'utilisateur gère de composants.",
+    "mots_cles_attendus": [
+      "infrastructure",
+      "plateforme",
+      "logiciel",
+      "service",
+      "gestion"
+    ]
+  },
+  {
+    "id": "devops-005",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le cloud computing ?",
+    "reponse_reference": "Le cloud computing consiste à utiliser des ressources informatiques (serveurs, stockage, bases de données) fournies par un prestataire via Internet. Il permet de payer à l'usage et de monter ou descendre en charge rapidement.",
+    "mots_cles_attendus": [
+      "internet",
+      "ressources",
+      "prestataire",
+      "à l'usage",
+      "élasticité"
+    ]
+  },
+  {
+    "id": "devops-006",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un collègue te donne un script.sh mais quand tu tapes son nom dans le terminal, tu obtiens 'Permission denied'. Que fais-tu ?",
+    "reponse_reference": "Le fichier n'a pas le droit d'exécution : il faut le lui donner avec chmod +x script.sh, puis le lancer avec ./script.sh. On peut aussi l'exécuter sans changer les droits via bash script.sh.",
+    "mots_cles_attendus": [
+      "chmod",
+      "exécution",
+      "droits",
+      "permissions"
+    ]
+  },
+  {
+    "id": "devops-007",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un conteneur en informatique ?",
+    "reponse_reference": "Un conteneur est un environnement isolé qui regroupe une application et toutes ses dépendances pour qu'elle s'exécute de façon identique partout. Contrairement à une machine virtuelle, il partage le noyau du système hôte et démarre très vite.",
+    "mots_cles_attendus": [
+      "isolé",
+      "application",
+      "dépendances",
+      "noyau",
+      "portable"
+    ]
+  },
+  {
+    "id": "devops-008",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence principale entre un conteneur et une machine virtuelle ?",
+    "reponse_reference": "Une machine virtuelle virtualise le matériel et embarque un système d'exploitation complet, ce qui la rend lourde et lente à démarrer. Un conteneur partage le noyau de l'hôte, il est donc léger, rapide et consomme moins de ressources.",
+    "mots_cles_attendus": [
+      "machine virtuelle",
+      "noyau partagé",
+      "léger",
+      "système d'exploitation",
+      "démarrage"
+    ]
+  },
+  {
+    "id": "devops-009",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert la commande grep ?",
+    "reponse_reference": "grep recherche un motif (texte ou expression régulière) dans des fichiers ou dans la sortie d'une commande et affiche les lignes correspondantes. C'est l'outil de base pour filtrer et retrouver des informations dans des logs.",
+    "mots_cles_attendus": [
+      "recherche",
+      "motif",
+      "lignes",
+      "filtrer",
+      "logs"
+    ]
+  },
+  {
+    "id": "devops-010",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu cherches toutes les lignes contenant 'ERROR' dans app.log et tu veux les compter. Comment fais-tu en une seule ligne de commande ?",
+    "reponse_reference": "On combine grep et wc avec un pipe : grep -c ERROR app.log, ou grep ERROR app.log | wc -l. Le pipe envoie la sortie de la première commande en entrée de la seconde.",
+    "mots_cles_attendus": [
+      "grep",
+      "wc",
+      "pipe",
+      "compter"
+    ]
+  },
+  {
+    "id": "devops-011",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une région et une zone de disponibilité chez un fournisseur cloud ?",
+    "reponse_reference": "Une région est une zone géographique (par exemple Paris ou Francfort) contenant plusieurs zones de disponibilité. Une zone de disponibilité est un datacenter isolé avec sa propre alimentation et son propre réseau, ce qui permet de survivre à la panne d'une zone.",
+    "mots_cles_attendus": [
+      "région",
+      "zone de disponibilité",
+      "datacenter",
+      "géographique",
+      "isolé"
+    ]
+  },
+  {
+    "id": "devops-012",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Ton application web a 'ça marche sur ma machine' comme problème récurrent : elle fonctionne chez toi mais pas sur le serveur. Quelle solution conteneurisée proposes-tu en premier ?",
+    "reponse_reference": "Emballer l'application dans un conteneur Docker qui inclut le code et toutes ses dépendances. L'image étant identique partout, l'application s'exécute de la même façon sur la machine de dev et sur le serveur.",
+    "mots_cles_attendus": [
+      "conteneur",
+      "dépendances",
+      "image",
+      "identique",
+      "environnement"
+    ]
+  },
+  {
+    "id": "devops-013",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que signifie le pipe (|) dans une commande shell ?",
+    "reponse_reference": "Le pipe relie la sortie standard d'une commande à l'entrée standard d'une autre, permettant de chaîner des commandes simples. Par exemple cat fichier | grep erreur envoie le contenu du fichier à grep.",
+    "mots_cles_attendus": [
+      "sortie standard",
+      "entrée",
+      "chaîner",
+      "commandes"
+    ]
+  },
+  {
+    "id": "devops-014",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Le disque d'un serveur de test est plein à 100 %. Quelles commandes utilises-tu pour identifier les plus gros répertoires ?",
+    "reponse_reference": "On utilise df -h pour voir les montages et leur remplissage, puis du -sh ou du -h --max-depth=1 sur les répertoires suspects pour trouver les plus volumineux. On peut compléter avec find pour chercher les gros fichiers.",
+    "mots_cles_attendus": [
+      "df",
+      "du",
+      "disque",
+      "gros fichiers",
+      "espace"
+    ]
+  },
+  {
+    "id": "devops-015",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une image Docker et en quoi diffère-t-elle d'un conteneur ?",
+    "reponse_reference": "Une image Docker est un modèle en lecture seule contenant l'application et ses dépendances, tandis qu'un conteneur est une instance en cours d'exécution de cette image. On peut lancer plusieurs conteneurs à partir d'une même image.",
+    "mots_cles_attendus": [
+      "image",
+      "modèle",
+      "lecture seule",
+      "instance",
+      "exécution"
+    ]
+  },
+  {
+    "id": "devops-016",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu viens d'installer Docker et tu veux lancer un serveur web nginx de test en une commande, accessible sur le port 8080 de ta machine. Que tapes-tu ?",
+    "reponse_reference": "On lance docker run -d -p 8080:80 nginx : -d exécute en arrière-plan et -p mappe le port 8080 de l'hôte vers le port 80 du conteneur. Docker télécharge automatiquement l'image nginx si elle n'est pas présente.",
+    "mots_cles_attendus": [
+      "docker run",
+      "port",
+      "arrière-plan",
+      "nginx",
+      "mappage"
+    ]
+  },
+  {
+    "id": "devops-017",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que signifie la scalabilité (mise à l'échelle) dans le cloud ?",
+    "reponse_reference": "La scalabilité est la capacité d'adapter les ressources (CPU, mémoire, nombre d'instances) à la charge de l'application. Elle peut être verticale (grosse machine) ou horizontale (plus de machines), le cloud permettant de le faire rapidement, souvent automatiquement.",
+    "mots_cles_attendus": [
+      "ressources",
+      "charge",
+      "verticale",
+      "horizontale",
+      "adapter"
+    ]
+  },
+  {
+    "id": "devops-018",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un chemin absolu et un chemin relatif sous Linux ?",
+    "reponse_reference": "Un chemin absolu part de la racine / et décrit un fichier de façon unique, comme /var/log/syslog. Un chemin relatif part du répertoire courant, par exemple ./logs/app.log ou ../autre/dossier.",
+    "mots_cles_attendus": [
+      "racine",
+      "répertoire courant",
+      "chemin",
+      "absolu",
+      "relatif"
+    ]
+  },
+  {
+    "id": "devops-019",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une startup veut héberger son application sans gérer aucun serveur, en payant uniquement quand du code s'exécute. Quel type de service cloud lui conseilles-tu ?",
+    "reponse_reference": "Le serverless (FaaS, comme AWS Lambda ou Cloud Functions) : le fournisseur gère toute l'infrastructure et la facturation se fait à l'exécution. C'est idéal pour des charges variables et imprévisibles sans administration de serveurs.",
+    "mots_cles_attendus": [
+      "serverless",
+      "fonction",
+      "facturation",
+      "exécution",
+      "géré"
+    ]
+  },
+  {
+    "id": "devops-020",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi automatiser des tâches d'administration système plutôt que les faire à la main ?",
+    "reponse_reference": "L'automatisation supprime les erreurs humaines, garantit que la même procédure est reproduite exactement, et fait gagner du temps sur les tâches répétitives. Les scripts et outils deviennent réutilisables et versionnables.",
+    "mots_cles_attendus": [
+      "erreurs",
+      "répétabilité",
+      "temps",
+      "scripts",
+      "tâches répétitives"
+    ]
+  },
+  {
+    "id": "devops-021",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que Git et pourquoi est-il indispensable en DevOps ?",
+    "reponse_reference": "Git est un système de contrôle de version distribué qui enregistre l'historique des modifications du code et permet le travail en équipe via des branches. Il est au cœur du DevOps car le code versionné alimente les pipelines d'intégration et de déploiement continus.",
+    "mots_cles_attendus": [
+      "contrôle de version",
+      "historique",
+      "branches",
+      "équipe",
+      "dépôt"
+    ]
+  },
+  {
+    "id": "devops-022",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifient CI et CD dans CI/CD ?",
+    "reponse_reference": "CI signifie intégration continue : on fusionne régulièrement le code et on le teste automatiquement. CD signifie livraison ou déploiement continu : chaque changement validé est livré, voire déployé automatiquement en production.",
+    "mots_cles_attendus": [
+      "intégration continue",
+      "déploiement continu",
+      "tests automatiques",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "devops-023",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu modifies une fonctionnalité sans casser la branche principale. Décris le workflow Git que tu suis, de la modification à la revue de code.",
+    "reponse_reference": "On crée une branche de fonctionnalité depuis main, on commit les changements avec des messages clairs, puis on pousse la branche et on ouvre une pull request. Après revue de code et tests passés, la branche est fusionnée dans main.",
+    "mots_cles_attendus": [
+      "branche",
+      "commit",
+      "pull request",
+      "revue de code",
+      "fusion"
+    ]
+  },
+  {
+    "id": "devops-024",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre git merge et git rebase ?",
+    "reponse_reference": "git merge fusionne deux branches en créant un commit de fusion et conserve l'historique réel. git rebase rejoue les commits d'une branche au-dessus d'une autre, ce qui donne un historique linéaire mais réécrit les commits.",
+    "mots_cles_attendus": [
+      "fusion",
+      "historique",
+      "linéaire",
+      "commit",
+      "réécriture"
+    ]
+  },
+  {
+    "id": "devops-025",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Après un git pull, Git t'annonce un conflit de fusion sur un fichier modifié par toi et par un collègue. Comment le résous-tu ?",
+    "reponse_reference": "On ouvre le fichier en conflit, on repère les marqueurs <<<<<<< et >>>>>>>, puis on choisit ou on combine les modifications manuellement. Ensuite on marque le fichier comme résolu (git add) et on termine la fusion par un commit.",
+    "mots_cles_attendus": [
+      "conflit",
+      "marqueurs",
+      "résolution",
+      "git add",
+      "commit"
+    ]
+  },
+  {
+    "id": "devops-026",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert un Dockerfile ?",
+    "reponse_reference": "Un Dockerfile est un fichier texte qui décrit les instructions pour construire une image Docker : image de base, copie des fichiers, installation des dépendances, port exposé et commande de démarrage. Il rend la construction reproductible et versionnable.",
+    "mots_cles_attendus": [
+      "instructions",
+      "image",
+      "construction",
+      "reproductible",
+      "dépendances"
+    ]
+  },
+  {
+    "id": "devops-027",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Écris en langage naturel les grandes lignes d'un Dockerfile pour une application Node.js.",
+    "reponse_reference": "On part d'une image node, on copie package.json puis on installe les dépendances, on copie le reste du code, on expose le port de l'application et on définit la commande de lancement (CMD node app.js). Copier package.json avant le code permet de profiter du cache des couches.",
+    "mots_cles_attendus": [
+      "FROM",
+      "COPY",
+      "dépendances",
+      "EXPOSE",
+      "CMD"
+    ]
+  },
+  {
+    "id": "devops-028",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un registre d'images comme Docker Hub ?",
+    "reponse_reference": "Un registre est un dépôt centralisé où l'on publie (push) et télécharge (pull) des images Docker. Docker Hub est le registre public par défaut, mais les entreprises utilisent souvent des registres privés pour leurs images internes.",
+    "mots_cles_attendus": [
+      "dépôt",
+      "images",
+      "push",
+      "pull",
+      "privé"
+    ]
+  },
+  {
+    "id": "devops-029",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que sont les variables d'environnement sous Linux et comment les consulte-t-on ?",
+    "reponse_reference": "Les variables d'environnement sont des valeurs nommées accessibles aux processus, comme PATH ou HOME. On les affiche avec echo $NOM ou env, et on les définit avec export NOM=valeur.",
+    "mots_cles_attendus": [
+      "variables",
+      "processus",
+      "export",
+      "PATH",
+      "configuration"
+    ]
+  },
+  {
+    "id": "devops-030",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu dois trouver tous les processus consommant le plus de CPU sur un serveur Linux et en tuer un. Quelles commandes enchaînes-tu ?",
+    "reponse_reference": "On utilise top ou ps aux --sort=-%cpu pour identifier le processus, on note son PID, puis on le termine avec kill PID (ou kill -9 s'il ne répond pas). pkill permet aussi de tuer par nom de processus.",
+    "mots_cles_attendus": [
+      "top",
+      "ps",
+      "PID",
+      "kill",
+      "CPU"
+    ]
+  },
+  {
+    "id": "devops-031",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une machine virtuelle dans le cloud et quel service classique l'illustre ?",
+    "reponse_reference": "Une machine virtuelle est un serveur virtuel loué à la demande chez un fournisseur cloud, avec un système d'exploitation et des ressources configurables. Amazon EC2, Google Compute Engine et Azure Virtual Machines en sont les exemples classiques.",
+    "mots_cles_attendus": [
+      "serveur virtuel",
+      "ressources",
+      "fournisseur",
+      "EC2",
+      "à la demande"
+    ]
+  },
+  {
+    "id": "devops-032",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Ton application est installée sur un seul serveur cloud qui tombe en panne : tout est indisponible. Quelle amélioration simple proposes-tu au niveau infrastructure ?",
+    "reponse_reference": "Répartir l'application sur au moins deux instances placées dans des zones de disponibilité différentes, derrière un équilibreur de charge. La panne d'une zone ne coupe alors plus le service.",
+    "mots_cles_attendus": [
+      "équilibreur de charge",
+      "plusieurs instances",
+      "zones de disponibilité",
+      "redondance"
+    ]
+  },
+  {
+    "id": "devops-033",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un dépôt Git distant (remote) et quelles opérations y sont associées ?",
+    "reponse_reference": "Un remote est la copie du dépôt hébergée sur un serveur comme GitHub ou GitLab, par défaut nommé origin. On y envoie ses commits avec git push, on récupère les changements avec git pull ou git fetch, et on clone depuis ce serveur.",
+    "mots_cles_attendus": [
+      "remote",
+      "origin",
+      "push",
+      "pull",
+      "serveur"
+    ]
+  },
+  {
+    "id": "devops-034",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu as commité un fichier de configuration contenant un mot de passe par erreur et tu viens juste de pousser la branche. Que fais-tu ?",
+    "reponse_reference": "Il faut considérer le secret comme compromis : le révoquer et le remplacer immédiatement. Ensuite on retire le fichier du dépôt (et de l'historique si nécessaire), on ajoute un .gitignore pour ce type de fichier et on pousse la correction.",
+    "mots_cles_attendus": [
+      "secret",
+      "révoquer",
+      "historique",
+      "gitignore",
+      "compromis"
+    ]
+  },
+  {
+    "id": "devops-035",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que fait docker-compose et quel problème résout-il ?",
+    "reponse_reference": "Docker Compose permet de définir et lancer plusieurs conteneurs liés (application, base de données, cache) via un unique fichier YAML. Il évite d'exécuter une longue suite de docker run et standardise les environnements de développement locaux.",
+    "mots_cles_attendus": [
+      "plusieurs conteneurs",
+      "YAML",
+      "services",
+      "réseau",
+      "développement local"
+    ]
+  },
+  {
+    "id": "devops-036",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un conteneur lancé avec docker run s'arrête immédiatement sans message. Quelle commande utilises-tu pour comprendre pourquoi ?",
+    "reponse_reference": "On inspecte les journaux du conteneur avec docker logs <nom> et son état avec docker ps -a puis docker inspect. Les logs révèlent généralement l'erreur d'application qui a fait sortir le processus principal.",
+    "mots_cles_attendus": [
+      "docker logs",
+      "docker ps",
+      "inspect",
+      "processus principal",
+      "arrêt"
+    ]
+  },
+  {
+    "id": "devops-037",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un script shell et quand devient-il utile en DevOps ?",
+    "reponse_reference": "Un script shell est un fichier contenant une suite de commandes exécutées par le shell, souvent en bash. Il sert à automatiser des tâches répétitives comme des sauvegardes, des déploiements simples ou la préparation d'un environnement.",
+    "mots_cles_attendus": [
+      "script",
+      "bash",
+      "automatisation",
+      "commandes",
+      "tâches répétitives"
+    ]
+  },
+  {
+    "id": "devops-038",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une pull request (ou merge request) et quel est son rôle dans le travail d'équipe ?",
+    "reponse_reference": "Une pull request est une demande de fusion d'une branche vers une autre sur une plateforme comme GitHub ou GitLab. Elle centralise la revue de code, les commentaires et les vérifications automatiques avant d'intégrer les changements.",
+    "mots_cles_attendus": [
+      "fusion",
+      "revue de code",
+      "branche",
+      "vérifications",
+      "collaboration"
+    ]
+  },
+  {
+    "id": "devops-039",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application doit stocker des photos de profil accessibles par Internet, avec un coût minimal et sans gérer de serveur de fichiers. Quel service cloud utilises-tu ?",
+    "reponse_reference": "Le stockage objet (Amazon S3, Google Cloud Storage, Azure Blob) est conçu pour cela : scalable, durable, peu coûteux et accessible par URL. On évite ainsi de maintenir un serveur de fichiers attaché à une machine virtuelle.",
+    "mots_cles_attendus": [
+      "stockage objet",
+      "S3",
+      "durable",
+      "coût",
+      "URL"
+    ]
+  },
+  {
+    "id": "devops-040",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Chaque lundi, tu recopies manuellement un dossier de sauvegarde vers un autre serveur. Comment automatises-tu cette tâche sous Linux ?",
+    "reponse_reference": "On écrit un petit script utilisant rsync ou scp pour la copie, puis on le planifie avec cron, par exemple une entrée hebdomadaire dans crontab. On ajoute des logs et une vérification du code de retour pour détecter les échecs.",
+    "mots_cles_attendus": [
+      "cron",
+      "script",
+      "rsync",
+      "planification",
+      "sauvegarde"
+    ]
+  },
+  {
+    "id": "devops-041",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un pipeline CI/CD et quelles sont ses étapes typiques ?",
+    "reponse_reference": "Un pipeline est une suite automatisée déclenchée par un changement de code : récupération du code, installation des dépendances, compilation, tests, construction d'image et déploiement. Chaque étape doit réussir pour passer à la suivante.",
+    "mots_cles_attendus": [
+      "pipeline",
+      "étapes",
+      "tests",
+      "build",
+      "déploiement"
+    ]
+  },
+  {
+    "id": "devops-042",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Ton pipeline CI échoue aléatoirement : les mêmes tests passent parfois et échouent d'autres fois sans changement de code. Comment qualifies-tu ce problème et que fais-tu ?",
+    "reponse_reference": "Ce sont des tests 'flaky', souvent dus à des dépendances d'ordre, de timing ou d'état partagé. Il faut les identifier via l'historique des runs, les isoler, les corriger ou les stabiliser, car ils détruisent la confiance dans le pipeline.",
+    "mots_cles_attendus": [
+      "tests flaky",
+      "aléatoire",
+      "timing",
+      "confiance",
+      "isoler"
+    ]
+  },
+  {
+    "id": "devops-043",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle différence entre livraison continue (continuous delivery) et déploiement continu (continuous deployment) ?",
+    "reponse_reference": "En livraison continue, chaque version validée est prête à être déployée en production mais une décision manuelle déclenche le déploiement. En déploiement continu, toute version qui passe les tests est déployée automatiquement en production sans intervention humaine.",
+    "mots_cles_attendus": [
+      "livraison",
+      "déploiement",
+      "automatique",
+      "décision manuelle",
+      "production"
+    ]
+  },
+  {
+    "id": "devops-044",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un volume Docker et pourquoi l'utiliser pour une base de données ?",
+    "reponse_reference": "Un volume est un espace de stockage persistant géré par Docker, indépendant du cycle de vie du conteneur. Pour une base de données, il garantit que les données survivent à la suppression ou au redémarrage du conteneur.",
+    "mots_cles_attendus": [
+      "volume",
+      "persistance",
+      "données",
+      "cycle de vie",
+      "stockage"
+    ]
+  },
+  {
+    "id": "devops-045",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Ton conteneur PostgreSQL perd toutes ses données à chaque docker rm. Quelle est la cause probable et comment la corriges-tu ?",
+    "reponse_reference": "Les données sont écrites dans la couche éphémère du conteneur au lieu d'un volume. Il faut monter un volume sur /var/lib/postgresql/data (avec -v ou l'entrée volumes: de docker-compose) pour que les données persistent après la suppression du conteneur.",
+    "mots_cles_attendus": [
+      "volume",
+      "éphémère",
+      "persistance",
+      "montage",
+      "base de données"
+    ]
+  },
+  {
+    "id": "devops-046",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quels sont les principaux avantages de l'utilisation de conteneurs pour le déploiement d'applications ?",
+    "reponse_reference": "Les conteneurs offrent la portabilité entre environnements, un démarrage en secondes, une isolation des dépendances et une densité élevée sur les serveurs. Ils facilitent aussi la reproductibilité et le scaling horizontal.",
+    "mots_cles_attendus": [
+      "portabilité",
+      "isolation",
+      "démarrage rapide",
+      "densité",
+      "reproductibilité"
+    ]
+  },
+  {
+    "id": "devops-047",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'élasticité du cloud et en quoi diffère-t-elle de la scalabilité ?",
+    "reponse_reference": "L'élasticité est la capacité à ajouter ou retirer des ressources automatiquement selon la charge du moment, y compris à la baisse. La scalabilité est la capacité générale à supporter plus de charge ; l'élasticité en est la version automatique et dynamique.",
+    "mots_cles_attendus": [
+      "élasticité",
+      "automatique",
+      "charge",
+      "ressources",
+      "scalabilité"
+    ]
+  },
+  {
+    "id": "devops-048",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un site e-commerce attend un pic de trafic x10 pendant les soldes, puis un retour à la normale. Quelle stratégie cloud mets-tu en place ?",
+    "reponse_reference": "On s'appuie sur l'auto-scaling : les instances sont ajoutées automatiquement quand la charge monte puis retirées après le pic, derrière un équilibreur de charge. On peut aussi préchauffer le scaling avant l'événement pour éviter le délai de montée.",
+    "mots_cles_attendus": [
+      "auto-scaling",
+      "pic",
+      "équilibreur de charge",
+      "automatique",
+      "coût"
+    ]
+  },
+  {
+    "id": "devops-049",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quels outils de CI/CD existent et quel est leur rôle commun ?",
+    "reponse_reference": "GitHub Actions, GitLab CI, Jenkins ou CircleCI sont des plateformes qui exécutent automatiquement des pipelines : build, tests, packaging et déploiement à chaque push. Elles assurent un feedback rapide et une qualité constante du code livré.",
+    "mots_cles_attendus": [
+      "GitHub Actions",
+      "GitLab CI",
+      "Jenkins",
+      "automatisation",
+      "feedback"
+    ]
+  },
+  {
+    "id": "devops-050",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que systemd et comment gère-t-on un service avec systemctl ?",
+    "reponse_reference": "systemd est le gestionnaire de services et d'initialisation de la plupart des distributions Linux modernes. systemctl permet de démarrer, arrêter, redémarrer un service, de l'activer au boot et de consulter son statut avec systemctl status.",
+    "mots_cles_attendus": [
+      "systemd",
+      "service",
+      "systemctl",
+      "démarrage",
+      "boot"
+    ]
+  },
+  {
+    "id": "devops-051",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Après un redémarrage du serveur, ton application web ne redémarre pas toute seule. Comment fais-tu pour qu'elle démarre automatiquement au boot ?",
+    "reponse_reference": "On crée un service systemd (fichier .service dans /etc/systemd/system/) décrivant la commande de lancement, puis on exécute systemctl enable --now monapp. systemd le relancera au démarrage et en cas de crash si Restart=always est configuré.",
+    "mots_cles_attendus": [
+      "systemd",
+      "service",
+      "enable",
+      "boot",
+      "redémarrage"
+    ]
+  },
+  {
+    "id": "devops-052",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Conçois les grandes étapes d'un pipeline CI pour une application Python dès qu'une pull request est ouverte.",
+    "reponse_reference": "Déclenchement sur pull request, installation des dépendances, analyse statique (lint, formatage), exécution des tests unitaires avec rapport de couverture, puis build de l'image Docker si tout passe. En cas d'échec d'une étape, la pull request est bloquée.",
+    "mots_cles_attendus": [
+      "déclenchement",
+      "lint",
+      "tests unitaires",
+      "couverture",
+      "image"
+    ]
+  },
+  {
+    "id": "devops-053",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un réseau Docker et quels types de réseaux existent ?",
+    "reponse_reference": "Un réseau Docker permet aux conteneurs de communiquer entre eux et avec l'extérieur. Les modes principaux sont bridge (réseau privé par défaut), host (partage du réseau de l'hôte), none (aucun réseau) et overlay (réseaux multi-hôtes).",
+    "mots_cles_attendus": [
+      "réseau",
+      "bridge",
+      "host",
+      "overlay",
+      "communication"
+    ]
+  },
+  {
+    "id": "devops-054",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Ton conteneur d'application n'arrive pas à joindre le conteneur de base de données lancé séparément. Que vérifies-tu et que fais-tu ?",
+    "reponse_reference": "On vérifie que les deux conteneurs sont sur le même réseau Docker (docker network inspect) et que l'application utilise bien le nom du conteneur comme nom d'hôte. La solution propre est un réseau commun défini dans docker-compose.",
+    "mots_cles_attendus": [
+      "réseau",
+      "nom du conteneur",
+      "docker-compose",
+      "DNS interne",
+      "connexion"
+    ]
+  },
+  {
+    "id": "devops-055",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un équilibreur de charge (load balancer) ?",
+    "reponse_reference": "Un équilibreur de charge répartit le trafic entrant entre plusieurs serveurs ou conteneurs d'une application. Il améliore la disponibilité (exclusion des instances en panne via des vérifications de santé) et la capacité globale du service.",
+    "mots_cles_attendus": [
+      "répartition",
+      "trafic",
+      "instances",
+      "vérifications de santé",
+      "disponibilité"
+    ]
+  },
+  {
+    "id": "devops-056",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Pourquoi ne faut-il jamais stocker de secrets (mots de passe, clés API) dans le code ou les images Docker ?",
+    "reponse_reference": "Le code et les images sont partagés, copiés et versionnés : un secret inclus devient visible par toute personne y ayant accès et reste dans l'historique. On utilise des variables d'environnement, des fichiers hors image ou un gestionnaire de secrets.",
+    "mots_cles_attendus": [
+      "secrets",
+      "historique",
+      "exposition",
+      "gestionnaire de secrets",
+      "variables d'environnement"
+    ]
+  },
+  {
+    "id": "devops-057",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Lors d'une revue de code, tu découvres une clé d'API AWS codée en dur dans un fichier commité il y a six mois. Quelles actions mènes-tu ?",
+    "reponse_reference": "On révoque immédiatement la clé et on en génère une nouvelle stockée dans un gestionnaire de secrets. On purge l'historique Git du secret, on audite les accès via CloudTrail pour vérifier qu'elle n'a pas été exploitée, et on ajoute un scan automatique de secrets en CI.",
+    "mots_cles_attendus": [
+      "révocation",
+      "rotation",
+      "historique",
+      "audit",
+      "scan de secrets"
+    ]
+  },
+  {
+    "id": "devops-058",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le monitoring et quels sont ses composants de base ?",
+    "reponse_reference": "Le monitoring consiste à collecter et analyser en continu l'état d'un système : métriques (CPU, mémoire, latence), logs et alertes. Il permet de détecter les anomalies, de diagnostiquer les problèmes et de vérifier la santé des services.",
+    "mots_cles_attendus": [
+      "métriques",
+      "logs",
+      "alertes",
+      "santé",
+      "collecte"
+    ]
+  },
+  {
+    "id": "devops-059",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Les utilisateurs signalent que l'application est lente, mais aucun serveur ne semble en panne. Quelles premières données cherches-tu à collecter ?",
+    "reponse_reference": "On regarde les métriques de latence et de débit de l'application, le taux d'erreur, puis la consommation CPU, mémoire et les temps de réponse de la base de données. Les logs et le monitoring applicatif aident à situer le goulot d'étranglement.",
+    "mots_cles_attendus": [
+      "latence",
+      "débit",
+      "taux d'erreur",
+      "base de données",
+      "goulot d'étranglement"
+    ]
+  },
+  {
+    "id": "devops-060",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une tâche de déploiement manuel prend 30 minutes avec 10 étapes sujettes aux erreurs. Quel raisonnement tiens-tu pour décider de l'automatiser ?",
+    "reponse_reference": "On évalue la fréquence, le temps perdu et le taux d'erreur du processus manuel, puis on compare au coût de création et de maintenance du script. Pour une tâche fréquente et critique, l'automatisation est vite rentable et fiabilise le déploiement.",
+    "mots_cles_attendus": [
+      "fréquence",
+      "rentabilité",
+      "erreurs",
+      "script",
+      "fiabilisation"
+    ]
+  },
+  {
+    "id": "devops-061",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le build multi-étapes (multi-stage build) dans un Dockerfile et quels sont ses avantages ?",
+    "reponse_reference": "Le multi-stage build utilise plusieurs étapes FROM : une pour compiler l'application avec les outils de build, une autre pour ne copier que le résultat dans une image finale légère. Cela réduit fortement la taille de l'image et la surface d'attaque.",
+    "mots_cles_attendus": [
+      "multi-stage",
+      "compilation",
+      "image légère",
+      "copie",
+      "sécurité"
+    ]
+  },
+  {
+    "id": "devops-062",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Ton image Docker de 1,2 Go contient Node.js, les outils de build et node_modules de développement. Comment la réduis-tu significativement ?",
+    "reponse_reference": "On passe en multi-stage build : une étape avec node pour compiler et installer les dépendances de production, puis une image finale slim ou alpine qui ne reçoit que le code et node_modules de prod. On peut aussi nettoyer les caches (npm cache clean) dans la même couche.",
+    "mots_cles_attendus": [
+      "multi-stage",
+      "alpine",
+      "dépendances de production",
+      "cache",
+      "taille"
+    ]
+  },
+  {
+    "id": "devops-063",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'ordre des instructions dans un Dockerfile influence-t-il la vitesse de build ?",
+    "reponse_reference": "Docker met en cache chaque couche : si une instruction change, toutes les couches suivantes sont reconstruites. Il faut donc placer d'abord les instructions qui changent rarement (dépendances) et en dernier le code source, pour maximiser la réutilisation du cache.",
+    "mots_cles_attendus": [
+      "cache",
+      "couches",
+      "ordre",
+      "dépendances",
+      "reconstruction"
+    ]
+  },
+  {
+    "id": "devops-064",
+    "domaine": "devops",
+    "sous_theme": "conteneurs",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "À chaque modification d'une ligne de ton code source, le build Docker réinstalle toutes les dépendances pendant 5 minutes. Comment réorganises-tu le Dockerfile ?",
+    "reponse_reference": "Il faut copier d'abord package.json (ou équivalent) et lancer l'installation des dépendances, puis copier le code source ensuite. Ainsi la couche des dépendances reste en cache tant que le manifeste de dépendances ne change pas.",
+    "mots_cles_attendus": [
+      "cache",
+      "package.json",
+      "ordre des copies",
+      "dépendances",
+      "build rapide"
+    ]
+  },
+  {
+    "id": "devops-065",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'infrastructure as code (IaC) et quels problèmes résout-elle ?",
+    "reponse_reference": "L'IaC consiste à décrire l'infrastructure (serveurs, réseaux, bases) dans des fichiers de code versionnés plutôt qu'à la configurer manuellement. Elle rend les environnements reproductibles, auditable, révisables et déployables automatiquement.",
+    "mots_cles_attendus": [
+      "infrastructure",
+      "code",
+      "reproductible",
+      "versionné",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "devops-066",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel est le rôle de Terraform et que signifient terraform plan et terraform apply ?",
+    "reponse_reference": "Terraform est un outil d'IaC qui provisionne des ressources cloud via des fichiers déclaratifs (HCL). terraform plan compare l'état réel de l'infrastructure au code et affiche les changements prévus, terraform apply les exécute.",
+    "mots_cles_attendus": [
+      "terraform",
+      "déclaratif",
+      "plan",
+      "apply",
+      "état"
+    ]
+  },
+  {
+    "id": "devops-067",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un collègue modifie manuellement une règle de sécurité dans la console AWS, alors que l'infrastructure est gérée par Terraform. Que se passera-t-il au prochain terraform apply et que recommandes-tu ?",
+    "reponse_reference": "Le fichier d'état Terraform ne contient pas la modification manuelle : le prochain apply risque d'écraser ou supprimer cette règle pour revenir à l'état décrit dans le code. Toute modification doit passer par le code Terraform, via une pull request.",
+    "mots_cles_attendus": [
+      "état",
+      "dérive",
+      "écrasement",
+      "code",
+      "pull request"
+    ]
+  },
+  {
+    "id": "devops-068",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un runner (agent) dans un système de CI/CD ?",
+    "reponse_reference": "Un runner est la machine ou le conteneur qui exécute concrètement les jobs d'un pipeline : il récupère le code, lance les étapes définies et renvoie les résultats. Il peut être hébergé par la plateforme (GitHub, GitLab) ou auto-hébergé.",
+    "mots_cles_attendus": [
+      "runner",
+      "jobs",
+      "exécution",
+      "auto-hébergé",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "devops-069",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Ton pipeline CI met 25 minutes à chaque push à cause d'installations de dépendances répétées. Quelles optimisations appliques-tu ?",
+    "reponse_reference": "On active le cache des dépendances (npm/pip/maven) entre les runs, on parallélise les étapes indépendantes comme lint et tests, et on évite de refaire des étapes inutiles sur chaque commit. Les images de base préinstallées et le cache Docker des couches aident aussi.",
+    "mots_cles_attendus": [
+      "cache",
+      "parallélisation",
+      "dépendances",
+      "durée",
+      "optimisation"
+    ]
+  },
+  {
+    "id": "devops-070",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle différence entre un log, une métrique et une alerte ?",
+    "reponse_reference": "Un log est un enregistrement textuel horodaté d'un événement, une métrique est une valeur numérique mesurée dans le temps (CPU, latence), et une alerte est une notification déclenchée quand une métrique ou une condition dépasse un seuil défini.",
+    "mots_cles_attendus": [
+      "log",
+      "métrique",
+      "alerte",
+      "seuil",
+      "horodaté"
+    ]
+  },
+  {
+    "id": "devops-071",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le service d'astreinte reçoit 200 alertes par jour, dont la majorité sont ignorées. Comment fiabilises-tu le système d'alerting ?",
+    "reponse_reference": "C'est de la fatigue d'alerte : il faut revoir les seuils pour n'alerter que sur des symptômes impactant les utilisateurs, supprimer les alertes non actionnables, regrouper les alertes corrélées et hiérarchiser par criticité. Chaque alerte restante doit exiger une action.",
+    "mots_cles_attendus": [
+      "fatigue d'alerte",
+      "seuils",
+      "actionnable",
+      "regroupement",
+      "criticité"
+    ]
+  },
+  {
+    "id": "devops-072",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que mesure généralement Prometheus et comment stocke-t-il les données ?",
+    "reponse_reference": "Prometheus collecte et stocke des métriques sous forme de séries temporelles : il interroge périodiquement (scrape) les expositions /metrics des applications et services. Les données sont horodatées et interrogeables avec le langage PromQL.",
+    "mots_cles_attendus": [
+      "prometheus",
+      "séries temporelles",
+      "scrape",
+      "promql",
+      "métriques"
+    ]
+  },
+  {
+    "id": "devops-073",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Tu dois ajouter un monitoring de base sur une nouvelle API HTTP. Quelles métriques exposes-tu en priorité et pourquoi ?",
+    "reponse_reference": "On expose au minimum le nombre de requêtes, la latence (histogrammes par percentile) et le taux d'erreurs par code HTTP, en les étiquetant par route et méthode. Ces métriques permettent de détecter ralentissements et régressions dès la mise en production.",
+    "mots_cles_attendus": [
+      "requêtes",
+      "latence",
+      "taux d'erreurs",
+      "étiquettes",
+      "percentile"
+    ]
+  },
+  {
+    "id": "devops-074",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion de configuration avec Ansible ?",
+    "reponse_reference": "Ansible automatise la configuration des serveurs via des playbooks YAML décrivant l'état souhaité (paquets installés, services démarrés, fichiers présents). Il agit par SSH, sans agent à installer sur les machines cibles.",
+    "mots_cles_attendus": [
+      "ansible",
+      "playbook",
+      "état souhaité",
+      "configuration",
+      "ssh"
+    ]
+  },
+  {
+    "id": "devops-075",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Tu gères 30 serveurs où Nginx doit être installé et configuré à l'identique. Un administrateur en configure un à la main chaque fois. Quelle approche proposes-tu ?",
+    "reponse_reference": "On écrit un playbook Ansible qui déclare l'état cible : paquets installés, fichiers de configuration déployés depuis des templates, service démarré et activé. Exécuté sur tout l'inventaire, il garantit l'uniformité et supprime la configuration manuelle.",
+    "mots_cles_attendus": [
+      "playbook",
+      "inventaire",
+      "état cible",
+      "templates",
+      "uniformité"
+    ]
+  },
+  {
+    "id": "devops-076",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi utilise-t-on des variables d'environnement distinctes par environnement (dev, staging, production) ?",
+    "reponse_reference": "Cela permet d'exécuter le même artefact (même image, même binaire) partout en ne changeant que la configuration externe : URLs, secrets, paramètres. On évite les rebuilds par environnement et les fuites de configuration de production vers le dev.",
+    "mots_cles_attendus": [
+      "configuration externe",
+      "artefact",
+      "environnements",
+      "secrets",
+      "12-factor"
+    ]
+  },
+  {
+    "id": "devops-077",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application fonctionne en staging mais échoue en production alors que c'est la même image Docker. Quelles causes liées à la configuration investigues-tu ?",
+    "reponse_reference": "On compare les variables d'environnement et secrets injectés dans chaque environnement, les connexions aux services externes (bases, APIs), et les différences de réseau ou de permissions. La cause est presque toujours une configuration d'environnement divergente, pas le code.",
+    "mots_cles_attendus": [
+      "variables d'environnement",
+      "secrets",
+      "configuration",
+      "comparaison",
+      "réseau"
+    ]
+  },
+  {
+    "id": "devops-078",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données managée dans le cloud et quel est son principal avantage ?",
+    "reponse_reference": "Une base managée (RDS, Cloud SQL, Azure SQL) est opérée par le fournisseur : sauvegardes, correctifs, réplication et haute disponibilité sont gérés pour vous. L'équipe se concentre sur le schéma et les requêtes plutôt que sur l'administration du serveur.",
+    "mots_cles_attendus": [
+      "managée",
+      "sauvegardes",
+      "correctifs",
+      "haute disponibilité",
+      "fournisseur"
+    ]
+  },
+  {
+    "id": "devops-079",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Écris les grandes lignes d'un script bash de sauvegarde fiable : compresser un dossier, horodater l'archive, la copier vers un stockage distant et signaler les échecs.",
+    "reponse_reference": "Le script utilise tar -czf pour compresser avec un horodatage (date +%Y%m%d), copie vers le distant avec rsync ou aws s3 cp, et vérifie chaque code de retour avec set -euo pipefail. En cas d'échec, il envoie une alerte (mail, webhook) et journalise l'opération.",
+    "mots_cles_attendus": [
+      "tar",
+      "horodatage",
+      "rsync",
+      "set -e",
+      "alerte"
+    ]
+  },
+  {
+    "id": "devops-080",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi est-il recommandé de ne pas exécuter un conteneur avec l'utilisateur root ?",
+    "reponse_reference": "Si un attaquant exploite une faille de l'application, root dans le conteneur facilite une évasion vers l'hôte et élargit les dégâts. On crée un utilisateur dédié dans le Dockerfile (USER app) et on suit le principe du moindre privilège.",
+    "mots_cles_attendus": [
+      "root",
+      "moindre privilège",
+      "utilisateur dédié",
+      "évasion",
+      "surface d'attaque"
+    ]
+  },
+  {
+    "id": "devops-081",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Conçois un pipeline complet de déploiement continu pour une application web conteneurisée : du commit à la mise en production.",
+    "reponse_reference": "Au push : lint et tests unitaires, build de l'image Docker taguée avec le SHA du commit, scan de vulnérabilités, push vers le registre, déploiement sur l'environnement de staging, tests d'intégration, puis déploiement en production avec vérification de santé. Chaque étape échoue bloquante en cas d'erreur.",
+    "mots_cles_attendus": [
+      "tests",
+      "image",
+      "registre",
+      "staging",
+      "production",
+      "déploiement"
+    ]
+  },
+  {
+    "id": "devops-082",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le tagging d'images par SHA de commit et pourquoi éviter le tag latest en production ?",
+    "reponse_reference": "Taguer une image avec le SHA du commit lie chaque image à une version exacte du code, ce qui rend le déploiement traçable et réversible. Le tag latest est mutable : impossible de savoir quelle version tourne réellement ni de revenir proprement en arrière.",
+    "mots_cles_attendus": [
+      "sha",
+      "traçabilité",
+      "immutable",
+      "latest",
+      "rollback"
+    ]
+  },
+  {
+    "id": "devops-083",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le fichier d'état (state) de Terraform et pourquoi doit-il être stocké de façon sécurisée ?",
+    "reponse_reference": "Le state contient l'inventaire des ressources créées et leurs attributs, parfois des valeurs sensibles. Terraform s'appuie dessus pour calculer les changements ; s'il est perdu ou corrompu, il perd le lien avec l'infrastructure réelle. On le stocke en backend distant (S3) avec verrouillage et chiffrement.",
+    "mots_cles_attendus": [
+      "state",
+      "backend",
+      "verrouillage",
+      "chiffrement",
+      "inventaire"
+    ]
+  },
+  {
+    "id": "devops-084",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux développeurs lancent terraform apply en même temps sur le même environnement. Quel risque existe et quel mécanisme l'empêche ?",
+    "reponse_reference": "Les deux applies concurrents peuvent corrompre le fichier d'état ou créer des ressources en double. Le verrouillage d'état (state locking, par exemple DynamoDB avec un backend S3) bloque le second apply tant que le premier n'a pas terminé.",
+    "mots_cles_attendus": [
+      "state locking",
+      "concurrence",
+      "corruption",
+      "backend",
+      "verrou"
+    ]
+  },
+  {
+    "id": "devops-085",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Tu dois gérer des environnements dev, staging et prod avec Terraform sans dupliquer trois fois le même code. Quelle stratégie adoptes-tu ?",
+    "reponse_reference": "On factorise avec des modules réutilisables et des workspaces ou des dossiers d'environnements alimentés par des fichiers de variables (terraform.tfvars). Seuls les paramètres diffèrent : tailles d'instances, compte cloud, nombre de replicas.",
+    "mots_cles_attendus": [
+      "modules",
+      "workspaces",
+      "variables",
+      "réutilisation",
+      "environnements"
+    ]
+  },
+  {
+    "id": "devops-086",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement blue-green ?",
+    "reponse_reference": "Le blue-green maintient deux environnements identiques : le 'blue' sert le trafic pendant que le 'green' reçoit la nouvelle version. Après validation, on bascule le trafic de l'un à l'autre via l'équilibreur, ce qui permet un retour arrière immédiat.",
+    "mots_cles_attendus": [
+      "blue-green",
+      "bascule",
+      "trafic",
+      "retour arrière",
+      "deux environnements"
+    ]
+  },
+  {
+    "id": "devops-087",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement canari (canary release) et quel avantage apporte-t-il ?",
+    "reponse_reference": "Un canari déploie la nouvelle version sur un petit pourcentage du trafic ou d'instances, puis l'étend progressivement si les métriques restent saines. Il limite l'impact d'une régression à une fraction des utilisateurs avant généralisation.",
+    "mots_cles_attendus": [
+      "canari",
+      "pourcentage",
+      "progressif",
+      "métriques",
+      "risque limité"
+    ]
+  },
+  {
+    "id": "devops-088",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un déploiement canari reçoit 5 % du trafic mais son taux d'erreur est deux fois supérieur à la version stable. Que fais-tu ?",
+    "reponse_reference": "On stoppe immédiatement la progression du canari et on ramène tout le trafic sur la version stable, puis on investigue les logs et métriques de la nouvelle version. C'est exactement le rôle du canari : détecter une régression avant qu'elle ne touche tous les utilisateurs.",
+    "mots_cles_attendus": [
+      "stop",
+      "retour à la stable",
+      "taux d'erreur",
+      "investigation",
+      "rollback"
+    ]
+  },
+  {
+    "id": "devops-089",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quels sont les quatre signaux d'or (golden signals) du monitoring selon Google SRE ?",
+    "reponse_reference": "Les quatre signaux d'or sont la latence (temps de réponse), le trafic (volume de requêtes), les erreurs (taux d'échecs) et la saturation (ressources proches de la limite). Ils décrivent l'expérience utilisateur mieux que de simples métriques serveur.",
+    "mots_cles_attendus": [
+      "latence",
+      "trafic",
+      "erreurs",
+      "saturation",
+      "signaux d'or"
+    ]
+  },
+  {
+    "id": "devops-090",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un pic de saturation mémoire fait planter ton application chaque nuit vers 3h. Comment mets-tu en place un diagnostic durable ?",
+    "reponse_reference": "On ajoute des métriques mémoire détaillées avec alertes avant saturation, on conserve des logs horodatés des tâches planifiées nocturnes (batch, sauvegardes) et on corrèle les deux. Si c'est une fuite mémoire, on profile l'application et on suit l'évolution de la mémoire sur plusieurs jours.",
+    "mots_cles_attendus": [
+      "saturation",
+      "alertes",
+      "tâches planifiées",
+      "fuite mémoire",
+      "profilage"
+    ]
+  },
+  {
+    "id": "devops-091",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un CDN et quels bénéfices apporte-t-il à une application web ?",
+    "reponse_reference": "Un CDN (réseau de diffusion de contenu) met en cache le contenu statique sur des serveurs répartis géographiquement près des utilisateurs. Il réduit la latence, diminue la charge sur l'origine et améliore la résistance aux pics de trafic.",
+    "mots_cles_attendus": [
+      "cdn",
+      "cache",
+      "latence",
+      "géographique",
+      "contenu statique"
+    ]
+  },
+  {
+    "id": "devops-092",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Ton site sert des images à des utilisateurs dans le monde entier et le serveur d'origine sature. Quelle solution de premier niveau mets-tu en place ?",
+    "reponse_reference": "On place un CDN devant le site et on y délègue le cache des images et contenus statiques, ce qui déleste fortement l'origine. On complète avec des en-têtes de cache adaptés et un stockage objet comme source des médias.",
+    "mots_cles_attendus": [
+      "cdn",
+      "cache",
+      "images",
+      "délestage",
+      "origine"
+    ]
+  },
+  {
+    "id": "devops-093",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion des secrets et pourquoi un gestionnaire comme Vault est-il préférable aux fichiers .env commités ?",
+    "reponse_reference": "La gestion des secrets centralise le stockage chiffré des mots de passe, clés et certificats, avec accès contrôlé, audit et rotation. Vault ou les services cloud équivalents évitent les secrets en clair dans les dépôts, les images ou les variables figées.",
+    "mots_cles_attendus": [
+      "secrets",
+      "chiffrement",
+      "rotation",
+      "audit",
+      "accès contrôlé"
+    ]
+  },
+  {
+    "id": "devops-094",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Ton pipeline CI a besoin d'accéder au cloud pour déployer. Comment lui fournis-tu des credentials de façon sécurisée ?",
+    "reponse_reference": "On utilise les secrets chiffrés de la plateforme CI ou mieux, une identité de charge de travail (OIDC, rôles IAM temporaires) qui délivre des credentials à durée limitée sans clé statique. Les clés permanentes stockées en variables sont à éviter.",
+    "mots_cles_attendus": [
+      "secrets CI",
+      "OIDC",
+      "rôle IAM",
+      "temporaire",
+      "moindre privilège"
+    ]
+  },
+  {
+    "id": "devops-095",
+    "domaine": "devops",
+    "sous_theme": "reseaux_cloud",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un groupe de sécurité (security group) dans le cloud ?",
+    "reponse_reference": "Un groupe de sécurité est un pare-feu virtuel au niveau de l'instance qui filtre le trafic entrant et sortant par port, protocole et source. Il applique le principe du moindre privilège réseau : n'ouvrir que ce qui est nécessaire.",
+    "mots_cles_attendus": [
+      "pare-feu",
+      "instance",
+      "port",
+      "filtrage",
+      "moindre privilège"
+    ]
+  },
+  {
+    "id": "devops-096",
+    "domaine": "devops",
+    "sous_theme": "reseaux_cloud",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une base de données cloud est joignable depuis Internet car son groupe de sécurité autorise le port 5432 depuis 0.0.0.0/0. Quel risque y a-t-il et comment corriges-tu ?",
+    "reponse_reference": "La base est exposée aux scans et attaques par force brute du monde entier. Il faut restreindre la règle aux seules sources légitimes (groupe de sécurité de l'application ou plage du VPC) et idéalement placer la base dans un sous-réseau privé sans accès public.",
+    "mots_cles_attendus": [
+      "exposition",
+      "sous-réseau privé",
+      "restriction",
+      "0.0.0.0/0",
+      "moindre privilège"
+    ]
+  },
+  {
+    "id": "devops-097",
+    "domaine": "devops",
+    "sous_theme": "linux_shell",
+    "niveau": 5,
+    "type": "definition",
+    "question": "À quoi sert une redirection de sortie (>, >>, 2>) en shell ?",
+    "reponse_reference": "> écrit la sortie standard dans un fichier en l'écrasant, >> l'ajoute en fin de fichier, et 2> redirige la sortie d'erreur séparément. Ces redirections permettent de journaliser les scripts et de séparer erreurs et résultats.",
+    "mots_cles_attendus": [
+      "redirection",
+      "sortie standard",
+      "erreur",
+      "ajout",
+      "journalisation"
+    ]
+  },
+  {
+    "id": "devops-098",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Tu automatises la création d'un environnement de test complet : réseau, serveurs, application et données de test. Comment orchestres-tu l'ensemble ?",
+    "reponse_reference": "Terraform provisionne l'infrastructure réseau et les machines, Ansible (ou l'image) configure les serveurs, le pipeline déploie l'application conteneurisée et un script charge les données de test anonymisées. Tout est versionné et rejouable en une commande.",
+    "mots_cles_attendus": [
+      "terraform",
+      "ansible",
+      "pipeline",
+      "données de test",
+      "rejouable"
+    ]
+  },
+  {
+    "id": "devops-099",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Grafana et comment s'intègre-t-il avec Prometheus ?",
+    "reponse_reference": "Grafana est un outil de visualisation qui interroge des sources de données comme Prometheus pour construire des tableaux de bord de métriques. Le couple Prometheus/Grafana est un standard open source pour collecter puis représenter graphiquement les séries temporelles et y associer des alertes.",
+    "mots_cles_attendus": [
+      "grafana",
+      "tableaux de bord",
+      "prometheus",
+      "visualisation",
+      "alertes"
+    ]
+  },
+  {
+    "id": "devops-100",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Ton équipe déploie en production le vendredi soir et subit régulièrement des incidents non détectés avant lundi. Quelles pratiques de déploiement recommandes-tu ?",
+    "reponse_reference": "Déployer plus souvent et plus petit (plusieurs fois par semaine) réduit le risque de chaque changement ; on évite les déploiements hors heures ouvrées, on impose des déploiements progressifs avec vérification automatique des métriques, et on maintient une procédure de rollback testée.",
+    "mots_cles_attendus": [
+      "petits déploiements",
+      "fréquence",
+      "rollback",
+      "vérification",
+      "progressif"
+    ]
+  },
+  {
+    "id": "devops-101",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que Kubernetes et quel problème résout-il par rapport à Docker seul ?",
+    "reponse_reference": "Kubernetes est un orchestrateur de conteneurs qui automatise le déploiement, la mise à l'échelle, la réparation et la mise en réseau de conteneurs sur un cluster de machines. Docker gère un conteneur sur une machine, Kubernetes en gère des milliers répartis sur plusieurs nœuds.",
+    "mots_cles_attendus": [
+      "orchestration",
+      "cluster",
+      "mise à l'échelle",
+      "auto-réparation",
+      "nœuds"
+    ]
+  },
+  {
+    "id": "devops-102",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu veux qu'un collecteur de logs tourne à côté de ton application dans le même pod pour accéder aux mêmes fichiers. Qu'est-ce qu'un pod et pourquoi ce regroupement est-il pertinent ?",
+    "reponse_reference": "Un pod est la plus petite unité déployable de Kubernetes : ses conteneurs partagent réseau et volumes. Le pattern sidecar exploite ce partage pour adjoindre un conteneur utilitaire (logs, proxy) au conteneur applicatif principal.",
+    "mots_cles_attendus": [
+      "pod",
+      "sidecar",
+      "partage",
+      "conteneurs",
+      "volume"
+    ]
+  },
+  {
+    "id": "devops-103",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quel est le rôle d'un Deployment Kubernetes ?",
+    "reponse_reference": "Un Deployment décrit l'état souhaité d'une application (image, nombre de replicas) et gère les ReplicaSet pour l'atteindre. Il assure les mises à jour progressives, les rollbacks et le maintien du nombre de pods en cas de panne.",
+    "mots_cles_attendus": [
+      "deployment",
+      "replicas",
+      "état souhaité",
+      "mise à jour",
+      "rollback"
+    ]
+  },
+  {
+    "id": "devops-104",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un de tes trois pods backend vient de planter sur le cluster. Que se passe-t-il automatiquement et comment le vérifies-tu ?",
+    "reponse_reference": "Le ReplicaSet détecte que le nombre de pods prêts est inférieur à l'état souhaité et recrée automatiquement un pod de remplacement. On le vérifie avec kubectl get pods (nouveau nom, AGE récent) et kubectl describe pour voir les événements.",
+    "mots_cles_attendus": [
+      "replicaset",
+      "recréation",
+      "kubectl get pods",
+      "état souhaité",
+      "événements"
+    ]
+  },
+  {
+    "id": "devops-105",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "À quoi sert un Service Kubernetes et quels en sont les types principaux ?",
+    "reponse_reference": "Un Service expose un ensemble de pods derrière une adresse réseau stable, avec équilibrage de charge, car les IPs de pods changent à chaque recréation. Les types principaux sont ClusterIP (interne), NodePort (port du nœud) et LoadBalancer (équilibreur cloud).",
+    "mots_cles_attendus": [
+      "service",
+      "adresse stable",
+      "équilibrage",
+      "clusterip",
+      "loadbalancer"
+    ]
+  },
+  {
+    "id": "devops-106",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Ton frontend dans le cluster n'arrive pas à appeler le backend via son IP de pod qui change sans arrêt. Comment résous-tu durablement le problème ?",
+    "reponse_reference": "Il ne faut jamais cibler une IP de pod, mais créer un Service devant le backend et appeler son nom DNS interne (par exemple http://backend:8080). Le Service maintient la liste des pods sains et équilibre les requêtes.",
+    "mots_cles_attendus": [
+      "service",
+      "DNS interne",
+      "ip éphémère",
+      "sélecteur",
+      "équilibrage"
+    ]
+  },
+  {
+    "id": "devops-107",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que sont les sondes liveness et readiness dans Kubernetes ?",
+    "reponse_reference": "La sonde liveness vérifie que le conteneur fonctionne : en cas d'échec, Kubernetes redémarre le pod. La sonde readiness indique si le pod peut recevoir du trafic : en cas d'échec, il est retiré des endpoints du Service sans être redémarré.",
+    "mots_cles_attendus": [
+      "liveness",
+      "readiness",
+      "sonde",
+      "redémarrage",
+      "trafic"
+    ]
+  },
+  {
+    "id": "devops-108",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Pendant un déploiement, des utilisateurs reçoivent des erreurs 502 car le Service envoie du trafic vers des pods pas encore prêts. Quelle configuration manque ?",
+    "reponse_reference": "Il manque une sonde readiness (et éventuellement des délais de démarrage). Sans elle, Kubernetes considère le pod disponible dès qu'il tourne, avant que l'application n'ait fini son initialisation. La readiness retient le trafic jusqu'à ce que le pod réponde sainement.",
+    "mots_cles_attendus": [
+      "readiness",
+      "initialisation",
+      "502",
+      "disponibilité",
+      "sonde"
+    ]
+  },
+  {
+    "id": "devops-109",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "kubectl get pods affiche un pod en état CrashLoopBackOff. Décris ta démarche de diagnostic étape par étape.",
+    "reponse_reference": "On regarde d'abord les logs avec kubectl logs (et --previous pour le conteneur mort), puis kubectl describe pod pour les événements (OOMKilled, image invalide, montage de volume en échec). Selon la cause on corrige l'application, les ressources mémoire, ou la configuration.",
+    "mots_cles_attendus": [
+      "crashloopbackoff",
+      "logs",
+      "describe",
+      "événements",
+      "previous"
+    ]
+  },
+  {
+    "id": "devops-110",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une requête utilisateur traverse 8 microservices et est lente, mais les métriques de chaque service semblent normales prises isolément. Quel pilier de l'observabilité te manque et comment t'aide-t-il ?",
+    "reponse_reference": "Il manque le tracing distribué : une trace suit la requête à travers tous les services avec la durée de chaque saut, ce qui identifie le segment lent. Les trois piliers sont les métriques, les logs et les traces, et seule la trace répond aux problèmes transverses.",
+    "mots_cles_attendus": [
+      "tracing",
+      "distribué",
+      "trace",
+      "sauts",
+      "trois piliers"
+    ]
+  },
+  {
+    "id": "devops-111",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Les logs de tes conteneurs disparaissent quand les pods redémarrent et rien n'est centralisé. Quelle architecture de collecte de logs mets-tu en place sur Kubernetes ?",
+    "reponse_reference": "Les applications écrivent leurs logs sur stdout/stderr, un collecteur par nœud (DaemonSet comme Fluent Bit ou Promtail) les aspire et les envoie vers un backend centralisé (Loki, Elasticsearch). On conserve ainsi l'historique indépendamment du cycle de vie des pods.",
+    "mots_cles_attendus": [
+      "stdout",
+      "daemonset",
+      "collecteur",
+      "centralisation",
+      "loki"
+    ]
+  },
+  {
+    "id": "devops-112",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que GitOps et comment applique-t-il le principe de source de vérité ?",
+    "reponse_reference": "GitOps utilise un dépôt Git comme source unique de vérité pour l'état souhaité de l'infrastructure et des applications. Un opérateur dans le cluster (ArgoCD, Flux) compare en continu l'état réel à Git et synchronise ou signale toute dérive.",
+    "mots_cles_attendus": [
+      "gitops",
+      "source de vérité",
+      "argocd",
+      "synchronisation",
+      "dérive"
+    ]
+  },
+  {
+    "id": "devops-113",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un développeur modifie directement une réplique de Deployment avec kubectl edit en production. En GitOps, que devient ce changement et pourquoi est-ce un problème ?",
+    "reponse_reference": "L'opérateur GitOps détecte la dérive et écrase la modification pour revenir à l'état décrit dans Git. Le changement est perdu et non audité : toute évolution doit passer par un commit et une pull request sur le dépôt de configuration.",
+    "mots_cles_attendus": [
+      "dérive",
+      "écrasement",
+      "audit",
+      "commit",
+      "état souhaité"
+    ]
+  },
+  {
+    "id": "devops-114",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence entre infrastructure impérative et infrastructure déclarative ?",
+    "reponse_reference": "L'approche impérative décrit les étapes à exécuter (scripts de création de serveurs), l'approche déclarative décrit l'état final souhaité (Terraform, manifests Kubernetes). Le déclaratif est idempotent : rejouer l'application converge vers le même état sans effets de bord.",
+    "mots_cles_attendus": [
+      "impératif",
+      "déclaratif",
+      "état souhaité",
+      "idempotent",
+      "convergence"
+    ]
+  },
+  {
+    "id": "devops-115",
+    "domaine": "devops",
+    "sous_theme": "infrastructure_as_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un script bash de provisionnement exécuté deux fois par erreur crée des serveurs en double. Pourquoi un outil déclaratif comme Terraform aurait-il évité cela ?",
+    "reponse_reference": "Terraform compare l'état souhaité au state et à l'infrastructure réelle : un second apply détecte que les ressources existent déjà et ne fait rien. L'idempotence du déclaratif rend les exécutions répétées sans danger, contrairement à un script impératif qui recrée tout.",
+    "mots_cles_attendus": [
+      "idempotence",
+      "state",
+      "apply",
+      "doublon",
+      "déclaratif"
+    ]
+  },
+  {
+    "id": "devops-116",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un namespace Kubernetes et quand l'utilise-t-on ?",
+    "reponse_reference": "Un namespace est une partition logique du cluster qui isole les ressources nommées (pods, services, quotas). On s'en sert pour séparer les environnements (dev, staging, prod) ou les équipes au sein d'un même cluster.",
+    "mots_cles_attendus": [
+      "namespace",
+      "isolation",
+      "partition",
+      "environnements",
+      "quotas"
+    ]
+  },
+  {
+    "id": "devops-117",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Ton équipe dev et l'équipe prod partagent un cluster et un déploiement dev a saturé les ressources au point d'impacter la prod. Quelles mesures Kubernetes appliques-tu ?",
+    "reponse_reference": "On sépare en namespaces distincts avec des ResourceQuotas et des LimitRanges par namespace, et on fixe requests/limits sur chaque pod. On peut ajouter des priorités de classe (PriorityClass) pour que la prod prime sur la dev en cas de contention.",
+    "mots_cles_attendus": [
+      "namespaces",
+      "resourcequota",
+      "limits",
+      "requests",
+      "priorité"
+    ]
+  },
+  {
+    "id": "devops-118",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un histogramme de métrique et pourquoi est-il préférable à une moyenne pour mesurer la latence ?",
+    "reponse_reference": "Un histogramme répartit les observations dans des seuils (buckets), ce qui permet de calculer des percentiles comme p95 ou p99. Une moyenne masque les cas extrêmes : quelques requêtes très lentes peuvent ruiner l'expérience d'une partie des utilisateurs sans bouger la moyenne.",
+    "mots_cles_attendus": [
+      "histogramme",
+      "buckets",
+      "percentile",
+      "p99",
+      "moyenne trompeuse"
+    ]
+  },
+  {
+    "id": "devops-119",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une alerte se déclenche à 2h du matin : le taux d'erreur du paiement dépasse 5 %. Tu es d'astreinte. Décris tes premières actions.",
+    "reponse_reference": "On accuse réception de l'alerte, on vérifie l'impact réel (métriques, pourcentage d'utilisateurs touchés), puis on cherche un changement récent (déploiement, configuration) pour envisager un rollback rapide. On communique l'état aux parties prenantes et on poursuit le diagnostic seulement après avoir réduit l'impact.",
+    "mots_cles_attendus": [
+      "astreinte",
+      "impact",
+      "rollback",
+      "changement récent",
+      "communication"
+    ]
+  },
+  {
+    "id": "devops-120",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Chaque nouvelle équipe recrée son environnement cloud à la main, avec des incohérences et des oublis de sécurité. Comment automatises-tu la fourniture d'environnements standardisés ?",
+    "reponse_reference": "On crée des modules Terraform et des templates standardisés (réseau, IAM, monitoring par défaut) exposés comme produits internes réutilisables. Les équipes provisionnent via un pipeline GitOps : la demande est un fichier de variables commité, l'application est automatique et conforme.",
+    "mots_cles_attendus": [
+      "modules",
+      "templates",
+      "standardisation",
+      "self-service",
+      "gitops"
+    ]
+  },
+  {
+    "id": "devops-121",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Ingress Kubernetes et en quoi diffère-t-il d'un Service de type LoadBalancer ?",
+    "reponse_reference": "Un Ingress est une ressource qui route le trafic HTTP/HTTPS externe vers plusieurs Services selon l'hôte ou le chemin, géré par un contrôleur d'ingress. Un LoadBalancer coûte un équilibreur cloud par service exposé, alors qu'un seul Ingress peut en exposer des dizaines avec TLS.",
+    "mots_cles_attendus": [
+      "ingress",
+      "routage",
+      "http",
+      "contrôleur",
+      "tls"
+    ]
+  },
+  {
+    "id": "devops-122",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu dois exposer 15 microservices en HTTPS avec des noms d'hôtes différents, sans créer 15 load balancers cloud facturés séparément. Quelle solution Kubernetes mets-tu en place ?",
+    "reponse_reference": "On déploie un contrôleur d'ingress (nginx-ingress, Traefik) derrière un unique Service LoadBalancer, puis une ressource Ingress par hôte qui route api.example.com, app.example.com, etc. La terminaison TLS se configure au niveau de l'ingress avec des certificats, éventuellement via cert-manager.",
+    "mots_cles_attendus": [
+      "ingress",
+      "hôtes",
+      "un seul load balancer",
+      "certificats",
+      "cert-manager"
+    ]
+  },
+  {
+    "id": "devops-123",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Que sont les requests et limits de ressources d'un pod et comment influent-elles sur l'ordonnancement ?",
+    "reponse_reference": "Les requests définissent les ressources garanties au pod et servent au scheduler pour choisir un nœud avec assez de capacité. Les limits fixent un plafond : au-delà en CPU le conteneur est limité (throttling), au-delà en mémoire il est tué (OOMKilled).",
+    "mots_cles_attendus": [
+      "requests",
+      "limits",
+      "scheduler",
+      "oomkilled",
+      "throttling"
+    ]
+  },
+  {
+    "id": "devops-124",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tes pods restent en état Pending et kubectl describe indique 'Insufficient memory'. Quelles causes vérifies-tu et quelles solutions appliques-tu ?",
+    "reponse_reference": "Aucun nœud n'a assez de mémoire libre pour satisfaire les requests des pods : on vérifie l'allocation réelle (kubectl describe nodes), puis soit on réduit des requests surdimensionnées, soit on ajoute des nœuds ou on active le cluster autoscaler.",
+    "mots_cles_attendus": [
+      "pending",
+      "requests",
+      "mémoire",
+      "autoscaler",
+      "capacité"
+    ]
+  },
+  {
+    "id": "devops-125",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un pod est régulièrement tué avec la raison OOMKilled. Explique ce qui se passe et deux pistes de correction.",
+    "reponse_reference": "Le conteneur dépasse sa limite de mémoire, le noyau le tue et Kubernetes le redémarre. On peut augmenter la limite mémoire si elle est sous-évaluée, ou corriger une fuite mémoire de l'application ; il faut aussi vérifier que la limite correspond au comportement réel observé dans les métriques.",
+    "mots_cles_attendus": [
+      "oomkilled",
+      "limite mémoire",
+      "fuite mémoire",
+      "augmentation",
+      "métriques"
+    ]
+  },
+  {
+    "id": "devops-126",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le Horizontal Pod Autoscaler (HPA) et sur quoi se base-t-il ?",
+    "reponse_reference": "Le HPA ajuste automatiquement le nombre de replicas d'un Deployment selon une métrique cible, typiquement l'utilisation CPU ou des métriques personnalisées via l'API metrics. Il augmente la capacité quand la charge monte et la réduit ensuite.",
+    "mots_cles_attendus": [
+      "hpa",
+      "replicas",
+      "cpu",
+      "métriques personnalisées",
+      "charge"
+    ]
+  },
+  {
+    "id": "devops-127",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Ton application subit des pics de trafic imprévisibles et tu veux qu'elle scale seule de 3 à 30 pods. Comment configures-tu cela proprement dans Kubernetes ?",
+    "reponse_reference": "On fixe des requests CPU/mémoire réalistes sur les pods, on crée un HPA ciblant par exemple 70 % de CPU avec minReplicas 3 et maxReplicas 30. On s'assure que les nœuds peuvent suivre, idéalement avec un cluster autoscaler, et que l'application est stateless pour scaler horizontalement.",
+    "mots_cles_attendus": [
+      "hpa",
+      "min/max replicas",
+      "requests",
+      "cluster autoscaler",
+      "stateless"
+    ]
+  },
+  {
+    "id": "devops-128",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu dois lancer un traitement de nuit qui s'exécute une seule fois puis se termine, pas un service long. Quelle ressource Kubernetes utilises-tu et pourquoi pas un Deployment ?",
+    "reponse_reference": "On utilise un Job (ou un CronJob pour la planification récurrente) : il garantit l'exécution jusqu'à complétion, avec retries en cas d'échec. Un Deployment relancerait indéfiniment un pod qui se termine normalement, ce qui n'est pas le comportement voulu.",
+    "mots_cles_attendus": [
+      "job",
+      "cronjob",
+      "complétion",
+      "retries",
+      "planification"
+    ]
+  },
+  {
+    "id": "devops-129",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ConfigMap et quelle différence avec un Secret ?",
+    "reponse_reference": "Un ConfigMap stocke de la configuration non sensible (paramètres, fichiers de config) injectable dans les pods via variables ou volumes. Un Secret stocke des données sensibles (mots de passe, clés, certificats) ; il est encodé en base64 par défaut et doit être chiffré au repos et protégé par RBAC.",
+    "mots_cles_attendus": [
+      "configmap",
+      "secret",
+      "configuration",
+      "sensible",
+      "rbac"
+    ]
+  },
+  {
+    "id": "devops-130",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un mot de passe de base de données est codé en dur dans le manifeste du Deployment commité sur Git. Comment corriges-tu proprement ?",
+    "reponse_reference": "On déplace la valeur dans un Secret Kubernetes (ou un gestionnaire externe injecté via un opérateur), on référence ce Secret dans le pod via envFrom ou volume, et on fait tourner le mot de passe compromis. Le manifeste Git ne doit plus contenir aucune valeur sensible.",
+    "mots_cles_attendus": [
+      "secret",
+      "rotation",
+      "manifeste",
+      "envfrom",
+      "git"
+    ]
+  },
+  {
+    "id": "devops-131",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une stratégie de mise à jour RollingUpdate et à quoi servent maxSurge et maxUnavailable ?",
+    "reponse_reference": "RollingUpdate remplace progressivement les anciens pods par les nouveaux, sans coupure totale. maxSurge autorise des pods supplémentaires au-delà du nombre souhaité pendant la mise à jour, et maxUnavailable tolère un nombre de pods indisponibles ; ils contrôlent la vitesse et le risque du déploiement.",
+    "mots_cles_attendus": [
+      "rollingupdate",
+      "maxsurge",
+      "maxunavailable",
+      "progressif",
+      "pods"
+    ]
+  },
+  {
+    "id": "devops-132",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un rollout Kubernetes remplace tous les pods d'un coup et le service tombe pendant la mise à jour. Quelles configurations corrigent ce comportement ?",
+    "reponse_reference": "Il faut une stratégie RollingUpdate avec maxUnavailable à 0 et maxSurge raisonnable, des sondes readiness correctes, et un arrêt gracieux (preStop hook, terminationGracePeriodSeconds) pour drainer les connexions. Ainsi les nouveaux pods servent le trafic avant que les anciens ne soient retirés.",
+    "mots_cles_attendus": [
+      "maxunavailable",
+      "readiness",
+      "arrêt gracieux",
+      "prestop",
+      "drainage"
+    ]
+  },
+  {
+    "id": "devops-133",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu veux alerter quand la latence p99 de ton API dépasse 800 ms pendant 5 minutes, sans réveiller l'astreinte pour des micro-pics. Comment construis-tu cette alerte ?",
+    "reponse_reference": "On écrit une règle PromQL sur l'histogramme de latence calculant le p99 (histogram_quantile sur le taux de buckets) avec un for: 5m qui exige que la condition dure avant de déclencher. Alertmanager gère ensuite le routage, la déduplication et les silences vers l'astreinte.",
+    "mots_cles_attendus": [
+      "p99",
+      "promql",
+      "histogram_quantile",
+      "for",
+      "alertmanager"
+    ]
+  },
+  {
+    "id": "devops-134",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'Alertmanager et quelles fonctions apporte-t-il au-dessus de Prometheus ?",
+    "reponse_reference": "Alertmanager reçoit les alertes émises par Prometheus et gère leur cycle de vie : regroupement d'alertes similaires, inhibition, silences, déduplication et routage vers les bons canaux (PagerDuty, Slack, email). Il évite les tempêtes de notifications.",
+    "mots_cles_attendus": [
+      "alertmanager",
+      "regroupement",
+      "routage",
+      "silences",
+      "inhibition"
+    ]
+  },
+  {
+    "id": "devops-135",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une image de base Alpine que tu utilises contient une vulnérabilité critique signalée par ton scanner CI. Tous tes builds sont bloqués. Comment gères-tu la situation ?",
+    "reponse_reference": "On évalue l'exploitabilité réelle (la bibliothèque vulnérable est-elle utilisée ?), on met à jour l'image de base vers une version corrigée ou on change de base. Si aucun correctif n'existe, on documente une exception temporaire avec délai, sans désactiver le scan pour tout le monde.",
+    "mots_cles_attendus": [
+      "image de base",
+      "vulnérabilité",
+      "mise à jour",
+      "exploitabilité",
+      "exception"
+    ]
+  },
+  {
+    "id": "devops-136",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le principe du moindre privilège appliqué aux rôles IAM dans le cloud ?",
+    "reponse_reference": "Chaque identité (utilisateur, service, application) ne reçoit que les permissions strictement nécessaires à sa fonction, rien de plus. Cela limite les dégâts en cas de compromission d'un credential et se traduit par des politiques IAM fines et revues régulièrement.",
+    "mots_cles_attendus": [
+      "moindre privilège",
+      "iam",
+      "permissions",
+      "compromission",
+      "politiques"
+    ]
+  },
+  {
+    "id": "devops-137",
+    "domaine": "devops",
+    "sous_theme": "reseaux_cloud",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un VPC et comment s'organisent ses sous-réseaux publics et privés ?",
+    "reponse_reference": "Un VPC est un réseau virtuel isolé dans le cloud où l'on définit plages d'adresses, sous-réseaux, tables de routage et passerelles. Les sous-réseaux publics ont un accès direct à Internet (passerelle IGW), les privés passent par un NAT gateway pour les sorties seulement, protégeant ainsi les bases de données.",
+    "mots_cles_attendus": [
+      "vpc",
+      "sous-réseaux",
+      "nat gateway",
+      "passerelle internet",
+      "isolé"
+    ]
+  },
+  {
+    "id": "devops-138",
+    "domaine": "devops",
+    "sous_theme": "reseaux_cloud",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Ton application en sous-réseau privé doit appeler une API externe pour se mettre à jour, mais n'a aucune connectivité sortante. Que mets-tu en place ?",
+    "reponse_reference": "On ajoute un NAT gateway dans un sous-réseau public et une route par défaut vers lui dans la table de routage du sous-réseau privé. Les instances sortent ainsi vers Internet avec l'IP du NAT sans jamais être joignables depuis l'extérieur ; une alternative plus fine est un proxy ou un endpoint de service.",
+    "mots_cles_attendus": [
+      "nat gateway",
+      "routage",
+      "sortant",
+      "sous-réseau privé",
+      "ip"
+    ]
+  },
+  {
+    "id": "devops-139",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Pendant un incident, un ingénieur redémarre tous les serveurs 'pour voir', détruisant les indices de diagnostic. Quelles règles de gestion d'incident instaures-tu ?",
+    "reponse_reference": "On désigne un incident commander qui coordonne et valide les actions, on privilégie la mitigation réversible (rollback, bascule) avant les actions destructrices, et on préserve les preuves (logs, états) avant de redémarrer. Un canal de communication dédié et une chronologie écrite complètent le dispositif.",
+    "mots_cles_attendus": [
+      "incident commander",
+      "mitigation",
+      "rollback",
+      "préservation",
+      "coordination"
+    ]
+  },
+  {
+    "id": "devops-140",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "La rotation d'un certificat TLS expiré se fait aujourd'hui manuellement en urgence à chaque échéance. Comment automatises-tu ce processus de bout en bout ?",
+    "reponse_reference": "On utilise cert-manager (ou l'équivalent cloud) pour émettre et renouveler automatiquement les certificats Let's Encrypt avant expiration, avec alerte de suivi d'expiration en monitoring. La rotation devient invisible : plus d'intervention manuelle ni d'urgence planifiée.",
+    "mots_cles_attendus": [
+      "cert-manager",
+      "renouvellement automatique",
+      "tls",
+      "expiration",
+      "alerte"
+    ]
+  },
+  {
+    "id": "devops-141",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que RBAC dans Kubernetes et quels objets le composent ?",
+    "reponse_reference": "RBAC (contrôle d'accès basé sur les rôles) autorise les actions des utilisateurs et service accounts sur les ressources du cluster. Il combine Role/ClusterRole (ensembles de permissions) et RoleBinding/ClusterRoleBinding qui les attribuent à des identités dans un namespace ou tout le cluster.",
+    "mots_cles_attendus": [
+      "rbac",
+      "rôles",
+      "bindings",
+      "service account",
+      "permissions"
+    ]
+  },
+  {
+    "id": "devops-142",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un pipeline CI doit uniquement déployer dans le namespace 'app-prod' : aujourd'hui il utilise un compte admin du cluster. Comment appliques-tu le moindre privilège avec RBAC ?",
+    "reponse_reference": "On crée un ServiceAccount dédié dans app-prod, un Role limité aux verbes nécessaires (get, list, create, patch sur deployments/pods) et un RoleBinding liant les deux, restreint à ce namespace. Le pipeline utilise le token de ce ServiceAccount et perd tout accès au reste du cluster.",
+    "mots_cles_attendus": [
+      "serviceaccount",
+      "role",
+      "rolebinding",
+      "namespace",
+      "moindre privilège"
+    ]
+  },
+  {
+    "id": "devops-143",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels mécanismes Kubernetes permettent d'arrêter proprement un pod sans perdre de requêtes ?",
+    "reponse_reference": "À la suppression, le pod est retiré des endpoints, un hook preStop peut laisser le temps de finir les requêtes, puis SIGTERM est envoyé au processus qui doit drainer ses connexions. Après terminationGracePeriodSeconds, SIGKILL termine le conteneur.",
+    "mots_cles_attendus": [
+      "arrêt gracieux",
+      "prestop",
+      "sigterm",
+      "drainage",
+      "endpoints"
+    ]
+  },
+  {
+    "id": "devops-144",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "À chaque déploiement, quelques requêtes en cours échouent avec des erreurs de connexion réinitialisée. Quelle est la cause probable et comment la corriges-tu ?",
+    "reponse_reference": "Les pods reçoivent SIGTERM et ferment leurs connexions avant que les clients et l'équilibreur aient fini de les retirer des endpoints : il y a une course (race). On corrige avec un preStop sleep ou un drain applicatif, un handling correct de SIGTERM côté application, et un keepalive adapté.",
+    "mots_cles_attendus": [
+      "sigterm",
+      "race",
+      "prestop",
+      "endpoints",
+      "drain"
+    ]
+  },
+  {
+    "id": "devops-145",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un PersistentVolume (PV) et un PersistentVolumeClaim (PVC) ?",
+    "reponse_reference": "Un PV est une ressource de stockage du cluster fournie par l'infrastructure (via une StorageClass), un PVC est la demande de stockage d'un pod qui se lie à un PV. Cette séparation découple le cycle de vie des données de celui des pods et permet le provisioning dynamique.",
+    "mots_cles_attendus": [
+      "persistentvolume",
+      "pvc",
+      "storageclass",
+      "provisioning dynamique",
+      "stockage"
+    ]
+  },
+  {
+    "id": "devops-146",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu déploies une base PostgreSQL stateful sur Kubernetes avec 3 replicas. Quel objet utilises-tu au lieu d'un Deployment et quelles précautions prends-tu ?",
+    "reponse_reference": "Un StatefulSet donne aux pods des identités stables (nom ordonné, DNS stable) et des PVCs individuels conservés entre redémarrages. Il faut aussi gérer la réplication au niveau de la base, des classes de stockage avec de bonnes performances, et une stratégie de sauvegarde, car Kubernetes ne gère pas la cohérence des données.",
+    "mots_cles_attendus": [
+      "statefulset",
+      "identité stable",
+      "pvc",
+      "réplication",
+      "sauvegardes"
+    ]
+  },
+  {
+    "id": "devops-147",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un nœud du cluster devient NotReady en pleine journée. Que fait Kubernetes pour les pods qui tournaient dessus, et que dois-tu vérifier ?",
+    "reponse_reference": "Après le délai de tolérance (pod eviction timeout), les pods du nœud sont marqués pour réordonnancement et recréés sur des nœuds sains s'ils sont gérés par un contrôleur. Il faut vérifier la capacité restante pour absorber la charge, les pods stateful à identité fixe, et les causes (kubelet, disque, réseau) via les conditions du nœud.",
+    "mots_cles_attendus": [
+      "notready",
+      "éviction",
+      "réordonnancement",
+      "kubelet",
+      "capacité"
+    ]
+  },
+  {
+    "id": "devops-148",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une PodDisruptionBudget et quand devient-elle nécessaire ?",
+    "reponse_reference": "Une PodDisruptionBudget (PDB) garantit un nombre minimum de pods disponibles pendant les disruptions volontaires (drain de nœud, mise à jour du cluster). Elle est nécessaire en production pour qu'une maintenance ne coupe pas un service, via minAvailable ou maxUnavailable.",
+    "mots_cles_attendus": [
+      "pdb",
+      "disruption volontaire",
+      "minavailable",
+      "drain",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "devops-149",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Pendant le drain d'un nœud pour maintenance, tout ton service à 3 replicas s'est retrouvé indisponible quelques instants. Comment évites-tu que cela se reproduise ?",
+    "reponse_reference": "On configure une PDB avec par exemple minAvailable: 2 pour bloquer les évictions simultanées, on répartit les pods sur plusieurs nœuds avec des anti-affinités ou la topologie de répartition, et on draine les nœuds un par un en respectant les PDB.",
+    "mots_cles_attendus": [
+      "pdb",
+      "anti-affinité",
+      "topologie",
+      "drain",
+      "répartition"
+    ]
+  },
+  {
+    "id": "devops-150",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un développeur déploie un Deployment qui aspire tout le CPU du nœud et affame les autres applications. Quelles protections Kubernetes mets-tu en place à l'échelle du cluster ?",
+    "reponse_reference": "On impose des LimitRanges par namespace (valeurs par défaut et plafonds de requests/limits), des ResourceQuotas pour borner la consommation totale, et éventuellement un admission controller (OPA Gatekeeper/Kyverno) qui refuse les manifests sans limites. Les PriorityClass protègent les charges critiques.",
+    "mots_cles_attendus": [
+      "limitrange",
+      "resourcequota",
+      "admission controller",
+      "limits",
+      "priorité"
+    ]
+  },
+  {
+    "id": "devops-151",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'Helm et quel problème résout-il dans la gestion des applications Kubernetes ?",
+    "reponse_reference": "Helm est un gestionnaire de paquets pour Kubernetes : ses charts empaquettent des manifests paramétrables (templates + values.yaml) installables, versionnables et upgradables en une commande. Il évite la duplication de YAML entre environnements et simplifie les cycles de vie applicatifs.",
+    "mots_cles_attendus": [
+      "helm",
+      "chart",
+      "templates",
+      "values",
+      "paquets"
+    ]
+  },
+  {
+    "id": "devops-152",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Après un helm upgrade raté, l'application est dans un état cassé. Comment reviens-tu en arrière proprement et que vérifies-tu ensuite ?",
+    "reponse_reference": "On utilise helm rollback <release> <revision> pour restaurer la révision précédente, puis on vérifie l'état des pods, les événements et les métriques de l'application. Il faut aussi comprendre pourquoi l'upgrade a échoué (sondes, hooks, image) avant de retenter, et sauvegarder les données si des migrations étaient impliquées.",
+    "mots_cles_attendus": [
+      "helm rollback",
+      "révision",
+      "upgrade",
+      "vérification",
+      "migrations"
+    ]
+  },
+  {
+    "id": "devops-153",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Comment planifies-tu une montée de version mineure d'un cluster Kubernetes en production sans interruption de service ?",
+    "reponse_reference": "On suit le skew de version supporté (upgrade du plan de contrôle puis des nœuds, une mineure à la fois), on draine les nœuds un par un en respectant les PDB, on teste d'abord sur un cluster de staging identique, et on vérifie la compatibilité des APIs dépréciées et des addons (CNI, ingress) avant de commencer.",
+    "mots_cles_attendus": [
+      "upgrade",
+      "plan de contrôle",
+      "drain",
+      "pdb",
+      "apis dépréciées"
+    ]
+  },
+  {
+    "id": "devops-154",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le cardinality problem avec Prometheus et pourquoi est-il dangereux ?",
+    "reponse_reference": "Chaque combinaison unique d'étiquettes crée une nouvelle série temporelle : des labels à haute cardinalité (user_id, IP, identifiants de requête) font exploser le nombre de séries. Cela sature la mémoire et le stockage de Prometheus et dégrade tout le monitoring.",
+    "mots_cles_attendus": [
+      "cardinalité",
+      "séries temporelles",
+      "étiquettes",
+      "explosion",
+      "mémoire"
+    ]
+  },
+  {
+    "id": "devops-155",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Ton Prometheus consomme soudain 40 Go de RAM et les requêtes PromQL deviennent timeout. L'investigation montre un nouveau service qui étiquette ses métriques avec l'email de l'utilisateur. Que fais-tu ?",
+    "reponse_reference": "C'est une explosion de cardinalité : on retire immédiatement ce label à haute cardinalité du service, ou on filtre les métriques au scrape (relabeling) en attendant le correctif. Les identifiants fins comme les emails appartiennent aux logs et aux traces, pas aux labels de métriques.",
+    "mots_cles_attendus": [
+      "cardinalité",
+      "relabeling",
+      "label",
+      "logs",
+      "correction"
+    ]
+  },
+  {
+    "id": "devops-156",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'admission control dans Kubernetes et quels outils l'exploitent pour la sécurité ?",
+    "reponse_reference": "L'admission control intercepte les requêtes vers l'API Kubernetes avant persistance, pour valider ou modifier les objets selon des politiques. Des webhooks comme OPA Gatekeeper ou Kyverno y appliquent des règles de sécurité : interdiction des conteneurs root, images signées obligatoires, labels imposés.",
+    "mots_cles_attendus": [
+      "admission",
+      "webhook",
+      "politiques",
+      "gatekeeper",
+      "kyverno"
+    ]
+  },
+  {
+    "id": "devops-157",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu veux garantir qu'aucune image non signée ne peut être déployée sur ton cluster de production. Quelle chaîne de sécurité mets-tu en place ?",
+    "reponse_reference": "On signe les images à la construction (cosign/Sigstore dans le pipeline CI), puis une politique d'admission (Kyverno, Gatekeeper avec controller de signatures) refuse tout pod dont l'image n'a pas une signature vérifiable venant du registre autorisé. Le tout s'accompagne d'une gestion des clés de signature sécurisée.",
+    "mots_cles_attendus": [
+      "signature",
+      "cosign",
+      "admission",
+      "registre",
+      "vérification"
+    ]
+  },
+  {
+    "id": "devops-158",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Deux pods identiques tournent sur le même nœud ; quand ce nœud tombe, la moitié de ta capacité disparaît. Quelle configuration appliques-tu pour mieux répartir les pods ?",
+    "reponse_reference": "On utilise topologySpreadConstraints ou des règles d'anti-affinité de pod pour répartir les replicas sur différents nœuds ou zones de disponibilité. Le scheduler évite alors de concentrer tous les pods d'un Deployment au même endroit, ce qui réduit l'impact d'une panne de nœud ou de zone.",
+    "mots_cles_attendus": [
+      "antiaffinité",
+      "topologyspreadconstraints",
+      "répartition",
+      "zones",
+      "scheduler"
+    ]
+  },
+  {
+    "id": "devops-159",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un service managé serverless comme une file de messages (SQS, Pub/Sub) et quel avantage architectural apporte-t-elle ?",
+    "reponse_reference": "Une file de messages managée découple les composants : le producteur dépose des messages, le consommateur les traite à son rythme, sans serveur à gérer ni capacité à dimensionner. Elle absorbe les pics de charge, permet des retries intégrés et évite la propagation de pannes entre services.",
+    "mots_cles_attendus": [
+      "file de messages",
+      "découplage",
+      "serverless",
+      "pics",
+      "retries"
+    ]
+  },
+  {
+    "id": "devops-160",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Ton API appelle un service partenaire qui met parfois 30 secondes à répondre, ce qui épuise tes threads et fait tomber ton API. Quels patterns de résilience appliques-tu ?",
+    "reponse_reference": "On applique un timeout court sur l'appel, un circuit breaker qui coupe les appels vers le service défaillant après un seuil d'échecs, et éventuellement du bulkhead (pools de connexions séparés) pour isoler la défaillance. Des retries avec backoff exponentiel complètent le dispositif sans aggraver la panne.",
+    "mots_cles_attendus": [
+      "timeout",
+      "circuit breaker",
+      "bulkhead",
+      "backoff",
+      "résilience"
+    ]
+  },
+  {
+    "id": "devops-161",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le tracing distribué et quel rôle joue un trace ID ?",
+    "reponse_reference": "Le tracing distribué enregistre le chemin complet d'une requête à travers plusieurs services sous forme de spans horodatés et hiérarchisés. Un trace ID unique propagé de service en service (via les en-têtes) permet de reconstituer l'ensemble du parcours et d'isoler les segments lents ou en erreur.",
+    "mots_cles_attendus": [
+      "tracing",
+      "spans",
+      "trace id",
+      "propagation",
+      "requête"
+    ]
+  },
+  {
+    "id": "devops-162",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu instrumentes une chaîne de 5 microservices avec OpenTelemetry. Comment t'assures-tu qu'une requête traversant les 5 services produise une seule trace cohérente ?",
+    "reponse_reference": "Chaque service utilise le SDK OpenTelemetry et propage le contexte de trace (en-têtes W3C traceparent, ou B3) à chaque appel sortant, en créant des spans enfants du span reçu. L'export se fait vers un backend commun (Jaeger, Tempo) où le trace ID unique relie tous les spans de la requête.",
+    "mots_cles_attendus": [
+      "opentelemetry",
+      "propagation",
+      "traceparent",
+      "spans",
+      "contexte"
+    ]
+  },
+  {
+    "id": "devops-163",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Le tracing montre que 90 % de la latence d'une requête vient d'un appel à la base de données, invisible auparavant. Comment exploites-tu ce résultat ?",
+    "reponse_reference": "On enrichit le span d'attributs (requête, taille du résultat) pour identifier l'opération lente, puis on optimise : index manquant, requête N+1, cache ou pagination. La mesure avant/après via les percentiles de latence valide le gain, et le tracing sert de preuve d'amélioration.",
+    "mots_cles_attendus": [
+      "span",
+      "latence",
+      "index",
+      "cache",
+      "n+1"
+    ]
+  },
+  {
+    "id": "devops-164",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Le stockage de tes traces coûte très cher car 100 % des requêtes sont tracées, mais tu refuses de perdre les traces des requêtes en erreur ou lentes. Quelle stratégie de sampling mets-tu en place ?",
+    "reponse_reference": "On passe à un sampling tail-based : un collecteur conserve toutes les traces puis ne garde en intégralité que celles en erreur, lentes, ou un échantillon des traces normales. Contrairement au head-based sampling qui décide avant de connaître l'issue, il préserve les traces intéressantes tout en réduisant fortement volume et coût.",
+    "mots_cles_attendus": [
+      "sampling",
+      "tail-based",
+      "erreurs",
+      "coût",
+      "collecteur"
+    ]
+  },
+  {
+    "id": "devops-165",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SLO (service level objective) et comment se construit-il ?",
+    "reponse_reference": "Un SLO est un objectif mesurable de fiabilité pour un service, par exemple 99,9 % de requêtes réussies en moins de 300 ms sur 30 jours glissants. Il se définit à partir d'indicateurs de niveau service (SLI) choisis pour refléter l'expérience utilisateur réelle.",
+    "mots_cles_attendus": [
+      "slo",
+      "sli",
+      "fiabilité",
+      "objectif",
+      "fenêtre glissante"
+    ]
+  },
+  {
+    "id": "devops-166",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un budget d'erreur (error budget) et comment arbitre-t-il entre fiabilité et vélocité ?",
+    "reponse_reference": "Le budget d'erreur est la part d'échecs autorisée par le SLO (0,1 % pour un SLO à 99,9 %). Tant que le budget est disponible, l'équipe peut déployer vite ; quand il est épuisé, on gèle les changements risqués et on investit dans la fiabilité. C'est un arbitrage objectif entre innovation et stabilité.",
+    "mots_cles_attendus": [
+      "budget d'erreur",
+      "slo",
+      "vélocité",
+      "fiabilité",
+      "gel"
+    ]
+  },
+  {
+    "id": "devops-167",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Ton service a consommé tout son budget d'erreur mensuel à cause de deux incidents, et l'équipe produit veut absolument sortir une fonctionnalité demain. Comment gères-tu l'arbitrage ?",
+    "reponse_reference": "Selon la politique de budget d'erreur, les déploiements risqués sont gelés tant que le budget n'est pas reconstitué ou compensé. On peut négocier un déploiement avec protections renforcées (canari très progressif, feature flag désactivable instantanément) en échange d'actions de fiabilité priorisées, décision documentée et partagée.",
+    "mots_cles_attendus": [
+      "gel",
+      "feature flag",
+      "canari",
+      "arbitrage",
+      "fiabilité"
+    ]
+  },
+  {
+    "id": "devops-168",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelle est la différence entre SLI, SLO et SLA ?",
+    "reponse_reference": "Le SLI est la mesure observée du service (taux de réussite, latence), le SLO est l'objectif interne que l'équipe se fixe sur ce SLI, et le SLA est l'engagement contractuel vis-à-vis des clients avec compensations en cas de manquement. Le SLA est généralement moins ambitieux que le SLO pour garder une marge.",
+    "mots_cles_attendus": [
+      "sli",
+      "slo",
+      "sla",
+      "mesure",
+      "contrat"
+    ]
+  },
+  {
+    "id": "devops-169",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu dois choisir un SLI pour un service de lecture vidéo en streaming. Quels indicateurs choisis-tu pour refléter l'expérience utilisateur réelle ?",
+    "reponse_reference": "On privilégie des SLI centrés utilisateur : proportion de sessions de lecture démarrées avec succès, temps avant première image, taux de rebuffering et d'erreurs de lecture. Les métriques purement serveur (CPU, up des instances) ne reflètent pas ce que vit l'utilisateur.",
+    "mots_cles_attendus": [
+      "sli",
+      "expérience utilisateur",
+      "démarrage",
+      "rebuffering",
+      "erreurs"
+    ]
+  },
+  {
+    "id": "devops-170",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un post-mortem blameless et quelles sections contient-il généralement ?",
+    "reponse_reference": "Un post-mortem blameless analyse un incident sans chercher de coupable, en se concentrant sur les causes systémiques. Il contient la chronologie, l'impact mesuré, les causes racines, ce qui a bien ou mal fonctionné, et des actions correctives suivies avec responsables et échéances.",
+    "mots_cles_attendus": [
+      "post-mortem",
+      "blameless",
+      "chronologie",
+      "causes racines",
+      "actions"
+    ]
+  },
+  {
+    "id": "devops-171",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Après un incident majeur, un manager veut savoir 'qui a fait l'erreur' pour sanctionner. Quels effets cela aurait-il sur la culture d'incident et que proposes-tu à la place ?",
+    "reponse_reference": "La sanction pousse à cacher les erreurs, retarde les déclarations d'incident et empêche l'apprentissage collectif. Une culture blameless traite l'erreur comme un signal sur le système : on cherche pourquoi l'action semblait rationnelle sur le moment, et on corrige les processus, outils et garde-fous qui l'ont permise.",
+    "mots_cles_attendus": [
+      "blameless",
+      "confiance",
+      "systémique",
+      "apprentissage",
+      "transparence"
+    ]
+  },
+  {
+    "id": "devops-172",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un incident a duré 3 heures alors que le problème technique a été résolu en 30 minutes : détection tardive, confusion sur qui faisait quoi, communication chaotique. Quelles améliorations processus proposes-tu ?",
+    "reponse_reference": "Les améliorations portent sur la détection (alertes sur symptômes utilisateur plutôt que manuelles), les rôles (incident commander, scribe, communicant désignés), et la communication (canal d'incident dédié, points de situation réguliers). Un playbook d'escalade et des exercices de simulation (game days) ancrent ces réflexes.",
+    "mots_cles_attendus": [
+      "détection",
+      "rôles",
+      "incident commander",
+      "communication",
+      "playbook"
+    ]
+  },
+  {
+    "id": "devops-173",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la sécurité de la supply chain logicielle et quelles attaques vise-t-elle à contrer ?",
+    "reponse_reference": "Elle protège toute la chaîne de production logicielle : dépendances, outils de build, registres et pipelines, contre des attaques comme les paquets compromis, le typosquatting, l'injection de code au build ou la falsification d'artefacts. Les réponses incluent SBOM, signatures, builds reproductibles et épinglage des versions.",
+    "mots_cles_attendus": [
+      "supply chain",
+      "dépendances",
+      "sbom",
+      "signature",
+      "artefacts"
+    ]
+  },
+  {
+    "id": "devops-174",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une dépendance très populaire de ton application (comme log4j à l'époque) révèle une vulnérabilité critique RCE un vendredi soir. Décris ta réponse organisée.",
+    "reponse_reference": "On identifie immédiatement tous les services et versions concernés via le SBOM et les scanners, on applique le correctif ou une mitigation (désactivation du feature vulnérable), et on redéploie en priorisant les services exposés. On communique pendant l'action, puis on vérifie via scans et WAF qu'aucune exploitation n'a eu lieu.",
+    "mots_cles_attendus": [
+      "sbom",
+      "rce",
+      "mitigation",
+      "inventaire",
+      "priorisation"
+    ]
+  },
+  {
+    "id": "devops-175",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SBOM (software bill of materials) et à quoi sert-il ?",
+    "reponse_reference": "Un SBOM est l'inventaire structuré des composants d'un artefact logiciel : dépendances directes et transitives avec leurs versions et licences. Il permet de répondre vite aux vulnérabilités (savoir où est un composant affecté), d'auditer la conformité et de tracer la provenance.",
+    "mots_cles_attendus": [
+      "sbom",
+      "inventaire",
+      "dépendances",
+      "versions",
+      "vulnérabilités"
+    ]
+  },
+  {
+    "id": "devops-176",
+    "domaine": "devops",
+    "sous_theme": "ci_cd",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Ton pipeline de production peut être déclenché par n'importe quel développeur et pousse directement des images taguées 'prod'. Quels contrôles ajoutes-tu pour sécuriser le chemin vers la production ?",
+    "reponse_reference": "On restreint le déclenchement prod aux tags/branches protégées avec revue obligatoire, on sépare les permissions (seul le pipeline avec un rôle dédié peut pousser vers le registre et déployer en prod), on signe les images et on exige une validation par politique d'admission. Les environnements protégés et les déploiements progressifs limitent l'impact d'une erreur.",
+    "mots_cles_attendus": [
+      "branches protégées",
+      "permissions",
+      "signature",
+      "pipeline",
+      "prod"
+    ]
+  },
+  {
+    "id": "devops-177",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture multi-AZ et quel niveau de panne absorbe-t-elle ?",
+    "reponse_reference": "Une architecture multi-AZ répartit les composants d'un service sur plusieurs zones de disponibilité d'une même région : instances, bases répliquées, équilibreurs. Elle absorbe la perte complète d'un datacenter (zone) sans interruption de service, avec un basculement souvent automatique.",
+    "mots_cles_attendus": [
+      "multi-az",
+      "zones de disponibilité",
+      "réplication",
+      "basculement",
+      "panne"
+    ]
+  },
+  {
+    "id": "devops-178",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Ta base de données principale est en single-AZ et la direction exige de survivre à la perte d'une zone avec un RPO inférieur à 1 minute. Quelle architecture mets-tu en place ?",
+    "reponse_reference": "On passe en base multi-AZ avec réplication synchrone (ou quasi-synchrone) et basculement automatique, le standby étant dans une autre zone. Pour garantir le RPO, on ajoute des sauvegardes continues/journal de transactions (WAL) et on teste régulièrement le failover, car une réplication jamais testée n'est pas une garantie.",
+    "mots_cles_attendus": [
+      "multi-az",
+      "réplication synchrone",
+      "failover",
+      "rpo",
+      "sauvegardes"
+    ]
+  },
+  {
+    "id": "devops-179",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "La direction commerciale veut promettre contractuellement 'zéro perte de données et reprise en 5 minutes' sans budget supplémentaire. Que signifient RTO et RPO, et pourquoi cette promesse est-elle problématique ?",
+    "reponse_reference": "Le RTO est la durée maximale d'indisponibilité acceptable (ici 5 minutes) et le RPO la perte de données maximale (ici zéro). Des objectifs aussi stricts exigent réplication synchrone multi-sites, basculement automatique et tests réguliers, donc un coût d'architecture important ; sans investissement, la promesse contractuelle n'est pas tenable.",
+    "mots_cles_attendus": [
+      "rto",
+      "rpo",
+      "réplication synchrone",
+      "basculement",
+      "coût"
+    ]
+  },
+  {
+    "id": "devops-180",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une région cloud entière est déclarée en panne majeure par le fournisseur. Ton application y est entièrement hébergée et tu as un RTO de 2 heures. Décris ton plan d'action immédiat et tes enseignements d'architecture.",
+    "reponse_reference": "Immédiatement : activer le plan de bascule vers la région secondaire si elle existe (DNS, données répliquées), communiquer l'état aux utilisateurs et suivre la page de statut du fournisseur. Structurellement, l'incident montre la nécessité d'une stratégie multi-région (réplication asynchrone, bascule DNS testée) cohérente avec le RTO, car dépendre d'une seule région fait du RTO du fournisseur le vôtre.",
+    "mots_cles_attendus": [
+      "multi-région",
+      "bascule",
+      "dns",
+      "réplication",
+      "plan de reprise"
+    ]
+  },
+  {
+    "id": "devops-181",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que DevSecOps et comment la sécurité s'intègre-t-elle 'shift left' dans un pipeline ?",
+    "reponse_reference": "DevSecOps intègre la sécurité en continu dans le cycle de développement plutôt qu'en audit final. Le 'shift left' place les contrôles au plus tôt : scan de secrets et SAST sur le code, SCA sur les dépendances, scan d'images au build, politiques d'admission au déploiement, chaque étape étant automatisée et bloquante selon la criticité.",
+    "mots_cles_attendus": [
+      "devsecops",
+      "shift left",
+      "sast",
+      "sca",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "devops-182",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Ton scanner de secrets en CI détecte une clé de production dans un commit d'une pull request. Décris la réponse complète, technique et organisationnelle.",
+    "reponse_reference": "Techniquement : bloquer la fusion, révoquer la clé immédiatement (elle a été poussée, donc potentiellement exposée), faire tourner le secret et purger l'historique si le commit a atteint une branche partagée. Organisationnellement : auditer les accès pour détecter une exploitation, notifier l'équipe, et vérifier que le pré-commit hook local (gitleaks) aurait dû l'attraper avant le push.",
+    "mots_cles_attendus": [
+      "révocation",
+      "rotation",
+      "historique",
+      "audit",
+      "pré-commit"
+    ]
+  },
+  {
+    "id": "devops-183",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la rotation automatique des secrets et quels systèmes la permettent ?",
+    "reponse_reference": "La rotation automatique renouvelle périodiquement les credentials sans intervention manuelle, réduisant la fenêtre d'exploitation d'un secret volé. Les gestionnaires comme Vault (moteur de secrets dynamiques) ou AWS Secrets Manager génèrent des credentials à durée de vie courte à la demande, idéalement sans secret statique du tout.",
+    "mots_cles_attendus": [
+      "rotation",
+      "secrets dynamiques",
+      "vault",
+      "durée de vie courte",
+      "automatique"
+    ]
+  },
+  {
+    "id": "devops-184",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tes microservices partagent tous le même utilisateur de base de données avec un mot de passe statique stocké dans des variables d'environnement. Quelle architecture de gestion des accès proposes-tu pour durcir l'ensemble ?",
+    "reponse_reference": "On centralise les credentials dans Vault ou le gestionnaire cloud, avec rotation automatique et utilisateurs distincts par service suivant le moindre privilège. L'idéal est l'identité de charge de travail : chaque service s'authentifie (OIDC, SPIFFE) et obtient des credentials dynamiques à courte durée de vie, sans secret stocké dans l'environnement.",
+    "mots_cles_attendus": [
+      "vault",
+      "rotation",
+      "identité de charge de travail",
+      "moindre privilège",
+      "dynamique"
+    ]
+  },
+  {
+    "id": "devops-185",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que SLSA (Supply-chain Levels for Software Artifacts) et quels niveaux définit-il ?",
+    "reponse_reference": "SLSA est un cadre de maturité pour l'intégrité de la supply chain logicielle. Ses niveaux vont de L1 (processus de build scripté) à L4/L3+ (builds reproductibles et isolés, provenance infalsifiable attestée), en passant par des builds hébergés avec provenance signée, protégeant contre les modifications non autorisées d'artefacts.",
+    "mots_cles_attendus": [
+      "slsa",
+      "niveaux",
+      "provenance",
+      "build isolé",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "devops-186",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un attaquant pourrait modifier ton pipeline CI pour injecter du code malveillant dans une release signée. Quelles mesures de durcissement du pipeline appliques-tu ?",
+    "reponse_reference": "On isole les builds (runners éphémères, aucun accès du pipeline aux secrets de prod), on exige des reviews obligatoires sur les fichiers de pipeline, on génère et signe une attestation de provenance (SLSA, in-toto) liée au commit source, et on vérifie cette provenance au déploiement via politique d'admission. Le registre n'accepte que des images signées par le pipeline légitime.",
+    "mots_cles_attendus": [
+      "provenance",
+      "runners éphémères",
+      "attestation",
+      "review",
+      "admission"
+    ]
+  },
+  {
+    "id": "devops-187",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Après analyse, une dépendance transitoire de ton application présente une CVE critique, mais la bibliothèque vulnérable n'est jamais appelée par ton code. Comment priorises-tu et documentes-tu la décision ?",
+    "reponse_reference": "On évalue l'exploitabilité réelle : portée de la CVE, chemin d'appel, exposition réseau du service. Si le risque est faible, on enregistre une exception motivée avec date d'expiration et on planifie la mise à jour ; si la dépendance est exposée, on patche ou on remplace immédiatement. La décision doit être traçable, pas un simple silence du scanner.",
+    "mots_cles_attendus": [
+      "cve",
+      "exploitabilité",
+      "exception",
+      "transitoire",
+      "priorisation"
+    ]
+  },
+  {
+    "id": "devops-188",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture orientée événements et quels avantages apporte-t-elle dans le cloud ?",
+    "reponse_reference": "Une architecture orientée événements découple producteurs et consommateurs via un bus ou des files de messages : les composants réagissent aux événements de façon asynchrone. Elle permet un scaling indépendant, absorbe les pics, tolère les pannes temporaires d'un consommateur et s'accorde bien avec le serverless.",
+    "mots_cles_attendus": [
+      "événements",
+      "asynchrone",
+      "découplage",
+      "scaling",
+      "bus"
+    ]
+  },
+  {
+    "id": "devops-189",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un service de génération de factures synchrones fait chuter toute l'API quand il est lent. Comment le refactores-tu en architecture asynchrone résiliente ?",
+    "reponse_reference": "L'API dépose un événement 'facture demandée' dans une file et répond immédiatement ; un worker consomme la file à son rythme et génère la facture. On ajoute retries avec backoff, dead letter queue pour les messages en échec, et un moyen pour le client de consulter l'état de sa demande, ce qui isole totalement les lenteurs du générateur.",
+    "mots_cles_attendus": [
+      "file",
+      "worker",
+      "asynchrone",
+      "dead letter queue",
+      "découplage"
+    ]
+  },
+  {
+    "id": "devops-190",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern bulkhead (cloisonnement) en architecture résiliente ?",
+    "reponse_reference": "Le bulkhead isole les ressources d'un composant (pools de connexions, threads, instances) pour qu'une défaillance ne se propage pas aux autres, comme les cloisons étanches d'un navire. Chaque dépendance critique a son compartiment : si l'une sature, les autres fonctionnent encore.",
+    "mots_cles_attendus": [
+      "bulkhead",
+      "cloisonnement",
+      "isolation",
+      "propagation",
+      "pools"
+    ]
+  },
+  {
+    "id": "devops-191",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une panne d'un fournisseur SMS externe a épuisé le pool de threads de ton backend et mis à terre des fonctionnalités sans aucun lien avec les SMS. Comment appliques-tu le bulkhead ici ?",
+    "reponse_reference": "On dédie un pool de connexions/threads limité à l'appel SMS, avec timeout court et circuit breaker, de sorte que sa saturation n'affecte pas les autres traitements. Mieux : rendre l'envoi asynchrone via une file, pour que la lenteur du fournisseur n'occupe plus aucune ressource de requête.",
+    "mots_cles_attendus": [
+      "pool dédié",
+      "timeout",
+      "circuit breaker",
+      "file",
+      "isolation"
+    ]
+  },
+  {
+    "id": "devops-192",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le FinOps et quelles sont ses grandes phases ?",
+    "reponse_reference": "Le FinOps est une pratique de gestion des coûts cloud qui responsabilise les équipes d'ingénierie sur leurs dépenses. Ses phases : informer (allocation et visibilité des coûts par équipe/service), optimiser (tarifs réservés, droitsizing, suppression du gaspillage) et opérer (gouvernance, budgets, alertes en continu).",
+    "mots_cles_attendus": [
+      "finops",
+      "coûts",
+      "allocation",
+      "optimisation",
+      "gouvernance"
+    ]
+  },
+  {
+    "id": "devops-193",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "La facture cloud de ton entreprise a doublé en deux mois sans changement majeur de trafic. Décris ta démarche d'investigation FinOps.",
+    "reponse_reference": "On analyse la facture par service, région et tag d'équipe pour localiser la hausse, puis on cherche les causes classiques : ressources orphelines (volumes non attachés, IPs élastiques inutilisées), environnements de test laissés allumés, instances surdimensionnées, ou fuites de données sortantes. On met en place des tags obligatoires et des alertes de budget pour détecter les dérives plus tôt.",
+    "mots_cles_attendus": [
+      "facture",
+      "tags",
+      "ressources orphelines",
+      "alertes budget",
+      "surdimensionnement"
+    ]
+  },
+  {
+    "id": "devops-194",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une charge de calcul batch tolérante aux interruptions représente 40 % de votre facture de calcul. Quel levier d'optimisation majeur proposes-tu ?",
+    "reponse_reference": "On bascule ce batch sur des instances spot/préemptibles, 60 à 90 % moins chères, avec gestion des interruptions (checkpointing, requeue des tâches). Pour du traitement parallèle, les files de jobs spot et les services batch managés automatisent cet usage, réduisant fortement le coût à fiabilité équivalente.",
+    "mots_cles_attendus": [
+      "spot",
+      "préemptible",
+      "batch",
+      "checkpointing",
+      "économie"
+    ]
+  },
+  {
+    "id": "devops-195",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Ton équipe enchaîne les incidents similaires : le même service sature la base de données tous les mois. Comment passes-tu d'un traitement réactif à une résolution systémique ?",
+    "reponse_reference": "On analyse la tendance des post-mortems pour identifier la cause structurelle (absence de limite de connexion, requêtes non bornées, pas d'auto-scaling) et on traite la dette de fiabilité comme un produit : actions correctives suivies, quota de capacité dédié. Des SLO avec budget d'erreur forcent ensuite l'arbitrage features/fiabilité de façon récurrente.",
+    "mots_cles_attendus": [
+      "récurrent",
+      "cause structurelle",
+      "dette de fiabilité",
+      "post-mortems",
+      "slo"
+    ]
+  },
+  {
+    "id": "devops-196",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la sévérité d'incident (SEV1, SEV2...) et comment structure-t-elle la réponse ?",
+    "reponse_reference": "La classification de sévérité mesure l'impact utilisateur et commercial de l'incident : SEV1 pour une panne totale critique avec réponse immédiate et communication de crise, sévérités décroissantes pour des dégradations partielles. Elle définit qui est mobilisé, les délais de réponse, le niveau de communication et l'obligation ou non de post-mortem formel.",
+    "mots_cles_attendus": [
+      "sévérité",
+      "impact",
+      "escalade",
+      "communication",
+      "réponse"
+    ]
+  },
+  {
+    "id": "devops-197",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "L'astreinte de ton équipe est épuisée : 15 réveils nocturnes par personne et par mois, dont la plupart sans gravité. Comment rends-tu l'astreinte soutenable ?",
+    "reponse_reference": "On réduit le bruit à la source : alertes uniquement sur symptômes utilisateur et actionnables, seuils revus, auto-remédiation pour les causes connues, et hiérarchisation pour ne réveiller qu'en SEV1/2. On corrige les causes racines des réveils récurrents (tâche hebdomadaire d'analyse des pages), et on ajuste la rotation et les compensations.",
+    "mots_cles_attendus": [
+      "astreinte",
+      "bruit",
+      "alertes actionnables",
+      "auto-remédiation",
+      "causes racines"
+    ]
+  },
+  {
+    "id": "devops-198",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la corrélation logs/métriques/traces et comment l'outillage moderne la facilite-t-il ?",
+    "reponse_reference": "La corrélation relie les trois signaux d'une même requête : une métrique anormale mène aux traces concernées via les exemplaires, puis aux logs exacts grâce au trace ID injecté dans chaque ligne de log. Les plateformes comme Grafana (Tempo/Loki/Mimir) ou les APM automatisent ces sauts d'un signal à l'autre.",
+    "mots_cles_attendus": [
+      "corrélation",
+      "trace id",
+      "logs",
+      "métriques",
+      "exemplaires"
+    ]
+  },
+  {
+    "id": "devops-199",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Pendant un incident, l'équipe perd 40 minutes à croiser manuellement logs et métriques. Quelles pratiques d'observabilité prépares-tu en amont pour accélérer les futurs diagnostics ?",
+    "reponse_reference": "On standardise le trace ID propagé dans tous les logs structurés, on crée des tableaux de bord par service avec liens croisés vers traces et logs, et on pré-enregistre des requêtes de diagnostic courantes dans des runbooks. L'objectif est qu'en incident, chaque saut métrique-trace-log soit un clic plutôt qu'une recherche manuelle.",
+    "mots_cles_attendus": [
+      "logs structurés",
+      "trace id",
+      "tableaux de bord",
+      "runbooks",
+      "liens croisés"
+    ]
+  },
+  {
+    "id": "devops-200",
+    "domaine": "devops",
+    "sous_theme": "automatisation",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un runbook d'incident consiste en 12 étapes manuelles exécutées sous stress, avec des erreurs fréquentes. Comment évolues-tu vers de l'auto-remédiation progressive ?",
+    "reponse_reference": "On automatise d'abord les étapes sûres et idempotentes dans un script outillé (diagnostic, redémarrage, purge de cache) déclenchable en un clic depuis l'alerte, puis on passe en auto-remédiation pour les causes connues et vérifiées. On garde l'humain dans la boucle pour les actions risquées, et on teste régulièrement les automatisations comme du code.",
+    "mots_cles_attendus": [
+      "runbook",
+      "auto-remédiation",
+      "idempotent",
+      "un clic",
+      "tests"
+    ]
+  },
+  {
+    "id": "devops-201",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture multi-région active-active et quelles difficultés introduit-elle ?",
+    "reponse_reference": "En active-active, deux régions ou plus servent le trafic simultanément, offrant redondance et latence réduite ; un DNS géographique ou anycast répartit les utilisateurs. Les difficultés majeures sont la cohérence des données entre régions (latence de réplication, conflits d'écriture), le routage du basculement et le coût doublé.",
+    "mots_cles_attendus": [
+      "multi-région",
+      "active-active",
+      "réplication",
+      "conflits",
+      "dns géographique"
+    ]
+  },
+  {
+    "id": "devops-202",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Tu conçois le multi-région d'une application avec un panier d'achat modifiable depuis n'importe quelle région. Comment gères-tu la cohérence des données du panier ?",
+    "reponse_reference": "Les écritures concurrentes sur deux régions imposent un choix : stickiness de session (le panier reste géré par sa région d'origine), écriture dans une seule région propriétaire des données, ou réplication multi-maître avec résolution de conflits (CRDT, last-write-wins). Pour un panier, une région maître par utilisateur avec basculement documenté est souvent le meilleur compromis.",
+    "mots_cles_attendus": [
+      "cohérence",
+      "conflits",
+      "stickiness",
+      "multi-maître",
+      "compromis"
+    ]
+  },
+  {
+    "id": "devops-203",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la dégradation gracieuse (graceful degradation) d'un service ?",
+    "reponse_reference": "C'est la capacité d'un service à continuer de fonctionner en mode réduit quand une dépendance tombe : catalogue consultable en cache pendant une panne de recommandations, file d'attente quand le paiement est lent. L'utilisateur garde l'essentiel au lieu de subir une erreur totale.",
+    "mots_cles_attendus": [
+      "dégradation",
+      "mode réduit",
+      "cache",
+      "dépendance",
+      "essentiel"
+    ]
+  },
+  {
+    "id": "devops-204",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Le moteur de recommandations de ton site e-commerce tombe en panne et fait échouer toutes les pages produit qui l'appellent. Comment conçois-tu la dégradation gracieuse ici ?",
+    "reponse_reference": "L'appel aux recommandations devient non bloquant : timeout très court, circuit breaker, et repli sur un contenu statique (meilleures ventes en cache) sans lequel la page produit reste pleinement fonctionnelle. La santé de la page ne doit plus dépendre d'une fonctionnalité secondaire ; on alerte en parallèle sur le taux de repli.",
+    "mots_cles_attendus": [
+      "fallback",
+      "circuit breaker",
+      "timeout",
+      "non bloquant",
+      "cache"
+    ]
+  },
+  {
+    "id": "devops-205",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le backpressure dans un système distribué ?",
+    "reponse_reference": "Le backpressure est le mécanisme par lequel un composant saturé signale à ses appelants de ralentir (files bornées, codes 429, rejet de charge) au lieu d'accepter indéfiniment du travail. Sans lui, la saturation se propage en cascade jusqu'à l'effondrement complet du système.",
+    "mots_cles_attendus": [
+      "backpressure",
+      "saturation",
+      "429",
+      "files bornées",
+      "cascade"
+    ]
+  },
+  {
+    "id": "devops-206",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un client interne envoie des requêtes en rafale qui saturent ton service, et tes retries automatiques empirent la situation. Comment stabilises-tu l'ensemble ?",
+    "reponse_reference": "On implémente du backpressure : files d'attente bornées, rate limiting par client avec réponses 429 et Retry-After, et côté client des retries avec backoff exponentiel et jitter ainsi qu'un circuit breaker. La charge excédentaire est rejetée tôt et proprement au lieu de faire s'effondrer le service pour tout le monde.",
+    "mots_cles_attendus": [
+      "rate limiting",
+      "429",
+      "backoff",
+      "jitter",
+      "file bornée"
+    ]
+  },
+  {
+    "id": "devops-207",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Ton service dépend d'une base dont les réplicas de lecture accumulent du retard, servant des données périmées aux utilisateurs. Comment détectes-tu et gères-tu cette dérive ?",
+    "reponse_reference": "On mesure en continu le lag de réplication et on alerte au-delà d'un seuil métier, puis on route les lectures sensibles à la fraîcheur vers le primaire ou on compare un marqueur (timestamp/GTID) avant lecture. Le lag est affiché sur les tableaux de bord comme un SLI, car des données périmées sont une panne invisible des métriques classiques.",
+    "mots_cles_attendus": [
+      "lag",
+      "réplication",
+      "fraîcheur",
+      "routage",
+      "sli"
+    ]
+  },
+  {
+    "id": "devops-208",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une cellule (cell-based architecture / shuffle sharding) dans les architectures à grande échelle ?",
+    "reponse_reference": "L'architecture cellulaire partitionne le système en cellules autonomes servant chacune un sous-ensemble des utilisateurs, pour contenir les pannes à une fraction du trafic (blast radius limité). Le shuffle sharding attribue à chaque client une combinaison unique de composants, rendant improbable qu'une défaillance touche deux clients de la même façon.",
+    "mots_cles_attendus": [
+      "cellules",
+      "isolation",
+      "blast radius",
+      "shuffle sharding",
+      "partition"
+    ]
+  },
+  {
+    "id": "devops-209",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un mauvais déploiement a fait tomber ta plateforme entière pour 100 % des clients pendant 2 heures. La direction veut qu'un tel incident ne puisse plus toucher que 10 % des utilisateurs maximum. Quelle évolution d'architecture proposes-tu ?",
+    "reponse_reference": "On migre vers une architecture cellulaire : plusieurs piles complètes indépendantes, chaque client affecté à une cellule, déploiements progressifs cellule par cellule avec vérification avant poursuite. Un bug ne touche alors que la cellule en cours de déploiement, et le retour arrière ne concerne que cette cellule.",
+    "mots_cles_attendus": [
+      "cellules",
+      "blast radius",
+      "déploiement progressif",
+      "isolation",
+      "rollback"
+    ]
+  },
+  {
+    "id": "devops-210",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quels sont les principaux leviers d'optimisation des coûts de calcul dans le cloud ?",
+    "reponse_reference": "Les leviers majeurs : le rightsizing des instances selon l'usage réel, les engagements tarifaires (réservées, savings plans) pour la charge stable, les instances spot pour le tolérant aux interruptions, l'arrêt automatique des environnements hors production, et l'auto-scaling pour coller à la demande réelle.",
+    "mots_cles_attendus": [
+      "rightsizing",
+      "réservées",
+      "spot",
+      "auto-scaling",
+      "hors production"
+    ]
+  },
+  {
+    "id": "devops-211",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Vos instances de calcul tournent à 8 % de CPU moyen mais la facture reste élevée, et le surdimensionnement a été fait 'au cas où'. Quelle démarche FinOps structurelle mets-tu en place ?",
+    "reponse_reference": "On analyse l'utilisation réelle (p95 CPU/mémoire) par service, on réduit les tailles d'instances et on regroupe les petites charges (bin packing, Kubernetes avec requests honnêtes), puis on couvre la base stable avec des engagements (réservées/savings plans) et le variable avec du scaling. On institutionnalise le suivi : coûts par tag et par équipe, revues régulières, budgets alertés.",
+    "mots_cles_attendus": [
+      "rightsizing",
+      "utilisation réelle",
+      "engagements",
+      "bin packing",
+      "suivi"
+    ]
+  },
+  {
+    "id": "devops-212",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Les équipes de dev laissent tourner leurs environnements de test 24h/24 et 7j/7 alors qu'ils ne servent qu'en journée. Comment automatises-tu la réduction de ce gaspillage sans gêner le travail ?",
+    "reponse_reference": "On planifie l'extinction automatique des environnements non-production la nuit et le week-end (arrêt/start programmés ou TTL sur les environnements éphémères), avec possibilité d'override documenté. Des environnements à la demande créés par pull request et détruits après merge remplacent avantageusement les environnements permanents.",
+    "mots_cles_attendus": [
+      "extinction programmée",
+      "ttl",
+      "éphémère",
+      "à la demande",
+      "non-production"
+    ]
+  },
+  {
+    "id": "devops-213",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le chaos engineering et quels principes le distinguent du simple test de panne ?",
+    "reponse_reference": "Le chaos engineering consiste à provoquer volontairement des défaillances en production (ou environnement fidèle) pour vérifier les hypothèses de résilience du système. Ses principes : définir l'état stable via des SLI, formuler des hypothèses, injecter des pannes réalistes avec blast radius contrôlé et arrêt d'urgence, puis corriger les faiblesses découvertes.",
+    "mots_cles_attendus": [
+      "chaos",
+      "hypothèses",
+      "injection de pannes",
+      "blast radius",
+      "résilience"
+    ]
+  },
+  {
+    "id": "devops-214",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Ton équipe veut se lancer dans le chaos engineering mais la direction craint de casser la production. Propose un plan de montée en puissance progressif et sûr.",
+    "reponse_reference": "On commence en environnement de staging avec des expériences simples (tuer un pod), puis en production sur des services peu critiques, pendant les heures ouvrées avec un kill switch et une équipe prête à annuler. Chaque expérience valide une hypothèse explicite sur les SLI ; on élargit progressivement le périmètre (latence injectée, panne de zone) à mesure que la confiance grandit.",
+    "mots_cles_attendus": [
+      "progressif",
+      "staging",
+      "kill switch",
+      "hypothèse",
+      "heures ouvrées"
+    ]
+  },
+  {
+    "id": "devops-215",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un game day simulant la perte d'une zone de disponibilité révèle que le basculement de la base prend 45 minutes au lieu des 5 prévues, et que le runbook était obsolète. Comment valorises-tu ces découvertes ?",
+    "reponse_reference": "C'est exactement le but du game day : découvrir les écarts avant un vrai incident. On documente les résultats en post-mortem d'exercice, on corrige le runbook, on automatise ou accélère le basculement, et on re-teste pour vérifier l'amélioration. Les hypothèses invalidées deviennent des actions de fiabilité priorisées dans le backlog.",
+    "mots_cles_attendus": [
+      "game day",
+      "runbook",
+      "écart",
+      "automatisation",
+      "re-test"
+    ]
+  },
+  {
+    "id": "devops-216",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la méthode des 5 pourquoi et quelles sont ses limites dans l'analyse d'incident ?",
+    "reponse_reference": "Les 5 pourquoi enchaînent les questions 'pourquoi' depuis le symptôme pour remonter vers une cause profonde. Ses limites : elle isole une chaîne causale unique alors que les incidents résultent de combinaisons de facteurs, et elle pousse à trouver 'la' cause racine humaine ou technique unique plutôt qu'un ensemble de conditions systémiques.",
+    "mots_cles_attendus": [
+      "5 pourquoi",
+      "cause racine",
+      "chaîne causale",
+      "limites",
+      "systémique"
+    ]
+  },
+  {
+    "id": "devops-217",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un post-mortem conclut 'cause racine : erreur humaine du développeur qui a supprimé le mauvais bucket'. Pourquoi cette conclusion est-elle insatisfaisante et comment la reformules-tu ?",
+    "reponse_reference": "L'erreur humaine est un symptôme, pas une cause : il faut demander pourquoi le système permettait qu'une seule personne supprime un bucket de production sans protection ni confirmation. La reformulation porte sur les garde-fous manquants : suppression désactivée, versionnement/verrou de bucket absent, procédure de changement sans revue, droits trop larges, et les actions correctives ciblent ces failles systémiques.",
+    "mots_cles_attendus": [
+      "erreur humaine",
+      "garde-fous",
+      "systémique",
+      "permissions",
+      "protection"
+    ]
+  },
+  {
+    "id": "devops-218",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Tu veux alerter sur l'épuisement du budget d'erreur de ton service avant qu'il ne soit consommé. Comment construis-tu une alerte de 'burn rate' multi-fenêtres ?",
+    "reponse_reference": "On calcule la vitesse de consommation du budget (burn rate = taux d'erreur observé / taux autorisé par le SLO) et on alerte sur des combinaisons multi-fenêtres : par exemple burn rate 14x sur 1h ET 5m pour une alerte rapide (page), 6x sur 6h ET 30m pour une alerte ticket. Les fenêtres courtes confirment la longue pour éviter faux positifs et réveil tardif.",
+    "mots_cles_attendus": [
+      "burn rate",
+      "multi-fenêtres",
+      "budget d'erreur",
+      "page",
+      "ticket"
+    ]
+  },
+  {
+    "id": "devops-219",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un service mesh et quelles capacités apporte-t-il aux microservices ?",
+    "reponse_reference": "Un service mesh (Istio, Linkerd) intercepte le trafic entre services via des proxies sidecar ou ambassadeurs, offrant mTLS automatique, retries, timeouts, circuit breaking, canaris fins et télémétrie détaillée sans modifier le code. Il industrialise la fiabilité et la sécurité des communications inter-services.",
+    "mots_cles_attendus": [
+      "service mesh",
+      "sidecar",
+      "mtls",
+      "retries",
+      "télémétrie"
+    ]
+  },
+  {
+    "id": "devops-220",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Chacun de tes 40 microservices implémente ses propres retries, timeouts et mTLS, de façon incohérente et boguée. Comment un service mesh résout-il ce problème, et quel coût acceptes-tu en échange ?",
+    "reponse_reference": "Le mesh déplace ces préoccupations dans l'infrastructure : politiques de retries/timeouts et mTLS appliquées uniformément par les proxies, configurables centralement par destination. En contrepartie on accepte la complexité opérationnelle (plan de contrôle, montée de version du mesh), la latence ajoutée par chaque saut de proxy et la consommation mémoire des sidecars.",
+    "mots_cles_attendus": [
+      "mesh",
+      "politiques uniformes",
+      "mtls",
+      "complexité",
+      "sidecars"
+    ]
+  },
+  {
+    "id": "devops-221",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture zero trust appliquée aux systèmes distribués ?",
+    "reponse_reference": "Le zero trust ne fait jamais confiance au réseau par défaut : chaque appel entre services est authentifié, autorisé et chiffré individuellement, quels que soient son emplacement et son réseau. Il repose sur des identités de charge de travail fortes, le moindre privilège par requête, la vérification continue et la micro-segmentation.",
+    "mots_cles_attendus": [
+      "zero trust",
+      "authentification",
+      "chiffrement",
+      "identité de charge de travail",
+      "micro-segmentation"
+    ]
+  },
+  {
+    "id": "devops-222",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un attaquant ayant volé le token d'un service interne se déplace librement dans ton réseau 'de confiance' et accède à la base de production. Comment une architecture zero trust aurait-elle contenu l'attaque, et comment la déploies-tu progressivement ?",
+    "reponse_reference": "Avec le zero trust, le token volé n'aurait donné accès qu'aux ressources explicitement autorisées pour ce service (mTLS par identité SPIFFE, politiques d'autorisation par requête, micro-segmentation), empêchant le mouvement latéral. Le déploiement se fait par étapes : inventaire des identités, chiffrement mutuel en mode permissif d'abord, puis application stricte des politiques d'autorisation service par service.",
+    "mots_cles_attendus": [
+      "mouvement latéral",
+      "mtls",
+      "identités",
+      "politiques",
+      "permissif"
+    ]
+  },
+  {
+    "id": "devops-223",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le platform engineering et la notion de 'golden paths' ?",
+    "reponse_reference": "Le platform engineering construit une plateforme interne self-service qui regroupe les meilleures pratiques (déploiement, observabilité, sécurité) en produits prêts à l'emploi pour les équipes applicatives. Les golden paths sont ces chemins balisés et supportés : les suivre donne par construction un service conforme, sans que chaque équipe réinvente l'infrastructure.",
+    "mots_cles_attendus": [
+      "plateforme interne",
+      "self-service",
+      "golden paths",
+      "produits",
+      "autonomie"
+    ]
+  },
+  {
+    "id": "devops-224",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Chaque équipe de ton organisation déploie sur Kubernetes avec ses propres manifests copiés-collés, sans standards de sécurité ni de monitoring. Comment conçois-tu un golden path qui sera réellement adopté ?",
+    "reponse_reference": "On construit un modèle de service prêt à l'emploi (template Helm ou Crossplane) qui embarque probes, ressources, PDB, RBAC minimal, métriques, logs, alertes et politique de déploiement par défaut, avec une documentation minimale et une intégration CI immédiate. L'adoption vient de l'expérience développeur : le chemin conforme doit être plus rapide que le chemin libre, pas juste imposé.",
+    "mots_cles_attendus": [
+      "templates",
+      "conformité par défaut",
+      "expérience développeur",
+      "helm",
+      "observabilité intégrée"
+    ]
+  },
+  {
+    "id": "devops-225",
+    "domaine": "devops",
+    "sous_theme": "kubernetes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Ton cluster Kubernetes unique héberge 200 services et devient un point de défaillance global : une mauvaise config d'admission a bloqué tous les déploiements pendant 4 heures. Quelles évolutions d'architecture envisages-tu ?",
+    "reponse_reference": "On fragmente en plusieurs clusters par criticité ou domaine (prod/non-prod, équipes), ce qui limite le blast radius des défaillances du plan de contrôle et des webhooks. Il faut en contrepartie outiller le multi-cluster : déploiement GitOps par cluster, fédération de politiques, observabilité agrégée, et gestion des certificats et du routage inter-clusters.",
+    "mots_cles_attendus": [
+      "multi-cluster",
+      "blast radius",
+      "plan de contrôle",
+      "webhook",
+      "gitops"
+    ]
+  },
+  {
+    "id": "devops-226",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la 'nouvelle vue' (new view of safety) dans la culture de gestion des incidents ?",
+    "reponse_reference": "La new view of safety considère la sécurité et la fiabilité comme des propriétés émergentes d'un système sociotechnique, pas comme l'absence d'erreurs humaines. Les incidents résultent d'interactions complexes (pressions, outils, contexte) et l'analyse explore pourquoi les actions semblaient sensées sur le moment, plutôt que de blâmer, en s'appuyant sur la curiosité et l'apprentissage continu.",
+    "mots_cles_attendus": [
+      "new view",
+      "sociotechnique",
+      "émergent",
+      "contexte",
+      "apprentissage"
+    ]
+  },
+  {
+    "id": "devops-227",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un incident SEV1 de 6 heures mobilise 25 personnes de 4 équipes : décisions contradictoires, deux personnes modifient la même config, la communication externe est incohérente. En post-mortem, quelles défaillances organisationnelles identifies-tu et quelles structures instaures-tu ?",
+    "reponse_reference": "Les défaillances sont l'absence de commande unifiée : pas d'incident commander identifié, pas de séparation des rôles (ops, communication, scribe), pas de canal unique de coordination. On instaure un modèle type ICS : un IC qui délègue et ne touche pas au clavier, un communicant pour l'externe, un scribe pour la chronologie, des points de sync réguliers, et on forme/entraîne ces rôles via des simulations avant le prochain incident.",
+    "mots_cles_attendus": [
+      "incident commander",
+      "rôles",
+      "coordination",
+      "chronologie",
+      "simulation"
+    ]
+  },
+  {
+    "id": "devops-228",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Les actions correctives de vos post-mortems ne sont jamais terminées : 70 % traînent dans les tickets au bout d'un trimestre. Comment fiabilises-tu le suivi jusqu'au bout ?",
+    "reponse_reference": "On traite les actions post-mortem comme du travail produit priorisé : propriétaires nommés, échéances, et revues régulières (suivi hebdomadaire des actions ouvertes par ancienneté) au niveau direction. On limite le nombre d'actions par post-mortem aux plus impactantes, et on mesure le taux de complétion comme indicateur de la culture de fiabilité de l'organisation.",
+    "mots_cles_attendus": [
+      "actions correctives",
+      "propriétaires",
+      "suivi",
+      "priorisation",
+      "revues"
+    ]
+  },
+  {
+    "id": "devops-229",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le failover DNS et quelles sont ses limites en cas de sinistre régional ?",
+    "reponse_reference": "Le failover DNS route les utilisateurs vers une région saine en modifiant les enregistrements DNS selon des vérifications de santé. Ses limites : la propagation et surtout les caches DNS/TTL non respectés peuvent maintenir des utilisateurs sur la région morte pendant des minutes à des heures, et la région secondaire doit avoir la capacité d'absorber toute la charge, ce qui impose des tests de bascule réels.",
+    "mots_cles_attendus": [
+      "failover dns",
+      "ttl",
+      "cache",
+      "capacité",
+      "vérification de santé"
+    ]
+  },
+  {
+    "id": "devops-230",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Lors d'un exercice de bascule régionale, tu découvres que la région secondaire ne supporte que 40 % de la charge et que les caches sont froids, aggravant la panne simulée. Quelles mesures prends-tu pour rendre le basculement réellement opérationnel ?",
+    "reponse_reference": "On dimensionne la secondary pour absorber la charge totale (ou on la maintient en active-active avec une part du trafic réel), on préchauffe caches et pools de connexion en continu, et on automatise la montée en capacité au déclenchement du failover. Surtout, on répète l'exercice régulièrement : un plan de bascule jamais testé en charge est une hypothèse, pas un plan.",
+    "mots_cles_attendus": [
+      "capacité",
+      "préchauffage",
+      "active-active",
+      "exercice",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "devops-231",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Conçois une expérience de chaos engineering en production pour valider que ton service survit à la perte d'une zone de disponibilité. Précise hypothèse, métriques d'arrêt et garde-fous.",
+    "reponse_reference": "Hypothèse : la perte d'une AZ ne dégrade pas le SLO (succès > 99,9 %, latence p99 stable) grâce aux PDB, à la répartition topologique et au multi-AZ de la base. Injection progressive via le réseau (isoler une AZ) en heures ouvrées, avec métriques d'arrêt automatiques (burn rate, erreurs 5xx) qui annulent l'expérience, kill switch manuel, et communication préalable aux équipes concernées.",
+    "mots_cles_attendus": [
+      "hypothèse",
+      "az",
+      "kill switch",
+      "burn rate",
+      "progressif"
+    ]
+  },
+  {
+    "id": "devops-232",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'alerting basé sur les symptômes plutôt que sur les causes, et pourquoi est-il préféré à grande échelle ?",
+    "reponse_reference": "L'alerting symptomatique se déclenche sur ce que vit l'utilisateur (erreurs, latence, saturation du SLO) et non sur chaque cause possible (CPU d'un hôte, pod redémarré). À grande échelle, il reste actionnable et silencieux quand aucune dégradation réelle n'existe : les causes se diagnostiquent pendant l'incident via tableaux de bord, pas via des pages nocturnes.",
+    "mots_cles_attendus": [
+      "symptômes",
+      "slo",
+      "actionnable",
+      "bruit",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "devops-233",
+    "domaine": "devops",
+    "sous_theme": "monitoring_observabilite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Avec 300 microservices, ton organisation croule sous les tableaux de bord et les alertes dupliquées. Comment rationalises-tu l'observabilité à l'échelle de l'entreprise ?",
+    "reponse_reference": "On standardise par plateforme : golden signals et conventions de nommage de métriques imposés via le golden path, un tableau de bord généré automatiquement par service (service catalogue), et des alertes hiérarchisées par SLO de service plutôt que par métrique brute. La corrélation passe par le catalogue de services et les traces, et les équipes ne maintiennent plus que leurs vues métier spécifiques.",
+    "mots_cles_attendus": [
+      "standardisation",
+      "golden signals",
+      "catalogue de services",
+      "alertes slo",
+      "génération automatique"
+    ]
+  },
+  {
+    "id": "devops-234",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le coût unitaire (unit economics) en FinOps et pourquoi est-il plus pertinent que la facture totale ?",
+    "reponse_reference": "Le coût unitaire rapporte la dépense cloud à une unité métier : coût par transaction, par utilisateur actif, par commande. Il distingue une hausse de facture due à la croissance (sain) d'une dégradation d'efficacité (anormale), et permet des alertes et objectifs alignés sur la valeur produite plutôt que sur un montant absolu.",
+    "mots_cles_attendus": [
+      "coût unitaire",
+      "unité métier",
+      "efficacité",
+      "croissance",
+      "facture"
+    ]
+  },
+  {
+    "id": "devops-235",
+    "domaine": "devops",
+    "sous_theme": "cloud_fondamentaux",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La facture cloud de ta scale-up croît de 15 % par mois, un peu plus vite que le nombre d'utilisateurs, et le CFO exige de la visibilité. Quel programme FinOps structures-tu sur six mois ?",
+    "reponse_reference": "Phase 1 informer : tagging obligatoire, allocation des coûts par équipe/produit, suivi du coût unitaire par utilisateur et alertes de dérive. Phase 2 optimiser : quick wins (orphelins, spot, extinction non-prod), puis rightsizing et engagements couvrant la base stable. Phase 3 opérer : objectifs d'efficacité par équipe, revues mensuelles coûts/architecture, et gouvernance des nouvelles ressources, en suivant le ratio coût/croissance comme KPI.",
+    "mots_cles_attendus": [
+      "tagging",
+      "allocation",
+      "coût unitaire",
+      "engagements",
+      "gouvernance"
+    ]
+  },
+  {
+    "id": "devops-236",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la provenance d'artefact (attestation) et comment s'inscrit-elle dans un pipeline sécurisé ?",
+    "reponse_reference": "Une attestation de provenance est une déclaration signée (format in-toto/SLSA) décrivant comment un artefact a été construit : source, builder, paramètres. Émise par le système de build lui-même, vérifiée à l'admission dans le cluster, elle garantit qu'aucun binaire n'entre en production sans être passé par le pipeline légitime, même si le registre est compromis.",
+    "mots_cles_attendus": [
+      "provenance",
+      "attestation",
+      "in-toto",
+      "signature",
+      "vérification"
+    ]
+  },
+  {
+    "id": "devops-237",
+    "domaine": "devops",
+    "sous_theme": "securite_devops",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu apprends qu'un package que tu utilises a été repris par un mainteneur malveillant qui y a injecté un stealer de credentials ciblant vos pipelines CI. Quelle réponse de crise et quelles protections durables mets-tu en œuvre ?",
+    "reponse_reference": "Réponse : identifier toutes les versions utilisées via SBOM et lockfiles, geler les mises à jour du package, révoquer et faire tourner tous les credentials accessibles depuis la CI, auditer les accès. Durablement : épingler les versions avec vérification d'intégrité, utiliser un proxy/registre interne qui ne répercute les nouvelles versions qu'après délai et revue, scanner les diffs de dépendances, et exécuter la CI dans des environnements isolés sans credentials de production permanents.",
+    "mots_cles_attendus": [
+      "sbom",
+      "épinglage",
+      "proxy interne",
+      "rotation",
+      "isolation"
+    ]
+  },
+  {
+    "id": "devops-238",
+    "domaine": "devops",
+    "sous_theme": "gestion_incidents",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une mise à jour d'un fournisseur cloud dégrade silencieusement les performances réseau entre AZ, provoquant des incidents intermittents pendant trois jours avant que tu fasses le lien. Quelles leçons en tires-tu pour ta détection et ta communication fournisseur ?",
+    "reponse_reference": "Il faut des SLI inter-AZ explicites (latence et erreurs des appels inter-zones) alertés indépendamment des métriques applicatives, et un rapprochement automatique entre anomalies et événements de statut du fournisseur (webhooks, pages de statut). Organisationnellement : un référent fournisseur, l'historique des incidents corrélés, et une architecture qui tolère la dégradation d'une AZ plutôt qu'une confiance implicite dans l'infrastructure sous-jacente.",
+    "mots_cles_attendus": [
+      "sli inter-az",
+      "fournisseur",
+      "corrélation",
+      "détection",
+      "tolérance"
+    ]
+  },
+  {
+    "id": "devops-239",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu conçois l'architecture de déploiement d'un service critique mondial : zéro downtime toléré, déploiements plusieurs fois par jour, régions Amérique/Europe/Asie. Décris ta stratégie complète de release.",
+    "reponse_reference": "Déploiements progressifs région par région : canari automatisé dans une cellule pilote avec gate sur SLO/burn rate, puis vague par région avec soak time et vérification des SLI entre chaque étape, trafic géré par DNS pondéré ou load balancing global avec capacité active-active. Rollback automatique sur dérive des métriques, feature flags pour découpler déploiement et activation, et chaque vague journalisée pour l'audit.",
+    "mots_cles_attendus": [
+      "canari",
+      "vagues",
+      "gates slo",
+      "feature flags",
+      "rollback automatique"
+    ]
+  },
+  {
+    "id": "devops-240",
+    "domaine": "devops",
+    "sous_theme": "architectures_cloud",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "En tant qu'architecte, on te demande de rendre un système legacy monolithique 'prêt pour le cloud' sans le réécrire. Quelle stratégie de migration progressive proposes-tu, et comment sécurises-tu chaque étape ?",
+    "reponse_reference": "On applique le strangler fig : extraire progressivement des fonctionnalités du monolithe vers des services conteneurisés placés derrière un même point d'entrée (reverse proxy/API gateway) qui route par chemin. Chaque extraction est livrée avec tests de parité, bascule progressive du trafic avec rollback immédiat, et observabilité complète du nouveau service avant migration. L'infrastructure cible est provisionnée en IaC, et le monolithe résiduel continue de tourner tant qu'une étape n'est pas validée en production.",
+    "mots_cles_attendus": [
+      "strangler fig",
+      "gateway",
+      "bascule progressive",
+      "parité",
+      "iac"
+    ]
+  }
+]

@@ -1,0 +1,1501 @@
+[
+  {
+    "id": "cyber-001",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le phishing et comment s'en protéger ?",
+    "reponse_reference": "Le phishing est une attaque où un fraudeur se fait passer pour une entité de confiance (banque, collègue, service en ligne) pour voler des identifiants ou des données. On s'en protège en vérifiant l'expéditeur, en ne cliquant pas sur les liens suspects et en activant l'authentification multi-facteurs.",
+    "mots_cles_attendus": [
+      "usurpation",
+      "identifiants",
+      "lien suspect",
+      "vérifier l'expéditeur"
+    ]
+  },
+  {
+    "id": "cyber-002",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un malware ? Donne quelques exemples.",
+    "reponse_reference": "Un malware est un logiciel malveillant conçu pour nuire, voler des données ou prendre le contrôle d'un système. Exemples : virus, ver, cheval de Troie, ransomware, spyware.",
+    "mots_cles_attendus": [
+      "logiciel malveillant",
+      "virus",
+      "ransomware",
+      "cheval de Troie"
+    ]
+  },
+  {
+    "id": "cyber-003",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel est le rôle d'un pare-feu (firewall) ?",
+    "reponse_reference": "Un pare-feu filtre le trafic réseau entrant et sortant selon des règles définies. Il bloque les connexions non autorisées et réduit la surface d'attaque.",
+    "mots_cles_attendus": [
+      "filtre",
+      "trafic",
+      "règles",
+      "bloque"
+    ]
+  },
+  {
+    "id": "cyber-004",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que l'authentification multi-facteurs (MFA) et pourquoi est-elle efficace ?",
+    "reponse_reference": "Le MFA exige au moins deux preuves d'identité de types différents : ce que l'on sait (mot de passe), ce que l'on possède (téléphone, clé) ou ce que l'on est (empreinte). Même si le mot de passe est volé, l'attaquant ne peut pas se connecter sans le second facteur.",
+    "mots_cles_attendus": [
+      "deux facteurs",
+      "mot de passe",
+      "second facteur",
+      "vol"
+    ]
+  },
+  {
+    "id": "cyber-005",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qui rend un mot de passe robuste ?",
+    "reponse_reference": "Un mot de passe robuste est long (12 caractères ou plus), unique pour chaque service, difficile à deviner et sans information personnelle évidente. Un gestionnaire de mots de passe aide à en utiliser de différents partout.",
+    "mots_cles_attendus": [
+      "long",
+      "unique",
+      "gestionnaire",
+      "difficile à deviner"
+    ]
+  },
+  {
+    "id": "cyber-006",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert un VPN ?",
+    "reponse_reference": "Un VPN crée un tunnel chiffré entre l'appareil et un serveur distant. Il protège les données sur un réseau non fiable (Wi-Fi public) et masque l'adresse IP d'origine, mais il ne rend pas anonyme à lui seul.",
+    "mots_cles_attendus": [
+      "tunnel",
+      "chiffré",
+      "Wi-Fi public",
+      "adresse IP"
+    ]
+  },
+  {
+    "id": "cyber-007",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que représente la triade CIA en sécurité de l'information ?",
+    "reponse_reference": "CIA signifie Confidentialité (seuls les autorisés accèdent aux données), Intégrité (les données ne sont pas modifiées de façon non autorisée) et Disponibilité (les systèmes et données sont accessibles quand on en a besoin).",
+    "mots_cles_attendus": [
+      "confidentialité",
+      "intégrité",
+      "disponibilité"
+    ]
+  },
+  {
+    "id": "cyber-008",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ransomware et que faire pour limiter son impact ?",
+    "reponse_reference": "Un ransomware chiffre les fichiers de la victime et exige une rançon pour les débloquer. Pour limiter l'impact : sauvegardes régulières hors ligne, mises à jour, prudence avec les pièces jointes, et ne pas payer sans conseil spécialisé.",
+    "mots_cles_attendus": [
+      "chiffre les fichiers",
+      "rançon",
+      "sauvegarde",
+      "mises à jour"
+    ]
+  },
+  {
+    "id": "cyber-009",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement ?",
+    "reponse_reference": "Le chiffrement transforme des données lisibles en données illisibles à l'aide d'une clé, afin que seules les personnes disposant de la bonne clé puissent les lire. Il protège la confidentialité des données stockées ou échangées.",
+    "mots_cles_attendus": [
+      "clé",
+      "illisible",
+      "confidentialité",
+      "déchiffrer"
+    ]
+  },
+  {
+    "id": "cyber-010",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une vulnérabilité ?",
+    "reponse_reference": "Une vulnérabilité est une faiblesse dans un logiciel, un système ou un processus qu'un attaquant peut exploiter pour compromettre la sécurité (accès non autorisé, vol de données, interruption de service).",
+    "mots_cles_attendus": [
+      "faiblesse",
+      "exploiter",
+      "attaquant",
+      "système"
+    ]
+  },
+  {
+    "id": "cyber-011",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ingénierie sociale ?",
+    "reponse_reference": "L'ingénierie sociale manipule psychologiquement les personnes (confiance, urgence, peur) pour leur faire divulguer des informations ou effectuer une action, plutôt que d'attaquer directement la technique. Le phishing en est un exemple.",
+    "mots_cles_attendus": [
+      "manipulation",
+      "humain",
+      "confiance",
+      "phishing"
+    ]
+  },
+  {
+    "id": "cyber-012",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi est-il important de faire les mises à jour de sécurité ?",
+    "reponse_reference": "Les mises à jour corrigent des vulnérabilités connues que les attaquants exploitent activement. Ne pas les installer laisse des failles ouvertes et rend le système facile à compromettre.",
+    "mots_cles_attendus": [
+      "vulnérabilités",
+      "correctif",
+      "failles",
+      "exploitées"
+    ]
+  },
+  {
+    "id": "cyber-061",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert un antivirus et quelles sont ses limites ?",
+    "reponse_reference": "Un antivirus détecte, bloque et supprime les logiciels malveillants grâce à des signatures et à l'analyse du comportement. Il ne protège pas contre tout (menaces très récentes, phishing, erreurs humaines), donc il complète les bonnes pratiques sans les remplacer.",
+    "mots_cles_attendus": [
+      "détecte",
+      "logiciels malveillants",
+      "signatures",
+      "limites"
+    ]
+  },
+  {
+    "id": "cyber-062",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un spyware et un adware ?",
+    "reponse_reference": "Un spyware espionne discrètement l'utilisateur (frappes, sites visités, données) pour transmettre les informations à un tiers. Un adware affiche des publicités intrusives et peut aussi collecter des données.",
+    "mots_cles_attendus": [
+      "espionne",
+      "publicités",
+      "données",
+      "discret"
+    ]
+  },
+  {
+    "id": "cyber-063",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quels sont les risques d'utiliser un Wi-Fi public et comment les limiter ?",
+    "reponse_reference": "Sur un Wi-Fi public, le trafic peut être espionné ou détourné, ou le réseau peut être un faux point d'accès. On limite le risque en utilisant HTTPS, un VPN, en évitant les opérations sensibles et en désactivant le partage de fichiers.",
+    "mots_cles_attendus": [
+      "espionné",
+      "faux point d'accès",
+      "VPN",
+      "HTTPS"
+    ]
+  },
+  {
+    "id": "cyber-064",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi faire des sauvegardes régulières de ses données ?",
+    "reponse_reference": "Les sauvegardes permettent de récupérer ses données après une panne, une erreur, un vol ou une attaque comme un ransomware. Elles sont utiles seulement si elles sont régulières, stockées séparément et testées.",
+    "mots_cles_attendus": [
+      "récupérer",
+      "panne",
+      "ransomware",
+      "séparément"
+    ]
+  },
+  {
+    "id": "cyber-065",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert un gestionnaire de mots de passe ?",
+    "reponse_reference": "Il génère et stocke des mots de passe longs et uniques pour chaque service, protégés par un seul mot de passe maître. L'utilisateur n'a plus à les mémoriser ni à les réutiliser.",
+    "mots_cles_attendus": [
+      "mots de passe uniques",
+      "stocke",
+      "mot de passe maître",
+      "génère"
+    ]
+  },
+  {
+    "id": "cyber-066",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un hacker white hat, black hat et grey hat ?",
+    "reponse_reference": "Un white hat teste la sécurité avec autorisation pour corriger les failles. Un black hat attaque illégalement à des fins malveillantes ou lucratives. Un grey hat agit sans autorisation mais sans but malveillant, ce qui reste illégal.",
+    "mots_cles_attendus": [
+      "autorisation",
+      "malveillant",
+      "légal",
+      "illégal"
+    ]
+  },
+  {
+    "id": "cyber-067",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un cheval de Troie (trojan) ?",
+    "reponse_reference": "C'est un logiciel malveillant déguisé en programme légitime. L'utilisateur l'installe lui-même, et il ouvre ensuite une porte dérobée, vole des données ou installe d'autres malwares. Il ne se réplique pas tout seul.",
+    "mots_cles_attendus": [
+      "déguisé",
+      "légitime",
+      "porte dérobée",
+      "ne se réplique pas"
+    ]
+  },
+  {
+    "id": "cyber-068",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que signifie le cadenas affiché dans la barre d'adresse d'un navigateur ?",
+    "reponse_reference": "Il indique que la connexion est chiffrée en HTTPS avec un certificat valide. Cela protège les échanges contre l'écoute, mais ne garantit pas que le site lui-même soit honnête ou sûr : un site de phishing peut aussi avoir un cadenas.",
+    "mots_cles_attendus": [
+      "HTTPS",
+      "chiffrée",
+      "certificat",
+      "ne garantit pas"
+    ]
+  },
+  {
+    "id": "cyber-013",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un virus et un ver informatique ?",
+    "reponse_reference": "Un virus s'attache à un fichier ou programme et a besoin d'une action de l'utilisateur pour se propager. Un ver se réplique et se propage tout seul à travers le réseau, sans intervention humaine.",
+    "mots_cles_attendus": [
+      "fichier hôte",
+      "action de l'utilisateur",
+      "se propage seul",
+      "réseau"
+    ]
+  },
+  {
+    "id": "cyber-014",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque par force brute et comment la contrer ?",
+    "reponse_reference": "Une attaque par force brute essaie systématiquement de nombreuses combinaisons pour trouver un mot de passe. On la contre avec des mots de passe longs, un verrouillage après plusieurs échecs, la limitation des tentatives et le MFA.",
+    "mots_cles_attendus": [
+      "combinaisons",
+      "mot de passe",
+      "verrouillage",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-015",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque DDoS ?",
+    "reponse_reference": "Une attaque par déni de service distribué submerge un service de requêtes provenant de très nombreuses machines (souvent un botnet) pour le rendre indisponible aux utilisateurs légitimes. Elle vise la disponibilité.",
+    "mots_cles_attendus": [
+      "déni de service",
+      "botnet",
+      "indisponible",
+      "requêtes"
+    ]
+  },
+  {
+    "id": "cyber-016",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre hachage et chiffrement ?",
+    "reponse_reference": "Le chiffrement est réversible : avec la bonne clé on retrouve les données. Le hachage est à sens unique : il produit une empreinte à partir des données, sans possibilité de retrouver l'original. Le hachage sert à vérifier l'intégrité et à stocker les mots de passe.",
+    "mots_cles_attendus": [
+      "réversible",
+      "sens unique",
+      "empreinte",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "cyber-017",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le principe du moindre privilège ?",
+    "reponse_reference": "Il consiste à donner à chaque utilisateur ou programme uniquement les droits strictement nécessaires à sa tâche. Cela limite les dégâts en cas de compte compromis ou d'erreur.",
+    "mots_cles_attendus": [
+      "droits nécessaires",
+      "limite les dégâts",
+      "utilisateur",
+      "compte compromis"
+    ]
+  },
+  {
+    "id": "cyber-018",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une injection SQL, dans le principe ?",
+    "reponse_reference": "C'est une attaque où l'attaquant insère du code SQL dans un champ de saisie pour que l'application l'exécute sur sa base de données, afin de lire, modifier ou supprimer des données. On s'en protège avec des requêtes préparées et la validation des entrées.",
+    "mots_cles_attendus": [
+      "code SQL",
+      "champ de saisie",
+      "base de données",
+      "requêtes préparées"
+    ]
+  },
+  {
+    "id": "cyber-019",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre chiffrement symétrique et asymétrique ?",
+    "reponse_reference": "Le chiffrement symétrique utilise la même clé pour chiffrer et déchiffrer : rapide, mais il faut partager la clé en sécurité. L'asymétrique utilise une paire clé publique/clé privée : plus lent, mais il résout le problème de l'échange de clés.",
+    "mots_cles_attendus": [
+      "même clé",
+      "clé publique",
+      "clé privée",
+      "échange de clés"
+    ]
+  },
+  {
+    "id": "cyber-020",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un certificat numérique ?",
+    "reponse_reference": "Un certificat numérique associe une clé publique à une identité (site, personne) et est signé par une autorité de certification de confiance. Il permet de vérifier qu'on parle bien au bon site, notamment en HTTPS.",
+    "mots_cles_attendus": [
+      "clé publique",
+      "identité",
+      "autorité de certification",
+      "HTTPS"
+    ]
+  },
+  {
+    "id": "cyber-021",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une faille zero-day ?",
+    "reponse_reference": "Une zero-day est une vulnérabilité inconnue de l'éditeur, pour laquelle aucun correctif n'existe encore. Elle est particulièrement dangereuse car les défenseurs n'ont eu aucun délai pour se préparer.",
+    "mots_cles_attendus": [
+      "inconnue",
+      "pas de correctif",
+      "éditeur",
+      "exploitée"
+    ]
+  },
+  {
+    "id": "cyber-022",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un IDS et un IPS ?",
+    "reponse_reference": "Un IDS détecte les activités suspectes et alerte. Un IPS va plus loin : il détecte et bloque automatiquement l'attaque en cours.",
+    "mots_cles_attendus": [
+      "détecte",
+      "alerte",
+      "bloque",
+      "automatiquement"
+    ]
+  },
+  {
+    "id": "cyber-023",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la défense en profondeur ?",
+    "reponse_reference": "C'est une stratégie qui superpose plusieurs couches de protection (pare-feu, antivirus, MFA, chiffrement, sensibilisation) pour que, si l'une échoue, les autres limitent l'attaque.",
+    "mots_cles_attendus": [
+      "couches",
+      "plusieurs protections",
+      "si l'une échoue",
+      "stratégie"
+    ]
+  },
+  {
+    "id": "cyber-024",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la règle de sauvegarde 3-2-1 ?",
+    "reponse_reference": "Garder 3 copies de ses données, sur 2 supports différents, dont 1 copie hors site ou hors ligne. Elle protège contre la panne, le vol, l'incendie et les ransomwares.",
+    "mots_cles_attendus": [
+      "3 copies",
+      "2 supports",
+      "hors site",
+      "ransomware"
+    ]
+  },
+  {
+    "id": "cyber-069",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un botnet ?",
+    "reponse_reference": "Un botnet est un réseau d'ordinateurs ou d'objets connectés infectés et contrôlés à distance par un attaquant, à l'insu de leurs propriétaires. Il sert à lancer des attaques DDoS, envoyer du spam ou miner de la cryptomonnaie.",
+    "mots_cles_attendus": [
+      "machines infectées",
+      "contrôlées à distance",
+      "DDoS",
+      "spam"
+    ]
+  },
+  {
+    "id": "cyber-070",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'usurpation (spoofing) ?",
+    "reponse_reference": "C'est le fait de falsifier son identité (adresse email, adresse IP, numéro de téléphone, site web) pour se faire passer pour une source de confiance et tromper la victime ou contourner des contrôles.",
+    "mots_cles_attendus": [
+      "falsifier",
+      "identité",
+      "source de confiance",
+      "email"
+    ]
+  },
+  {
+    "id": "cyber-071",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un keylogger ?",
+    "reponse_reference": "C'est un logiciel ou un dispositif qui enregistre les frappes au clavier pour voler mots de passe, messages et données bancaires. On s'en protège avec un antivirus, des mises à jour, la prudence avec les pièces jointes et le MFA.",
+    "mots_cles_attendus": [
+      "frappes au clavier",
+      "mots de passe",
+      "espionnage",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-072",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Comment vérifier l'intégrité d'un fichier téléchargé avec une somme de contrôle (checksum) ?",
+    "reponse_reference": "L'éditeur publie l'empreinte (hash, par exemple SHA-256) du fichier. Après téléchargement, on calcule l'empreinte localement et on la compare : si elles diffèrent, le fichier a été altéré ou corrompu.",
+    "mots_cles_attendus": [
+      "empreinte",
+      "SHA-256",
+      "comparer",
+      "altéré"
+    ]
+  },
+  {
+    "id": "cyber-073",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels sont les avantages et limites de l'authentification biométrique ?",
+    "reponse_reference": "Elle est pratique et difficile à oublier ou à partager. Mais on ne peut pas changer son empreinte si elle fuite, elle peut avoir des faux rejets ou faux positifs, et soulève des questions de vie privée. Elle est surtout bonne comme second facteur.",
+    "mots_cles_attendus": [
+      "pratique",
+      "ne peut pas changer",
+      "vie privée",
+      "second facteur"
+    ]
+  },
+  {
+    "id": "cyber-074",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que le sandboxing ?",
+    "reponse_reference": "C'est l'exécution d'un programme ou d'un fichier suspect dans un environnement isolé (bac à sable), où il ne peut pas toucher au reste du système. On observe son comportement sans risque.",
+    "mots_cles_attendus": [
+      "environnement isolé",
+      "bac à sable",
+      "comportement",
+      "sans risque"
+    ]
+  },
+  {
+    "id": "cyber-075",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque par dictionnaire sur un mot de passe ?",
+    "reponse_reference": "L'attaquant teste une liste de mots de passe courants et de mots usuels au lieu de toutes les combinaisons. Elle est rapide contre les mots de passe faibles ou prévisibles. Des mots de passe longs et uniques la rendent inefficace.",
+    "mots_cles_attendus": [
+      "liste de mots de passe",
+      "mots courants",
+      "faibles",
+      "uniques"
+    ]
+  },
+  {
+    "id": "cyber-076",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi la journalisation (logs) est-elle importante en sécurité ?",
+    "reponse_reference": "Les journaux conservent la trace des événements (connexions, erreurs, actions). Ils permettent de détecter un comportement anormal, d'enquêter après un incident et de prouver ce qui s'est passé. Ils doivent être protégés et conservés.",
+    "mots_cles_attendus": [
+      "trace",
+      "détecter",
+      "enquêter",
+      "protégés"
+    ]
+  },
+  {
+    "id": "cyber-025",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque XSS (Cross-Site Scripting) ?",
+    "reponse_reference": "Le XSS consiste à injecter du code JavaScript malveillant dans une page web, qui s'exécute ensuite dans le navigateur des visiteurs. Il peut voler des cookies de session ou rediriger l'utilisateur. On le prévient en échappant ou en filtrant les données affichées.",
+    "mots_cles_attendus": [
+      "JavaScript",
+      "navigateur",
+      "cookies",
+      "échapper"
+    ]
+  },
+  {
+    "id": "cyber-026",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque CSRF ?",
+    "reponse_reference": "Le CSRF force le navigateur d'un utilisateur connecté à envoyer à son insu une requête non voulue vers un site de confiance (virement, changement de mot de passe). On s'en protège avec des jetons anti-CSRF et des cookies SameSite.",
+    "mots_cles_attendus": [
+      "utilisateur connecté",
+      "à son insu",
+      "requête",
+      "jeton"
+    ]
+  },
+  {
+    "id": "cyber-027",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert le sel (salt) lors du hachage des mots de passe ?",
+    "reponse_reference": "Le sel est une valeur aléatoire ajoutée au mot de passe avant le hachage. Deux mêmes mots de passe donnent alors des empreintes différentes, ce qui rend inefficaces les tables précalculées (rainbow tables) et ralentit les attaques.",
+    "mots_cles_attendus": [
+      "valeur aléatoire",
+      "empreintes différentes",
+      "rainbow tables",
+      "hachage"
+    ]
+  },
+  {
+    "id": "cyber-028",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SIEM ?",
+    "reponse_reference": "Un SIEM collecte et centralise les journaux de nombreux systèmes (serveurs, pare-feu, applications), les corrèle pour détecter des comportements suspects et génère des alertes. Il aide les équipes de sécurité à surveiller et investiguer.",
+    "mots_cles_attendus": [
+      "journaux",
+      "centralise",
+      "corrèle",
+      "alertes"
+    ]
+  },
+  {
+    "id": "cyber-029",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque de type homme du milieu (man-in-the-middle) ?",
+    "reponse_reference": "L'attaquant s'intercale entre deux parties qui communiquent, pour écouter voire modifier les échanges sans qu'elles le sachent. Le chiffrement avec des certificats valides (HTTPS) et la méfiance envers les Wi-Fi publics réduisent le risque.",
+    "mots_cles_attendus": [
+      "s'intercale",
+      "écoute",
+      "modifie",
+      "HTTPS"
+    ]
+  },
+  {
+    "id": "cyber-030",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test d'intrusion (pentest) ?",
+    "reponse_reference": "C'est une simulation d'attaque autorisée, menée par des spécialistes, pour trouver et exploiter des vulnérabilités d'un système avant de vrais attaquants. Il se termine par un rapport avec des recommandations de correction.",
+    "mots_cles_attendus": [
+      "simulation",
+      "autorisée",
+      "vulnérabilités",
+      "rapport"
+    ]
+  },
+  {
+    "id": "cyber-031",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'OWASP Top 10 ?",
+    "reponse_reference": "C'est une liste publiée par l'OWASP des dix risques de sécurité les plus critiques des applications web (injection, contrôle d'accès défaillant, mauvaise configuration...). Elle sert de référence de sensibilisation pour les développeurs.",
+    "mots_cles_attendus": [
+      "OWASP",
+      "applications web",
+      "risques",
+      "référence"
+    ]
+  },
+  {
+    "id": "cyber-032",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la segmentation réseau et en quoi améliore-t-elle la sécurité ?",
+    "reponse_reference": "La segmentation divise le réseau en zones isolées, avec des règles de filtrage entre elles. Si une zone est compromise, l'attaquant ne peut pas se déplacer librement vers les autres, ce qui limite l'impact.",
+    "mots_cles_attendus": [
+      "zones isolées",
+      "filtrage",
+      "déplacement latéral",
+      "limite l'impact"
+    ]
+  },
+  {
+    "id": "cyber-033",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre une menace, une vulnérabilité et un risque ?",
+    "reponse_reference": "Une menace est ce qui peut causer un dommage (attaquant, malware). Une vulnérabilité est la faiblesse exploitable. Le risque est la probabilité qu'une menace exploite une vulnérabilité, multipliée par l'impact potentiel.",
+    "mots_cles_attendus": [
+      "menace",
+      "vulnérabilité",
+      "probabilité",
+      "impact"
+    ]
+  },
+  {
+    "id": "cyber-034",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un honeypot ?",
+    "reponse_reference": "Un honeypot est un système leurre volontairement attractif et surveillé, destiné à attirer les attaquants pour détecter leurs techniques et détourner leur attention des vrais systèmes.",
+    "mots_cles_attendus": [
+      "leurre",
+      "attirer",
+      "attaquants",
+      "surveillé"
+    ]
+  },
+  {
+    "id": "cyber-035",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "En quoi le RGPD concerne-t-il la sécurité des données personnelles ?",
+    "reponse_reference": "Le RGPD impose de protéger les données personnelles par des mesures techniques et organisationnelles adaptées (chiffrement, contrôle d'accès, minimisation) et de notifier les violations de données à l'autorité sous 72 heures. Les sanctions peuvent être lourdes.",
+    "mots_cles_attendus": [
+      "données personnelles",
+      "mesures de sécurité",
+      "notification",
+      "72 heures"
+    ]
+  },
+  {
+    "id": "cyber-036",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le principe du Zero Trust ?",
+    "reponse_reference": "Le Zero Trust part du principe qu'aucun utilisateur, appareil ou réseau n'est digne de confiance par défaut, même à l'intérieur du réseau d'entreprise. Chaque accès est vérifié en continu selon l'identité, l'appareil et le contexte, avec des droits minimaux.",
+    "mots_cles_attendus": [
+      "ne jamais faire confiance",
+      "vérifier",
+      "identité",
+      "moindre privilège"
+    ]
+  },
+  {
+    "id": "cyber-077",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'élévation de privilèges ?",
+    "reponse_reference": "C'est le fait pour un attaquant ou un utilisateur d'obtenir des droits supérieurs à ceux prévus, par exemple passer d'un compte standard à administrateur, en exploitant une faille ou une mauvaise configuration.",
+    "mots_cles_attendus": [
+      "droits supérieurs",
+      "administrateur",
+      "faille",
+      "configuration"
+    ]
+  },
+  {
+    "id": "cyber-078",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le déplacement latéral dans une attaque ?",
+    "reponse_reference": "Une fois entré dans un poste, l'attaquant se déplace d'une machine à l'autre dans le réseau interne, en volant des identifiants ou en exploitant des failles, pour atteindre des cibles plus sensibles. La segmentation et le moindre privilège le freinent.",
+    "mots_cles_attendus": [
+      "machine à machine",
+      "réseau interne",
+      "identifiants",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "cyber-079",
+    "domaine": "cybersecurite",
+    "sous_theme": "fondamentaux",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un identifiant CVE et le score CVSS ?",
+    "reponse_reference": "Un CVE est un identifiant unique attribué à une vulnérabilité publique connue, par exemple CVE-2024-XXXX. Le score CVSS, de 0 à 10, évalue sa gravité pour aider à prioriser les correctifs.",
+    "mots_cles_attendus": [
+      "identifiant unique",
+      "vulnérabilité",
+      "score de gravité",
+      "prioriser"
+    ]
+  },
+  {
+    "id": "cyber-080",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une PKI (infrastructure à clés publiques) ?",
+    "reponse_reference": "C'est l'ensemble des acteurs et mécanismes qui gèrent les certificats numériques : autorités de certification, émission, renouvellement, révocation. Elle permet d'établir la confiance dans les clés publiques.",
+    "mots_cles_attendus": [
+      "certificats",
+      "autorité de certification",
+      "révocation",
+      "confiance"
+    ]
+  },
+  {
+    "id": "cyber-081",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une signature numérique et que garantit-elle ?",
+    "reponse_reference": "L'émetteur calcule l'empreinte du message et la chiffre avec sa clé privée. Le destinataire vérifie avec la clé publique. Cela garantit l'authenticité de l'auteur, l'intégrité du contenu et la non-répudiation.",
+    "mots_cles_attendus": [
+      "clé privée",
+      "clé publique",
+      "authenticité",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "cyber-082",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'empoisonnement DNS (DNS poisoning) ?",
+    "reponse_reference": "L'attaquant insère de fausses réponses dans le cache d'un serveur DNS pour rediriger les utilisateurs vers un site frauduleux malgré une adresse correcte. DNSSEC et la mise à jour des serveurs réduisent ce risque.",
+    "mots_cles_attendus": [
+      "cache DNS",
+      "fausses réponses",
+      "redirection",
+      "DNSSEC"
+    ]
+  },
+  {
+    "id": "cyber-083",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'usurpation ARP (ARP spoofing) ?",
+    "reponse_reference": "L'attaquant envoie de fausses réponses ARP pour associer son adresse MAC à l'IP d'une autre machine (souvent la passerelle) et intercepter le trafic local, par exemple pour une attaque de type homme du milieu.",
+    "mots_cles_attendus": [
+      "adresse MAC",
+      "fausses réponses ARP",
+      "interception",
+      "réseau local"
+    ]
+  },
+  {
+    "id": "cyber-084",
+    "domaine": "cybersecurite",
+    "sous_theme": "outils",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert un scan de ports (par exemple avec Nmap) et quand est-il légitime ?",
+    "reponse_reference": "Un scan de ports identifie les machines actives et les services ouverts d'un réseau. Il est légitime pour auditer son propre réseau ou avec une autorisation écrite, mais utilisé sans permission il sert de reconnaissance avant une attaque.",
+    "mots_cles_attendus": [
+      "services ouverts",
+      "audit",
+      "autorisation",
+      "reconnaissance"
+    ]
+  },
+  {
+    "id": "cyber-037",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un employé du service comptabilité reçoit un email qui semble venir du PDG lui demandant un virement urgent et confidentiel. Quel type d'attaque est-ce et que doit faire l'employé ?",
+    "reponse_reference": "C'est une fraude au président (compromission de messagerie professionnelle), une forme de phishing ciblé qui joue sur l'autorité et l'urgence. L'employé doit vérifier la demande par un autre canal (appel, en personne), ne pas agir seul, et signaler l'email au service sécurité.",
+    "mots_cles_attendus": [
+      "fraude au président",
+      "urgence",
+      "vérifier par un autre canal",
+      "signaler"
+    ]
+  },
+  {
+    "id": "cyber-038",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le site de l'entreprise devient soudainement indisponible, submergé par un très grand nombre de requêtes. Quelle attaque est-ce et quelles mesures prendre ?",
+    "reponse_reference": "C'est probablement une attaque DDoS. Mesures : activer une protection anti-DDoS ou un CDN, limiter le débit des requêtes, filtrer le trafic suspect, mettre en place de l'élasticité et prévenir l'hébergeur. À plus long terme, prévoir un plan de réponse.",
+    "mots_cles_attendus": [
+      "DDoS",
+      "limiter le débit",
+      "filtrer",
+      "CDN"
+    ]
+  },
+  {
+    "id": "cyber-039",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un employé constate que ses fichiers sont inaccessibles et qu'un message réclame une rançon. Quelles sont les premières actions à mener ?",
+    "reponse_reference": "Déconnecter immédiatement la machine du réseau pour stopper la propagation, ne pas éteindre sans consigne, prévenir le service sécurité, identifier le périmètre touché, restaurer depuis les sauvegardes saines et conserver des preuves. Il vaut mieux ne pas payer sans avis spécialisé.",
+    "mots_cles_attendus": [
+      "déconnecter",
+      "prévenir",
+      "sauvegardes",
+      "propagation"
+    ]
+  },
+  {
+    "id": "cyber-040",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un formulaire de connexion accepte la saisie ' OR '1'='1 comme identifiant et connecte l'attaquant. Quelle est la vulnérabilité et comment la corriger ?",
+    "reponse_reference": "C'est une injection SQL : l'entrée est insérée telle quelle dans la requête, donc l'attaquant en modifie la logique. Correction : utiliser des requêtes préparées (paramétrées), valider les entrées, limiter les droits du compte de base de données.",
+    "mots_cles_attendus": [
+      "injection SQL",
+      "requêtes préparées",
+      "validation",
+      "droits limités"
+    ]
+  },
+  {
+    "id": "cyber-041",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un collègue trouve une clé USB dans le parking et veut la brancher sur son poste pour voir ce qu'il y a dedans. Quels sont les risques et que lui conseiller ?",
+    "reponse_reference": "La clé peut contenir un malware qui s'exécute automatiquement ou émule un clavier pour prendre le contrôle du poste. Il ne faut pas la brancher et plutôt la remettre au service informatique, qui l'analysera dans un environnement isolé.",
+    "mots_cles_attendus": [
+      "malware",
+      "ne pas brancher",
+      "service informatique",
+      "environnement isolé"
+    ]
+  },
+  {
+    "id": "cyber-042",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur emploie le même mot de passe sur plusieurs sites, et l'un d'eux subit une fuite de données. Quel est le risque ?",
+    "reponse_reference": "Les attaquants testent les identifiants volés sur d'autres services (credential stuffing) et peuvent accéder à ses autres comptes. Il faut changer les mots de passe, utiliser un mot de passe unique par service avec un gestionnaire, et activer le MFA.",
+    "mots_cles_attendus": [
+      "credential stuffing",
+      "mot de passe unique",
+      "gestionnaire",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-043",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le compte administrateur d'un employé se connecte à 3 h du matin depuis un pays où l'entreprise n'a aucune activité. Que faire ?",
+    "reponse_reference": "Considérer le compte comme potentiellement compromis : le verrouiller ou réinitialiser le mot de passe, révoquer les sessions, vérifier les journaux pour voir ce qui a été fait, contacter l'employé et activer le MFA. Puis ouvrir un dossier d'incident.",
+    "mots_cles_attendus": [
+      "compte compromis",
+      "réinitialiser",
+      "journaux",
+      "MFA"
+    ]
+  },
+  {
+    "id": "cyber-044",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion des correctifs (patch management) et pourquoi est-elle critique ?",
+    "reponse_reference": "C'est le processus qui consiste à identifier, tester et déployer régulièrement les mises à jour de sécurité sur les systèmes et logiciels. Il réduit la fenêtre pendant laquelle une vulnérabilité connue peut être exploitée.",
+    "mots_cles_attendus": [
+      "mises à jour",
+      "déploiement",
+      "vulnérabilités connues",
+      "processus"
+    ]
+  },
+  {
+    "id": "cyber-045",
+    "domaine": "cybersecurite",
+    "sous_theme": "cryptographie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement de bout en bout ?",
+    "reponse_reference": "Les messages sont chiffrés sur l'appareil de l'expéditeur et ne peuvent être déchiffrés que par le destinataire. Même le fournisseur du service qui relaie les messages ne peut pas les lire.",
+    "mots_cles_attendus": [
+      "expéditeur",
+      "destinataire",
+      "le fournisseur ne peut pas lire",
+      "chiffré"
+    ]
+  },
+  {
+    "id": "cyber-046",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le contrôle d'accès basé sur les rôles (RBAC) ?",
+    "reponse_reference": "Les droits ne sont pas donnés individuellement mais attribués à des rôles (comptable, administrateur...), puis les utilisateurs reçoivent des rôles. Cela simplifie la gestion et facilite l'application du moindre privilège.",
+    "mots_cles_attendus": [
+      "rôles",
+      "droits",
+      "moindre privilège",
+      "gestion simplifiée"
+    ]
+  },
+  {
+    "id": "cyber-047",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SOC et quel est son rôle ?",
+    "reponse_reference": "Un SOC (Security Operations Center) est l'équipe, avec ses outils, qui surveille en continu les systèmes d'une organisation, détecte les incidents de sécurité, les analyse et coordonne la réponse.",
+    "mots_cles_attendus": [
+      "surveillance",
+      "détecte",
+      "incidents",
+      "réponse"
+    ]
+  },
+  {
+    "id": "cyber-048",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert un WAF (pare-feu applicatif web) ?",
+    "reponse_reference": "Un WAF filtre le trafic HTTP vers une application web pour bloquer les attaques courantes (injection SQL, XSS...). Il agit comme une couche de protection supplémentaire, sans remplacer la correction du code.",
+    "mots_cles_attendus": [
+      "application web",
+      "HTTP",
+      "injection SQL",
+      "couche supplémentaire"
+    ]
+  },
+  {
+    "id": "cyber-085",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Plusieurs employés reçoivent un SMS les invitant à se connecter à un site qui imite exactement le portail de l'entreprise. De quoi s'agit-il et que faire ?",
+    "reponse_reference": "C'est du smishing, un phishing par SMS. Il faut ne pas cliquer, signaler le message à l'équipe sécurité, prévenir les employés, faire bloquer le domaine frauduleux et changer le mot de passe de toute personne ayant saisi ses identifiants, avec le MFA activé.",
+    "mots_cles_attendus": [
+      "smishing",
+      "ne pas cliquer",
+      "signaler",
+      "changer le mot de passe"
+    ]
+  },
+  {
+    "id": "cyber-086",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un ordinateur portable contenant des données clients est volé. Quelle mesure préventive aurait limité les dégâts ?",
+    "reponse_reference": "Le chiffrement complet du disque (BitLocker, FileVault, LUKS) : sans la clé, les données sont illisibles. Compléter par un mot de passe fort, la gestion à distance (effacement), et en cas de vol, révoquer les accès et évaluer l'obligation de notification.",
+    "mots_cles_attendus": [
+      "chiffrement du disque",
+      "illisibles",
+      "effacement à distance",
+      "révoquer"
+    ]
+  },
+  {
+    "id": "cyber-087",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le navigateur d'un utilisateur affiche des publicités partout, redirige vers des sites inconnus et ralentit. Que s'est-il passé et comment réagir ?",
+    "reponse_reference": "Probablement un adware ou une extension malveillante installée avec un logiciel ou une pièce jointe. Supprimer l'extension et le programme suspect, lancer un antivirus, réinitialiser le navigateur, changer les mots de passe et ne plus installer de source non fiable.",
+    "mots_cles_attendus": [
+      "adware",
+      "extension malveillante",
+      "antivirus",
+      "réinitialiser"
+    ]
+  },
+  {
+    "id": "cyber-088",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Les journaux montrent un ordinateur interne qui tente de se connecter à tous les ports de plusieurs serveurs. Comment analyser et réagir ?",
+    "reponse_reference": "C'est un scan de ports interne, signe possible de machine compromise ou de reconnaissance avant attaque. Isoler le poste, identifier l'utilisateur et le processus, rechercher un malware, vérifier les accès aux serveurs ciblés et bloquer ce comportement.",
+    "mots_cles_attendus": [
+      "scan de ports",
+      "machine compromise",
+      "isoler",
+      "analyse"
+    ]
+  },
+  {
+    "id": "cyber-089",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la classification des données et pourquoi est-elle utile ?",
+    "reponse_reference": "C'est le fait de catégoriser les données selon leur sensibilité (publique, interne, confidentielle, secrète). Chaque catégorie reçoit des règles de protection adaptées, ce qui évite de sous-protéger l'essentiel ou de sur-protéger le reste.",
+    "mots_cles_attendus": [
+      "sensibilité",
+      "catégories",
+      "protection adaptée",
+      "confidentielle"
+    ]
+  },
+  {
+    "id": "cyber-090",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le BYOD et quels sont ses risques ?",
+    "reponse_reference": "Le BYOD (Bring Your Own Device) autorise les employés à utiliser leurs appareils personnels pour le travail. Les risques sont la fuite de données, des appareils non mis à jour ou infectés, la perte ou le vol. On les limite avec une gestion des appareils (MDM) et des politiques claires.",
+    "mots_cles_attendus": [
+      "appareils personnels",
+      "fuite de données",
+      "MDM",
+      "politique"
+    ]
+  },
+  {
+    "id": "cyber-091",
+    "domaine": "cybersecurite",
+    "sous_theme": "authentification",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'authentification SSH par clé est-elle plus sûre que par mot de passe ?",
+    "reponse_reference": "Avec une paire de clés, la clé privée ne quitte jamais l'ordinateur de l'utilisateur et est impossible à deviner par force brute, contrairement à un mot de passe. On peut aussi la protéger par une phrase secrète et désactiver l'accès par mot de passe.",
+    "mots_cles_attendus": [
+      "clé privée",
+      "force brute",
+      "paire de clés",
+      "phrase secrète"
+    ]
+  },
+  {
+    "id": "cyber-092",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une politique de sécurité des systèmes d'information (PSSI) ?",
+    "reponse_reference": "C'est un document qui définit les règles, les responsabilités et les mesures de sécurité de l'organisation : usages acceptables, gestion des accès, incidents, sauvegardes. Il guide les décisions et doit être connu de tous.",
+    "mots_cles_attendus": [
+      "règles",
+      "responsabilités",
+      "document",
+      "mesures"
+    ]
+  },
+  {
+    "id": "cyber-049",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_applicative",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application web affiche à l'utilisateur des messages d'erreur détaillés avec la trace complète de l'erreur. Pourquoi est-ce un risque et que faire ?",
+    "reponse_reference": "Ces messages divulguent des informations internes (chemins, versions, structure de la base) qui aident un attaquant. En production, il faut afficher un message d'erreur générique à l'utilisateur et enregistrer les détails seulement dans des journaux protégés.",
+    "mots_cles_attendus": [
+      "divulgation d'informations",
+      "message générique",
+      "journaux",
+      "production"
+    ]
+  },
+  {
+    "id": "cyber-050",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans les journaux d'un serveur, on voit des centaines d'échecs de connexion SSH depuis la même adresse IP, suivis d'une connexion réussie. Quelle est votre analyse et que faire ?",
+    "reponse_reference": "C'est une attaque par force brute qui semble avoir réussi : le serveur est probablement compromis. Il faut isoler la machine, bloquer l'adresse, réinitialiser les identifiants, analyser ce qui a été fait après la connexion, puis durcir SSH (clés plutôt que mots de passe, limitation des tentatives, MFA).",
+    "mots_cles_attendus": [
+      "force brute",
+      "compromis",
+      "isoler",
+      "clés SSH"
+    ]
+  },
+  {
+    "id": "cyber-051",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un développeur a publié par erreur une clé d'API dans un dépôt GitHub public. Quelles sont les actions immédiates ?",
+    "reponse_reference": "Révoquer et remplacer la clé immédiatement, car la supprimer du dépôt ne suffit pas, l'historique et des robots l'ont peut-être déjà copiée. Puis vérifier les journaux d'utilisation de la clé, nettoyer l'historique et mettre en place un gestionnaire de secrets et un contrôle des secrets avant publication.",
+    "mots_cles_attendus": [
+      "révoquer",
+      "remplacer la clé",
+      "historique",
+      "gestionnaire de secrets"
+    ]
+  },
+  {
+    "id": "cyber-052",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un prestataire externe demande un accès complet au réseau pour une maintenance ponctuelle. Comment gérer cette demande ?",
+    "reponse_reference": "Appliquer le moindre privilège : donner uniquement l'accès nécessaire aux systèmes concernés, pour une durée limitée, avec un compte nominatif et le MFA, en journalisant et surveillant ses actions, puis révoquer l'accès à la fin de l'intervention.",
+    "mots_cles_attendus": [
+      "moindre privilège",
+      "accès temporaire",
+      "journalisation",
+      "révoquer"
+    ]
+  },
+  {
+    "id": "cyber-053",
+    "domaine": "cybersecurite",
+    "sous_theme": "menaces",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un employé reçoit un document Word qui lui demande d'« activer les macros » pour lire le contenu. Quel est le risque et quelles mesures prendre ?",
+    "reponse_reference": "Les macros peuvent exécuter du code malveillant qui installe un malware ou un ransomware. Il ne faut pas les activer. Mesures : bloquer les macros par défaut depuis Internet, filtrer les pièces jointes, sensibiliser les utilisateurs et signaler l'email.",
+    "mots_cles_attendus": [
+      "macros",
+      "code malveillant",
+      "bloquer par défaut",
+      "sensibilisation"
+    ]
+  },
+  {
+    "id": "cyber-054",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "L'entreprise découvre qu'une base de données clients a fuité. Quelles sont les premières étapes et obligations ?",
+    "reponse_reference": "Contenir la fuite, évaluer les données touchées et le nombre de personnes concernées, préserver les preuves et corriger la faille. Le RGPD impose de notifier l'autorité de protection des données sous 72 heures si le risque est avéré, et d'informer les personnes concernées si le risque est élevé.",
+    "mots_cles_attendus": [
+      "contenir",
+      "évaluer",
+      "72 heures",
+      "informer les personnes"
+    ]
+  },
+  {
+    "id": "cyber-055",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un employé se connecte à un site de l'entreprise via un formulaire de login en HTTP depuis le Wi-Fi d'un café. Quel est le risque et comment le corriger ?",
+    "reponse_reference": "En HTTP, les identifiants circulent en clair : toute personne sur le même Wi-Fi peut les intercepter. Il faut passer tout le site en HTTPS avec un certificat valide, forcer la redirection et activer HSTS, et recommander l'usage d'un VPN sur les réseaux publics.",
+    "mots_cles_attendus": [
+      "en clair",
+      "interception",
+      "HTTPS",
+      "HSTS"
+    ]
+  },
+  {
+    "id": "cyber-056",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un salarié quitte l'entreprise. Quelles actions de sécurité doivent être menées ?",
+    "reponse_reference": "Désactiver tous ses comptes et accès (messagerie, VPN, applications), récupérer le matériel, révoquer ses clés et jetons, transférer ses données et responsabilités, et surveiller les accès suspects. Un processus de départ (offboarding) formalisé évite les oublis.",
+    "mots_cles_attendus": [
+      "désactiver les comptes",
+      "récupérer le matériel",
+      "révoquer",
+      "offboarding"
+    ]
+  },
+  {
+    "id": "cyber-057",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la gestion des identités et des accès (IAM) et le SSO ?",
+    "reponse_reference": "L'IAM regroupe les processus et outils qui gèrent les identités et leurs droits d'accès. Le SSO (authentification unique) permet de se connecter une seule fois pour accéder à plusieurs applications, ce qui améliore le confort et facilite la centralisation du contrôle et du MFA.",
+    "mots_cles_attendus": [
+      "identités",
+      "droits d'accès",
+      "authentification unique",
+      "centralisation"
+    ]
+  },
+  {
+    "id": "cyber-058",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le framework MITRE ATT&CK et à quoi sert-il ?",
+    "reponse_reference": "C'est une base de connaissances publique qui décrit les tactiques et techniques utilisées par les attaquants, organisées selon les phases d'une attaque. Elle aide à comprendre les menaces, évaluer ses détections et structurer les exercices de sécurité.",
+    "mots_cles_attendus": [
+      "tactiques",
+      "techniques",
+      "attaquants",
+      "détection"
+    ]
+  },
+  {
+    "id": "cyber-059",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre un PCA et un PRA ?",
+    "reponse_reference": "Le plan de continuité d'activité (PCA) vise à maintenir les activités essentielles pendant un incident. Le plan de reprise d'activité (PRA) décrit comment restaurer les systèmes et reprendre l'activité après une interruption, avec des objectifs de durée et de perte de données acceptables.",
+    "mots_cles_attendus": [
+      "continuité",
+      "reprise",
+      "interruption",
+      "restauration"
+    ]
+  },
+  {
+    "id": "cyber-060",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le durcissement (hardening) d'un système ?",
+    "reponse_reference": "C'est l'ensemble des actions qui réduisent la surface d'attaque d'un système : désactiver les services et comptes inutiles, changer les configurations par défaut, appliquer les correctifs, restreindre les droits et activer la journalisation.",
+    "mots_cles_attendus": [
+      "surface d'attaque",
+      "services inutiles",
+      "configuration par défaut",
+      "correctifs"
+    ]
+  },
+  {
+    "id": "cyber-093",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une PME veut stocker des données sensibles dans le cloud. Quels points de vigilance faut-il examiner ?",
+    "reponse_reference": "Comprendre la responsabilité partagée (le fournisseur sécurise l'infrastructure, le client ses données et ses accès), chiffrer les données, appliquer le moindre privilège et le MFA, vérifier la localisation des données et la conformité (RGPD), journaliser les accès et prévoir les sauvegardes.",
+    "mots_cles_attendus": [
+      "responsabilité partagée",
+      "chiffrement",
+      "MFA",
+      "RGPD"
+    ]
+  },
+  {
+    "id": "cyber-094",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un audit révèle de nombreux comptes d'anciens salariés encore actifs. Quel est le risque et quel processus mettre en place ?",
+    "reponse_reference": "Ces comptes sont des portes d'entrée oubliées pour un attaquant et un risque d'accès abusif. Il faut désactiver les comptes inutilisés, mettre en place un processus de départ automatisé et des revues périodiques des accès liées aux ressources humaines.",
+    "mots_cles_attendus": [
+      "comptes inactifs",
+      "désactiver",
+      "revue des accès",
+      "processus de départ"
+    ]
+  },
+  {
+    "id": "cyber-095",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un site e-commerce subit de nombreux vols de comptes par réutilisation de mots de passe volés ailleurs. Quelles contre-mesures proposer ?",
+    "reponse_reference": "Limiter le nombre de tentatives par IP et par compte, ajouter un captcha, détecter les connexions anormales, proposer ou imposer le MFA, vérifier les mots de passe contre les bases de fuites et prévenir les clients touchés.",
+    "mots_cles_attendus": [
+      "limitation des tentatives",
+      "MFA",
+      "mots de passe compromis",
+      "détection"
+    ]
+  },
+  {
+    "id": "cyber-096",
+    "domaine": "cybersecurite",
+    "sous_theme": "incident",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une alerte du SIEM montre qu'un poste contacte un serveur inconnu à intervalles très réguliers. Comment l'analyser et réagir ?",
+    "reponse_reference": "Ce schéma régulier ressemble à du beaconing, un malware contactant son serveur de commande et de contrôle. Isoler le poste, analyser le processus et le trafic, vérifier la réputation de l'adresse, bloquer le domaine et rechercher d'autres machines touchées.",
+    "mots_cles_attendus": [
+      "beaconing",
+      "commande et contrôle",
+      "isoler",
+      "bloquer"
+    ]
+  },
+  {
+    "id": "cyber-097",
+    "domaine": "cybersecurite",
+    "sous_theme": "securite_applicative",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un développeur veut ajouter une bibliothèque open source peu connue à l'application. Quels risques et quelles vérifications ?",
+    "reponse_reference": "Risque de chaîne d'approvisionnement : code malveillant ou vulnérable. Vérifier la popularité, la maintenance, la licence, les vulnérabilités connues, relire les dépendances, utiliser un outil d'analyse des dépendances et figer les versions.",
+    "mots_cles_attendus": [
+      "chaîne d'approvisionnement",
+      "maintenance",
+      "vulnérabilités connues",
+      "analyse des dépendances"
+    ]
+  },
+  {
+    "id": "cyber-098",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifient RPO et RTO dans un plan de reprise d'activité ?",
+    "reponse_reference": "Le RPO est la quantité maximale de données qu'on accepte de perdre, exprimée en temps. Le RTO est la durée maximale acceptable d'interruption avant le retour à la normale. Ils guident la fréquence des sauvegardes et le choix des solutions.",
+    "mots_cles_attendus": [
+      "perte de données maximale",
+      "durée d'interruption",
+      "sauvegardes",
+      "reprise"
+    ]
+  },
+  {
+    "id": "cyber-099",
+    "domaine": "cybersecurite",
+    "sous_theme": "defense",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre la red team et la blue team ?",
+    "reponse_reference": "La red team simule des attaquants pour tester la sécurité de l'organisation. La blue team défend : détection, réponse et durcissement. Leur collaboration, parfois appelée purple team, améliore les défenses.",
+    "mots_cles_attendus": [
+      "simule des attaquants",
+      "défend",
+      "détection",
+      "purple team"
+    ]
+  },
+  {
+    "id": "cyber-100",
+    "domaine": "cybersecurite",
+    "sous_theme": "gouvernance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le principe de séparation des tâches ?",
+    "reponse_reference": "Une opération sensible ne doit pas dépendre d'une seule personne : par exemple, celui qui demande un paiement n'est pas celui qui l'approuve. Cela limite les erreurs et la fraude interne.",
+    "mots_cles_attendus": [
+      "une seule personne",
+      "approuve",
+      "fraude",
+      "contrôle"
+    ]
+  }
+]

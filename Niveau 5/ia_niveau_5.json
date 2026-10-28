@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ia-049",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Vous devez prédire le prix de vente d'appartements. Quel type de problème est-ce, quelles données utiliser et comment évaluer le modèle ?",
+    "reponse_reference": "C'est un problème de régression supervisée. On utilise des variables comme la surface, le nombre de pièces, la localisation et l'état, avec les prix passés comme étiquettes. On évalue avec des métriques d'erreur comme la MAE ou la RMSE sur un jeu de test.",
+    "mots_cles_attendus": [
+      "régression",
+      "variables",
+      "MAE",
+      "jeu de test"
+    ]
+  },
+  {
+    "id": "ia-050",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans un modèle de diagnostic médical, rater un malade est bien plus grave que de faire une fausse alerte. Quelle métrique privilégier et comment ajuster le modèle ?",
+    "reponse_reference": "Il faut privilégier le rappel (sensibilité) pour limiter les faux négatifs. On peut abaisser le seuil de décision, au prix de plus de faux positifs, et utiliser des métriques adaptées comme la courbe précision-rappel, en gardant l'avis d'un médecin.",
+    "mots_cles_attendus": [
+      "rappel",
+      "faux négatifs",
+      "seuil de décision",
+      "faux positifs"
+    ]
+  },
+  {
+    "id": "ia-051",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un chatbot basé sur le RAG donne souvent des réponses hors sujet. Quelles pistes d'amélioration explorer ?",
+    "reponse_reference": "Vérifier la qualité de la récupération : découpage des documents en passages (chunking), modèle d'embeddings adapté, nombre de passages retournés, reclassement des résultats. Puis améliorer le prompt (consignes de s'appuyer sur le contexte) et évaluer avec des jeux de questions de test.",
+    "mots_cles_attendus": [
+      "récupération",
+      "chunking",
+      "embeddings",
+      "prompt"
+    ]
+  },
+  {
+    "id": "ia-052",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur obtient d'un assistant IA des informations personnelles sur une autre personne, apparemment issues des données d'entraînement. Quel est le risque et que faire ?",
+    "reponse_reference": "Il y a un risque de fuite de données personnelles et de non-conformité (RGPD). Mesures : nettoyer et anonymiser les données d'entraînement, filtrer les sorties, tester la mémorisation du modèle, limiter les informations sensibles dans les données et prévoir un processus de suppression.",
+    "mots_cles_attendus": [
+      "données personnelles",
+      "RGPD",
+      "anonymiser",
+      "filtrer les sorties"
+    ]
+  },
+  {
+    "id": "ia-053",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Vous disposez de seulement 200 images annotées pour détecter des défauts de fabrication. Comment procéder ?",
+    "reponse_reference": "Utiliser le transfer learning à partir d'un modèle d'images pré-entraîné et n'entraîner que les dernières couches, et appliquer de l'augmentation de données (rotations, recadrages, variations de luminosité) pour enrichir l'échantillon. On évalue avec une validation croisée.",
+    "mots_cles_attendus": [
+      "transfer learning",
+      "pré-entraîné",
+      "augmentation de données",
+      "peu de données"
+    ]
+  },
+  {
+    "id": "ia-054",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un système de recommandation ne propose que des produits populaires et ignore les nouveaux produits. Quels sont les problèmes et les solutions ?",
+    "reponse_reference": "Il souffre du biais de popularité et du démarrage à froid (cold start) pour les nouveaux produits ou utilisateurs. On peut ajouter des recommandations basées sur le contenu, de l'exploration (bandits), de la diversification et pondérer la popularité.",
+    "mots_cles_attendus": [
+      "biais de popularité",
+      "cold start",
+      "contenu",
+      "diversification"
+    ]
+  },
+  {
+    "id": "ia-055",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le coût d'inférence d'un LLM déployé par l'entreprise est beaucoup trop élevé. Quels leviers existent pour le réduire ?",
+    "reponse_reference": "Choisir un modèle plus petit adapté à la tâche, quantifier le modèle, mettre en cache les réponses fréquentes, raccourcir les prompts et le contexte, regrouper les requêtes et limiter la longueur des réponses.",
+    "mots_cles_attendus": [
+      "modèle plus petit",
+      "quantification",
+      "cache",
+      "prompts plus courts"
+    ]
+  },
+  {
+    "id": "ia-056",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur écrit « ignore tes instructions précédentes » dans un chatbot d'entreprise et obtient des informations internes. Qu'est-ce que c'est et comment s'en protéger ?",
+    "reponse_reference": "C'est une injection de prompt : l'utilisateur détourne les consignes du modèle. On réduit le risque en séparant clairement instructions et entrées utilisateur, en limitant les données et actions accessibles au modèle, en filtrant les entrées et sorties et en ne comptant pas sur le prompt seul pour sécuriser.",
+    "mots_cles_attendus": [
+      "injection de prompt",
+      "détourne",
+      "moindre accès",
+      "filtrer"
+    ]
+  },
+  {
+    "id": "ia-057",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'augmentation de données (data augmentation) ?",
+    "reponse_reference": "C'est la création de nouveaux exemples d'entraînement à partir des existants par des transformations (retournement, rotation, bruit, paraphrase), pour augmenter la diversité des données et réduire le surapprentissage.",
+    "mots_cles_attendus": [
+      "nouveaux exemples",
+      "transformations",
+      "diversité",
+      "surapprentissage"
+    ]
+  },
+  {
+    "id": "ia-058",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le principe de l'algorithme de clustering K-means ?",
+    "reponse_reference": "On choisit un nombre K de groupes, on place K centres, on associe chaque point au centre le plus proche, puis on recalcule les centres comme la moyenne de chaque groupe, et on répète jusqu'à stabilisation. C'est un apprentissage non supervisé.",
+    "mots_cles_attendus": [
+      "K groupes",
+      "centres",
+      "moyenne",
+      "non supervisé"
+    ]
+  },
+  {
+    "id": "ia-059",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le score F1 et quand l'utiliser ?",
+    "reponse_reference": "Le score F1 est la moyenne harmonique de la précision et du rappel. Il résume ces deux mesures en une seule valeur et est utile quand les classes sont déséquilibrées ou quand on doit trouver un compromis entre les faux positifs et les faux négatifs.",
+    "mots_cles_attendus": [
+      "moyenne harmonique",
+      "précision",
+      "rappel",
+      "classes déséquilibrées"
+    ]
+  },
+  {
+    "id": "ia-060",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le RLHF et à quoi sert-il pour les LLM ?",
+    "reponse_reference": "Le RLHF est un apprentissage par renforcement à partir de retours humains : des évaluateurs classent des réponses du modèle, un modèle de récompense apprend ces préférences, puis le LLM est ajusté pour produire des réponses plus utiles, plus sûres et mieux alignées avec les attentes humaines.",
+    "mots_cles_attendus": [
+      "retours humains",
+      "modèle de récompense",
+      "préférences",
+      "alignement"
+    ]
+  },
+  {
+    "id": "ia-093",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un chatbot fonctionne bien en démonstration, mais l'équipe veut s'assurer de sa qualité une fois en production. Que mettre en place ?",
+    "reponse_reference": "Un suivi continu : journaliser les échanges (en respectant la vie privée), collecter les retours des utilisateurs (pouces haut ou bas), évaluer régulièrement avec un jeu de questions de référence, détecter les dérives et améliorer les prompts ou les données.",
+    "mots_cles_attendus": [
+      "journalisation",
+      "retours utilisateurs",
+      "évaluation continue",
+      "jeu de référence"
+    ]
+  },
+  {
+    "id": "ia-094",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise veut entraîner un modèle avec les données personnelles de ses clients. Quelles obligations et précautions ?",
+    "reponse_reference": "Respecter le RGPD : base légale ou consentement, finalité claire, minimisation des données, anonymisation ou pseudonymisation, sécurité et droits des personnes (accès, suppression). Documenter le traitement et évaluer les risques.",
+    "mots_cles_attendus": [
+      "RGPD",
+      "consentement",
+      "anonymisation",
+      "minimisation"
+    ]
+  },
+  {
+    "id": "ia-095",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un modèle de vision confond systématiquement deux classes proches, par exemple deux espèces de plantes. Comment analyser et améliorer ?",
+    "reponse_reference": "Examiner la matrice de confusion et des exemples d'erreurs, vérifier la qualité des étiquettes, ajouter des données variées sur ces deux classes, utiliser des augmentations ciblées ou un modèle plus puissant, et évaluer à nouveau sur un jeu de test dédié.",
+    "mots_cles_attendus": [
+      "matrice de confusion",
+      "analyse d'erreurs",
+      "plus de données",
+      "étiquettes"
+    ]
+  },
+  {
+    "id": "ia-096",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "On veut un assistant qui puisse envoyer des emails ou modifier des données via un LLM. Quels garde-fous prévoir ?",
+    "reponse_reference": "Donner au modèle l'accès à des outils précis (function calling) avec des droits minimaux, valider les paramètres côté serveur, demander la confirmation humaine pour les actions sensibles, journaliser et se protéger contre l'injection de prompt.",
+    "mots_cles_attendus": [
+      "function calling",
+      "droits minimaux",
+      "confirmation humaine",
+      "injection de prompt"
+    ]
+  },
+  {
+    "id": "ia-097",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "L'équipe doit choisir entre deux modèles pour un produit. Comment les comparer correctement ?",
+    "reponse_reference": "Les évaluer sur le même jeu de test représentatif, avec les mêmes métriques adaptées au besoin, et comparer aussi la latence, le coût et la robustesse. Tester sur des cas réels et, si possible, faire un test A/B en production.",
+    "mots_cles_attendus": [
+      "même jeu de test",
+      "métriques",
+      "latence et coût",
+      "test A/B"
+    ]
+  },
+  {
+    "id": "ia-098",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un agent IA et le function calling ?",
+    "reponse_reference": "Un agent IA est un système où un LLM planifie et choisit des actions pour atteindre un objectif. Le function calling permet au modèle de demander l'exécution d'outils (recherche, calcul, API) avec des paramètres structurés, dont le résultat revient au modèle.",
+    "mots_cles_attendus": [
+      "LLM",
+      "outils",
+      "actions",
+      "paramètres structurés"
+    ]
+  },
+  {
+    "id": "ia-099",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la distillation de modèle ?",
+    "reponse_reference": "Un petit modèle (élève) est entraîné à imiter les sorties d'un grand modèle (professeur). On obtient un modèle plus léger et plus rapide, qui garde une grande partie de la performance.",
+    "mots_cles_attendus": [
+      "petit modèle",
+      "imite",
+      "grand modèle",
+      "plus léger"
+    ]
+  },
+  {
+    "id": "ia-100",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le MLOps ?",
+    "reponse_reference": "Le MLOps applique les pratiques DevOps au machine learning : automatiser l'entraînement, le test, le déploiement, la surveillance et le réentraînement des modèles, et versionner le code, les données et les modèles pour avoir un cycle fiable et reproductible.",
+    "mots_cles_attendus": [
+      "automatiser",
+      "déploiement",
+      "surveillance",
+      "versionner"
+    ]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ia-037",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle atteint 99 % de précision sur les données d'entraînement mais seulement 60 % sur les données de test. Quel est le problème et comment l'améliorer ?",
+    "reponse_reference": "C'est du surapprentissage : le modèle a mémorisé les données d'entraînement au lieu de généraliser. On peut ajouter des données, simplifier le modèle, utiliser la régularisation (dropout, L2), faire de la validation croisée ou de l'arrêt précoce.",
+    "mots_cles_attendus": [
+      "surapprentissage",
+      "généraliser",
+      "régularisation",
+      "plus de données"
+    ]
+  },
+  {
+    "id": "ia-038",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Dans un jeu de données de détection de fraude, 1 % des transactions sont frauduleuses. Un modèle qui répond toujours « pas de fraude » obtient 99 % de précision globale. Pourquoi est-ce trompeur ?",
+    "reponse_reference": "Le jeu est très déséquilibré, donc la précision globale masque le fait que le modèle ne détecte aucune fraude. Il faut regarder le rappel, la précision sur la classe rare, le score F1 ou la matrice de confusion, et traiter le déséquilibre (rééchantillonnage, pondération).",
+    "mots_cles_attendus": [
+      "déséquilibre",
+      "rappel",
+      "matrice de confusion",
+      "classe rare"
+    ]
+  },
+  {
+    "id": "ia-039",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le chatbot interne d'une entreprise invente des procédures qui n'existent pas. Quelle est la cause et comment limiter le problème ?",
+    "reponse_reference": "Ce sont des hallucinations : le modèle génère du texte vraisemblable sans source fiable. On peut utiliser le RAG pour baser les réponses sur les documents officiels, demander de citer les sources, autoriser le modèle à dire qu'il ne sait pas et faire valider les réponses critiques.",
+    "mots_cles_attendus": [
+      "hallucination",
+      "RAG",
+      "sources",
+      "documents officiels"
+    ]
+  },
+  {
+    "id": "ia-040",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de présélection de CV favorise systématiquement les candidats masculins. Quelle est la cause probable et que faire ?",
+    "reponse_reference": "Le modèle a probablement appris le biais présent dans les données historiques de recrutement. Il faut auditer les données et les résultats par groupe, retirer ou corriger les variables problématiques, rééquilibrer les données, et garder un humain dans la décision.",
+    "mots_cles_attendus": [
+      "biais",
+      "données historiques",
+      "audit",
+      "humain dans la décision"
+    ]
+  },
+  {
+    "id": "ia-041",
+    "domaine": "ia",
+    "sous_theme": "mlops",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle performant au lancement voit ses résultats se dégrader au fil des mois. Qu'est-ce qui peut l'expliquer et que mettre en place ?",
+    "reponse_reference": "Les données réelles ont évolué par rapport à celles de l'entraînement (dérive des données ou du concept). Il faut surveiller les performances et la distribution des données en production, puis réentraîner régulièrement le modèle sur des données récentes.",
+    "mots_cles_attendus": [
+      "dérive des données",
+      "surveillance",
+      "réentraîner",
+      "données récentes"
+    ]
+  },
+  {
+    "id": "ia-042",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Pendant l'entraînement d'un réseau de neurones, la perte ne diminue pas ou devient NaN. Quelles pistes vérifier ?",
+    "reponse_reference": "Un taux d'apprentissage trop élevé peut faire diverger l'entraînement, il faut le réduire. Vérifier aussi la normalisation des données, l'initialisation des poids, des valeurs aberrantes ou manquantes, et d'éventuelles erreurs dans la fonction de perte ou les étiquettes.",
+    "mots_cles_attendus": [
+      "taux d'apprentissage",
+      "normalisation",
+      "données",
+      "diverge"
+    ]
+  },
+  {
+    "id": "ia-043",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Vous devez classer des milliers d'avis clients par thème, mais vous n'avez aucune donnée étiquetée. Quelles options avez-vous ?",
+    "reponse_reference": "On peut utiliser l'apprentissage non supervisé (clustering ou topic modeling), un LLM en zero-shot ou few-shot pour classer sans entraînement, ou étiqueter à la main un petit échantillon pour amorcer un modèle supervisé.",
+    "mots_cles_attendus": [
+      "non supervisé",
+      "clustering",
+      "LLM",
+      "étiqueter un échantillon"
+    ]
+  },
+  {
+    "id": "ia-044",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la fuite de données (data leakage) dans un projet de machine learning ?",
+    "reponse_reference": "C'est le fait que des informations du jeu de test, ou du futur, se retrouvent dans l'entraînement, ce qui donne des performances artificiellement excellentes. Le modèle semble très bon en test mais échoue en production.",
+    "mots_cles_attendus": [
+      "informations du test",
+      "artificiellement bonnes",
+      "entraînement",
+      "production"
+    ]
+  },
+  {
+    "id": "ia-045",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi normalise-t-on souvent les données avant d'entraîner un modèle ?",
+    "reponse_reference": "Pour mettre les variables sur des échelles comparables : sinon celles aux grandes valeurs dominent l'apprentissage. La normalisation accélère et stabilise l'entraînement, surtout pour les réseaux de neurones et les méthodes à distance.",
+    "mots_cles_attendus": [
+      "échelles comparables",
+      "stabilise",
+      "accélère",
+      "variables"
+    ]
+  },
+  {
+    "id": "ia-046",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une epoch et un batch lors de l'entraînement ?",
+    "reponse_reference": "Un batch est un petit groupe d'exemples traité avant chaque mise à jour des poids. Une epoch est un passage complet sur l'ensemble des données d'entraînement, donc composée de plusieurs batchs.",
+    "mots_cles_attendus": [
+      "groupe d'exemples",
+      "passage complet",
+      "mise à jour des poids",
+      "données d'entraînement"
+    ]
+  },
+  {
+    "id": "ia-047",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la fenêtre de contexte d'un LLM et quelle est sa limite pratique ?",
+    "reponse_reference": "C'est la quantité maximale de texte (en tokens) que le modèle peut prendre en compte en une fois, prompt et réponse compris. Au-delà, les informations les plus anciennes sont perdues ou doivent être résumées, et un long contexte coûte plus cher en calcul.",
+    "mots_cles_attendus": [
+      "tokens",
+      "quantité maximale",
+      "contexte",
+      "informations perdues"
+    ]
+  },
+  {
+    "id": "ia-048",
+    "domaine": "ia",
+    "sous_theme": "fondamentaux",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre l'entraînement et l'inférence d'un modèle ?",
+    "reponse_reference": "L'entraînement ajuste les paramètres du modèle à partir des données, ce qui est long et coûteux. L'inférence utilise le modèle déjà entraîné pour produire des prédictions sur de nouvelles données, ce qui est beaucoup plus rapide et s'exécute en production.",
+    "mots_cles_attendus": [
+      "ajuste les paramètres",
+      "modèle entraîné",
+      "prédictions",
+      "production"
+    ]
+  },
+  {
+    "id": "ia-085",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de détection de défauts, entraîné sur des photos nettes d'usine, marche mal en production où les photos des opérateurs sont floues et mal éclairées. Quel est le problème et que faire ?",
+    "reponse_reference": "C'est un décalage de distribution entre les données d'entraînement et celles de production. On collecte des images réelles, on les ajoute à l'entraînement, on utilise l'augmentation de données (flou, luminosité) et on surveille les performances en production.",
+    "mots_cles_attendus": [
+      "décalage de distribution",
+      "données réelles",
+      "augmentation de données",
+      "surveiller"
+    ]
+  },
+  {
+    "id": "ia-086",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un modèle de prévision des ventes d'un magasin se trompe systématiquement en décembre et pendant les soldes. Comment l'améliorer ?",
+    "reponse_reference": "Il ne capture pas la saisonnalité. On ajoute des variables temporelles (mois, jour de la semaine, jours fériés, périodes de soldes), on utilise un modèle de séries temporelles adapté et on évalue sur des périodes saisonnières.",
+    "mots_cles_attendus": [
+      "saisonnalité",
+      "variables temporelles",
+      "jours fériés",
+      "séries temporelles"
+    ]
+  },
+  {
+    "id": "ia-087",
+    "domaine": "ia",
+    "sous_theme": "llm",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un assistant basé sur un LLM répond en anglais alors que l'entreprise veut du français. Comment corriger ?",
+    "reponse_reference": "Préciser la langue dans le prompt système (par exemple « réponds toujours en français »), ajouter quelques exemples de réponses attendues, et vérifier le comportement sur des cas variés. Si besoin, choisir un modèle plus performant en français.",
+    "mots_cles_attendus": [
+      "prompt système",
+      "consigne de langue",
+      "exemples",
+      "tester"
+    ]
+  },
+  {
+    "id": "ia-088",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un filtre anti-spam bloque parfois de vrais emails importants. Quel problème et quelle solution ?",
+    "reponse_reference": "Ce sont des faux positifs. On augmente le seuil de décision pour être plus prudent, on optimise la précision plutôt que le rappel, on propose un dossier de quarantaine consultable et on améliore les données d'entraînement.",
+    "mots_cles_attendus": [
+      "faux positifs",
+      "seuil de décision",
+      "précision",
+      "quarantaine"
+    ]
+  },
+  {
+    "id": "ia-089",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'arrêt précoce (early stopping) ?",
+    "reponse_reference": "On arrête l'entraînement quand la performance sur le jeu de validation cesse de s'améliorer, même si l'erreur d'entraînement continue de baisser. Cela évite le surapprentissage et économise du temps de calcul.",
+    "mots_cles_attendus": [
+      "jeu de validation",
+      "arrêter",
+      "surapprentissage",
+      "temps de calcul"
+    ]
+  },
+  {
+    "id": "ia-090",
+    "domaine": "ia",
+    "sous_theme": "ethique",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'explicabilité d'un modèle d'IA et pourquoi est-elle importante ?",
+    "reponse_reference": "C'est la capacité à comprendre pourquoi un modèle a pris une décision (méthodes comme SHAP ou LIME). Elle est importante pour la confiance, la détection de biais, le débogage et le respect de la réglementation dans des domaines sensibles comme la santé ou le crédit.",
+    "mots_cles_attendus": [
+      "comprendre la décision",
+      "SHAP",
+      "biais",
+      "confiance"
+    ]
+  },
+  {
+    "id": "ia-091",
+    "domaine": "ia",
+    "sous_theme": "machine_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que représente le score de confiance d'un modèle et peut-on lui faire entièrement confiance ?",
+    "reponse_reference": "C'est la probabilité que le modèle associe à sa prédiction. Un score élevé n'est pas une garantie : un modèle peut être très confiant et se tromper, surtout hors de ses données d'entraînement. La calibration et le contrôle humain restent nécessaires.",
+    "mots_cles_attendus": [
+      "probabilité",
+      "pas une garantie",
+      "calibration",
+      "se tromper"
+    ]
+  },
+  {
+    "id": "ia-092",
+    "domaine": "ia",
+    "sous_theme": "deep_learning",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel est le principe d'un modèle de diffusion pour générer des images ?",
+    "reponse_reference": "On apprend à retirer progressivement du bruit ajouté à des images. Pour générer, le modèle part d'un bruit aléatoire et le débruite étape par étape, guidé par un texte, jusqu'à obtenir une image cohérente.",
+    "mots_cles_attendus": [
+      "bruit",
+      "étape par étape",
+      "débruiter",
+      "texte"
+    ]
+  }
+]

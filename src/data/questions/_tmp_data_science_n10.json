@@ -1,0 +1,322 @@
+[
+  {
+    "id": "data_science-181",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une série temporelle et quelles composantes la décrivent classiquement ?",
+    "reponse_reference": "Une série temporelle est une suite d'observations ordonnées dans le temps, comme des ventes quotidiennes ou une température horaire. On la décompose classiquement en tendance, évolution de long terme, saisonnalité, motif périodique régulier, et résidu, variation imprévisible restante. Cette décomposition guide le choix des modèles de prévision et l'interprétation des données.",
+    "mots_cles_attendus": [
+      "ordonnées dans le temps",
+      "tendance",
+      "saisonnalité",
+      "résidu",
+      "périodique"
+    ]
+  },
+  {
+    "id": "data_science-182",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la stationnarité d'une série temporelle et pourquoi est-elle importante ?",
+    "reponse_reference": "Une série est stationnaire quand ses propriétés statistiques, notamment la moyenne et la variance, restent constantes dans le temps. La plupart des modèles classiques comme ARIMA supposent la stationnarité, car ils apprennent des régularités supposées stables. On la teste avec des outils comme le test de Dickey-Fuller augmenté, et on l'obtient souvent par différenciation ou transformation logarithmique.",
+    "mots_cles_attendus": [
+      "propriétés constantes",
+      "moyenne",
+      "variance",
+      "ARIMA",
+      "différenciation"
+    ]
+  },
+  {
+    "id": "data_science-183",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelle est la différence entre la tendance et la saisonnalité d'une série temporelle ?",
+    "reponse_reference": "La tendance est l'évolution de fond de la série sur le long terme, par exemple la croissance annuelle des ventes d'une entreprise. La saisonnalité est un motif qui se répète à intervalles fixes et connus, comme un pic de ventes chaque décembre ou chaque week-end. Les distinguer est essentiel : une méthode de prévision doit capturer les deux, et la saisonnalité se modélise souvent explicitement.",
+    "mots_cles_attendus": [
+      "long terme",
+      "répétition",
+      "intervalles fixes",
+      "croissance",
+      "motif"
+    ]
+  },
+  {
+    "id": "data_science-184",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une moyenne mobile et à quoi sert-elle ?",
+    "reponse_reference": "Une moyenne mobile remplace chaque valeur d'une série par la moyenne des observations d'une fenêtre glissante de taille fixe qui l'entoure. Elle lisse le bruit à court terme pour faire ressortir la tendance sous-jacente. La taille de la fenêtre règle le compromis entre lissage et réactivité : plus elle est grande, plus la série est lisse mais plus elle réagit tardivement aux changements.",
+    "mots_cles_attendus": [
+      "fenêtre glissante",
+      "lisser",
+      "bruit",
+      "tendance",
+      "réactivité"
+    ]
+  },
+  {
+    "id": "data_science-185",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le modèle ARIMA et que signifient ses trois paramètres ?",
+    "reponse_reference": "ARIMA est un modèle de prévision de séries temporelles qui combine trois composantes : AR, l'autorégression sur les valeurs passées, I, l'ordre de différenciation pour rendre la série stationnaire, et MA, la moyenne mobile des erreurs passées. Les trois paramètres (p, d, q) déterminent respectivement ces ordres et se choisissent par analyse des autocorrélations ou par minimisation de critères d'information. La variante SARIMA ajoute des termes saisonniers pour les séries à saisonnalité marquée.",
+    "mots_cles_attendus": [
+      "autorégression",
+      "différenciation",
+      "moyenne mobile",
+      "p d q",
+      "SARIMA"
+    ]
+  },
+  {
+    "id": "data_science-186",
+    "domaine": "data_science",
+    "sous_theme": "nlp",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la tokenisation en traitement automatique du langage ?",
+    "reponse_reference": "La tokenisation découpe un texte en unités élémentaires appelées tokens, généralement des mots ou des sous-mots, qui deviennent les unités de traitement des modèles. Elle doit gérer la ponctuation, les casse, les nombres et les contractions selon la langue. C'est la première étape de presque tout pipeline NLP, avant le comptage, la vectorisation ou l'entrée dans un réseau de neurones.",
+    "mots_cles_attendus": [
+      "découper",
+      "tokens",
+      "mots",
+      "ponctuation",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "data_science-187",
+    "domaine": "data_science",
+    "sous_theme": "nlp",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que TF-IDF et comment pondère-t-il l'importance d'un mot dans un document ?",
+    "reponse_reference": "TF-IDF pondère chaque terme d'un document par le produit de deux facteurs : la fréquence du terme dans le document (TF) et l'inverse de sa fréquence dans la collection (IDF). Les mots fréquents dans un document mais rares dans le reste du corpus reçoivent un poids élevé, tandis que les mots omniprésents comme « le » sont pénalisés. C'est une représentation classique pour la recherche d'information et la classification de textes.",
+    "mots_cles_attendus": [
+      "fréquence",
+      "inverse",
+      "rares",
+      "pénalisés",
+      "représentation"
+    ]
+  },
+  {
+    "id": "data_science-188",
+    "domaine": "data_science",
+    "sous_theme": "nlp",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un word embedding et en quoi améliore-t-il les représentations de type TF-IDF ?",
+    "reponse_reference": "Un word embedding est un vecteur dense de quelques centaines de dimensions qui représente un mot de façon continue, appris pour que des mots de sens proche aient des vecteurs proches. Contrairement aux représentations par sac de mots comme TF-IDF, il capture la sémantique et les analogies, par exemple roi - homme + femme proche de reine. Word2Vec, GloVe puis les modèles de langage neuronaux comme BERT ont popularisé ces représentations.",
+    "mots_cles_attendus": [
+      "vecteur dense",
+      "sens proche",
+      "sémantique",
+      "analogies",
+      "Word2Vec"
+    ]
+  },
+  {
+    "id": "data_science-189",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le filtrage collaboratif dans un système de recommandation ?",
+    "reponse_reference": "Le filtrage collaboratif recommande des articles à un utilisateur en s'appuyant sur les préférences d'autres utilisateurs aux goûts similaires, sans analyser le contenu des articles. Il repose sur une matrice utilisateurs-articles, souvent très creuse, dont on complète les entrées par factorisation matricielle ou voisinage. C'est la technique derrière les recommandations de films ou de produits « les clients ayant aimé ceci ont aussi aimé cela ».",
+    "mots_cles_attendus": [
+      "utilisateurs similaires",
+      "matrice",
+      "creuse",
+      "factorisation",
+      "sans contenu"
+    ]
+  },
+  {
+    "id": "data_science-190",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le filtrage basé sur le contenu et quand le préférer au filtrage collaboratif ?",
+    "reponse_reference": "Le filtrage basé sur le contenu recommande des articles similaires à ceux qu'un utilisateur a déjà appréciés, en comparant leurs caractéristiques comme le genre d'un film ou les mots d'un texte. Il fonctionne même sans historique communautaire, ce qui le rend utile pour les catalogues nouveaux ou les utilisateurs isolés. En revanche, il tend à enfermer l'utilisateur dans ses goûts passés et ne découvre pas d'articles hors de son profil.",
+    "mots_cles_attendus": [
+      "caractéristiques",
+      "similarité",
+      "historique individuel",
+      "enfermement",
+      "nouveau catalogue"
+    ]
+  },
+  {
+    "id": "data_science-191",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le problème du démarrage à froid (cold start) dans un système de recommandation ?",
+    "reponse_reference": "Le démarrage à froid désigne la difficulté de recommander quand les données d'interaction manquent : un nouvel utilisateur sans historique, ou un nouvel article jamais noté. Le filtrage collaboratif ne peut rien déduire de ces profils vides. Les solutions combinent des stratégies basées sur le contenu, des règles par défaut, la popularité, ou des questions de profilage posées à l'inscription.",
+    "mots_cles_attendus": [
+      "sans historique",
+      "nouvel utilisateur",
+      "nouvel article",
+      "popularité",
+      "profilage"
+    ]
+  },
+  {
+    "id": "data_science-192",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment évalue-t-on un système de recommandation hors ligne, et quelles métriques utilise-t-on ?",
+    "reponse_reference": "On masque une partie des interactions passées et on mesure si le système est capable de les retrouver parmi ses recommandations. Les métriques classiques sont la précision et le rappel au rang k, qui mesurent la part de recommandations pertinentes dans le top k, le NDCG qui pondère la pertinence par la position, et la couverture ou la diversité qui évitent les listes répétitives. L'évaluation hors ligne est un préalable, mais un A/B test reste nécessaire pour mesurer l'impact réel sur le comportement.",
+    "mots_cles_attendus": [
+      "interactions masquées",
+      "précision au rang k",
+      "NDCG",
+      "diversité",
+      "A/B test"
+    ]
+  },
+  {
+    "id": "data_science-193",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Les ventes quotidiennes d'une chaîne de restaurants montrent une croissance annuelle régulière, un pic chaque week-end et un creux marqué en août. Comment décririez-vous cette série et quelle stratégie de modélisation suggérez-vous ?",
+    "reponse_reference": "La série combine une tendance de croissance, une saisonnalité hebdomadaire et une saisonnalité annuelle, visibles après décomposition de la série. Un modèle SARIMA avec des ordres saisonniers hebdomadaire et annuel peut convenir, tout comme des modèles à variables calendaires. Il faudra vérifier la stationnarité et valider la prévision sur les dernières périodes plutôt que sur un découpage aléatoire.",
+    "mots_cles_attendus": [
+      "tendance",
+      "saisonnalité hebdomadaire",
+      "saisonnalité annuelle",
+      "SARIMA",
+      "décomposition"
+    ]
+  },
+  {
+    "id": "data_science-194",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Pour évaluer un modèle de prévision de ventes mensuelles, un collègue propose de tirer 20 % des lignes au hasard comme jeu de test. Pourquoi cette approche est-elle incorrecte pour une série temporelle et comment faut-il procéder ?",
+    "reponse_reference": "Un tirage aléatoire brise l'ordre temporel : le modèle s'entraînerait sur des mois situés après les mois de test, ce qui constitue une fuite d'information irréaliste et surestime la performance. Pour une série temporelle, le jeu de test doit être constitué des dernières périodes, le modèle étant entraîné uniquement sur le passé. On peut utiliser une validation en fenêtre glissante ou en expansion pour imiter fidèlement l'usage en production.",
+    "mots_cles_attendus": [
+      "ordre temporel",
+      "fuite",
+      "dernières périodes",
+      "passé uniquement",
+      "fenêtre glissante"
+    ]
+  },
+  {
+    "id": "data_science-195",
+    "domaine": "data_science",
+    "sous_theme": "series_temporelles",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le trafic d'un site croît régulièrement et le test de Dickey-Fuller ne rejette pas l'hypothèse de non-stationnarité. Quelle transformation simple peut rendre la série stationnaire et que modélise-t-on alors ?",
+    "reponse_reference": "La différenciation consiste à remplacer la série par les écarts entre valeurs consécutives : une tendance linéaire devient ainsi une série à niveau constant. On modélise alors les variations du trafic plutôt que son niveau, ce qui est l'ordre I de différenciation des modèles ARIMA. Une transformation logarithmique préalable peut aussi stabiliser la variance si elle croît avec le niveau.",
+    "mots_cles_attendus": [
+      "différenciation",
+      "écarts consécutifs",
+      "variations",
+      "ARIMA",
+      "logarithme"
+    ]
+  },
+  {
+    "id": "data_science-196",
+    "domaine": "data_science",
+    "sous_theme": "nlp",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Vous devez construire un modèle de classification des avis clients en positifs ou négatifs à partir de 50 000 avis en français. Décrivez les étapes de prétraitement et de représentation du texte avant la modélisation.",
+    "reponse_reference": "Le prétraitement comprend la mise en minuscules, la suppression de la ponctuation, la tokenisation, le retrait des mots vides et la lemmatisation ou la racinisation pour regrouper les formes d'un même mot. On représente ensuite chaque avis par un vecteur TF-IDF calculé sur le corpus, ce qui donne des variables exploitables par une régression logistique ou un classifieur simple. Selon les moyens, des embeddings pré-entraînés comme ceux de modèles de langue français peuvent améliorer la capture du sens et de la négation.",
+    "mots_cles_attendus": [
+      "tokenisation",
+      "mots vides",
+      "lemmatisation",
+      "TF-IDF",
+      "embeddings"
+    ]
+  },
+  {
+    "id": "data_science-197",
+    "domaine": "data_science",
+    "sous_theme": "nlp",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un moteur de recherche interne doit classer des documents techniques par pertinence pour une requête utilisateur. Expliquez comment TF-IDF et la similarité cosinus répondent à ce besoin, et citez une limite majeure.",
+    "reponse_reference": "Chaque document et la requête sont représentés par des vecteurs TF-IDF, puis on classe les documents par similarité cosinus décroissante avec le vecteur de la requête. Les termes rares et discriminants dominent le calcul, ce qui remonte les documents réellement pertinents. La limite majeure est le traitement des synonymes et de la paraphrase : un document pertinent qui n'emploie pas les mots exacts de la requête sera mal classé, d'où le recours aux embeddings sémantiques dans les moteurs modernes.",
+    "mots_cles_attendus": [
+      "vecteurs",
+      "similarité cosinus",
+      "termes discriminants",
+      "synonymes",
+      "paraphrase"
+    ]
+  },
+  {
+    "id": "data_science-198",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une plateforme de streaming dispose de 10 millions d'utilisateurs et 100 000 titres, mais chaque utilisateur n'a noté qu'une poignée de titres. Quel problème structurel pose cette matrice d'interactions et quelle technique de factorisation y répond ?",
+    "reponse_reference": "La matrice utilisateurs-titres est extrêmement creuse, avec plus de 99 % de cases vides, ce qui interdit tout calcul direct de similarité fiable entre utilisateurs. La factorisation matricielle, comme la SVD ou l'alternance des moindres carrés, décompose cette matrice en vecteurs latents d'utilisateurs et de titres dont les produits scalaires reconstituent les notes manquantes. Les régularisations évitent le surapprentissage sur ce peu d'observations.",
+    "mots_cles_attendus": [
+      "matrice creuse",
+      "factorisation",
+      "vecteurs latents",
+      "SVD",
+      "régularisation"
+    ]
+  },
+  {
+    "id": "data_science-199",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un nouvel article est ajouté au catalogue d'un site e-commerce et n'a encore aucune interaction. Quelle stratégie de recommandation permet de le faire découvrir malgré ce démarrage à froid ?",
+    "reponse_reference": "Sans interactions, le filtrage collaboratif est muet : il faut utiliser le contenu de l'article, sa catégorie, son prix, sa marque, pour le recommander à des utilisateurs qui ont aimé des articles similaires. On peut aussi l'injecter temporairement dans des emplacements de découverte, comme les nouveautés, pour collecter les premières interactions qui alimenteront ensuite le modèle collaboratif. Des approches hybrides et des bandits multi-bras équilibrent exploration de ces nouveautés et exploitation des valeurs sûres.",
+    "mots_cles_attendus": [
+      "cold start",
+      "contenu",
+      "similarité",
+      "collecter des interactions",
+      "hybride"
+    ]
+  },
+  {
+    "id": "data_science-200",
+    "domaine": "data_science",
+    "sous_theme": "recommandation",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Deux systèmes de recommandation obtiennent le même score de précision au rang 10 en évaluation hors ligne, mais le premier recommande presque toujours les mêmes articles populaires à tout le monde. Quelles métriques complémentaires évalueraient ce défaut et pourquoi est-il important ?",
+    "reponse_reference": "Il faut mesurer la couverture du catalogue, la diversité des listes recommandées et la sérendipité, c'est-à-dire la capacité à surprendre avec des articles pertinents et moins attendus. Un système qui ne recommande que des best-sellers ignore la longue traîne du catalogue et appauvrit l'expérience utilisateur. À terme, cela réduit la découverte de produits, concentre les ventes et peut dégrader les indicateurs business malgré une bonne précision hors ligne.",
+    "mots_cles_attendus": [
+      "couverture",
+      "diversité",
+      "sérendipité",
+      "longue traîne",
+      "best-sellers"
+    ]
+  }
+]

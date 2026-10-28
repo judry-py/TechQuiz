@@ -1,0 +1,202 @@
+[
+  {
+    "id": "genie_logiciel-101",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment l'architecture hexagonale organise-t-elle un composant logiciel, et que sont les ports et les adaptateurs ?",
+    "reponse_reference": "L'architecture hexagonale place le cœur métier au centre d'un hexagone, isolé de l'extérieur par des ports : des interfaces définies par le domaine, pour entrer (port pilotant, comme un cas d'usage) ou pour sortir (port piloté, comme une persistance). Les adaptateurs implémentent ces ports côté technique (API web, base de données, bus de messages) et convertissent les formats externes en langage du domaine. Le domaine ne connaît ainsi aucun détail d'infrastructure et se teste intégralement en mémoire.",
+    "mots_cles_attendus": ["hexagone", "ports", "adaptateurs", "domaine", "infrastructure", "isolation"]
+  },
+  {
+    "id": "genie_logiciel-102",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "La direction impose de remplacer la base Oracle par PostgreSQL dans six mois. Votre domaine métier est enchevêtré avec les appels SQL. Quelle stratégie adoptez-vous ?",
+    "reponse_reference": "Il faut d'abord isoler le domaine de la persistance en définissant des ports pilotés : des interfaces du type DépôtDeCommandes exposant les opérations métier nécessaires, implémentées aujourd'hui par un adaptateur Oracle. Une fois le domaine nettoyé et couvert de tests, l'adaptateur PostgreSQL peut être développé et branché sans modifier la logique métier. La bascule se fait alors par configuration, idéalement en double écriture puis relecture progressive, pour limiter le risque.",
+    "mots_cles_attendus": ["port piloté", "dépôt", "adaptateur", "isolation", "bascule", "tests"]
+  },
+  {
+    "id": "genie_logiciel-103",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale",
+    "niveau": 6,
+    "type": "definition",
+    "question": "En quoi l'architecture hexagonale diffère-t-elle d'une architecture en couches traditionnelle ?",
+    "reponse_reference": "Dans une architecture en couches, la logique métier dépend typiquement de la couche d'accès aux données située en dessous, ce qui couple le domaine aux détails techniques. L'architecture hexagonale inverse ce rapport : le domaine définit ses propres interfaces (ports) et ce sont les adaptateurs techniques qui les implémentent. Le sens des dépendances pointe ainsi toujours vers le domaine, qui reste testable et remplaçable indépendamment des frameworks, de la base et des canaux de communication.",
+    "mots_cles_attendus": ["couches", "inversion des dépendances", "domaine", "interfaces", "indépendance"]
+  },
+  {
+    "id": "genie_logiciel-104",
+    "domaine": "genie_logiciel",
+    "sous_theme": "architecture_hexagonale",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "L'équipe doit brancher une application mobile sur l'existant, mais le domaine métier est inséparable du backend web : impossible de le réutiliser. Que faut-il faire ?",
+    "reponse_reference": "Il faut extraire le domaine de l'application web en introduisant des ports : les cas d'usage du domaine exposent leurs opérations via des interfaces, et le contrôleur web devient un simple adaptateur qui les invoque. Une fois ce découplage réalisé, un second adaptateur HTTP peut exposer les mêmes cas d'usage à l'application mobile. Le domaine, devenu indépendant de tout canal, est testé une seule fois et partagé par les deux interfaces.",
+    "mots_cles_attendus": ["extraction du domaine", "ports", "adaptateur", "cas d'usage", "réutilisation"]
+  },
+  {
+    "id": "genie_logiciel-105",
+    "domaine": "genie_logiciel",
+    "sous_theme": "modelisation_uml",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que représentent les multiplicités d'une association dans un diagramme de classes UML ? Donnez un exemple.",
+    "reponse_reference": "Les multiplicités indiquent combien d'instances d'une classe peuvent être liées à une instance de l'autre : 1, 0..1, 0..* ou 1..*. Par exemple, une Commande est associée à un Client avec une multiplicité 1 (un seul client par commande) et à des LignesDeCommande avec 0..* (de zéro à plusieurs lignes). Elles précisent les contraintes d'intégrité que le modèle et la future base de données doivent garantir.",
+    "mots_cles_attendus": ["multiplicité", "association", "cardinalité", "instances", "intégrité"]
+  },
+  {
+    "id": "genie_logiciel-106",
+    "domaine": "genie_logiciel",
+    "sous_theme": "modelisation_uml",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence faites-vous entre agrégation et composition en UML ?",
+    "reponse_reference": "L'agrégation est une association « partie-tout » faible : la partie peut exister indépendamment du tout et être partagée, comme une Équipe et ses Membres. La composition est une relation « partie-tout » forte : la partie appartient exclusivement au tout et disparaît avec lui, comme une Commande et ses LignesDeCommande. La composition, notée avec un losange plein, confie au composite la responsabilité du cycle de vie de ses composants.",
+    "mots_cles_attendus": ["partie-tout", "cycle de vie", "losange", "partage", "exclusivité"]
+  },
+  {
+    "id": "genie_logiciel-107",
+    "domaine": "genie_logiciel",
+    "sous_theme": "modelisation_uml",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'apporte un diagramme d'états UML pour modéliser le comportement d'un objet ?",
+    "reponse_reference": "Un diagramme d'états décrit les états possibles d'un objet, les événements qui déclenchent les transitions, ainsi que les gardes et les actions associées. Il met en évidence les chemins interdits, les états oubliés et les blocages d'un cycle de vie, comme celui d'une commande (brouillon, payée, expédiée, annulée). C'est un outil privilégié pour valider un workflow métier avec les experts avant de le coder.",
+    "mots_cles_attendus": ["états", "transitions", "événements", "gardes", "workflow"]
+  },
+  {
+    "id": "genie_logiciel-108",
+    "domaine": "genie_logiciel",
+    "sous_theme": "modelisation_uml",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Le cycle de vie d'une réservation comporte des règles complexes : annulation gratuite jusqu'à 48 h avant le séjour, modification tant que la réservation n'est pas confirmée. Comment modélisez-vous cela avant de développer ?",
+    "reponse_reference": "On dessine un diagramme d'états avec les états (disponible, réservée, confirmée, annulée), les événements (réserver, confirmer, modifier, annuler) et des gardes exprimant les conditions, par exemple annuler autorisé seulement si la date courante est antérieure à 48 h avant le séjour. La revue de ce diagramme avec le métier permet de détecter les cas limites, comme l'annulation d'une réservation déjà confirmée. Le diagramme devient ensuite la référence pour écrire les tests du workflow.",
+    "mots_cles_attendus": ["diagramme d'états", "gardes", "événements", "cas limites", "référence de test"]
+  },
+  {
+    "id": "genie_logiciel-109",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_planification",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le planning poker et quels biais d'estimation permet-il de réduire ?",
+    "reponse_reference": "Le planning poker est une technique d'estimation relative en points de complexité : chaque membre choisit secrètement une carte issue d'une suite de type Fibonacci, puis les écarts extrêmes sont discutés avant une nouvelle estimation. L'anonymat initial empêche l'ancrage sur l'avis du plus expérimenté ou du plus influent. On estime ainsi la taille relative des éléments, et non une durée absolue, ce qui réduit le biais d'optimisme individuel.",
+    "mots_cles_attendus": ["points", "Fibonacci", "anonymat", "ancrage", "taille relative", "consensus"]
+  },
+  {
+    "id": "genie_logiciel-110",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_planification",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment la vélocité d'une équipe permet-elle de construire une prévision de livraison fiable ?",
+    "reponse_reference": "La vélocité est la moyenne des points réellement terminés par sprint sur les dernières itérations, calculée uniquement sur du travail livré et accepté. Elle transforme un backlog chiffré en points en une projection de dates : par exemple, 120 points restants à une vélocité de 30 points par sprint donnent environ quatre sprints. La fiabilité exige de lisser sur plusieurs sprints et d'exprimer le résultat en fourchette plutôt qu'en date unique.",
+    "mots_cles_attendus": ["points terminés", "moyenne", "fourchette", "projection", "sprint"]
+  },
+  {
+    "id": "genie_logiciel-111",
+    "domaine": "genie_logiciel",
+    "sous_theme": "estimation_planification",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une user story est estimée 21 points, soit plus du double de tout le reste du backlog. Que faites-vous avant de l'engager dans un sprint ?",
+    "reponse_reference": "Une estimation élevée signale généralement une story trop grosse ou trop floue : on la découpe en tranches verticales livrables, chacune apportant une valeur visible à l'utilisateur. Si le découpage est impossible, on en déduit des incertitudes techniques à lever par un spike d'exploration borné dans le temps. On réestime ensuite les morceaux obtenus, qui doivent chacun tenir dans un sprint et rester testables.",
+    "mots_cles_attendus": ["découpage", "tranches verticales", "spike", "incertitude", "réestimation"]
+  },
+  {
+    "id": "genie_logiciel-112",
+    "domaine": "genie_logiciel",
+    "sous_theme": "revue_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quels axes doit couvrir une revue de code efficace, au-delà du simple style ?",
+    "reponse_reference": "Une revue efficace vérifie la correction (logique, cas limites, gestion des erreurs), la conception (responsabilités, couplage, respect des principes SOLID), la sécurité (validations, injections, fuites de données) et la testabilité (tests joints, cas pertinents). Elle contrôle aussi la lisibilité et la conformité aux conventions, idéalement déléguées aux outils automatiques. Son but est double : protéger la base de code et diffuser la connaissance au sein de l'équipe.",
+    "mots_cles_attendus": ["correction", "conception", "sécurité", "testabilité", "conventions", "partage"]
+  },
+  {
+    "id": "genie_logiciel-113",
+    "domaine": "genie_logiciel",
+    "sous_theme": "revue_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un développeur reçoit des commentaires de revue qu'il perçoit comme des attaques personnelles et se braque. Comment réorientez-vous la pratique ?",
+    "reponse_reference": "Il faut recentrer les commentaires sur le code et non sur la personne, en formulant des questions (« que se passe-t-il si ce champ est nul ? ») plutôt que des verdicts (« c'est mal fait »). On distingue les remarques bloquantes des simples suggestions, et on limite la taille des revues pour éviter l'épuisement. Une rétrospective dédiée peut expliciter ces règles de bienveillance et les rendre collectives.",
+    "mots_cles_attendus": ["bienveillance", "code et non personne", "questions", "suggestions", "règles collectives"]
+  },
+  {
+    "id": "genie_logiciel-114",
+    "domaine": "genie_logiciel",
+    "sous_theme": "revue_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quel rôle jouent l'analyse statique et les linters dans une revue de code, et que ne peuvent-ils pas faire ?",
+    "reponse_reference": "Les linters et analyseurs statiques vérifient automatiquement le style, les erreurs probables, la complexité excessive et certaines vulnérabilités, ce qui libère le temps humain pour les questions de conception et de métier. Ils garantissent une application uniforme et immédiate des règles, là où la revue humaine est inconstante. En revanche, ils ne jugent ni la pertinence d'un design, ni la clarté d'une intention, ni l'adéquation aux besoins métier.",
+    "mots_cles_attendus": ["automatisation", "style", "erreurs probables", "temps humain", "limites"]
+  },
+  {
+    "id": "genie_logiciel-115",
+    "domaine": "genie_logiciel",
+    "sous_theme": "revue_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Les revues de code de l'équipe sont systématiquement approuvées en quelques secondes, sans aucun commentaire. Que révèle ce comportement et comment y remédier ?",
+    "reponse_reference": "Une approbation instantanée systématique signale soit des changements trop gros à relire, soit une revue perçue comme une formalité, soit une charge de travail excessive. On peut réduire la taille des demandes, instaurer une liste de contrôle courte (tests, cas limites, sécurité) et valoriser les commentaires posés. Mesurer le taux de défauts qui échappent à la revue aide à démontrer la valeur réelle de l'exercice et à le crédibiliser.",
+    "mots_cles_attendus": ["formalité", "taille des demandes", "liste de contrôle", "valeur", "défauts échappés"]
+  },
+  {
+    "id": "genie_logiciel-116",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le développement piloté par le comportement (BDD) et en quoi complète-t-il le TDD ?",
+    "reponse_reference": "Le BDD étend le TDD en exprimant les règles métier dans un langage partagé avec le métier, typiquement sous forme de scénarios Given/When/Then. Ces scénarios servent de spécification vivante et se transforment en tests automatisés via des outils comme Cucumber ou SpecFlow. Le BDD déplace la question du « comment coder » vers le « quel comportement attend-on », ce qui facilite la validation par les parties prenantes.",
+    "mots_cles_attendus": ["given when then", "langage partagé", "spécification vivante", "automatisation", "métier"]
+  },
+  {
+    "id": "genie_logiciel-117",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Rédigez un scénario BDD pour la règle : un client fidèle (plus de 10 commandes) obtient 5 % de remise sur sa commande, hors produits déjà soldés.",
+    "reponse_reference": "On peut écrire : étant donné un client ayant 11 commandes à son actif et un panier contenant un produit normal et un produit soldé ; quand la remise fidélité est appliquée ; alors le produit normal bénéficie de 5 % de remise et le produit soldé reste inchangé. Des scénarios complémentaires couvrent les limites : exactement 10 commandes, panier entièrement soldé, client sans historique. Chaque scénario devient un test automatisé lisible par le métier.",
+    "mots_cles_attendus": ["given when then", "scénario", "limites", "automatisation", "lisibilité métier"]
+  },
+  {
+    "id": "genie_logiciel-118",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de contrat et pourquoi est-il crucial entre deux services ?",
+    "reponse_reference": "Un test de contrat vérifie qu'un fournisseur respecte l'interface qu'il s'est engagé à exposer : routes, formats, codes d'erreur attendus par ses consommateurs. Il diffère du test d'intégration complet : il fige le contrat à un niveau plus léger, souvent via un pacte partagé entre les deux équipes. Il permet de détecter une rupture de compatibilité avant la mise en production, sans déployer l'ensemble du système.",
+    "mots_cles_attendus": ["contrat", "fournisseur", "consommateur", "pacte", "compatibilité"]
+  },
+  {
+    "id": "genie_logiciel-119",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une API interne change un champ de réponse sans prévenir ; deux applications clientes cassent en production. Quel dispositif mettez-vous en place pour éviter que cela se reproduise ?",
+    "reponse_reference": "Il faut formaliser les contrats entre l'API et ses consommateurs par des tests de contrat automatisés dans la chaîne d'intégration continue : chaque équipe publie ses attentes et le fournisseur valide leur compatibilité à chaque changement. On y ajoute un versionnement explicite de l'API avec une période de coexistence entre l'ancienne et la nouvelle version. Enfin, un registre des consommateurs permet de prévenir les équipes avant toute évolution cassante.",
+    "mots_cles_attendus": ["tests de contrat", "versionnement", "coexistence", "compatibilité", "communication"]
+  },
+  {
+    "id": "genie_logiciel-120",
+    "domaine": "genie_logiciel",
+    "sous_theme": "tests_et_conception",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test d'acceptation automatisé et quelle place occupe-t-il par rapport aux tests unitaires ?",
+    "reponse_reference": "Un test d'acceptation automatisé vérifie qu'une fonctionnalité satisfait un critère d'acceptation du point de vue de l'utilisateur, en traversant si possible le système réel ou une tranche significative de celui-ci. Il complète les tests unitaires, qui vérifient des unités isolées : les tests unitaires localisent la panne, les tests d'acceptation garantissent la valeur livrée. Leur nombre doit rester limité car ils sont plus lents et plus fragiles.",
+    "mots_cles_attendus": ["critère d'acceptation", "utilisateur", "valeur livrée", "lenteur", "complémentarité"]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "systemes_embarques-081",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un RTOS et quels problèmes résout-il par rapport à une simple super-boucle ?",
+    "reponse_reference": "Un RTOS (Real-Time Operating System) est un noyau qui découpe l'application en tâches concurrentes et les ordonne selon leurs priorités avec un déterminisme temporel garanti. Il permet de traiter des événements de durées et d'urgences différentes sans qu'un traitement long bloque les autres, contrairement à la super-boucle où tout est sérialisé. Il apporte aussi des primitives de synchronisation et de communication entre tâches.",
+    "mots_cles_attendus": ["rtos", "tâches", "priorités", "déterminisme", "concurrence"]
+  },
+  {
+    "id": "systemes_embarques-082",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment crée-t-on une tâche dans FreeRTOS et que signifient ses principaux paramètres ?",
+    "reponse_reference": "La fonction xTaskCreate prend une fonction d'entrée, un nom, la taille de la pile dédiée, un paramètre éventuel, une priorité et un handle de sortie. Chaque tâche possède sa propre pile et sa propre priorité, et elle est prête à s'exécuter dès sa création, l'ordonnanceur donnant le processeur en priorité à la tâche prête la plus prioritaire.",
+    "mots_cles_attendus": ["xtaskcreate", "pile", "priorité", "handle", "fonction d'entrée"]
+  },
+  {
+    "id": "systemes_embarques-083",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionne un ordonnanceur préemptif dans un RTOS ?",
+    "reponse_reference": "L'ordonnanceur est déclenché à chaque tick système et à chaque événement du noyau, et il donne toujours le processeur à la tâche prête de plus haute priorité. Si une tâche plus prioritaire devient prête alors qu'une tâche moins prioritaire s'exécute, celle-ci est suspendue et son contexte sauvegardé : c'est la préemption. Le temps CPU restant est réparti entre les tâches de même priorité par tourniquet (round-robin).",
+    "mots_cles_attendus": ["ordonnanceur", "préemption", "contexte", "tick", "round-robin"]
+  },
+  {
+    "id": "systemes_embarques-084",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre un sémaphore binaire et un sémaphore compteur dans un RTOS ?",
+    "reponse_reference": "Un sémaphore binaire ne peut prendre que deux états : disponible ou pris, et il sert essentiellement à synchroniser une tâche avec un événement ou une interruption. Un sémaphore compteur mémorise un nombre d'événements ou de ressources disponibles, chaque prise le décrémentant et chaque libération l'incrémentant, ce qui permet de gérer un stock de ressources identiques.",
+    "mots_cles_attendus": ["sémaphore binaire", "sémaphore compteur", "événement", "ressource", "synchronisation"]
+  },
+  {
+    "id": "systemes_embarques-085",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "À quoi sert un mutex dans un RTOS et en quoi diffère-t-il d'un sémaphore binaire ?",
+    "reponse_reference": "Le mutex protège l'accès exclusif à une ressource partagée : la tâche qui le prend est propriétaire et seule autorisée à le rendre, ce qui permet de détenir la ressource sur une durée longue. Contrairement au sémaphore binaire, le mutex intègre la notion de propriétaire et, dans FreeRTOS, un mécanisme d'héritage de priorité qui limite l'inversion de priorité.",
+    "mots_cles_attendus": ["mutex", "exclusion mutuelle", "propriétaire", "héritage de priorité", "ressource partagée"]
+  },
+  {
+    "id": "systemes_embarques-086",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une file de messages dans un RTOS et comment l'utilise-t-on entre deux tâches ?",
+    "reponse_reference": "Une file est un tampon FIFO qui transporte des copies de données entre une ou plusieurs tâches productrices et consommatrices. Le producteur appelle xQueueSend et le consommateur xQueueReceive, qui peut bloquer avec un délai maximal si la file est vide, ce qui découple les rythmes des deux tâches. La taille de chaque élément et le nombre d'éléments sont fixés à la création.",
+    "mots_cles_attendus": ["file", "fifo", "xqueuesend", "xqueuereceive", "découplage"]
+  },
+  {
+    "id": "systemes_embarques-087",
+    "domaine": "systemes_embarques",
+    "sous_theme": "communication_serie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le bus CAN et quels sont les principaux champs d'une trame de données ?",
+    "reponse_reference": "Le bus CAN (Controller Area Network) est un bus différentiel multi-maître conçu pour les environnements bruités de l'automobile et de l'industrie, robuste grâce à sa paire torsadée terminée par des résistances de 120 ohms. Une trame de données contient un identifiant, un champ de contrôle avec la longueur des données, jusqu'à 8 octets utiles en CAN classique, et un CRC qui permet aux récepteurs de valider l'intégrité.",
+    "mots_cles_attendus": ["can", "différentiel", "identifiant", "crc", "paire torsadée"]
+  },
+  {
+    "id": "systemes_embarques-088",
+    "domaine": "systemes_embarques",
+    "sous_theme": "communication_serie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment l'arbitrage du bus CAN garantit-il qu'un message prioritaire passe en premier ?",
+    "reponse_reference": "L'arbitrage repose sur l'identifiant : tous les émetteurs transmettent simultanément et surveillent le bus, et dès qu'un émetteur écrit un bit récessif alors qu'un dominant est présent, il perd l'arbitrage et cesse d'émettre. Comme le niveau dominant l'emporte et que l'identifiant le plus petit commence par le plus de bits dominants, le message de plus petit identifiant gagne sans aucune collision destructrice ni perte de temps.",
+    "mots_cles_attendus": ["arbitrage", "bit dominant", "bit récessif", "identifiant", "collision"]
+  },
+  {
+    "id": "systemes_embarques-089",
+    "domaine": "systemes_embarques",
+    "sous_theme": "communication_serie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment l'UART, le DMA et un buffer circulaire se combinent-ils pour une réception fiable à haut débit ?",
+    "reponse_reference": "Le DMA copie chaque octet reçu par l'UART directement dans un buffer mémoire circulaire, sans aucune intervention du processeur, ce qui supprime les pertes par overrun. Le logiciel consomme les octets en suivant l'index d'écriture du DMA et détecte la fin d'une commande sur un caractère de terminaison. Un double buffer ou une interruption de moitié de buffer évite les incohérences quand l'index boucle.",
+    "mots_cles_attendus": ["dma", "buffer circulaire", "uart", "overrun", "index"]
+  },
+  {
+    "id": "systemes_embarques-090",
+    "domaine": "systemes_embarques",
+    "sous_theme": "adc_dac",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment un ADC multi-canal convertit-il plusieurs entrées et qu'est-ce qu'un séquenceur ?",
+    "reponse_reference": "Un séquenceur est un registre ou une liste qui programme l'ordre et le nombre de canaux à convertir, chaque conversion pouvant enchaîner automatiquement sur la suivante. Les résultats sont déposés dans des registres dédiés ou transférés par DMA, ce qui permet de scruter régulièrement plusieurs capteurs sans intervention du logiciel entre chaque canal.",
+    "mots_cles_attendus": ["séquenceur", "multi-canal", "conversion", "ordre", "dma"]
+  },
+  {
+    "id": "systemes_embarques-091",
+    "domaine": "systemes_embarques",
+    "sous_theme": "interruptions",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que sont la latence d'interruption et la gigue, et pourquoi comptent-elles en temps réel ?",
+    "reponse_reference": "La latence d'interruption est le délai entre l'événement matériel et le début de l'exécution de l'ISR, comprenant la fin de l'instruction courante et la sauvegarde du contexte. La gigue est la variation de ce délai d'une occurrence à l'autre, causée par les sections critiques, les interruptions masquées ou les ISR de priorité supérieure. Ces deux grandeurs bornent la précision temporelle du système et doivent être garanties dans le pire cas.",
+    "mots_cles_attendus": ["latence", "gigue", "isr", "section critique", "pire cas"]
+  },
+  {
+    "id": "systemes_embarques-092",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quels sont les principaux états d'une tâche dans FreeRTOS et comment passe-t-elle de l'un à l'autre ?",
+    "reponse_reference": "Une tâche prête attend le processeur, une tâche en cours d'exécution l'occupe, une tâche bloquée attend un événement ou une temporisation, et une tâche suspendue est retirée de l'ordonnancement jusqu'à une reprise explicite. Une tâche passe à bloquée en appelant une primitive d'attente, redevient prête quand l'événement survient, et l'ordonnanceur élit la plus prioritaire des tâches prêtes.",
+    "mots_cles_attendus": ["prête", "bloquée", "suspendue", "ordonnanceur", "états"]
+  },
+  {
+    "id": "systemes_embarques-093",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une ISR incrémente un compteur consulté par une tâche. Comment partager cette variable de façon sûre avec FreeRTOS ?",
+    "reponse_reference": "La variable partagée doit être déclarée volatile pour empêcher le compilateur de la mettre en cache, et toute mise à jour doit être atomique si elle tient sur un mot. L'ISR signale ensuite l'événement avec une primitive adaptée au contexte d'interruption, comme xSemaphoreGiveFromISR, et la tâche attend sur ce sémaphore avant de lire la valeur, ce qui évite toute lecture pendant une mise à jour.",
+    "mots_cles_attendus": ["volatile", "fromisr", "sémaphore", "atomique", "partage"]
+  },
+  {
+    "id": "systemes_embarques-094",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une tâche de basse priorité tient un mutex et bloque une tâche critique qui attend dessus, alors qu'une tâche moyenne tourne en continu. Quel est le problème et comment le résoudre ?",
+    "reponse_reference": "C'est une inversion de priorité : la tâche critique attend le mutex détenu par la tâche basse, qui est elle-même privée du processeur par la tâche moyenne. Le mutex FreeRTOS résout le problème par héritage de priorité : la tâche basse reçoit temporairement la priorité de la tâche bloquée, termine sa section critique, libère le mutex et retrouve sa priorité d'origine.",
+    "mots_cles_attendus": ["inversion de priorité", "mutex", "héritage de priorité", "section critique", "blocage"]
+  },
+  {
+    "id": "systemes_embarques-095",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Comment dimensionner la taille de pile de chaque tâche FreeRTOS pour éviter tout débordement ?",
+    "reponse_reference": "On estime d'abord la profondeur maximale des appels de la tâche en ajoutant la taille des variables locales et le contexte sauvegardé, puis on ajoute une marge de sécurité confortable. Cette estimation se vérifie en exécution grâce à des fonctions comme uxTaskGetStackHighWaterMark, ou en remplissant la pile d'un motif connu et en contrôlant la zone intacte, et l'on ajuste la taille avant la mise en production.",
+    "mots_cles_attendus": ["pile", "débordement", "high water mark", "marge", "contexte"]
+  },
+  {
+    "id": "systemes_embarques-096",
+    "domaine": "systemes_embarques",
+    "sous_theme": "communication_serie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un nœud CAN se met en mode bus-off après une série d'erreurs. Que signifie cet état et comment récupérer ?",
+    "reponse_reference": "Le bus-off est l'état dans lequel un contrôleur CAN se retire du bus après avoir dépassé 255 erreurs, généralement à cause d'un défaut de câblage, d'un débit mal configuré ou d'un autre nœud défaillant. Il faut d'abord corriger la cause matérielle, puis demander explicitement au contrôleur de quitter le bus-off, souvent après une temporisation, car il ne réémet plus rien tant que la récupération n'est pas ordonnée.",
+    "mots_cles_attendus": ["bus-off", "compteur d'erreurs", "récupération", "câblage", "débit"]
+  },
+  {
+    "id": "systemes_embarques-097",
+    "domaine": "systemes_embarques",
+    "sous_theme": "communication_serie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une liaison UART à 115200 bauds doit absorber des rafales de commandes sans en perdre. Comment dimensionner le buffer de réception ?",
+    "reponse_reference": "Il faut estimer la taille de la plus grande rafale et la vitesse de traitement du consommateur : à 115200 bauds, un octet arrive environ toutes les 87 microsecondes, donc une rafale de 256 octets dure environ 22 millisecondes. Le buffer doit contenir au moins la rafale maximale pendant que le traitement s'exécute, avec une marge, et une stratégie de débordement explicite, rejet de commande ou récupération d'erreur, doit être prévue.",
+    "mots_cles_attendus": ["buffer", "rafale", "115200 bauds", "dimensionnement", "débordement"]
+  },
+  {
+    "id": "systemes_embarques-098",
+    "domaine": "systemes_embarques",
+    "sous_theme": "adc_dac",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un système doit échantillonner un signal à intervalles rigoureusement constants, mais la boucle principale est irrégulière. Comment garantir la régularité ?",
+    "reponse_reference": "Il faut configurer un timer pour déclencher matériellement l'ADC à la cadence voulue, le déclenchement par timer étant indépendant de la charge du processeur et de la gigue logicielle. Les résultats sont ensuite récupérés par DMA dans un buffer, puis traités en différé, ce qui garantit des instants d'échantillonnage strictement réguliers.",
+    "mots_cles_attendus": ["déclenchement timer", "adc", "dma", "gigue", "régularité"]
+  },
+  {
+    "id": "systemes_embarques-099",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une tâche attend des données d'un capteur qui peuvent ne jamais arriver, et bloque toute la machine. Comment rendre cette attente sûre ?",
+    "reponse_reference": "Il faut utiliser une attente bornée, par exemple xQueueReceive ou xSemaphoreTake avec un timeout, afin que la tâche se débloque après un délai maximal même sans événement. À l'expiration, la tâche décide d'une action de repli : nouvelle tentative, passage en mode dégradé ou signalement d'une erreur, ce qui préserve la robustesse du système face à un capteur muet.",
+    "mots_cles_attendus": ["timeout", "attente bornée", "mode dégradé", "blocage", "robustesse"]
+  },
+  {
+    "id": "systemes_embarques-100",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Comment choisir la période du tick système d'un RTOS pour une application mêlant temporisations fines et faible consommation ?",
+    "reponse_reference": "La période du tick fixe la granularité des temporisations : un tick de 1 ms offre une bonne précision mais réveille le processeur mille fois par seconde, alors qu'un tick de 10 ms réduit cette charge au prix d'une résolution plus grossière. Il faut choisir le tick le plus lent compatible avec la précision exigée par l'application, puis activer le mode tickless qui suspend le tick pendant les longues veilles pour économiser l'énergie.",
+    "mots_cles_attendus": ["tick", "granularité", "tickless", "consommation", "précision"]
+  }
+]

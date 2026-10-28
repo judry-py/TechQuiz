@@ -1,0 +1,202 @@
+[
+  {
+    "id": "tests_qualite-021",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi recommande-t-on une assertion par test plutôt que plusieurs ?",
+    "reponse_reference": "Une assertion par test localise précisément la propriété violée lorsque le test échoue, ce qui accélère le diagnostic. Un test qui vérifie un seul comportement est aussi plus facile à nommer, à lire et à maintenir.",
+    "mots_cles_attendus": ["diagnostic", "propriété", "lisibilité", "maintenance"]
+  },
+  {
+    "id": "tests_qualite-022",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la règle des « trois A » appliquée à un test ?",
+    "reponse_reference": "La règle des trois A décrit la structure d'un test : Arrange pour préparer les préconditions et les données, Act pour exécuter l'action testée, Assert pour vérifier le résultat attendu. Respecter cette structure rend les tests lisibles et uniformes dans une équipe.",
+    "mots_cles_attendus": ["arrange", "act", "assert", "structure"]
+  },
+  {
+    "id": "tests_qualite-023",
+    "domaine": "tests_qualite",
+    "sous_theme": "types_de_tests",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de non-régression ?",
+    "reponse_reference": "Un test de non-régression formalise un bug déjà corrigé afin d'empêcher sa réapparition lors d'évolutions futures. Il est généralement ajouté après l'incident et sert de garde-fou permanent sur le chemin de code concerné.",
+    "mots_cles_attendus": ["bug corrigé", "réapparition", "garde-fou", "incident"]
+  },
+  {
+    "id": "tests_qualite-024",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi servent les jeux de données de test (fixtures) ?",
+    "reponse_reference": "Les fixtures fournissent des données connues et stables utilisées par les tests pour vérifier des résultats prévisibles. Elles centralisent les cas limites et évitent de dupliquer des données hardcodées dans de nombreux fichiers de test.",
+    "mots_cles_attendus": ["fixtures", "données stables", "cas limites", "centralisation"]
+  },
+  {
+    "id": "tests_qualite-025",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi un test ne doit-il jamais dépendre de l'ordre d'exécution des autres tests ?",
+    "reponse_reference": "Un test dépendant de l'ordre échoue de façon aléatoire selon la parallélisation ou l'exécution en parallèle, ce qui le rend instable et difficile à diagnostiquer. Chaque test doit donc créer et détruire ses propres données pour rester isolé.",
+    "mots_cles_attendus": ["isolation", "instabilité", "parallélisation", "données propres"]
+  },
+  {
+    "id": "tests_qualite-026",
+    "domaine": "tests_qualite",
+    "sous_theme": "outillage_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels sont les principaux outils utilisés pour écrire des tests automatisés ?",
+    "reponse_reference": "Les frameworks les plus répandus sont JUnit pour Java, pytest pour Python, Jest ou Vitest pour JavaScript et TypeScript, et Cypress ou Playwright pour les tests de bout en bout. Le choix dépend du langage, du type de test et des besoins d'intégration continue.",
+    "mots_cles_attendus": ["framework", "pytest", "jest", "vitest", "playwright"]
+  },
+  {
+    "id": "tests_qualite-027",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quel est l'intérêt du « glacier » ou « cube de glace » par rapport à la pyramide de tests ?",
+    "reponse_reference": "Le modèle en cube de glace inverse la pyramide enzyme tests les interactions d'interface plus que la logique métier. Cette répartition est adaptée aux applications riches en interfaces, où la valeur se situe dans les parcours utilisateur et non dans la logique pure.",
+    "mots_cles_attendus": ["interface", "cube de glace", "parcours utilisateur", "logique métier"]
+  },
+  {
+    "id": "tests_qualite-028",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test paramétré ?",
+    "reponse_reference": "Un test paramétré exécute le même code de test avec plusieurs jeux de données, chaque jeu constituant un cas distinct avec son attendu. Il réduit la duplication du code tout en couvrant davantage de cas limites.",
+    "mots_cles_attendus": ["paramètres", "jeux de données", "cas limites", "réduction de duplication"]
+  },
+  {
+    "id": "tests_qualite-029",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de fumée (smoke test) ?",
+    "reponse_reference": "Un test de fumée est un ensemble minimal de vérifications qui confirme que le build déployé démarre et que les fonctions principales répondent. Son objectif est de détecter rapidement un livrable totalement cassé avant d'investir dans la campagne de tests complète.",
+    "mots_cles_attendus": ["smoke test", "vérification minimale", "build", "déploiement"]
+  },
+  {
+    "id": "tests_qualite-030",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifie le terme « dette de tests » ?",
+    "reponse_reference": "La dette de tests désigne l'ensemble des zones de code insuffisamment couvertes par des tests, accumulées par manque de temps ou de discipline. Comme une dette technique, elle rend les évolutions plus risquées et plus coûteuses à chaque itération.",
+    "mots_cles_attendus": ["dette de tests", "couverture insuffisante", "risque", "coût"]
+  },
+  {
+    "id": "tests_qualite-031",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle différence entre un test unitaire et un test fonctionnel ?",
+    "reponse_reference": "Le test unitaire cible une unité de code isolée et vérifie son comportement interne à partir d'entrées connues. Le test fonctionnel valide une fonctionnalité métier du point de vue de l'utilisateur, sans se préoccuper de la façon dont le code est découpé.",
+    "mots_cles_attendus": ["unité de code", "fonctionnalité métier", "point de vue utilisateur", "découpage interne"]
+  },
+  {
+    "id": "tests_qualite-032",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi utiliser des valeurs limites dans les données de test ?",
+    "reponse_reference": "Les valeurs limites sont les cas où les conditions aux bornes d'un domaine se concentrent : zéro, minimum, maximum, juste avant et juste après. Les erreurs de comparaison se manifestent presque toujours à ces endroits, d'où leur importance dans les jeux de test.",
+    "mots_cles_attendus": ["valeurs limites", "bornes", "cas limites", "comparaison"]
+  },
+  {
+    "id": "tests_qualite-033",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un utilisateur signale qu'un panier vide plante à l'affichage. Quelle est la bonne pratique de test à appliquer ?",
+    "reponse_reference": "Il faut écrire un test de non-régression reproduisant le cas du panier vide, vérifier qu'il échoue avec la version actuelle, puis corriger le code. Ce test sera conservé pour empêcher la réapparition du bug.",
+    "mots_cles_attendus": ["test de non-régression", "cas reproduit", "échec", "correction"]
+  },
+  {
+    "id": "tests_qualite-034",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe de test ajoute une assertion sur le nombre exact de lignes retournées par une requête SQL. Pourquoi cette pratique est-elle risquée ?",
+    "reponse_reference": "Tester un détail d'implémentation rend le test fragile : toute évolution légitime du schéma ou de la requête fera échouer le test sans que le comportement métier change. Il vaut mieux asserter sur le contenu métier pertinent plutôt que sur la structure physique des données.",
+    "mots_cles_attendus": ["implémentation", "fragilité", "détail technique", "comportement métier"]
+  },
+  {
+    "id": "tests_qualite-035",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Deux tests échouent uniquement lorsqu'ils sont lancés en parallèle sur la même base de données. Comment résoudre ce problème ?",
+    "reponse_reference": "Les tests partagent un état, ce qui viole le principe d'isolation. Il faut créer un schéma ou une base distincte par test, utiliser des transactions avec rollback, ou s'appuyer sur une base jetable recréée à chaque exécution.",
+    "mots_cles_attendus": ["état partagé", "isolation", "rollback", "base jetable"]
+  },
+  {
+    "id": "tests_qualite-036",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un test de calcul de remise ne couvre que le cas d'une remise de 10 %. Que doit-on lui ajouter ?",
+    "reponse_reference": "Il faut couvrir les cas limites : remise nulle, remise maximale, valeurs interdites, montants justo après un seuil et arrondis. Un test paramétré permet de couvrir ces variantes sans dupliquer le code.",
+    "mots_cles_attendus": ["cas limites", "test paramétré", "seuil", "arrondi"]
+  },
+  {
+    "id": "tests_qualite-037",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe veut réduire la durée de sa pipeline qui dure 45 minutes. Quelle action a le plus d'impact sur la pyramide de tests ?",
+    "reponse_reference": "Il faut déplacer une partie des scénarios de bout en bout vers des tests d'intégration ou unitaires plus rapides et plus fiables. Réduire le nombre de scénarios de bout en bout garde la couverture métier tout en raccourcissant la boucle de rétroaction.",
+    "mots_cles_attendus": ["boucle de rétroaction", "tests unitaires", "durée de pipeline", "couverture"]
+  },
+  {
+    "id": "tests_qualite-038",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Des tests échouent de manière aléatoire parce qu'ils utilisent l'horloge système. Comment rendre ces tests fiables ?",
+    "reponse_reference": "Il faut injecter l'heure comme dépendance du code testé, par exemple via une interface de type horloge, afin de pouvoir la contrôler dans les tests. Le test devient alors déterministe au lieu de dépendre de l'exécution réelle.",
+    "mots_cles_attendus": ["horloge injectée", "déterministe", "dépendance", "contrôle du temps"]
+  },
+  {
+    "id": "tests_qualite-039",
+    "domaine": "tests_qualite",
+    "sous_theme": "outillage_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Chaque poste de développement utilise une version différente du framework de test et les résultats diffèrent. Que faut-il mettre en place ?",
+    "reponse_reference": "Il faut versionner et verrouiller les dépendances de test dans un fichier de lock, et exécuter la suite via un script unique partagé par l'équipe. La reproductibilité des résultats exige un environnement d'outillage identique pour tous.",
+    "mots_cles_attendus": ["verrouillage des versions", "reproductibilité", "script partagé", "lock"]
+  },
+  {
+    "id": "tests_qualite-040",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un chef de projet impose que la couverture de code du projet dépasse 80 %. Quel est le risque de cet objectif ?",
+    "reponse_reference": "La couverture mesurée est un indicateur indirect qui peut être atteint par des tests sans valeur (valeurs nulles, code mort). Fixer un seuil sur cet indicateur seul peut dégrader la qualité réelle si aucune revue de pertinence des tests n accompanye la mesure.",
+    "mots_cles_attendus": ["indicateur indirect", "tests sans valeur", "seuil", "pertinence"]
+  }
+]

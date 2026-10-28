@@ -1,0 +1,322 @@
+[
+  {
+    "id": "data_science-121",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la régression linéaire et que cherche-t-elle à modéliser ?",
+    "reponse_reference": "La régression linéaire modélise la relation entre une variable cible quantitative et une ou plusieurs variables explicatives par une fonction affine. En régression simple, on ajuste une droite ; en régression multiple, un hyperplan dans l'espace des prédicteurs. Les coefficients estimés indiquent la variation attendue de la cible pour une unité de plus de chaque variable, toutes choses égales par ailleurs.",
+    "mots_cles_attendus": [
+      "variable cible",
+      "fonction affine",
+      "droite",
+      "coefficients",
+      "explicatives"
+    ]
+  },
+  {
+    "id": "data_science-122",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la méthode des moindres carrés ordinaires ?",
+    "reponse_reference": "La méthode des moindres carrés ordinaires estime les coefficients de la régression en minimisant la somme des carrés des écarts entre les valeurs observées et les valeurs prédites. Cette fonction de coût pénalise fortement les grands écarts et possède une solution analytique simple en régression linéaire. Les résidus ainsi obtenus ont une moyenne nulle et sont non corrélés avec les prédicteurs.",
+    "mots_cles_attendus": [
+      "somme des carrés",
+      "écarts",
+      "minimiser",
+      "résidus",
+      "solution analytique"
+    ]
+  },
+  {
+    "id": "data_science-123",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le R² et quelles sont ses limites ?",
+    "reponse_reference": "Le R² mesure la part de la variance de la variable cible expliquée par le modèle, variant de 0 à 1. Il augmente mécaniquement quand on ajoute des variables, même inutiles, ce qui justifie l'usage du R² ajusté pour comparer des modèles de tailles différentes. Un R² élevé ne garantit ni la validité des hypothèses, ni la qualité des prédictions hors échantillon, ni la causalité.",
+    "mots_cles_attendus": [
+      "variance expliquée",
+      "0 à 1",
+      "augmente mécaniquement",
+      "R² ajusté",
+      "pas de causalité"
+    ]
+  },
+  {
+    "id": "data_science-124",
+    "domaine": "data_science",
+    "sous_theme": "diagnostic",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un résidu et que vérifie-t-on dans une analyse des résidus ?",
+    "reponse_reference": "Un résidu est l'écart entre la valeur observée et la valeur prédite par le modèle pour chaque observation. L'analyse des résidus consiste à tracer ces résidus contre les prédictions ou chaque variable pour vérifier les hypothèses du modèle : moyenne nulle, variance constante, absence de structure. Des motifs en entonnoir ou en courbe signalent respectivement une hétéroscédasticité ou une relation mal spécifiée.",
+    "mots_cles_attendus": [
+      "écart observé-prédit",
+      "moyenne nulle",
+      "variance constante",
+      "entonnoir",
+      "structure"
+    ]
+  },
+  {
+    "id": "data_science-125",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelles sont les principales hypothèses de la régression linéaire ?",
+    "reponse_reference": "Les hypothèses classiques sont : la linéarité de la relation entre prédicteurs et cible, l'indépendance des observations, l'homoscédasticité (variance constante des erreurs), la normalité des erreurs pour l'inférence, et l'absence de multicolinéarité parfaite. Les violations de ces hypothèses faussent surtout les intervalles de confiance et les p-values des coefficients. Le modèle peut rester utile en prédiction pure même quand certaines hypothèses sont fragiles.",
+    "mots_cles_attendus": [
+      "linéarité",
+      "indépendance",
+      "homoscédasticité",
+      "normalité",
+      "multicolinéarité"
+    ]
+  },
+  {
+    "id": "data_science-126",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la multicolinéarité et quels problèmes pose-t-elle ?",
+    "reponse_reference": "La multicolinéarité désigne une forte corrélation entre variables explicatives, par exemple la surface en mètres carrés et le nombre de pièces d'un logement. Elle gonfle les variances des coefficients estimés, rendant les estimations instables et leurs p-values peu fiables, sans pour autant dégrader les prédictions du modèle. On la diagnostique avec le facteur d'inflation de la variance (VIF) et on y répond en supprimant, combinant ou régularisant les variables.",
+    "mots_cles_attendus": [
+      "corrélation entre explicatives",
+      "variances gonflées",
+      "instables",
+      "VIF",
+      "régularisation"
+    ]
+  },
+  {
+    "id": "data_science-127",
+    "domaine": "data_science",
+    "sous_theme": "encodage",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Comment intègre-t-on une variable catégorielle dans une régression linéaire ?",
+    "reponse_reference": "On transforme la variable catégorielle en variables indicatrices binaires, une par catégorie, méthode appelée one-hot encoding ou codage disjonctif. On omet généralement une catégorie de référence pour éviter la colinéarité parfaite avec la constante. Les coefficients s'interprètent alors comme l'écart moyen de chaque catégorie par rapport à la catégorie de référence, toutes choses égales par ailleurs.",
+    "mots_cles_attendus": [
+      "variables indicatrices",
+      "one-hot",
+      "catégorie de référence",
+      "colinéarité",
+      "écart moyen"
+    ]
+  },
+  {
+    "id": "data_science-128",
+    "domaine": "data_science",
+    "sous_theme": "regularisation",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la régularisation ridge ?",
+    "reponse_reference": "La régularisation ridge ajoute à la fonction de coût des moindres carrés une pénalité proportionnelle à la somme des carrés des coefficients, pilotée par un hyperparamètre lambda. Elle rétrécit les coefficients vers zéro sans jamais les annuler, ce qui stabilise l'estimation en présence de multicolinéarité. Un lambda élevé augmente le biais mais réduit la variance, ce qui peut améliorer la généralisation.",
+    "mots_cles_attendus": [
+      "pénalité L2",
+      "carrés des coefficients",
+      "rétrécit vers zéro",
+      "multicolinéarité",
+      "lambda"
+    ]
+  },
+  {
+    "id": "data_science-129",
+    "domaine": "data_science",
+    "sous_theme": "regularisation",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la régularisation lasso et en quoi diffère-t-elle de la régularisation ridge ?",
+    "reponse_reference": "Le lasso ajoute une pénalité proportionnelle à la somme des valeurs absolues des coefficients, ce qui peut pousser certains coefficients exactement à zéro. Il réalise donc une sélection de variables intégrée à l'estimation, contrairement au ridge qui les rétrécit sans les annuler. Le lasso est privilégié quand on soupçonne que peu de variables sont réellement pertinentes ; l'elastic net combine les deux pénalités.",
+    "mots_cles_attendus": [
+      "pénalité L1",
+      "valeurs absolues",
+      "coefficients nuls",
+      "sélection de variables",
+      "elastic net"
+    ]
+  },
+  {
+    "id": "data_science-130",
+    "domaine": "data_science",
+    "sous_theme": "regression_logistique",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la régression logistique et à quels problèmes s'applique-t-elle ?",
+    "reponse_reference": "La régression logistique estime la probabilité qu'une observation appartienne à une classe, par exemple la probabilité de churn d'un client, en modélisant le logarithme de l'odds comme une combinaison linéaire des prédicteurs. La fonction sigmoïde transforme ce score linéaire en une probabilité comprise entre 0 et 1. C'est un modèle interprétable, très utilisé comme référence en classification binaire.",
+    "mots_cles_attendus": [
+      "probabilité",
+      "classification binaire",
+      "sigmoid",
+      "log-odds",
+      "interprétable"
+    ]
+  },
+  {
+    "id": "data_science-131",
+    "domaine": "data_science",
+    "sous_theme": "regression_logistique",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un odds ratio et comment s'interprète-t-il dans une régression logistique ?",
+    "reponse_reference": "L'odds ratio est l'exponentielle d'un coefficient de régression logistique : il mesure le facteur multiplicatif appliqué à l'odds de l'événement quand la variable augmente d'une unité. Un odds ratio de 1,5 signifie que chaque unité supplémentaire de la variable multiplie l'odds par 1,5, soit une augmentation de 50 %. Un odds ratio inférieur à 1 indique un effet protecteur ou négatif.",
+    "mots_cles_attendus": [
+      "exponentielle du coefficient",
+      "multiplicatif",
+      "odds",
+      "1,5",
+      "inférieur à 1"
+    ]
+  },
+  {
+    "id": "data_science-132",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une interaction entre deux variables dans un modèle de régression ?",
+    "reponse_reference": "Une interaction signifie que l'effet d'une variable sur la cible dépend de la valeur d'une autre variable, par exemple l'effet de la publicité peut dépendre de la saison. On la modélise en ajoutant le produit des deux variables comme prédicteur supplémentaire. Sans ce terme, le modèle impose à tort que chaque effet est constant quelle que soit la valeur des autres variables.",
+    "mots_cles_attendus": [
+      "effet qui dépend",
+      "produit des variables",
+      "terme supplémentaire",
+      "effet constant imposé",
+      "modération"
+    ]
+  },
+  {
+    "id": "data_science-133",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un modèle de prix immobilier estime un coefficient de 2 500 euros pour la surface en mètres carrés et de -12 000 euros pour la variable indicatrice « présence d'un ascenseur » codée 1 si absent. Comment interprétez-vous ces deux coefficients ?",
+    "reponse_reference": "Chaque mètre carré supplémentaire est associé à un prix plus élevé de 2 500 euros en moyenne, à caractéristiques égales. Le coefficient de -12 000 signifie qu'un logement sans ascenseur se vend en moyenne 12 000 euros de moins qu'un logement avec ascenseur, toutes choses égales par ailleurs. Ces interprétations supposent que le modèle est bien spécifié et que les hypothèses sont respectées.",
+    "mots_cles_attendus": [
+      "2 500 euros par m²",
+      "12 000 de moins",
+      "toutes choses égales",
+      "moyenne",
+      "interprétation"
+    ]
+  },
+  {
+    "id": "data_science-134",
+    "domaine": "data_science",
+    "sous_theme": "diagnostic",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Votre modèle de prévision des ventes a un excellent R² de 0,92, mais le tracé des résidus contre les prédictions forme un entonnoir qui s'élargit. Que diagnostiquez-vous et quelles en sont les conséquences ?",
+    "reponse_reference": "Le motif en entonnoir indique une hétéroscédasticité : la variance des erreurs augmente avec le niveau des prédictions, ce qui viole l'hypothèse d'homoscédasticité. Les coefficients restent sans biais, mais leurs erreurs standard sont mal estimées, faussant les intervalles de confiance et les p-values. On peut y remédier par une transformation logarithmique de la cible, une pondération des observations ou des erreurs standard robustes.",
+    "mots_cles_attendus": [
+      "hétéroscédasticité",
+      "variance croissante",
+      "erreurs standard faussées",
+      "transformation log",
+      "erreurs robustes"
+    ]
+  },
+  {
+    "id": "data_science-135",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Dans une régression de la consommation d'énergie des ménages, vous incluez à la fois la surface du logement et le nombre de pièces, deux variables corrélées à 0,85. Quels symptômes risque d'afficher votre modèle et comment y remédier ?",
+    "reponse_reference": "La multicolinéarité rend les coefficients instables : de petites variations des données peuvent changer fortement leurs valeurs, et les p-values individuelles peuvent être non significatives alors que le modèle global est bon. Le VIF permettrait de quantifier le problème. Les remèdes incluent la suppression d'une des deux variables, leur combinaison en une variable composite, ou une régularisation ridge.",
+    "mots_cles_attendus": [
+      "multicolinéarité",
+      "coefficients instables",
+      "VIF",
+      "supprimer une variable",
+      "ridge"
+    ]
+  },
+  {
+    "id": "data_science-136",
+    "domaine": "data_science",
+    "sous_theme": "regularisation",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Vous modélisez un taux de défaut de paiement avec 400 variables candidates issues de données comportementales, mais seules quelques-unes sont supposées pertinentes. Choisiriez-vous le lasso ou le ridge, et pourquoi ?",
+    "reponse_reference": "Le lasso est plus adapté : sa pénalité sur les valeurs absolues pousse les coefficients des variables inutiles exactement à zéro, effectuant une sélection de variables automatique et produisant un modèle parcimonieux. Le ridge conserverait les 400 variables avec de petits coefficients, ce qui complique l'interprétation et le déploiement. On validerait l'hyperparamètre lambda par validation croisée.",
+    "mots_cles_attendus": [
+      "lasso",
+      "coefficients nuls",
+      "sélection automatique",
+      "parcimonieux",
+      "validation croisée"
+    ]
+  },
+  {
+    "id": "data_science-137",
+    "domaine": "data_science",
+    "sous_theme": "regression_logistique",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un modèle de régression logistique prédit le churn à partir de l'ancienneté du client, et le coefficient associé vaut -0,08. Comment traduire ce coefficient en langage métier ?",
+    "reponse_reference": "Le coefficient négatif signifie que plus le client est ancien, plus la probabilité de churn est faible. L'odds ratio vaut exp(-0,08), soit environ 0,92 : chaque mois d'ancienneté supplémentaire multiplie l'odds de churn par 0,92, c'est-à-dire le réduit d'environ 8 %. Attention, cette interprétation suppose une relation log-linéaire valide entre ancienneté et log-odds.",
+    "mots_cles_attendus": [
+      "coefficient négatif",
+      "odds ratio 0,92",
+      "réduit de 8 %",
+      "multiplicatif",
+      "ancienneté"
+    ]
+  },
+  {
+    "id": "data_science-138",
+    "domaine": "data_science",
+    "sous_theme": "encodage",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Pour prédire le montant des dépenses, vous disposez d'une variable « pays » à 25 modalités. Comment l'intégrer correctement dans une régression linéaire, et pourquoi ne faut-il pas la coder par des nombres de 1 à 25 ?",
+    "reponse_reference": "Un codage numérique de 1 à 25 imposerait à tort un ordre et des écarts constants entre pays, ce qui est absurde pour une variable nominale. Il faut créer 24 variables indicatrices en one-hot encoding, en choisissant un pays de référence. Les coefficients mesureront alors l'écart moyen de chaque pays par rapport à la référence, toutes choses égales par ailleurs.",
+    "mots_cles_attendus": [
+      "one-hot encoding",
+      "pas d'ordre imposé",
+      "24 indicatrices",
+      "pays de référence",
+      "écart moyen"
+    ]
+  },
+  {
+    "id": "data_science-139",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un modèle de prix entraîné sur des appartements de 20 à 80 m² est utilisé pour estimer le prix de villas de 300 m². Quel risque conceptuel majeur cette utilisation soulève-t-elle ?",
+    "reponse_reference": "C'est une extrapolation hors du domaine d'entraînement : le modèle n'a jamais vu de logements de cette taille et rien ne garantit que la relation linéaire estimée sur les petits appartements reste valable pour des villas. Le prix au mètre carré peut changer complètement de logique sur ce segment. Il faudrait réentraîner le modèle avec des données couvrant ce type de biens ou signaler explicitement l'incertitude des prédictions.",
+    "mots_cles_attendus": [
+      "extrapolation",
+      "hors domaine",
+      "relation invalide",
+      "incertitude",
+      "réentraîner"
+    ]
+  },
+  {
+    "id": "data_science-140",
+    "domaine": "data_science",
+    "sous_theme": "regression_lineaire",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Les dépenses de consommation sont fortement asymétriques à droite et votre modèle linéaire prédit des valeurs négatives pour certains clients. Quelle transformation classique appliqueriez-vous et que devient l'interprétation des coefficients ?",
+    "reponse_reference": "Modéliser le logarithme des dépenses est la transformation classique : elle symétrise la distribution et garantit des prédictions strictement positives après exponentiation. Les coefficients s'interprètent alors comme des variations relatives approximatives : une unité de plus de la variable est associée à environ 100 × coefficient pour cent de dépenses en plus. Pour revenir à l'échelle d'origine, on applique l'exponentielle en tenant compte de la correction de biais éventuelle.",
+    "mots_cles_attendus": [
+      "logarithme",
+      "positif",
+      "variation relative",
+      "exponentielle",
+      "symétriser"
+    ]
+  }
+]

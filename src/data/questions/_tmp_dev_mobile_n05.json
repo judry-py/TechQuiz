@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-081",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Riverpod et en quoi diffère-t-il de Provider ?",
+    "reponse_reference": "Riverpod est une bibliothèque de gestion d'état pour Flutter, successeur de Provider, qui déclare les providers comme des variables globales typées. Elle ne dépend pas du BuildContext pour lire un provider, ce qui élimine les erreurs d'introuvabilité de provider à l'exécution. La plupart des problèmes sont détectés à la compilation et les providers se testent sans arbre de widgets.",
+    "mots_cles_attendus": ["riverpod", "provider", "buildcontext", "compilation", "testable"]
+  },
+  {
+    "id": "dev_mobile-082",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Zustand et quel est son principe de fonctionnement ?",
+    "reponse_reference": "Zustand est une bibliothèque de gestion d'état minimaliste pour React et React Native. Un store est créé avec une fonction create qui expose l'état et des actions, et les composants s'y abonnent via des sélecteurs. Elle n'exige ni Provider enveloppant, ni reducers imposés, ce qui réduit considérablement le code par rapport à Redux.",
+    "mots_cles_attendus": ["zustand", "react native", "store", "sélecteurs", "minimaliste"]
+  },
+  {
+    "id": "dev_mobile-083",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le rôle des middlewares dans Redux ?",
+    "reponse_reference": "Un middleware s'intercale entre l'émission d'une action et son traitement par le reducer. Il sert à gérer les effets de bord : appels réseau asynchrones avec Redux Thunk ou Redux Saga, journalisation, ou crash reporting. Comme les reducers doivent rester des fonctions pures, toute logique impure est déléguée aux middlewares.",
+    "mots_cles_attendus": ["middleware", "redux thunk", "redux saga", "effets de bord"]
+  },
+  {
+    "id": "dev_mobile-084",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans une application React Native, le panier doit être partagé entre l'écran liste et l'écran paiement et survivre à un redémarrage. Quelle solution d'état mettre en place ?",
+    "reponse_reference": "Un store global comme Zustand ou Redux Toolkit expose le panier à tous les écrans et évite de faire transiter l'état par les propriétés. La persistance se branche ensuite sur ce store avec un middleware de persistance qui écrit dans AsyncStorage au fil des modifications. Au démarrage, le store est réhydraté avant le premier rendu pour retrouver le panier.",
+    "mots_cles_attendus": ["zustand", "redux toolkit", "persistance", "asyncstorage", "réhydratation"]
+  },
+  {
+    "id": "dev_mobile-085",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Hive et dans quels cas le préférer à SQLite ?",
+    "reponse_reference": "Hive est une base de données clé-valeur NoSQL écrite en pur Dart, utilisée principalement avec Flutter. Elle stocke des objets Dart sérialisés sans code natif, ce qui la rend très rapide à ouvrir et simple à intégrer. On la préfère à SQLite pour des données peu relationnelles, des caches ou des préférences volumineuses, car elle ne propose pas de requêtes SQL complexes.",
+    "mots_cles_attendus": ["hive", "nosql", "dart", "clé-valeur", "flutter"]
+  },
+  {
+    "id": "dev_mobile-086",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment modélise-t-on une relation un-à-plusieurs dans Room ?",
+    "reponse_reference": "L'entité enfant porte une clé étrangère vers l'identifiant de l'entité parent, déclarée avec l'annotation ForeignKey qui peut définir une action en cascade à la suppression. Un index sur cette colonne accélère les jointures. Pour lire les enfants avec leur parent en une fois, Room propose la classe de relation @Relation qui construit l'objet imbriqué à partir de la requête.",
+    "mots_cles_attendus": ["room", "foreignkey", "relation", "index", "cascade"]
+  },
+  {
+    "id": "dev_mobile-087",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de messagerie stocke des conversations et leurs messages localement. Comment structurer les entités Room et les requêtes ?",
+    "reponse_reference": "On crée une entité Conversation et une entité Message portant une clé étrangère vers l'identifiant de la conversation, avec un index sur cette colonne. Les messages d'une conversation se lisent par une requête filtrée, ordonnée par horodatage, renvoyée en Flow pour mettre à jour l'écran à chaque arrivée. Pour afficher la liste des conversations avec leur dernier message, une requête avec jointure ou une classe @Relation fournit le résultat sans requêtes en boucle.",
+    "mots_cles_attendus": ["entités", "foreignkey", "index", "jointure", "flow"]
+  },
+  {
+    "id": "dev_mobile-088",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une migration de schéma dans Room et comment la gérer ?",
+    "reponse_reference": "Une migration décrit la transformation de la base d'une version de schéma à la suivante, comme l'ajout d'une colonne ou d'une table. Room exige qu'une migration soit fournie pour chaque changement de version, sinon il applique un fallback destructif qui efface les données. Les migrations se testent avec des bases de départ sauvegardées pour vérifier que les données existantes survivent à la mise à jour.",
+    "mots_cles_attendus": ["room", "migration", "schéma", "version", "fallback destructif"]
+  },
+  {
+    "id": "dev_mobile-089",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionnent les notifications push de bout en bout sur mobile ?",
+    "reponse_reference": "L'application obtient un jeton d'enregistrement auprès du service de la plateforme, FCM sur Android ou APNs sur iOS, et le transmet à son serveur. Le serveur envoie ensuite les messages au service de push qui les achemine vers le bon appareil. L'application les reçoit même en arrière-plan, à condition que l'utilisateur ait accordé la permission d'afficher des notifications.",
+    "mots_cles_attendus": ["fcm", "apns", "jeton", "serveur", "push"]
+  },
+  {
+    "id": "dev_mobile-090",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de messagerie doit prévenir l'utilisateur d'un nouveau message alors que l'application est fermée. Décrire le flux à mettre en place.",
+    "reponse_reference": "L'application demande la permission de notification, récupère son jeton FCM ou APNs et l'envoie au serveur, en le renouvelant s'il change. À l'arrivée d'un message, le serveur pousse une notification avec le titre et l'extrait via le service de push de la plateforme. Le clic sur la notification ouvre l'application sur la conversation concernée grâce aux données embarquées dans la charge utile.",
+    "mots_cles_attendus": ["fcm", "apns", "jeton", "charge utile", "clic"]
+  },
+  {
+    "id": "dev_mobile-091",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un BroadcastReceiver sur Android et à quoi sert-il ?",
+    "reponse_reference": "Un BroadcastReceiver est un composant qui écoute des événements diffusés par le système ou par d'autres applications via des Intent. Il permet par exemple de réagir au démarrage de l'appareil, au branchement du chargeur ou à un événement métier interne. Son exécution est limitée à quelques secondes, donc les traitements longs doivent être délégués à un service ou à WorkManager.",
+    "mots_cles_attendus": ["broadcastreceiver", "intent", "événements système", "boot"]
+  },
+  {
+    "id": "dev_mobile-092",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que WorkManager et quand l'utiliser ?",
+    "reponse_reference": "WorkManager est la bibliothèque Android pour les tâches différées et garanties : synchronisations, sauvegardes, envois de journaux. Il planifie le travail en respectant des contraintes comme le réseau ou la batterie et survit aux redémarrages de l'appareil. Il remplace les anciennes solutions comme JobScheduler et couvre les cas où AlarmManager n'est pas adapté.",
+    "mots_cles_attendus": ["workmanager", "tâche différée", "contraintes", "garanti", "redémarrage"]
+  },
+  {
+    "id": "dev_mobile-093",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit synchroniser des données chaque nuit, même si l'utilisateur ne l'ouvre pas. Quelle solution Android choisir et comment la configurer ?",
+    "reponse_reference": "WorkManager avec un PeriodicWorkRequest est la solution adaptée : le système exécute la synchronisation dans sa fenêtre de maintenance, même après redémarrage. On ajoute la contrainte de connectivité réseau pour ne lancer le travail qu'en Wi-Fi ou avec une connexion disponible. Le travail périodique doit être idempotent et court, car l'heure exacte n'est pas garantie par le système.",
+    "mots_cles_attendus": ["workmanager", "periodicworkrequest", "contraintes", "réseau", "idempotent"]
+  },
+  {
+    "id": "dev_mobile-094",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelles différences entre SharedPreferences et DataStore pour stocker des préférences ?",
+    "reponse_reference": "SharedPreferences propose une API synchrone dont les lectures bloquent et ne signalent pas les erreurs d'E/S. DataStore, en coroutines ou en Rx, expose les valeurs sous forme de Flow asynchrone et ne bloque jamais le thread principal. DataStore existe en deux variantes, Preferences pour les clés-valeurs simples et Proto pour des objets typés avec un schéma Protobuf.",
+    "mots_cles_attendus": ["datastore", "sharedpreferences", "flow", "asynchrone", "protobuf"]
+  },
+  {
+    "id": "dev_mobile-095",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de sauvegarde ne se déclenche plus la nuit depuis que les utilisateurs sont passés à des versions récentes d'Android. Quelle en est la cause et comment la corriger ?",
+    "reponse_reference": "Le mode Doze, introduit avec Android 6, suspend le réseau et les tâches différées lorsque l'appareil est immobile et écran éteint. Les alarmes classiques sont alors reportées aux fenêtres de maintenance du système. Il faut remplacer les AlarmManager ou services maison par WorkManager, qui sait se planifier dans ces fenêtres et respecter les contraintes d'économie d'énergie.",
+    "mots_cles_attendus": ["doze", "fenêtres de maintenance", "workmanager", "économie d'énergie"]
+  },
+  {
+    "id": "dev_mobile-096",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit afficher un rappel exactement à 14 h 30, même si elle n'est pas ouverte. Que choisir entre AlarmManager et WorkManager ?",
+    "reponse_reference": "AlarmManager est le bon choix, car WorkManager ne garantit pas une heure précise et respecte les fenêtres de maintenance du système. Pour les versions récentes d'Android, il faut utiliser setExactAndAllowWhileIdle et déclarer la permission des alarmes exactes introduite avec Android 12. La tâche déclenchée doit être courte : elle affiche la notification puis rend la main.",
+    "mots_cles_attendus": ["alarmmanager", "setexactandallowwhileidle", "notification", "alarme exacte"]
+  },
+  {
+    "id": "dev_mobile-097",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une permission de niveau signature sur Android ?",
+    "reponse_reference": "Une permission signature n'est accordée qu'aux applications signées avec le même certificat que celle qui la déclare. Le système vérifie automatiquement cette correspondance à l'installation, sans demander l'avis de l'utilisateur. Elle sert à protéger les API internes entre applications d'un même éditeur, comme un SDK partagé entre plusieurs de ses applications.",
+    "mots_cles_attendus": ["permission signature", "certificat", "protectionlevel", "même éditeur"]
+  },
+  {
+    "id": "dev_mobile-098",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de suivi sportif demande l'accès à la localisation. Quelles bonnes pratiques de demande et de justification appliquer ?",
+    "reponse_reference": "La permission doit être demandée dans le contexte de l'usage, au moment où l'utilisateur lance un entraînement, avec une explication claire du bénéfice. Il faut distinguer la localisation approximative de la localisation précise et n'exiger que le strict nécessaire, en gérant le refus sans bloquer le reste de l'application. Si l'utilisateur refuse définitivement, on le guide vers les réglages sans le harceler de demandes.",
+    "mots_cles_attendus": ["localisation", "permission runtime", "contexte", "approximative", "refus"]
+  },
+  {
+    "id": "dev_mobile-099",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'App Sandbox sur iOS et comment les applications partagent-elles des données ?",
+    "reponse_reference": "Le sandbox iOS isole chaque application dans son propre conteneur de fichiers, inaccessible aux autres applications par défaut. Ce cloisonnement protège les données utilisateur et limite l'impact d'une application compromise. Les partages contrôlés passent par des mécanismes dédiés comme les App Groups entre applications d'un même éditeur ou le sélecteur de documents du système.",
+    "mots_cles_attendus": ["sandbox", "conteneur", "isolation", "app groups"]
+  },
+  {
+    "id": "dev_mobile-100",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux applications iOS du même éditeur doivent partager des préférences communes, comme un identifiant de session. Comment procéder ?",
+    "reponse_reference": "Il faut déclarer un App Group commun dans les entitlements des deux applications et l'activer dans le portail développeur. Les deux applications lisent et écrivent alors dans le même UserDefaults de groupe via l'identifiant de l'App Group, ou dans un conteneur de fichiers partagé. Ce mécanisme respecte le sandbox tout en autorisant un partage contrôlé et limité au même éditeur.",
+    "mots_cles_attendus": ["app groups", "entitlements", "userdefaults", "partage", "sandbox"]
+  }
+]

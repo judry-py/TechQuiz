@@ -1,0 +1,202 @@
+[
+  {
+    "id": "systemes_embarques-201",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles différences entre l'ordonnancement Rate Monotonic et l'ordonnancement Earliest Deadline First ?",
+    "reponse_reference": "Rate Monotonic fixe des priorités statiques proportionnelles à la fréquence des tâches, tandis qu'Earliest Deadline First recalcule dynamiquement la priorité à chaque instant pour donner le processeur à la tâche dont l'échéance absolue est la plus proche. EDF atteint l'utilisation maximale théorique de 100 % pour les tâches périodiques indépendantes, contre environ 69 % garantis par RM, mais sa mise en œuvre est plus coûteuse et son comportement en surcharge plus difficile à borner. RM reste dominant dans les noyaux embarqués pour sa simplicité et sa prévisibilité.",
+    "mots_cles_attendus": ["rate monotonic", "edf", "échéance", "priorité dynamique", "utilisation"]
+  },
+  {
+    "id": "systemes_embarques-202",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment le protocole à plafond de priorité borne-t-il les blocages liés aux ressources partagées ?",
+    "reponse_reference": "Chaque ressource se voit attribuer un plafond égal à la plus haute priorité des tâches susceptibles de l'utiliser, et une tâche qui prend la ressource hérite immédiatement de ce plafond. Une tâche ne peut alors être bloquée que par une section critique déjà commencée, au plus une fois avant d'obtenir la ressource, ce qui borne strictement le temps de blocage. Contrairement au simple héritage de priorité, le plafond évite les chaînes d'inversion et les interblocages liés aux priorités.",
+    "mots_cles_attendus": ["plafond de priorité", "ressource", "blocage borné", "héritage", "interblocage"]
+  },
+  {
+    "id": "systemes_embarques-203",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que l'analyse de temps de réponse d'une tâche et que garantit-elle ?",
+    "reponse_reference": "L'analyse calcule le pire temps de réponse d'une tâche, entre son activation et sa terminaison, en sommant son pire temps d'exécution, les interférences des tâches plus prioritaires et les blocages sur ressources partagées. La tâche est ordonnançable si ce temps de réponse reste inférieur ou égal à son échéance relative, ce qui se vérifie par une équation récurrente convergente. Cette méthode fournit une preuve d'ordonnançabilité bien plus précise que la simple borne d'utilisation de Liu et Layland.",
+    "mots_cles_attendus": ["temps de réponse", "interférence", "blocage", "échéance", "preuve"]
+  },
+  {
+    "id": "systemes_embarques-204",
+    "domaine": "systemes_embarques",
+    "sous_theme": "c_embarque",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que MISRA C et comment s'organise son application dans un projet embarqué ?",
+    "reponse_reference": "MISRA C est un ensemble de règles de codage pour le C dans les systèmes critiques, édité par le consortium MISRA, dont la version 2012 avec ses amendements reste la référence, complétée par MISRA C:2023. Les règles visent à éliminer les comportements indéfinis, les ambiguïtés et les constructions dangereuses, et leur respect se vérifie par analyse statique automatique. Les écarts inévitables se traitent par déviations documentées, justifiées et approuvées, l'objectif étant un code vérifiable et sûr, pas une conformité aveugle.",
+    "mots_cles_attendus": ["misra c", "règles", "analyse statique", "déviation", "sûreté"]
+  },
+  {
+    "id": "systemes_embarques-205",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la norme IEC 61508 et que représentent les niveaux SIL ?",
+    "reponse_reference": "L'IEC 61508 encadre la sécurité fonctionnelle des systèmes électriques, électroniques et programmables tout au long de leur cycle de vie, de l'analyse des risques à l'exploitation. Les niveaux SIL, de 1 à 4, quantifient la réduction de risque exigée de la fonction de sécurité, chaque niveau imposant des probabilités de défaillance et des techniques de conception de plus en plus rigoureuses. Les normes sectorielles, ISO 26262 pour l'automobile ou EN 50128 pour le ferroviaire, en dérivent leurs propres exigences.",
+    "mots_cles_attendus": ["iec 61508", "sil", "sécurité fonctionnelle", "risque", "cycle de vie"]
+  },
+  {
+    "id": "systemes_embarques-206",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment la redondance et la diversité augmentent-elles la fiabilité d'une fonction de sécurité embarquée ?",
+    "reponse_reference": "La redondance duplique les voies matérielles ou logicielles afin qu'une défaillance unique ne fasse pas perdre la fonction, un voteur comparant les sorties. La diversité consiste à développer les voies différemment, équipes, algorithmes ou technologies distincts, pour éviter qu'un défaut commun ne les fasse échouer simultanément. Les pannes de cause commune, alimentation, horloge ou bug partagé, restent la limite de toute redondance et doivent être analysées explicitement.",
+    "mots_cles_attendus": ["redondance", "diversité", "voteur", "cause commune", "défaillance unique"]
+  },
+  {
+    "id": "systemes_embarques-207",
+    "domaine": "systemes_embarques",
+    "sous_theme": "architectures",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment une MPU isole-t-elle des tâches de criticité différente partageant le même cœur ?",
+    "reponse_reference": "La MPU partitionne l'espace d'adressage en régions associées à des droits, lecture, écriture, exécution, et à des modes privilégié ou non, reprogrammées à chaque commutation de contexte. Une tâche non critique se voit refuser tout accès aux régions de la tâche critique, et inversement, chaque violation levant une faute immédiate plutôt qu'une corruption différée. Cette séparation spatiale permet de faire cohabiter des fonctions certifiées et des fonctions non certifiées sur un même processeur sans remettre en cause la preuve de sûreté.",
+    "mots_cles_attendus": ["mpu", "régions", "droits", "faute", "criticité mixte"]
+  },
+  {
+    "id": "systemes_embarques-208",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le test par injection de fautes et comment complète-t-il les autres essais ?",
+    "reponse_reference": "Le test par injection de fautes perturbe volontairement le système, basculement de bits mémoire, erreurs de bus, glitches d'horloge ou pannes d'E/S, pour vérifier que les mécanismes de détection et de repli réagissent comme prévu. Il valide les propriétés de tolérance aux fautes que les tests fonctionnels ne peuvent pas provoquer naturellement. Les campagnes s'automatisent avec des outils ciblant le matériel ou la simulation, et leurs résultats alimentent l'analyse de couverture exigée par les normes de sûreté.",
+    "mots_cles_attendus": ["injection de fautes", "basculement de bit", "détection", "repli", "couverture"]
+  },
+  {
+    "id": "systemes_embarques-209",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment les attaques par glitch et par analyse de puissance s'articulent-elles contre un dispositif embarqué ?",
+    "reponse_reference": "Le glitch perturbe physiquement l'exécution, chute de tension, impulsion électromagnétique ou laser, pour sauter des instructions, notamment les vérifications de sécurité, tandis que l'analyse de puissance exploite passivement la corrélation entre consommation et données traitées pour reconstituer des clés. Les deux attaques exigent un accès physique et une phase de caractérisation, souvent aidée d'un débogueur désactivé par d'autres moyens. Les défenses combinent détecteurs d'anomalies physiques, durcissement des implémentations cryptographiques et réduction de la surface d'attaque.",
+    "mots_cles_attendus": ["glitch", "analyse de puissance", "instruction sautée", "accès physique", "durcissement"]
+  },
+  {
+    "id": "systemes_embarques-210",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un environnement d'exécution de confiance (TEE) et comment se distingue-t-il d'un secure element ?",
+    "reponse_reference": "Le TEE est un environnement d'exécution isolé au sein du processeur principal, monde sécurisé de TrustZone par exemple, qui héberge services et secrets à l'écart du système d'exploitation riche. Il protège le code et les données en cours d'exécution, mais les secrets y demeurent dans une mémoire partagée avec le reste du silicium. Le secure element, puce séparée, offre une résistance physique supérieure, tandis que le TEE apporte puissance de calcul et flexibilité, les deux se combinant souvent dans les architectures de confiance complètes.",
+    "mots_cles_attendus": ["tee", "trustzone", "isolation", "secure element", "monde sécurisé"]
+  },
+  {
+    "id": "systemes_embarques-211",
+    "domaine": "systemes_embarques",
+    "sous_theme": "c_embarque",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'apporte la vérification formelle d'un logiciel embarqué critique et quelles formes prend-elle ?",
+    "reponse_reference": "La vérification formelle prouve mathématiquement des propriétés du code, absence de division par zéro, respect des bornes, équivalence avec une spécification, au lieu de se contenter de tests. Elle s'appuie sur des outils d'analyse statique avancée, des prouveurs ou du model checking, appliqués aux fonctions les plus critiques. Sa puissance se paie en effort de spécification et en périmètre restreint, et elle complète, sans les remplacer, les tests dynamiques dans les dossiers de sûreté.",
+    "mots_cles_attendus": ["vérification formelle", "preuve", "model checking", "propriétés", "périmètre"]
+  },
+  {
+    "id": "systemes_embarques-212",
+    "domaine": "systemes_embarques",
+    "sous_theme": "c_embarque",
+    "niveau": 11,
+    "type": "definition",
+    "question": "À quoi servent les barrières mémoire dans un code embarqué et quand sont-elles indispensables ?",
+    "reponse_reference": "Les barrières mémoire ordonnent les accès mémoire vus par les autres observateurs, cœurs, DMA ou périphériques, en empêchant le compilateur et le matériel de réordonner lectures et écritures. Elles sont indispensables pour publier des données vers un DMA, synchroniser des cœurs ou dialoguer avec des périphériques mappés en mémoire, là où l'ordre des écritures compte. Sans elles, un compilateur optimisant ou un cœur à exécution dans le désordre peut produire un ordre d'accès différent de celui du code source.",
+    "mots_cles_attendus": ["barrière mémoire", "réordonnancement", "dma", "synchronisation", "ordre"]
+  },
+  {
+    "id": "systemes_embarques-213",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une fonction d'arrêt d'urgence doit atteindre le niveau SIL 2. Quelles activités du cycle de vie sont déterminantes ?",
+    "reponse_reference": "Il faut partir d'une analyse de risques qui justifie le SIL, puis spécifier précisément la fonction de sécurité et ses temps de réaction, et concevoir l'architecture avec les mesures de diagnostic exigées au SIL 2. Le développement suit un plan de sûreté avec revues, traçabilité complète entre exigences, code et tests, et une analyse des pannes systématiques. La validation finale inclut injection de fautes, essais environnementaux et démonstration de la couverture de diagnostic avant la mise en service.",
+    "mots_cles_attendus": ["sil 2", "analyse de risques", "diagnostic", "traçabilité", "validation"]
+  },
+  {
+    "id": "systemes_embarques-214",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un ensemble de tâches périodiques et sporadiques partage un bus et un mutex. Comment prouver que toutes les échéances sont tenues ?",
+    "reponse_reference": "On modélise chaque tâche par son pire temps d'exécution, sa période et son échéance, puis l'on applique l'analyse de temps de réponse en ajoutant le pire blocage sur le mutex, borné par le protocole à plafond de priorité, et les interférences des tâches plus prioritaires. Les tâches sporadiques sont traitées par leur intervalle minimal d'arrivée, cas le plus défavorable. Le calcul se vérifie pour chaque tâche, et les hypothèses, WCET mesurés, priorités, plafonds, sont documentées et retestées à chaque évolution du code.",
+    "mots_cles_attendus": ["temps de réponse", "sporadique", "pire blocage", "échéance", "hypothèses"]
+  },
+  {
+    "id": "systemes_embarques-215",
+    "domaine": "systemes_embarques",
+    "sous_theme": "c_embarque",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Comment déployer MISRA C dans une base de code existante sans paralyser le développement ?",
+    "reponse_reference": "On commence par une passe d'analyse statique complète pour mesurer l'écart, puis l'on classe les violations par règle et par module en corrigeant d'abord les règles de plus haut risque, celles liées aux comportements indéfinis. Les violations restantes font l'objet de déviations documentées et datées, avec justification et analyse de risque, approuvées par le responsable qualité. L'analyse s'intègre ensuite à la chaîne d'intégration continue pour empêcher toute nouvelle violation et réduire progressivement le stock existant.",
+    "mots_cles_attendus": ["misra", "violations", "déviation", "intégration continue", "risque"]
+  },
+  {
+    "id": "systemes_embarques-216",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un attaquant tente d'extraire une clé en mesurant la consommation pendant les signatures. Quelles contre-mesures déployer ?",
+    "reponse_reference": "Il faut durcir l'implémentation cryptographique : masquage des données intermédiaires par des valeurs aléatoires, régularisation de la consommation par des opérations factices et élimination des branchements dépendant des secrets au profit d'algorithmes à temps constant. Le déplacement des opérations sensibles vers un secure element dédié, conçu contre ces attaques, est la défense la plus robuste. La rotation régulière des clés limite enfin l'impact d'une extraction partielle réussie.",
+    "mots_cles_attendus": ["masquage", "temps constant", "consommation régularisée", "secure element", "rotation"]
+  },
+  {
+    "id": "systemes_embarques-217",
+    "domaine": "systemes_embarques",
+    "sous_theme": "architectures",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Comment faire cohabiter une boucle de contrôle certifiée et une pile de communication non certifiée sur le même microcontrôleur ?",
+    "reponse_reference": "La MPU sépare les deux mondes : la boucle critique reçoit ses propres régions mémoire, sa pile et ses périphériques avec des droits stricts, et toute violation par le code non certifié lève une faute traitée par un superviseur. Les priorités d'interruption réservent au critique une bande supérieure, et les échanges passent par des canaux contrôlés avec validation des données. L'analyse de sûreté du critique ne doit dépendre d'aucune hypothèse sur le comportement du non certifié, traité comme un environnement hostile.",
+    "mots_cles_attendus": ["mpu", "isolation", "priorités", "canal contrôlé", "environnement hostile"]
+  },
+  {
+    "id": "systemes_embarques-218",
+    "domaine": "systemes_embarques",
+    "sous_theme": "c_embarque",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Comment prouver qu'une application n'utilise jamais plus de pile que la taille allouée ?",
+    "reponse_reference": "On combine analyse statique, qui borne la profondeur d'appels et les tailles de trames en excluant les récursions non bornées, et mesure dynamique par remplissage de motif ou comptage des points hauts sur les scénarios les plus profonds. Les outils de suivi de pile du débogueur et les canaris confirment les marges en exécution. La taille retenue prend le maximum des deux approches augmenté d'une marge justifiée, et le processus se répète à chaque changement significatif du code.",
+    "mots_cles_attendus": ["analyse statique", "profondeur d'appels", "motif", "canari", "marge"]
+  },
+  {
+    "id": "systemes_embarques-219",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Deux voies redondantes doivent voter la commande d'un actionneur de sécurité. Comment concevoir l'architecture pour éviter les défaillances de cause commune ?",
+    "reponse_reference": "Les deux voies sont alimentées et cadencées par des sources séparées, développées par des équipes différentes avec des algorithmes et des outils distincts, et leurs sorties sont comparées par un voteur indépendant, idéalement matériel. L'analyse des causes communes, alimentation unique, horloge partagée, capteur unique ou bug de bibliothèque commun, guide la conception et se documente formellement. Le voteur déclenche l'état sûr sur divergence, avec un diagnostic de la voie fautive pour éviter les arrêts intempestifs répétés.",
+    "mots_cles_attendus": ["voteur", "voies séparées", "cause commune", "état sûr", "diagnostic"]
+  },
+  {
+    "id": "systemes_embarques-220",
+    "domaine": "systemes_embarques",
+    "sous_theme": "fiabilite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Comment estimer la fiabilité d'un nœud capteur déployé en extérieur pendant cinq ans ?",
+    "reponse_reference": "On construit une analyse de fiabilité par blocs : taux de défaillance de chaque composant issus des standards, profils de température et d'humidité du site, sollicitations mécaniques et cycle de charge de la batterie. Les défaillances dominantes, batterie, condensateurs, connecteurs et mémoire Flash, sont identifiées par sensibilité, et l'on prévoit les maintenances ou remplacements préventifs. Les essais accélérés en enceinte climatique et le suivi de flotte pilote calibrent le modèle avant généralisation.",
+    "mots_cles_attendus": ["taux de défaillance", "modèle", "essais accélérés", "batterie", "maintenance"]
+  }
+]

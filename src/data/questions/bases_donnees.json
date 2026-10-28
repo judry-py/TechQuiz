@@ -1,0 +1,3807 @@
+[
+  {
+    "id": "bases_donnees-001",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données et à quoi sert-elle ?",
+    "reponse_reference": "Une base de données est un ensemble structuré de données organisé pour être stocké, interrogé et mis à jour efficacement. Elle permet à une application de conserver des informations de façon durable et fiable.",
+    "mots_cles_attendus": [
+      "données",
+      "stockage",
+      "structuré",
+      "interroger",
+      "durable"
+    ]
+  },
+  {
+    "id": "bases_donnees-002",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SGBD ? Donne un exemple.",
+    "reponse_reference": "Un SGBD (système de gestion de base de données) est le logiciel qui permet de créer, manipuler et interroger une base de données. PostgreSQL, MySQL, Oracle et SQL Server sont des exemples courants.",
+    "mots_cles_attendus": [
+      "logiciel",
+      "gestion",
+      "manipuler",
+      "postgresql",
+      "mysql"
+    ]
+  },
+  {
+    "id": "bases_donnees-003",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Dans le modèle relationnel, qu'est-ce qu'une table ?",
+    "reponse_reference": "Une table est un ensemble de données organisées en lignes (enregistrements) et en colonnes (attributs). Chaque colonne a un nom et un type, et chaque ligne représente une entité, par exemple un client.",
+    "mots_cles_attendus": [
+      "lignes",
+      "colonnes",
+      "enregistrements",
+      "attributs",
+      "entité"
+    ]
+  },
+  {
+    "id": "bases_donnees-004",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une clé primaire ?",
+    "reponse_reference": "Une clé primaire est une colonne (ou un ensemble de colonnes) qui identifie de manière unique chaque ligne d'une table. Elle ne peut pas contenir de valeur NULL et ses valeurs sont uniques.",
+    "mots_cles_attendus": [
+      "identifiant unique",
+      "ligne",
+      "unique",
+      "null"
+    ]
+  },
+  {
+    "id": "bases_donnees-005",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une clé étrangère ?",
+    "reponse_reference": "Une clé étrangère est une colonne d'une table qui référence la clé primaire d'une autre table. Elle permet de relier les tables entre elles et de garantir la cohérence des références.",
+    "mots_cles_attendus": [
+      "référence",
+      "clé primaire",
+      "relation",
+      "cohérence",
+      "tables"
+    ]
+  },
+  {
+    "id": "bases_donnees-006",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que signifie SQL et quel est son rôle ?",
+    "reponse_reference": "SQL (Structured Query Language) est le langage standard pour interroger et manipuler des bases de données relationnelles. Il permet de lire, insérer, modifier et supprimer des données ainsi que de définir la structure des tables.",
+    "mots_cles_attendus": [
+      "langage",
+      "requêtes",
+      "relationnelles",
+      "manipuler",
+      "standard"
+    ]
+  },
+  {
+    "id": "bases_donnees-007",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert l'instruction SELECT en SQL ?",
+    "reponse_reference": "SELECT sert à lire des données dans une ou plusieurs tables. On précise les colonnes voulues après SELECT et la table source après FROM, éventuellement avec une condition WHERE.",
+    "mots_cles_attendus": [
+      "lire",
+      "colonnes",
+      "from",
+      "where",
+      "sélectionner"
+    ]
+  },
+  {
+    "id": "bases_donnees-008",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert la clause WHERE dans une requête SELECT ?",
+    "reponse_reference": "WHERE filtre les lignes retournées par une requête en imposant une condition, par exemple un prix supérieur à 100. Seules les lignes vérifiant la condition apparaissent dans le résultat.",
+    "mots_cles_attendus": [
+      "filtre",
+      "condition",
+      "lignes",
+      "résultat"
+    ]
+  },
+  {
+    "id": "bases_donnees-009",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle instruction SQL utilise-t-on pour ajouter une nouvelle ligne dans une table ?",
+    "reponse_reference": "On utilise INSERT INTO, en précisant la table et les valeurs des colonnes. Par exemple : INSERT INTO clients (nom, email) VALUES ('Dupont', 'd@mail.com').",
+    "mots_cles_attendus": [
+      "insert",
+      "ajouter",
+      "valeurs",
+      "ligne",
+      "table"
+    ]
+  },
+  {
+    "id": "bases_donnees-010",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la valeur NULL dans une base de données ?",
+    "reponse_reference": "NULL représente l'absence de valeur ou une valeur inconnue, ce n'est ni zéro ni une chaîne vide. Les comparaisons avec NULL nécessitent IS NULL ou IS NOT NULL car NULL n'est égal à rien, pas même à lui-même.",
+    "mots_cles_attendus": [
+      "absence",
+      "inconnue",
+      "is null",
+      "valeur"
+    ]
+  },
+  {
+    "id": "bases_donnees-011",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi donne-t-on un type à chaque colonne d'une table ?",
+    "reponse_reference": "Le type (entier, texte, date, etc.) définit la nature des valeurs autorisées et la façon de les stocker. Il garantit la cohérence des données et permet au SGBD d'optimiser le stockage et les comparaisons.",
+    "mots_cles_attendus": [
+      "type",
+      "valeurs autorisées",
+      "cohérence",
+      "stockage"
+    ]
+  },
+  {
+    "id": "bases_donnees-012",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que fait l'instruction UPDATE en SQL et quelle précaution faut-il prendre ?",
+    "reponse_reference": "UPDATE modifie les valeurs de lignes existantes d'une table. Il faut toujours inclure une clause WHERE, sinon toutes les lignes de la table sont mises à jour.",
+    "mots_cles_attendus": [
+      "modifier",
+      "where",
+      "toutes les lignes",
+      "mise à jour"
+    ]
+  },
+  {
+    "id": "bases_donnees-013",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu veux récupérer les noms et emails de tous les clients habitant à Lyon. Quelle requête SQL écris-tu ?",
+    "reponse_reference": "SELECT nom, email FROM clients WHERE ville = 'Lyon'. On sélectionne les colonnes voulues et on filtre sur la ville.",
+    "mots_cles_attendus": [
+      "select",
+      "from",
+      "where",
+      "ville",
+      "colonnes"
+    ]
+  },
+  {
+    "id": "bases_donnees-014",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un nouveau produit 'Clavier' à 25 euros doit être ajouté à la table produits(id, nom, prix). Quelle requête utilises-tu ?",
+    "reponse_reference": "INSERT INTO produits (nom, prix) VALUES ('Clavier', 25). Si id est auto-incrémenté, on ne le fournit pas.",
+    "mots_cles_attendus": [
+      "insert into",
+      "values",
+      "produits",
+      "ajouter"
+    ]
+  },
+  {
+    "id": "bases_donnees-015",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu crées une table utilisateurs pour une application. Quelle colonne choisis-tu comme clé primaire et pourquoi ?",
+    "reponse_reference": "On choisit généralement un identifiant unique par utilisateur, par exemple une colonne id auto-incrémentée ou un UUID. Elle garantit que chaque ligne est identifiable sans ambiguïté, contrairement à l'email qui peut changer.",
+    "mots_cles_attendus": [
+      "id",
+      "unique",
+      "identifiant",
+      "clé primaire",
+      "auto-incrémenté"
+    ]
+  },
+  {
+    "id": "bases_donnees-016",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Le prix du produit d'id 3 passe de 25 à 30 euros. Écris la requête SQL correspondante.",
+    "reponse_reference": "UPDATE produits SET prix = 30 WHERE id = 3. Le WHERE cible uniquement le produit concerné.",
+    "mots_cles_attendus": [
+      "update",
+      "set",
+      "where",
+      "prix"
+    ]
+  },
+  {
+    "id": "bases_donnees-017",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un client demande la suppression de son compte (id 42) de la table clients. Quelle requête exécutes-tu ?",
+    "reponse_reference": "DELETE FROM clients WHERE id = 42. DELETE supprime des lignes et le WHERE évite de vider toute la table.",
+    "mots_cles_attendus": [
+      "delete",
+      "from",
+      "where",
+      "supprimer"
+    ]
+  },
+  {
+    "id": "bases_donnees-018",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Tu veux lister tous les articles dont le titre contient le mot 'base'. Quelle clause utilises-tu ?",
+    "reponse_reference": "WHERE titre LIKE '%base%', l'opérateur LIKE avec les jokers % permettant une recherche de sous-chaîne dans le texte.",
+    "mots_cles_attendus": [
+      "like",
+      "where",
+      "joker",
+      "recherche",
+      "contient"
+    ]
+  },
+  {
+    "id": "bases_donnees-019",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une requête SELECT * FROM commandes retourne 50 000 lignes mais tu ne veux voir que les 10 plus récentes. Comment fais-tu ?",
+    "reponse_reference": "On combine ORDER BY date_commande DESC pour trier de la plus récente à la plus ancienne, puis LIMIT 10 pour ne garder que dix lignes.",
+    "mots_cles_attendus": [
+      "order by",
+      "desc",
+      "limit",
+      "tri",
+      "récentes"
+    ]
+  },
+  {
+    "id": "bases_donnees-020",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Dans une boutique en ligne, tu dois stocker les commandes passées par des clients. Comment relies-tu la table commandes à la table clients ?",
+    "reponse_reference": "On ajoute dans commandes une colonne client_id qui est une clé étrangère référençant la clé primaire de clients. Chaque commande est ainsi associée à exactement un client.",
+    "mots_cles_attendus": [
+      "clé étrangère",
+      "client_id",
+      "référence",
+      "relation",
+      "commandes"
+    ]
+  },
+  {
+    "id": "bases_donnees-021",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert ORDER BY dans une requête SQL ?",
+    "reponse_reference": "ORDER BY trie les lignes du résultat selon une ou plusieurs colonnes, en ordre croissant (ASC, par défaut) ou décroissant (DESC). Il s'applique après le filtrage des lignes.",
+    "mots_cles_attendus": [
+      "tri",
+      "asc",
+      "desc",
+      "colonnes",
+      "résultat"
+    ]
+  },
+  {
+    "id": "bases_donnees-022",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que fait le mot-clé DISTINCT ?",
+    "reponse_reference": "DISTINCT élimine les doublons du résultat en ne conservant que des valeurs uniques pour les colonnes sélectionnées. Par exemple SELECT DISTINCT ville FROM clients liste chaque ville une seule fois.",
+    "mots_cles_attendus": [
+      "doublons",
+      "uniques",
+      "valeurs",
+      "élimine"
+    ]
+  },
+  {
+    "id": "bases_donnees-023",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre les opérateurs BETWEEN et IN ?",
+    "reponse_reference": "BETWEEN sélectionne les valeurs comprises dans un intervalle bornes incluses, comme BETWEEN 10 AND 20. IN teste l'appartenance à une liste de valeurs discrètes, comme IN ('Paris', 'Lyon').",
+    "mots_cles_attendus": [
+      "intervalle",
+      "bornes incluses",
+      "liste",
+      "valeurs"
+    ]
+  },
+  {
+    "id": "bases_donnees-024",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Comment combiner plusieurs conditions dans une clause WHERE ?",
+    "reponse_reference": "On utilise les opérateurs logiques AND, OR et NOT, avec des parenthèses pour contrôler la priorité. AND exige que toutes les conditions soient vraies, OR qu'au moins une le soit.",
+    "mots_cles_attendus": [
+      "and",
+      "or",
+      "not",
+      "conditions",
+      "parenthèses"
+    ]
+  },
+  {
+    "id": "bases_donnees-025",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une contrainte NOT NULL ?",
+    "reponse_reference": "NOT NULL interdit qu'une colonne contienne la valeur NULL, ce qui force chaque ligne à renseigner cette information. C'est une contrainte d'intégrité simple mais essentielle pour les champs obligatoires.",
+    "mots_cles_attendus": [
+      "null",
+      "interdit",
+      "obligatoire",
+      "contrainte",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "bases_donnees-026",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que garantit la contrainte UNIQUE sur une colonne ?",
+    "reponse_reference": "UNIQUE garantit que toutes les valeurs de la colonne (ou du groupe de colonnes) sont différentes, empêchant par exemple deux clients d'avoir le même email. Contrairement à la clé primaire, elle peut autoriser NULL selon le SGBD.",
+    "mots_cles_attendus": [
+      "unique",
+      "doublon",
+      "valeurs différentes",
+      "contrainte"
+    ]
+  },
+  {
+    "id": "bases_donnees-027",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un alias de colonne ou de table en SQL ?",
+    "reponse_reference": "Un alias (mot-clé AS ou simple espace) renomme temporairement une colonne ou une table dans la requête. Il rend le résultat plus lisible et permet de lever les ambiguïtés dans les jointures.",
+    "mots_cles_attendus": [
+      "alias",
+      "renomme",
+      "as",
+      "lisibilité"
+    ]
+  },
+  {
+    "id": "bases_donnees-028",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels types de données SQL connais-tu pour stocker un texte, un entier et une date ?",
+    "reponse_reference": "On utilise classiquement VARCHAR ou TEXT pour du texte, INTEGER (ou BIGINT) pour un entier, et DATE ou TIMESTAMP pour une date. Le choix du type influence la validation, le stockage et les comparaisons.",
+    "mots_cles_attendus": [
+      "varchar",
+      "integer",
+      "date",
+      "timestamp",
+      "type"
+    ]
+  },
+  {
+    "id": "bases_donnees-029",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre DELETE et TRUNCATE TABLE ?",
+    "reponse_reference": "DELETE supprime des lignes une par une avec un WHERE possible et est journalisé, donc annulable dans une transaction. TRUNCATE vide toute la table très rapidement mais sans condition et, selon le SGBD, sans journalisation ligne à ligne.",
+    "mots_cles_attendus": [
+      "delete",
+      "truncate",
+      "journalisé",
+      "vider",
+      "transaction"
+    ]
+  },
+  {
+    "id": "bases_donnees-030",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifie SELECT * et pourquoi est-ce souvent déconseillé en production ?",
+    "reponse_reference": "SELECT * renvoie toutes les colonnes de la table. C'est déconseillé car on transfère des données inutiles, on casse le code si le schéma change et on empêche certaines optimisations d'index couvrants.",
+    "mots_cles_attendus": [
+      "toutes les colonnes",
+      "inutile",
+      "schéma",
+      "performance"
+    ]
+  },
+  {
+    "id": "bases_donnees-031",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu dois lister les produits dont le prix est strictement compris entre 10 et 50 euros, triés par prix décroissant. Écris la requête.",
+    "reponse_reference": "SELECT * FROM produits WHERE prix > 10 AND prix < 50 ORDER BY prix DESC. On peut aussi écrire WHERE prix BETWEEN 11 AND 49 selon les bornes voulues, mais BETWEEN inclut les bornes.",
+    "mots_cles_attendus": [
+      "where",
+      "and",
+      "order by",
+      "desc",
+      "prix"
+    ]
+  },
+  {
+    "id": "bases_donnees-032",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "On te demande la liste sans doublon des pays de livraison présents dans la table commandes. Quelle requête écris-tu ?",
+    "reponse_reference": "SELECT DISTINCT pays FROM commandes. DISTINCT supprime les répétitions et ne conserve que les pays distincts.",
+    "mots_cles_attendus": [
+      "select distinct",
+      "pays",
+      "doublons",
+      "commandes"
+    ]
+  },
+  {
+    "id": "bases_donnees-033",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu veux retrouver les clients dont le nom commence par 'Mar'. Quelle requête utilises-tu ?",
+    "reponse_reference": "SELECT * FROM clients WHERE nom LIKE 'Mar%', le joker % représentant n'importe quelle suite de caractères après 'Mar'.",
+    "mots_cles_attendus": [
+      "like",
+      "joker",
+      "commence",
+      "where"
+    ]
+  },
+  {
+    "id": "bases_donnees-034",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu crées une table livres avec un titre obligatoire et un ISBN unique. Comment déclares-tu ces contraintes en SQL ?",
+    "reponse_reference": "Par exemple CREATE TABLE livres (id SERIAL PRIMARY KEY, titre VARCHAR(200) NOT NULL, isbn VARCHAR(20) UNIQUE). NOT NULL rend le titre obligatoire et UNIQUE empêche deux ISBN identiques.",
+    "mots_cles_attendus": [
+      "create table",
+      "not null",
+      "unique",
+      "contraintes",
+      "isbn"
+    ]
+  },
+  {
+    "id": "bases_donnees-035",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Il faut augmenter de 10 % le prix de tous les produits de la catégorie 'informatique'. Quelle requête écris-tu ?",
+    "reponse_reference": "UPDATE produits SET prix = prix * 1.1 WHERE categorie = 'informatique'. Le calcul est appliqué uniquement aux lignes filtrées par le WHERE.",
+    "mots_cles_attendus": [
+      "update",
+      "set",
+      "where",
+      "pourcentage",
+      "prix"
+    ]
+  },
+  {
+    "id": "bases_donnees-036",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu dois supprimer de la table sessions toutes les sessions expirées, c'est-à-dire dont la date d'expiration est antérieure à aujourd'hui. Quelle requête écris-tu ?",
+    "reponse_reference": "DELETE FROM sessions WHERE date_expiration < CURRENT_DATE. Le WHERE cible précisément les lignes expirées pour ne pas supprimer les sessions actives.",
+    "mots_cles_attendus": [
+      "delete",
+      "where",
+      "date",
+      "current_date",
+      "expirées"
+    ]
+  },
+  {
+    "id": "bases_donnees-037",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une requête doit retourner les employés dont le département est 1, 2 ou 3. Écris deux versions équivalentes de la condition WHERE.",
+    "reponse_reference": "WHERE departement_id IN (1, 2, 3) ou de façon équivalente WHERE departement_id = 1 OR departement_id = 2 OR departement_id = 3. La forme IN est plus concise et lisible.",
+    "mots_cles_attendus": [
+      "in",
+      "or",
+      "where",
+      "liste",
+      "équivalentes"
+    ]
+  },
+  {
+    "id": "bases_donnees-038",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu veux afficher le prénom et le nom concaténés en une seule colonne 'identité' pour chaque client. Comment écris-tu la requête ?",
+    "reponse_reference": "SELECT prenom || ' ' || nom AS identite FROM clients en SQL standard (ou CONCAT(prenom, ' ', nom) selon le SGBD). L'alias identite renomme la colonne calculée.",
+    "mots_cles_attendus": [
+      "concaténation",
+      "alias",
+      "concat",
+      "colonne calculée"
+    ]
+  },
+  {
+    "id": "bases_donnees-039",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un collègue exécute UPDATE articles SET statut = 'archive' et se plaint que tous les articles ont été archivés. Que s'est-il passé et comment l'éviter ?",
+    "reponse_reference": "Il a omis la clause WHERE, donc l'UPDATE s'est appliqué à toutes les lignes de la table. Il faut toujours écrire WHERE pour cibler les lignes concernées et tester d'abord avec un SELECT équivalent.",
+    "mots_cles_attendus": [
+      "where",
+      "toutes les lignes",
+      "update",
+      "oubli",
+      "select"
+    ]
+  },
+  {
+    "id": "bases_donnees-040",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Tu dois afficher les 5 clients ayant dépensé le plus, à partir de la table clients(id, nom, total_depenses). Quelle requête écris-tu ?",
+    "reponse_reference": "SELECT nom, total_depenses FROM clients ORDER BY total_depenses DESC LIMIT 5. Le tri décroissant place les plus grosses dépenses en tête et LIMIT 5 ne garde que les cinq premières lignes.",
+    "mots_cles_attendus": [
+      "order by",
+      "desc",
+      "limit",
+      "tri",
+      "top"
+    ]
+  },
+  {
+    "id": "bases_donnees-041",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une jointure (JOIN) en SQL ?",
+    "reponse_reference": "Une jointure combine les lignes de deux tables selon une condition de correspondance, généralement clé étrangère contre clé primaire. Elle permet d'exploiter des données réparties dans plusieurs tables relationnelles.",
+    "mots_cles_attendus": [
+      "combiner",
+      "tables",
+      "condition",
+      "clé",
+      "on"
+    ]
+  },
+  {
+    "id": "bases_donnees-042",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre INNER JOIN et LEFT JOIN ?",
+    "reponse_reference": "INNER JOIN ne retourne que les lignes ayant une correspondance dans les deux tables. LEFT JOIN retourne toutes les lignes de la table de gauche, avec NULL pour les colonnes de droite sans correspondance.",
+    "mots_cles_attendus": [
+      "inner join",
+      "left join",
+      "correspondance",
+      "null",
+      "gauche"
+    ]
+  },
+  {
+    "id": "bases_donnees-043",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert la fonction COUNT() ?",
+    "reponse_reference": "COUNT() compte les lignes d'un résultat : COUNT(*) compte toutes les lignes, COUNT(colonne) compte les valeurs non NULL de cette colonne. C'est la fonction d'agrégation la plus utilisée.",
+    "mots_cles_attendus": [
+      "compter",
+      "lignes",
+      "agrégation",
+      "non null"
+    ]
+  },
+  {
+    "id": "bases_donnees-044",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que font les fonctions SUM, AVG, MIN et MAX ?",
+    "reponse_reference": "Ce sont des fonctions d'agrégation : SUM calcule la somme, AVG la moyenne, MIN le minimum et MAX le maximum d'une colonne numérique. Elles résument plusieurs lignes en une seule valeur.",
+    "mots_cles_attendus": [
+      "somme",
+      "moyenne",
+      "minimum",
+      "maximum",
+      "agrégation"
+    ]
+  },
+  {
+    "id": "bases_donnees-045",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert GROUP BY dans une requête SQL ?",
+    "reponse_reference": "GROUP BY regroupe les lignes ayant la même valeur pour une ou plusieurs colonnes afin d'appliquer des agrégats par groupe. Par exemple, il permet de calculer le total des ventes par vendeur.",
+    "mots_cles_attendus": [
+      "regrouper",
+      "groupes",
+      "agrégats",
+      "par colonne"
+    ]
+  },
+  {
+    "id": "bases_donnees-046",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une transaction en base de données ?",
+    "reponse_reference": "Une transaction est un ensemble d'opérations exécuté comme un tout indivisible : soit tout réussit (COMMIT), soit tout est annulé (ROLLBACK). L'exemple classique est le virement bancaire qui débite un compte et crédite l'autre.",
+    "mots_cles_attendus": [
+      "ensemble",
+      "indivisible",
+      "commit",
+      "rollback",
+      "annulé"
+    ]
+  },
+  {
+    "id": "bases_donnees-047",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une sous-requête ?",
+    "reponse_reference": "Une sous-requête est un SELECT imbriqué dans une autre requête, utilisée par exemple dans WHERE avec IN ou comme valeur de comparaison. Elle permet de décomposer un problème en étapes logiques.",
+    "mots_cles_attendus": [
+      "select imbriqué",
+      "where",
+      "in",
+      "sous-requête"
+    ]
+  },
+  {
+    "id": "bases_donnees-048",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une relation un-à-plusieurs entre deux tables ?",
+    "reponse_reference": "Une relation un-à-plusieurs signifie qu'une ligne d'une table peut être associée à plusieurs lignes d'une autre table, comme un client ayant plusieurs commandes. Elle s'implémente avec une clé étrangère du côté 'plusieurs'.",
+    "mots_cles_attendus": [
+      "un-à-plusieurs",
+      "clé étrangère",
+      "plusieurs lignes",
+      "relation"
+    ]
+  },
+  {
+    "id": "bases_donnees-049",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment modélise-t-on une relation plusieurs-à-plusieurs en relationnel ?",
+    "reponse_reference": "On crée une table de jointure intermédiaire contenant les clés étrangères des deux tables, par exemple etudiants_modules pour étudiants et modules. Chaque ligne de la table intermédiaire représente une association.",
+    "mots_cles_attendus": [
+      "table de jointure",
+      "clés étrangères",
+      "intermédiaire",
+      "association"
+    ]
+  },
+  {
+    "id": "bases_donnees-050",
+    "domaine": "bases_donnees",
+    "sous_theme": "modeles_donnees",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'intégrité référentielle ?",
+    "reponse_reference": "L'intégrité référentielle garantit que toute clé étrangère pointe vers une ligne existante de la table référencée. Le SGBD bloque par exemple la suppression d'un client tant que des commandes y sont liées, ou propage la suppression avec ON DELETE CASCADE.",
+    "mots_cles_attendus": [
+      "clé étrangère",
+      "ligne existante",
+      "référence",
+      "cascade",
+      "cohérence"
+    ]
+  },
+  {
+    "id": "bases_donnees-051",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Dans quel ordre logique SQL évalue-t-il les clauses d'une requête SELECT ?",
+    "reponse_reference": "L'ordre logique est FROM (et JOIN), puis WHERE, GROUP BY, HAVING, SELECT et enfin ORDER BY/LIMIT. Cela explique par exemple pourquoi un alias défini dans SELECT n'est pas utilisable dans WHERE.",
+    "mots_cles_attendus": [
+      "from",
+      "where",
+      "group by",
+      "having",
+      "order by"
+    ]
+  },
+  {
+    "id": "bases_donnees-052",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "definition",
+    "question": "À quoi sert la clause HAVING et en quoi diffère-t-elle de WHERE ?",
+    "reponse_reference": "HAVING filtre des groupes après l'agrégation, alors que WHERE filtre des lignes avant l'agrégation. Par exemple HAVING COUNT(*) > 5 ne garde que les groupes de plus de cinq lignes.",
+    "mots_cles_attendus": [
+      "having",
+      "where",
+      "groupes",
+      "agrégation",
+      "filtre"
+    ]
+  },
+  {
+    "id": "bases_donnees-053",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Avec les tables clients(id, nom) et commandes(id, client_id, montant), écris une requête affichant le nom de chaque client avec le montant de ses commandes.",
+    "reponse_reference": "SELECT c.nom, co.montant FROM clients c INNER JOIN commandes co ON co.client_id = c.id. La jointure relie chaque commande à son client via la clé étrangère.",
+    "mots_cles_attendus": [
+      "inner join",
+      "on",
+      "client_id",
+      "select",
+      "jointure"
+    ]
+  },
+  {
+    "id": "bases_donnees-054",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Tu veux la liste de tous les clients, y compris ceux qui n'ont jamais commandé, avec leurs éventuelles commandes. Quelle jointure utilises-tu ?",
+    "reponse_reference": "Un LEFT JOIN : SELECT c.nom, co.id FROM clients c LEFT JOIN commandes co ON co.client_id = c.id. Les clients sans commande apparaissent avec NULL du côté des commandes.",
+    "mots_cles_attendus": [
+      "left join",
+      "tous les clients",
+      "null",
+      "sans commande"
+    ]
+  },
+  {
+    "id": "bases_donnees-055",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Comment obtiens-tu le nombre total de commandes passées dans la table commandes ?",
+    "reponse_reference": "SELECT COUNT(*) FROM commandes. COUNT(*) compte toutes les lignes de la table.",
+    "mots_cles_attendus": [
+      "count",
+      "total",
+      "commandes",
+      "agrégat"
+    ]
+  },
+  {
+    "id": "bases_donnees-056",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Le marketing demande le chiffre d'affaires total par vendeur à partir de ventes(vendeur_id, montant). Quelle requête écris-tu ?",
+    "reponse_reference": "SELECT vendeur_id, SUM(montant) AS ca FROM ventes GROUP BY vendeur_id. GROUP BY crée un groupe par vendeur et SUM agrège les montants de chaque groupe.",
+    "mots_cles_attendus": [
+      "group by",
+      "sum",
+      "vendeur",
+      "chiffre d'affaires"
+    ]
+  },
+  {
+    "id": "bases_donnees-057",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Tu dois trouver les clients habitant dans la même ville que le client 'Dupont' (sans connaître sa ville à l'avance). Comment procèdes-tu ?",
+    "reponse_reference": "Avec une sous-requête : SELECT * FROM clients WHERE ville = (SELECT ville FROM clients WHERE nom = 'Dupont'). La sous-requête récupère d'abord la ville de Dupont.",
+    "mots_cles_attendus": [
+      "sous-requête",
+      "where",
+      "ville",
+      "dupont"
+    ]
+  },
+  {
+    "id": "bases_donnees-058",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une application bancaire débite 100 euros du compte A puis plante avant de créditer le compte B. Comment une transaction évite-t-elle ce problème ?",
+    "reponse_reference": "Les deux opérations sont placées dans une même transaction : si le plantage survient avant le COMMIT, le ROLLBACK annule aussi le débit du compte A. Ainsi aucune opération partielle n'est conservée.",
+    "mots_cles_attendus": [
+      "transaction",
+      "rollback",
+      "commit",
+      "annulation",
+      "atomique"
+    ]
+  },
+  {
+    "id": "bases_donnees-059",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Tu veux afficher uniquement les catégories de produits contenant plus de 10 produits. Quelle requête écris-tu sur produits(id, categorie) ?",
+    "reponse_reference": "SELECT categorie FROM produits GROUP BY categorie HAVING COUNT(*) > 10. Le HAVING filtre les groupes après le comptage, ce que WHERE ne peut pas faire sur un agrégat.",
+    "mots_cles_attendus": [
+      "group by",
+      "having",
+      "count",
+      "catégorie",
+      "filtre"
+    ]
+  },
+  {
+    "id": "bases_donnees-060",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Tu conçois le schéma d'un blog avec des articles et des tags : un article peut avoir plusieurs tags et un tag servir à plusieurs articles. Quelles tables crées-tu ?",
+    "reponse_reference": "Trois tables : articles(id, titre...), tags(id, libelle) et une table de jointure articles_tags(article_id, tag_id) avec clés étrangères vers les deux tables. Cela modélise la relation plusieurs-à-plusieurs.",
+    "mots_cles_attendus": [
+      "table de jointure",
+      "articles",
+      "tags",
+      "plusieurs-à-plusieurs",
+      "clés étrangères"
+    ]
+  },
+  {
+    "id": "bases_donnees-061",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une auto-jointure (self join) ?",
+    "reponse_reference": "Une auto-jointure est une jointure d'une table avec elle-même, en utilisant deux alias différents. Elle sert par exemple à relier un employé à son manager stocké dans la même table employés.",
+    "mots_cles_attendus": [
+      "auto-jointure",
+      "elle-même",
+      "alias",
+      "hiérarchie"
+    ]
+  },
+  {
+    "id": "bases_donnees-062",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que retourne un FULL OUTER JOIN par rapport à un LEFT JOIN ?",
+    "reponse_reference": "FULL OUTER JOIN retourne toutes les lignes des deux tables, avec NULL des deux côtés en l'absence de correspondance, alors que LEFT JOIN ne garde toutes les lignes que de la table de gauche. FULL OUTER JOIN est l'union d'un LEFT et d'un RIGHT JOIN.",
+    "mots_cles_attendus": [
+      "toutes les lignes",
+      "deux tables",
+      "null",
+      "union"
+    ]
+  },
+  {
+    "id": "bases_donnees-063",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un CROSS JOIN et quand l'utilise-t-on ?",
+    "reponse_reference": "CROSS JOIN produit le produit cartésien des deux tables : chaque ligne de la première est combinée à chaque ligne de la seconde. On l'utilise par exemple pour générer toutes les combinaisons tailles/couleurs d'un catalogue.",
+    "mots_cles_attendus": [
+      "produit cartésien",
+      "combinaisons",
+      "chaque ligne",
+      "cross join"
+    ]
+  },
+  {
+    "id": "bases_donnees-064",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que la normalisation d'une base de données ?",
+    "reponse_reference": "La normalisation est un ensemble de règles (formes normales) pour organiser les tables afin de réduire la redondance et les anomalies d'insertion, mise à jour et suppression. Elle se fait généralement jusqu'à la troisième forme normale.",
+    "mots_cles_attendus": [
+      "redondance",
+      "formes normales",
+      "anomalies",
+      "organisation"
+    ]
+  },
+  {
+    "id": "bases_donnees-065",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que impose la première forme normale (1FN) ?",
+    "reponse_reference": "La 1FN exige que chaque colonne contienne une valeur atomique, sans groupes répétitifs ni listes dans une cellule. Par exemple, plusieurs numéros de téléphone doivent aller dans une table telephones plutôt qu'un champ unique 'telephone1, telephone2, telephone3'.",
+    "mots_cles_attendus": [
+      "atomique",
+      "groupes répétitifs",
+      "colonnes",
+      "1fn"
+    ]
+  },
+  {
+    "id": "bases_donnees-066",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Explique la deuxième forme normale (2FN).",
+    "reponse_reference": "La 2FN exige d'être en 1FN et que tout attribut non-clé dépende de la totalité de la clé primaire, pas seulement d'une partie. Elle concerne surtout les clés composites : une dépendance partielle doit être déplacée dans une autre table.",
+    "mots_cles_attendus": [
+      "clé primaire",
+      "dépendance totale",
+      "clé composite",
+      "dépendance partielle"
+    ]
+  },
+  {
+    "id": "bases_donnees-067",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une dépendance transitoire, éliminée par la troisième forme normale (3FN) ?",
+    "reponse_reference": "Une dépendance transitoire existe quand un attribut non-clé dépend d'un autre attribut non-clé, par exemple code_postal détermine ville dans une table clients. La 3FN impose de déplacer ville et code_postal dans une table séparée référencée par code_postal.",
+    "mots_cles_attendus": [
+      "dépendance transitoire",
+      "3fn",
+      "attribut non-clé",
+      "séparer"
+    ]
+  },
+  {
+    "id": "bases_donnees-068",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une vue SQL et à quoi sert-elle ?",
+    "reponse_reference": "Une vue est une requête SELECT nommée et stockée, présentée comme une table virtuelle sans données propres. Elle simplifie les requêtes complexes, réutilise de la logique et permet de restreindre l'accès à certaines colonnes.",
+    "mots_cles_attendus": [
+      "vue",
+      "table virtuelle",
+      "requête stockée",
+      "simplifier",
+      "accès"
+    ]
+  },
+  {
+    "id": "bases_donnees-069",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une contrainte CHECK ?",
+    "reponse_reference": "CHECK impose qu'une condition booléenne soit vraie pour chaque ligne, par exemple CHECK (prix >= 0) ou CHECK (statut IN ('actif','inactif')). Toute insertion ou modification violant la condition est rejetée par le SGBD.",
+    "mots_cles_attendus": [
+      "check",
+      "condition",
+      "rejetée",
+      "contrainte",
+      "validité"
+    ]
+  },
+  {
+    "id": "bases_donnees-070",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que font les opérateurs UNION et UNION ALL ?",
+    "reponse_reference": "UNION concatène les résultats de deux SELECT en supprimant les doublons, tandis que UNION ALL les concatène en les conservant. UNION ALL est plus rapide car il n'a pas d'étape de déduplication.",
+    "mots_cles_attendus": [
+      "union",
+      "concatène",
+      "doublons",
+      "union all",
+      "select"
+    ]
+  },
+  {
+    "id": "bases_donnees-071",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que l'instruction CASE en SQL ?",
+    "reponse_reference": "CASE permet une logique conditionnelle dans une requête, comme un if/else : CASE WHEN condition THEN valeur ELSE autre END. On l'utilise dans SELECT, WHERE ou ORDER BY pour catégoriser ou transformer des valeurs.",
+    "mots_cles_attendus": [
+      "case",
+      "when",
+      "then",
+      "conditionnel",
+      "else"
+    ]
+  },
+  {
+    "id": "bases_donnees-072",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert COALESCE ?",
+    "reponse_reference": "COALESCE retourne la première valeur non NULL parmi ses arguments, par exemple COALESCE(remise, 0) qui remplace un NULL par zéro. C'est utile pour éviter que NULL ne propage son indéfinition dans les calculs.",
+    "mots_cles_attendus": [
+      "coalesce",
+      "null",
+      "première valeur",
+      "remplacer"
+    ]
+  },
+  {
+    "id": "bases_donnees-073",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Avec employés(id, nom, manager_id) où manager_id référence id, écris une requête affichant chaque employé avec le nom de son manager.",
+    "reponse_reference": "SELECT e.nom AS employe, m.nom AS manager FROM employés e LEFT JOIN employés m ON m.id = e.manager_id. C'est une auto-jointure avec deux alias et LEFT JOIN pour inclure les employés sans manager.",
+    "mots_cles_attendus": [
+      "auto-jointure",
+      "alias",
+      "left join",
+      "manager"
+    ]
+  },
+  {
+    "id": "bases_donnees-074",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Tu dois calculer le nombre de commandes et le montant moyen par mois à partir de commandes(id, date_commande, montant). Quelle requête écris-tu ?",
+    "reponse_reference": "SELECT DATE_TRUNC('month', date_commande) AS mois, COUNT(*) AS nb, AVG(montant) AS moyenne FROM commandes GROUP BY mois. DATE_TRUNC (ou son équivalent selon le SGBD) regroupe les dates par mois avant agrégation.",
+    "mots_cles_attendus": [
+      "group by",
+      "count",
+      "avg",
+      "mois",
+      "date"
+    ]
+  },
+  {
+    "id": "bases_donnees-075",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "La table inscriptions(etudiant_id, module_id, nom_etudiant, nom_module, note) répète les noms à chaque ligne. Quel problème cela pose-t-il et comment normaliser ?",
+    "reponse_reference": "La redondance provoque des anomalies de mise à jour (renommer un module exige de modifier toutes ses lignes) et gaspille de l'espace. Il faut créer les tables etudiants et modules avec leurs noms, et ne garder dans inscriptions que les identifiants et la note.",
+    "mots_cles_attendus": [
+      "redondance",
+      "anomalie",
+      "normalisation",
+      "identifiants",
+      "tables séparées"
+    ]
+  },
+  {
+    "id": "bases_donnees-076",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Le support te demande souvent 'la liste des clients avec leur dernière commande'. Tu décides de créer une vue. Quel en est l'intérêt et comment la crées-tu ?",
+    "reponse_reference": "La vue factorise la requête complexe pour la réutiliser simplement : CREATE VIEW v_clients_derniere_commande AS SELECT ... La vue n'est pas matérialisée par défaut, elle rejoue la requête à chaque lecture.",
+    "mots_cles_attendus": [
+      "create view",
+      "factoriser",
+      "réutiliser",
+      "requête",
+      "matérialisée"
+    ]
+  },
+  {
+    "id": "bases_donnees-077",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Tu veux garantir qu'un produit a toujours un prix positif et un stock non négatif. Que déclares-tu dans le schéma de la table produits ?",
+    "reponse_reference": "Des contraintes CHECK : prix DECIMAL CHECK (prix > 0) et stock INTEGER CHECK (stock >= 0). Le SGBD rejette alors toute écriture qui violerait ces règles, même en dehors de l'application.",
+    "mots_cles_attendus": [
+      "check",
+      "contraintes",
+      "prix",
+      "stock",
+      "rejet"
+    ]
+  },
+  {
+    "id": "bases_donnees-078",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "On te demande de combiner dans un même rapport les ventes en magasin (table ventes_magasin) et les ventes en ligne (table ventes_ligne), qui ont les mêmes colonnes. Quelle requête écris-tu ?",
+    "reponse_reference": "SELECT * FROM ventes_magasin UNION ALL SELECT * FROM ventes_ligne, en ajoutant une colonne source si besoin. UNION ALL est adapté car un même achat ne peut pas apparaître dans les deux tables.",
+    "mots_cles_attendus": [
+      "union all",
+      "combiner",
+      "select",
+      "rapport",
+      "colonnes"
+    ]
+  },
+  {
+    "id": "bases_donnees-079",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Tu dois classer les commandes en 'petite' (moins de 50), 'moyenne' (50 à 200) et 'grande' (plus de 200). Comment écris-tu cela en SQL ?",
+    "reponse_reference": "SELECT id, CASE WHEN montant < 50 THEN 'petite' WHEN montant <= 200 THEN 'moyenne' ELSE 'grande' END AS categorie FROM commandes. L'expression CASE évalue les conditions dans l'ordre pour chaque ligne.",
+    "mots_cles_attendus": [
+      "case",
+      "when",
+      "then",
+      "catégorie",
+      "classement"
+    ]
+  },
+  {
+    "id": "bases_donnees-080",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Dans un rapport, les commandes sans remise (NULL) faussent le calcul SUM(remise). Comment traiter proprement ces NULL ?",
+    "reponse_reference": "On remplace NULL par 0 avec COALESCE : SUM(COALESCE(remise, 0)), ou on filtre avec WHERE remise IS NOT NULL. SUM ignore déjà les NULL, mais COALESCE rend le comportement explicite au niveau ligne.",
+    "mots_cles_attendus": [
+      "coalesce",
+      "null",
+      "sum",
+      "is not null"
+    ]
+  },
+  {
+    "id": "bases_donnees-081",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un index de base de données ?",
+    "reponse_reference": "Un index est une structure auxiliaire (souvent un arbre B-tree) qui accélère la recherche de lignes selon les valeurs d'une ou plusieurs colonnes. En contrepartie, il occupe de l'espace et ralentit légèrement les écritures car il doit être maintenu.",
+    "mots_cles_attendus": [
+      "index",
+      "accélérer",
+      "b-tree",
+      "recherche",
+      "écritures"
+    ]
+  },
+  {
+    "id": "bases_donnees-082",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifie l'acronyme ACID ?",
+    "reponse_reference": "ACID désigne les quatre propriétés des transactions fiables : Atomicité (tout ou rien), Cohérence (règles respectées), Isolation (transactions concurrentes non interférentes) et Durabilité (données conservées après validation).",
+    "mots_cles_attendus": [
+      "atomicité",
+      "cohérence",
+      "isolation",
+      "durabilité",
+      "transactions"
+    ]
+  },
+  {
+    "id": "bases_donnees-083",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la durabilité (D de ACID) et comment est-elle assurée ?",
+    "reponse_reference": "La durabilité garantit qu'une transaction validée (COMMIT) survit à une panne ou un redémarrage. Elle est assurée par le journal des transactions (WAL) écrit sur disque avant la validation effective des données.",
+    "mots_cles_attendus": [
+      "durabilité",
+      "commit",
+      "panne",
+      "journal",
+      "wal"
+    ]
+  },
+  {
+    "id": "bases_donnees-084",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que se passe-t-il lors d'un ROLLBACK ?",
+    "reponse_reference": "ROLLBACK annule toutes les modifications de la transaction en cours et ramène la base à son état au début de celle-ci. Il est déclenché explicitement ou automatiquement en cas d'erreur ou de panne.",
+    "mots_cles_attendus": [
+      "rollback",
+      "annuler",
+      "transaction",
+      "état initial",
+      "erreur"
+    ]
+  },
+  {
+    "id": "bases_donnees-085",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une CTE (Common Table Expression) ?",
+    "reponse_reference": "Une CTE est une requête temporaire nommée, introduite par WITH, utilisable dans le SELECT qui suit. Elle améliore la lisibilité des requêtes complexes et permet la récursivité pour parcourir des hiérarchies.",
+    "mots_cles_attendus": [
+      "with",
+      "cte",
+      "requête nommée",
+      "lisibilité",
+      "récursive"
+    ]
+  },
+  {
+    "id": "bases_donnees-086",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une sous-requête corrélée ?",
+    "reponse_reference": "Une sous-requête corrélée référence des colonnes de la requête externe et est donc réévaluée pour chaque ligne candidate. Elle est expressive mais peut être coûteuse ; un JOIN ou une fonction de fenêtrage est souvent préférable.",
+    "mots_cles_attendus": [
+      "corrélée",
+      "requête externe",
+      "chaque ligne",
+      "coûteuse"
+    ]
+  },
+  {
+    "id": "bases_donnees-087",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quand un index est-il inefficace voire inutile ?",
+    "reponse_reference": "Un index est peu utile sur une colonne à très faible cardinalité (ex. booléen), sur une petite table, ou si la requête sélectionne une grande fraction des lignes. Les fonctions appliquées à la colonne indexée (ex. WHERE UPPER(nom)=...) peuvent aussi empêcher son usage.",
+    "mots_cles_attendus": [
+      "cardinalité",
+      "petite table",
+      "fonction",
+      "fraction",
+      "inutile"
+    ]
+  },
+  {
+    "id": "bases_donnees-088",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence principale entre une base relationnelle et une base NoSQL ?",
+    "reponse_reference": "Une base relationnelle impose un schéma fixe et des tables normalisées avec SQL, tandis qu'une base NoSQL utilise des modèles flexibles (documents, clé-valeur, colonnes, graphes) et renonce souvent à certaines garanties ACID au profit de la scalabilité horizontale.",
+    "mots_cles_attendus": [
+      "schéma flexible",
+      "relationnel",
+      "nosql",
+      "scalabilité",
+      "documents"
+    ]
+  },
+  {
+    "id": "bases_donnees-089",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données orientée documents ? Donne un exemple.",
+    "reponse_reference": "Une base orientée documents stocke des données semi-structurées (généralement JSON/BSON) où chaque document peut avoir sa propre structure. MongoDB est l'exemple le plus connu.",
+    "mots_cles_attendus": [
+      "documents",
+      "json",
+      "semi-structuré",
+      "mongodb",
+      "schéma"
+    ]
+  },
+  {
+    "id": "bases_donnees-090",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un magasin clé-valeur et quel est son cas d'usage typique ?",
+    "reponse_reference": "Un magasin clé-valeur associe chaque clé à une valeur opaque, avec des opérations get/set très rapides. Redis en est l'exemple type, utilisé pour le cache, les sessions ou les files d'attente.",
+    "mots_cles_attendus": [
+      "clé-valeur",
+      "get",
+      "set",
+      "cache",
+      "redis"
+    ]
+  },
+  {
+    "id": "bases_donnees-091",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un index composite et quel ordre des colonnes choisir ?",
+    "reponse_reference": "Un index composite porte sur plusieurs colonnes, par exemple (nom, prenom). L'ordre compte : il suit le principe du préfixe gauche, donc on place d'abord les colonnes utilisées dans l'égalité ou les plus sélectives.",
+    "mots_cles_attendus": [
+      "composite",
+      "plusieurs colonnes",
+      "préfixe gauche",
+      "ordre",
+      "sélectivité"
+    ]
+  },
+  {
+    "id": "bases_donnees-092",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que permet l'opérateur EXISTS dans une clause WHERE ?",
+    "reponse_reference": "EXISTS teste si une sous-requête retourne au moins une ligne, sans en récupérer les valeurs. Il est souvent plus efficace que IN pour vérifier l'existence de lignes liées, surtout avec des sous-requêtes corrélées.",
+    "mots_cles_attendus": [
+      "exists",
+      "sous-requête",
+      "au moins une ligne",
+      "efficacité"
+    ]
+  },
+  {
+    "id": "bases_donnees-093",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "La recherche SELECT * FROM utilisateurs WHERE email = 'x@y.fr' devient lente avec 5 millions de lignes. Que fais-tu ?",
+    "reponse_reference": "Je crée un index sur la colonne email : CREATE INDEX idx_utilisateurs_email ON utilisateurs(email). L'email étant très sélectif et filtré par égalité, l'index transforme un parcours complet en recherche logarithmique.",
+    "mots_cles_attendus": [
+      "index",
+      "email",
+      "create index",
+      "sélectif",
+      "parcours"
+    ]
+  },
+  {
+    "id": "bases_donnees-094",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Tu implémentes un transfert de stock entre deux dépôts : retrait au dépôt A puis ajout au dépôt B. Comment garantis-tu qu'un échec intermédiaire ne corrompt pas le stock ?",
+    "reponse_reference": "J'encadre les deux UPDATE dans une transaction : BEGIN, les deux mises à jour, puis COMMIT ; en cas d'erreur, ROLLBACK annule le retrait déjà effectué. L'atomicité assure que les deux mouvements sont appliqués ou aucun.",
+    "mots_cles_attendus": [
+      "transaction",
+      "begin",
+      "commit",
+      "rollback",
+      "atomicité"
+    ]
+  },
+  {
+    "id": "bases_donnees-095",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Écris une requête avec CTE qui calcule le total des ventes par région puis ne garde que les régions dépassant 100 000 euros.",
+    "reponse_reference": "WITH ventes_region AS (SELECT region, SUM(montant) AS total FROM ventes GROUP BY region) SELECT * FROM ventes_region WHERE total > 100000. La CTE rend la logique en deux étapes claire et réutilisable.",
+    "mots_cles_attendus": [
+      "with",
+      "cte",
+      "sum",
+      "group by",
+      "where"
+    ]
+  },
+  {
+    "id": "bases_donnees-096",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Tu dois lister les clients n'ayant passé aucune commande. Donne deux approches SQL différentes.",
+    "reponse_reference": "Soit un LEFT JOIN avec test de NULL : ... LEFT JOIN commandes c ON c.client_id = cl.id WHERE c.id IS NULL ; soit NOT EXISTS (SELECT 1 FROM commandes c WHERE c.client_id = cl.id). Les deux évitent le piège de NOT IN avec des valeurs NULL.",
+    "mots_cles_attendus": [
+      "left join",
+      "is null",
+      "not exists",
+      "aucune commande",
+      "not in"
+    ]
+  },
+  {
+    "id": "bases_donnees-097",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un développeur ajoute un index sur chaque colonne d'une table très écrite et se plaint que les INSERT sont devenus lents. Explique pourquoi.",
+    "reponse_reference": "Chaque INSERT doit mettre à jour tous les index de la table, ce qui multiplie les écritures et la maintenance des arbres. Trop d'index dégrade les performances d'écriture et gaspille de l'espace : il faut indexer seulement les colonnes réellement utilisées par les requêtes.",
+    "mots_cles_attendus": [
+      "index",
+      "insert",
+      "maintenance",
+      "écriture",
+      "espace"
+    ]
+  },
+  {
+    "id": "bases_donnees-098",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Pour stocker les sessions utilisateurs d'un site à fort trafic avec expiration automatique, tu hésites entre PostgreSQL et Redis. Que choisis-tu et pourquoi ?",
+    "reponse_reference": "Redis est plus adapté : modèle clé-valeur ultra-rapide, TTL natif pour l'expiration des sessions et accès par clé simple sans jointures. PostgreSQL resterait pertinent si les sessions devaient participer à des transactions complexes avec d'autres données.",
+    "mots_cles_attendus": [
+      "redis",
+      "clé-valeur",
+      "ttl",
+      "sessions",
+      "cache"
+    ]
+  },
+  {
+    "id": "bases_donnees-099",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit stocker des profils produits très hétérogènes (les vêtements ont des tailles, l'électronique des spécifications techniques). Quel type de base de données envisages-tu ?",
+    "reponse_reference": "Une base orientée documents comme MongoDB convient bien, car chaque produit est un document dont la structure peut varier sans migration de schéma. En relationnel, il faudrait des colonnes NULL nombreuses ou une table d'attributs clé-valeur.",
+    "mots_cles_attendus": [
+      "documents",
+      "mongodb",
+      "hétérogène",
+      "schéma flexible",
+      "json"
+    ]
+  },
+  {
+    "id": "bases_donnees-100",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux utilisateurs achètent simultanément le dernier article en stock (stock = 1). Quel risque existe-t-il sans mécanisme de protection et comment l'éviter ?",
+    "reponse_reference": "Sans protection, les deux transactions peuvent lire stock = 1 puis le décrémenter, provoquant une vente en rupture (condition de course). On l'évite avec des transactions et un verrou (SELECT ... FOR UPDATE) ou une mise à jour conditionnelle UPDATE ... SET stock = stock - 1 WHERE stock > 0.",
+    "mots_cles_attendus": [
+      "condition de course",
+      "verrou",
+      "for update",
+      "transaction",
+      "stock"
+    ]
+  },
+  {
+    "id": "bases_donnees-101",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 6,
+    "type": "definition",
+    "question": "À quoi sert la commande EXPLAIN ?",
+    "reponse_reference": "EXPLAIN affiche le plan d'exécution choisi par l'optimiseur : accès séquentiel ou par index, types de jointures, estimations de coûts et de lignes. C'est l'outil de base pour diagnostiquer une requête lente.",
+    "mots_cles_attendus": [
+      "plan d'exécution",
+      "optimiseur",
+      "coût",
+      "index",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "bases_donnees-102",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un index couvrant ?",
+    "reponse_reference": "Un index couvrant contient toutes les colonnes nécessaires à la requête, ce qui évite un retour à la table (heap fetch). On l'obtient souvent avec une clause INCLUDE qui ajoute des colonnes non triées à l'index.",
+    "mots_cles_attendus": [
+      "couvrant",
+      "include",
+      "retour table",
+      "colonnes",
+      "lecture"
+    ]
+  },
+  {
+    "id": "bases_donnees-103",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quels sont les niveaux d'isolation des transactions définis par le standard SQL ?",
+    "reponse_reference": "Il y a quatre niveaux : READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ et SERIALIZABLE, du plus permissif au plus strict. Chaque niveau élimine certains phénomènes d'interférence : lectures sales, lectures non reproductibles, lectures fantômes.",
+    "mots_cles_attendus": [
+      "read committed",
+      "repeatable read",
+      "serializable",
+      "isolation",
+      "lectures sales"
+    ]
+  },
+  {
+    "id": "bases_donnees-104",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une lecture sale (dirty read) ?",
+    "reponse_reference": "Une lecture sale se produit quand une transaction lit des données modifiées par une autre transaction non encore validée, qui peuvent ensuite être annulées. Seul READ UNCOMMITTED l'autorise ; les autres niveaux d'isolation l'empêchent.",
+    "mots_cles_attendus": [
+      "lecture sale",
+      "non validée",
+      "annulée",
+      "read uncommitted",
+      "isolation"
+    ]
+  },
+  {
+    "id": "bases_donnees-105",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une vue matérialisée et quand l'utiliser ?",
+    "reponse_reference": "Une vue matérialisée stocke physiquement le résultat d'une requête au lieu de la rejouer à chaque lecture. Elle accélère les agrégations coûteuses (tableaux de bord) au prix d'une fraîcheur différée, gérée par REFRESH manuel, planifié ou incrémental.",
+    "mots_cles_attendus": [
+      "vue matérialisée",
+      "stocke",
+      "refresh",
+      "agrégation",
+      "fraîcheur"
+    ]
+  },
+  {
+    "id": "bases_donnees-106",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la dénormalisation et dans quel cas est-elle justifiée ?",
+    "reponse_reference": "La dénormalisation réintroduit volontairement de la redondance (colonnes calculées, agrégats stockés) pour accélérer les lectures au détriment de la simplicité des écritures. Elle est justifiée en analytique ou pour des compteurs très lus, à condition de gérer la cohérence.",
+    "mots_cles_attendus": [
+      "redondance",
+      "lectures",
+      "performances",
+      "cohérence",
+      "analytique"
+    ]
+  },
+  {
+    "id": "bases_donnees-107",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données orientée colonnes comme Cassandra ?",
+    "reponse_reference": "Une base orientée colonnes (wide-column) stocke les données par familles de colonnes plutôt que par lignes, optimisant les écritures massives et les lectures par partition. Cassandra en est l'exemple typique, conçu pour la scalabilité horizontale sans point unique de défaillance.",
+    "mots_cles_attendus": [
+      "colonnes",
+      "cassandra",
+      "scalabilité",
+      "écritures",
+      "partition"
+    ]
+  },
+  {
+    "id": "bases_donnees-108",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Écris une requête avec fonction de fenêtrage qui affiche chaque commande avec la somme cumulée des montants par client, triée par date.",
+    "reponse_reference": "SELECT id, client_id, montant, SUM(montant) OVER (PARTITION BY client_id ORDER BY date_commande) AS cumul FROM commandes. La clause OVER définit la fenêtre : partition par client et ordre chronologique.",
+    "mots_cles_attendus": [
+      "over",
+      "partition by",
+      "order by",
+      "somme cumulée",
+      "fenêtrage"
+    ]
+  },
+  {
+    "id": "bases_donnees-109",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu dois extraire le top 3 des produits les plus vendus de chaque catégorie. Comment procèdes-tu en SQL ?",
+    "reponse_reference": "Avec ROW_NUMBER() : SELECT * FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY categorie ORDER BY ventes DESC) AS rang FROM produits) t WHERE rang <= 3. La fonction numérote les produits dans chaque catégorie puis on filtre sur le rang.",
+    "mots_cles_attendus": [
+      "row_number",
+      "partition by",
+      "rang",
+      "top",
+      "sous-requête"
+    ]
+  },
+  {
+    "id": "bases_donnees-110",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "EXPLAIN affiche 'Seq Scan' sur une table d'un million de lignes alors qu'un index existe sur la colonne filtrée. Quelles causes envisages-tu ?",
+    "reponse_reference": "La condition peut sélectionner une grande fraction des lignes (le scan séquentiel devient moins cher), les statistiques peuvent être périmées (lancer ANALYZE), ou une fonction appliquée à la colonne (WHERE LOWER(x)=...) empêche l'usage de l'index. Le type de condition (inégalité large) peut aussi expliquer ce choix.",
+    "mots_cles_attendus": [
+      "seq scan",
+      "statistiques",
+      "analyze",
+      "sélectivité",
+      "fonction"
+    ]
+  },
+  {
+    "id": "bases_donnees-111",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "La requête récurrente WHERE statut = 'actif' AND date_inscription > '2024-01-01' est lente sur la table utilisateurs. Quel index crées-tu et pourquoi dans cet ordre ?",
+    "reponse_reference": "Un index composite (statut, date_inscription) : la colonne testée par égalité d'abord, puis celle filtrée par intervalle. L'inverse serait moins efficace car l'intervalle en tête casserait l'usage du second critère.",
+    "mots_cles_attendus": [
+      "index composite",
+      "égalité",
+      "intervalle",
+      "ordre",
+      "statut"
+    ]
+  },
+  {
+    "id": "bases_donnees-112",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un job nocturne lit une table de tarifs pendant qu'un autre processus met ces tarifs à jour ligne par ligne, produisant un rapport mélangeant anciens et nouveaux prix. Quel niveau d'isolation résout le problème ?",
+    "reponse_reference": "REPEATABLE READ (ou SERIALIZABLE) garantit que le job voit un instantané cohérent des données pendant toute sa transaction, sans lectures non reproductibles. En READ COMMITTED, chaque instruction verrait les mises à jour validées entre-temps.",
+    "mots_cles_attendus": [
+      "repeatable read",
+      "instantané",
+      "cohérent",
+      "isolation",
+      "lectures non reproductibles"
+    ]
+  },
+  {
+    "id": "bases_donnees-113",
+    "domaine": "bases_donnees",
+    "sous_theme": "conception_schema",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Le tableau de bord exécute toutes les 10 secondes un COUNT(*) et un SUM très lourds sur 50 millions de ventes. Quelle solution de schéma proposes-tu ?",
+    "reponse_reference": "Créer une vue matérialisée pré-agrégée par jour (ou par vendeur) rafraîchie périodiquement, le tableau de bord ne lisant plus que le résultat compact. On peut aussi maintenir une table d'agrégats mise à jour par triggers ou par le code applicatif.",
+    "mots_cles_attendus": [
+      "vue matérialisée",
+      "pré-agrégation",
+      "refresh",
+      "tableau de bord",
+      "agrégats"
+    ]
+  },
+  {
+    "id": "bases_donnees-114",
+    "domaine": "bases_donnees",
+    "sous_theme": "normalisation",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu conçois le schéma d'une plateforme de formation : utilisateurs, cours, et inscriptions avec une note. Dessine les tables et leurs clés en respectant la 3FN.",
+    "reponse_reference": "utilisateurs(id PK, nom, email UNIQUE), cours(id PK, titre, formateur_id FK vers utilisateurs), inscriptions(utilisateur_id FK, cours_id FK, note, date, PRIMARY KEY(utilisateur_id, cours_id)). Chaque fait non-clé dépend uniquement de la clé, sans dépendance transitoire.",
+    "mots_cles_attendus": [
+      "clé primaire",
+      "clé étrangère",
+      "inscriptions",
+      "3fn",
+      "tables"
+    ]
+  },
+  {
+    "id": "bases_donnees-115",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application de suivi de flotte reçoit des positions GPS de 10 000 véhicules toutes les secondes et les requêtes portent sur les dernières positions par véhicule. Quelle famille NoSQL est adaptée ?",
+    "reponse_reference": "Une base orientée colonnes ou documents à écriture très rapide comme Cassandra (clé de partition = véhicule, clustering par horodatage) convient bien à ce flux massif. Le modèle clé-valeur type Redis peut aussi stocker la dernière position de chaque véhicule.",
+    "mots_cles_attendus": [
+      "cassandra",
+      "écritures massives",
+      "partition",
+      "horodatage",
+      "gps"
+    ]
+  },
+  {
+    "id": "bases_donnees-116",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Ton équipe veut migrer un catalogue e-commerce de PostgreSQL vers MongoDB 'parce que c'est plus moderne'. Quels critères objectifs examines-tu avant de décider ?",
+    "reponse_reference": "J'évalue la structure des données (relations fortes ou documents autonomes), le besoin de transactions ACID et de jointures, la volumétrie et la scalabilité requise, et les compétences de l'équipe. Si le catalogue est relationnel avec stocks, prix et commandes liés, PostgreSQL reste probablement le meilleur choix.",
+    "mots_cles_attendus": [
+      "critères",
+      "relations",
+      "acid",
+      "volumétrie",
+      "jointures"
+    ]
+  },
+  {
+    "id": "bases_donnees-117",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une boucle applicative exécute 10 000 requêtes SELECT une par une pour charger les détails de 10 000 commandes. Quel problème reconnais-tu et comment le corriger ?",
+    "reponse_reference": "C'est le problème N+1 : une requête liste puis N requêtes de détail. La correction consiste à charger en une seule requête avec JOIN ou WHERE id IN (...), ou à utiliser des requêtes par lots (batch) dans l'ORM.",
+    "mots_cles_attendus": [
+      "n+1",
+      "jointure",
+      "in",
+      "batch",
+      "lots"
+    ]
+  },
+  {
+    "id": "bases_donnees-118",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un service de réservation de places de spectacle doit empêcher deux clients de réserver le même siège simultanément. Quelle stratégie transactionnelle mets-tu en place ?",
+    "reponse_reference": "Une transaction par réservation avec verrouillage du siège : SELECT ... FOR UPDATE sur la ligne du siège, vérification de sa disponibilité, INSERT de la réservation puis COMMIT. Le verrou bloque la transaction concurrente jusqu'à la fin, évitant la double réservation.",
+    "mots_cles_attendus": [
+      "for update",
+      "verrou",
+      "transaction",
+      "siège",
+      "commit"
+    ]
+  },
+  {
+    "id": "bases_donnees-119",
+    "domaine": "bases_donnees",
+    "sous_theme": "sql_bases",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Tu dois insérer 100 000 lignes issues d'un fichier CSV dans une table, en ignorant les doublons de clé déjà présents. Quelles approches utilises-tu ?",
+    "reponse_reference": "COPY (PostgreSQL) ou LOAD DATA pour l'import massif, puis INSERT ... ON CONFLICT DO NOTHING (ou INSERT IGNORE selon le SGBD) pour ignorer les doublons. Une autre approche est d'importer dans une table temporaire puis de fusionner avec un anti-join.",
+    "mots_cles_attendus": [
+      "copy",
+      "on conflict",
+      "import massif",
+      "doublons",
+      "table temporaire"
+    ]
+  },
+  {
+    "id": "bases_donnees-120",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une requête JOIN sur deux tables de 10 millions de lignes chacune met plusieurs minutes. Quelles pistes d'optimisation explores-tu en premier ?",
+    "reponse_reference": "Je vérifie avec EXPLAIN si des index existent sur les colonnes de jointure et si les statistiques sont à jour, puis j'examine la sélectivité des filtres WHERE à pousser avant la jointure. Je contrôle aussi le type de jointure choisi (hash join vs nested loop) et la mémoire de travail allouée.",
+    "mots_cles_attendus": [
+      "explain",
+      "index",
+      "jointure",
+      "statistiques",
+      "hash join"
+    ]
+  },
+  {
+    "id": "bases_donnees-121",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un interblocage (deadlock) en base de données ?",
+    "reponse_reference": "Un deadlock survient quand deux transactions s'attendent mutuellement : chacune détient un verrou dont l'autre a besoin, et aucune ne peut avancer. Le SGBD le détecte et sacrifie (annule) l'une des transactions pour débloquer l'autre.",
+    "mots_cles_attendus": [
+      "deadlock",
+      "verrous",
+      "attente mutuelle",
+      "détection",
+      "annulation"
+    ]
+  },
+  {
+    "id": "bases_donnees-122",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quels sont les verrous partagés et exclusifs ?",
+    "reponse_reference": "Un verrou partagé (S) autorise plusieurs lecteurs simultanés mais bloque les écritures ; un verrou exclusif (X) est détenu par un seul acteur et bloque lectures et écritures concurrentes. Les SELECT posent des verrous S et les UPDATE des verrous X.",
+    "mots_cles_attendus": [
+      "partagé",
+      "exclusif",
+      "lecture",
+      "écriture",
+      "verrou"
+    ]
+  },
+  {
+    "id": "bases_donnees-123",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la réplication maître-esclave ?",
+    "reponse_reference": "La réplication maître-esclave copie en continu les écritures d'un serveur primaire vers un ou plusieurs secondaires, qui servent les lectures et prennent le relais en cas de panne. Elle améliore la disponibilité et la scalabilité en lecture, avec un possible décalage (latence de réplication).",
+    "mots_cles_attendus": [
+      "primaire",
+      "secondaire",
+      "copies",
+      "disponibilité",
+      "latence"
+    ]
+  },
+  {
+    "id": "bases_donnees-124",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle est la différence entre réplication synchrone et asynchrone ?",
+    "reponse_reference": "En synchrone, le primaire attend la confirmation du secondaire avant de valider la transaction : aucune perte de données mais latence accrue. En asynchrone, il valide sans attendre : meilleure performance mais risque de perdre les dernières transactions en cas de panne du primaire.",
+    "mots_cles_attendus": [
+      "synchrone",
+      "asynchrone",
+      "confirmation",
+      "perte de données",
+      "latence"
+    ]
+  },
+  {
+    "id": "bases_donnees-125",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'énonce le théorème CAP ?",
+    "reponse_reference": "CAP stipule qu'un système distribué ne peut garantir simultanément que deux des trois propriétés : Cohérence, Disponibilité et tolérance à la Partition réseau. En pratique, lors d'une partition, il faut choisir entre cohérence (CP) et disponibilité (AP).",
+    "mots_cles_attendus": [
+      "cohérence",
+      "disponibilité",
+      "partition",
+      "distribué",
+      "choix"
+    ]
+  },
+  {
+    "id": "bases_donnees-126",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le partitionnement de tables ?",
+    "reponse_reference": "Le partitionnement divise une grande table en segments physiques plus petits (par plage de dates, liste ou hachage) tout en gardant une logique de table unique. Il accélère les requêtes ciblées (partition pruning) et simplifie la purge des vieilles données.",
+    "mots_cles_attendus": [
+      "partitionnement",
+      "segments",
+      "plage",
+      "pruning",
+      "purge"
+    ]
+  },
+  {
+    "id": "bases_donnees-127",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le MVCC (Multi-Version Concurrency Control) ?",
+    "reponse_reference": "Le MVCC stocke plusieurs versions d'une ligne afin que les lecteurs ne bloquent jamais les écrivains et inversement. Chaque transaction lit un instantané cohérent (snapshot) selon son niveau d'isolation, au prix d'un nettoyage des versions mortes (VACUUM chez PostgreSQL).",
+    "mots_cles_attendus": [
+      "mvcc",
+      "versions",
+      "lecteurs",
+      "écrivains",
+      "snapshot",
+      "vacuum"
+    ]
+  },
+  {
+    "id": "bases_donnees-128",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Deux jobs batch nocturnes mettent à jour des commandes en sens inverse et provoquent des deadlocks réguliers. Comment les éliminer ?",
+    "reponse_reference": "Il faut faire traiter les lignes dans le même ordre par les deux jobs (par exemple trier par id croissant avant mise à jour) et réduire la taille des transactions. Retenter automatiquement les transactions victimes de deadlock complète la solution.",
+    "mots_cles_attendus": [
+      "ordre",
+      "tri",
+      "deadlock",
+      "transactions courtes",
+      "retry"
+    ]
+  },
+  {
+    "id": "bases_donnees-129",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "EXPLAIN (ANALYZE) montre un Nested Loop avec 2 millions de boucles sur une jointure de grandes tables. Que fais-tu ?",
+    "reponse_reference": "Je cherche pourquoi l'optimiseur a choisi Nested Loop : statistiques périmées (ANALYZE), estimation de cardinalité erronée, index manquant sur la clé de jointure. Un Hash Join serait plus adapté pour de gros volumes ; corriger les statistiques ou ajouter l'index change généralement le plan.",
+    "mots_cles_attendus": [
+      "nested loop",
+      "hash join",
+      "statistiques",
+      "cardinalité",
+      "index"
+    ]
+  },
+  {
+    "id": "bases_donnees-130",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une pagination OFFSET 500000 LIMIT 20 met plusieurs secondes. Pourquoi et quelle alternative proposes-tu ?",
+    "reponse_reference": "OFFSET oblige le moteur à produire puis jeter 500 000 lignes. L'alternative est la pagination par curseur (keyset) : WHERE (id) > dernier_id_vu ORDER BY id LIMIT 20, qui utilise l'index directement et reste à coût constant quelle que soit la profondeur.",
+    "mots_cles_attendus": [
+      "offset",
+      "keyset",
+      "curseur",
+      "index",
+      "pagination"
+    ]
+  },
+  {
+    "id": "bases_donnees-131",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une colonne recherche_texte doit être filtrée avec LIKE '%mot%' sur 20 millions de lignes. Pourquoi l'index B-tree classique ne sert-il à rien et quelle solution adoptes-tu ?",
+    "reponse_reference": "Un B-tree indexe le début de la chaîne, donc un motif avec joker initial ne peut pas l'exploiter. On utilise un index spécialisé : trigrammes (pg_trgm sur PostgreSQL) ou un moteur de recherche plein texte comme Elasticsearch.",
+    "mots_cles_attendus": [
+      "like",
+      "joker",
+      "b-tree",
+      "trigrammes",
+      "plein texte"
+    ]
+  },
+  {
+    "id": "bases_donnees-132",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Ton application lit parfois une donnée juste après l'avoir écrite, mais le secondaire de réplication ne l'a pas encore reçue et affiche l'ancienne valeur. Comment résoudre ce problème ?",
+    "reponse_reference": "C'est un problème de lecture de sa propre écriture (read-your-writes). On route les lectures critiques (ou celles suivant immédiatement une écriture) vers le primaire, ou on attend que le secondaire ait rattrapé son retard de réplication avant de lire.",
+    "mots_cles_attendus": [
+      "read your writes",
+      "primaire",
+      "secondaire",
+      "latence",
+      "routage"
+    ]
+  },
+  {
+    "id": "bases_donnees-133",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu dois mettre en place une haute disponibilité pour un PostgreSQL de production avec zéro perte de données tolérée. Quelle architecture retiens-tu ?",
+    "reponse_reference": "Une réplication synchrone vers au moins un standby avec bascule automatique gérée par un outil comme Patroni, plus un équilibreur (HAProxy) pour router les connexions. La réplication synchrone garantit qu'une transaction validée existe sur le secondaire avant confirmation.",
+    "mots_cles_attendus": [
+      "synchrone",
+      "standby",
+      "patroni",
+      "bascule",
+      "zéro perte"
+    ]
+  },
+  {
+    "id": "bases_donnees-134",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une base de graphe serait-elle adaptée à un réseau social où l'on cherche les amis d'amis et les communautés ? Justifie.",
+    "reponse_reference": "Oui : les bases orientées graphes (Neo4j) stockent les relations comme des arêtes de première classe et parcourent efficacement plusieurs niveaux de profondeur (amis d'amis, plus court chemin, détection de communautés). En relationnel, ces traversées exigeraient des auto-jointures récursives coûteuses.",
+    "mots_cles_attendus": [
+      "graphe",
+      "neo4j",
+      "arêtes",
+      "parcours",
+      "relations"
+    ]
+  },
+  {
+    "id": "bases_donnees-135",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Dans un cluster MongoDB, tu dois choisir la clé de shard (shard key) d'une collection de logs d'événements horodatés. Pourquoi un shard key basé uniquement sur l'horodatage est-il mauvais ?",
+    "reponse_reference": "Une clé monotone comme l'horodatage dirige toutes les écritures récentes vers un seul shard, créant un point chaud (hotspot) et annulant l'intérêt du sharding. On préfère une clé à haute cardinalité bien distribuée, éventuellement composite (ex. service + hash).",
+    "mots_cles_attendus": [
+      "shard key",
+      "monotone",
+      "hotspot",
+      "cardinalité",
+      "distribution"
+    ]
+  },
+  {
+    "id": "bases_donnees-136",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une table de 2 milliards de lignes d'historique de mesures (capteurs, une ligne par minute) est interrogée quasi exclusivement par intervalle de dates et par capteur. Comment la partitionnes-tu ?",
+    "reponse_reference": "Un partitionnement par plage mensuelle (ou hebdomadaire) sur la date, avec des index locaux sur capteur_id, permet le partition pruning sur les requêtes par intervalle et la purge instantanée par DROP des vieilles partitions. Une clé composite (capteur_id, date) est aussi envisageable selon les accès.",
+    "mots_cles_attendus": [
+      "plage",
+      "date",
+      "pruning",
+      "purge",
+      "index local"
+    ]
+  },
+  {
+    "id": "bases_donnees-137",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Tu dois exécuter une migration modifiant 5 millions de lignes en production sans bloquer l'application. Quelle stratégie emploies-tu ?",
+    "reponse_reference": "Je découpe la migration en petits lots (batch) commités séparément avec pause entre chaque, en ciblant par plages d'identifiants pour éviter une transaction géante. Cela limite la durée des verrous, la taille du journal et permet de reprendre en cas d'échec.",
+    "mots_cles_attendus": [
+      "lots",
+      "batch",
+      "transaction courte",
+      "migration",
+      "verrous"
+    ]
+  },
+  {
+    "id": "bases_donnees-138",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une requête de reporting agrège toute une table de faits chaque nuit et prend 2 heures. Quelles optimisations proposes-tu, du plus simple au plus structurel ?",
+    "reponse_reference": "D'abord vérifier index, statistiques et plan d'exécution, et ne sélectionner que les colonnes nécessaires. Ensuite pré-agréger dans une vue matérialisée ou une table de synthèse rafraîchie. Enfin, si le volume continue de croître, déplacer le reporting vers un entrepôt analytique en colonnes.",
+    "mots_cles_attendus": [
+      "plan",
+      "vue matérialisée",
+      "pré-agrégation",
+      "entrepôt",
+      "index"
+    ]
+  },
+  {
+    "id": "bases_donnees-139",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une application construit ses requêtes par concaténation : \"SELECT * FROM users WHERE name = '\" + saisie + \"'\". Quel risque majeur cela crée-t-il et quelle est la parade ?",
+    "reponse_reference": "C'est le risque d'injection SQL : une saisie comme ' OR '1'='1 modifie la logique de la requête et peut exfiltrer ou détruire des données. La parade est d'utiliser systématiquement des requêtes préparées avec paramètres liés, et de valider les entrées.",
+    "mots_cles_attendus": [
+      "injection sql",
+      "concaténation",
+      "requêtes préparées",
+      "paramètres",
+      "validation"
+    ]
+  },
+  {
+    "id": "bases_donnees-140",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une requête préparée (prepared statement) ?",
+    "reponse_reference": "Une requête préparée est un modèle SQL envoyé au SGBD avec des marqueurs (? ou $1) dont les valeurs sont transmises séparément, jamais interprétées comme du SQL. Elle empêche l'injection SQL et permet la réutilisation du plan d'exécution.",
+    "mots_cles_attendus": [
+      "requête préparée",
+      "marqueurs",
+      "valeurs séparées",
+      "injection",
+      "plan"
+    ]
+  },
+  {
+    "id": "bases_donnees-141",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment l'optimiseur de requêtes choisit-il un plan d'exécution ?",
+    "reponse_reference": "L'optimiseur évalue plusieurs plans possibles (accès par index, scans, types de jointures) en estimant leur coût à partir des statistiques : cardinalité des tables, distribution des valeurs, sélectivité des prédicats. Il retient le plan au coût estimé le plus faible, d'où l'importance de statistiques à jour.",
+    "mots_cles_attendus": [
+      "optimiseur",
+      "coût",
+      "statistiques",
+      "cardinalité",
+      "plan"
+    ]
+  },
+  {
+    "id": "bases_donnees-142",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle est la différence entre Hash Join, Merge Join et Nested Loop Join ?",
+    "reponse_reference": "Nested Loop parcourt la seconde table pour chaque ligne de la première (bon pour petites tables avec index). Hash Join construit une table de hachage en mémoire d'un côté puis sonde de l'autre (volumes moyens/grands, égalité). Merge Join fusionne deux entrées triées sur la clé de jointure (grands volumes déjà triés ou indexés).",
+    "mots_cles_attendus": [
+      "nested loop",
+      "hash join",
+      "merge join",
+      "tri",
+      "hachage"
+    ]
+  },
+  {
+    "id": "bases_donnees-143",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels phénomènes d'interférence le niveau SERIALIZABLE élimine-t-il ?",
+    "reponse_reference": "SERIALIZABLE élimine les lectures sales, non reproductibles et fantômes, garantissant un résultat équivalent à une exécution séquentielle des transactions. Il coûte plus cher en verrous ou en validations de snapshot (SSI chez PostgreSQL, qui annule certaines transactions en cas de conflit).",
+    "mots_cles_attendus": [
+      "serializable",
+      "lectures fantômes",
+      "lecture sale",
+      "ssi",
+      "séquentiel"
+    ]
+  },
+  {
+    "id": "bases_donnees-144",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels principes de sécurité appliques-tu aux comptes utilisés par une application pour accéder à la base ?",
+    "reponse_reference": "Le moindre privilège : un compte applicatif dédié sans droits DDL ni superutilisateur, limité aux SELECT/INSERT/UPDATE sur les seules tables nécessaires, et distinct du compte de migration. Les mots de passe sont stockés dans un gestionnaire de secrets, jamais dans le code.",
+    "mots_cles_attendus": [
+      "moindre privilège",
+      "compte dédié",
+      "permissions",
+      "secrets",
+      "ddl"
+    ]
+  },
+  {
+    "id": "bases_donnees-145",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment stocke-t-on proprement des mots de passe en base ?",
+    "reponse_reference": "Jamais en clair ni avec un simple hachage rapide : on utilise une fonction de dérivation lente et salée comme bcrypt, scrypt ou Argon2, avec un sel unique par utilisateur. La vérification se fait en recalculant le hachage, sans stocker ni comparer de secret réversible.",
+    "mots_cles_attendus": [
+      "bcrypt",
+      "argon2",
+      "sel",
+      "hachage",
+      "lent"
+    ]
+  },
+  {
+    "id": "bases_donnees-146",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le split-brain dans un système à haute disponibilité ?",
+    "reponse_reference": "Le split-brain survient quand deux nœuds d'un cluster se croient chacun primaire après une partition réseau et acceptent des écritures divergentes. On le prévient avec un mécanisme de quorum (majorité de votes) ou des témoins (fencing/STONITH) qui isolent le nœud minoritaire.",
+    "mots_cles_attendus": [
+      "split-brain",
+      "partition",
+      "quorum",
+      "primaire",
+      "fencing"
+    ]
+  },
+  {
+    "id": "bases_donnees-147",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'indexation partielle et quel est son intérêt ?",
+    "reponse_reference": "Un index partiel ne référence que les lignes vérifiant une condition, par exemple CREATE INDEX ... WHERE statut = 'en_attente'. Il est plus petit, plus rapide à maintenir et parfait pour les états minoritaires mais très interrogés (files de traitement).",
+    "mots_cles_attendus": [
+      "index partiel",
+      "where",
+      "plus petit",
+      "file",
+      "condition"
+    ]
+  },
+  {
+    "id": "bases_donnees-148",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "EXPLAIN (ANALYZE, BUFFERS) montre que le temps réel d'un nœud est 100 fois supérieur à l'estimation et que les 'shared hit' explosent. Comment interprètes-tu et que fais-tu ?",
+    "reponse_reference": "Une telle divergence d'estimation signale des statistiques périmées ou une corrélation de données que l'optimiseur ignore, ce qui fausse le choix du plan. Je lance ANALYZE (voire VACUUM ANALYZE), vérifie les paramètres comme default_statistics_target, et si besoin réécris la requête ou ajoute un index adapté.",
+    "mots_cles_attendus": [
+      "estimation",
+      "statistiques",
+      "analyze",
+      "buffers",
+      "plan"
+    ]
+  },
+  {
+    "id": "bases_donnees-149",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une transaction longue reste ouverte pendant qu'un développeur débogue dans son IDE, connectée à la base de production. Quels dégâts peut-elle causer même sans rien écrire ?",
+    "reponse_reference": "Une transaction ouverte bloque le VACUUM, donc les versions mortes s'accumulent et la base gonfle (bloat), et elle peut retenir des verrous qui bloquent les DDL. Il faut surveiller les transactions longues (pg_stat_activity) et configurer idle_in_transaction_session_timeout.",
+    "mots_cles_attendus": [
+      "transaction longue",
+      "vacuum",
+      "bloat",
+      "verrous",
+      "timeout"
+    ]
+  },
+  {
+    "id": "bases_donnees-150",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Deux transactions exécutent chacune : lire le solde de deux comptes puis mettre à jour les deux, mais dans un ordre différent selon le code. Quel phénomène redoutes-tu et comment le préviens-tu ?",
+    "reponse_reference": "C'est un deadlock classique : T1 verrouille compte A puis attend B, T2 verrouille B puis attend A. La prévention consiste à toujours verrouiller les ressources dans un ordre canonique identique (par exemple par id croissant) dans tout le code.",
+    "mots_cles_attendus": [
+      "deadlock",
+      "ordre canonique",
+      "verrous",
+      "id croissant",
+      "prévention"
+    ]
+  },
+  {
+    "id": "bases_donnees-151",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Le retard de réplication (replication lag) d'un secondaire atteint 10 minutes en période de pointe. Quelles causes investigues-tu et quelles solutions appliques-tu ?",
+    "reponse_reference": "Causes possibles : secondaires sous-dimensionnés, conflit avec des requêtes longues en lecture, WAL généré en masse par des batchs. Solutions : dimensionner le secondaire au niveau du primaire, régler max_standby_streaming_delay, répartir les écritures massives, ou ajouter des secondaires pour diluer la charge de lecture.",
+    "mots_cles_attendus": [
+      "lag",
+      "secondaire",
+      "wal",
+      "conflit",
+      "dimensionnement"
+    ]
+  },
+  {
+    "id": "bases_donnees-152",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Après un failover automatique, l'ancien primaire revient en ligne avec quelques transactions validées que le nouveau primaire n'a jamais reçues (réplication asynchrone). Que faut-il faire ?",
+    "reponse_reference": "Ce sont des transactions divergentes perdues du point de vue des clients qui avaient reçu un COMMIT. Il faut identifier la divergence (timeline, journaux applicatifs), réappliquer ou réconcilier ces transactions manuellement, et évaluer le passage en réplication synchrone pour éviter la perte de données.",
+    "mots_cles_attendus": [
+      "divergence",
+      "timeline",
+      "réconciliation",
+      "asynchrone",
+      "synchrone"
+    ]
+  },
+  {
+    "id": "bases_donnees-153",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un formulaire de connexion avec la requête \"SELECT id FROM users WHERE login='\" + login + \"' AND pass='\" + pass + \"'\" est en production. Un attaquant saisit login : admin' -- . Que se passe-t-il et comment corriges-tu ?",
+    "reponse_reference": "Le -- commente la suite : la requête devient WHERE login='admin' --' AND pass=...', donc l'attaquant se connecte en admin sans mot de passe. La correction immédiate est de passer aux requêtes préparées avec paramètres liés, plus un hachage des mots de passe côté serveur.",
+    "mots_cles_attendus": [
+      "injection",
+      "commentaire",
+      "requêtes préparées",
+      "admin",
+      "paramètres"
+    ]
+  },
+  {
+    "id": "bases_donnees-154",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu dois protéger une colonne contenant des numéros de carte bancaire au repos dans PostgreSQL. Quelles options techniques as-tu ?",
+    "reponse_reference": "Le chiffrement au niveau application (avant insertion) avec gestion des clés externe est le plus sûr, car le serveur ne voit jamais le clair. Alternatives : pgcrypto pour un chiffrement colonne, et idéalement tokenisation : ne stocker qu'un jeton, la vraie carte restant chez un prestataire conforme PCI-DSS.",
+    "mots_cles_attendus": [
+      "chiffrement",
+      "pgcrypto",
+      "tokenisation",
+      "clés",
+      "pci-dss"
+    ]
+  },
+  {
+    "id": "bases_donnees-155",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une API permet de consulter un profil utilisateur via /users?id=123, et la requête SQL est correctement paramétrée. Pourtant un utilisateur authentifié peut lire le profil de n'importe qui. Comment appelle-t-on cette faille et comment la corriger au niveau base ?",
+    "reponse_reference": "C'est un contrôle d'accès objet défaillant (IDOR, broken access control) : la requête est sûre mais ne vérifie pas que l'appelant a le droit sur cette ligne. On corrige en ajoutant la condition d'appartenance (WHERE id = :id AND owner_id = :user), et on peut renforcer avec Row Level Security (RLS) côté base.",
+    "mots_cles_attendus": [
+      "idor",
+      "contrôle d'accès",
+      "row level security",
+      "owner",
+      "autorisation"
+    ]
+  },
+  {
+    "id": "bases_donnees-156",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Ton équipe veut anonymiser une copie de la base de production pour les environnements de test. Quelles techniques appliques-tu aux données personnelles ?",
+    "reponse_reference": "On masque ou pseudonymise les champs sensibles (noms, emails, IBAN) par génération de données fictives cohérentes, hachage salé des identifiants, et généralisation des dates. Le dump complet non masqué doit être interdit, avec chiffrement des copies de test et accès restreint.",
+    "mots_cles_attendus": [
+      "anonymisation",
+      "pseudonymisation",
+      "masquage",
+      "données fictives",
+      "rgpd"
+    ]
+  },
+  {
+    "id": "bases_donnees-157",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une table reçoit uniquement des INSERT chronologiques (journal d'audit) et les requêtes portent sur les 7 derniers jours. Quel type d'index et quelle structure de table proposes-tu ?",
+    "reponse_reference": "Un index B-tree sur la colonne horodatage suffit car les insertions chronologiques remplissent sa dernière page sans fragmentation. Combiné à un partitionnement par jour/semaine, les vieilles partitions peuvent être archivées ou supprimées d'un coup, et le pruning accélère les requêtes récentes.",
+    "mots_cles_attendus": [
+      "b-tree",
+      "chronologique",
+      "partitionnement",
+      "pruning",
+      "audit"
+    ]
+  },
+  {
+    "id": "bases_donnees-158",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une CTE dans PostgreSQL ralentissait la requête en étant recalculée plusieurs fois ; après passage en PostgreSQL 12+, le comportement a changé. Explique l'optimization fence et son évolution.",
+    "reponse_reference": "Historiquement, PostgreSQL matérialisait systématiquement les CTE (barrière d'optimisation : les prédicats externes n'étaient pas poussés dedans). Depuis la version 12, une CTE non récursive référencée une seule fois est inlinée comme sous-requête, permettant à l'optimiseur de fusionner les conditions et de choisir un meilleur plan.",
+    "mots_cles_attendus": [
+      "cte",
+      "matérialisation",
+      "inline",
+      "optimisation",
+      "postgresql 12"
+    ]
+  },
+  {
+    "id": "bases_donnees-159",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Tu dois exposer un rapport 'chiffre d'affaires mensuel par région' via API, calculé par une requête lourde sur 80 millions de lignes, rafraîchi au maximum une fois par heure. Conçois la solution la plus efficace.",
+    "reponse_reference": "Je crée une vue matérialisée (ou table d'agrégat) pré-calculant CA par mois/région, rafraîchie chaque heure via un job avec REFRESH MATERIALIZED VIEW CONCURRENTLY si un index unique existe. L'API lit cette petite table en quelques millisecondes au lieu d'agréger 80 millions de lignes à chaque appel.",
+    "mots_cles_attendus": [
+      "vue matérialisée",
+      "refresh concurrently",
+      "job",
+      "pré-agrégat",
+      "api"
+    ]
+  },
+  {
+    "id": "bases_donnees-160",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un système de billetterie doit vendre des places avec un compteur global par spectacle très disputé (hot row). Les transactions se sérialisent sur cette ligne et le débit s'effondre. Quelles parades envisages-tu ?",
+    "reponse_reference": "On peut fragmenter le compteur en plusieurs sous-compteurs tirés aléatoirement (sharded counter) puis sommer à la lecture, réserver des blocs de places par guichet, ou déplacer le compteur dans un cache atomique (INCR Redis) réconcilié avec la base. Chacune réduit la contention sur la ligne chaude.",
+    "mots_cles_attendus": [
+      "hot row",
+      "compteur fragmenté",
+      "contention",
+      "redis",
+      "blocs"
+    ]
+  },
+  {
+    "id": "bases_donnees-161",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le quorum dans un cluster de bases de données ?",
+    "reponse_reference": "Le quorum est la majorité de nœuds d'un cluster qui doit être joignable et d'accord pour valider une écriture ou élire un primaire. Avec N répliques, il faut N/2+1 votes, ce qui tolère (N-1)/2 pannes tout en empêchant le split-brain.",
+    "mots_cles_attendus": [
+      "quorum",
+      "majorité",
+      "nœuds",
+      "split-brain",
+      "élection"
+    ]
+  },
+  {
+    "id": "bases_donnees-162",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Que désignent RPO et RTO dans un plan de reprise ?",
+    "reponse_reference": "RPO (Recovery Point Objective) est la quantité maximale de données qu'on accepte de perdre, exprimée en temps depuis la dernière sauvegarde réutilisable. RTO (Recovery Time Objective) est la durée maximale d'indisponibilité acceptée. Ils dimensionnent la stratégie de sauvegarde, réplication et bascule.",
+    "mots_cles_attendus": [
+      "rpo",
+      "rto",
+      "perte de données",
+      "indisponibilité",
+      "reprise"
+    ]
+  },
+  {
+    "id": "bases_donnees-163",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le sharding et en quoi diffère-t-il du partitionnement local ?",
+    "reponse_reference": "Le sharding répartit les données sur plusieurs machines indépendantes selon une clé de shard, là où le partitionnement local divise une table au sein d'un même serveur. Le sharding apporte une scalabilité horizontale des écritures mais complique les transactions et jointures distribuées.",
+    "mots_cles_attendus": [
+      "sharding",
+      "machines",
+      "clé de shard",
+      "scalabilité horizontale",
+      "distribué"
+    ]
+  },
+  {
+    "id": "bases_donnees-164",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement transparent (TDE) d'une base de données et quelles sont ses limites ?",
+    "reponse_reference": "Le TDE chiffre automatiquement les fichiers de données, journaux et sauvegardes au repos, sans modifier les requêtes. Sa limite principale : il protège contre le vol de fichiers physiques, pas contre un attaquant qui accède au serveur en marche ou via SQL, d'où la nécessité du chiffrement applicatif en complément pour les données les plus sensibles.",
+    "mots_cles_attendus": [
+      "tde",
+      "au repos",
+      "fichiers",
+      "limites",
+      "applicatif"
+    ]
+  },
+  {
+    "id": "bases_donnees-165",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le PITR (Point-In-Time Recovery) ?",
+    "reponse_reference": "Le PITR permet de restaurer la base dans l'état exact d'un instant passé en combinant une sauvegarde de base et la rejouée des journaux de transactions (WAL/binlogs) jusqu'à cet instant. C'est la parade classique contre un DROP TABLE accidentel : on rejoue jusqu'à juste avant l'erreur.",
+    "mots_cles_attendus": [
+      "pitr",
+      "instant",
+      "wal",
+      "rejouée",
+      "restauration"
+    ]
+  },
+  {
+    "id": "bases_donnees-166",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la réplication multi-maître et quels problèmes pose-t-elle ?",
+    "reponse_reference": "La réplication multi-maître accepte des écritures sur plusieurs nœuds simultanément, ce qui pose le problème des conflits (deux nœuds modifient la même ligne). Elle exige une résolution de conflits (last-write-wins, horloges vectorielles, CRDT) et renonce généralement à une cohérence forte immédiate.",
+    "mots_cles_attendus": [
+      "multi-maître",
+      "conflits",
+      "résolution",
+      "last-write-wins",
+      "crdt"
+    ]
+  },
+  {
+    "id": "bases_donnees-167",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le partition pruning et comment s'assurer qu'il fonctionne ?",
+    "reponse_reference": "Le partition pruning élimine à la compilation ou à l'exécution les partitions qui ne peuvent pas contenir de lignes pertinentes. Il faut que le prédicat porte directement sur la clé de partitionnement, sans fonction ni conversion implicite qui masquerait la colonne, ce qu'on vérifie dans EXPLAIN.",
+    "mots_cles_attendus": [
+      "pruning",
+      "partitions",
+      "clé de partitionnement",
+      "explain",
+      "prédicat"
+    ]
+  },
+  {
+    "id": "bases_donnees-168",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une table mono-serveur de commandes atteint 3 milliards de lignes et les écritures saturent le disque. Tu dois sharder par client_id. Décris ta stratégie de migration sans interruption de service.",
+    "reponse_reference": "Migration progressive en double écriture : créer les shards, activer la double écriture application (ancienne table + nouveau shard), rejouer l'historique par lots en arrière-plan, vérifier la cohérence, puis basculer les lectures shard par shard avant de retirer l'ancienne table. Un routeur de shard et un script de rollback à chaque étape sont indispensables.",
+    "mots_cles_attendus": [
+      "double écriture",
+      "migration",
+      "lots",
+      "bascule",
+      "rollback"
+    ]
+  },
+  {
+    "id": "bases_donnees-169",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu dois sharder une plateforme multi-tenant SaaS avec des clients de tailles très inégales (de 10 à 10 millions d'utilisateurs). Pourquoi le hachage simple de tenant_id est-il risqué et que proposes-tu ?",
+    "reponse_reference": "Le hachage simple répartit uniformément les clés mais pas le volume : un gros tenant peut saturer son shard (skew). On combine une table de routage tenant vers shard, le placement manuel des gros tenants sur des shards dédiés, et un hachage par défaut pour les petits, avec un mécanisme de re-sharding à chaud.",
+    "mots_cles_attendus": [
+      "skew",
+      "routage",
+      "gros tenant",
+      "hachage",
+      "re-sharding"
+    ]
+  },
+  {
+    "id": "bases_donnees-170",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Conçois l'architecture haute disponibilité d'un PostgreSQL critique multi-région (Europe + Amérique) avec RPO proche de zéro. Quelles sont les limites physiques ?",
+    "reponse_reference": "Réplication synchrone vers un standby dans chaque région avec quorum (synchronous_commit = remote_write sur 2 nœuds), bascule gérée par Patroni. La limite est la latence réseau transatlantique (60-100 ms) qui s'ajoute à chaque COMMIT synchrone ; on accepte donc une dégradation de débit ou on passe en quasi-synchrone avec RPO très faible mais non nul.",
+    "mots_cles_attendus": [
+      "multi-région",
+      "synchrone",
+      "latence",
+      "quorum",
+      "patroni"
+    ]
+  },
+  {
+    "id": "bases_donnees-171",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Lors d'un test de bascule, le failover a fonctionné mais 30 % des connexions applicatives pointent encore vers l'ancien primaire mort. Quelle est la cause probable et la correction ?",
+    "reponse_reference": "Les connexions sont probablement figées sur une IP/host direct, sans DNS à TTL court ni détection de bascule. Corrections : passer par un nom DNS à TTL court ou un proxy (HAProxy, PgBouncer avec health checks), configurer les pools de connexions pour re-valider les cibles, et faire basculer l'IP virtuelle (VIP) automatiquement.",
+    "mots_cles_attendus": [
+      "dns",
+      "ttl",
+      "proxy",
+      "health check",
+      "vip"
+    ]
+  },
+  {
+    "id": "bases_donnees-172",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un développeur a commité un dump SQL complet de la production sur un dépôt Git public. Décris ta réponse à incident.",
+    "reponse_reference": "Supprimer immédiatement le dépôt/fichier (sans oublier l'historique et les forks déjà répliqués), révoquer tous les secrets contenus (mots de passe, tokens), forcer la rotation des mots de passe des utilisateurs exposés, notifier le DPO pour l'évaluation RGPD (fuite de données personnelles), puis analyser la cause et ajouter des garde-fous (DLP, pre-commit hooks, dumps interdits).",
+    "mots_cles_attendus": [
+      "fuite",
+      "rotation",
+      "secrets",
+      "rgpd",
+      "notification"
+    ]
+  },
+  {
+    "id": "bases_donnees-173",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu dois chiffrer une colonne 'numero_secu' dans une application existante qui fait des recherches d'égalité dessus. Pourquoi le chiffrement symétrique simple avec IV aléatoire casse-t-il la recherche, et quelle solution retiens-tu ?",
+    "reponse_reference": "Un IV aléatoire produit des chiffrés différents pour la même valeur, donc l'égalité devient impossible à tester en base. Solutions : chiffrement déterministe (moins sûr), ou mieux un HMAC aveugle de la valeur stocké dans une colonne d'index séparée : on cherche par HMAC(chiffrement préservant l'égalité avec clé dédiée) tandis que la valeur reste chiffrée avec IV aléatoire.",
+    "mots_cles_attendus": [
+      "iv aléatoire",
+      "déterministe",
+      "hmac",
+      "égalité",
+      "index"
+    ]
+  },
+  {
+    "id": "bases_donnees-174",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Mets en place une politique de sauvegarde pour une base de 2 To avec RPO = 5 minutes et RTO = 1 heure. Que proposes-tu ?",
+    "reponse_reference": "Sauvegarde de base complète hebdomadaire (pg_basebackup) plus archivage continu des WAL vers un stockage objet, permettant le PITR à toute minute : le RPO de 5 min est couvert. Pour le RTO d'une heure, prévoir une restauration testée régulièrement, un standby chaud qui réduit le RTO à une bascule, et l'archivage sur deux sites (règle 3-2-1).",
+    "mots_cles_attendus": [
+      "wal",
+      "pitr",
+      "basebackup",
+      "rpo",
+      "standby"
+    ]
+  },
+  {
+    "id": "bases_donnees-175",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une table partitionnée par mois contient 36 partitions ; les requêtes récentes sont rapides mais le VACUUM global nocturne dure 4 heures et bloque les statistiques. Comment réorganises-tu la gestion ?",
+    "reponse_reference": "VACUUM et ANALYZE partition par partition, en priorité les partitions chaudes et en sautant (ou rarement) les partitions froides en lecture seule. On peut aussi détacher et archiver les vieilles partitions, et surveiller le bloat par partition plutôt que globalement.",
+    "mots_cles_attendus": [
+      "vacuum",
+      "partition",
+      "chaude",
+      "froide",
+      "archivage"
+    ]
+  },
+  {
+    "id": "bases_donnees-176",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un cluster MongoDB en replica set de 3 nœuds perd son primaire. Décris précisément ce qui se passe pendant l'élection et l'impact applicatif.",
+    "reponse_reference": "Les secondaires détectent la perte du heartbeat, le nœud prioritaire restant déclenche une élection (quelques secondes, majorité requise = 2 votes) et devient primaire. Pendant l'élection, les écritures échouent (pas de primaire) et les lectures avec préférence 'primary' aussi : l'application doit gérer ces erreurs transitoires et réessayer.",
+    "mots_cles_attendus": [
+      "élection",
+      "heartbeat",
+      "majorité",
+      "secondaire",
+      "retry"
+    ]
+  },
+  {
+    "id": "bases_donnees-177",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Comment mets-tu en œuvre Row Level Security (RLS) dans PostgreSQL pour qu'un utilisateur ne voie que ses propres lignes ?",
+    "reponse_reference": "ALTER TABLE ... ENABLE ROW LEVEL SECURITY puis CREATE POLICY avec USING (owner_id = current_setting('app.user_id')::int). La politique filtre les lignes en lecture et écriture selon l'identité applicative passée en variable de session ; le propriétaire de table et superutilisateur la contournent par défaut (BYPASSRLS/FORCE ROW LEVEL SECURITY à régler).",
+    "mots_cles_attendus": [
+      "rls",
+      "policy",
+      "using",
+      "current_setting",
+      "lignes"
+    ]
+  },
+  {
+    "id": "bases_donnees-178",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une table de sessions (500 millions de lignes, 90 % expirées) doit être purgée quotidiennement. Le DELETE WHERE expires_at < now() prend 3 heures et gonfle la table. Quelle meilleure approche adoptes-tu ?",
+    "reponse_reference": "Partitionner la table par plage de date d'expiration (jour ou heure) : la purge devient un DROP PARTITION instantané sans bloat ni journal massif. À défaut, supprimer par petits lots commités, avec index sur expires_at et autovacuum renforcé ; une table temporaire + permutation est aussi envisageable.",
+    "mots_cles_attendus": [
+      "drop partition",
+      "purge",
+      "delete par lots",
+      "bloat",
+      "plage"
+    ]
+  },
+  {
+    "id": "bases_donnees-179",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Tu veux utiliser un secondaire de réplication PostgreSQL pour décharger le reporting lourd. Quelles précautions prends-tu pour ne pas casser la réplication ?",
+    "reponse_reference": "Configurer max_standby_streaming_delay et hot_standby_feedback pour éviter que les requêtes longues du reporting soient annulées ou ne bloquent l'application du WAL, et isoler les ressources (pool de connexions dédié, I/O). Accepter que le reporting lise des données légèrement décalées (cohérence éventuelle).",
+    "mots_cles_attendus": [
+      "hot_standby_feedback",
+      "max_standby_streaming_delay",
+      "annulation",
+      "reporting",
+      "décalage"
+    ]
+  },
+  {
+    "id": "bases_donnees-180",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un audit révèle que tous les développeurs partagent le compte superuser PostgreSQL en production. Quel plan de remédiation proposes-tu ?",
+    "reponse_reference": "Créer des comptes nominatifs avec rôles et moindre privilège (lecture seule via un rôle readonly, accès bastion/VPN), retirer le compte partagé et faire tourner son mot de passe, activer la journalisation des connexions et des DDL, et mettre l'accès écriture sous procédure (tickets, runbooks). Vérifier via pg_roles les droits résiduels.",
+    "mots_cles_attendus": [
+      "moindre privilège",
+      "comptes nominatifs",
+      "rôles",
+      "audit",
+      "journalisation"
+    ]
+  },
+  {
+    "id": "bases_donnees-181",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la cohérence à terme (eventual consistency) ?",
+    "reponse_reference": "La cohérence à terme garantit seulement que, sans nouvelles écritures, toutes les répliques convergent vers la même valeur après un certain délai. Entre-temps, différentes répliques peuvent répondre des valeurs différentes ; c'est le modèle typique des systèmes AP comme Dynamo ou Cassandra en mode asynchrone.",
+    "mots_cles_attendus": [
+      "cohérence à terme",
+      "convergence",
+      "répliques",
+      "délai",
+      "ap"
+    ]
+  },
+  {
+    "id": "bases_donnees-182",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le quorum de lecture/écriture W + R > N et que garantit-il ?",
+    "reponse_reference": "Avec N répliques, W écritures confirmées et R lectures interrogées, la condition W + R > N garantit qu'une lecture croise toujours une réplique ayant vu la dernière écriture, offrant une cohérence forte relative (strong consistency). Exemple classique : N=3, W=2, R=2.",
+    "mots_cles_attendus": [
+      "quorum",
+      "w",
+      "r",
+      "n",
+      "chevauchement"
+    ]
+  },
+  {
+    "id": "bases_donnees-183",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base de données vectorielle et à quoi sert-elle ?",
+    "reponse_reference": "Une base vectorielle stocke des vecteurs d'embeddings (représentations numériques de textes, images, etc.) et permet la recherche par similarité (plus proches voisins) plutôt que par égalité exacte. Elle est au cœur de la recherche sémantique et des applications RAG pour l'IA générative.",
+    "mots_cles_attendus": [
+      "vecteurs",
+      "embeddings",
+      "similarité",
+      "plus proches voisins",
+      "rag"
+    ]
+  },
+  {
+    "id": "bases_donnees-184",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le HNSW dans une base vectorielle ?",
+    "reponse_reference": "HNSW (Hierarchical Navigable Small World) est un index de recherche approximative de plus proches voisins : un graphe multi-niveaux navigable qui trouve des voisins très rapidement. Il échange une exactitude imparfaite contre une vitesse et une scalabilité bien supérieures à une recherche exhaustive.",
+    "mots_cles_attendus": [
+      "hnsw",
+      "graphe",
+      "approximatif",
+      "voisins",
+      "index"
+    ]
+  },
+  {
+    "id": "bases_donnees-185",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelle est la différence entre une charge OLTP et une charge OLAP ?",
+    "reponse_reference": "OLTP (transactionnel) : nombreuses petites opérations rapides, lectures/écritures par clé, fortes contraintes ACID (ex. site e-commerce). OLAP (analytique) : peu de requêtes lourdes agrégeant des millions de lignes, lecture intensive, schémas en étoile ou flocon (ex. business intelligence).",
+    "mots_cles_attendus": [
+      "oltp",
+      "olap",
+      "transactionnel",
+      "analytique",
+      "agrégation"
+    ]
+  },
+  {
+    "id": "bases_donnees-186",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Pourquoi les bases analytiques utilisent-elles un stockage en colonnes ?",
+    "reponse_reference": "Le stockage en colonnes ne lit que les colonnes nécessaires aux requêtes analytiques, groupe des valeurs homogènes permettant une compression très efficace, et accélère les agrégations massives. C'est le principe de ClickHouse, des tables Parquet ou de Redshift.",
+    "mots_cles_attendus": [
+      "colonnes",
+      "compression",
+      "agrégations",
+      "scan",
+      "clickhouse"
+    ]
+  },
+  {
+    "id": "bases_donnees-187",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un registre distribué à horloge logique (ex. horloges de Lamport, vector clocks) et quel problème résout-il ?",
+    "reponse_reference": "Les horloges logiques ordonnent des événements dans un système distribué sans horloge physique synchronisée, permettant de détecter les causalités et les écritures concurrentes. Les horloges vectorielles identifient précisément les versions conflictuelles qu'il faut réconcilier (cas des systèmes Dynamo).",
+    "mots_cles_attendus": [
+      "horloge logique",
+      "lamport",
+      "vector clock",
+      "causalité",
+      "conflits"
+    ]
+  },
+  {
+    "id": "bases_donnees-188",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tu conçois le moteur de recherche 'produits similaires' d'un e-commerce : l'utilisateur tape une phrase libre et attend des produits proches sémantiquement. Décris l'architecture données.",
+    "reponse_reference": "Générer un embedding de chaque fiche produit (modèle type sentence-transformer) et le stocker dans une base vectorielle (pgvector, Qdrant, Milvus) indexée en HNSW. À la requête, embedder le texte utilisateur et chercher les k plus proches voisins par distance cosinus, éventuellement combinés à des filtres métier (stock, prix).",
+    "mots_cles_attendus": [
+      "embedding",
+      "pgvector",
+      "hnsw",
+      "cosinus",
+      "similaires"
+    ]
+  },
+  {
+    "id": "bases_donnees-189",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un chatbot RAG doit retrouver les 5 passages les plus pertinents d'une documentation de 100 000 pages. Comment dimensionnes-tu le pipeline de données ?",
+    "reponse_reference": "Découper la documentation en chunks (300-800 tokens avec recouvrement), les embedder par lot et les indexer dans une base vectorielle (HNSW, paramètre m/ef_search adaptés au rappel voulu). À la requête : embedding du prompt, top-k=5 par similarité avec éventuellement un re-ranking hybride BM25 + vectoriel pour améliorer la précision.",
+    "mots_cles_attendus": [
+      "chunks",
+      "embedding",
+      "top-k",
+      "hybride",
+      "re-ranking"
+    ]
+  },
+  {
+    "id": "bases_donnees-190",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Les requêtes analytiques du BI saturent le PostgreSQL OLTP de production pendant la journée. Propose une architecture cible.",
+    "reponse_reference": "Séparer les charges : répliquer les données via CDC (Debezium, réplication logique) vers un entrepôt analytique en colonnes (BigQuery, Snowflake, ClickHouse) où le BI tourne, le PostgreSQL de production ne servant plus que l'OLTP. À court terme, router le BI vers un secondaire de réplication isolé.",
+    "mots_cles_attendus": [
+      "cdc",
+      "entrepôt",
+      "séparation",
+      "secondaire",
+      "clickhouse"
+    ]
+  },
+  {
+    "id": "bases_donnees-191",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tu modélises les ventes pour un entrepôt de données : faits et dimensions. Décris un schéma en étoile pour des ventes par jour, produit et magasin.",
+    "reponse_reference": "Une table de faits ventes(date_id, produit_id, magasin_id, quantite, montant) au centre, entourée des dimensions dim_date, dim_produit et dim_magasin contenant les attributs descriptifs hiérarchisés. Les dimensions sont dénormalisées (3FN abandonnée au profit de la lisibilité et du group by rapide), la table de faits restant fine et additive.",
+    "mots_cles_attendus": [
+      "schéma en étoile",
+      "table de faits",
+      "dimensions",
+      "clés",
+      "dénormalisé"
+    ]
+  },
+  {
+    "id": "bases_donnees-192",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un pipeline doit ingérer 200 000 événements/seconde dans un cluster, avec possibilité de rejouer les données en cas de bug. Quelle architecture proposes-tu ?",
+    "reponse_reference": "Un bus de streaming (Kafka) comme tampon rejouable avec rétention, des consommateurs qui écrivent par micro-lots dans la base (ClickHouse/Cassandra) avec un format de stockage ouvert (Parquet sur objet) comme copie brute. Le rejeu consiste à relire les offsets Kafka depuis la position voulue, avec écritures idempotentes (clés de déduplication).",
+    "mots_cles_attendus": [
+      "kafka",
+      "rejeu",
+      "offsets",
+      "micro-lots",
+      "idempotent"
+    ]
+  },
+  {
+    "id": "bases_donnees-193",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Dans Cassandra, tu conçois une table de messages de chat consultés par conversation, du plus récent au plus ancien. Écris le schéma et explique tes choix.",
+    "reponse_reference": "CREATE TABLE messages (conversation_id uuid, ts timeuuid, auteur text, contenu text, PRIMARY KEY (conversation_id, ts)) WITH CLUSTERING ORDER BY (ts DESC). La clé de partition regroupe la conversation et le clustering timeuuid trié décroissant sert directement l'ordre de lecture ; on modélise selon les requêtes, pas selon le domaine.",
+    "mots_cles_attendus": [
+      "clé de partition",
+      "clustering",
+      "timeuuid",
+      "desc",
+      "modélisation"
+    ]
+  },
+  {
+    "id": "bases_donnees-194",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un panier d'achat est répliqué sur 3 datacenters avec écritures locales partout (multi-maître Dynamo-style). Deux utilisateurs modifient simultanément le même panier depuis deux régions. Comment gères-tu le conflit ?",
+    "reponse_reference": "On détecte les versions concurrentes via horloges vectorielles, puis on les réconcilie : pour un panier, la fusion métier (union des lignes, quantités max) est préférable au last-write-wins qui perdrait des articles. On garde les deux versions jusqu'à résolution (siblings) et on expose une logique de merge applicative ou CRDT.",
+    "mots_cles_attendus": [
+      "horloges vectorielles",
+      "siblings",
+      "last-write-wins",
+      "crdt",
+      "merge"
+    ]
+  },
+  {
+    "id": "bases_donnees-195",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Ton service doit rester disponible pendant une partition réseau entre deux datacenters, quitte à servir des données légèrement périmées. Classifie ce choix selon CAP et donne un exemple de système correspondant.",
+    "reponse_reference": "C'est un choix AP : disponibilité et tolérance à la partition, en renonçant à la cohérence forte immédiate (cohérence à terme). Cassandra, DynamoDB ou Couchbase illustrent ce modèle ; à l'inverse, un système CP comme ZooKeeper ou MongoDB (majorité d'écritures) sacrifierait la disponibilité du côté minoritaire.",
+    "mots_cles_attendus": [
+      "ap",
+      "disponibilité",
+      "partition",
+      "cohérence à terme",
+      "cassandra"
+    ]
+  },
+  {
+    "id": "bases_donnees-196",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une requête d'agrégation sur 10 To de fichiers Parquet dans un data lake prend 20 minutes. Quelles optimisations appliques-tu au niveau stockage et format ?",
+    "reponse_reference": "Organiser les données en partitions (par date) et trier/zoner à l'intérieur des fichiers pour activer le pruning au niveau ligne-groupes, écrire des fichiers de taille cible (~128-512 Mo) avec statistiques et encodage compressé (Snappy/Zstd). Ajouter une couche table (Iceberg/Delta/Hive metastore) pour les statistiques de fichiers et le partitionnement caché.",
+    "mots_cles_attendus": [
+      "parquet",
+      "partitionnement",
+      "pruning",
+      "iceberg",
+      "compression"
+    ]
+  },
+  {
+    "id": "bases_donnees-197",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "On te demande d'ajouter une recherche sémantique dans un PostgreSQL existant de 5 millions d'articles, sans nouvelle infrastructure. Comment procèdes-tu ?",
+    "reponse_reference": "Utiliser l'extension pgvector : ajouter une colonne embedding vector(n), la peupler par lots avec un modèle d'embedding, créer un index HNSW et requêter en ORDER BY embedding <=> $1 LIMIT k. Si la latence ou le volume devient critique, externaliser ensuite vers une base vectorielle dédiée.",
+    "mots_cles_attendus": [
+      "pgvector",
+      "embedding",
+      "hnsw",
+      "similarité",
+      "extension"
+    ]
+  },
+  {
+    "id": "bases_donnees-198",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Explique pourquoi la recherche vectorielle 'approximative' (ANN) est acceptable dans un RAG alors qu'elle renvoie parfois des faux négatifs, et comment améliorer le rappel.",
+    "reponse_reference": "Le RAG tolère l'approximation car retrouver 95 % des passages pertinents en millisecondes vaut mieux qu'une recherche exacte en secondes sur des millions de vecteurs ; le LLM compense les imprécisions résiduelles. On améliore le rappel en augmentant ef_search/k puis en re-rankant, en hybridant BM25 + vectoriel, et en soignant la taille des chunks.",
+    "mots_cles_attendus": [
+      "ann",
+      "rappel",
+      "ef_search",
+      "hybride",
+      "re-ranking"
+    ]
+  },
+  {
+    "id": "bases_donnees-199",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Tu dois garantir qu'un traitement de facturation sur données shardedées ne facture jamais deux fois le même événement, malgré les rejeux. Quelle propriété vises-tu et comment l'implémentes-tu ?",
+    "reponse_reference": "L'idempotence : appliquer deux fois le même événement doit donner le même résultat qu'une fois. On l'implémente avec une clé de déduplication par événement (INSERT ON CONFLICT DO NOTHING sur une table de journal), ou un exactement-une-fois effectif via transactions/idempotence du producteur Kafka et stockage de l'état de traitement.",
+    "mots_cles_attendus": [
+      "idempotence",
+      "déduplication",
+      "clé unique",
+      "on conflict",
+      "rejeu"
+    ]
+  },
+  {
+    "id": "bases_donnees-200",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application sert des clients en Europe et en Asie avec une exigence de latence < 50 ms en écriture depuis les deux régions, tout en respectant la résidence des données européennes. Quelle architecture de données proposes-tu ?",
+    "reponse_reference": "Des écritures régionales locales (chaque région écrit son propre shard ou sa propre réplique, satisfaisant latence et résidence), avec réplication asynchrone inter-régions pour les données partagées et règles de placement strictes (les données UE restent dans l'UE). Les conflits inter-régions sont évités en partitionnant par utilisateur/région plutôt qu'en multi-maître sur les mêmes lignes.",
+    "mots_cles_attendus": [
+      "régional",
+      "résidence des données",
+      "latence",
+      "asynchrone",
+      "partitionnement"
+    ]
+  },
+  {
+    "id": "bases_donnees-201",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture data lakehouse et que combine-t-elle ?",
+    "reponse_reference": "Un lakehouse combine le stockage économique et flexible d'un data lake (fichiers Parquet sur objet) avec les garanties d'un entrepôt : transactions ACID, schémas gérés, time travel, grâce à des formats de tables ouverts comme Delta Lake, Apache Iceberg ou Hudi. Il évite la duplication entre lake et warehouse.",
+    "mots_cles_attendus": [
+      "lakehouse",
+      "delta lake",
+      "iceberg",
+      "acid",
+      "objet"
+    ]
+  },
+  {
+    "id": "bases_donnees-202",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le CDC (Change Data Capture) ?",
+    "reponse_reference": "Le CDC capture les changements de données (insert/update/delete) directement depuis le journal de transactions de la base (WAL, binlog) et les diffuse en flux, typiquement via Kafka avec Debezium. Il alimente entrepôts, caches et microservices en quasi-temps réel sans requêtes de polling coûteuses.",
+    "mots_cles_attendus": [
+      "cdc",
+      "wal",
+      "debezium",
+      "kafka",
+      "flux"
+    ]
+  },
+  {
+    "id": "bases_donnees-203",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une base NewSQL comme CockroachDB ou TiDB ?",
+    "reponse_reference": "Une base NewSQL offre des transactions ACID distribuées et un modèle relationnel SQL sur un cluster scalable horizontalement, combinant les garanties du relationnel et l'élasticité du NoSQL. Elle utilise la réplication par consensus (Raft/Paxos) et souvent le sharding automatique avec horloges hybrides.",
+    "mots_cles_attendus": [
+      "newsql",
+      "acid distribué",
+      "raft",
+      "scalable",
+      "cockroachdb"
+    ]
+  },
+  {
+    "id": "bases_donnees-204",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la persistance polyglotte (polyglot persistence) ?",
+    "reponse_reference": "C'est le principe d'utiliser le store le plus adapté à chaque besoin au sein d'un même système : relationnel pour les transactions, Redis pour le cache, Elasticsearch pour la recherche, base de graphes pour les relations sociales, base vectorielle pour la sémantique. Le prix à payer est la cohérence et la complexité opérationnelle entre stores.",
+    "mots_cles_attendus": [
+      "polyglotte",
+      "adapté",
+      "cache",
+      "recherche",
+      "complexité"
+    ]
+  },
+  {
+    "id": "bases_donnees-205",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le consensus Raft et quel problème résout-il ?",
+    "reponse_reference": "Raft est un protocole de consensus qui permet à un cluster de se mettre d'accord sur un ordre de journaux de réplication malgré des pannes, en élisant un leader à la majorité. Il sous-tend la cohérence forte de systèmes comme etcd, CockroachDB ou TiKV (élections, réplication, sûreté en cas de partition).",
+    "mots_cles_attendus": [
+      "raft",
+      "consensus",
+      "leader",
+      "majorité",
+      "journal"
+    ]
+  },
+  {
+    "id": "bases_donnees-206",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le cardinality estimation error et pourquoi est-il la première cause de mauvais plans ?",
+    "reponse_reference": "C'est l'écart entre le nombre de lignes estimé par l'optimiseur et le nombre réel, dû à des statistiques simplistes (hypothèse d'indépendance des colonnes, histogrammes grossiers). Une sous-estimation fait choisir des nested loops avec débordements disque, une surestimation des hash joins surdimensionnés ; les corrections passent par ANALYZE, statistiques étendues ou hints.",
+    "mots_cles_attendus": [
+      "cardinalité",
+      "estimation",
+      "statistiques",
+      "indépendance",
+      "plan"
+    ]
+  },
+  {
+    "id": "bases_donnees-207",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le time travel dans un lakehouse ?",
+    "reponse_reference": "Le time travel permet d'interroger l'état des données à un instant ou une version antérieure (SELECT ... VERSION AS OF / TIMESTAMP AS OF), rendu possible par le versionnement des métadonnées et fichiers dans Delta/Iceberg. Il sert au debug, à l'audit, au rollback et à la reproductibilité des pipelines.",
+    "mots_cles_attendus": [
+      "time travel",
+      "version",
+      "instantané",
+      "rollback",
+      "audit"
+    ]
+  },
+  {
+    "id": "bases_donnees-208",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une architecture microservices doit garder une copie locale des clients dans chaque service, synchronisée avec le service référent. Conçois la propagation des données.",
+    "reponse_reference": "Le service référent publie ses changements via CDC (Debezium depuis son WAL) vers Kafka ; chaque service consomme le topic et applique les événements dans sa base locale, avec clé d'idempotence et rejeu possible depuis l'offset. C'est le pattern database-per-service avec réplication par événements, en cohérence à terme.",
+    "mots_cles_attendus": [
+      "cdc",
+      "kafka",
+      "événements",
+      "database-per-service",
+      "idempotence"
+    ]
+  },
+  {
+    "id": "bases_donnees-209",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Ton entreprise veut remplacer son entrepôt propriétaire par un lakehouse sur S3. Quels critères vérifies-tu avant de retenir Iceberg plutôt que Delta Lake (ou l'inverse) ?",
+    "reponse_reference": "J'évalue l'écosystème de moteurs (Spark, Trino, Flink, moteurs propriétaires), le support du partitionnement caché et de l'évolution de schéma, les performances de compaction et des petites écritures fréquentes, le catalogue (Hive, Nessie, REST), et le verrouillage fournisseur. Les deux formats convergent ; le choix dépend surtout des moteurs et de la gouvernance déjà en place.",
+    "mots_cles_attendus": [
+      "iceberg",
+      "delta lake",
+      "moteurs",
+      "catalogue",
+      "partitionnement caché"
+    ]
+  },
+  {
+    "id": "bases_donnees-210",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Incident de production : depuis le déploiement d'une nouvelle version, une requête critique qui prenait 20 ms en prend 3 s, alors que le SQL n'a pas changé. Donne ta démarche d'investigation.",
+    "reponse_reference": "Comparer les plans d'exécution avant/après (le plan a pu basculer après ANALYZE automatique, montée en volume ou changement de statistiques), vérifier les paramètres de session et la version du SGBD, regarder les verrous et la concurrence (pg_stat_activity, pg_locks), les statistiques périmées ou un index devenu bloated. Corriger via ANALYZE, réindex, plan forcé (hint/plan guide) ou rollback du déploiement si la cause est structurelle.",
+    "mots_cles_attendus": [
+      "plan d'exécution",
+      "statistiques",
+      "verrous",
+      "régression",
+      "investigation"
+    ]
+  },
+  {
+    "id": "bases_donnees-211",
+    "domaine": "bases_donnees",
+    "sous_theme": "index_performance",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une table très écrite contient 40 % d'espace mort (bloat) après des vagues de DELETE/UPDATE massives et les scans d'index ralentissent. Quelles actions mènes-tu sur PostgreSQL ?",
+    "reponse_reference": "Lancer VACUUM (ANALYZE) pour rendre l'espace réutilisable ; s'il faut rendre l'espace à l'OS ou compacter l'index, utiliser pg_repack en ligne ou VACUUM FULL hors pointe (verrou exclusif). Vérifier l'autovacuum : le relever sur cette table (autovacuum_vacuum_scale_factor plus bas) et surveiller les transactions longues qui bloquent le nettoyage.",
+    "mots_cles_attendus": [
+      "bloat",
+      "vacuum",
+      "pg_repack",
+      "autovacuum",
+      "espace mort"
+    ]
+  },
+  {
+    "id": "bases_donnees-212",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une jointure avec WHERE EXISTS sur une sous-requête corrélée est 10 fois plus lente que la même logique réécrite en JOIN + DISTINCT. Explique pourquoi cela peut arriver et comment trancher objectivement.",
+    "reponse_reference": "La sous-requête corrélée peut être exécutée pour chaque ligne externe si l'optimiseur ne la décorréle pas (semi-join non choisi), alors que le JOIN profite d'un hash join unique. On tranche avec EXPLAIN (ANALYZE, BUFFERS) en comparant les plans réels, pas les suppositions ; la semi-jointure et le JOIN DISTINCT ne sont pas toujours équivalents s'il y a des doublons.",
+    "mots_cles_attendus": [
+      "corrélée",
+      "semi-jointure",
+      "hash join",
+      "explain analyze",
+      "décorrélation"
+    ]
+  },
+  {
+    "id": "bases_donnees-213",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un pipeline Spark écrit 200 000 petits fichiers Parquet de quelques Ko par heure dans le lake, et les moteurs de requête s'effondrent. Diagnostique et corrige.",
+    "reponse_reference": "Trop de partitions/tâches produisent des fichiers minuscules : surcoût de listing, de métadonnées et d'ouverture. Corrections : repartition/coalesce avant écriture, target file size (128-512 Mo), partitionnement moins granulaire, et compaction régulière (OPTIMIZE sur Delta, rewrite_data_files sur Iceberg) avec nettoyage des vieux snapshots.",
+    "mots_cles_attendus": [
+      "petits fichiers",
+      "coalesce",
+      "compaction",
+      "optimize",
+      "partitionnement"
+    ]
+  },
+  {
+    "id": "bases_donnees-214",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Incident : le primaire PostgreSQL tombe à 2 h du matin, Patroni promeut le secondaire en 30 s, mais le monitoring montre que l'application a continué à écrire sur l'ancien primaire pendant 2 minutes avant sa coupure réseau. Quel risque as-tu et comment l'éviter ?",
+    "reponse_reference": "Risque de split-brain : l'ancien primaire a pu accepter des écritures qui ne seront jamais répliquées et divergeront du nouveau. L'éviter avec du fencing (STONITH) : couper le réseau ou les droits de l'ancien primaire dès qu'il perd le quorum/leader key (désactivation via Patroni, révocation réseau), et vérifier au retour qu'il reparte bien en secondaire sur la bonne timeline.",
+    "mots_cles_attendus": [
+      "split-brain",
+      "fencing",
+      "stonith",
+      "quorum",
+      "timeline"
+    ]
+  },
+  {
+    "id": "bases_donnees-215",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une base de 8 To doit migrer vers un nouveau cluster sans fenêtre d'arrêt significative. Décris un plan de migration en double écriture.",
+    "reponse_reference": "1) Déployer la double écriture (ancienne + nouvelle base) avec journal des divergences ; 2) backfill de l'historique par lots avec vérification par échantillonnage/checksums ; 3) bascule progressive des lectures (shadow reads puis pourcentage croissant) ; 4) couper l'écriture ancienne après période d'observation, en gardant un rollback possible à chaque étape. La double écriture doit être idempotente et tolérante aux pannes partielles.",
+    "mots_cles_attendus": [
+      "double écriture",
+      "backfill",
+      "shadow reads",
+      "bascule",
+      "rollback"
+    ]
+  },
+  {
+    "id": "bases_donnees-216",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Tu dois servir une charge mixte : transactions temps réel et analyses sur données fraîches (< 1 min) sur les mêmes données. Compare HTAP, réplication analytique et lakehouse CDC.",
+    "reponse_reference": "HTAP (TiDB, SAP HANA) traite les deux charges dans un seul système avec isolation des ressources, simple mais coûteux à scaler. Réplication vers un analytique en colonnes (secondaire, ClickHouse via CDC) : fraîcheur de quelques secondes, isolation parfaite des charges. Lakehouse CDC (Iceberg + Trino) : fraîcheur en minutes, économique pour gros volumes mais pas pour l'analytique sub-minute.",
+    "mots_cles_attendus": [
+      "htap",
+      "cdc",
+      "fraîcheur",
+      "isolation",
+      "colonne"
+    ]
+  },
+  {
+    "id": "bases_donnees-217",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un attaquant exploite une fonction stockée en SECURITY DEFINER mal écrite pour accéder à des tables interdites (injection dans un LIKE dynamique). Explique le mécanisme et les bonnes pratiques.",
+    "reponse_reference": "SECURITY DEFINER exécute la fonction avec les droits de son propriétaire (souvent superuser) : toute injection dedans hérite de ces privilèges. Bonnes pratiques : quote_literal/format('%L') sur toute valeur interpolée, SET search_path explicite, propriétaire à privilèges minimaux, revue des fonctions SECURITY DEFINER et tests d'injection ; préférer RLS aux fonctions definer quand c'est possible.",
+    "mots_cles_attendus": [
+      "security definer",
+      "injection",
+      "search_path",
+      "quote_literal",
+      "privilèges"
+    ]
+  },
+  {
+    "id": "bases_donnees-218",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une transaction distribuée doit mettre à jour un compte bancaire (PostgreSQL) et décrémenter un stock (service externe HTTP). Le 2PC classique n'est pas possible. Quel pattern emploies-tu ?",
+    "reponse_reference": "Le pattern saga : décomposer en étapes locales avec actions compensatrices, orchestrées via une table d'état transactionnelle (transactional outbox + worker) ou un orchestrateur. Chaque étape est idempotente ; en cas d'échec, on exécute les compensations dans l'ordre inverse (recréditer le compte) plutôt que d'annuler globalement.",
+    "mots_cles_attendus": [
+      "saga",
+      "compensation",
+      "outbox",
+      "idempotent",
+      "orchestrateur"
+    ]
+  },
+  {
+    "id": "bases_donnees-219",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Le job nocturne d'ETL échoue à mi-parcours et laisse la table cible dans un état partiel, cassant les rapports du matin. Comment rendre le chargement atomique dans un lakehouse Iceberg ?",
+    "reponse_reference": "Écrire dans la table Iceberg avec commit atomique de snapshot : le job charge les fichiers de données puis un seul commit de métadonnées rend tout visible ou rien (ACID du format). En cas d'échec, les fichiers orphelins sont nettoyés et le snapshot précédent reste servi ; on peut même revenir en arrière par time travel (rollback_to_snapshot).",
+    "mots_cles_attendus": [
+      "snapshot",
+      "commit atomique",
+      "iceberg",
+      "rollback",
+      "orphelins"
+    ]
+  },
+  {
+    "id": "bases_donnees-220",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une requête filtre WHERE created_at > X AND tenant_id = Y sur une table partitionnée par mois et indexée localement, mais le plan montre un parcours de tous les index locaux. Comment améliorer ?",
+    "reponse_reference": "Le pruning par created_at ne suffit pas si l'index local n'inclut pas tenant_id en tête : créer un index local (tenant_id, created_at) pour que chaque partition conservée fasse une recherche efficace, ou partitionner aussi par tenant (sous-partitionnement/hachage) si un tenant domine. Vérifier dans EXPLAIN que les partitions non pertinentes sont bien exclues.",
+    "mots_cles_attendus": [
+      "index local",
+      "pruning",
+      "tenant",
+      "composite",
+      "explain"
+    ]
+  },
+  {
+    "id": "bases_donnees-221",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la réplication par consensus (Raft/Paxos) apporte de plus qu'une réplication primaire-secondaire classique ?",
+    "reponse_reference": "Le consensus garantit automatiquement l'élection d'un unique leader à la majorité et la cohérence du journal répliqué, sans split-brain ni intervention humaine, avec des commits confirmés seulement quand une majorité a persisté l'entrée. C'est le fondement de CockroachDB, TiDB ou etcd, au prix d'une latence de commit liée au round-trip majoritaire.",
+    "mots_cles_attendus": [
+      "consensus",
+      "majorité",
+      "leader",
+      "journal",
+      "élection"
+    ]
+  },
+  {
+    "id": "bases_donnees-222",
+    "domaine": "bases_donnees",
+    "sous_theme": "nosql",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un CRDT et quel avantage a-t-il sur le last-write-wins pour la réplication multi-maître ?",
+    "reponse_reference": "Un CRDT (Conflict-free Replicated Data Type) est une structure de données conçue pour fusionner mathématiquement des mises à jour concurrentes sans coordination (compteurs G-Counter, ensembles OR-Set, registres LWW). Contrairement au last-write-wins qui perd silencieusement des écritures concurrentes, un CRDT converge toujours et préserve l'intention (ex. un ajout concurrent n'est pas écrasé par un remove plus récent dans une OR-Set).",
+    "mots_cles_attendus": [
+      "crdt",
+      "convergence",
+      "fusion",
+      "multi-maître",
+      "last-write-wins"
+    ]
+  },
+  {
+    "id": "bases_donnees-223",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un horizon de cohérence (consistency boundary) dans une architecture distribuée et comment le choisit-on ?",
+    "reponse_reference": "C'est le périmètre à l'intérieur duquel on garantit une cohérence forte, typiquement un agrégat ou un shard ; au-delà, on accepte la cohérence à terme via événements. On le choisit en identifiant les invariants métier qui doivent être vrais atomiquement (solde non négatif, unicité de réservation) : tout ce qui peut être éventuellement cohérent sort du périmètre pour maximiser la scalabilité.",
+    "mots_cles_attendus": [
+      "agrégat",
+      "invariant",
+      "cohérence forte",
+      "éventuelle",
+      "périmètre"
+    ]
+  },
+  {
+    "id": "bases_donnees-224",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement de bout en bout avec clés détenues par le client (BYOK/HYOK) pour une base cloud, et que protège-t-il réellement ?",
+    "reponse_reference": "BYOK/HYOK confie la maîtrise des clés de chiffrement au client (HSM externe ou gestionnaire de clés propre), de sorte que le fournisseur cloud ne peut pas déchiffrer les données. Cela protège contre la compromission ou la coercition du fournisseur, au prix d'opérations impossibles côté serveur (recherche sur champ chiffré, certains agrégats) et d'une gestion de rotation complexe.",
+    "mots_cles_attendus": [
+      "byok",
+      "hsm",
+      "clés client",
+      "fournisseur",
+      "rotation"
+    ]
+  },
+  {
+    "id": "bases_donnees-225",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'adaptive query execution et les plan guides/hints, et quels sont leurs risques ?",
+    "reponse_reference": "L'exécution adaptative (Spark AQE) ajuste le plan en cours d'exécution selon les statistiques réelles (re-partitionnement, bascule de join strategy), tandis que les hints/plan guides forcent un choix d'optimiseur. Le risque des hints est de figer un plan optimal à un instant T qui deviendra catastrophique quand les données évolueront ; à réserver aux cas documentés et surveillés.",
+    "mots_cles_attendus": [
+      "aqe",
+      "hints",
+      "plan guide",
+      "adaptatif",
+      "risque"
+    ]
+  },
+  {
+    "id": "bases_donnees-226",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Incident : à 3 h du matin, le cluster Cassandra montre des latences en écriture de 2 s et des timeouts, avec compaction en retard et space amplification à 3x. Décris ton diagnostic et tes remèdes.",
+    "reponse_reference": "Vérifier nodetool compactionstats, gc.logs (pauses GC longues), pending tasks et le débit d'écriture par partition (hot partitions). Remèdes immédiats : limiter les écritures non critiques, ajuster les concurrent_compactors et le throttling, nettoyer les données expirées (TTL). Structurellement : redimensionner, changer de stratégie de compaction (LCS vs STCS), rééquilibrer les clés de partition chaudes et ajouter des nœuds.",
+    "mots_cles_attendus": [
+      "compaction",
+      "gc",
+      "hot partition",
+      "timeouts",
+      "nodetool"
+    ]
+  },
+  {
+    "id": "bases_donnees-227",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu conçois le stockage d'un système bancaire multi-pays : cohérence forte obligatoire sur les soldes, disponibilité élevée, conformité de résidence des données par pays. Quelle architecture retiens-tu et que sacrifies-tu ?",
+    "reponse_reference": "Base sharded par pays avec transactions ACID fortes dans chaque shard (CockroachDB/TiDB régional, ou PostgreSQL par juridiction avec HA locale), les opérations transfrontalières passant par sagas avec compensation. On sacrifie la cohérence forte globale (impossible à coût acceptable avec la résidence des données) et la latence inter-pays, assumées par le découpage métier par juridiction.",
+    "mots_cles_attendus": [
+      "sharding par pays",
+      "résidence",
+      "acid",
+      "saga",
+      "sacrifice"
+    ]
+  },
+  {
+    "id": "bases_donnees-228",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un flux de 1 million d'événements/seconde doit alimenter des agrégats consultables en moins de 5 secondes. Conçois la chaîne de traitement et de stockage.",
+    "reponse_reference": "Ingestion Kafka partitionnée, stream processing (Flink) calculant les agrégats par fenêtres avec état checkpointé et exactly-once, écriture des résultats dans un OLAP temps réel (ClickHouse/Druid/Pinot) en colonnes et partitionné par temps, requêtable en sub-seconde. Le brut reste archivé en Parquet/Iceberg pour les recalculs (lambda ou kappa selon les besoins de correction).",
+    "mots_cles_attendus": [
+      "kafka",
+      "flink",
+      "fenêtres",
+      "clickhouse",
+      "exactly-once"
+    ]
+  },
+  {
+    "id": "bases_donnees-229",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une requête analytique triche : elle joint 5 tables de faits de 500 millions de lignes et ne finit jamais (temp files énormes, mémoire saturée). Comment la restructures-tu ?",
+    "reponse_reference": "Pré-agréger chaque table de faits au grain de la jointure avant de joindre (CTE/materialized intermediate), pousser les filtres au plus tôt, découper en étapes matérialisées dans des tables temporaires indexées, et augmenter work_mem/parallélisme si disponible. À long terme, déplacer vers un moteur en colonnes distribué (ClickHouse/Spark) conçu pour ces volumes.",
+    "mots_cles_attendus": [
+      "pré-agrégation",
+      "temp files",
+      "work_mem",
+      "pousser filtres",
+      "matérialiser"
+    ]
+  },
+  {
+    "id": "bases_donnees-230",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une alerte de sécurité signale des requêtes anormales : UNION SELECT sur un endpoint public, encodages inhabituels et tentatives sur des noms de tables système. Décris ta réponse complète, technique et organisationnelle.",
+    "reponse_reference": "Immédiat : bloquer/WAF l'endpoint, vérifier dans les logs et pg_stat_statements ce qui a été exécuté et si des données ont fui, révoquer les sessions suspectes, faire tourner les credentials si compromission. Court terme : corriger la vulnérabilité (requêtes préparées), restreindre les droits du compte applicatif (pas d'accès aux tables système). Organisationnel : post-mortem, tests d'injection en CI, revue de code, journalisation d'audit et alerting sur les motifs d'injection.",
+    "mots_cles_attendus": [
+      "union select",
+      "waf",
+      "logs",
+      "requêtes préparées",
+      "post-mortem"
+    ]
+  },
+  {
+    "id": "bases_donnees-231",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu dois servir une recherche vectorielle sur 2 milliards d'embeddings de 768 dimensions avec p99 < 100 ms et budget contraint. Quels arbitrages fais-tu ?",
+    "reponse_reference": "Distribuer l'index (sharding par clusters de vecteurs, réplicas pour le débit) avec HNSW en mémoire ou quantification produit (PQ/SQ) pour diviser l'empreinte mémoire par 8-32 au prix d'un rappel légèrement inférieur. Arbitrer rappel vs latence vs coût : quantification + re-ranking sur candidats réduit la RAM ; évaluer Milvus/Qdrant/Vespa distribués et le coût du stockage disque avec cache des couches hautes du graphe.",
+    "mots_cles_attendus": [
+      "quantification",
+      "hnsw",
+      "sharding",
+      "rappel",
+      "mémoire"
+    ]
+  },
+  {
+    "id": "bases_donnees-232",
+    "domaine": "bases_donnees",
+    "sous_theme": "transactions_acid",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Un système distribué utilise l'horloge TrueTime (ou équivalent) pour ordonner les transactions. Explique le problème résolu et le coût de cette approche.",
+    "reponse_reference": "Les horloges physiques ordinaires dérivent, donc ordonner des transactions entre nœuds est incertain ; TrueTime borne l'incertitude (intervalle [earliest, latest]) et les commits attendent la fin de l'intervalle (commit-wait) pour garantir l'ordre réel externe (external consistency), comme Spanner. Le coût : besoin d'horloges de précision (GPS/atomiques), latence de commit augmentée de l'incertitude, et infrastructure propriétaire difficile à reproduire (CockroachDB relâche cette garantie en HLC).",
+    "mots_cles_attendus": [
+      "truetime",
+      "incertitude",
+      "commit-wait",
+      "external consistency",
+      "horloge"
+    ]
+  },
+  {
+    "id": "bases_donnees-233",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Incident : après une coupure réseau de 40 minutes, un cluster à 5 nœuds (quorum 3) a deux nœuds isolés qui ont continué à servir des lectures périmées via un driver mal configuré. Quels impacts et quelles préventions ?",
+    "reponse_reference": "Les lectures sur nœuds minoritaires peuvent servir des données très périmées (selon le niveau de cohérence demandé), entraînant des décisions métier fausses. Préventions : exiger un niveau de cohérence LOCAL_QUORUM ou supérieur pour les lectures sensibles, configurer le driver pour ne lire que les nœuds synchrones, monitorer le lag de réplication et alerter, et tester régulièrement les partitions (game days).",
+    "mots_cles_attendus": [
+      "partition",
+      "minorité",
+      "lectures périmées",
+      "quorum",
+      "driver"
+    ]
+  },
+  {
+    "id": "bases_donnees-234",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Le DAF veut réduire de 40 % le coût des bases de données cloud tout en gardant les SLA. Propose une démarche structurée d'optimisation des coûts.",
+    "reponse_reference": "Inventorier et mesurer (coût par service/requête via tags et métriques), identifier les gaspillages : instances surdimensionnées, stockage de données froides non hiérarchisé (tiering vers objet/glacier), index et snapshots orphelins, environnements de test allumés 24/7, répliques sous-utilisées. Ensuite : droitsizing, achat d'instances réservées pour la charge stable, compaction/nettoyage des données périmées (TTL), stockage en formats compressés ouverts, et gouvernance continue avec alertes de dérive budgétaire.",
+    "mots_cles_attendus": [
+      "droitsizing",
+      "tiering",
+      "réservées",
+      "gaspillage",
+      "gouvernance"
+    ]
+  },
+  {
+    "id": "bases_donnees-235",
+    "domaine": "bases_donnees",
+    "sous_theme": "donnees_massives",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un backfill historique doit réécrire 3 ans de données dans un lakehouse Iceberg sans bloquer les écritures temps réel ni les lectures. Comment organises-tu l'opération ?",
+    "reponse_reference": "Écrire le backfill en commits de lots isolés sur la même table (isolation snapshot d'Iceberg) en filtrant/réécrivant uniquement les partitions concernées, avec throttling pour ne pas saturer les ressources ni multiplier les petits fichiers, puis compaction (rewrite_data_files) et expiration des snapshots anciens. Les lecteurs voient les snapshots validés sans blocage grâce au MVCC de la table ; en cas d'erreur, rollback_to_snapshot.",
+    "mots_cles_attendus": [
+      "backfill",
+      "snapshots",
+      "mvcc",
+      "compaction",
+      "rollback"
+    ]
+  },
+  {
+    "id": "bases_donnees-236",
+    "domaine": "bases_donnees",
+    "sous_theme": "securite_donnees",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Le RGPD impose le droit à l'effacement, mais tes données clients sont répliquées dans PostgreSQL, un lake Parquet, un cache Redis, une base vectorielle et des backups. Comment conçois-tu un processus d'effacement fiable ?",
+    "reponse_reference": "Inventaire cartographié des flux de données personnelles par système, suppression directe dans les stores primaires (PostgreSQL, Redis avec TTL court), tombstone/rewrite des partitions dans le lake, régénération des embeddings concernés, et pour les backups immuables : politique de rétention courte documentée + chiffrement avec destruction de clé (crypto-erasure) pour les données supprimées. Le tout tracé (journal d'effacement) pour prouver la conformité dans les délais légaux.",
+    "mots_cles_attendus": [
+      "rgpd",
+      "effacement",
+      "inventaire",
+      "crypto-erasure",
+      "rétention"
+    ]
+  },
+  {
+    "id": "bases_donnees-237",
+    "domaine": "bases_donnees",
+    "sous_theme": "optimisation_requetes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une requête de type 'recherche les 10 derniers événements de chaque utilisateur parmi 200 millions de lignes' utilise un window function et sature la mémoire. Donne au moins deux reformulations plus efficaces.",
+    "reponse_reference": "1) LATERAL JOIN : pour chaque utilisateur (table petite ou filtrée), SELECT ... WHERE user_id = u.id ORDER BY ts DESC LIMIT 10, servi par un index (user_id, ts DESC). 2) Distinct on (PostgreSQL) ou semi-jointure sur les positions maximales. Si la liste d'utilisateurs est grande, partitionner la table par hachage de user_id ; dans tous les cas, éviter le window sur l'ensemble des 200 millions de lignes.",
+    "mots_cles_attendus": [
+      "lateral",
+      "index",
+      "distinct on",
+      "limit",
+      "fenêtrage"
+    ]
+  },
+  {
+    "id": "bases_donnees-238",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "On te demande de garantir 'exactement une fois' (exactly-once) de bout en bout entre Kafka, Flink et une base PostgreSQL pour la facturation. Est-ce vraiment possible et comment l'approches-tu ?",
+    "reponse_reference": "Le exactly-once absolu de bout en bout n'existe pas hors transaction globale ; on obtient du effectively-once par idempotence : transactions en 2 phases de Flink vers la base (two-phase commit sink) ou écritures idempotentes avec clé de déduplication unique (event_id) côté PostgreSQL, et producteurs Kafka idempotents + transactions. Combiné à un traitement déterministe et rejouable depuis les checkpoints, la facturation ne peut pas dupliquer.",
+    "mots_cles_attendus": [
+      "exactly-once",
+      "idempotence",
+      "two-phase commit",
+      "déduplication",
+      "checkpoint"
+    ]
+  },
+  {
+    "id": "bases_donnees-239",
+    "domaine": "bases_donnees",
+    "sous_theme": "replication_ha",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Incident majeur : corruption logique détectée (un bug applicatif a écrit des montants négatifs pendant 6 jours) sur une base répliquée — la corruption a atteint les secondaires, le lake et les backups incrémentaux. Décris ta stratégie de récupération.",
+    "reponse_reference": "Identifier la fenêtre de corruption exacte via journaux d'audit/CDC, puis choisir : PITR sur un clone jusqu'à juste avant le bug et rejeu des transactions saines filtrées (le WAL/CDC permet de rejouer en excluant les écritures corrompues), ou correction par compensation si les montants faux sont identifiables. Propager la correction vers lake et dérivés (rebuild depuis la source corrigée), puis vérifier par reconciliation et renforcer : contraintes CHECK, détection d'anomalies sur les écritures.",
+    "mots_cles_attendus": [
+      "corruption",
+      "pitr",
+      "rejeu",
+      "compensation",
+      "réconciliation"
+    ]
+  },
+  {
+    "id": "bases_donnees-240",
+    "domaine": "bases_donnees",
+    "sous_theme": "architectures_modernes",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Tu dois concevoir la plateforme de données complète d'une licorne : OLTP pour le produit, analytique pour le BI, IA/RAG pour les features, le tout sur données sensibles et réglementées. Synthétise ton architecture cible et ses frontières de cohérence.",
+    "reponse_reference": "Cœur OLTP sharded/scalable (PostgreSQL + Citus ou NewSQL) avec ACID fort par agrégat métier ; CDC (Debezium/Kafka) vers un lakehouse Iceberg pour le BI et le ML (cohérence à terme assumée, fraîcheur minutes) ; bases spécialisées polyglottes (Redis cache, Elasticsearch recherche, base vectorielle RAG) alimentées par le même flux d'événements. Frontières : cohérence forte uniquement dans le transactionnel, éventuelle ailleurs ; sécurité transversale (chiffrement, RLS, moindres privilèges, gouvernance des données personnelles) et contrats de schéma entre producteurs et consommateurs.",
+    "mots_cles_attendus": [
+      "oltp",
+      "cdc",
+      "lakehouse",
+      "polyglotte",
+      "cohérence",
+      "gouvernance"
+    ]
+  }
+]

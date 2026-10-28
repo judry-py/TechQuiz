@@ -1,0 +1,202 @@
+[
+  {
+    "id": "systemes_embarques-141",
+    "domaine": "systemes_embarques",
+    "sous_theme": "cpp_embarque",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels avantages et quels risques le C++ apporte-t-il dans un projet embarqué par rapport au C ?",
+    "reponse_reference": "Le C++ offre l'encapsulation, les templates, le RAII et des abstractions à coût nul qui améliorent la structuration du code sans pénalité à l'exécution s'ils sont bien employés. En contrepartie, certaines fonctionnalités, exceptions, RTTI, allocation dynamique implicite, sont coûteuses ou non déterministes et sont généralement bannies en embarqué. Le choix impose une discipline de codage stricte et une équipe formée aux pièges spécifiques, notamment les constructeurs globaux et l'ordre d'initialisation.",
+    "mots_cles_attendus": ["c++", "raii", "exceptions", "rtti", "abstraction à coût nul"]
+  },
+  {
+    "id": "systemes_embarques-142",
+    "domaine": "systemes_embarques",
+    "sous_theme": "cpp_embarque",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment constexpr et les templates permettent-ils de déplacer des calculs vers la compilation ?",
+    "reponse_reference": "constexpr force l'évaluation d'une expression à la compilation quand ses entrées sont connues, de sorte qu'une table de conversion ou une constante calculée n'existe plus que comme valeur figée dans le binaire. Les templates instancient du code générique spécialisé pour chaque type à la compilation, ce qui évite les pointeurs de fonction et les branchements à l'exécution. Le firmware y gagne en vitesse, en taille et en déterminisme, le coût étant supporté une seule fois à la compilation.",
+    "mots_cles_attendus": ["constexpr", "template", "compilation", "spécialisation", "binaire"]
+  },
+  {
+    "id": "systemes_embarques-143",
+    "domaine": "systemes_embarques",
+    "sous_theme": "cpp_embarque",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Pourquoi préférer std::array à un tableau C classique en embarqué ?",
+    "reponse_reference": "std::array encapsule un tableau de taille fixe sans aucune allocation dynamique, tout en fournissant une interface de conteneur avec taille connue, itérateurs et accès vérifiables. Il évite la dégradation en pointeur qui fait perdre l'information de taille et permet des contrôles de bornes en débogage, réduisant les débordements de buffer. Sa taille et son encombrement sont identiques à ceux du tableau C, ce qui le rend gratuit à l'exécution.",
+    "mots_cles_attendus": ["std::array", "taille fixe", "pas d'allocation", "bornes", "dégradation en pointeur"]
+  },
+  {
+    "id": "systemes_embarques-144",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment fonctionne le modèle publish/subscribe de MQTT et quel rôle y joue le broker ?",
+    "reponse_reference": "Dans MQTT, les clients ne communiquent jamais directement : ils publient des messages sur des sujets (topics) hiérarchiques et s'abonnent à ceux qui les intéressent, le broker centralisant la distribution. Le broker filtre et route chaque message vers tous les abonnés du sujet, ce qui découple totalement producteurs et consommateurs. Ce modèle convient aux réseaux contraints car un capteur peut publier sans connaître les destinataires et rester endormi entre deux publications.",
+    "mots_cles_attendus": ["mqtt", "publish/subscribe", "broker", "topic", "découplage"]
+  },
+  {
+    "id": "systemes_embarques-145",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels sont les trois niveaux de qualité de service de MQTT et leurs garanties respectives ?",
+    "reponse_reference": "Le QoS 0 délivre le message au plus une fois, sans acquittement ni stockage, ce qui est le plus léger mais peut perdre des messages. Le QoS 1 garantit au moins une livraison grâce à un acquittement, au prix de possibles doublons. Le QoS 2 garantit exactement une livraison par un échange en quatre temps, plus coûteux en messages et en latence, réservé aux données où tout doublon ou toute perte est inacceptable.",
+    "mots_cles_attendus": ["qos 0", "qos 1", "qos 2", "acquittement", "doublon"]
+  },
+  {
+    "id": "systemes_embarques-146",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelles différences entre CoAP et MQTT orientent le choix d'un protocole IoT ?",
+    "reponse_reference": "CoAP fonctionne sur UDP avec un modèle requête-réponse proche du REST, très léger et adapté aux réseaux contraints comme les maillages 6LoWPAN, tandis que MQTT repose sur TCP et un courtier central pour la distribution de masse. CoAP intègre nativement la découverte de ressources et l'observation, MQTT excelle dans le routage un-vers-plusieurs et les sessions persistantes. Le choix dépend de la topologie, de la fiabilité du réseau et du besoin de communication directe entre nœuds.",
+    "mots_cles_attendus": ["coap", "udp", "mqtt", "rest", "contraint"]
+  },
+  {
+    "id": "systemes_embarques-147",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Pourquoi MQTT est-il souvent préféré à HTTP pour la remontée de données de capteurs ?",
+    "reponse_reference": "MQTT est un protocole binaire à en-têtes minuscules, persistant et bidirectionnel, qui consomme nettement moins de bande passante et d'énergie que le modèle requête-réponse textuel de HTTP. La connexion TCP reste ouverte, ce qui évite de renégocier pour chaque message et permet au serveur de pousser des commandes vers le dispositif. HTTP garde l'avantage de la simplicité et de la compatibilité universelle pour des requêtes ponctuelles ou des mises à jour de firmware.",
+    "mots_cles_attendus": ["mqtt", "http", "en-têtes", "persistant", "bidirectionnel"]
+  },
+  {
+    "id": "systemes_embarques-148",
+    "domaine": "systemes_embarques",
+    "sous_theme": "edge_computing",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'edge computing et pourquoi déplacer des traitements du cloud vers les équipements ?",
+    "reponse_reference": "L'edge computing consiste à traiter les données au plus près de leur source, sur la passerelle ou le dispositif lui-même, plutôt que de tout centraliser dans le cloud. Il réduit la latence, la bande passante consommée et la dépendance à la connectivité, tout en limitant l'exposition des données personnelles. Il ne remplace pas le cloud, qui conserve l'agrégation globale, l'apprentissage et la supervision, mais le complète par des décisions locales immédiates.",
+    "mots_cles_attendus": ["edge computing", "latence", "bande passante", "local", "cloud"]
+  },
+  {
+    "id": "systemes_embarques-149",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que garantit TLS 1.3 entre un objet connecté et un serveur, et comment la session s'établit-elle ?",
+    "reponse_reference": "TLS 1.3 chiffre et authentifie la communication : le handshake négocie une suite de chiffrement et établit des clés de session via un échange de clés éphémère, généralement X25519, en un seul aller-retour. Le client vérifie le certificat du serveur et l'échange fournit confidentialité, intégrité et authentification du serveur. Les suites à chiffrement authentifié comme AES-GCM et l'abandon des échanges RSA statiques durcissent nettement le protocole par rapport à TLS 1.2.",
+    "mots_cles_attendus": ["tls 1.3", "handshake", "aes-gcm", "certificat", "échange de clés"]
+  },
+  {
+    "id": "systemes_embarques-150",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment FreeRTOS gère-t-il la mémoire et quelles stratégies d'allocation propose-t-il ?",
+    "reponse_reference": "FreeRTOS offre plusieurs implémentations de son allocateur : heap_1 alloue sans jamais libérer, heap_2 permet les libérations mais fragmente, heap_4 fusionne les blocs adjacents et convient à la plupart des cas, heap_5 étend le tas sur plusieurs régions mémoire. L'alternative robuste est l'allocation statique : piles, files et sémaphores créés à la compilation, ce qui supprime toute fragmentation et rend l'empreinte mémoire totalement déterministe.",
+    "mots_cles_attendus": ["heap_4", "allocation statique", "fragmentation", "tas", "déterminisme"]
+  },
+  {
+    "id": "systemes_embarques-151",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment un objet connecté obtient-il une horodatage fiable et pourquoi en a-t-il besoin ?",
+    "reponse_reference": "Le dispositif synchronise son horloge sur le réseau via NTP ou SNTP auprès de serveurs de temps, ou reçoit l'heure du broker ou du serveur applicatif lors de la connexion. L'heure juste est nécessaire pour dater les mesures, valider les certificats TLS, dont la vérification repose sur la date courante, et ordonner les événements journalisés. Sans pile RTC ni horloge réseau, les décisions liées aux certificats ou aux fenêtres de validité deviennent impossibles à fiabiliser.",
+    "mots_cles_attendus": ["ntp", "sntp", "horodatage", "certificat", "validité"]
+  },
+  {
+    "id": "systemes_embarques-152",
+    "domaine": "systemes_embarques",
+    "sous_theme": "cpp_embarque",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le RAII et comment sécurise-t-il la gestion des ressources matérielles en embarqué ?",
+    "reponse_reference": "Le RAII (Resource Acquisition Is Initialization) lie la durée de vie d'une ressource à celle d'un objet : la ressource est acquise dans le constructeur et libérée dans le destructeur. Un verrou, un GPIO ou une session de bus est ainsi rendu automatiquement à la sortie de la fonction, y compris sur les retours anticipés, ce qui élimine les oublis de libération. Sans exceptions, le destructeur est invoqué à chaque fin de portée, rendant la gestion des ressources prévisible et systématique.",
+    "mots_cles_attendus": ["raii", "constructeur", "destructeur", "libération automatique", "portée"]
+  },
+  {
+    "id": "systemes_embarques-153",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un capteur remonte des températures toutes les dix minutes et des alarmes critiques. Quels niveaux de QoS MQTT attribuer à chaque flux ?",
+    "reponse_reference": "Les relevés périodiques peuvent utiliser le QoS 0 ou 1 : une mesure perdue est compensée par la suivante, et le QoS 1 évite la plupart des pertes à faible coût. Les alarmes critiques exigent le QoS 1 au minimum, et le QoS 2 si aucun doublon ni perte n'est toléré par le système de supervision. Il faut aussi dimensionner le broker et les files d'attente, car la garantie du QoS s'arrête à la livraison au broker, pas au destinataire final.",
+    "mots_cles_attendus": ["qos", "relevés", "alarmes", "perte", "doublon"]
+  },
+  {
+    "id": "systemes_embarques-154",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un dispositif MQTT perd sa connexion pendant la nuit et ne republie pas ses données au retour du réseau. Comment fiabiliser ce scénario ?",
+    "reponse_reference": "Il faut activer la persistance de session côté client et côté broker pour conserver les abonnements et les messages en attente, et utiliser un last will (LWT) qui signale la disparition du dispositif aux autres clients. Une file locale spoolée en mémoire non volatile permet de stocker les mesures pendant la coupure et de les republier après reconnexion. Le keepalive et les délais de reconnexion avec backoff évitent enfin les reconnexions frénétiques qui surchargent le broker.",
+    "mots_cles_attendus": ["session persistante", "last will", "spool", "reconnexion", "keepalive"]
+  },
+  {
+    "id": "systemes_embarques-155",
+    "domaine": "systemes_embarques",
+    "sous_theme": "edge_computing",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une machine doit détecter des vibrations anormales en moins de 100 ms alors que la liaison cloud offre une latence de plusieurs secondes. Comment répartir les traitements ?",
+    "reponse_reference": "La détection doit s'exécuter localement, au plus près du capteur, avec un algorithme simple de seuillage ou un modèle léger embarqué qui évalue chaque fenêtre d'échantillons et décide en temps réel. Le cloud conserve les rôles différés : historique, apprentissage du modèle, mise à jour des seuils et supervision. On obtient ainsi une boucle de réaction locale bornée, insensible aux coupures réseau, tout en gardant l'intelligence globale centralisée.",
+    "mots_cles_attendus": ["détection locale", "latence", "modèle embarqué", "boucle de réaction", "cloud"]
+  },
+  {
+    "id": "systemes_embarques-156",
+    "domaine": "systemes_embarques",
+    "sous_theme": "cpp_embarque",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un firmware en C++ dépasse sa limite de Flash. Quelles fonctionnalités du langage vérifier et quelles optimisations appliquer ?",
+    "reponse_reference": "Il faut traquer les instanciations de templates dupliquées, les tables de RTTI et le code d'exceptions, dont la désactivation avec -fno-exceptions et -fno-rtti fait souvent chuter la taille de façon spectaculaire. La suppression du code mort par --gc-sections, l'optimisation en taille -Os et la réduction des instanciations inutiles complètent le gain. Le fichier map du linker révèle précisément les symboles les plus volumineux, qu'il faut attaquer en priorité.",
+    "mots_cles_attendus": ["fno-exceptions", "fno-rtti", "os", "gc-sections", "fichier map"]
+  },
+  {
+    "id": "systemes_embarques-157",
+    "domaine": "systemes_embarques",
+    "sous_theme": "securite_iot",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un capteur communique avec un serveur via un réseau non maîtrisé. Faut-il utiliser TLS ou DTLS et comment le justifier ?",
+    "reponse_reference": "Sur un transport fiable comme le TCP d'une liaison Wi-Fi ou cellulaire, TLS s'impose, tandis que DTLS est la déclinaison d'UDP adaptée aux réseaux à pertes comme le maillé 6LoWPAN. Le choix suit donc le protocole de transport : MQTT sur TCP appelle TLS, CoAP sur UDP appelle DTLS. Dans les deux cas, il faut provisionner un certificat ou une clé pré-partagée, vérifier la chaîne de confiance et maintenir l'heure système à jour.",
+    "mots_cles_attendus": ["tls", "dtls", "tcp", "udp", "certificat"]
+  },
+  {
+    "id": "systemes_embarques-158",
+    "domaine": "systemes_embarques",
+    "sous_theme": "rtos",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Deux tâches de priorité moyenne et une tâche basse partagent une ressource protégée par mutex, et une tâche haute subit des blocages longs. Comment diagnostiquer et corriger ?",
+    "reponse_reference": "Il s'agit d'une chaîne d'inversion de priorité : la tâche haute attend le mutex détenu par la tâche basse, elle-même préemptée par les tâches moyennes qui ne dépendent pas de la ressource. L'héritage de priorité simple ne suffit pas toujours dans ce cas, et le protocole à plafond de priorité, ou une révision du découpage des sections critiques, donne une borne stricte au blocage. On peut aussi raccourcir les sections critiques ou affecter les priorités pour que les tâches moyennes n'interfèrent pas.",
+    "mots_cles_attendus": ["inversion de priorité", "plafond de priorité", "mutex", "blocage borné", "section critique"]
+  },
+  {
+    "id": "systemes_embarques-159",
+    "domaine": "systemes_embarques",
+    "sous_theme": "protocoles_iot",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Comment détecter rapidement qu'un objet connecté est devenu muet, alors qu'aucun message n'était attendu de lui ?",
+    "reponse_reference": "Le keepalive MQTT force le dispositif à émettre régulièrement un ping, et le broker ou la plateforme déclare le client hors ligne après une durée sans signe de vie, typiquement une fois et demie l'intervalle. Le last will publié par le broker à la disparition du client alerte immédiatement la supervision. Côté serveur, des battements de cœur applicatifs permettent de distinguer un dispositif muet mais connecté d'un dispositif réellement défaillant.",
+    "mots_cles_attendus": ["keepalive", "ping", "last will", "hors ligne", "battement de cœur"]
+  },
+  {
+    "id": "systemes_embarques-160",
+    "domaine": "systemes_embarques",
+    "sous_theme": "edge_computing",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une passerelle doit appliquer des règles métier modifiables sans redéploiement du firmware. Quelle architecture logicielle adopter ?",
+    "reponse_reference": "Il faut séparer le moteur d'exécution, figé dans le firmware, des règles, qui deviennent des données : une table de seuils, une liste de conditions ou un petit script interprété téléchargé depuis le serveur. Le firmware évalue ces règles à chaque événement et applique les actions associées, la mise à jour des règles passant par un simple message signé. Cette séparation évite les mises à jour complètes du firmware à chaque ajustement métier et réduit la surface de risque.",
+    "mots_cles_attendus": ["moteur de règles", "données", "mise à jour", "signé", "firmware figé"]
+  }
+]

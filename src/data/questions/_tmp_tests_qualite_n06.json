@@ -1,0 +1,202 @@
+[
+  {
+    "id": "tests_qualite-101",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de charge et quels indicateurs clés doit-on mesurer ?",
+    "reponse_reference": "Un test de charge soumet le système à un trafic simulé réaliste pour mesurer son comportement : temps de réponse moyen et par percentile, débit, taux d'erreur et consommation de ressources. Ces indicateurs permettent de vérifier que les exigences de performance sont tenues sous charge attendue.",
+    "mots_cles_attendus": ["trafic simulé", "percentile", "débit", "taux d'erreur"]
+  },
+  {
+    "id": "tests_qualite-102",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence entre un test de charge, un test de stress et un test de montée en charge ?",
+    "reponse_reference": "Le test de charge vérifie le comportement sous la charge attendue en production. Le test de stress pousse le système au-delà de ses limites pour identifier son point de rupture et son mode de dégradation. Le test de montée en charge (soak test) applique une charge prolongée pour détecter les fuites de mémoire ou la dégradation dans le temps.",
+    "mots_cles_attendus": ["charge attendue", "point de rupture", "durée prolongée", "dégradation"]
+  },
+  {
+    "id": "tests_qualite-103",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que k6 et quels avantages présente-t-il par rapport à JMeter ?",
+    "reponse_reference": "k6 est un outil de test de charge open source dont les scénarios s'écrivent en JavaScript, ce qui les rend versionnables et faciles à intégrer en CI. Il est plus léger que JMeter pour générer de la charge, mais offre moins d'options de reporting graphique sans outil externe comme Grafana.",
+    "mots_cles_attendus": ["JavaScript", "CI", "léger", "Grafana"]
+  },
+  {
+    "id": "tests_qualite-104",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une API répond en 200 ms en local, mais en 2 secondes lorsque 500 utilisateurs simultanés la sollicitent. Comment analyser cette dégradation ?",
+    "reponse_reference": "Il faut examiner les ressources partagées sous charge : connexions à la base de données, CPU, mémoire, files d'attente du serveur et dépendances externes. Le profilage et le suivi distribué (APM) permettent d'identifier le goulot d'étranglement précis, qu'il s'agisse d'une requête SQL lente ou d'une saturation de connexions.",
+    "mots_cles_attendus": ["goulot d'étranglement", "connexions", "APM", "ressources partagées"]
+  },
+  {
+    "id": "tests_qualite-105",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe doit concevoir un test de charge réaliste pour un site e-commerce avant le Black Friday. Quels éléments doit-elle modéliser ?",
+    "reponse_reference": "Elle doit modéliser des parcours utilisateurs réalistes avec leurs proportions (recherche, fiche produit, panier, paiement), les temps de réflexion, et la montée progressive du trafic attendu. Les données utilisées doivent être représentatives et l'environnement de test dimensionné comme la production pour que les résultats soient exploitables.",
+    "mots_cles_attendus": ["parcours utilisateurs", "proportions", "montée en charge", "environnement réaliste"]
+  },
+  {
+    "id": "tests_qualite-106",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelles différences entre la couverture de lignes, de branches et de conditions ?",
+    "reponse_reference": "La couverture de lignes indique quelles lignes ont été exécutées, mais ignore les chemins de décision. La couverture de branches vérifie que chaque issue d'une condition a été prise. La couverture de conditions (et MC/DC) va plus loin en vérifiant que chaque condition élémentaire influence réellement la décision.",
+    "mots_cles_attendus": ["lignes", "branches", "conditions", "MC/DC"]
+  },
+  {
+    "id": "tests_qualite-107",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Une couverture de code de 100 % garantit-elle l'absence de bugs ? Pourquoi ?",
+    "reponse_reference": "Non, la couverture mesure uniquement le code exécuté par les tests, pas la justesse des assertions ni les scénarios d'intégration. Un test peut parcourir toutes les lignes sans vérifier les résultats, et la couverture ne détecte pas les bugs liés aux interactions entre composants.",
+    "mots_cles_attendus": ["exécution", "assertions", "interactions", "fausse garantie"]
+  },
+  {
+    "id": "tests_qualite-108",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une branche non couverte dans un rapport de couverture ?",
+    "reponse_reference": "Une branche non couverte est un chemin de décision, comme le cas « faux » d'une condition if, qui n'a jamais été exécuté par les tests. Elle signale un comportement du code jamais vérifié, souvent lié à un cas limite ou à la gestion d'erreur absente des scénarios.",
+    "mots_cles_attendus": ["chemin de décision", "cas faux", "gestion d'erreur", "jamais exécuté"]
+  },
+  {
+    "id": "tests_qualite-109",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un module affiche 95 % de couverture de lignes, mais le chemin de traitement d'erreur n'est jamais testé. Que doit faire l'équipe ?",
+    "reponse_reference": "Elle doit ajouter des tests qui provoquent l'erreur : entrées invalides, dépendance en panne, données corrompues. Les chemins d'erreur sont souvent les plus sensibles en production et doivent être couverts en priorité malgré le bon score global.",
+    "mots_cles_attendus": ["chemin d'erreur", "entrées invalides", "provoquer l'échec", "priorité"]
+  },
+  {
+    "id": "tests_qualite-110",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe veut imposer un seuil de couverture de 80 % dans sa pipeline CI. Comment le mettre en place sans effets pervers ?",
+    "reponse_reference": "Il faut mesurer la couverture uniquement sur le code modifié ou nouveau, avec une tolérance de déclin configurable, plutôt que d'exiger un seuil global rigide. Le seuil doit s'accompagner d'une revue de la qualité des tests, car un seuil seul encourage des tests sans assertions pour « faire du pourcentage ».",
+    "mots_cles_attendus": ["code modifié", "seuil global", "tests sans assertions", "revue"]
+  },
+  {
+    "id": "tests_qualite-111",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de sécurité automatisé et quelles grandes familles d'outils existent ?",
+    "reponse_reference": "Un test de sécurité automatisé recherche des vulnérabilités connues dans le code ou l'application en cours d'exécution. On distingue les analyses statiques (SAST) qui inspectent le code source, les analyses dynamiques (DAST) qui attaquent l'application en fonctionnement, et les analyses de dépendances (SCA).",
+    "mots_cles_attendus": ["SAST", "DAST", "SCA", "vulnérabilités"]
+  },
+  {
+    "id": "tests_qualite-112",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence entre une analyse SAST et une analyse DAST ?",
+    "reponse_reference": "Le SAST analyse le code source sans l'exécuter et détecte tôt des défauts comme les injections ou les mauvaises pratiques, avec parfois des faux positifs. Le DAST attaque l'application déployée comme le ferait un attaquant et trouve des vulnérabilités réelles d'exploitation, mais seulement sur les parcours accessibles.",
+    "mots_cles_attendus": ["code source", "application déployée", "faux positifs", "exploitation réelle"]
+  },
+  {
+    "id": "tests_qualite-113",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que l'OWASP Top 10 et à quoi sert-il dans les tests ?",
+    "reponse_reference": "L'OWASP Top 10 est un classement régulièrement actualisé des risques de sécurité les plus critiques pour les applications web, comme les injections ou le contrôle d'accès défaillant. Il sert de référentiel pour orienter les campagnes de tests et les revues de sécurité sur les menaces les plus probables.",
+    "mots_cles_attendus": ["classement", "risques critiques", "injection", "référentiel"]
+  },
+  {
+    "id": "tests_qualite-114",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un test DAST révèle une injection SQL dans un champ de recherche d'un formulaire. Quelle démarche de correction et de prévention adopter ?",
+    "reponse_reference": "Il faut corriger immédiatement en utilisant des requêtes paramétrées plutôt que la concaténation de chaînes, puis vérifier que la faille est bien fermée en rejouant le test. Pour prévenir, on ajoute un test de non-régression avec des charges malveillantes et on intègre le SAST dans la pipeline.",
+    "mots_cles_attendus": ["requêtes paramétrées", "rejeu", "test de non-régression", "pipeline"]
+  },
+  {
+    "id": "tests_qualite-115",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe souhaite intégrer des contrôles de sécurité dans sa pipeline CI/CD sans ralentir les livraisons. Quelles étapes proposer ?",
+    "reponse_reference": "Il faut commencer par des contrôles rapides à chaque commit : scan des dépendances (SCA) et analyse statique (SAST) sur le code modifié, avec blocage sur les vulnérabilités critiques. Les scans dynamiques plus lourds peuvent être planifiés sur l'environnement de préproduction, à fréquence régulière.",
+    "mots_cles_attendus": ["SCA", "SAST", "scan des dépendances", "préproduction"]
+  },
+  {
+    "id": "tests_qualite-116",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quels critères permettent de décider du niveau de test à appliquer à une fonctionnalité ?",
+    "reponse_reference": "On évalue le risque métier de la fonctionnalité, la probabilité de défaillance et l'impact d'un défaut sur les utilisateurs. Une fonctionnalité critique justifie davantage de tests, y compris E2E, tandis qu'une fonctionnalité annexe peut se contenter de tests unitaires et d'intégration.",
+    "mots_cles_attendus": ["risque métier", "impact", "probabilité", "effort proportionné"]
+  },
+  {
+    "id": "tests_qualite-117",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une stratégie de test et quels éléments doit-elle contenir ?",
+    "reponse_reference": "Une stratégie de test définit les objectifs qualité, les niveaux et types de tests, les outils, les environnements et les critères d'entrée et de sortie. Elle précise aussi les responsabilités et la gestion des risques pour aligner l'effort de test sur les enjeux du projet.",
+    "mots_cles_attendus": ["objectifs qualité", "niveaux de tests", "outils", "critères d'entrée/sortie"]
+  },
+  {
+    "id": "tests_qualite-118",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que signifie l'approche « shift-left » du test ?",
+    "reponse_reference": "Le shift-left consiste à déplacer les activités de test le plus tôt possible dans le cycle de développement, dès la conception et le code. Les défauts sont ainsi détectés plus tôt, ce qui réduit fortement leur coût de correction par rapport à une détection tardive en recette ou en production.",
+    "mots_cles_attendus": ["tôt dans le cycle", "conception", "coût de correction", "détection précoce"]
+  },
+  {
+    "id": "tests_qualite-119",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe teste sans méthode : certains modules sont sur-testés, d'autres jamais vérifiés, et personne ne sait quoi tester avant une release. Comment établir une stratégie ?",
+    "reponse_reference": "Il faut d'abord cartographier les fonctionnalités et leurs risques, puis définir explicitement les niveaux de test, les critères de validation et les responsabilités. Une check-list de release et une revue de couverture régulière permettent ensuite de piloter l'effort de test au lieu de le subir.",
+    "mots_cles_attendus": ["cartographie des risques", "critères de validation", "responsabilités", "pilotage"]
+  },
+  {
+    "id": "tests_qualite-120",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Comment répartir l'effort de test entre une fonctionnalité critique de paiement et une page d'aide statique ?",
+    "reponse_reference": "Le paiement, à fort impact en cas de défaillance, mérite des tests unitaires approfondis, des tests d'intégration, des tests de sécurité et un ou plusieurs parcours E2E. La page d'aide, à faible risque, se contente d'un test de non-régression simple vérifiant son affichage et ses liens.",
+    "mots_cles_attendus": ["impact", "risque", "effort proportionné", "non-régression"]
+  }
+]

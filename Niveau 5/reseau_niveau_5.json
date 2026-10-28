@@ -1,0 +1,302 @@
+[
+  {
+    "id": "reseau-049",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un site interne est accessible depuis le réseau du bureau mais pas depuis le Wi-Fi invité. Quelles pistes vérifier ?",
+    "reponse_reference": "Le Wi-Fi invité est probablement dans un VLAN séparé, volontairement isolé du réseau interne. Il faut vérifier les règles de pare-feu ou les ACL entre les deux réseaux, le routage inter-VLAN et le DNS fourni aux invités. L'isolation est souvent voulue : on n'ouvre l'accès que si c'est justifié.",
+    "mots_cles_attendus": [
+      "VLAN",
+      "isolé",
+      "ACL",
+      "pare-feu"
+    ]
+  },
+  {
+    "id": "reseau-050",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un serveur web situé en DMZ répond depuis le réseau interne mais plus depuis Internet. Quelles pistes vérifier ?",
+    "reponse_reference": "Vérifier la règle de redirection de port (NAT) sur le routeur ou le pare-feu, les règles de filtrage entrant sur le port 80/443, que l'adresse publique est toujours correcte, que le service écoute bien, et l'état de la connexion Internet ou du DNS public.",
+    "mots_cles_attendus": [
+      "NAT",
+      "redirection de port",
+      "pare-feu",
+      "DNS"
+    ]
+  },
+  {
+    "id": "reseau-051",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Les utilisateurs signalent des lenteurs uniquement vers un serveur précis. Comment utiliser ping et traceroute pour localiser le problème ?",
+    "reponse_reference": "Ping mesure la latence et la perte de paquets vers le serveur. Traceroute montre le chemin saut par saut : un saut où la latence augmente fortement ou où les paquets se perdent désigne l'équipement ou le lien suspect. On compare avec d'autres destinations pour savoir si le problème est local ou propre à ce serveur.",
+    "mots_cles_attendus": [
+      "latence",
+      "perte de paquets",
+      "saut",
+      "comparer"
+    ]
+  },
+  {
+    "id": "reseau-052",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise a trois sites et veut les relier de façon sécurisée en passant par Internet. Quelle solution proposer et pourquoi ?",
+    "reponse_reference": "Un VPN site à site (par exemple IPsec) crée un tunnel chiffré entre les routeurs ou pare-feux de chaque site. Les sites communiquent comme sur un même réseau privé, à moindre coût qu'une liaison dédiée, avec chiffrement et authentification.",
+    "mots_cles_attendus": [
+      "VPN site à site",
+      "tunnel chiffré",
+      "IPsec",
+      "moindre coût"
+    ]
+  },
+  {
+    "id": "reseau-053",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Après l'ajout d'un nouveau switch, tout le réseau ralentit et les voyants des ports clignotent frénétiquement. Que se passe-t-il ?",
+    "reponse_reference": "Une boucle de commutation s'est probablement formée (par exemple deux câbles entre les mêmes switchs), provoquant une tempête de diffusion qui sature le réseau. On débranche le lien en trop et on active le Spanning Tree (STP) pour prévenir ces boucles.",
+    "mots_cles_attendus": [
+      "boucle",
+      "tempête de diffusion",
+      "STP",
+      "câble"
+    ]
+  },
+  {
+    "id": "reseau-054",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Des machines reçoivent un message de conflit d'adresse alors que tout le monde utilise le DHCP. Quelle est la cause probable ?",
+    "reponse_reference": "Des appareils ont des adresses IP statiques situées dans la plage distribuée par le DHCP, qui peut donc les attribuer à une autre machine. Solution : exclure les adresses statiques de la plage DHCP ou utiliser des réservations DHCP basées sur l'adresse MAC.",
+    "mots_cles_attendus": [
+      "adresses statiques",
+      "plage DHCP",
+      "exclure",
+      "réservation"
+    ]
+  },
+  {
+    "id": "reseau-055",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un visiteur branche son portable sur une prise murale libre de la salle de réunion et accède directement au réseau interne. Quelles mesures mettre en place ?",
+    "reponse_reference": "Désactiver les ports inutilisés, appliquer le contrôle d'accès par port avec 802.1X (authentification avant l'accès), la sécurité de port (limiter les adresses MAC), et placer les prises publiques dans un VLAN invité isolé.",
+    "mots_cles_attendus": [
+      "802.1X",
+      "ports désactivés",
+      "port security",
+      "VLAN invité"
+    ]
+  },
+  {
+    "id": "reseau-056",
+    "domaine": "reseau",
+    "sous_theme": "depannage",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le Wi-Fi d'un open space de 60 personnes devient très lent aux heures de pointe. Quelles causes et solutions envisager ?",
+    "reponse_reference": "Causes possibles : trop de clients sur une seule borne, bande 2,4 GHz saturée, interférences entre canaux. Solutions : ajouter des bornes, favoriser la bande 5 GHz, répartir les canaux, ajuster la puissance d'émission et vérifier la capacité de la liaison montante.",
+    "mots_cles_attendus": [
+      "trop de clients",
+      "5 GHz",
+      "canaux",
+      "ajouter des bornes"
+    ]
+  },
+  {
+    "id": "reseau-057",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle est la différence entre OSPF et BGP, et dans quels cas les utilise-t-on ?",
+    "reponse_reference": "OSPF est un protocole de routage interne (IGP) utilisé à l'intérieur d'une organisation pour calculer les meilleurs chemins. BGP est un protocole de routage externe (EGP) qui échange les routes entre organisations indépendantes (systèmes autonomes) et fait fonctionner Internet.",
+    "mots_cles_attendus": [
+      "IGP",
+      "EGP",
+      "systèmes autonomes",
+      "Internet"
+    ]
+  },
+  {
+    "id": "reseau-058",
+    "domaine": "reseau",
+    "sous_theme": "protocoles",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le PAT (NAT overload) ?",
+    "reponse_reference": "Le PAT permet à de nombreux appareils d'un réseau privé de partager une seule adresse IP publique : le routeur distingue chaque connexion grâce à un numéro de port source différent et garde une table de traduction.",
+    "mots_cles_attendus": [
+      "une seule adresse publique",
+      "ports",
+      "table de traduction",
+      "NAT"
+    ]
+  },
+  {
+    "id": "reseau-059",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une ACL (liste de contrôle d'accès) sur un routeur ou un pare-feu ?",
+    "reponse_reference": "Une ACL est une liste ordonnée de règles autorisant ou refusant le trafic selon des critères comme l'adresse source, l'adresse de destination, le protocole ou le port. Les règles sont évaluées dans l'ordre, la première qui correspond s'applique, et il y a un refus implicite à la fin.",
+    "mots_cles_attendus": [
+      "règles",
+      "autoriser ou refuser",
+      "ordre",
+      "refus implicite"
+    ]
+  },
+  {
+    "id": "reseau-060",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la haute disponibilité réseau et comment la met-on en place avec la redondance ?",
+    "reponse_reference": "C'est la capacité d'un réseau à continuer à fonctionner malgré une panne. On duplique les équipements et liens critiques, et des protocoles comme HSRP ou VRRP font basculer automatiquement la passerelle vers l'équipement de secours, évitant un point de défaillance unique.",
+    "mots_cles_attendus": [
+      "redondance",
+      "basculement automatique",
+      "VRRP",
+      "point de défaillance unique"
+    ]
+  },
+  {
+    "id": "reseau-093",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise veut séparer le réseau de la comptabilité, des RH et des invités. Comment concevoir cette segmentation ?",
+    "reponse_reference": "Créer un VLAN par groupe, chacun avec son sous-réseau, relier les VLAN via un routeur ou pare-feu et appliquer des ACL pour n'autoriser que les flux nécessaires. Les invités n'ont qu'un accès Internet, isolés du réseau interne.",
+    "mots_cles_attendus": [
+      "VLAN",
+      "sous-réseau",
+      "ACL",
+      "isoler"
+    ]
+  },
+  {
+    "id": "reseau-094",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le serveur DNS interne tombe en panne et plus personne ne peut naviguer. Comment éviter que cela se reproduise ?",
+    "reponse_reference": "Mettre en place au moins un serveur DNS secondaire, voire des serveurs répartis, configurés sur les clients et via DHCP, avec surveillance de leur état. Un cache DNS et un DNS externe de secours peuvent compléter.",
+    "mots_cles_attendus": [
+      "serveur secondaire",
+      "redondance",
+      "DHCP",
+      "supervision"
+    ]
+  },
+  {
+    "id": "reseau-095",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "On soupçonne qu'un appareil du réseau envoie du trafic suspect vers l'extérieur. Comment enquêter et réagir ?",
+    "reponse_reference": "Analyser les journaux du pare-feu et les flux (NetFlow, captures), identifier l'appareil et les destinations, isoler l'appareil du réseau, rechercher un malware, puis bloquer les destinations malveillantes et corriger la cause.",
+    "mots_cles_attendus": [
+      "journaux",
+      "flux",
+      "isoler",
+      "bloquer"
+    ]
+  },
+  {
+    "id": "reseau-096",
+    "domaine": "reseau",
+    "sous_theme": "architecture",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Le lien WAN entre deux sites se coupe régulièrement et bloque le travail. Quelles solutions de fiabilisation proposer ?",
+    "reponse_reference": "Ajouter un second lien chez un autre opérateur avec basculement automatique (failover), éventuellement avec un VPN de secours ou une solution SD-WAN qui choisit le meilleur lien, et superviser la qualité du lien.",
+    "mots_cles_attendus": [
+      "second lien",
+      "failover",
+      "SD-WAN",
+      "supervision"
+    ]
+  },
+  {
+    "id": "reseau-097",
+    "domaine": "reseau",
+    "sous_theme": "securite_reseau",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un nouveau serveur web doit être accessible depuis Internet en HTTPS. Comment l'exposer de façon sécurisée ?",
+    "reponse_reference": "Le placer en DMZ derrière un pare-feu, n'ouvrir que le port 443, utiliser éventuellement un reverse proxy ou un WAF, installer un certificat valide, limiter les flux de la DMZ vers le réseau interne et maintenir le serveur à jour.",
+    "mots_cles_attendus": [
+      "DMZ",
+      "port 443",
+      "reverse proxy",
+      "certificat"
+    ]
+  },
+  {
+    "id": "reseau-098",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le routage inter-VLAN et la configuration « router on a stick » ?",
+    "reponse_reference": "Pour faire communiquer des VLAN, un routeur relié au switch par un seul lien trunk utilise des sous-interfaces, une par VLAN, chacune servant de passerelle. C'est simple et économique, mais le lien unique peut devenir un goulot d'étranglement.",
+    "mots_cles_attendus": [
+      "sous-interfaces",
+      "trunk",
+      "passerelle",
+      "goulot d'étranglement"
+    ]
+  },
+  {
+    "id": "reseau-099",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que MPLS dans les grands réseaux d'opérateurs ?",
+    "reponse_reference": "MPLS achemine les paquets grâce à des étiquettes (labels) plutôt que par une analyse complète de l'adresse IP à chaque saut. Il permet de la rapidité, de l'ingénierie de trafic et de relier des sites avec des réseaux privés virtuels.",
+    "mots_cles_attendus": [
+      "étiquettes",
+      "labels",
+      "opérateurs",
+      "VPN"
+    ]
+  },
+  {
+    "id": "reseau-100",
+    "domaine": "reseau",
+    "sous_theme": "routage",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'agrégation de routes (route summarization) et quel est son intérêt ?",
+    "reponse_reference": "Elle regroupe plusieurs routes contiguës en une seule route plus générale. Les tables de routage deviennent plus petites, plus rapides à traiter et plus stables car les changements locaux sont masqués.",
+    "mots_cles_attendus": [
+      "regrouper",
+      "tables de routage",
+      "plus petites",
+      "stabilité"
+    ]
+  }
+]

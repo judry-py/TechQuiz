@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-021",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi Google a-t-il introduit Kotlin comme langage officiel pour Android ?",
+    "reponse_reference": "Kotlin offre une syntaxe plus concise que Java tout en restant totalement interopérable avec lui. Il intègre nativement la nullabilité, les coroutines et les fonctions d'ordre supérieur, ce qui réduit les erreurs et le code parasite.",
+    "mots_cles_attendus": ["kotlin", "java", "nullabilité", "interopérabilité"]
+  },
+  {
+    "id": "dev_mobile-022",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre une Activity et un Service sur Android ?",
+    "reponse_reference": "Une Activity représente un écran avec une interface utilisateur et occupe le premier plan. Un Service s'exécute en arrière-plan sans interface, par exemple pour une synchronisation ou la lecture de musique.",
+    "mots_cles_attendus": ["activity", "service", "interface", "arrière-plan"]
+  },
+  {
+    "id": "dev_mobile-023",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une Activity doit initialiser une seule fois une ressource coûteuse au lancement. Quelle méthode du cycle de vie utiliser et pourquoi pas les autres ?",
+    "reponse_reference": "L'initialisation doit se faire dans onCreate, appelée une seule fois à la création de l'activité. onStart et onResume sont rappelées à chaque retour au premier plan, et onDestroy peut ne jamais être appelée si le processus est tué.",
+    "mots_cles_attendus": ["oncreate", "onstart", "onresume", "initialisation"]
+  },
+  {
+    "id": "dev_mobile-024",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quel est le rôle du système de build Gradle dans un projet Android ?",
+    "reponse_reference": "Gradle décrit la configuration du projet (dépendances, versions du SDK, variantes) et orchestre la compilation des sources et des ressources. Ses scripts permettent d'automatiser des tâches répétitives comme le lancement des tests ou la génération des artefacts.",
+    "mots_cles_attendus": ["gradle", "build", "dépendances", "automatisation"]
+  },
+  {
+    "id": "dev_mobile-025",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une liste de contacts contient 10 000 éléments. Quel composant Android utiliser et quels sont ses avantages ?",
+    "reponse_reference": "Le RecyclerView recycle les vues via un ViewHolder, ne matérialisant que la portion visible de la liste. Il limite ainsi la consommation mémoire et fluidifie le défilement, contrairement à un ListView qui gonfle ses éléments.",
+    "mots_cles_attendus": ["recyclerview", "viewholder", "mémoire", "liste"]
+  },
+  {
+    "id": "dev_mobile-026",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Fragment dans le développement Android ?",
+    "reponse_reference": "Un Fragment est une portion d'interface réutilisable, imbriquée dans une Activity et possédant son propre cycle de vie. Il permet de découper un écran complexe en briques indépendantes et de les recombiner selon la taille de l'écran.",
+    "mots_cles_attendus": ["fragment", "activity", "réutilisable", "cycle de vie"]
+  },
+  {
+    "id": "dev_mobile-027",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application bancaire impose l'obfuscation, l'accès aux API natives de chiffrement et une taille de binaire minimale. Quelle stratégie de développement choisir ?",
+    "reponse_reference": "Le développement natif en Kotlin et Swift s'impose pour exploiter les API matérielles et système propres à chaque OS. Il facilite aussi la réduction de la taille du binaire et l'obfuscation, deux contraintes fortes en banque.",
+    "mots_cles_attendus": ["natif", "obfuscation", "kotlin", "swift", "sécurité"]
+  },
+  {
+    "id": "dev_mobile-028",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Comment SwiftUI a-t-il changé la manière de développer des interfaces iOS ?",
+    "reponse_reference": "SwiftUI introduit une approche déclarative où l'interface est décrite comme une fonction de l'état. Les vues sont des valeurs immuables et le framework gère la reconstruction de l'affichage, à l'opposé du modèle impératif d'UIKit.",
+    "mots_cles_attendus": ["swiftui", "déclaratif", "uikit", "état"]
+  },
+  {
+    "id": "dev_mobile-029",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application doit être publiée sur le Play Store. Pourquoi faut-il signer l'APK avec une clé privée ?",
+    "reponse_reference": "La signature cryptographique prouve l'identité du éditeur et garantit l'intégrité du paquet. Google rejette toute mise à jour dont la signature diffère de la version publiée, et Android bloque l'installation de paquets non signés.",
+    "mots_cles_attendus": ["signature", "clé privée", "keystore", "intégrité"]
+  },
+  {
+    "id": "dev_mobile-030",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Android App Bundle et en quoi diffère-t-il d'un APK universel ?",
+    "reponse_reference": "L'App Bundle est un format de publication qui contient l'ensemble des variantes de ressources et de code. Le Play Store en génère des APK adaptés à chaque appareil, réduisant ainsi la taille réellement téléchargée.",
+    "mots_cles_attendus": ["app bundle", "apk", "variantes", "taille"]
+  },
+  {
+    "id": "dev_mobile-031",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Le système Android tue l'application en arrière-plan pour libérer de la mémoire. Quelles mesures permettent de ne pas perdre de données ?",
+    "reponse_reference": "L'état de l'interface doit être sauvegardé dans onSaveInstanceState et restauré au redémarrage. Les données métier doivent être persistées dans une base locale ou un ViewModel, et les traitements longs confiés à un WorkManager.",
+    "mots_cles_attendus": ["savedinstancestate", "workmanager", "persistance", "viewmodel"]
+  },
+  {
+    "id": "dev_mobile-032",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert le Bundle dans le développement Android ?",
+    "reponse_reference": "Le Bundle est un conteneur clé-valeur permettant de transmettre des données entre composants et de restaurer l'état après un changement de configuration. Il stocke notamment le texte d'un champ ou la position de défilement d'une liste.",
+    "mots_cles_attendus": ["bundle", "savedinstancestate", "clé-valeur", "restauration"]
+  },
+  {
+    "id": "dev_mobile-033",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi doit-on renseigner une description de contenu sur les images d'une application Android ?",
+    "reponse_reference": "L'attribut contentDescription fournit une alternative textuelle lue par TalkBack par les lecteurs d'écran. Il est indispensable pour l'accessibilité des personnes aveugles ou malvoyantes et peut aussi servir à la recherche vocale.",
+    "mots_cles_attendus": ["contentdescription", "accessibilité", "talkback", "lecteur d'écran"]
+  },
+  {
+    "id": "dev_mobile-034",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe veut partager la logique métier entre Android et iOS sans réécrire l'interface. Quelle technologie choisir ?",
+    "reponse_reference": "Kotlin Multiplatform permet d'écrire la logique métier en Kotlin dans un module commun compilé pour les deux plateformes. Flutter et React Native partagent en plus l'interface, au prix d'un framework plus contraignant.",
+    "mots_cles_attendus": ["kotlin multiplatform", "code partagé", "logique métier", "cross-platform"]
+  },
+  {
+    "id": "dev_mobile-035",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un store d'applications et à quoi sert-il ?",
+    "reponse_reference": "Un store d'applications est une plateforme de distribution qui centralise la publication, la mise à jour et la monétisation des applications. Il assure également la revue du code, la gestion des versions et la protection contre les malwares.",
+    "mots_cles_attendus": ["store", "distribution", "publication", "revue"]
+  },
+  {
+    "id": "dev_mobile-036",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une photo de bannière doit remplir l'écran sans être déformée. Comment paramétrer l'ImageView ?",
+    "reponse_reference": "Il faut choisir un scaleType adapté, par exemple centerCrop pour recouvrir la zone en rognant, ou fitCenter pour montrer l'image entière avec des marges. La taille de la vue et les dimensions de l'image doivent aussi être cohérentes.",
+    "mots_cles_attendus": ["imageview", "scaletype", "centercrop", "déformation"]
+  },
+  {
+    "id": "dev_mobile-037",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un émulateur Android et à quoi sert-il concrètement ?",
+    "reponse_reference": "L'émulateur est une machine virtuelle exécutant une image du système Android, utilisable sans matériel. Il permet de tester plusieurs versions d'OS, densités d'écran et langues, mais ne restitue pas fidèlement les performances réelles.",
+    "mots_cles_attendus": ["émulateur", "machine virtuelle", "image système", "test"]
+  },
+  {
+    "id": "dev_mobile-038",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Après une authentification réussie, où l'application doit-elle conserver le jeton d'accès ?",
+    "reponse_reference": "Le jeton doit être stocké dans le Keychain sur iOS ou dans un EncryptedSharedPreferences sur Android, jamais en clair dans les préférences classiques. Il est relu par le ViewModel ou le service réseau, et renouvelé via un refresh token.",
+    "mots_cles_attendus": ["keychain", "encryptharedpreferences", "jeton", "refresh token"]
+  },
+  {
+    "id": "dev_mobile-039",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que Kotlin Multiplatform ?",
+    "reponse_reference": "Kotlin Multiplatform est un plugin qui permet d'écrire un même code Kotlin dans un module commun et de le compiler pour plusieurs cibles. Les parties spécifiques à une plateforme sont isolées dans des implémentations attendues via expect et actual.",
+    "mots_cles_attendus": ["kotlin", "multiplatform", "expect", "actual"]
+  },
+  {
+    "id": "dev_mobile-040",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une nouvelle version de l'application doit être acceptée par le Play Store. Que faut-il modifier dans la configuration du projet ?",
+    "reponse_reference": "Il faut incrémenter le versionCode (entier strictement croissant) et le versionName (libellé visible) du module applicatif. Une nouvelle clé de signature de publication est également nécessaire si l'application utilise déjà des uploads de clés.",
+    "mots_cles_attendus": ["versioncode", "versionname", "signature", "publication"]
+  }
+]

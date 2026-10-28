@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev_mobile-181",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le profiling CPU et comment interpréter un flame graph mobile ?",
+    "reponse_reference": "Le profiling CPU échantillonne les appels de fonctions pendant l'exécution pour mesurer le temps consommé par chaque méthode. Le flame graph visualise ces échantillons sous forme de barres empilées : plus une barre est large, plus la méthode consomme de temps. L'analyse remonte les chemins les plus chauds, en distinguant le temps propre d'une méthode de celui de ses appels enfants.",
+    "mots_cles_attendus": ["profiling", "flame graph", "échantillonnage", "chemin chaud", "cpu"]
+  },
+  {
+    "id": "dev_mobile-182",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que représente un budget de frame de 16,6 millisecondes et que se passe-t-il au-delà ?",
+    "reponse_reference": "À 60 images par seconde, chaque frame dispose de 16,6 millisecondes pour la mesure, la mise en page et le dessin de l'écran. Si le travail du thread principal dépasse ce budget, le frame est abandonné et l'image précédente reste affichée, créant une saccade visible. Sur les écrans à 120 Hz, le budget tombe à environ 8,3 millisecondes, ce qui rend le respect du budget encore plus exigeant.",
+    "mots_cles_attendus": ["frame", "16 ms", "60 hz", "120 hz", "jank"]
+  },
+  {
+    "id": "dev_mobile-183",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un écran de démarrage met deux secondes et demie à s'afficher sur un appareil milieu de gamme. Comment diagnostiquer et réduire ce temps ?",
+    "reponse_reference": "Il faut profiler le démarrage pour séparer le temps de création du processus, l'initialisation des SDK et le premier rendu de l'écran. On retarde alors les initialisations non indispensables, on allège la première frame et on évite les opérations bloquantes comme les lectures disque synchrones. Un benchmark de démarrage, exécuté en CI sur plusieurs appareils, mesure la progression et détecte les régressions.",
+    "mots_cles_attendus": ["démarrage", "cold start", "profilage", "initialisation différée", "benchmark"]
+  },
+  {
+    "id": "dev_mobile-184",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que les Baseline Profiles et comment améliorent-ils le démarrage Android ?",
+    "reponse_reference": "Les Baseline Profiles décrivent les chemins de code les plus utilisés d'une application, collectés lors de l'exécution des parcours types. L'environnement d'exécution ART s'en sert pour précompiler ces chemins en code natif avant même la première utilisation. Le démarrage et les transitions évitent ainsi la compilation à la volée, source de latence au premier lancement.",
+    "mots_cles_attendus": ["baseline profiles", "aot", "art", "précompilation", "démarrage"]
+  },
+  {
+    "id": "dev_mobile-185",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Universal Link sur iOS et comment valider l'association de domaine ?",
+    "reponse_reference": "Un Universal Link est une URL https que l'application revendique et qui l'ouvre directement sans passer par le navigateur. Le domaine associé est déclaré dans les entitlements et doit publier le fichier apple-app-site-association listant les chemins autorisés. Le système vérifie cette association lors de l'installation et de la mise à jour de l'application.",
+    "mots_cles_attendus": ["universal link", "aasa", "entitlements", "association de domaine", "https"]
+  },
+  {
+    "id": "dev_mobile-186",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un App Link vérifié sur Android et comment le déboguer ?",
+    "reponse_reference": "Un App Link est un lien web déclaré avec autoVerify dont la vérification est validée par le fichier assetlinks.json publié sur le domaine. L'état de vérification s'inspecte avec la commande adb shell pm get-app-links, qui liste les domaines vérifiés. Un échec courant vient d'un fichier mal servi, d'une empreinte de certificat erronée ou d'une redirection entre domaines.",
+    "mots_cles_attendus": ["app link", "assetlinks.json", "auto-verify", "adb", "empreinte"]
+  },
+  {
+    "id": "dev_mobile-187",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un deep link ouvre bien l'application mais jamais le bon écran selon l'URL reçue. Comment structurer le routage ?",
+    "reponse_reference": "Il faut centraliser la réception des liens dans un routeur unique qui parse l'URI et associe chaque motif de chemin à un écran avec ses paramètres. Les arguments sont extraits et typés, puis la navigation est lancée en respectant la pile existante. Un motif inconnu doit tomber sur un écran de repli explicite plutôt que sur un comportement arbitraire.",
+    "mots_cles_attendus": ["routage", "parsing d'uri", "navigation", "paramètres", "repli"]
+  },
+  {
+    "id": "dev_mobile-188",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un lien de campagne doit ouvrir l'application au bon endroit, y compris quand l'utilisateur l'installe après avoir cliqué. Comment implémenter ce deferred deep link ?",
+    "reponse_reference": "Le clic sur le lien enregistre le contexte de campagne côté fournisseur du lien, avant même l'installation de l'application. Après l'installation et le premier lancement, l'application interroge ce fournisseur pour récupérer le lien différé et ses paramètres. Elle navigue alors vers l'écran de destination et attribue l'installation à la campagne dans l'outil de mesure.",
+    "mots_cles_attendus": ["deferred deep link", "attribution", "installation", "campagne", "premier lancement"]
+  },
+  {
+    "id": "dev_mobile-189",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que sont EAS Build et EAS Submit et comment s'intègrent-ils à un projet Expo ?",
+    "reponse_reference": "EAS Build compile les applications Expo dans le cloud, avec une configuration déclarée dans un fichier du dépôt, sans serveur de build local. EAS Submit enchaîne la soumission des binaires vers Google Play et l'App Store, avec les informations de connexion et de signature gérées côté service. L'ensemble s'intègre aux pipelines GitHub Actions ou GitLab pour publier à chaque tag de version.",
+    "mots_cles_attendus": ["eas build", "eas submit", "expo", "build cloud", "soumission"]
+  },
+  {
+    "id": "dev_mobile-190",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment Fastlane gère-t-il la signature iOS avec match ?",
+    "reponse_reference": "Match centralise les certificats et profils de signature dans un dépôt Git chiffré, partagé entre les développeurs et la CI. Une commande unique régénère ou télécharge les éléments de signature nécessaires au build, sans intervention manuelle. Cette centralisation évite les certificats locaux divergents et les conflits de révocation entre machines.",
+    "mots_cles_attendus": ["fastlane", "match", "certificats", "profils", "signature"]
+  },
+  {
+    "id": "dev_mobile-191",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une équipe Flutter doit publier chaque semaine sur Google Play et l'App Store sans intervention manuelle. Décrire le pipeline à mettre en place.",
+    "reponse_reference": "La CI compile les deux binaires à partir du tag de version, exécute les tests, puis génère l'AAB et l'archive iOS signée avec des secrets protégés. Fastlane ou EAS Submit enchaîne l'envoi vers les deux consoles, avec un déploiement progressif configuré et une promotion manuelle vers la production. Les erreurs de soumission, comme un numéro de build en conflit, doivent faire échouer le pipeline et notifier l'équipe.",
+    "mots_cles_attendus": ["pipeline", "tag", "fastlane", "déploiement progressif", "secrets"]
+  },
+  {
+    "id": "dev_mobile-192",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le build passe sur le téléphone du testeur mais pas sur celui du client, qui utilise une autre architecture de processeur. Comment fiabiliser les livraisons ?",
+    "reponse_reference": "Il faut publier via un App Bundle ou une matrice de builds couvrant toutes les ABI supportées, et tester chaque architecture en CI. Les livraisons internes doivent embarquer ou distribuer les variantes correspondant aux appareils des testeurs. Un suivi des appareils utilisés en production permet de valider la couverture réelle avant chaque release.",
+    "mots_cles_attendus": ["abi", "app bundle", "matrice de builds", "arm64", "couverture"]
+  },
+  {
+    "id": "dev_mobile-193",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un service en premier plan sur Android et quelles contraintes s'appliquent depuis Android 14 ?",
+    "reponse_reference": "Un service en premier plan exécute une tâche visible par l'utilisateur, matérialisée par une notification permanente impossible à masquer. Depuis Android 14, chaque service doit déclarer un type, comme localisation ou lecture média, et demander la permission en premier plan correspondante. Les usages non conformes, comme le simple maintien en vie de l'application, sont rejetés par le système et par les stores.",
+    "mots_cles_attendus": ["foreground service", "android 14", "type de service", "permission", "notification permanente"]
+  },
+  {
+    "id": "dev_mobile-194",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une notification extensible et quelles actions une notification peut-elle exposer ?",
+    "reponse_reference": "Une notification extensible révèle du contenu supplémentaire quand l'utilisateur l'agrandit : grande image, texte long, conversation ou commandes intégrées. Les actions sont des boutons portés par des PendingIntent, comme répondre, archiver ou marquer comme lu. Les réponses directes permettent de saisir du texte depuis la notification, via une action de réponse dédiée.",
+    "mots_cles_attendus": ["notification extensible", "actions", "pendingintent", "réponse directe", "contenu"]
+  },
+  {
+    "id": "dev_mobile-195",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application de navigation doit rester active en arrière-plan avec une notification permanente. Quelles exigences modernes respecter ?",
+    "reponse_reference": "Le service doit être un service en premier plan déclaré avec le type location et la permission FOREGROUND_SERVICE_LOCATION, demandée à l'utilisateur. La notification permanente doit afficher l'état du guidage et proposer une action d'arrêt, sans pouvoir être masquée. L'application doit aussi justifier l'usage continu de la localisation et prévoir sa suspension automatique à la fin du trajet.",
+    "mots_cles_attendus": ["foreground service", "location", "notification permanente", "permission", "arrêt"]
+  },
+  {
+    "id": "dev_mobile-196",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un trampoline de notification et pourquoi Android 12 l'interdit-il ?",
+    "reponse_reference": "Un trampoline de notification est un service ou un receiver intermédiaire qui relance un autre composant uniquement pour ouvrir l'activité cible depuis une notification. Android 12 interdit ce mécanisme car il retarde le lancement et perturbe l'expérience utilisateur. Le PendingIntent de la notification doit viser directement l'activité concernée, éventuellement en passant par un trampoline d'activité autorisé.",
+    "mots_cles_attendus": ["trampoline", "notification", "android 12", "pendingintent", "activité cible"]
+  },
+  {
+    "id": "dev_mobile-197",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern outbox dans la synchronisation mobile ?",
+    "reponse_reference": "Le pattern outbox journalise chaque mutation locale dans une table ou une file dédiée, dans la même transaction que l'écriture métier. Un processus de synchronisation rejoue ensuite ces opérations vers le serveur dans l'ordre, puis les marque comme envoyées. Ce journal garantit qu'aucune modification n'est perdue, même si l'application est tuée entre l'écriture et l'envoi.",
+    "mots_cles_attendus": ["outbox", "journal", "transaction", "rejeu", "fiabilité"]
+  },
+  {
+    "id": "dev_mobile-198",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un CRDT et quels avantages offre-t-il face au dernier écrivain gagnant ?",
+    "reponse_reference": "Un CRDT est une structure de données conçue pour que des répliques modifiées indépendamment convergent vers le même état sans coordination. Contrairement au dernier écrivain gagnant, qui écrase des modifications concurrentes, les CRDT fusionnent les changements de façon déterministe. Ils conviennent aux éditions collaboratives de texte, de compteurs ou d'ensembles, au prix d'une complexité de modélisation plus élevée.",
+    "mots_cles_attendus": ["crdt", "convergence", "fusion", "dernier écrivain gagnant", "répliques"]
+  },
+  {
+    "id": "dev_mobile-199",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application collaborative édite des listes partagées hors ligne sur plusieurs appareils. Quels mécanismes garantir la convergence sans écraser les contributions ?",
+    "reponse_reference": "Chaque élément de liste doit être traité comme une unité adressable avec ses propres opérations d'ajout, de modification et de suppression, fusionnables indépendamment. Les CRDT ou les versions par élément permettent de conserver les contributions concurrentes au lieu d'écraser la liste entière. La résolution produit un état identique sur tous les appareils, quel que soit l'ordre d'arrivée des synchronisations.",
+    "mots_cles_attendus": ["crdt", "opérations par élément", "convergence", "fusion", "concurrence"]
+  },
+  {
+    "id": "dev_mobile-200",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une synchronisation consomme trop de données mobiles et dégrade l'autonomie. Quelles optimisations proposer ?",
+    "reponse_reference": "Il faut réduire le volume transféré : synchronisation incrémentale par deltas plutôt que rechargement complet, compression des charges utiles et formats binaires comme Protobuf. Les gros transferts peuvent être différés en Wi-Fi et au secteur, et les synchronisations groupées dans des fenêtres espacées plutôt qu'en continu. Un suivi du volume par utilisateur permet de mesurer l'effet de chaque optimisation.",
+    "mots_cles_attendus": ["delta", "compression", "protobuf", "wifi", "batching"]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "web3_blockchain-121",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'attaque par réentrance (reentrancy) sur un smart contract ?",
+    "reponse_reference": "La réentrance survient lorsqu'un contrat appelle un contrat externe (transfert de fonds, appel arbitraire) avant d'avoir mis à jour son propre état : le contrat appelé, s'il est malveillant, rappelle alors la même fonction avant la fin de la première exécution. L'attaquant peut ainsi retirer des fonds plusieurs fois alors que son solde n'a été débité qu'une seule fois.",
+    "mots_cles_attendus": ["réentrance", "appel externe", "état non mis à jour", "rappel", "double retrait"]
+  },
+  {
+    "id": "web3_blockchain-122",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le patron checks-effects-interactions et pourquoi prévient-il la réentrance ?",
+    "reponse_reference": "Ce patron impose d'ordonner le code en trois temps : vérifier les conditions (checks), mettre à jour l'état du contrat (effects), puis seulement effectuer les appels externes (interactions). Comme l'état est déjà à jour avant tout appel sortant, un contrat malveillant qui rappelle la fonction ne peut plus exploiter un solde ou un droit déjà consommé.",
+    "mots_cles_attendus": ["checks", "effects", "interactions", "état à jour", "ordre"]
+  },
+  {
+    "id": "web3_blockchain-123",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un dépassement d'entier (overflow/underflow) et comment Solidity s'en protège-t-il ?",
+    "reponse_reference": "Un dépassement se produit quand une opération arithmétique sort de la plage du type (par exemple 2^256-1 + 1) et « reboucle » vers une petite valeur, faussant soldes et compteurs. Depuis Solidity 0.8, les opérations contrôlées provoquent un revert automatique en cas de dépassement ; avant cette version, il fallait utiliser des bibliothèques comme SafeMath.",
+    "mots_cles_attendus": ["overflow", "underflow", "revert", "Solidity 0.8", "SafeMath"]
+  },
+  {
+    "id": "web3_blockchain-124",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le front-running dans le mempool et pourquoi est-il possible ?",
+    "reponse_reference": "Le front-running consiste à observer une transaction en attente dans le mempool et à soumettre la sienne avec un prix de gas supérieur pour qu'elle soit incluse juste avant. Comme les transactions sont publiques avant inclusion, un robot peut copier un arbitrage, devancer un achat de NFT ou un dépôt dans un pool, au détriment de la victime.",
+    "mots_cles_attendus": ["front-running", "mempool", "gas supérieur", "ordre d'inclusion", "robot"]
+  },
+  {
+    "id": "web3_blockchain-125",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Comment une signature ECDSA est-elle produite et vérifiée sur Ethereum ?",
+    "reponse_reference": "Le signataire calcule une signature (r, s) sur le condensat du message avec sa clé privée et une valeur aléatoire (nonce), puis ajoute un bit de parité v pour identifier quelle clé publique candidate a signé. N'importe qui peut vérifier la signature avec la clé publique, et la fonction ecrecover permet de retrouver l'adresse du signataire à partir du message et de la signature.",
+    "mots_cles_attendus": ["ECDSA", "r, s, v", "clé privée", "ecrecover", "nonce"]
+  },
+  {
+    "id": "web3_blockchain-126",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un audit de smart contract et que couvre-t-il ?",
+    "reponse_reference": "Un audit est une revue méthodique du code d'un contrat par un tiers spécialisé, qui combine lecture manuelle, outils d'analyse statique, fuzzing et tests de scénarios d'attaque. Il délivre un rapport classant les vulnérabilités par gravité et propose des correctifs, sans toutefois constituer une garantie absolue d'absence de failles.",
+    "mots_cles_attendus": ["audit", "revue de code", "analyse statique", "gravité", "rapport"]
+  },
+  {
+    "id": "web3_blockchain-127",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle est la différence entre tx.origin et msg.sender, et pourquoi tx.origin est-il dangereux pour le contrôle d'accès ?",
+    "reponse_reference": "msg.sender est l'appelant immédiat du contrat, tandis que tx.origin est le compte qui a initié toute la transaction, sans changer à travers les appels intermédiaires. Un contrôle basé sur tx.origin est vulnérable : si la victime appelle un contrat malveillant, celui-ci peut appeler en retour le contrat protégé et hériter du tx.origin légitime de la victime.",
+    "mots_cles_attendus": ["tx.origin", "msg.sender", "appelant immédiat", "contrat malveillant", "contrôle d'accès"]
+  },
+  {
+    "id": "web3_blockchain-128",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un contrat de retrait débite le solde de l'utilisateur seulement après lui avoir envoyé les fonds. Un utilisateur malveillant déploie un contrat qui rappelle withdraw dans sa fonction receive. Que se passe-t-il ?",
+    "reponse_reference": "L'appel de retrait réactive withdraw avant que le solde interne ne soit débité, si bien que le contrat malveillant peut retirer encore et encore, jusqu'à épuiser les fonds du contrat victime ou manquer de gas. C'est l'attaque de réentrance classique : il fallait débiter le solde avant d'envoyer les fonds ou utiliser un verrou de réentrance.",
+    "mots_cles_attendus": ["réentrance", "receive", "solde non débité", "épuisement", "verrou"]
+  },
+  {
+    "id": "web3_blockchain-129",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelles sont les principales approches de contrôle d'accès dans les smart contracts ?",
+    "reponse_reference": "On distingue le modèle à propriétaire unique (ownable), où une seule adresse détient les droits d'administration, et le modèle à rôles (role-based access control), où plusieurs rôles nommés sont attribués à plusieurs adresses. Les droits doivent être structurés, révocables et si possible protégés par un multisig ou un timelock pour éviter qu'une clé compromise ne prenne le contrôle total.",
+    "mots_cles_attendus": ["ownable", "rôles", "RBAC", "révocation", "multisig"]
+  },
+  {
+    "id": "web3_blockchain-130",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Pourquoi la réutilisation d'un même nonce aléatoire dans deux signatures ECDSA permet-elle de retrouver la clé privée ?",
+    "reponse_reference": "Avec deux signatures (r, s1) et (r, s2) partageant le même nonce, la différence s1-s2 élimine la clé privée de l'équation, ne laissant que des valeurs publiques : un simple calcul algébrique en extrait directement la clé. C'est pourquoi les implémentations modernes tirent le nonce de façon déterministe (RFC 6979) à partir de la clé et du message.",
+    "mots_cles_attendus": ["nonce réutilisé", "clé privée", "r, s", "RFC 6979", "déterministe"]
+  },
+  {
+    "id": "web3_blockchain-131",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une enchère NFT permet de soumissionner pendant 24 heures, le meilleur prix l'emportant. Pourquoi son mécanisme est-il vulnérable aux robots du mempool ?",
+    "reponse_reference": "Chaque offre étant visible dans le mempool avant inclusion, un robot peut surenchérir de justesse en payant un gas supérieur, ou attendre la dernière seconde pour emporter l'enchère au prix plancher. Les enchères doivent utiliser des schémas d'engagement (commit-reveal), des offres scellées ou des mécanismes hors chaîne pour rendre la surenchère imprévisible.",
+    "mots_cles_attendus": ["enchère", "mempool", "surenchère", "commit-reveal", "offres scellées"]
+  },
+  {
+    "id": "web3_blockchain-132",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le fuzzing appliqué aux smart contracts et que permet-il de détecter ?",
+    "reponse_reference": "Le fuzzing consiste à envoyer au contrat des milliers d'entrées aléatoires ou semi-aléatoires et à vérifier que ses invariants (solde total constant, accès restreints) tiennent. Il révèle des chemins d'exécution inattendus, des états cassés ou des dépassements que la revue manuelle n'aurait pas anticipés, en complément de l'analyse statique et des tests unitaires.",
+    "mots_cles_attendus": ["fuzzing", "entrées aléatoires", "invariants", "chemins d'exécution", "tests"]
+  },
+  {
+    "id": "web3_blockchain-133",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un programme de bug bounty et en quoi diffère-t-il d'un audit ponctuel ?",
+    "reponse_reference": "Un bug bounty rémunère des chercheurs externes pour la découverte de vulnérabilités selon un barème lié à la gravité, en continu et sur le code réellement déployé. Contrairement à l'audit ponctuel réalisé avant lancement, il couvre les mises à jour successives et mobilise une communauté large, à condition que les règles de divulgation responsable et de périmètre soient claires.",
+    "mots_cles_attendus": ["bug bounty", "récompense", "gravité", "continu", "divulgation responsable"]
+  },
+  {
+    "id": "web3_blockchain-134",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un générateur de portefeuilles en ligne promet de créer des adresses « chanceuses ». Plusieurs utilisateurs de ce service se font voler leurs fonds quelques semaines plus tard. Quelle est l'explication la plus probable ?",
+    "reponse_reference": "Le générateur produisait probablement des clés privées à partir d'un générateur aléatoire faible ou prévisible, voire renvoyait des clés pré-calculées connues de l'opérateur. Toute clé dont la graine n'est pas issue d'un aléa cryptographique de qualité peut être rejouée par un attaquant : la génération de clés doit se faire localement avec un générateur sûr et audité.",
+    "mots_cles_attendus": ["aléa faible", "clés prévisibles", "générateur", "clé privée", "local"]
+  },
+  {
+    "id": "web3_blockchain-135",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Pourquoi un contrat proxy et son implémentation doivent-ils respecter des layouts de stockage identiques ?",
+    "reponse_reference": "Dans un schéma proxy, le code de l'implémentation s'exécute mais lit et écrit dans le stockage du proxy : les variables sont donc rangées selon les slots du proxy. Si une nouvelle implémentation réordonne ou ajoute des variables au début, elle lit des slots décalés et corrompt silencieusement l'état : d'où l'usage de conventions comme des gaps de stockage réservés et des règles de versionnement strictes.",
+    "mots_cles_attendus": ["proxy", "layout de stockage", "slots", "collision", "storage gap"]
+  },
+  {
+    "id": "web3_blockchain-136",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "À quoi sert la fonction ecrecover en Solidity et comment est-elle utilisée ?",
+    "reponse_reference": "ecrecover reconstruit l'adresse du signataire à partir du condensat d'un message et d'une signature (r, s, v). Elle permet d'implémenter des meta-transactions, des airdrops à réclamation signée ou des autorisations hors chaîne : le contrat vérifie que l'adresse retrouvée correspond à celle attendue avant d'exécuter l'action.",
+    "mots_cles_attendus": ["ecrecover", "signataire", "r, s, v", "meta-transaction", "vérification"]
+  },
+  {
+    "id": "web3_blockchain-137",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une DAO découvre qu'un attaquant a fait passer une proposition transférant sa trésorerie vers son adresse. Comment a-t-il pu réussir alors que la majorité des votes s'y opposait ?",
+    "reponse_reference": "L'attaquant a probablement acheté ou emprunté (via un flash loan) une quantité de jetons de gouvernance suffisante juste avant le vote, ou utilisé la délégation de jetons inactifs, pour atteindre le quorum et le seuil de majorité. Les DAO protègent leurs votes par des verrous de participation (snapshot antérieur à la proposition) et un délai d'exécution (timelock) permettant de réagir.",
+    "mots_cles_attendus": ["flash loan", "gouvernance", "quorum", "snapshot", "timelock"]
+  },
+  {
+    "id": "web3_blockchain-138",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un honey pot en DeFi et comment l'identifier avant d'interagir avec un contrat ?",
+    "reponse_reference": "Un honey pot est un contrat qui semble offrir une opportunité de profit (token au rendement prometteur, jeu d'arbitrage) mais dont le code empêche en réalité le retrait des fonds, par une condition cachée ou un mécanisme de blocage. Il faut lire le code vérifié sur l'explorateur, tester le contrat sur un fork local ou un réseau de test, et se méfier des contrats non vérifiés ou récemment déployés.",
+    "mots_cles_attendus": ["honey pot", "retrait bloqué", "code vérifié", "fork local", "méfiance"]
+  },
+  {
+    "id": "web3_blockchain-139",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une faille de contrôle d'accès « missing authorization » et pourquoi est-elle si fréquente ?",
+    "reponse_reference": "Une fonction sensible (mint, changement de frais, retrait de fonds) est déclarée publique ou external sans vérifier qui l'appelle, permettant à n'importe qui de l'invoquer. Elle est fréquente car Solidity rend les fonctions publiques par défaut si l'on omet le mot-clé, et parce que les développeurs oublient souvent de restreindre les fonctions de configuration après le déploiement.",
+    "mots_cles_attendus": ["missing authorization", "publique", "sans restriction", "mint", "configuration"]
+  },
+  {
+    "id": "web3_blockchain-140",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un protocole passe par un proxy et son équipe déploie une nouvelle implémentation qui écrase par erreur un slot de stockage utilisé par l'ancienne version. Quelles conséquences concrètes pour les utilisateurs ?",
+    "reponse_reference": "Les variables lues et écrites aux mêmes slots changent de signification : soldes, allowances ou propriétés peuvent être réinterprétés comme d'autres valeurs, corrompant l'état du protocole. Les utilisateurs peuvent voir leurs soldes devenir faux, des fonds devenir inaccessibles, voire des droits d'administration tomber entre de mauvaises mains, sans qu'aucune transaction d'attaque n'ait eu lieu.",
+    "mots_cles_attendus": ["proxy", "slots écrasés", "corruption d'état", "soldes faux", "administration"]
+  }
+]
