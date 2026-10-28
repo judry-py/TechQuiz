@@ -1,7 +1,7 @@
 // Fusionne les chunks temporaires _tmp_<slug>_nNN.json en <slug>.json final.
 // Usage : node scripts/merge-question-chunks.mjs [slug1 slug2 ...]
 // Sans argument, fusionne les 6 nouveaux domaines.
-import { readFileSync, writeFileSync, readdirSync, unlinkSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
 
 const dir = join(process.cwd(), 'src', 'data', 'questions');

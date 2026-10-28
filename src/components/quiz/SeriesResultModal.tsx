@@ -26,7 +26,6 @@ export interface SeriesResultProps {
   passed: boolean;
   tierInfo: LevelTierInfo;
   isComingSoon: boolean;
-  isMaxLevelReached: boolean;
   answersSummary: AnswerSummaryItem[];
   onRetry: () => void;
 }
@@ -39,7 +38,6 @@ export const SeriesResultModal: React.FC<SeriesResultProps> = ({
   passed,
   tierInfo,
   isComingSoon,
-  isMaxLevelReached: _isMaxLevelReached,
   answersSummary,
   onRetry,
 }) => {

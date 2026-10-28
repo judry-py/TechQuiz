@@ -249,7 +249,7 @@ export default async function DomainesPage() {
                         <Lock className="w-4 h-4 text-amber-400" aria-hidden="true" />
                         <span>
                           Niveaux {domain.maxAvailableLevel + 1} à 12 en cours
-                          d'écriture
+                          d&apos;écriture
                         </span>
                       </div>
                       <Badge variant="warning" size="sm">

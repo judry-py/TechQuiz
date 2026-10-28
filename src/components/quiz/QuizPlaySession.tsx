@@ -146,7 +146,6 @@ export const QuizPlaySession: React.FC<QuizPlaySessionProps> = ({ seriesData }) 
         passed={seriesFinalResult.passed}
         tierInfo={seriesFinalResult.tierInfo}
         isComingSoon={seriesFinalResult.isComingSoon}
-        isMaxLevelReached={seriesFinalResult.isMaxLevelReached}
         answersSummary={answersSummary}
         onRetry={handleRetrySeries}
       />
