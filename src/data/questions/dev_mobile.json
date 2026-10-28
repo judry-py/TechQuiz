@@ -1,0 +1,3764 @@
+[
+  {
+    "id": "dev_mobile-001",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelles sont les deux principales plateformes mobiles utilisées dans le monde ?",
+    "reponse_reference": "Les deux principales plateformes sont Android, lancée par Google, et iOS, développé par Apple. Elles dominent le marché mondial des smartphones et des tablettes.",
+    "mots_cles_attendus": [
+      "android",
+      "ios",
+      "google",
+      "apple",
+      "smartphone"
+    ]
+  },
+  {
+    "id": "dev_mobile-002",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Sur quelles plateformes les applications mobiles sont-elles publiées et distribuées ?",
+    "reponse_reference": "Les applications sont distribuées principalement via le Google Play Store pour Android et l'App Store d'Apple pour iOS. Des stores alternatifs existent pour certains marchés ou entreprises.",
+    "mots_cles_attendus": [
+      "google play store",
+      "app store",
+      "distribution",
+      "publication"
+    ]
+  },
+  {
+    "id": "dev_mobile-003",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une application Android est fermée puis relancée par l'utilisateur. Quelles méthodes du cycle de vie sont exécutées et dans quel ordre ?",
+    "reponse_reference": "Le système crée une nouvelle instance de l'Activity et appelle onCreate, puis onStart et onResume. Les méthodes onPause et onStop sont rappellées lors de la fermeture, et onDestroy libère les ressources.",
+    "mots_cles_attendus": [
+      "oncreate",
+      "onstart",
+      "onresume",
+      "activity",
+      "cycle de vie"
+    ]
+  },
+  {
+    "id": "dev_mobile-004",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel langage est utilisé pour développer nativement des applications iOS ?",
+    "reponse_reference": "Swift est le langage officiel d'Apple pour le développement iOS et macOS. Il est moderne, typé statiquement et coexiste avec l'ancien langage Objective-C encore présent dans de nombreux codes historiques.",
+    "mots_cles_attendus": [
+      "swift",
+      "apple",
+      "ios",
+      "langage"
+    ]
+  },
+  {
+    "id": "dev_mobile-005",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel langage est utilisé pour développer nativement des applications Android ?",
+    "reponse_reference": "Kotlin est le langage officiel recommandé par Google pour Android, en remplacement de Java. Il est concis, possède des fonctions d'ordre supérieur et totalement interopérable avec le code Java existant.",
+    "mots_cles_attendus": [
+      "kotlin",
+      "android",
+      "google",
+      "java"
+    ]
+  },
+  {
+    "id": "dev_mobile-006",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel composant Android sert à afficher du texte non interactif à l'écran ?",
+    "reponse_reference": "Le TextView affiche du texte non sélectionnable et non cliquable. Le EditText, lui, permet à l'utilisateur de saisir du texte, et le Button déclenche une action au clic.",
+    "mots_cles_attendus": [
+      "textview",
+      "texte",
+      "affichage",
+      "edittext"
+    ]
+  },
+  {
+    "id": "dev_mobile-007",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un nouveau développeur Android arrive sur le projet et doit compiler l'application pour la première fois. De quoi a-t-il besoin au minimum ?",
+    "reponse_reference": "Il lui faut Android Studio, un JDK, le SDK Android avec la plateforme et les build-tools requis, plus un appareil ou un émulateur pour exécuter l'application. Un projet Gradle synchronisé fournit ensuite les dépendances.",
+    "mots_cles_attendus": [
+      "android studio",
+      "sdk",
+      "jdk",
+      "gradle",
+      "émulateur"
+    ]
+  },
+  {
+    "id": "dev_mobile-008",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un SDK de développement mobile ?",
+    "reponse_reference": "Un SDK est un ensemble d'outils, de bibliothèques, de compilateurs et de simulateurs fournis par l'éditeur de la plateforme. Il fournit tout ce qui est nécessaire pour compiler, tester et publier une application.",
+    "mots_cles_attendus": [
+      "sdk",
+      "outils",
+      "compilateur",
+      "bibliothèques"
+    ]
+  },
+  {
+    "id": "dev_mobile-009",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Sur iOS, l'utilisateur envoie l'application en arrière-plan puis revient dessus. Que se passe-t-il au niveau du cycle de vie du ViewController ?",
+    "reponse_reference": "Le ViewController reçoit applicationDidEnterBackground lors du passage en arrière-plan, puis il est mis en sommeil par le système. Au retour, il reçoit applicationWillEnterForeground et applicationDidBecomeActive, sans être recréé.",
+    "mots_cles_attendus": [
+      "viewcontroller",
+      "arrière-plan",
+      "premier plan",
+      "cycle de vie"
+    ]
+  },
+  {
+    "id": "dev_mobile-010",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que désigne le cycle de vie d'un composant d'interface mobile ?",
+    "reponse_reference": "Le cycle de vie décrit les états successifs par lesquels passent un composant, de sa création à sa destruction. Il permet de libérer les ressources au bon moment et de restaurer l'état lors des changements de configuration.",
+    "mots_cles_attendus": [
+      "cycle de vie",
+      "états",
+      "création",
+      "destruction"
+    ]
+  },
+  {
+    "id": "dev_mobile-011",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une vue et un composant de layout sur Android ?",
+    "reponse_reference": "Une vue est un élément d'interface (TextView, Button, ImageView) qui affiche des données ou interagit avec l'utilisateur. Un layout est un conteneur (LinearLayout, ConstraintLayout) qui organise et positionne les vues dans l'écran.",
+    "mots_cles_attendus": [
+      "vue",
+      "layout",
+      "composant",
+      "interface"
+    ]
+  },
+  {
+    "id": "dev_mobile-012",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une équipe doit livrer la même application sur Android et iOS avec une base de code la plus petite possible. Quelle stratégie/language recommander ?",
+    "reponse_reference": "On peut choisir un framework multi-plateforme comme Flutter (Dart) ou React Native (JavaScript/TypeScript) afin de partager la couche interface et une partie de la logique. Les accès natifs spécifiques restent malgré tout à écrire dans Swift et Kotlin.",
+    "mots_cles_attendus": [
+      "multi-plateforme",
+      "flutter",
+      "react native",
+      "code partagé"
+    ]
+  },
+  {
+    "id": "dev_mobile-013",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quels sont les principaux’environnement de développement intégrés utilisés pour Android et iOS ?",
+    "reponse_reference": "Android Studio, fondé sur IntelliJ, est l'EDI officiel pour Android, tandis que Xcode est l'EDI obligatoire pour iOS sur macOS. Tous deux intègrent l'éditeur de code, le débogueur, le profileur et la gestion des ressources.",
+    "mots_cles_attendus": [
+      "android studio",
+      "xcode",
+      "edi",
+      "débogueur"
+    ]
+  },
+  {
+    "id": "dev_mobile-014",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Pour un écran de connexion, quels composants d'interface sont généralement nécessaires sous Android ?",
+    "reponse_reference": "L'écran requiert un EditText pour l'identifiant, un EditText pour le mot de passe, un Button pour la validation et une TextView pour afficher une erreur éventuelle. Les hints et les types de clavier adaptés améliorent l'expérience.",
+    "mots_cles_attendus": [
+      "edittext",
+      "button",
+      "textview",
+      "formulaire"
+    ]
+  },
+  {
+    "id": "dev_mobile-015",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un émulateur et un appareil physique pour tester une application mobile ?",
+    "reponse_reference": "L'émulateur est une machine virtuelle simulant un appareil, pratique pour tester plusieurs tailles d'écran et versions de système. L'appareil physique reste indispensable pour valider les performances, les capteurs et les notifications push réelles.",
+    "mots_cles_attendus": [
+      "émulateur",
+      "appareil physique",
+      "test",
+      "performance"
+    ]
+  },
+  {
+    "id": "dev_mobile-016",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un client exige des performances optimales et un accès complet aux API matérielles. Pourquoi choisir un développement natif plutôt qu'une solution multi-plateforme ?",
+    "reponse_reference": "Le développement natif en Swift et Kotlin offre un accès direct et non limité aux API système, un démarrage plus rapide et une taille de binaire réduite. Il en contrepartie duplique les efforts de développement pour chaque plateforme.",
+    "mots_cles_attendus": [
+      "natif",
+      "swift",
+      "kotlin",
+      "performance",
+      "api native"
+    ]
+  },
+  {
+    "id": "dev_mobile-017",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel composant Android affiche une longue liste d'éléments en recyclerant les vues ?",
+    "reponse_reference": "Le RecyclerView affiche des listes longues en ne créant que les vues visibles et en réutilisant les autres via un ViewHolder. Le ListView, son prédécesseur, gérait moins efficacement la mémoire et le recyclage.",
+    "mots_cles_attendus": [
+      "recyclerview",
+      "liste",
+      "viewholder",
+      "recyclage"
+    ]
+  },
+  {
+    "id": "dev_mobile-018",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "L'utilisateur fait pivoter son téléphone et l'activité est recréée. Que doit faire le développeur pour ne pas perdre les données saisies ?",
+    "reponse_reference": "Le système détruit et recrée l'activité lors d'un changement de configuration. Il faut donc sauvegarder l'état via onSaveInstanceState et le restaurer dans onCreate, ou le conserver dans un ViewModel survivant au changement.",
+    "mots_cles_attendus": [
+      "rotation",
+      "savedinstancestate",
+      "viewmodel",
+      "oncreate"
+    ]
+  },
+  {
+    "id": "dev_mobile-019",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un état d'activité ou de ViewController dans le développement mobile ?",
+    "reponse_reference": "Un état correspond à une situation de l'interface (chargement, contenu, erreur, vide) qui pilote l'affichage. Le passage d'un état à l'autre est déclenché par des événements et constitue la base d'une architecture pilotée par état.",
+    "mots_cles_attendus": [
+      "état",
+      "chargement",
+      "erreur",
+      "interface"
+    ]
+  },
+  {
+    "id": "dev_mobile-020",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une erreur « SDK location not found » apparaît au lancement d'Android Studio. Comment la résoudre ?",
+    "reponse_reference": "Il faut installer le composant SDK de la plateforme via le SDK Manager, vérifier que ANDROID_HOME ou ANDROID_SDK_ROOT pointe vers le bon dossier, puis synchroniser le projet Gradle. Une réinstallation des build-tools peut également être nécessaire.",
+    "mots_cles_attendus": [
+      "sdk manager",
+      "android_home",
+      "sdk",
+      "gradle",
+      "build-tools"
+    ]
+  },
+  {
+    "id": "dev_mobile-021",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi Google a-t-il introduit Kotlin comme langage officiel pour Android ?",
+    "reponse_reference": "Kotlin offre une syntaxe plus concise que Java tout en restant totalement interopérable avec lui. Il intègre nativement la nullabilité, les coroutines et les fonctions d'ordre supérieur, ce qui réduit les erreurs et le code parasite.",
+    "mots_cles_attendus": [
+      "kotlin",
+      "java",
+      "nullabilité",
+      "interopérabilité"
+    ]
+  },
+  {
+    "id": "dev_mobile-022",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre une Activity et un Service sur Android ?",
+    "reponse_reference": "Une Activity représente un écran avec une interface utilisateur et occupe le premier plan. Un Service s'exécute en arrière-plan sans interface, par exemple pour une synchronisation ou la lecture de musique.",
+    "mots_cles_attendus": [
+      "activity",
+      "service",
+      "interface",
+      "arrière-plan"
+    ]
+  },
+  {
+    "id": "dev_mobile-023",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une Activity doit initialiser une seule fois une ressource coûteuse au lancement. Quelle méthode du cycle de vie utiliser et pourquoi pas les autres ?",
+    "reponse_reference": "L'initialisation doit se faire dans onCreate, appelée une seule fois à la création de l'activité. onStart et onResume sont rappelées à chaque retour au premier plan, et onDestroy peut ne jamais être appelée si le processus est tué.",
+    "mots_cles_attendus": [
+      "oncreate",
+      "onstart",
+      "onresume",
+      "initialisation"
+    ]
+  },
+  {
+    "id": "dev_mobile-024",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quel est le rôle du système de build Gradle dans un projet Android ?",
+    "reponse_reference": "Gradle décrit la configuration du projet (dépendances, versions du SDK, variantes) et orchestre la compilation des sources et des ressources. Ses scripts permettent d'automatiser des tâches répétitives comme le lancement des tests ou la génération des artefacts.",
+    "mots_cles_attendus": [
+      "gradle",
+      "build",
+      "dépendances",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "dev_mobile-025",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une liste de contacts contient 10 000 éléments. Quel composant Android utiliser et quels sont ses avantages ?",
+    "reponse_reference": "Le RecyclerView recycle les vues via un ViewHolder, ne matérialisant que la portion visible de la liste. Il limite ainsi la consommation mémoire et fluidifie le défilement, contrairement à un ListView qui gonfle ses éléments.",
+    "mots_cles_attendus": [
+      "recyclerview",
+      "viewholder",
+      "mémoire",
+      "liste"
+    ]
+  },
+  {
+    "id": "dev_mobile-026",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Fragment dans le développement Android ?",
+    "reponse_reference": "Un Fragment est une portion d'interface réutilisable, imbriquée dans une Activity et possédant son propre cycle de vie. Il permet de découper un écran complexe en briques indépendantes et de les recombiner selon la taille de l'écran.",
+    "mots_cles_attendus": [
+      "fragment",
+      "activity",
+      "réutilisable",
+      "cycle de vie"
+    ]
+  },
+  {
+    "id": "dev_mobile-027",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application bancaire impose l'obfuscation, l'accès aux API natives de chiffrement et une taille de binaire minimale. Quelle stratégie de développement choisir ?",
+    "reponse_reference": "Le développement natif en Kotlin et Swift s'impose pour exploiter les API matérielles et système propres à chaque OS. Il facilite aussi la réduction de la taille du binaire et l'obfuscation, deux contraintes fortes en banque.",
+    "mots_cles_attendus": [
+      "natif",
+      "obfuscation",
+      "kotlin",
+      "swift",
+      "sécurité"
+    ]
+  },
+  {
+    "id": "dev_mobile-028",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Comment SwiftUI a-t-il changé la manière de développer des interfaces iOS ?",
+    "reponse_reference": "SwiftUI introduit une approche déclarative où l'interface est décrite comme une fonction de l'état. Les vues sont des valeurs immuables et le framework gère la reconstruction de l'affichage, à l'opposé du modèle impératif d'UIKit.",
+    "mots_cles_attendus": [
+      "swiftui",
+      "déclaratif",
+      "uikit",
+      "état"
+    ]
+  },
+  {
+    "id": "dev_mobile-029",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une application doit être publiée sur le Play Store. Pourquoi faut-il signer l'APK avec une clé privée ?",
+    "reponse_reference": "La signature cryptographique prouve l'identité du éditeur et garantit l'intégrité du paquet. Google rejette toute mise à jour dont la signature diffère de la version publiée, et Android bloque l'installation de paquets non signés.",
+    "mots_cles_attendus": [
+      "signature",
+      "clé privée",
+      "keystore",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "dev_mobile-030",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Android App Bundle et en quoi diffère-t-il d'un APK universel ?",
+    "reponse_reference": "L'App Bundle est un format de publication qui contient l'ensemble des variantes de ressources et de code. Le Play Store en génère des APK adaptés à chaque appareil, réduisant ainsi la taille réellement téléchargée.",
+    "mots_cles_attendus": [
+      "app bundle",
+      "apk",
+      "variantes",
+      "taille"
+    ]
+  },
+  {
+    "id": "dev_mobile-031",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Le système Android tue l'application en arrière-plan pour libérer de la mémoire. Quelles mesures permettent de ne pas perdre de données ?",
+    "reponse_reference": "L'état de l'interface doit être sauvegardé dans onSaveInstanceState et restauré au redémarrage. Les données métier doivent être persistées dans une base locale ou un ViewModel, et les traitements longs confiés à un WorkManager.",
+    "mots_cles_attendus": [
+      "savedinstancestate",
+      "workmanager",
+      "persistance",
+      "viewmodel"
+    ]
+  },
+  {
+    "id": "dev_mobile-032",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi sert le Bundle dans le développement Android ?",
+    "reponse_reference": "Le Bundle est un conteneur clé-valeur permettant de transmettre des données entre composants et de restaurer l'état après un changement de configuration. Il stocke notamment le texte d'un champ ou la position de défilement d'une liste.",
+    "mots_cles_attendus": [
+      "bundle",
+      "savedinstancestate",
+      "clé-valeur",
+      "restauration"
+    ]
+  },
+  {
+    "id": "dev_mobile-033",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi doit-on renseigner une description de contenu sur les images d'une application Android ?",
+    "reponse_reference": "L'attribut contentDescription fournit une alternative textuelle lue par TalkBack par les lecteurs d'écran. Il est indispensable pour l'accessibilité des personnes aveugles ou malvoyantes et peut aussi servir à la recherche vocale.",
+    "mots_cles_attendus": [
+      "contentdescription",
+      "accessibilité",
+      "talkback",
+      "lecteur d'écran"
+    ]
+  },
+  {
+    "id": "dev_mobile-034",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe veut partager la logique métier entre Android et iOS sans réécrire l'interface. Quelle technologie choisir ?",
+    "reponse_reference": "Kotlin Multiplatform permet d'écrire la logique métier en Kotlin dans un module commun compilé pour les deux plateformes. Flutter et React Native partagent en plus l'interface, au prix d'un framework plus contraignant.",
+    "mots_cles_attendus": [
+      "kotlin multiplatform",
+      "code partagé",
+      "logique métier",
+      "cross-platform"
+    ]
+  },
+  {
+    "id": "dev_mobile-035",
+    "domaine": "dev_mobile",
+    "sous_theme": "plateformes",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un store d'applications et à quoi sert-il ?",
+    "reponse_reference": "Un store d'applications est une plateforme de distribution qui centralise la publication, la mise à jour et la monétisation des applications. Il assure également la revue du code, la gestion des versions et la protection contre les malwares.",
+    "mots_cles_attendus": [
+      "store",
+      "distribution",
+      "publication",
+      "revue"
+    ]
+  },
+  {
+    "id": "dev_mobile-036",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une photo de bannière doit remplir l'écran sans être déformée. Comment paramétrer l'ImageView ?",
+    "reponse_reference": "Il faut choisir un scaleType adapté, par exemple centerCrop pour recouvrir la zone en rognant, ou fitCenter pour montrer l'image entière avec des marges. La taille de la vue et les dimensions de l'image doivent aussi être cohérentes.",
+    "mots_cles_attendus": [
+      "imageview",
+      "scaletype",
+      "centercrop",
+      "déformation"
+    ]
+  },
+  {
+    "id": "dev_mobile-037",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un émulateur Android et à quoi sert-il concrètement ?",
+    "reponse_reference": "L'émulateur est une machine virtuelle exécutant une image du système Android, utilisable sans matériel. Il permet de tester plusieurs versions d'OS, densités d'écran et langues, mais ne restitue pas fidèlement les performances réelles.",
+    "mots_cles_attendus": [
+      "émulateur",
+      "machine virtuelle",
+      "image système",
+      "test"
+    ]
+  },
+  {
+    "id": "dev_mobile-038",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Après une authentification réussie, où l'application doit-elle conserver le jeton d'accès ?",
+    "reponse_reference": "Le jeton doit être stocké dans le Keychain sur iOS ou dans un EncryptedSharedPreferences sur Android, jamais en clair dans les préférences classiques. Il est relu par le ViewModel ou le service réseau, et renouvelé via un refresh token.",
+    "mots_cles_attendus": [
+      "keychain",
+      "encryptharedpreferences",
+      "jeton",
+      "refresh token"
+    ]
+  },
+  {
+    "id": "dev_mobile-039",
+    "domaine": "dev_mobile",
+    "sous_theme": "langages",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que Kotlin Multiplatform ?",
+    "reponse_reference": "Kotlin Multiplatform est un plugin qui permet d'écrire un même code Kotlin dans un module commun et de le compiler pour plusieurs cibles. Les parties spécifiques à une plateforme sont isolées dans des implémentations attendues via expect et actual.",
+    "mots_cles_attendus": [
+      "kotlin",
+      "multiplatform",
+      "expect",
+      "actual"
+    ]
+  },
+  {
+    "id": "dev_mobile-040",
+    "domaine": "dev_mobile",
+    "sous_theme": "installation_build",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une nouvelle version de l'application doit être acceptée par le Play Store. Que faut-il modifier dans la configuration du projet ?",
+    "reponse_reference": "Il faut incrémenter le versionCode (entier strictement croissant) et le versionName (libellé visible) du module applicatif. Une nouvelle clé de signature de publication est également nécessaire si l'application utilise déjà des uploads de clés.",
+    "mots_cles_attendus": [
+      "versioncode",
+      "versionname",
+      "signature",
+      "publication"
+    ]
+  },
+  {
+    "id": "dev_mobile-041",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'apporte le ConstraintLayout par rapport à un LinearLayout imbriqué ?",
+    "reponse_reference": "Le ConstraintLayout positionne les vues les unes par rapport aux autres dans une hiérarchie plate, ce qui réduit la profondeur de l'arbre et améliore les performances. Il remplace la plupart du temps les LinearLayout et RelativeLayout imbriqués.",
+    "mots_cles_attendus": [
+      "constraintlayout",
+      "hiérarchie plate",
+      "contraintes",
+      "performance"
+    ]
+  },
+  {
+    "id": "dev_mobile-042",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre les unités dp et sp sur Android ?",
+    "reponse_reference": "Le dp (density-independent pixel) est une unité de longueur qui s'adapte à la densité de l'écran. Le sp (scale-independent pixel) est une unité de taille de texte qui tient compte de la taille de police choisie par l'utilisateur.",
+    "mots_cles_attendus": [
+      "dp",
+      "sp",
+      "densité",
+      "taille de police"
+    ]
+  },
+  {
+    "id": "dev_mobile-043",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un écran complexe aligne des boutons et des champs sur plusieurs lignes avec des contraintes croisées. Quel layout choisir et pourquoi ?",
+    "reponse_reference": "Le ConstraintLayout est le plus adapté car il exprime les relations entre les vues dans une structure plate, ce qui allonge et accélère la mesure. Un LinearLayout imbriqué serait plus simple mais plus coûteux à mesurer et plus difficile à adapter.",
+    "mots_cles_attendus": [
+      "constraintlayout",
+      "contraintes",
+      "mesure",
+      "layout imbriqué"
+    ]
+  },
+  {
+    "id": "dev_mobile-044",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment passe-t-on des arguments d'un écran à un autre dans une application mobile ?",
+    "reponse_reference": "Les arguments sont passés sous forme de Bundle contenant des paires clé-valeur, transporté par l'intent ou le routeur. L'écran de destination les lit dans sa méthode de création et les convertit en objets typés.",
+    "mots_cles_attendus": [
+      "bundle",
+      "arguments",
+      "intent",
+      "routeur"
+    ]
+  },
+  {
+    "id": "dev_mobile-045",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une liste affiche des produits et l'utilisateur clique sur l'un d'eux pour ouvrir une fiche détaillée. Comment transmettre l'identifiant du produit ?",
+    "reponse_reference": "Le clic transmet l'identifiant via un argument du bundle jusqu'à l'écran de détail, qui le récupère pour lancer sa requête. Il est préférable de ne transmettre que l'identifiant plutôt que l'objet complet afin d'éviter les problèmes de sérialisation.",
+    "mots_cles_attendus": [
+      "identifiant",
+      "bundle",
+      "argument",
+      "écran de détail"
+    ]
+  },
+  {
+    "id": "dev_mobile-046",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le Navigation Component d'Android ?",
+    "reponse_reference": "Le Navigation Component est une bibliothèque qui centralise la navigation entre fragments et activités via un graphe déclaré en XML. Elle gère la pile de navigation, les arguments, les animations de transition et l'intégration avec les deep links.",
+    "mots_cles_attendus": [
+      "navigation component",
+      "graphe",
+      "fragments",
+      "pile"
+    ]
+  },
+  {
+    "id": "dev_mobile-047",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ViewModel et quel est son rôle dans une application Android ?",
+    "reponse_reference": "Un ViewModel conserve et expose l'état de l'interface de manière à survivre aux changements de configuration de l'activité. Il isole la logique de présentation, évite les fuites de contexte et se teste sans interface graphique.",
+    "mots_cles_attendus": [
+      "viewmodel",
+      "état",
+      "configuration",
+      "logique de présentation"
+    ]
+  },
+  {
+    "id": "dev_mobile-048",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un chargement de données asynchrone affiche un spinner puis une liste. Où placer la logique réseau et l'état de chargement ?",
+    "reponse_reference": "La logique réseau doit être placée dans un ViewModel, qui expose un état observable (chargement, succès, erreur). L'Activity ou le Fragment ne fait que.observe cet état et affiche le rendu correspondant.",
+    "mots_cles_attendus": [
+      "viewmodel",
+      "état",
+      "asynchrone",
+      "séparation des responsabilités"
+    ]
+  },
+  {
+    "id": "dev_mobile-049",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre un ListView et un RecyclerView sur Android ?",
+    "reponse_reference": "Le RecyclerView sépare les données de l'affichage via un adapter et un ViewHolder, et ne crée que les vues visibles. Le ListView stocke plus directement les éléments, ce qui le rend moins économe en mémoire sur de longues listes.",
+    "mots_cles_attendus": [
+      "listview",
+      "recyclerview",
+      "adapter",
+      "viewholder"
+    ]
+  },
+  {
+    "id": "dev_mobile-050",
+    "domaine": "dev_mobile",
+    "sous_theme": "persistance_locale",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "L'application doit mémoriser le thème choisi par l'utilisateur (clair ou sombre). Quel mécanisme de stockage local utiliser ?",
+    "reponse_reference": "Pour une simple préférence, SharedPreferences ou le DataStore Preferences suffisent et proposent une API très simple. Pour des données structurées, une base Room est plus adaptée ; le chiffrement n'est nécessaire que si la valeur est sensible.",
+    "mots_cles_attendus": [
+      "sharedpreferences",
+      "datastore",
+      "préférence",
+      "thème"
+    ]
+  },
+  {
+    "id": "dev_mobile-051",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle est la différence entre LiveData et StateFlow dans la gestion d'état Android ?",
+    "reponse_reference": "LiveData est lié au cycle de vie Android et ne notifie que lorsque des observateurs actifs existent. StateFlow est un flux réactif de coroutines qui possède toujours une valeur courante et un système de reprise d subscribers.",
+    "mots_cles_attendus": [
+      "livedata",
+      "stateflow",
+      "cycle de vie",
+      "flux"
+    ]
+  },
+  {
+    "id": "dev_mobile-052",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "L'utilisateur navigue vers un écran de détail puis appuie sur le bouton retour. Comment la pile de navigation doit-elle se comporter ?",
+    "reponse_reference": "L'écran de détail doit être dépilé et l'écran précédent restauré avec son état précédent. La pile de navigation gère ce.popBackStack et il faut éviter d'ajouter des entrées dupliquées lors de la navigation vers le détail.",
+    "mots_cles_attendus": [
+      "pile de navigation",
+      "retour",
+      "popbackstack",
+      "état"
+    ]
+  },
+  {
+    "id": "dev_mobile-053",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un ScrollView et quand l'utiliser ?",
+    "reponse_reference": "Un ScrollView est un conteneur qui permet de faire défiler verticalement son contenu lorsque celui-ci dépasse la hauteur disponible. Son contenu doit idéalement tenir dans un seul enfant pour éviter la dégradation des performances.",
+    "mots_cles_attendus": [
+      "scrollview",
+      "défilement",
+      "conteneur",
+      "hauteur"
+    ]
+  },
+  {
+    "id": "dev_mobile-054",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'apporte un design system comme Material Design ou les Human Interface Guidelines ?",
+    "reponse_reference": "Un design system fournit un ensemble cohérent de composants, de couleurs, de typographies et de règles d'interaction propres à une plateforme. Il harmonise l'interface, accélère le développement et améliore l'ergonomie perçue par l'utilisateur.",
+    "mots_cles_attendus": [
+      "material design",
+      "design system",
+      "composants",
+      "cohérence"
+    ]
+  },
+  {
+    "id": "dev_mobile-055",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une liste d'articles affiche une image et un titre pour chaque élément. Quel composant assure l'affichage de chaque ligne ?",
+    "reponse_reference": "Chaque ligne est décrite par une mise en page (item_list.xml) inflation dans un ViewHolder par le RecyclerView. L'adapter fournit les données au RecyclerView, qui se charge de recycler et de réutiliser les vues pour le défilement.",
+    "mots_cles_attendus": [
+      "adapter",
+      "viewholder",
+      "layout d'item",
+      "recyclerview"
+    ]
+  },
+  {
+    "id": "dev_mobile-056",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que se passe-t-il pour un ViewModel quand l'Activity qui l'héberge est définitivement détruite ?",
+    "reponse_reference": "La méthode onCleared est appelée, ce qui est le moment prévu pour libérer les ressources non gérées comme les abonnements réseau. Le ViewModel survit en revanche aux changements de configuration, l'activité étant simplement recréée.",
+    "mots_cles_attendus": [
+      "oncleared",
+      "libération",
+      "cycle de vie",
+      "recyclage"
+    ]
+  },
+  {
+    "id": "dev_mobile-057",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une application possède cinq onglets principaux accessibles depuis une barre basse. Quelle organisation de navigation mettre en place ?",
+    "reponse_reference": "Une bottom navigation bar avec un fragment ou une activity par onglet est l'approche classique sur Android. Les Navigation Component ou SwiftUI permettent de conserver l'état de chaque onglet lors des changements d'onglet.",
+    "mots_cles_attendus": [
+      "bottom navigation",
+      "onglets",
+      "navigation component",
+      "état"
+    ]
+  },
+  {
+    "id": "dev_mobile-058",
+    "domaine": "dev_mobile",
+    "sous_theme": "layouts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment rendre un écran adaptatif aux différentes tailles d'écran (téléphone, tablette, paysage) ?",
+    "reponse_reference": "On utilise des contraintes proportionnelles, des ressources alternatives par dossier de qualification (layout-sw600dp) et des listes adaptatives. Les libs d(window size classes) complètent l'ensemble pour gérer les fenêtres redimensionnables.",
+    "mots_cles_attendus": [
+      "adaptatif",
+      "qualificatif de ressource",
+      "tablette",
+      "fenêtre"
+    ]
+  },
+  {
+    "id": "dev_mobile-059",
+    "domaine": "dev_mobile",
+    "sous_theme": "composants_ui",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quel est l'intérêt du ViewBinding par rapport à findViewById ?",
+    "reponse_reference": "Le ViewBinding génère une classe contenant des références typées vers toutes les vues de la mise en page. Il supprime les identifiants de recherche au runtime, détecte les erreurs de compilation et améliore la lisibilité du code.",
+    "mots_cles_attendus": [
+      "viewbinding",
+      "findviewbyid",
+      "code généré",
+      "sécurité de compilation"
+    ]
+  },
+  {
+    "id": "dev_mobile-060",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une requête échoue et l'utilisateur doit voir un message d'erreur avec un bouton « Réessayer ». Comment modéliser cela ?",
+    "reponse_reference": "Il faut définir un état sealed class ou data class contenant les cas Succès, Erreur et Chargement, le message et l'action de retry étant portées par l'état. L'interface observe cet état unique, ce qui évite les drapeauxbooléens dispersés.",
+    "mots_cles_attendus": [
+      "sealed class",
+      "état",
+      "erreur",
+      "retry"
+    ]
+  },
+  {
+    "id": "dev_mobile-061",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le package Provider dans Flutter et à quoi sert-il ?",
+    "reponse_reference": "Provider est une bibliothèque de gestion d'état et d'injection de dépendances fondée sur les InheritedWidget de Flutter. Elle expose des objets comme ChangeNotifier à l'arbre de widgets et ne reconstruit que les widgets qui les écoutent. Elle évite de passer les objets manuellement de constructeur en constructeur.",
+    "mots_cles_attendus": [
+      "provider",
+      "inheritedwidget",
+      "changenotifier",
+      "injection de dépendances"
+    ]
+  },
+  {
+    "id": "dev_mobile-062",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quels sont les trois principes fondamentaux de Redux ?",
+    "reponse_reference": "Redux repose sur une source de vérité unique : tout l'état de l'application vit dans un seul store. L'état est en lecture seule et ne change que par l'émission d'actions. Les changements sont appliqués par des fonctions pures appelées reducers, ce qui rend l'évolution de l'état prévisible et testable.",
+    "mots_cles_attendus": [
+      "redux",
+      "store",
+      "actions",
+      "reducers",
+      "état immuable"
+    ]
+  },
+  {
+    "id": "dev_mobile-063",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern Bloc en Flutter et comment fonctionne-t-il ?",
+    "reponse_reference": "Le pattern Bloc (Business Logic Component) sépare la logique métier de l'interface. Le widget envoie des événements au bloc, qui les transforme en nouveaux états exposés sous forme de flux. L'interface se reconstruit uniquement à partir de ces états, ce qui rend la logique testable indépendamment de l'UI.",
+    "mots_cles_attendus": [
+      "bloc",
+      "événements",
+      "états",
+      "flux",
+      "flutter"
+    ]
+  },
+  {
+    "id": "dev_mobile-064",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Dans une application Flutter, un compteur affiché sur deux écrans différents doit se mettre à jour simultanément. Comment structurer la gestion d'état ?",
+    "reponse_reference": "Il faut remonter l'état dans un objet partagé, typiquement un ChangeNotifier exposé par un Provider placé au-dessus des deux écrans. Chaque écran écoute ce même objet avec watch ou Consumer, et l'incrémentation passe par une méthode de l'objet qui appelle notifyListeners. Les deux écrans se reconstruisent alors automatiquement.",
+    "mots_cles_attendus": [
+      "provider",
+      "changenotifier",
+      "état partagé",
+      "notifylisteners"
+    ]
+  },
+  {
+    "id": "dev_mobile-065",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Room et quel rôle joue-t-il dans une application Android ?",
+    "reponse_reference": "Room est une bibliothèque de persistance qui encapsule SQLite pour Android. Elle décrit les données avec des entités annotées, les accès avec des DAO, et vérifie les requêtes SQL à la compilation. Elle fournit aussi le support natif des coroutines et des Flow pour observer les changements de données.",
+    "mots_cles_attendus": [
+      "room",
+      "sqlite",
+      "entités",
+      "dao",
+      "compilation"
+    ]
+  },
+  {
+    "id": "dev_mobile-066",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un DAO dans Room et comment déclare-t-on une requête ?",
+    "reponse_reference": "Un DAO (Data Access Object) est une interface annotée qui regroupe toutes les opérations de lecture et d'écriture sur une entité. Les méthodes sont annotées avec @Insert, @Update, @Delete ou @Query, cette dernière contenant du SQL validé à la compilation. Elles peuvent être suspendues ou renvoyer un Flow pour la réactivité.",
+    "mots_cles_attendus": [
+      "dao",
+      "annotations",
+      "query",
+      "flow",
+      "suspend"
+    ]
+  },
+  {
+    "id": "dev_mobile-067",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application de tâches doit stocker les tâches localement et les relire au démarrage, même sans réseau. Comment organiser la persistance sous Android ?",
+    "reponse_reference": "On crée une entité Task avec une base Room, un DAO exposant insert et getAll en Flow, et un repository qui masque la base à l'interface. Le ViewModel collecte le Flow et expose l'état de la liste à l'UI. Les écritures s'exécutent dans des coroutines sur un dispatcher d'E/S pour ne pas bloquer le thread principal.",
+    "mots_cles_attendus": [
+      "room",
+      "entité",
+      "dao",
+      "repository",
+      "coroutines"
+    ]
+  },
+  {
+    "id": "dev_mobile-068",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Retrofit et comment déclare-t-on un appel réseau avec ?",
+    "reponse_reference": "Retrofit est un client HTTP pour Android qui transforme une interface Kotlin annotée en implémentation réseau. Chaque méthode décrit une requête avec @GET ou @POST, un chemin et des paramètres, et renvoie directement des objets grâce à un convertisseur JSON comme Moshi. Elle peut être suspend pour s'intégrer aux coroutines.",
+    "mots_cles_attendus": [
+      "retrofit",
+      "interface",
+      "annotations",
+      "moshi",
+      "coroutines"
+    ]
+  },
+  {
+    "id": "dev_mobile-069",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que Dio en Flutter et quelles fonctionnalités offre-t-il ?",
+    "reponse_reference": "Dio est un client HTTP pour Dart qui propose des intercepteurs, des délais d'expiration, l'annulation de requêtes et le téléchargement avec progression. Il gère FormData, les requêtes multi-parties et la transformation des réponses. Ses intercepteurs permettent de centraliser l'authentification et la journalisation.",
+    "mots_cles_attendus": [
+      "dio",
+      "intercepteurs",
+      "timeout",
+      "annulation",
+      "http client"
+    ]
+  },
+  {
+    "id": "dev_mobile-070",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une API renvoie un JSON volumineux contenant une liste d'utilisateurs. Comment modéliser cette réponse dans une application Kotlin avec Retrofit ?",
+    "reponse_reference": "On déclare des data classes Kotlin reflétant la structure du JSON, par exemple UserResponse contenant une liste de User, avec les annotations de sérialisation nécessaires. Le convertisseur Moshi ou Kotlinx Serialization assure le mapping automatique des champs. La méthode Retrofit renvoie alors directement UserResponse, et les champs inconnus ou nuls sont gérés explicitement avec des valeurs par défaut.",
+    "mots_cles_attendus": [
+      "data class",
+      "moshi",
+      "sérialisation",
+      "json",
+      "mapper"
+    ]
+  },
+  {
+    "id": "dev_mobile-071",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quels sont les principaux états du cycle de vie d'un Fragment Android ?",
+    "reponse_reference": "Un Fragment passe par onAttach, onCreate, onCreateView puis onViewCreated lorsqu'il est ajouté à une activité. Il entre ensuite dans les états onStart et onResume, avant de les quitter avec onPause et onStop. Sa vue est détruite dans onDestroyView alors que le Fragment lui-même survit dans la pile, jusqu'à onDestroy et onDetach.",
+    "mots_cles_attendus": [
+      "fragment",
+      "cycle de vie",
+      "oncreateview",
+      "backstack",
+      "onattach"
+    ]
+  },
+  {
+    "id": "dev_mobile-072",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert onSaveInstanceState et pourquoi sa taille est-elle limitée ?",
+    "reponse_reference": "onSaveInstanceState permet de sauvegarder l'état transitoire de l'interface avant qu'une activité soit détruite par le système. Les données transitent par un Bundle sérialisé via un canal inter-processus Binder, dont le tampon est limité à environ un mégaoctet. Le dépasser déclenche une TransactionTooLargeException, d'où l'intérêt de n'y stocker que de petits identifiants ou valeurs simples.",
+    "mots_cles_attendus": [
+      "onsavedinstancestate",
+      "bundle",
+      "binder",
+      "transactiontoolarge"
+    ]
+  },
+  {
+    "id": "dev_mobile-073",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application Android est tuée par le système alors qu'elle est en arrière-plan, puis relancée par l'utilisateur. Comment restaurer son état ?",
+    "reponse_reference": "Le système recrée l'activité et lui transmet le Bundle sauvegardé dans onSaveInstanceState, qu'il faut relire dans onCreate. Pour les données plus riches, un ViewModel avec SavedStateHandle survit et restaure les valeurs sérialisables. Les données importantes doivent de toute façon être persistées dans Room ou DataStore dès leur saisie, car rien ne garantit la survie du processus.",
+    "mots_cles_attendus": [
+      "savedstatehandle",
+      "bundle",
+      "restauration",
+      "processus",
+      "viewmodel"
+    ]
+  },
+  {
+    "id": "dev_mobile-074",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Que se passe-t-il dans applicationWillTerminate sur iOS et pourquoi ne pas s'y fier ?",
+    "reponse_reference": "applicationWillTerminate est appelée lorsque l'application s'apprête à être arrêtée, par exemple lors d'une fermeture explicite depuis le sélecteur d'applications. Elle n'est pas garantie lorsque le système récupère de la mémoire ou lors d'un crash, et le temps d'exécution y est très limité. La sauvegarde doit donc être continue, au fil des actions, plutôt que repoussée à ce dernier moment.",
+    "mots_cles_attendus": [
+      "applicationwillterminate",
+      "sauvegarde",
+      "arrêt",
+      "mémoire"
+    ]
+  },
+  {
+    "id": "dev_mobile-075",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une permission runtime sur Android et depuis quelle version est-elle obligatoire ?",
+    "reponse_reference": "Depuis Android 6 (API 23), les permissions dangereuses comme la caméra ou la localisation ne sont plus accordées à l'installation. L'application doit les demander à l'exécution via requestPermissions et gérer la réponse de l'utilisateur. La déclaration dans le manifeste reste obligatoire, mais l'accord réel se fait au moment de l'usage.",
+    "mots_cles_attendus": [
+      "permission runtime",
+      "api 23",
+      "manifeste",
+      "requestpermissions"
+    ]
+  },
+  {
+    "id": "dev_mobile-076",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une application doit accéder à la caméra sur un appareil Android récent. Quelles étapes faut-il respecter ?",
+    "reponse_reference": "Il faut déclarer CAMERA dans le manifeste, puis vérifier à l'exécution si la permission est accordée avec checkSelfPermission. Si ce n'est pas le cas, on lance requestPermissions en expliquant pourquoi l'accès est nécessaire, idéalement après un premier refus. Il faut aussi gérer le refus définitif avec « Ne plus demander » et rediriger l'utilisateur vers les réglages, ainsi que l'absence totale de caméra sur l'appareil.",
+    "mots_cles_attendus": [
+      "camera",
+      "checkselfpermission",
+      "requestpermissions",
+      "refus",
+      "réglages"
+    ]
+  },
+  {
+    "id": "dev_mobile-077",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que SQLite et comment une application mobile l'utilise-t-elle ?",
+    "reponse_reference": "SQLite est un moteur de base de données relationnelle embarqué qui stocke les données dans un simple fichier local, sans serveur. Il est intégré nativement à Android et à iOS et sert de socle aux bibliothèques comme Room ou Core Data. Les transactions garantissent l'atomicité des écritures, ce qui évite les bases corrompues en cas d'interruption.",
+    "mots_cles_attendus": [
+      "sqlite",
+      "embarqué",
+      "fichier",
+      "transactions"
+    ]
+  },
+  {
+    "id": "dev_mobile-078",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une liste de 5 000 articles stockée en base locale doit s'afficher sans bloquer l'interface. Comment l'interroger efficacement ?",
+    "reponse_reference": "Il ne faut jamais charger les 5 000 lignes d'un coup : on pagine la requête avec LIMIT et OFFSET ou des curseurs par clé, et on n'ajoute que les pages nécessaires. Un index sur la colonne de tri accélère les recherches, et les requêtes s'exécutent hors du thread principal via des coroutines ou un Flow. L'UI côté RecyclerView ou LazyColumn recycle déjà les vues, la base ne doit fournir que ce qui est visible.",
+    "mots_cles_attendus": [
+      "pagination",
+      "limit",
+      "index",
+      "flow",
+      "thread principal"
+    ]
+  },
+  {
+    "id": "dev_mobile-079",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un développeur doit ajouter un jeton d'authentification à toutes les requêtes d'une application. Où centraliser cette logique ?",
+    "reponse_reference": "La meilleure approche est d'utiliser un interceptor du client HTTP, comme un Interceptor OkHttp sous Retrofit ou un interceptor Dio sous Flutter. Il lit le jeton depuis un stockage sécurisé et l'ajoute à l'en-tête Authorization de chaque requête. On peut y gérer aussi le rafraîchissement du jeton expiré et la journalisation, sans dupliquer le code dans chaque appel.",
+    "mots_cles_attendus": [
+      "interceptor",
+      "okhttp",
+      "dio",
+      "authorization",
+      "jeton"
+    ]
+  },
+  {
+    "id": "dev_mobile-080",
+    "domaine": "dev_mobile",
+    "sous_theme": "reseau_cache",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un appel API met trente secondes à échouer dès que le réseau est lent, bloquant un bouton. Comment améliorer l'expérience utilisateur ?",
+    "reponse_reference": "Il faut définir des délais d'expiration courts et adaptés, de quelques secondes pour la connexion et la lecture, et désactiver le bouton pendant l'appel en cours. On peut ajouter un nombre limité de tentatives avec un délai exponentiel pour les erreurs transitoires. Enfin, un message d'erreur clair avec une action « Réessayer » redonne la main à l'utilisateur au lieu de le laisser attendre.",
+    "mots_cles_attendus": [
+      "timeout",
+      "retry",
+      "exponentiel",
+      "expérience utilisateur"
+    ]
+  },
+  {
+    "id": "dev_mobile-081",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Riverpod et en quoi diffère-t-il de Provider ?",
+    "reponse_reference": "Riverpod est une bibliothèque de gestion d'état pour Flutter, successeur de Provider, qui déclare les providers comme des variables globales typées. Elle ne dépend pas du BuildContext pour lire un provider, ce qui élimine les erreurs d'introuvabilité de provider à l'exécution. La plupart des problèmes sont détectés à la compilation et les providers se testent sans arbre de widgets.",
+    "mots_cles_attendus": [
+      "riverpod",
+      "provider",
+      "buildcontext",
+      "compilation",
+      "testable"
+    ]
+  },
+  {
+    "id": "dev_mobile-082",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Zustand et quel est son principe de fonctionnement ?",
+    "reponse_reference": "Zustand est une bibliothèque de gestion d'état minimaliste pour React et React Native. Un store est créé avec une fonction create qui expose l'état et des actions, et les composants s'y abonnent via des sélecteurs. Elle n'exige ni Provider enveloppant, ni reducers imposés, ce qui réduit considérablement le code par rapport à Redux.",
+    "mots_cles_attendus": [
+      "zustand",
+      "react native",
+      "store",
+      "sélecteurs",
+      "minimaliste"
+    ]
+  },
+  {
+    "id": "dev_mobile-083",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le rôle des middlewares dans Redux ?",
+    "reponse_reference": "Un middleware s'intercale entre l'émission d'une action et son traitement par le reducer. Il sert à gérer les effets de bord : appels réseau asynchrones avec Redux Thunk ou Redux Saga, journalisation, ou crash reporting. Comme les reducers doivent rester des fonctions pures, toute logique impure est déléguée aux middlewares.",
+    "mots_cles_attendus": [
+      "middleware",
+      "redux thunk",
+      "redux saga",
+      "effets de bord"
+    ]
+  },
+  {
+    "id": "dev_mobile-084",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Dans une application React Native, le panier doit être partagé entre l'écran liste et l'écran paiement et survivre à un redémarrage. Quelle solution d'état mettre en place ?",
+    "reponse_reference": "Un store global comme Zustand ou Redux Toolkit expose le panier à tous les écrans et évite de faire transiter l'état par les propriétés. La persistance se branche ensuite sur ce store avec un middleware de persistance qui écrit dans AsyncStorage au fil des modifications. Au démarrage, le store est réhydraté avant le premier rendu pour retrouver le panier.",
+    "mots_cles_attendus": [
+      "zustand",
+      "redux toolkit",
+      "persistance",
+      "asyncstorage",
+      "réhydratation"
+    ]
+  },
+  {
+    "id": "dev_mobile-085",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que Hive et dans quels cas le préférer à SQLite ?",
+    "reponse_reference": "Hive est une base de données clé-valeur NoSQL écrite en pur Dart, utilisée principalement avec Flutter. Elle stocke des objets Dart sérialisés sans code natif, ce qui la rend très rapide à ouvrir et simple à intégrer. On la préfère à SQLite pour des données peu relationnelles, des caches ou des préférences volumineuses, car elle ne propose pas de requêtes SQL complexes.",
+    "mots_cles_attendus": [
+      "hive",
+      "nosql",
+      "dart",
+      "clé-valeur",
+      "flutter"
+    ]
+  },
+  {
+    "id": "dev_mobile-086",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment modélise-t-on une relation un-à-plusieurs dans Room ?",
+    "reponse_reference": "L'entité enfant porte une clé étrangère vers l'identifiant de l'entité parent, déclarée avec l'annotation ForeignKey qui peut définir une action en cascade à la suppression. Un index sur cette colonne accélère les jointures. Pour lire les enfants avec leur parent en une fois, Room propose la classe de relation @Relation qui construit l'objet imbriqué à partir de la requête.",
+    "mots_cles_attendus": [
+      "room",
+      "foreignkey",
+      "relation",
+      "index",
+      "cascade"
+    ]
+  },
+  {
+    "id": "dev_mobile-087",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de messagerie stocke des conversations et leurs messages localement. Comment structurer les entités Room et les requêtes ?",
+    "reponse_reference": "On crée une entité Conversation et une entité Message portant une clé étrangère vers l'identifiant de la conversation, avec un index sur cette colonne. Les messages d'une conversation se lisent par une requête filtrée, ordonnée par horodatage, renvoyée en Flow pour mettre à jour l'écran à chaque arrivée. Pour afficher la liste des conversations avec leur dernier message, une requête avec jointure ou une classe @Relation fournit le résultat sans requêtes en boucle.",
+    "mots_cles_attendus": [
+      "entités",
+      "foreignkey",
+      "index",
+      "jointure",
+      "flow"
+    ]
+  },
+  {
+    "id": "dev_mobile-088",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une migration de schéma dans Room et comment la gérer ?",
+    "reponse_reference": "Une migration décrit la transformation de la base d'une version de schéma à la suivante, comme l'ajout d'une colonne ou d'une table. Room exige qu'une migration soit fournie pour chaque changement de version, sinon il applique un fallback destructif qui efface les données. Les migrations se testent avec des bases de départ sauvegardées pour vérifier que les données existantes survivent à la mise à jour.",
+    "mots_cles_attendus": [
+      "room",
+      "migration",
+      "schéma",
+      "version",
+      "fallback destructif"
+    ]
+  },
+  {
+    "id": "dev_mobile-089",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionnent les notifications push de bout en bout sur mobile ?",
+    "reponse_reference": "L'application obtient un jeton d'enregistrement auprès du service de la plateforme, FCM sur Android ou APNs sur iOS, et le transmet à son serveur. Le serveur envoie ensuite les messages au service de push qui les achemine vers le bon appareil. L'application les reçoit même en arrière-plan, à condition que l'utilisateur ait accordé la permission d'afficher des notifications.",
+    "mots_cles_attendus": [
+      "fcm",
+      "apns",
+      "jeton",
+      "serveur",
+      "push"
+    ]
+  },
+  {
+    "id": "dev_mobile-090",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de messagerie doit prévenir l'utilisateur d'un nouveau message alors que l'application est fermée. Décrire le flux à mettre en place.",
+    "reponse_reference": "L'application demande la permission de notification, récupère son jeton FCM ou APNs et l'envoie au serveur, en le renouvelant s'il change. À l'arrivée d'un message, le serveur pousse une notification avec le titre et l'extrait via le service de push de la plateforme. Le clic sur la notification ouvre l'application sur la conversation concernée grâce aux données embarquées dans la charge utile.",
+    "mots_cles_attendus": [
+      "fcm",
+      "apns",
+      "jeton",
+      "charge utile",
+      "clic"
+    ]
+  },
+  {
+    "id": "dev_mobile-091",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un BroadcastReceiver sur Android et à quoi sert-il ?",
+    "reponse_reference": "Un BroadcastReceiver est un composant qui écoute des événements diffusés par le système ou par d'autres applications via des Intent. Il permet par exemple de réagir au démarrage de l'appareil, au branchement du chargeur ou à un événement métier interne. Son exécution est limitée à quelques secondes, donc les traitements longs doivent être délégués à un service ou à WorkManager.",
+    "mots_cles_attendus": [
+      "broadcastreceiver",
+      "intent",
+      "événements système",
+      "boot"
+    ]
+  },
+  {
+    "id": "dev_mobile-092",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que WorkManager et quand l'utiliser ?",
+    "reponse_reference": "WorkManager est la bibliothèque Android pour les tâches différées et garanties : synchronisations, sauvegardes, envois de journaux. Il planifie le travail en respectant des contraintes comme le réseau ou la batterie et survit aux redémarrages de l'appareil. Il remplace les anciennes solutions comme JobScheduler et couvre les cas où AlarmManager n'est pas adapté.",
+    "mots_cles_attendus": [
+      "workmanager",
+      "tâche différée",
+      "contraintes",
+      "garanti",
+      "redémarrage"
+    ]
+  },
+  {
+    "id": "dev_mobile-093",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit synchroniser des données chaque nuit, même si l'utilisateur ne l'ouvre pas. Quelle solution Android choisir et comment la configurer ?",
+    "reponse_reference": "WorkManager avec un PeriodicWorkRequest est la solution adaptée : le système exécute la synchronisation dans sa fenêtre de maintenance, même après redémarrage. On ajoute la contrainte de connectivité réseau pour ne lancer le travail qu'en Wi-Fi ou avec une connexion disponible. Le travail périodique doit être idempotent et court, car l'heure exacte n'est pas garantie par le système.",
+    "mots_cles_attendus": [
+      "workmanager",
+      "periodicworkrequest",
+      "contraintes",
+      "réseau",
+      "idempotent"
+    ]
+  },
+  {
+    "id": "dev_mobile-094",
+    "domaine": "dev_mobile",
+    "sous_theme": "bases_locales",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelles différences entre SharedPreferences et DataStore pour stocker des préférences ?",
+    "reponse_reference": "SharedPreferences propose une API synchrone dont les lectures bloquent et ne signalent pas les erreurs d'E/S. DataStore, en coroutines ou en Rx, expose les valeurs sous forme de Flow asynchrone et ne bloque jamais le thread principal. DataStore existe en deux variantes, Preferences pour les clés-valeurs simples et Proto pour des objets typés avec un schéma Protobuf.",
+    "mots_cles_attendus": [
+      "datastore",
+      "sharedpreferences",
+      "flow",
+      "asynchrone",
+      "protobuf"
+    ]
+  },
+  {
+    "id": "dev_mobile-095",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de sauvegarde ne se déclenche plus la nuit depuis que les utilisateurs sont passés à des versions récentes d'Android. Quelle en est la cause et comment la corriger ?",
+    "reponse_reference": "Le mode Doze, introduit avec Android 6, suspend le réseau et les tâches différées lorsque l'appareil est immobile et écran éteint. Les alarmes classiques sont alors reportées aux fenêtres de maintenance du système. Il faut remplacer les AlarmManager ou services maison par WorkManager, qui sait se planifier dans ces fenêtres et respecter les contraintes d'économie d'énergie.",
+    "mots_cles_attendus": [
+      "doze",
+      "fenêtres de maintenance",
+      "workmanager",
+      "économie d'énergie"
+    ]
+  },
+  {
+    "id": "dev_mobile-096",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications_push",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application doit afficher un rappel exactement à 14 h 30, même si elle n'est pas ouverte. Que choisir entre AlarmManager et WorkManager ?",
+    "reponse_reference": "AlarmManager est le bon choix, car WorkManager ne garantit pas une heure précise et respecte les fenêtres de maintenance du système. Pour les versions récentes d'Android, il faut utiliser setExactAndAllowWhileIdle et déclarer la permission des alarmes exactes introduite avec Android 12. La tâche déclenchée doit être courte : elle affiche la notification puis rend la main.",
+    "mots_cles_attendus": [
+      "alarmmanager",
+      "setexactandallowwhileidle",
+      "notification",
+      "alarme exacte"
+    ]
+  },
+  {
+    "id": "dev_mobile-097",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une permission de niveau signature sur Android ?",
+    "reponse_reference": "Une permission signature n'est accordée qu'aux applications signées avec le même certificat que celle qui la déclare. Le système vérifie automatiquement cette correspondance à l'installation, sans demander l'avis de l'utilisateur. Elle sert à protéger les API internes entre applications d'un même éditeur, comme un SDK partagé entre plusieurs de ses applications.",
+    "mots_cles_attendus": [
+      "permission signature",
+      "certificat",
+      "protectionlevel",
+      "même éditeur"
+    ]
+  },
+  {
+    "id": "dev_mobile-098",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une application de suivi sportif demande l'accès à la localisation. Quelles bonnes pratiques de demande et de justification appliquer ?",
+    "reponse_reference": "La permission doit être demandée dans le contexte de l'usage, au moment où l'utilisateur lance un entraînement, avec une explication claire du bénéfice. Il faut distinguer la localisation approximative de la localisation précise et n'exiger que le strict nécessaire, en gérant le refus sans bloquer le reste de l'application. Si l'utilisateur refuse définitivement, on le guide vers les réglages sans le harceler de demandes.",
+    "mots_cles_attendus": [
+      "localisation",
+      "permission runtime",
+      "contexte",
+      "approximative",
+      "refus"
+    ]
+  },
+  {
+    "id": "dev_mobile-099",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que l'App Sandbox sur iOS et comment les applications partagent-elles des données ?",
+    "reponse_reference": "Le sandbox iOS isole chaque application dans son propre conteneur de fichiers, inaccessible aux autres applications par défaut. Ce cloisonnement protège les données utilisateur et limite l'impact d'une application compromise. Les partages contrôlés passent par des mécanismes dédiés comme les App Groups entre applications d'un même éditeur ou le sélecteur de documents du système.",
+    "mots_cles_attendus": [
+      "sandbox",
+      "conteneur",
+      "isolation",
+      "app groups"
+    ]
+  },
+  {
+    "id": "dev_mobile-100",
+    "domaine": "dev_mobile",
+    "sous_theme": "permissions_securite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux applications iOS du même éditeur doivent partager des préférences communes, comme un identifiant de session. Comment procéder ?",
+    "reponse_reference": "Il faut déclarer un App Group commun dans les entitlements des deux applications et l'activer dans le portail développeur. Les deux applications lisent et écrivent alors dans le même UserDefaults de groupe via l'identifiant de l'App Group, ou dans un conteneur de fichiers partagé. Ce mécanisme respecte le sandbox tout en autorisant un partage contrôlé et limité au même éditeur.",
+    "mots_cles_attendus": [
+      "app groups",
+      "entitlements",
+      "userdefaults",
+      "partage",
+      "sandbox"
+    ]
+  },
+  {
+    "id": "dev_mobile-101",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelles différences entre un deep link, un web link et un App Link sur Android ?",
+    "reponse_reference": "Un deep link utilise un schéma d'URI personnalisé et n'ouvre l'application que si elle est installée. Un web link pointe vers une URL http ou https que l'application peut intercepter, avec un choix possible entre navigateur et application. Un App Link est un web link vérifié : le domaine est associé au certificat de l'application, qui s'ouvre alors directement sans dialogue de choix.",
+    "mots_cles_attendus": [
+      "deep link",
+      "app link",
+      "web link",
+      "uri",
+      "vérification"
+    ]
+  },
+  {
+    "id": "dev_mobile-102",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment déclare-t-on un intent-filter pour un deep link sur Android ?",
+    "reponse_reference": "On ajoute dans le manifeste un intent-filter sur l'activité cible avec l'action VIEW, la catégorie BROWSABLE et la catégorie DEFAULT. Un élément data précise le schéma, l'hôte et éventuellement le chemin ou le préfixe de chemin acceptés. Pour un App Link vérifié, l'attribut autoVerify est activé et le domaine doit publier le fichier assetlinks.json correspondant.",
+    "mots_cles_attendus": [
+      "intent-filter",
+      "action view",
+      "browsable",
+      "auto-verify",
+      "manifeste"
+    ]
+  },
+  {
+    "id": "dev_mobile-103",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un lien promotionnel envoyé par email doit ouvrir directement la fiche produit correspondante dans l'application. Décrire le dispositif complet.",
+    "reponse_reference": "On définit une route du type https://exemple.com/produit/{id} que l'application déclare dans son intent-filter ou son fichier d'association de domaine. Le lien ouvre l'application, qui parse l'URI pour extraire l'identifiant du produit et navigue vers la fiche. Il faut gérer les cas limites : application absente, lien obsolète ou produit supprimé, avec une redirection vers le site ou un écran d'erreur.",
+    "mots_cles_attendus": [
+      "deep link",
+      "app link",
+      "association de domaine",
+      "parsing d'uri",
+      "fiche produit"
+    ]
+  },
+  {
+    "id": "dev_mobile-104",
+    "domaine": "dev_mobile",
+    "sous_theme": "navigation_avancee",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Au clic sur un lien web, Android demande à l'utilisateur de choisir entre le navigateur et l'application. Comment faire ouvrir l'application directement ?",
+    "reponse_reference": "Il faut transformer le lien en App Link vérifié : déclarer autoVerify sur l'intent-filter et publier le fichier assetlinks.json à l'adresse https://domaine/.well-known/assetlinks.json contenant l'empreinte SHA-256 du certificat. La vérification s'effectue à l'installation et l'application devient alors le gestionnaire par défaut de ces liens, sans dialogue de choix. On peut contrôler l'état de la vérification avec la commande adb dédiée.",
+    "mots_cles_attendus": [
+      "app link",
+      "assetlinks.json",
+      "auto-verify",
+      "sha-256",
+      "gestionnaire par défaut"
+    ]
+  },
+  {
+    "id": "dev_mobile-105",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment teste-t-on un Bloc Flutter avec bloc_test ?",
+    "reponse_reference": "La bibliothèque bloc_test fournit la fonction blocTest qui instancie le bloc et lui envoie une séquence d'événements prédéfinis. Elle vérifie ensuite que les états émis correspondent exactement à la liste attendue, y compris les états intermédiaires. Les dépendances comme les dépôts sont remplacées par des faux ou des simulacres pour isoler la logique métier du réseau.",
+    "mots_cles_attendus": [
+      "bloc",
+      "bloctest",
+      "événements",
+      "états",
+      "isolation"
+    ]
+  },
+  {
+    "id": "dev_mobile-106",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la programmation réactive et quel lien avec les streams dans la gestion d'état mobile ?",
+    "reponse_reference": "La programmation réactive modélise les données comme des flux asynchrones que l'on transforme avec des opérateurs : map, filter, debounce ou combineLatest. En mobile, les streams de Kotlin Flow, RxDart ou RxJS alimentent les états de l'interface et se recomposent automatiquement à chaque nouvelle valeur. Les opérateurs permettent de gérer proprement la concurrence, l'annulation et la gestion d'erreurs.",
+    "mots_cles_attendus": [
+      "programmation réactive",
+      "streams",
+      "opérateurs",
+      "flow",
+      "rxdart"
+    ]
+  },
+  {
+    "id": "dev_mobile-107",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application Flutter possède un formulaire d'inscription en trois étapes dont l'état doit être partagé entre les écrans. Quelle architecture d'état choisir et pourquoi ?",
+    "reponse_reference": "Un Bloc ou un Notifier Riverpod dédié au formulaire centralise les données saisies et l'étape courante. Chaque écran émet des événements de saisie et se reconstruit à partir de l'état global du formulaire, ce qui garantit qu'aucune donnée ne se perd entre les étapes. Cette approche permet aussi de valider chaque étape dans la couche métier et de tester le déroulé complet sans interface.",
+    "mots_cles_attendus": [
+      "bloc",
+      "riverpod",
+      "état centralisé",
+      "validation",
+      "multi-étapes"
+    ]
+  },
+  {
+    "id": "dev_mobile-108",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le state hoisting dans les interfaces déclaratives ?",
+    "reponse_reference": "Le state hoisting consiste à remonter l'état d'un composant vers son parent ou vers un conteneur d'état partagé. Le composant devient sans état : il reçoit les valeurs et les callbacks en paramètres, ce qui le rend réutilisable et facile à tester. L'état vit alors à un seul endroit, la source de vérité unique, et les modifications redescendent par les paramètres.",
+    "mots_cles_attendus": [
+      "state hoisting",
+      "état remonté",
+      "source unique",
+      "composant sans état"
+    ]
+  },
+  {
+    "id": "dev_mobile-109",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le chiffrement AES et où le mobile l'utilise-t-il ?",
+    "reponse_reference": "AES est un algorithme de chiffrement symétrique standardisé, utilisé en AES-256 pour chiffrer des données locales sensibles. La même clé sert à chiffrer et déchiffrer, d'où l'importance cruciale de sa protection dans un keystore matériel. Sur mobile, il protège les bases de données chiffrées, les fichiers sensibles et les échanges avec les serveurs via TLS.",
+    "mots_cles_attendus": [
+      "aes",
+      "chiffrement symétrique",
+      "clé",
+      "keystore",
+      "aes-256"
+    ]
+  },
+  {
+    "id": "dev_mobile-110",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'Android Keystore et quels avantages offre-t-il par rapport à une clé stockée en dur ?",
+    "reponse_reference": "Android Keystore stocke les clés cryptographiques dans un conteneur système, idéalement adossé à un environnement d'exécution sécurisé du matériel. Les clés privées ne quittent jamais le conteneur : les opérations de signature ou de déchiffrement y sont exécutées directement. Une clé en dur dans le code peut être extraite par rétro-ingénierie, alors qu'une clé du Keystore est matériellement inextractible.",
+    "mots_cles_attendus": [
+      "keystore",
+      "tee",
+      "clé privée",
+      "inextractible",
+      "matériel"
+    ]
+  },
+  {
+    "id": "dev_mobile-111",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application doit stocker un jeton d'accès utilisateur entre deux sessions. Quelles bonnes pratiques de sécurité appliquer ?",
+    "reponse_reference": "Le jeton ne doit jamais être écrit en clair : on le chiffre avec une clé générée dans le Keystore Android ou le Keychain iOS, ou on utilise un stockage chiffré dédié. Sa durée de vie doit être courte, avec un mécanisme de rafraîchissement et une révocation possible côté serveur. Il faut aussi le sortir des journaux et des captures réseau, et le purger à la déconnexion.",
+    "mots_cles_attendus": [
+      "keystore",
+      "keychain",
+      "chiffrement",
+      "révocation",
+      "jeton"
+    ]
+  },
+  {
+    "id": "dev_mobile-112",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment le sandboxing isole-t-il les applications sur Android ?",
+    "reponse_reference": "Chaque application Android tourne dans son propre processus avec un identifiant utilisateur Linux unique attribué à l'installation. Les fichiers de l'application ne sont accessibles qu'à ce processus, sauf partage explicite par FileProvider ou ContentProvider. Ce cloisonnement limite l'impact d'une application compromise sur les données des autres applications.",
+    "mots_cles_attendus": [
+      "sandbox",
+      "uid",
+      "processus",
+      "isolation",
+      "contentprovider"
+    ]
+  },
+  {
+    "id": "dev_mobile-113",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test unitaire mobile et que doit-on isoler pour le rendre rapide ?",
+    "reponse_reference": "Un test unitaire vérifie une unité de logique, comme une fonction, un ViewModel ou un reducer, sans appareil ni réseau. Il s'exécute sur la JVM ou la machine hôte en quelques millisecondes grâce au remplacement des dépendances externes par des mocks ou des fakes. Son isolation impose de sortir du code testé tout accès au système : base de données, horloge, réseau ou capteurs.",
+    "mots_cles_attendus": [
+      "test unitaire",
+      "jvm",
+      "mock",
+      "fake",
+      "isolation"
+    ]
+  },
+  {
+    "id": "dev_mobile-114",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test instrumenté et quand le préférer au test unitaire ?",
+    "reponse_reference": "Un test instrumenté s'exécute sur un appareil ou un émulateur et a accès au vrai framework de la plateforme : activités, vues, base de données réelle. On l'utilise quand la logique dépend du système Android ou iOS, comme les cycles de vie, les composants d'interface ou les permissions. Il est plus lent et moins stable qu'un test unitaire, donc réservé à ce qui ne peut pas se tester sur la machine hôte.",
+    "mots_cles_attendus": [
+      "test instrumenté",
+      "émulateur",
+      "androidx test",
+      "cycle de vie",
+      "ui"
+    ]
+  },
+  {
+    "id": "dev_mobile-115",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe doit tester la logique de calcul d'une remise : pourcentages, cumuls, plafonds et dates de validité. Quels types de tests et d'outils utiliser ?",
+    "reponse_reference": "La logique de remise doit être extraite dans une classe pure, sans dépendance au framework, puis couverte par des tests unitaires JUnit ou équivalents. On énumère les cas limites : remise nulle, cumul interdit, plafond dépassé, date limite incluse ou expirée, arrondis. Ces tests tournent en quelques secondes dans la CI à chaque commit, sans appareil ni serveur.",
+    "mots_cles_attendus": [
+      "tests unitaires",
+      "junit",
+      "cas limites",
+      "classe pure",
+      "ci"
+    ]
+  },
+  {
+    "id": "dev_mobile-116",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un écran de connexion doit être validé sur plusieurs tailles d'écran et versions du système. Comment organiser les tests ?",
+    "reponse_reference": "La logique de validation se teste en unitaire, tandis que l'affichage se couvre par des tests instrumentés lancés sur une matrice d'émulateurs couvrant les tailles d'écran et versions cibles. Les tests vérifient que les champs restent accessibles, que le clavier ne masque pas le bouton et que les messages d'erreur s'affichent. La matrice s'automatise dans la CI avec des outils comme Gradle Managed Devices ou Firebase Test Lab.",
+    "mots_cles_attendus": [
+      "test instrumenté",
+      "matrice d'émulateurs",
+      "firebase test lab",
+      "taille d'écran"
+    ]
+  },
+  {
+    "id": "dev_mobile-117",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le jank et comment le détecter sur Android ?",
+    "reponse_reference": "Le jank désigne les saccades visibles quand le système rate ses échéances de rendu, au-delà de 16,6 millisecondes par image à 60 Hz. Il se détecte avec le profileur d'Android Studio, les traces système de Perfetto ou les rapports de Macrobenchmark. L'analyse identifie la cause : travail sur le thread principal, mesure de layout excessive ou allocations répétées.",
+    "mots_cles_attendus": [
+      "jank",
+      "frames",
+      "16 ms",
+      "perfetto",
+      "thread principal"
+    ]
+  },
+  {
+    "id": "dev_mobile-118",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que la réconciliation dans React Native et comment éviter les re-rendus inutiles ?",
+    "reponse_reference": "La réconciliation est le processus par lequel React compare le nouvel arbre d'éléments avec le précédent pour ne mettre à jour que ce qui a changé. Un composant se re-rend quand son état ou ses propriétés changent, ce qui peut cascader sur ses enfants. On limite les re-rendus avec React.memo, des callbacks stables via useCallback et des clés de liste correctes.",
+    "mots_cles_attendus": [
+      "réconciliation",
+      "react native",
+      "memo",
+      "usecallback",
+      "clés"
+    ]
+  },
+  {
+    "id": "dev_mobile-119",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un écran Flutter reconstruit une centaine de widgets à chaque battement de l'horloge. Comment diagnostiquer et optimiser ?",
+    "reponse_reference": "Le DevTools de Flutter montre quels widgets se reconstruisent et pourquoi, et le Profiler mesure le coût de chaque frame. On stabilise alors l'arbre : constructeurs const pour les widgets immuables, découpage en petits widgets pour isoler les reconstructions, et sélecteurs pour ne réagir qu'aux valeurs réellement utilisées. Le repaintBoundary évite aussi de repeindre des zones qui ne changent pas.",
+    "mots_cles_attendus": [
+      "const",
+      "devtools",
+      "repaintboundary",
+      "reconstruction",
+      "profiler"
+    ]
+  },
+  {
+    "id": "dev_mobile-120",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une application React Native subit des saccades lors de transferts de données volumineux entre JavaScript et la partie native. Quelle en est la cause et comment l'atténuer ?",
+    "reponse_reference": "Les données transitent par le pont entre JavaScript et le natif, un canal asynchrone sérialisé qui devient un goulot d'étranglement sur de gros volumes. Il faut réduire les échanges : ne transférer que les champs utiles, découper les traitements en lots, et déléguer les traitements lourds au natif ou à des modules optimisés. L'architecture moderne avec JSI et les TurboModules réduit aussi la surcharge de sérialisation.",
+    "mots_cles_attendus": [
+      "bridge",
+      "sérialisation",
+      "jsi",
+      "turbo modules",
+      "goulot d'étranglement"
+    ]
+  },
+  {
+    "id": "dev_mobile-121",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un sélecteur dans Redux et pourquoi mémoriser ses résultats ?",
+    "reponse_reference": "Un sélecteur est une fonction qui extrait et transforme une portion de l'état du store, par exemple la liste des articles filtrée et triée. Sans mémorisation, chaque changement d'état recalcule le résultat, même quand les entrées n'ont pas bougé. La bibliothèque Reselect mémorise la dernière sortie tant que les entrées sont identiques, ce qui évite les recalculs et les re-rendus inutiles.",
+    "mots_cles_attendus": [
+      "sélecteur",
+      "reselect",
+      "mémorisation",
+      "état dérivé"
+    ]
+  },
+  {
+    "id": "dev_mobile-122",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'architecture à flux de données unidirectionnel (UDF) ?",
+    "reponse_reference": "L'UDF impose un sens unique de circulation : les événements descendent vers la couche métier, qui produit un nouvel état, et l'état remonte vers l'interface qui se redessine. Ce cycle événement, état, rendu est le socle de Compose, SwiftUI, Redux et des architectures MVVM modernes. Il rend l'application prévisible, débogable et testable, car chaque état découle d'un état précédent et d'un événement.",
+    "mots_cles_attendus": [
+      "udf",
+      "flux unidirectionnel",
+      "événement",
+      "état",
+      "prévisible"
+    ]
+  },
+  {
+    "id": "dev_mobile-123",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Le prix total d'un panier dépend de plusieurs valeurs stockées dans le store Redux. Où calculer ce total et pourquoi ?",
+    "reponse_reference": "Le total ne doit pas être stocké en double dans le store, car il deviendrait incohérent à chaque modification. On le calcule dans un sélecteur mémorisé qui combine les articles, les quantités et les remises, et ne se recalcule que si ces entrées changent. L'écran de paiement lit le sélecteur, ce qui garantit un affichage toujours cohérent avec l'état réel.",
+    "mots_cles_attendus": [
+      "sélecteur",
+      "état dérivé",
+      "mémorisation",
+      "cohérence",
+      "source unique"
+    ]
+  },
+  {
+    "id": "dev_mobile-124",
+    "domaine": "dev_mobile",
+    "sous_theme": "gestion_etat",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un provider dérivé dans Riverpod ?",
+    "reponse_reference": "Un provider dérivé est un provider dont la valeur est calculée à partir d'autres providers, qu'il écoute automatiquement. Quand une source change, le provider dérivé se recalcule et notifie ses propres dépendants. Riverpod mémorise la valeur et ne la recalcule que si nécessaire, ce qui remplace avantageusement les recalculs manuels et les états dupliqués.",
+    "mots_cles_attendus": [
+      "riverpod",
+      "provider dérivé",
+      "recalcul",
+      "mémorisation"
+    ]
+  },
+  {
+    "id": "dev_mobile-125",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'approche offline-first et pourquoi la choisir pour une application mobile ?",
+    "reponse_reference": "L'offline-first consiste à traiter la base locale comme la source de vérité de l'application, le réseau ne servant qu'à la synchronisation. L'utilisateur peut lire et modifier ses données sans connexion, avec une latence quasi nulle, et les modifications sont répliquées quand le réseau revient. Cette approche est indispensable pour les usages nomades où la connectivité est intermittente ou coûteuse.",
+    "mots_cles_attendus": [
+      "offline-first",
+      "source de vérité locale",
+      "synchronisation",
+      "latence"
+    ]
+  },
+  {
+    "id": "dev_mobile-126",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une synchronisation incrémentale et comment l'implémenter ?",
+    "reponse_reference": "La synchronisation incrémentale ne transfère que les enregistrements modifiés depuis la dernière synchronisation, au lieu de tout renvoyer. Le client garde un curseur, un horodatage de dernière synchronisation ou un numéro de version, et demande les deltas au serveur. Les enregistrements supprimés sont signalés par des tombstones, des marqueurs de suppression, pour être répliqués à leur tour.",
+    "mots_cles_attendus": [
+      "incrémentale",
+      "delta",
+      "curseur",
+      "horodatage",
+      "tombstones"
+    ]
+  },
+  {
+    "id": "dev_mobile-127",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Deux appareils modifient la même note hors ligne, puis se resynchronisent. Comment gérer le conflit ?",
+    "reponse_reference": "Le système doit détecter le conflit en comparant les versions ou les horodatages des deux modifications, puis appliquer une stratégie de résolution : dernier écrivain gagnant, fusion des champs modifiés, ou intervention de l'utilisateur. Une stratégie simple et explicable, comme la version la plus récente avec conservation de l'ancienne valeur, limite la perte de données. La règle choisie doit être appliquée de façon identique sur tous les appareils pour garantir la convergence.",
+    "mots_cles_attendus": [
+      "conflit",
+      "version",
+      "dernier écrivain gagnant",
+      "fusion",
+      "convergence"
+    ]
+  },
+  {
+    "id": "dev_mobile-128",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une application de notes doit fonctionner dans le métro, sans réseau, puis se resynchroniser automatiquement. Quelle architecture mettre en place ?",
+    "reponse_reference": "Toutes les écritures passent d'abord par la base locale, qui reste consultable hors connexion, puis sont placées dans une file de synchronisation persistante. Un moteur de synchronisation, déclenché par la connectivité ou périodiquement, rejoue les opérations vers le serveur avec des reprises en cas d'échec. À la réception, les données distantes sont fusionnées dans la base locale et l'interface se met à jour par l'observation de la base.",
+    "mots_cles_attendus": [
+      "offline-first",
+      "file de synchronisation",
+      "rejeu",
+      "fusion",
+      "base locale"
+    ]
+  },
+  {
+    "id": "dev_mobile-129",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que scenePhase dans SwiftUI et comment l'utiliser ?",
+    "reponse_reference": "scenePhase est une valeur d'environnement SwiftUI qui décrit l'état de la scène : active, inactive ou background. Une vue l'observe avec onChange pour suspendre les traitements coûteux en arrière-plan ou sauvegarder l'état avant que l'application soit suspendue. C'est le mécanisme moderne qui remplace une partie des appels du délégué d'application.",
+    "mots_cles_attendus": [
+      "swiftui",
+      "scenephase",
+      "active",
+      "background",
+      "environnement"
+    ]
+  },
+  {
+    "id": "dev_mobile-130",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Comment un processus Android en arrière-plan peut-il être tué par le système et comment s'y préparer ?",
+    "reponse_reference": "Le système tue les processus selon leur priorité : un processus en arrière-plan avec des activités arrêtées peut être récupéré à tout moment pour libérer de la mémoire. L'application doit donc persister ses données au fil de l'eau et enregistrer son état dans onSaveInstanceState. Au redémarrage, elle doit reconstruire son interface à partir de la persistance, comme si le processus venait d'être créé.",
+    "mots_cles_attendus": [
+      "processus",
+      "priorité",
+      "mémoire",
+      "persistance",
+      "reconstruction"
+    ]
+  },
+  {
+    "id": "dev_mobile-131",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une application perd son état quand l'utilisateur la laisse longtemps en arrière-plan. Comment fiabiliser la sauvegarde ?",
+    "reponse_reference": "Il faut sauvegarder les modifications dès qu'elles se produisent, dans une base locale ou un DataStore, plutôt que d'attendre un événement de fin de vie. L'état transitoire de l'écran passe par onSaveInstanceState ou un SavedStateHandle pour survivre à la mort du processus. Au retour au premier plan, l'application réhydrate l'interface depuis ces sources persistantes.",
+    "mots_cles_attendus": [
+      "sauvegarde continue",
+      "savedstatehandle",
+      "persistance",
+      "réhydratation"
+    ]
+  },
+  {
+    "id": "dev_mobile-132",
+    "domaine": "dev_mobile",
+    "sous_theme": "cycle_de_vie",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Sur iOS, une application doit sauvegarder une saisie en cours, mais applicationWillTerminate n'est pas fiable. Quelles alternatives mettre en œuvre ?",
+    "reponse_reference": "La sauvegarde doit être déclenchée lors du passage en arrière-plan, via scenePhase ou applicationDidEnterBackground, car l'application y dispose encore de temps d'exécution. On peut aussi enregistrer chaque modification dès la saisie, avec un debounce pour limiter les écritures. Le système propose enfin les mécanismes de restauration d'état qui réhydratent les écrans au retour.",
+    "mots_cles_attendus": [
+      "applicationdidenterbackground",
+      "scenephase",
+      "debounce",
+      "restauration d'état"
+    ]
+  },
+  {
+    "id": "dev_mobile-133",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'accessibilité mobile et quels sont les principaux lecteurs d'écran ?",
+    "reponse_reference": "L'accessibilité mobile vise à rendre les applications utilisables par tous, y compris les personnes malvoyantes, malentendantes ou à mobilité réduite. Les lecteurs d'écran TalkBack sur Android et VoiceOver sur iOS vocalisent le contenu et permettent la navigation gestuelle et au clavier. Ils s'appuient sur les descriptions, les rôles et les états que l'application déclare sur ses éléments d'interface.",
+    "mots_cles_attendus": [
+      "accessibilité",
+      "talkback",
+      "voiceover",
+      "lecteur d'écran"
+    ]
+  },
+  {
+    "id": "dev_mobile-134",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le contraste des couleurs et la norme WCAG appliquée au mobile ?",
+    "reponse_reference": "Le contraste mesure la différence de luminance entre le texte et son fond, et la norme WCAG exige un ratio d'au moins 4,5 pour 1 pour le texte normal. Un contraste insuffisant rend la lecture difficile pour les personnes malvoyantes ou en plein soleil. Les outils de vérification mesurent les combinaisons de couleurs, et le mode à contraste élevé du système doit être respecté par l'application.",
+    "mots_cles_attendus": [
+      "wcag",
+      "contraste",
+      "ratio",
+      "lisibilité",
+      "couleurs"
+    ]
+  },
+  {
+    "id": "dev_mobile-135",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un écran de formulaire utilise des placeholders comme seuls libellés, et le lecteur d'écran n'annonce rien d'utile. Comment corriger l'accessibilité ?",
+    "reponse_reference": "Chaque champ doit recevoir un libellé explicite déclaré au lecteur d'écran, via contentDescription sur Android ou accessibilityLabel sur iOS, distinct du placeholder visuel. Le focus doit suivre un ordre logique de saisie, et les erreurs de validation doivent être annoncées vocalement. On vérifie enfin que chaque champ est atteignable au clavier et que les états, comme désactivé ou requis, sont correctement exposés.",
+    "mots_cles_attendus": [
+      "contentdescription",
+      "accessibilitylabel",
+      "focus",
+      "annonce d'erreur"
+    ]
+  },
+  {
+    "id": "dev_mobile-136",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ordre de focus et le regroupement sémantique dans une interface mobile ?",
+    "reponse_reference": "L'ordre de focus définit la séquence dans laquelle un utilisateur au clavier ou au lecteur d'écran parcourt les éléments, et doit suivre la logique visuelle de l'écran. Le regroupement sémantique fusionne des éléments liés, comme une image et son titre, en une seule unité annoncée d'un bloc. Ces deux mécanismes évitent une navigation confuse et des annonces fragmentées.",
+    "mots_cles_attendus": [
+      "focus",
+      "ordre de lecture",
+      "regroupement",
+      "lecteur d'écran"
+    ]
+  },
+  {
+    "id": "dev_mobile-137",
+    "domaine": "dev_mobile",
+    "sous_theme": "i18n",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle différence entre internationalisation (i18n) et localisation (l10n) d'une application mobile ?",
+    "reponse_reference": "L'internationalisation consiste à préparer techniquement l'application à supporter plusieurs langues : chaînes externalisées dans des ressources, formats et mises en page indépendants de la langue. La localisation est le travail de traduction et d'adaptation culturelle pour une langue et une région données : textes, formats de dates, devises, illustrations. Une bonne i18n permet d'ajouter une langue sans toucher au code.",
+    "mots_cles_attendus": [
+      "i18n",
+      "l10n",
+      "chaînes externalisées",
+      "traduction",
+      "adaptation"
+    ]
+  },
+  {
+    "id": "dev_mobile-138",
+    "domaine": "dev_mobile",
+    "sous_theme": "i18n",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Que sont les plurals et les formats localisés de nombres et de dates sur Android ?",
+    "reponse_reference": "Les ressources plurals gèrent les formes singulier et pluriel propres à chaque langue, sans concaténer le nombre avec le mot. Les dates, heures, nombres et devises se formatent via les classes de localisation du système plutôt que par des chaînes codées en dur. Le système applique alors automatiquement les conventions de la locale : ordre jour-mois, séparateurs, symboles monétaires.",
+    "mots_cles_attendus": [
+      "plurals",
+      "locale",
+      "formats",
+      "dates",
+      "devises"
+    ]
+  },
+  {
+    "id": "dev_mobile-139",
+    "domaine": "dev_mobile",
+    "sous_theme": "i18n",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une application doit supporter le français, l'anglais et l'arabe, une langue de droite à gauche. Quels points techniques anticiper ?",
+    "reponse_reference": "Il faut activer la prise en charge RTL sur Android et respecter les leading et trailing plutôt que gauche et droite dans les contraintes et marges. Les icônes directionnelles, comme les flèches de retour, doivent être symétrisées, et les textes mixtes gérés correctement par les algorithmes bidirectionnels. Les tests doivent inclure la locale arabe pour vérifier les mises en page, les listes et les animations de navigation.",
+    "mots_cles_attendus": [
+      "rtl",
+      "leading",
+      "trailing",
+      "miroir",
+      "locale"
+    ]
+  },
+  {
+    "id": "dev_mobile-140",
+    "domaine": "dev_mobile",
+    "sous_theme": "i18n",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une application n'existe qu'en français et doit être traduite en cinq langues. Par où commencer techniquement ?",
+    "reponse_reference": "La première étape consiste à externaliser toutes les chaînes codées en dur dans des fichiers de ressources par langue, avec des identifiants stables et des commentaires de contexte pour les traducteurs. Il faut ensuite remplacer les concaténations par des chaînes avec espaces réservés et revoir les formats de dates et de nombres. Enfin, un processus de traduction avec validation des longueurs et captures d'écran par langue s'intègre au cycle de livraison.",
+    "mots_cles_attendus": [
+      "externalisation",
+      "ressources",
+      "espaces réservés",
+      "contexte de traduction"
+    ]
+  },
+  {
+    "id": "dev_mobile-141",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que Detox et quels problèmes résout-il par rapport aux tests instrumentés classiques ?",
+    "reponse_reference": "Detox est un framework de test de bout en bout pour React Native qui pilote l'application comme un utilisateur réel. Il synchronise automatiquement les actions avec l'état de l'application, attendant la fin des animations, des requêtes et des timers avant l'étape suivante. Cette synchronisation grise élimine la majorité des attentes arbitraires et des tests instables des approches classiques.",
+    "mots_cles_attendus": [
+      "detox",
+      "e2e",
+      "synchronisation",
+      "react native",
+      "gray box"
+    ]
+  },
+  {
+    "id": "dev_mobile-142",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que Maestro et comment écrit-on un flux de test avec ?",
+    "reponse_reference": "Maestro est un outil de test d'interface mobile multiplateforme qui décrit les parcours dans des fichiers YAML lisibles, sans compilation. Un flux enchaîne des commandes comme tapOn, assertVisible ou inputText avec des sélecteurs par texte ou identifiant. Il s'exécute sur simulateurs et appareils réels, ce qui le rend accessible aux équipes sans compétence de test spécialisée.",
+    "mots_cles_attendus": [
+      "maestro",
+      "yaml",
+      "flux",
+      "assertions",
+      "multiplateforme"
+    ]
+  },
+  {
+    "id": "dev_mobile-143",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de capture d'écran et quels outils le mettent en œuvre ?",
+    "reponse_reference": "Le screenshot testing compare automatiquement des captures d'écran de composants ou d'écrans avec des images de référence pour détecter les régressions visuelles. Les golden tests de Flutter, Paparazzi pour Android et les outils de snapshot iOS s'exécutent sans appareil physique. Toute différence de rendu, même d'un pixel, fait échouer le test et produit un diff à inspecter.",
+    "mots_cles_attendus": [
+      "screenshot testing",
+      "golden",
+      "paparazzi",
+      "régression visuelle",
+      "diff"
+    ]
+  },
+  {
+    "id": "dev_mobile-144",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une équipe veut tester le parcours complet « connexion puis achat » sur émulateur dans la CI. Quel outil choisir et comment organiser les tests ?",
+    "reponse_reference": "Un outil de bout en bout comme Maestro ou Detox est adapté : il décrit le parcours utilisateur en actions vérifiables, avec un compte de test dédié et un environnement de paiement factice. Les tests doivent être idempotents, isolés les uns des autres et lancés sur un émulateur propre dans la CI. On les réserve aux parcours critiques, car ils sont plus lents et plus fragiles que les tests unitaires.",
+    "mots_cles_attendus": [
+      "maestro",
+      "detox",
+      "ci",
+      "parcours critique",
+      "idempotent"
+    ]
+  },
+  {
+    "id": "dev_mobile-145",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fuite mémoire sur mobile et comment la détecter ?",
+    "reponse_reference": "Une fuite mémoire se produit quand des objets ne sont plus utilisés mais restent référencés, empêchant leur libération par le ramasse-miettes. Elle se manifeste par une consommation mémoire croissante et des ralentissements, jusqu'aux plantages par manque de mémoire. Des outils comme LeakCanary ou les profilers détectent les cycles de références, les contextes retenus et les listeners jamais retirés.",
+    "mots_cles_attendus": [
+      "fuite mémoire",
+      "leakcanary",
+      "références",
+      "garbage collector",
+      "profilage"
+    ]
+  },
+  {
+    "id": "dev_mobile-146",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment fonctionne le garbage collector et pourquoi éviter les allocations dans les boucles de rendu ?",
+    "reponse_reference": "Le garbage collector libère périodiquement la mémoire des objets devenus inaccessibles, ce qui peut suspendre brièvement l'exécution de l'application. Des allocations répétées dans le rendu ou les animations multiplient ces pauses et provoquent des saccades. On les évite en réutilisant les objets, en préallouant les buffers et en sortant les créations des chemins chauds.",
+    "mots_cles_attendus": [
+      "garbage collector",
+      "allocations",
+      "pause",
+      "rendu",
+      "réutilisation"
+    ]
+  },
+  {
+    "id": "dev_mobile-147",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une liste défile avec des saccades et la mémoire de l'application grimpe au fil du temps. Quelles pistes d'optimisation explorer ?",
+    "reponse_reference": "Il faut d'abord profiler pour localiser le problème : allocations dans la construction des lignes, images décodées en pleine résolution ou vues jamais recyclées. On stabilise ensuite le rendu en recyclant les vues, en dimensionnant les images à la taille affichée et en mémorisant les éléments coûteux. Une fuite mémoire, comme des listeners non retirés, expliquerait la croissance continue et se traque avec un outil dédié.",
+    "mots_cles_attendus": [
+      "profilage",
+      "recyclage",
+      "allocations",
+      "images",
+      "fuite mémoire"
+    ]
+  },
+  {
+    "id": "dev_mobile-148",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Des photos de douze mégapixels s'affichent dans une grille et l'application plante avec une erreur de mémoire insuffisante. Comment corriger ?",
+    "reponse_reference": "Une image de douze mégapixels occupe des dizaines de mégaoctets en mémoire, ce qui sature rapidement une grille. Il faut sous-échantillonner le décodage à la taille réellement affichée et charger les images en arrière-plan avec une bibliothèque comme Glide ou Coil. Le cache mémoire doit être borné, et les bitmaps libérés dès que les cellules sortent de l'écran.",
+    "mots_cles_attendus": [
+      "sous-échantillonnage",
+      "glide",
+      "coil",
+      "cache mémoire",
+      "oom"
+    ]
+  },
+  {
+    "id": "dev_mobile-149",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelles sont les grandes étapes de publication d'une application sur Google Play ?",
+    "reponse_reference": "Le développeur crée un compte Play Console, prépare un App Bundle signé et remplit la fiche du store : description, captures, catégorie et classement de contenu. Il définit les pays de distribution, la tarification et les données de confidentialité, puis soumet la version en examen. Une fois validée, la version peut être déployée progressivement puis étendue à tous les utilisateurs.",
+    "mots_cles_attendus": [
+      "play console",
+      "app bundle",
+      "fiche store",
+      "examen",
+      "déploiement"
+    ]
+  },
+  {
+    "id": "dev_mobile-150",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelles sont les étapes et contraintes de soumission d'une application sur l'App Store ?",
+    "reponse_reference": "La soumission passe par App Store Connect : archivage signé dans Xcode, métadonnées, captures par taille d'écran et déclaration de confidentialité. L'application est ensuite examinée par Apple selon les App Store Review Guidelines, ce qui peut prendre de quelques heures à plusieurs jours. Un refus liste les points à corriger avant resoumission, et TestFlight permet de tester la version en conditions réelles au préalable.",
+    "mots_cles_attendus": [
+      "app store connect",
+      "review guidelines",
+      "testflight",
+      "soumission",
+      "examen"
+    ]
+  },
+  {
+    "id": "dev_mobile-151",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une application est refusée par Apple parce qu'elle collecte des données sans les déclarer. Que faire pour la resoumettre correctement ?",
+    "reponse_reference": "Il faut recenser toutes les données collectées, y compris par les SDK tiers comme l'analytique ou la publicité, et remplir précisément la déclaration de confidentialité dans App Store Connect. Le cas échéant, on ajoute la demande de suivi ATT et on met à jour la politique de confidentialité liée depuis la fiche. Une fois les déclarations et l'application alignées, on resoumet en répondant au rejet dans la résolution du centre.",
+    "mots_cles_attendus": [
+      "privacy nutrition label",
+      "att",
+      "déclaration",
+      "politique de confidentialité",
+      "resoumission"
+    ]
+  },
+  {
+    "id": "dev_mobile-152",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la signature d'une application mobile et pourquoi est-elle indispensable ?",
+    "reponse_reference": "La signature cryptographique atteste l'identité de l'éditeur et garantit que le binaire n'a pas été modifié depuis sa publication. Sur Android, la clé de signature doit rester identique pour toutes les mises à jour d'une même application, sous peine de refus d'installation. Sur iOS, les profils et certificats lient l'application au compte développeur et aux appareils autorisés.",
+    "mots_cles_attendus": [
+      "signature",
+      "certificat",
+      "keystore",
+      "mise à jour",
+      "identité"
+    ]
+  },
+  {
+    "id": "dev_mobile-153",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'App Bundle (AAB) et quels avantages offre-t-il par rapport à un APK universel ?",
+    "reponse_reference": "L'App Bundle est le format de publication Android qui contient tout le code et les ressources de l'application, sans les assembler pour un appareil précis. Google Play génère ensuite des APK fractionnés selon la langue, la densité d'écran et l'architecture de chaque appareil. L'utilisateur télécharge ainsi une version nettement plus légère que l'APK universel.",
+    "mots_cles_attendus": [
+      "app bundle",
+      "aab",
+      "fractionnement",
+      "taille",
+      "google play"
+    ]
+  },
+  {
+    "id": "dev_mobile-154",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une équipe doit signer automatiquement ses builds en CI sans exposer la clé de signature aux développeurs. Comment organiser cela ?",
+    "reponse_reference": "La clé de signature doit être stockée dans le gestionnaire de secrets de la plateforme de CI et injectée uniquement pendant l'étape de signature, jamais dans le dépôt de code. Les développeurs signent en local avec une clé de débogage, tandis que la CI signe les versions de production avec la clé officielle. L'accès aux secrets est restreint aux pipelines de publication, avec des journaux qui ne les affichent jamais.",
+    "mots_cles_attendus": [
+      "secrets",
+      "ci",
+      "signature",
+      "keystore",
+      "accès restreint"
+    ]
+  },
+  {
+    "id": "dev_mobile-155",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une équipe publie ses versions à la main et commet des erreurs de numéro de version et d'oubli de tests. Que mettre en place ?",
+    "reponse_reference": "Il faut un pipeline CI/CD automatisé déclenché à chaque fusion : compilation, tests unitaires et instrumentés, puis génération du binaire signé. Le numéro de version est calculé automatiquement à partir du dépôt, et le déploiement vers la piste interne du store s'effectue sans intervention manuelle. Des garde-fous bloquent la publication si un test échoue ou si la version existe déjà.",
+    "mots_cles_attendus": [
+      "pipeline",
+      "automatisation",
+      "versionnage",
+      "tests",
+      "garde-fous"
+    ]
+  },
+  {
+    "id": "dev_mobile-156",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que Fastlane et comment automatise-t-il la publication mobile ?",
+    "reponse_reference": "Fastlane est un outil d'automatisation qui décrit des lanes, des suites de tâches comme la compilation, la signature, les captures d'écran ou la soumission aux stores. Il gère les certificats et profils avec match et s'intègre à n'importe quelle CI. Il transforme la publication en une commande unique, reproductible et traçable.",
+    "mots_cles_attendus": [
+      "fastlane",
+      "lanes",
+      "match",
+      "automatisation",
+      "soumission"
+    ]
+  },
+  {
+    "id": "dev_mobile-157",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un canal de notification sur Android et pourquoi est-il obligatoire depuis l'API 26 ?",
+    "reponse_reference": "Un canal de notification regroupe les notifications d'une même catégorie, comme les alertes ou les messages, avec un niveau d'importance commun. Depuis Android 8, toute notification doit appartenir à un canal, sans quoi elle n'est pas affichée. L'utilisateur peut régler finement le comportement de chaque canal, mais les canaux existants ne peuvent plus être modifiés par l'application après leur création.",
+    "mots_cles_attendus": [
+      "notification channel",
+      "api 26",
+      "importance",
+      "catégories",
+      "réglages"
+    ]
+  },
+  {
+    "id": "dev_mobile-158",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle différence entre un message de données et un message de notification dans FCM ?",
+    "reponse_reference": "Un message de notification est affiché automatiquement par le système quand l'application est en arrière-plan, avec le titre et le texte fournis. Un message de données n'est jamais affiché : il est livré à l'application, qui décide quoi en faire, y compris en premier plan. Les messages de données conviennent aux traitements silencieux et à une logique d'affichage personnalisée.",
+    "mots_cles_attendus": [
+      "fcm",
+      "message de données",
+      "message de notification",
+      "arrière-plan",
+      "silencieux"
+    ]
+  },
+  {
+    "id": "dev_mobile-159",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une application ne montre plus aucune notification sur les appareils passés à Android 13. Quelle en est la cause probable et comment corriger ?",
+    "reponse_reference": "Depuis Android 13, la permission POST_NOTIFICATIONS est une permission runtime qui doit être demandée à l'utilisateur avant tout affichage. Il faut la déclarer dans le manifeste, la demander au premier lancement avec une explication claire, puis gérer son refus. Les applications ciblant les anciennes versions bénéficiaient d'un accord implicite qui n'existe plus pour les versions récentes.",
+    "mots_cles_attendus": [
+      "post_notifications",
+      "android 13",
+      "permission runtime",
+      "demande",
+      "refus"
+    ]
+  },
+  {
+    "id": "dev_mobile-160",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une application musicale doit afficher une notification persistante avec les boutons lecture et pause. Quels mécanismes mettre en œuvre ?",
+    "reponse_reference": "Il faut une notification de média avec un service en premier plan pour que la lecture continue en arrière-plan, et une MediaSession exposant l'état de lecture. Les actions lecture et pause passent par des PendingIntent vers le service ou la MediaSession. Sur les versions récentes d'Android, le type de service en premier plan et la permission associée doivent être déclarés pour rester conformes.",
+    "mots_cles_attendus": [
+      "notification média",
+      "mediasession",
+      "foreground service",
+      "pendingintent",
+      "actions"
+    ]
+  },
+  {
+    "id": "dev_mobile-161",
+    "domaine": "dev_mobile",
+    "sous_theme": "ponts_natifs",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un platform channel en Flutter et comment fonctionne un MethodChannel ?",
+    "reponse_reference": "Un platform channel fait communiquer le code Dart avec la plateforme native par échange de messages asynchrones sérialisés. Un MethodChannel nommé permet d'invoquer une méthode native et de recevoir sa réponse, avec un codec qui convertit les types entre Dart et Kotlin ou Swift. Les appels passent par le thread d'interface de la plateforme, les traitements lourds devant être déplacés sur un autre thread.",
+    "mots_cles_attendus": [
+      "platform channel",
+      "methodchannel",
+      "codec",
+      "asynchrone",
+      "natif"
+    ]
+  },
+  {
+    "id": "dev_mobile-162",
+    "domaine": "dev_mobile",
+    "sous_theme": "ponts_natifs",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment React Native expose-t-il des modules et des composants natifs, et qu'apportent les TurboModules ?",
+    "reponse_reference": "React Native expose les fonctionnalités natives via des modules enregistrés, appelés depuis JavaScript à travers le pont, et des composants gérés par des view managers. Les TurboModules modernisent ce mécanisme avec une génération de code et des appels directs via JSI, sans passer par la sérialisation du pont classique. Le typage et les interfaces entre les deux mondes sont désormais déclarés et vérifiés à la compilation.",
+    "mots_cles_attendus": [
+      "native module",
+      "turbomodule",
+      "jsi",
+      "codegen",
+      "pont"
+    ]
+  },
+  {
+    "id": "dev_mobile-163",
+    "domaine": "dev_mobile",
+    "sous_theme": "ponts_natifs",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une application Flutter doit intégrer un SDK de paiement disponible uniquement en Kotlin et en Swift. Quelle démarche adopter ?",
+    "reponse_reference": "Il faut envelopper le SDK dans un module Flutter dédié : côté Kotlin et côté Swift, on implémente les méthodes exposées par un MethodChannel, puis côté Dart on écrit une API propre qui appelle ces méthodes. Le plugin encapsule ainsi toute la logique native et peut être testé indépendamment. Il faut gérer les erreurs natives, les threads et la sérialisation des paramètres entre les deux mondes.",
+    "mots_cles_attendus": [
+      "platform channel",
+      "plugin",
+      "kotlin",
+      "swift",
+      "wrapper"
+    ]
+  },
+  {
+    "id": "dev_mobile-164",
+    "domaine": "dev_mobile",
+    "sous_theme": "ponts_natifs",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la FFI et quand l'utiliser dans une application mobile ?",
+    "reponse_reference": "La FFI (Foreign Function Interface) permet d'appeler directement des fonctions de bibliothèques natives compilées, comme du C ou du Rust, depuis Dart ou JavaScript. Elle évite la sérialisation des platform channels pour les traitements intensifs, comme le chiffrement ou le traitement d'images. Elle demande en contrepartie une gestion manuelle de la mémoire et des types, et du code natif à compiler par plateforme.",
+    "mots_cles_attendus": [
+      "ffi",
+      "dart:ffi",
+      "c",
+      "rust",
+      "performance"
+    ]
+  },
+  {
+    "id": "dev_mobile-165",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un testeur intercepte le trafic de l'application avec un proxy et lit les données sensibles. Que mettre en place pour s'en protéger ?",
+    "reponse_reference": "Il faut déployer le SSL Pinning : l'application n'accepte que les certificats ou clés publiques des serveurs officiels, ce qui fait échouer la connexion via un proxy qui présente son propre certificat. On combine le pinning avec une validation stricte du TLS et la détection des proxies de débogage sur l'appareil. Les empreintes épinglées doivent être maintenues et renouvelables à distance pour éviter de bloquer l'application lors d'une rotation de certificat.",
+    "mots_cles_attendus": [
+      "ssl pinning",
+      "certificat",
+      "mitm",
+      "proxy",
+      "tls"
+    ]
+  },
+  {
+    "id": "dev_mobile-166",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que l'attestation d'intégrité d'application et à quoi sert-elle ?",
+    "reponse_reference": "L'attestation d'intégrité, comme Play Integrity sur Android ou App Attest sur iOS, fournit au serveur un jeton prouvant que l'application est authentique et non modifiée. Elle signale aussi si l'appareil est rooté, jailbreaké ou émulé, selon le niveau de vérification demandé. Les serveurs l'utilisent pour refuser les requêtes des applications trafiquées ou des environnements compromis.",
+    "mots_cles_attendus": [
+      "play integrity",
+      "app attest",
+      "attestation",
+      "intégrité",
+      "root"
+    ]
+  },
+  {
+    "id": "dev_mobile-167",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une application bancaire doit détecter un appareil rooté ou jailbreaké et un binaire modifié. Quelles mesures combiner ?",
+    "reponse_reference": "L'application vérifie l'intégrité de son binaire via Play Integrity ou App Attest, et croise le résultat avec des détections locales de root ou de jailbreak. Les décisions sensibles se prennent côté serveur sur la base du jeton d'attestation, jamais sur la seule confiance du client. Il faut aussi surveiller les outils de hooking comme Frida et prévoir une dégradation progressive : limitation des fonctionnalités plutôt que blocage brutal.",
+    "mots_cles_attendus": [
+      "play integrity",
+      "app attest",
+      "root",
+      "jailbreak",
+      "frida"
+    ]
+  },
+  {
+    "id": "dev_mobile-168",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque de l'homme du milieu et comment le mobile s'en protège-t-il ?",
+    "reponse_reference": "L'attaque de l'homme du milieu consiste à intercepter et éventuellement modifier les échanges entre l'application et son serveur, via un proxy, un point d'accès malveillant ou un faux certificat. TLS chiffre et authentifie le canal, à condition que l'application valide strictement la chaîne de certificats. Le SSL Pinning et le rejet du trafic en clair complètent la protection contre les interceptions locales.",
+    "mots_cles_attendus": [
+      "mitm",
+      "tls",
+      "certificat",
+      "pinning",
+      "interception"
+    ]
+  },
+  {
+    "id": "dev_mobile-169",
+    "domaine": "dev_mobile",
+    "sous_theme": "cache_reseau",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment concevoir un cache réseau hiérarchique en mémoire, sur disque et sur le réseau ?",
+    "reponse_reference": "La hiérarchie interroge d'abord le cache mémoire, le plus rapide, puis le cache disque persistant, et enfin le réseau en dernier recours. Chaque niveau a sa politique d'éviction, sa taille maximale et sa durée de validité, souvent pilotée par des TTL ou des en-têtes de cache. L'invalidation doit être cohérente entre les niveaux pour éviter de servir des données périmées après une écriture.",
+    "mots_cles_attendus": [
+      "cache hiérarchique",
+      "mémoire",
+      "disque",
+      "ttl",
+      "invalidation"
+    ]
+  },
+  {
+    "id": "dev_mobile-170",
+    "domaine": "dev_mobile",
+    "sous_theme": "cache_reseau",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une liste de produits doit rester consultable hors ligne tout en restant fraîche dès que le réseau est disponible. Décrire la stratégie de cache à appliquer.",
+    "reponse_reference": "On adopte une stratégie cache-first avec rafraîchissement en arrière-plan : l'écran affiche immédiatement la liste en cache, puis une requête réseau tente de la mettre à jour. Si la requête échoue, l'utilisateur conserve une expérience complète hors ligne, éventuellement avec la date de dernière mise à jour affichée. La stratégie stale-while-revalidate formalise ce comportement : servir le contenu périmé tout en le revalidant silencieusement.",
+    "mots_cles_attendus": [
+      "cache-first",
+      "stale-while-revalidate",
+      "hors ligne",
+      "rafraîchissement",
+      "ttl"
+    ]
+  },
+  {
+    "id": "dev_mobile-171",
+    "domaine": "dev_mobile",
+    "sous_theme": "cache_reseau",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la stratégie stale-while-revalidate ?",
+    "reponse_reference": "La stratégie stale-while-revalidate renvoie immédiatement la version en cache, même périmée, puis lance en arrière-plan une revalidation auprès du serveur. La réponse fraîche obtenue remplace le cache pour la prochaine requête. Elle combine la latence minimale du cache avec une fraîcheur progressive des données, au prix d'un possible affichage temporairement obsolète.",
+    "mots_cles_attendus": [
+      "stale-while-revalidate",
+      "cache",
+      "revalidation",
+      "latence",
+      "fraîcheur"
+    ]
+  },
+  {
+    "id": "dev_mobile-172",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une table locale utilise des identifiants auto-incrémentés et la synchronisation multi-appareils provoque des collisions. Comment corriger ?",
+    "reponse_reference": "Les identifiants auto-incrémentés ne sont uniques que localement : deux appareils génèrent le même numéro pour des enregistrements différents. Il faut migrer vers des identifiants universels, des UUID ou des ULID, générés côté client au moment de la création. Les anciennes références doivent être conservées ou converties avec un mapping pour ne pas casser les relations existantes.",
+    "mots_cles_attendus": [
+      "uuid",
+      "ulid",
+      "collision",
+      "identifiant global",
+      "migration"
+    ]
+  },
+  {
+    "id": "dev_mobile-173",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le versionnement optimiste et comment détecte-t-on les conflits avec ?",
+    "reponse_reference": "Le versionnement optimiste suppose que les conflits sont rares : chaque enregistrement porte un numéro de version ou un ETag envoyé avec les modifications. Le serveur refuse une écriture dont la version ne correspond plus à l'état courant, signalant ainsi qu'une autre modification est intervenue entre-temps. Le client doit alors relire, résoudre ou rejouer son changement, au lieu d'écraser silencieusement les données.",
+    "mots_cles_attendus": [
+      "versionnement optimiste",
+      "version",
+      "etag",
+      "conflit",
+      "écriture"
+    ]
+  },
+  {
+    "id": "dev_mobile-174",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Deux rédacteurs modifient le même article hors ligne sur deux appareils. Comment concevoir la détection et la résolution du conflit au niveau applicatif ?",
+    "reponse_reference": "Chaque article porte une version et chaque modification mémorise la version de départ : à la synchronisation, le serveur compare et détecte les modifications concurrentes. La résolution peut être automatique, dernier écrivain gagnant ou fusion par champs, ou assistée par l'utilisateur qui choisit entre les deux versions. Quel que soit le choix, la résolution produit une nouvelle version et l'historique doit rester traçable pour éviter toute perte silencieuse.",
+    "mots_cles_attendus": [
+      "conflit",
+      "version",
+      "fusion par champs",
+      "dernier écrivain gagnant",
+      "traçabilité"
+    ]
+  },
+  {
+    "id": "dev_mobile-175",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelles sont les principales formes de monétisation d'une application mobile ?",
+    "reponse_reference": "Les modèles classiques sont l'application payante, le freemium avec achats intégrés, l'abonnement récurrent, la publicité et les partenariats. Chaque modèle a ses contraintes de plateforme : commissions des stores, règles sur les achats intégrés et consentement publicitaire. Le choix dépend de l'usage, de la fréquence d'utilisation et de la valeur perçue par l'utilisateur.",
+    "mots_cles_attendus": [
+      "freemium",
+      "abonnement",
+      "achat intégré",
+      "publicité",
+      "commission"
+    ]
+  },
+  {
+    "id": "dev_mobile-176",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un achat intégré et quelle différence entre un produit consommable et non consommable ?",
+    "reponse_reference": "Un achat intégré permet de vendre du contenu ou des fonctionnalités depuis l'application, via la facturation officielle des stores. Un produit consommable, comme des pièces de jeu, peut être acheté plusieurs fois et doit être consommé côté serveur. Un produit non consommable, comme la suppression des publicités, s'achète une seule fois et reste restaurable sur les autres appareils de l'utilisateur.",
+    "mots_cles_attendus": [
+      "achat intégré",
+      "consommable",
+      "non consommable",
+      "restauration",
+      "facturation"
+    ]
+  },
+  {
+    "id": "dev_mobile-177",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une application de méditation veut vendre un abonnement mensuel avec une semaine d'essai gratuit. Quelles contraintes de plateforme anticiper ?",
+    "reponse_reference": "L'abonnement doit passer par la facturation des stores, avec un groupe d'abonnements déclaré dans les consoles et les règles d'essai gratuit autorisées par chaque plateforme. Il faut gérer la confirmation d'achat, la restauration après réinstallation et le renouvellement automatique avec ses notifications de prix. Les utilisateurs doivent pouvoir résilier simplement depuis les réglages de leur compte, sous peine de refus par les stores.",
+    "mots_cles_attendus": [
+      "abonnement",
+      "essai gratuit",
+      "facturation",
+      "restauration",
+      "résiliation"
+    ]
+  },
+  {
+    "id": "dev_mobile-178",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Pourquoi gérer les abonnements côté serveur avec des webhooks plutôt que de se fier uniquement au client ?",
+    "reponse_reference": "Le client peut être compromis, modifier ou désynchronisé : seul le serveur sait avec certitude si un abonnement est actif. Les plateformes notifient les événements d'abonnement, renouvellements, expirations ou remboursements, via des webhooks signés. Le serveur valide aussi les reçus auprès des stores et met à jour les droits, ce qui permet de les révoquer ou de les restaurer sur tous les appareils.",
+    "mots_cles_attendus": [
+      "webhooks",
+      "validation serveur",
+      "reçus",
+      "droits",
+      "abonnement"
+    ]
+  },
+  {
+    "id": "dev_mobile-179",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelle différence entre une bannière publicitaire et une publicité récompensée, et comment choisir ?",
+    "reponse_reference": "La bannière est un format affiché en continu, souvent perçu comme intrusif et peu rémunérateur au clic. La publicité récompensée est visionnée volontairement par l'utilisateur en échange d'un avantage dans l'application, ce qui génère un meilleur revenu et une meilleure expérience. Le choix dépend du type d'application : la récompensée convient aux jeux et aux usages où l'utilisateur accepte l'interruption.",
+    "mots_cles_attendus": [
+      "bannière",
+      "récompensée",
+      "admob",
+      "expérience utilisateur",
+      "revenu"
+    ]
+  },
+  {
+    "id": "dev_mobile-180",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une application gratuite veut afficher de la publicité sans dégrader l'expérience ni enfreindre les règles de consentement. Quelles bonnes pratiques appliquer ?",
+    "reponse_reference": "Il faut privilégier les formats non intrusifs, limiter la fréquence d'affichage et éviter la publicité pendant les actions critiques. Le consentement doit être recueilli conformément au RGPD et aux politiques des plateformes, avec la possibilité de le retirer. La médiation publicitaire et le chargement anticipé des annonces évitent les temps d'attente, et les indicateurs de rétention se suivent pour détecter une dégradation.",
+    "mots_cles_attendus": [
+      "fréquence",
+      "consentement",
+      "rgpd",
+      "médiation",
+      "rétention"
+    ]
+  },
+  {
+    "id": "dev_mobile-181",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le profiling CPU et comment interpréter un flame graph mobile ?",
+    "reponse_reference": "Le profiling CPU échantillonne les appels de fonctions pendant l'exécution pour mesurer le temps consommé par chaque méthode. Le flame graph visualise ces échantillons sous forme de barres empilées : plus une barre est large, plus la méthode consomme de temps. L'analyse remonte les chemins les plus chauds, en distinguant le temps propre d'une méthode de celui de ses appels enfants.",
+    "mots_cles_attendus": [
+      "profiling",
+      "flame graph",
+      "échantillonnage",
+      "chemin chaud",
+      "cpu"
+    ]
+  },
+  {
+    "id": "dev_mobile-182",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que représente un budget de frame de 16,6 millisecondes et que se passe-t-il au-delà ?",
+    "reponse_reference": "À 60 images par seconde, chaque frame dispose de 16,6 millisecondes pour la mesure, la mise en page et le dessin de l'écran. Si le travail du thread principal dépasse ce budget, le frame est abandonné et l'image précédente reste affichée, créant une saccade visible. Sur les écrans à 120 Hz, le budget tombe à environ 8,3 millisecondes, ce qui rend le respect du budget encore plus exigeant.",
+    "mots_cles_attendus": [
+      "frame",
+      "16 ms",
+      "60 hz",
+      "120 hz",
+      "jank"
+    ]
+  },
+  {
+    "id": "dev_mobile-183",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un écran de démarrage met deux secondes et demie à s'afficher sur un appareil milieu de gamme. Comment diagnostiquer et réduire ce temps ?",
+    "reponse_reference": "Il faut profiler le démarrage pour séparer le temps de création du processus, l'initialisation des SDK et le premier rendu de l'écran. On retarde alors les initialisations non indispensables, on allège la première frame et on évite les opérations bloquantes comme les lectures disque synchrones. Un benchmark de démarrage, exécuté en CI sur plusieurs appareils, mesure la progression et détecte les régressions.",
+    "mots_cles_attendus": [
+      "démarrage",
+      "cold start",
+      "profilage",
+      "initialisation différée",
+      "benchmark"
+    ]
+  },
+  {
+    "id": "dev_mobile-184",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que les Baseline Profiles et comment améliorent-ils le démarrage Android ?",
+    "reponse_reference": "Les Baseline Profiles décrivent les chemins de code les plus utilisés d'une application, collectés lors de l'exécution des parcours types. L'environnement d'exécution ART s'en sert pour précompiler ces chemins en code natif avant même la première utilisation. Le démarrage et les transitions évitent ainsi la compilation à la volée, source de latence au premier lancement.",
+    "mots_cles_attendus": [
+      "baseline profiles",
+      "aot",
+      "art",
+      "précompilation",
+      "démarrage"
+    ]
+  },
+  {
+    "id": "dev_mobile-185",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un Universal Link sur iOS et comment valider l'association de domaine ?",
+    "reponse_reference": "Un Universal Link est une URL https que l'application revendique et qui l'ouvre directement sans passer par le navigateur. Le domaine associé est déclaré dans les entitlements et doit publier le fichier apple-app-site-association listant les chemins autorisés. Le système vérifie cette association lors de l'installation et de la mise à jour de l'application.",
+    "mots_cles_attendus": [
+      "universal link",
+      "aasa",
+      "entitlements",
+      "association de domaine",
+      "https"
+    ]
+  },
+  {
+    "id": "dev_mobile-186",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un App Link vérifié sur Android et comment le déboguer ?",
+    "reponse_reference": "Un App Link est un lien web déclaré avec autoVerify dont la vérification est validée par le fichier assetlinks.json publié sur le domaine. L'état de vérification s'inspecte avec la commande adb shell pm get-app-links, qui liste les domaines vérifiés. Un échec courant vient d'un fichier mal servi, d'une empreinte de certificat erronée ou d'une redirection entre domaines.",
+    "mots_cles_attendus": [
+      "app link",
+      "assetlinks.json",
+      "auto-verify",
+      "adb",
+      "empreinte"
+    ]
+  },
+  {
+    "id": "dev_mobile-187",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un deep link ouvre bien l'application mais jamais le bon écran selon l'URL reçue. Comment structurer le routage ?",
+    "reponse_reference": "Il faut centraliser la réception des liens dans un routeur unique qui parse l'URI et associe chaque motif de chemin à un écran avec ses paramètres. Les arguments sont extraits et typés, puis la navigation est lancée en respectant la pile existante. Un motif inconnu doit tomber sur un écran de repli explicite plutôt que sur un comportement arbitraire.",
+    "mots_cles_attendus": [
+      "routage",
+      "parsing d'uri",
+      "navigation",
+      "paramètres",
+      "repli"
+    ]
+  },
+  {
+    "id": "dev_mobile-188",
+    "domaine": "dev_mobile",
+    "sous_theme": "deep_links",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un lien de campagne doit ouvrir l'application au bon endroit, y compris quand l'utilisateur l'installe après avoir cliqué. Comment implémenter ce deferred deep link ?",
+    "reponse_reference": "Le clic sur le lien enregistre le contexte de campagne côté fournisseur du lien, avant même l'installation de l'application. Après l'installation et le premier lancement, l'application interroge ce fournisseur pour récupérer le lien différé et ses paramètres. Elle navigue alors vers l'écran de destination et attribue l'installation à la campagne dans l'outil de mesure.",
+    "mots_cles_attendus": [
+      "deferred deep link",
+      "attribution",
+      "installation",
+      "campagne",
+      "premier lancement"
+    ]
+  },
+  {
+    "id": "dev_mobile-189",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que sont EAS Build et EAS Submit et comment s'intègrent-ils à un projet Expo ?",
+    "reponse_reference": "EAS Build compile les applications Expo dans le cloud, avec une configuration déclarée dans un fichier du dépôt, sans serveur de build local. EAS Submit enchaîne la soumission des binaires vers Google Play et l'App Store, avec les informations de connexion et de signature gérées côté service. L'ensemble s'intègre aux pipelines GitHub Actions ou GitLab pour publier à chaque tag de version.",
+    "mots_cles_attendus": [
+      "eas build",
+      "eas submit",
+      "expo",
+      "build cloud",
+      "soumission"
+    ]
+  },
+  {
+    "id": "dev_mobile-190",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment Fastlane gère-t-il la signature iOS avec match ?",
+    "reponse_reference": "Match centralise les certificats et profils de signature dans un dépôt Git chiffré, partagé entre les développeurs et la CI. Une commande unique régénère ou télécharge les éléments de signature nécessaires au build, sans intervention manuelle. Cette centralisation évite les certificats locaux divergents et les conflits de révocation entre machines.",
+    "mots_cles_attendus": [
+      "fastlane",
+      "match",
+      "certificats",
+      "profils",
+      "signature"
+    ]
+  },
+  {
+    "id": "dev_mobile-191",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une équipe Flutter doit publier chaque semaine sur Google Play et l'App Store sans intervention manuelle. Décrire le pipeline à mettre en place.",
+    "reponse_reference": "La CI compile les deux binaires à partir du tag de version, exécute les tests, puis génère l'AAB et l'archive iOS signée avec des secrets protégés. Fastlane ou EAS Submit enchaîne l'envoi vers les deux consoles, avec un déploiement progressif configuré et une promotion manuelle vers la production. Les erreurs de soumission, comme un numéro de build en conflit, doivent faire échouer le pipeline et notifier l'équipe.",
+    "mots_cles_attendus": [
+      "pipeline",
+      "tag",
+      "fastlane",
+      "déploiement progressif",
+      "secrets"
+    ]
+  },
+  {
+    "id": "dev_mobile-192",
+    "domaine": "dev_mobile",
+    "sous_theme": "ci_cd",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le build passe sur le téléphone du testeur mais pas sur celui du client, qui utilise une autre architecture de processeur. Comment fiabiliser les livraisons ?",
+    "reponse_reference": "Il faut publier via un App Bundle ou une matrice de builds couvrant toutes les ABI supportées, et tester chaque architecture en CI. Les livraisons internes doivent embarquer ou distribuer les variantes correspondant aux appareils des testeurs. Un suivi des appareils utilisés en production permet de valider la couverture réelle avant chaque release.",
+    "mots_cles_attendus": [
+      "abi",
+      "app bundle",
+      "matrice de builds",
+      "arm64",
+      "couverture"
+    ]
+  },
+  {
+    "id": "dev_mobile-193",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un service en premier plan sur Android et quelles contraintes s'appliquent depuis Android 14 ?",
+    "reponse_reference": "Un service en premier plan exécute une tâche visible par l'utilisateur, matérialisée par une notification permanente impossible à masquer. Depuis Android 14, chaque service doit déclarer un type, comme localisation ou lecture média, et demander la permission en premier plan correspondante. Les usages non conformes, comme le simple maintien en vie de l'application, sont rejetés par le système et par les stores.",
+    "mots_cles_attendus": [
+      "foreground service",
+      "android 14",
+      "type de service",
+      "permission",
+      "notification permanente"
+    ]
+  },
+  {
+    "id": "dev_mobile-194",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une notification extensible et quelles actions une notification peut-elle exposer ?",
+    "reponse_reference": "Une notification extensible révèle du contenu supplémentaire quand l'utilisateur l'agrandit : grande image, texte long, conversation ou commandes intégrées. Les actions sont des boutons portés par des PendingIntent, comme répondre, archiver ou marquer comme lu. Les réponses directes permettent de saisir du texte depuis la notification, via une action de réponse dédiée.",
+    "mots_cles_attendus": [
+      "notification extensible",
+      "actions",
+      "pendingintent",
+      "réponse directe",
+      "contenu"
+    ]
+  },
+  {
+    "id": "dev_mobile-195",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application de navigation doit rester active en arrière-plan avec une notification permanente. Quelles exigences modernes respecter ?",
+    "reponse_reference": "Le service doit être un service en premier plan déclaré avec le type location et la permission FOREGROUND_SERVICE_LOCATION, demandée à l'utilisateur. La notification permanente doit afficher l'état du guidage et proposer une action d'arrêt, sans pouvoir être masquée. L'application doit aussi justifier l'usage continu de la localisation et prévoir sa suspension automatique à la fin du trajet.",
+    "mots_cles_attendus": [
+      "foreground service",
+      "location",
+      "notification permanente",
+      "permission",
+      "arrêt"
+    ]
+  },
+  {
+    "id": "dev_mobile-196",
+    "domaine": "dev_mobile",
+    "sous_theme": "notifications",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un trampoline de notification et pourquoi Android 12 l'interdit-il ?",
+    "reponse_reference": "Un trampoline de notification est un service ou un receiver intermédiaire qui relance un autre composant uniquement pour ouvrir l'activité cible depuis une notification. Android 12 interdit ce mécanisme car il retarde le lancement et perturbe l'expérience utilisateur. Le PendingIntent de la notification doit viser directement l'activité concernée, éventuellement en passant par un trampoline d'activité autorisé.",
+    "mots_cles_attendus": [
+      "trampoline",
+      "notification",
+      "android 12",
+      "pendingintent",
+      "activité cible"
+    ]
+  },
+  {
+    "id": "dev_mobile-197",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern outbox dans la synchronisation mobile ?",
+    "reponse_reference": "Le pattern outbox journalise chaque mutation locale dans une table ou une file dédiée, dans la même transaction que l'écriture métier. Un processus de synchronisation rejoue ensuite ces opérations vers le serveur dans l'ordre, puis les marque comme envoyées. Ce journal garantit qu'aucune modification n'est perdue, même si l'application est tuée entre l'écriture et l'envoi.",
+    "mots_cles_attendus": [
+      "outbox",
+      "journal",
+      "transaction",
+      "rejeu",
+      "fiabilité"
+    ]
+  },
+  {
+    "id": "dev_mobile-198",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un CRDT et quels avantages offre-t-il face au dernier écrivain gagnant ?",
+    "reponse_reference": "Un CRDT est une structure de données conçue pour que des répliques modifiées indépendamment convergent vers le même état sans coordination. Contrairement au dernier écrivain gagnant, qui écrase des modifications concurrentes, les CRDT fusionnent les changements de façon déterministe. Ils conviennent aux éditions collaboratives de texte, de compteurs ou d'ensembles, au prix d'une complexité de modélisation plus élevée.",
+    "mots_cles_attendus": [
+      "crdt",
+      "convergence",
+      "fusion",
+      "dernier écrivain gagnant",
+      "répliques"
+    ]
+  },
+  {
+    "id": "dev_mobile-199",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application collaborative édite des listes partagées hors ligne sur plusieurs appareils. Quels mécanismes garantir la convergence sans écraser les contributions ?",
+    "reponse_reference": "Chaque élément de liste doit être traité comme une unité adressable avec ses propres opérations d'ajout, de modification et de suppression, fusionnables indépendamment. Les CRDT ou les versions par élément permettent de conserver les contributions concurrentes au lieu d'écraser la liste entière. La résolution produit un état identique sur tous les appareils, quel que soit l'ordre d'arrivée des synchronisations.",
+    "mots_cles_attendus": [
+      "crdt",
+      "opérations par élément",
+      "convergence",
+      "fusion",
+      "concurrence"
+    ]
+  },
+  {
+    "id": "dev_mobile-200",
+    "domaine": "dev_mobile",
+    "sous_theme": "offline_synchro",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une synchronisation consomme trop de données mobiles et dégrade l'autonomie. Quelles optimisations proposer ?",
+    "reponse_reference": "Il faut réduire le volume transféré : synchronisation incrémentale par deltas plutôt que rechargement complet, compression des charges utiles et formats binaires comme Protobuf. Les gros transferts peuvent être différés en Wi-Fi et au secteur, et les synchronisations groupées dans des fenêtres espacées plutôt qu'en continu. Un suivi du volume par utilisateur permet de mesurer l'effet de chaque optimisation.",
+    "mots_cles_attendus": [
+      "delta",
+      "compression",
+      "protobuf",
+      "wifi",
+      "batching"
+    ]
+  },
+  {
+    "id": "dev_mobile-201",
+    "domaine": "dev_mobile",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture multi-modules sur Android et quels bénéfices apporte-t-elle ?",
+    "reponse_reference": "L'architecture multi-modules découpe l'application en modules Gradle indépendants : modules de fonctionnalités, modules core et bibliothèques partagées. Les dépendances entre modules sont explicites et orientées, ce qui force une séparation nette des responsabilités. Elle accélère les builds incrémentaux, isole les tests par module et permet à plusieurs équipes de travailler sans se bloquer.",
+    "mots_cles_attendus": [
+      "multi-module",
+      "gradle",
+      "modules de fonctionnalités",
+      "dépendances",
+      "builds"
+    ]
+  },
+  {
+    "id": "dev_mobile-202",
+    "domaine": "dev_mobile",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la clean architecture appliquée au mobile et comment découper les couches ?",
+    "reponse_reference": "La clean architecture organise le code en couches concentriques : le domaine, pur et indépendant des frameworks, la couche data qui implémente les sources, et la présentation qui pilote l'interface. Les dépendances pointent toujours vers le domaine, jamais l'inverse, grâce à des interfaces inversées. Ce découpage rend la logique métier testable sans Android ni iOS et les changements de bibliothèques localisés.",
+    "mots_cles_attendus": [
+      "clean architecture",
+      "domaine",
+      "data",
+      "présentation",
+      "indépendance"
+    ]
+  },
+  {
+    "id": "dev_mobile-203",
+    "domaine": "dev_mobile",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une application de cinquante écrans dans un module unique devient ingérable : builds lents et conflits permanents. Comment la restructurer ?",
+    "reponse_reference": "Il faut découper l'application en modules de fonctionnalités, un par parcours métier, appuyés sur des modules core partagés : réseau, base de données, design system. Les navigations inter-modules passent par des interfaces publiques et des contrats d'arguments explicites. La migration se fait progressivement, fonctionnalité par fonctionnalité, en conservant les tests à chaque étape.",
+    "mots_cles_attendus": [
+      "modules",
+      "feature",
+      "core",
+      "contrats",
+      "migration progressive"
+    ]
+  },
+  {
+    "id": "dev_mobile-204",
+    "domaine": "dev_mobile",
+    "sous_theme": "architecture",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que l'inversion de dépendances et comment la met-on en œuvre avec Hilt ou Koin ?",
+    "reponse_reference": "L'inversion de dépendances consiste à dépendre d'abstractions, des interfaces, plutôt que d'implémentations concrètes, et à injecter ces implémentations depuis l'extérieur. Hilt génère le graphe d'injection à la compilation et l'intègre aux composants Android, tandis que Koin résout les dépendances à l'exécution avec un DSL léger. Les deux permettent de substituer les implémentations réelles par des fakes dans les tests.",
+    "mots_cles_attendus": [
+      "inversion de dépendances",
+      "hilt",
+      "koin",
+      "interface",
+      "injection"
+    ]
+  },
+  {
+    "id": "dev_mobile-205",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la RASP et comment détecte-t-elle un environnement compromis ?",
+    "reponse_reference": "La RASP (Runtime Application Self-Protection) intègre dans l'application des contrôles qui s'exécutent en continu pendant son fonctionnement. Elle détecte les environnements compromis : appareils rootés ou jailbreakés, outils de hooking comme Frida, débogueurs attachés ou émulateurs. Les réponses vont de la journalisation d'alerte à la limitation des fonctionnalités ou au blocage des appels sensibles.",
+    "mots_cles_attendus": [
+      "rasp",
+      "frida",
+      "détection",
+      "hooking",
+      "environnement compromis"
+    ]
+  },
+  {
+    "id": "dev_mobile-206",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Après activation de R8, l'application crashe sur un écran qui parse du JSON avec de la réflexion. Pourquoi et comment corriger ?",
+    "reponse_reference": "R8 minifie et renomme les classes et les champs, ce qui casse la sérialisation par réflexion qui s'appuie sur les noms d'origine. Il faut ajouter des règles de conservation pour les modèles concernés ou leurs annotations de sérialisation, selon le parseur utilisé. Les règles se testent en exécutant les parcours sensibles sur le build minifié, dans la CI, car les bugs n'apparaissent qu'en release.",
+    "mots_cles_attendus": [
+      "r8",
+      "proguard",
+      "règles de conservation",
+      "réflexion",
+      "build release"
+    ]
+  },
+  {
+    "id": "dev_mobile-207",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un concurrent a décompilé l'APK et extrait des clés API codées en dur. Comment durcir l'application ?",
+    "reponse_reference": "Les secrets ne doivent jamais être embarqués dans le binaire : les clés sensibles sont servies par le backend ou déléguées à un service dédié, l'application ne détenant que des jetons à courte durée de vie. L'obfuscation avec R8, le déplacement de la logique critique en code natif et le durcissement du binaire compliquent la rétro-ingénierie. L'attestation d'intégrité côté serveur permet enfin de refuser les appels des binaires modifiés.",
+    "mots_cles_attendus": [
+      "obfuscation",
+      "secrets",
+      "backend",
+      "code natif",
+      "rétro-ingénierie"
+    ]
+  },
+  {
+    "id": "dev_mobile-208",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le threat modeling et comment l'appliquer à une application mobile ?",
+    "reponse_reference": "Le threat modeling recense systématiquement les menaces pesant sur une application : acteurs, surfaces d'attaque, données sensibles et flux. Des méthodes comme STRIDE classent les menaces par catégorie, usurpation, falsification ou élévation de privilèges. L'analyse produit des mesures hiérarchisées, intégrées à la conception plutôt qu'ajoutées après coup.",
+    "mots_cles_attendus": [
+      "threat modeling",
+      "stride",
+      "surface d'attaque",
+      "menaces",
+      "conception"
+    ]
+  },
+  {
+    "id": "dev_mobile-209",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de bout en bout flaky et comment le fiabiliser ?",
+    "reponse_reference": "Un test flaky échoue de façon aléatoire sans lien avec une régression réelle, souvent à cause d'attentes mal synchronisées, d'états partagés ou de dépendances externes. On le fiabilise en attendant des conditions d'état plutôt que des durées fixes, en isolant les tests les uns des autres et en remplaçant les services externes par des environnements maîtrisés. Un test répété en CI plusieurs fois de suite aide à détecter et corriger l'instabilité.",
+    "mots_cles_attendus": [
+      "flaky",
+      "e2e",
+      "synchronisation",
+      "isolation",
+      "attentes"
+    ]
+  },
+  {
+    "id": "dev_mobile-210",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de performance instrumenté comme Macrobenchmark et quelles métriques mesure-t-il ?",
+    "reponse_reference": "Macrobenchmark exécute des parcours réels de l'application sur un appareil ou un émulateur pour mesurer des métriques de haut niveau. Il suit le temps de démarrage à froid, la fluidité des frames lors du défilement et les temps de transition entre écrans. Les résultats, collectés en CI, détectent les régressions de performance avant la publication.",
+    "mots_cles_attendus": [
+      "macrobenchmark",
+      "métriques",
+      "démarrage",
+      "frames",
+      "régression"
+    ]
+  },
+  {
+    "id": "dev_mobile-211",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un test Detox échoue aléatoirement en CI à cause d'animations qui ne sont pas terminées. Comment le stabiliser ?",
+    "reponse_reference": "Detox synchronise normalement les animations, mais un déclenchement externe, comme un push ou un timer, peut casser la synchronisation. Il faut attendre des éléments ou des états observables plutôt que des délais, et désactiver ou contrôler les animations pendant les tests. Les données de test doivent être déterministes : compte dédié, heure maîtrisée et services simulés pour supprimer l'aléa.",
+    "mots_cles_attendus": [
+      "detox",
+      "synchronisation",
+      "attentes",
+      "déterministe",
+      "flaky"
+    ]
+  },
+  {
+    "id": "dev_mobile-212",
+    "domaine": "dev_mobile",
+    "sous_theme": "tests",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un bug de performance n'apparaît qu'en production, avec des données réelles et des appareils variés. Comment le reproduire et le corriger ?",
+    "reponse_reference": "Il faut instrumenter l'application en production pour collecter des métriques ciblées, des traces de frames et de mémoire, avec le consentement des utilisateurs concernés. Les appareils et scénarios incriminés se reproduisent ensuite sur des appareils de test ou des services cloud d'appareils réels. Le correctif se valide avec un benchmark couvrant ce cas, ajouté à la CI pour éviter la récidive.",
+    "mots_cles_attendus": [
+      "instrumentation",
+      "métriques",
+      "reproduction",
+      "benchmark",
+      "cloud d'appareils"
+    ]
+  },
+  {
+    "id": "dev_mobile-213",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une nouvelle version de l'API casse l'ancienne application encore installée par trente pour cent des utilisateurs. Quelle stratégie adopter ?",
+    "reponse_reference": "L'API doit être versionnée et maintenir la rétrocompatibilité tant que des versions clientes significatives existent. Les changements cassants passent par une nouvelle version d'API, avec une période de double maintenance et des annonces de dépréciation dans l'application. On peut aussi pousser une mise à jour corrective et inciter les utilisateurs à migrer, avec un suivi du taux d'adoption avant la coupure.",
+    "mots_cles_attendus": [
+      "rétrocompatibilité",
+      "versioning d'api",
+      "dépréciation",
+      "adoption",
+      "double maintenance"
+    ]
+  },
+  {
+    "id": "dev_mobile-214",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une application doit être neutralisée d'urgence à cause d'un bug critique déjà en production. Quels leviers activer ?",
+    "reponse_reference": "Un kill switch côté serveur, piloté par configuration distante, permet de désactiver la fonctionnalité fautive sans attendre une mise à jour. On peut aussi imposer une version minimale pour forcer la mise à jour, ou déployer une version corrective en priorité avec un examen accéléré auprès du store. En dernier recours, le retrait de la distribution ou l'annulation du déploiement stoppent la diffusion.",
+    "mots_cles_attendus": [
+      "kill switch",
+      "version minimale",
+      "rollback",
+      "mise à jour forcée",
+      "examen accéléré"
+    ]
+  },
+  {
+    "id": "dev_mobile-215",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles exigences des App Store Review Guidelines concernent les données utilisateur et comment les anticiper ?",
+    "reponse_reference": "Les guidelines imposent de collecter le minimum de données, de déclarer précisément leur usage et d'obtenir un consentement explicite pour le suivi. L'application doit permettre la suppression de compte et lier une politique de confidentialité accessible. Anticiper ces exigences dès la conception, y compris pour les SDK tiers, évite la majorité des refus en examen.",
+    "mots_cles_attendus": [
+      "guidelines",
+      "consentement",
+      "suppression de compte",
+      "confidentialité",
+      "données"
+    ]
+  },
+  {
+    "id": "dev_mobile-216",
+    "domaine": "dev_mobile",
+    "sous_theme": "publication",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement progressif (staged rollout) et comment le piloter ?",
+    "reponse_reference": "Le déploiement progressif diffuse une nouvelle version à un pourcentage croissant d'utilisateurs, par exemple cinq puis vingt pour cent, avant la généralisation. Les métriques de crash, de performance et les retours utilisateurs sont comparés à la version précédente à chaque palier. En cas d'anomalie, le déploiement s'interrompt ou recule avant d'avoir touché l'ensemble des utilisateurs.",
+    "mots_cles_attendus": [
+      "staged rollout",
+      "pourcentage",
+      "paliers",
+      "métriques",
+      "arrêt"
+    ]
+  },
+  {
+    "id": "dev_mobile-217",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Que sont les actions personnalisées et la granularité de navigation pour un lecteur d'écran mobile ?",
+    "reponse_reference": "Les actions personnalisées ajoutent des commandes vocales spécifiques à un élément, comme archiver ou épingler, accessibles via le rotor ou le menu d'actions. La granularité permet de naviguer par caractère, mot ou conteneur selon le besoin de l'utilisateur. Ces mécanismes donnent aux utilisateurs de lecteurs d'écran une efficacité comparable aux gestes tactiles.",
+    "mots_cles_attendus": [
+      "actions personnalisées",
+      "rotor",
+      "granularité",
+      "lecteur d'écran",
+      "navigation"
+    ]
+  },
+  {
+    "id": "dev_mobile-218",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la réduction de mouvement et le mode sombre forcé, et comment une application doit-elle y répondre ?",
+    "reponse_reference": "La réduction de mouvement est un réglage système demandant aux applications de limiter les animations et effets de parallaxe pour les utilisateurs sensibles. Le mode sombre forcé impose une palette sombre que l'application doit respecter sans altérer la lisibilité ni le contraste. L'application doit lire ces préférences système et adapter ses animations et ses thèmes en conséquence.",
+    "mots_cles_attendus": [
+      "reduce motion",
+      "mode sombre",
+      "préférences système",
+      "animations",
+      "thème"
+    ]
+  },
+  {
+    "id": "dev_mobile-219",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un audit d'accessibilité échoue sur un carrousel de produits et un champ de recherche : annonces incompréhensibles et focus perdu. Quelles corrections apporter ?",
+    "reponse_reference": "Chaque carte du carrousel doit être un élément unique avec un libellé concis annonçant le produit et son prix, et une action d'activation explicite plutôt qu'un conteneur opaque. Le champ de recherche doit annoncer son rôle, son état et le nombre de résultats après chaque saisie, sans vocaliser chaque frappe. Le focus doit rester dans le carrousel pendant la navigation par balayage et revenir au champ après une recherche.",
+    "mots_cles_attendus": [
+      "libellés",
+      "focus",
+      "annonces",
+      "carrousel",
+      "état des résultats"
+    ]
+  },
+  {
+    "id": "dev_mobile-220",
+    "domaine": "dev_mobile",
+    "sous_theme": "accessibilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la pseudo-localisation et comment aide-t-elle à détecter les problèmes d'internationalisation ?",
+    "reponse_reference": "La pseudo-localisation transforme les chaînes traduites en versions artificiellement allongées, accentuées et encadrées, sans vraie traduction. Elle révèle les textes tronqués, les mises en page cassées et les chaînes restées codées en dur avant même d'avoir les traductions. Elle s'exécute en CI sur des captures d'écran ou des tests d'interface pour chaque locale cible.",
+    "mots_cles_attendus": [
+      "pseudo-localisation",
+      "troncature",
+      "chaînes codées en dur",
+      "mise en page",
+      "ci"
+    ]
+  },
+  {
+    "id": "dev_mobile-221",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la virtualisation des listes et pourquoi est-elle indispensable pour les très grandes listes ?",
+    "reponse_reference": "La virtualisation consiste à ne construire et ne dessiner que les éléments visibles d'une liste, plus une marge de préchargement, quelle que soit la taille des données. Les éléments sortis de l'écran sont détruits ou recyclés, ce qui maintient mémoire et temps de rendu constants. Sans elle, une liste de cent mille éléments saturerait la mémoire et bloquerait le premier affichage.",
+    "mots_cles_attendus": [
+      "virtualisation",
+      "fenêtrage",
+      "recyclage",
+      "préchargement",
+      "mémoire"
+    ]
+  },
+  {
+    "id": "dev_mobile-222",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la concurrence structurée de Swift et quel rôle jouent les acteurs ?",
+    "reponse_reference": "La concurrence structurée de Swift organise les tâches asynchrones en hiérarchies avec async/await, en liant leur durée de vie à leur portée. Les acteurs sont des types qui sérialisent l'accès à leur état interne, empêchant les accès concurrents par conception. Le compilateur vérifie le partage de données entre tâches via le protocole Sendable, ce qui élimine une classe entière de courses de données.",
+    "mots_cles_attendus": [
+      "swift concurrency",
+      "acteurs",
+      "async/await",
+      "sendable",
+      "course de données"
+    ]
+  },
+  {
+    "id": "dev_mobile-223",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application iOS subit des courses de données sur un état partagé entre plusieurs tâches asynchrones. Comment les éliminer avec les outils Swift modernes ?",
+    "reponse_reference": "Il faut isoler l'état dans un acteur, qui sérialise les accès en écriture et en lecture, ou rendre les types immuables et conformes à Sendable pour un partage sûr. Les mutations de l'interface doivent revenir sur le MainActor pour rester sur le thread principal. Le compilateur et l'outil d'analyse de concurrence signalent alors les partages non sûrs restants dès la compilation.",
+    "mots_cles_attendus": [
+      "acteur",
+      "sendable",
+      "mainactor",
+      "immuable",
+      "thread principal"
+    ]
+  },
+  {
+    "id": "dev_mobile-224",
+    "domaine": "dev_mobile",
+    "sous_theme": "etat_avance",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un événement unique, comme la navigation après un paiement, est rejoué après une rotation d'écran. Pourquoi et comment corriger ?",
+    "reponse_reference": "Un StateFlow conserve toujours sa dernière valeur : un nouvel abonné après la rotation reçoit l'événement déjà consommé. Les événements uniques doivent transiter par un canal ou un SharedFlow sans relecture, consommé une seule fois, tandis que l'état durable reste porté par un StateFlow. On distingue ainsi événements éphémères et état persistant, chacun avec son bon mécanisme.",
+    "mots_cles_attendus": [
+      "stateflow",
+      "sharedflow",
+      "événement unique",
+      "rejeu",
+      "canal"
+    ]
+  },
+  {
+    "id": "dev_mobile-225",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un moteur de synchronisation embarqué et quand l'adopter ?",
+    "reponse_reference": "Un moteur de synchronisation embarqué réplique une partie de la base distante dans la base locale de l'appareil et propage les écritures dans les deux sens. Les produits de cette famille gèrent la file de changements, la reprise sur erreur et souvent les conflits, sans code de synchronisation sur mesure. On les adopte quand l'application exige un accès hors ligne complet à des données partagées entre plusieurs appareils.",
+    "mots_cles_attendus": [
+      "sync engine",
+      "réplication",
+      "base embarquée",
+      "conflits",
+      "hors ligne"
+    ]
+  },
+  {
+    "id": "dev_mobile-226",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application doit synchroniser dix mille enregistrements par appareil avec de nombreux appareils hors ligne. Quelle architecture de synchronisation retenir ?",
+    "reponse_reference": "Une réplication incrémentale par curseurs ou par journal de changements évite de transférer les dix mille enregistrements à chaque fois. Le serveur conserve un journal par utilisateur, et chaque appareil reprend la synchronisation là où il s'est arrêté, avec des lots bornés. Les conflits se résolvent par des règles déterministes, et la réplication est priorisée et compressée pour tenir sur les réseaux mobiles.",
+    "mots_cles_attendus": [
+      "réplication incrémentale",
+      "curseur",
+      "journal de changements",
+      "lots",
+      "conflits"
+    ]
+  },
+  {
+    "id": "dev_mobile-227",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Dans une application B2B multi-locataires, un utilisateur voit des données d'un autre locataire après une synchronisation. Quelle en est la cause probable et comment la corriger ?",
+    "reponse_reference": "La cause est presque toujours une requête ou un filtre de réplication sans clé de locataire, laissant fuiter des enregistrements d'un autre périmètre. Toutes les requêtes et règles de synchronisation doivent imposer le filtre de locataire côté serveur, et le stockage local doit être cloisonné par utilisateur. Un test de sécurité dédié, vérifiant l'absence de fuite entre comptes, doit rejoindre la suite de non-régression.",
+    "mots_cles_attendus": [
+      "multi-locataire",
+      "filtre",
+      "cloisonnement",
+      "fuite de données",
+      "test de sécurité"
+    ]
+  },
+  {
+    "id": "dev_mobile-228",
+    "domaine": "dev_mobile",
+    "sous_theme": "synchro",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le partitionnement des données par utilisateur dans le stockage local et la synchronisation ?",
+    "reponse_reference": "Le partitionnement consiste à isoler physiquement ou logiquement les données de chaque utilisateur : base distincte, préfixe de clé ou colonne de périmètre sur chaque enregistrement. Il empêche les fuites entre comptes sur un appareil partagé et simplifie la purge à la déconnexion. En synchronisation, il garantit que le périmètre téléchargé correspond strictement aux droits de l'utilisateur courant.",
+    "mots_cles_attendus": [
+      "partitionnement",
+      "isolation",
+      "périmètre",
+      "purge",
+      "multi-comptes"
+    ]
+  },
+  {
+    "id": "dev_mobile-229",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un heap dump et comment chasser une fuite mémoire native avec ?",
+    "reponse_reference": "Un heap dump est un instantané de la mémoire du processus listant les objets vivants et leurs références. On y cherche les objets qui auraient dû disparaître, comme les écrans fermés, et la chaîne de références qui les retient. Pour les fuites natives, on croise le heap dump avec les outils de suivi d'allocations natifs, car une fuite en C n'apparaît pas dans les objets gérés.",
+    "mots_cles_attendus": [
+      "heap dump",
+      "fuite native",
+      "références",
+      "instantané",
+      "allocations"
+    ]
+  },
+  {
+    "id": "dev_mobile-230",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La mémoire d'une application React Native croît après chaque écran visité et ne redescend jamais. Comment investiguer et corriger ?",
+    "reponse_reference": "Il faut prendre des instantanés de tas à différents moments pour identifier les objets qui s'accumulent : composants non démontés, listeners jamais retirés ou closures retenant de grands objets. Les bibliothèques qui s'abonnent à des événements sans se désabonner, comme les écouteurs de navigation ou de clavier, sont des suspects classiques. Après correction, un test automatisé mesurant la mémoire avant et après un parcours d'écrans détecte toute régression.",
+    "mots_cles_attendus": [
+      "heap snapshot",
+      "fuites",
+      "listeners",
+      "désabonnement",
+      "parcours d'écrans"
+    ]
+  },
+  {
+    "id": "dev_mobile-231",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quels compromis impose le rendu à 120 Hz sur mobile ?",
+    "reponse_reference": "Le rendu à 120 Hz double le nombre de frames par rapport à 60 Hz, divisant par deux le budget de chaque frame et sollicitant davantage CPU et GPU. L'affichage consomme plus d'énergie, ce qui réduit l'autonomie, même si les taux de rafraîchissement adaptatifs compensent en partie. Les applications doivent éviter les animations inutiles et s'adapter au taux courant, mesurable à l'exécution.",
+    "mots_cles_attendus": [
+      "120 hz",
+      "taux de rafraîchissement",
+      "batterie",
+      "adaptatif",
+      "budget de frame"
+    ]
+  },
+  {
+    "id": "dev_mobile-232",
+    "domaine": "dev_mobile",
+    "sous_theme": "performances",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le rendu partiel et les limites de repeinture dans un moteur de rendu mobile ?",
+    "reponse_reference": "Le rendu partiel ne redessine que les zones de l'écran réellement modifiées, au lieu de repeindre la scène entière. Les limites de repeinture, comme les repaint boundaries de Flutter, isolent les sous-arbres fréquemment animés du reste de l'interface. Bien placées, elles évitent qu'une petite animation invalide le rendu complet de l'écran à chaque frame.",
+    "mots_cles_attendus": [
+      "rendu partiel",
+      "repaint boundary",
+      "zones modifiées",
+      "invalidation",
+      "peinture"
+    ]
+  },
+  {
+    "id": "dev_mobile-233",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la network security config sur Android et comment restreindre le trafic en clair ?",
+    "reponse_reference": "La network security config est un fichier XML qui définit la politique réseau de l'application : autorisation du trafic en clair, certificats de confiance et épinglage par domaine. Par défaut, les applications récentes refusent le HTTP non chiffré, et la configuration peut durcir ou assouplir ce comportement domaine par domaine. Le trafic en clair ne doit être autorisé que pour des cas précis, comme un environnement de développement local.",
+    "mots_cles_attendus": [
+      "network security config",
+      "cleartext",
+      "tls",
+      "domaine",
+      "épinglage"
+    ]
+  },
+  {
+    "id": "dev_mobile-234",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment intégrer la biométrie sans jamais stocker le secret biométrique ?",
+    "reponse_reference": "La biométrie ne s'utilise que comme vérification locale : le système compare l'empreinte ou le visage à son modèle sécurisé et ne renvoie qu'un succès ou un échec. Le secret applicatif, comme une clé de déchiffrement, reste dans le Keystore ou le Secure Enclave et n'est libéré que si la vérification biométrique réussit. Un serveur ne peut pas vérifier lui-même la biométrie, il ne reçoit qu'un jeton ou une signature prouvant l'authentification locale.",
+    "mots_cles_attendus": [
+      "biométrie",
+      "biometricprompt",
+      "secure enclave",
+      "keystore",
+      "vérification locale"
+    ]
+  },
+  {
+    "id": "dev_mobile-235",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application de paiement doit authentifier l'utilisateur par empreinte avant chaque transaction. Comment l'intégrer proprement ?",
+    "reponse_reference": "La transaction est signée ou déchiffrée par une clé du Keystore ou du Secure Enclave dont l'utilisation exige une authentification biométrique récente. Le BiometricPrompt ou le LocalAuthentication vérifie l'utilisateur, puis la clé débloquée signe la demande de paiement. Un repli par code de l'appareil ou mot de passe doit exister pour les utilisateurs sans biométrie, et la logique sensible reste validée côté serveur.",
+    "mots_cles_attendus": [
+      "biometricprompt",
+      "crypto object",
+      "keystore",
+      "repli",
+      "signature"
+    ]
+  },
+  {
+    "id": "dev_mobile-236",
+    "domaine": "dev_mobile",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un test d'intrusion montre que l'application accepte des certificats auto-signés. Comment corriger et vérifier durablement ?",
+    "reponse_reference": "Il faut supprimer tout code qui désactive la validation des certificats, comme les gestionnaires de confiance permissifs, et n'utiliser que les autorités système. La network security config ou l'ATS sur iOS doit rester stricte, avec un épinglage éventuel pour les domaines sensibles. Un test automatisé vérifie ensuite que l'application refuse les connexions vers un serveur au certificat invalide, en CI comme en audit périodique.",
+    "mots_cles_attendus": [
+      "certificat auto-signé",
+      "validation",
+      "ats",
+      "épinglage",
+      "test automatisé"
+    ]
+  },
+  {
+    "id": "dev_mobile-237",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles exigences imposent StoreKit 2 et Google Play Billing aux abonnements en 2026 ?",
+    "reponse_reference": "Les deux plateformes imposent leur facturation intégrée pour les biens numériques, avec des APIs modernes : StoreKit 2 côté Apple et la Billing Library côté Android. Les applications doivent gérer les statuts d'abonnement, les renouvellements, les périodes de grâce et les résiliations, ainsi que les notifications serveur signées. Les règles de remboursement, d'essais gratuits et de communication des prix aux utilisateurs sont strictement encadrées.",
+    "mots_cles_attendus": [
+      "storekit 2",
+      "play billing",
+      "abonnements",
+      "statuts",
+      "conformité"
+    ]
+  },
+  {
+    "id": "dev_mobile-238",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la rétention et le LTV dans la monétisation mobile, et comment les mesurer ?",
+    "reponse_reference": "La rétention mesure la proportion d'utilisateurs qui reviennent dans l'application après un nombre de jours donné, généralement analysée par cohortes d'acquisition. Le LTV estime le revenu total qu'un utilisateur générera sur toute sa durée de vie, en croisant rétention et revenu moyen par utilisateur. Ces indicateurs se suivent par segment et par canal d'acquisition pour piloter les dépenses marketing et les expérimentations de monétisation.",
+    "mots_cles_attendus": [
+      "rétention",
+      "ltv",
+      "cohortes",
+      "revenu",
+      "segments"
+    ]
+  },
+  {
+    "id": "dev_mobile-239",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une application doit migrer ses abonnements existants vers les nouvelles règles de facturation des stores. Quels impacts techniques anticiper ?",
+    "reponse_reference": "Il faut migrer les produits vers les nouveaux modèles d'abonnement des consoles, en conservant la correspondance entre anciens et nouveaux identifiants pour les abonnés actifs. Le serveur doit consommer les nouvelles notifications d'événements et revalider les transactions avec les APIs récentes, sans couper les droits pendant la bascule. Les parcours d'achat, de restauration et de résiliation se retestent de bout en bout, y compris pour les abonnements créés avant la migration.",
+    "mots_cles_attendus": [
+      "migration",
+      "abonnés actifs",
+      "webhooks",
+      "revalidation",
+      "restauration"
+    ]
+  },
+  {
+    "id": "dev_mobile-240",
+    "domaine": "dev_mobile",
+    "sous_theme": "monetisation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le taux de désabonnement (churn) et comment le réduire ?",
+    "reponse_reference": "Le churn est le taux d'abonnés qui résilient leur abonnement sur une période donnée, l'inverse de la rétention des abonnés. On le réduit en analysant les motifs de résiliation, en proposant des pauses ou des offres de rétention ciblées, et en corrigeant les causes produit comme les échecs de facturation. Les échecs de renouvellement, cartes expirées notamment, se traitent par des relances et des périodes de grâce automatiques.",
+    "mots_cles_attendus": [
+      "churn",
+      "désabonnement",
+      "rétention",
+      "relance",
+      "période de grâce"
+    ]
+  }
+]

@@ -1,0 +1,3604 @@
+[
+  {
+    "id": "tests_qualite-001",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Pourquoi écrit-on des tests automatisés dans un projet logiciel ?",
+    "reponse_reference": "Les tests automatisés vérifient que le code se comporte comme prévu et détectent les régressions dès qu'une modification est fusionnée. Ils offrent un retour rapide, reproductible et bien moins coûteux qu'une recette manuelle.",
+    "mots_cles_attendus": [
+      "régression",
+      "automatisation",
+      "retour rapide",
+      "comportement attendu"
+    ]
+  },
+  {
+    "id": "tests_qualite-002",
+    "domaine": "tests_qualite",
+    "sous_theme": "types_de_tests",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quels sont les principaux types de tests dans un projet logiciel ?",
+    "reponse_reference": "On distingue les tests unitaires qui isolent une petite unité de code, les tests d'intégration qui vérifient l'interaction entre composants, et les tests de bout en bout qui valident le parcours utilisateur complet. Chacun se situe à un niveau différent de granularité et de coût.",
+    "mots_cles_attendus": [
+      "tests unitaires",
+      "tests d'intégration",
+      "tests de bout en bout",
+      "granularité"
+    ]
+  },
+  {
+    "id": "tests_qualite-003",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test unitaire ?",
+    "reponse_reference": "Un test unitaire vérifie le comportement d'une fonction ou d'une classe isolément, sans dépendance externe réelle. Il doit être rapide, déterministe et cibler une seule unité de code afin d'isoler rapidement toute anomalie.",
+    "mots_cles_attendus": [
+      "isolation",
+      "rapide",
+      "déterministe",
+      "fonction"
+    ]
+  },
+  {
+    "id": "tests_qualite-004",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une assertion dans un test ?",
+    "reponse_reference": "Une assertion est une expression qui vérifie une condition attendue par le test, par exemple qu'une valeur retournée vaut 42. Si elle est fausse, le test échoue et signale une non-conformité entre le comportement observé et le comportement attendu.",
+    "mots_cles_attendus": [
+      "condition",
+      "échec",
+      "attendu",
+      "vérification"
+    ]
+  },
+  {
+    "id": "tests_qualite-005",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la pyramide de tests ?",
+    "reponse_reference": "La pyramide de tests est un modèle qui organise les tests en trois couches : beaucoup de tests unitaires rapides, moins de tests d'intégration, et encore moins de tests de bout en bout. Elle oriente l'effort vers des tests peu coûteux à exécuter et faciles à maintenir.",
+    "mots_cles_attendus": [
+      "unitaires",
+      "intégration",
+      "bout en bout",
+      "rapidité"
+    ]
+  },
+  {
+    "id": "tests_qualite-006",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un environnement de test ?",
+    "reponse_reference": "Un environnement de test est un espace isolé contenant les ressources nécessaires à l'exécution des tests : base de données, services externes, variables de configuration. Il reproduit les conditions de production sans risquer les données réelles.",
+    "mots_cles_attendus": [
+      "isolation",
+      "base de données",
+      "configuration",
+      "reproduction"
+    ]
+  },
+  {
+    "id": "tests_qualite-007",
+    "domaine": "tests_qualite",
+    "sous_theme": "test_automatise",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un test automatisé et un test manuel ?",
+    "reponse_reference": "Un test automatisé est exécuté par un outillage à chaque build ou déploiement, ce qui le rend rapide et reproductible. Un test manuel est réalisé par un humain, plus coûteux mais plus souple pour valider l'ergonomie ou des scénarios complexes.",
+    "mots_cles_attendus": [
+      "outillage",
+      "build",
+      "coût",
+      "humain"
+    ]
+  },
+  {
+    "id": "tests_qualite-008",
+    "domaine": "tests_qualite",
+    "sous_theme": "qualite_du_code",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Comment les tests contribuent-ils à la qualité du code ?",
+    "reponse_reference": "Les tests imposent un contrat explicite sur le comportement du code et constituent un filet de sécurité lors des refactorings. Ils réduisent les défauts atteignant la production et rendent les évolutions plus fiables.",
+    "mots_cles_attendus": [
+      "contrat",
+      "refactoring",
+      "défauts",
+      "fiabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-009",
+    "domaine": "tests_qualite",
+    "sous_theme": "types_de_tests",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test d'intégration ?",
+    "reponse_reference": "Un test d'intégration vérifie que plusieurs composants ou services travaillent correctement ensemble, par exemple en interrogeant une base de données réelle. Il se situe entre le test unitaire et le test de bout en bout en termes de réalisme et de coût d'exécution.",
+    "mots_cles_attendus": [
+      "interaction",
+      "composants",
+      "base de données",
+      "coût"
+    ]
+  },
+  {
+    "id": "tests_qualite-010",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Comment procède-t-on pour écrire un test qui doit échouer au départ ?",
+    "reponse_reference": "On écrit d'abord le résultat attendu puis on exécute le test : celui-ci doit échouer tant que le code ne respecte pas la spécification. Cet échec initial, souvent appelé test rouge, prouve que le test détecte bien le problème décrit.",
+    "mots_cles_attendus": [
+      "test rouge",
+      "échec attendu",
+      "spécification",
+      "résultat"
+    ]
+  },
+  {
+    "id": "tests_qualite-011",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que se passe-t-il si une équipe ne teste pas du tout son code ?",
+    "reponse_reference": "Sans tests, chaque correction manuelle peut en introduire de nouvelles et les anomalies ne sont détectées qu'au moment de la mise en production. Le temps de correction des incidents augmente fortement et le rythme de livraison ralentit.",
+    "mots_cles_attendus": [
+      "incident",
+      "production",
+      "régression",
+      "délai"
+    ]
+  },
+  {
+    "id": "tests_qualite-012",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Que doit vérifier un test unitaire bien écrit ?",
+    "reponse_reference": "Il doit vérifier un seul comportement observable du code, indépendamment de son implémentation interne. Il est rapide, reproductible, insensible à l'ordre d'exécution et échoue avec un message d'erreur explicite.",
+    "mots_cles_attendus": [
+      "comportement observable",
+      "indépendant",
+      "reproductible",
+      "message d'échec"
+    ]
+  },
+  {
+    "id": "tests_qualite-013",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une fonction calculerRemise(prix, taux) renvoie 15 pour un prix de 100 et un taux de 15 %. Le test attend 20. Que doit faire l'équipe ?",
+    "reponse_reference": "Le test doit échouer et signaler une anomalie : la fonction ne calcule pas le taux correctement. L'équipe corrige ensuite la logique du code et non le test, sauf si l'exigence métier exprimée par le test était elle-même erronée.",
+    "mots_cles_attendus": [
+      "test en échec",
+      "correction du code",
+      "anomalie",
+      "exigence"
+    ]
+  },
+  {
+    "id": "tests_qualite-014",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un développeur écrit assert(resultat === 42 || true) pour vérifier le résultat d'un calcul. Quel est le problème ?",
+    "reponse_reference": "La condition est toujours vraie, donc le test passe quelle que soit la valeur retournée et ne protège plus rien. Il faut écrire une assertion qui exprime réellement l'attendu, par exemple assert(resultat === 42).",
+    "mots_cles_attendus": [
+      "condition toujours vraie",
+      "faux positif",
+      "assertion",
+      "attendu"
+    ]
+  },
+  {
+    "id": "tests_qualite-015",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un test de service échoue uniquement sur la machine d'intégration continue car la base de données locale est vide. Que faut-il faire ?",
+    "reponse_reference": "L'environnement de test n'est pas reproductible : il faut provisionner la base avec des données de test versionnées ou générées automatiquement. Chaque test doit aussi être isolé et sans état afin d'éviter les dépendances à l'ordre d'exécution.",
+    "mots_cles_attendus": [
+      "isolation",
+      "données de test",
+      "reproductibilité",
+      "intégration continue"
+    ]
+  },
+  {
+    "id": "tests_qualite-016",
+    "domaine": "tests_qualite",
+    "sous_theme": "types_de_tests",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une équipe veut vérifier la procédure complète d'inscription (formulaire, e-mail, base de données). Quel type de test doit-elle écrire ?",
+    "reponse_reference": "Il s'agit d'un test de bout en bout, car il traverse l'application et ses dépendances externes. Pour limiter le coût, il vaut mieux l'automatiser au niveau de l'interface avec un outil dédié et le compléter par des tests d'intégration ciblés.",
+    "mots_cles_attendus": [
+      "bout en bout",
+      "interface",
+      "automatisation",
+      "intégration"
+    ]
+  },
+  {
+    "id": "tests_qualite-017",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une équipe écrit uniquement 50 tests de bout en bout et aucun test unitaire. Quel risque prend-elle ?",
+    "reponse_reference": "Ses tests seront lents, fragiles et coûteux à diagnostiquer par rapport à une simple assertion unitaire. La pyramide est déséquilibrée : il faut réintroduire des tests unitaires rapides pour localiser efficacement les défauts.",
+    "mots_cles_attendus": [
+      "déséquilibre",
+      "lents",
+      "fragiles",
+      "tests unitaires"
+    ]
+  },
+  {
+    "id": "tests_qualite-018",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un test unitaire réussit sur le poste du développeur mais échoue en intégration continue. Que faut-il vérifier en premier ?",
+    "reponse_reference": "Il faut vérifier l'indépendance du test : horloge, ordre aléatoire, ordre d'exécution ou dépendance à un état partagé. Un test qui dépend du contexte n'est pas déterministe et doit être rendu hermétique.",
+    "mots_cles_attendus": [
+      "déterministe",
+      "hermétique",
+      "état partagé",
+      "indépendance"
+    ]
+  },
+  {
+    "id": "tests_qualite-019",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une correction urgente en production modifie trois fichiers. Quel est l'intérêt d'avoir des tests automatisés ?",
+    "reponse_reference": "Les tests automatisés vérifient immédiatement si la correction a résolu le bug et n'a pas cassé d'autres fonctionnalités. Ils protègent des régressions futures et évitent un redéploiement en urgence si la cause réelle n'était pas identifiée.",
+    "mots_cles_attendus": [
+      "régression",
+      "correctif",
+      "vérification immédiate",
+      "redéploiement"
+    ]
+  },
+  {
+    "id": "tests_qualite-020",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un test contient 40 assertions qui vérifient toutes le même résultat. Quel est le risque principal ?",
+    "reponse_reference": "En cas d'échec, le message n'indique pas précisément quelle propriété a été violée, ce qui complique fortement le diagnostic. Il vaut mieux découper le scénario en plusieurs petits tests ou regrouper les assertions liées à une seule propriété.",
+    "mots_cles_attendus": [
+      "diagnostic",
+      "propriété",
+      "découpage",
+      "lisibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-021",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi recommande-t-on une assertion par test plutôt que plusieurs ?",
+    "reponse_reference": "Une assertion par test localise précisément la propriété violée lorsque le test échoue, ce qui accélère le diagnostic. Un test qui vérifie un seul comportement est aussi plus facile à nommer, à lire et à maintenir.",
+    "mots_cles_attendus": [
+      "diagnostic",
+      "propriété",
+      "lisibilité",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "tests_qualite-022",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la règle des « trois A » appliquée à un test ?",
+    "reponse_reference": "La règle des trois A décrit la structure d'un test : Arrange pour préparer les préconditions et les données, Act pour exécuter l'action testée, Assert pour vérifier le résultat attendu. Respecter cette structure rend les tests lisibles et uniformes dans une équipe.",
+    "mots_cles_attendus": [
+      "arrange",
+      "act",
+      "assert",
+      "structure"
+    ]
+  },
+  {
+    "id": "tests_qualite-023",
+    "domaine": "tests_qualite",
+    "sous_theme": "types_de_tests",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de non-régression ?",
+    "reponse_reference": "Un test de non-régression formalise un bug déjà corrigé afin d'empêcher sa réapparition lors d'évolutions futures. Il est généralement ajouté après l'incident et sert de garde-fou permanent sur le chemin de code concerné.",
+    "mots_cles_attendus": [
+      "bug corrigé",
+      "réapparition",
+      "garde-fou",
+      "incident"
+    ]
+  },
+  {
+    "id": "tests_qualite-024",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "À quoi servent les jeux de données de test (fixtures) ?",
+    "reponse_reference": "Les fixtures fournissent des données connues et stables utilisées par les tests pour vérifier des résultats prévisibles. Elles centralisent les cas limites et évitent de dupliquer des données hardcodées dans de nombreux fichiers de test.",
+    "mots_cles_attendus": [
+      "fixtures",
+      "données stables",
+      "cas limites",
+      "centralisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-025",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi un test ne doit-il jamais dépendre de l'ordre d'exécution des autres tests ?",
+    "reponse_reference": "Un test dépendant de l'ordre échoue de façon aléatoire selon la parallélisation ou l'exécution en parallèle, ce qui le rend instable et difficile à diagnostiquer. Chaque test doit donc créer et détruire ses propres données pour rester isolé.",
+    "mots_cles_attendus": [
+      "isolation",
+      "instabilité",
+      "parallélisation",
+      "données propres"
+    ]
+  },
+  {
+    "id": "tests_qualite-026",
+    "domaine": "tests_qualite",
+    "sous_theme": "outillage_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels sont les principaux outils utilisés pour écrire des tests automatisés ?",
+    "reponse_reference": "Les frameworks les plus répandus sont JUnit pour Java, pytest pour Python, Jest ou Vitest pour JavaScript et TypeScript, et Cypress ou Playwright pour les tests de bout en bout. Le choix dépend du langage, du type de test et des besoins d'intégration continue.",
+    "mots_cles_attendus": [
+      "framework",
+      "pytest",
+      "jest",
+      "vitest",
+      "playwright"
+    ]
+  },
+  {
+    "id": "tests_qualite-027",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quel est l'intérêt du « glacier » ou « cube de glace » par rapport à la pyramide de tests ?",
+    "reponse_reference": "Le modèle en cube de glace inverse la pyramide enzyme tests les interactions d'interface plus que la logique métier. Cette répartition est adaptée aux applications riches en interfaces, où la valeur se situe dans les parcours utilisateur et non dans la logique pure.",
+    "mots_cles_attendus": [
+      "interface",
+      "cube de glace",
+      "parcours utilisateur",
+      "logique métier"
+    ]
+  },
+  {
+    "id": "tests_qualite-028",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test paramétré ?",
+    "reponse_reference": "Un test paramétré exécute le même code de test avec plusieurs jeux de données, chaque jeu constituant un cas distinct avec son attendu. Il réduit la duplication du code tout en couvrant davantage de cas limites.",
+    "mots_cles_attendus": [
+      "paramètres",
+      "jeux de données",
+      "cas limites",
+      "réduction de duplication"
+    ]
+  },
+  {
+    "id": "tests_qualite-029",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de fumée (smoke test) ?",
+    "reponse_reference": "Un test de fumée est un ensemble minimal de vérifications qui confirme que le build déployé démarre et que les fonctions principales répondent. Son objectif est de détecter rapidement un livrable totalement cassé avant d'investir dans la campagne de tests complète.",
+    "mots_cles_attendus": [
+      "smoke test",
+      "vérification minimale",
+      "build",
+      "déploiement"
+    ]
+  },
+  {
+    "id": "tests_qualite-030",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Que signifie le terme « dette de tests » ?",
+    "reponse_reference": "La dette de tests désigne l'ensemble des zones de code insuffisamment couvertes par des tests, accumulées par manque de temps ou de discipline. Comme une dette technique, elle rend les évolutions plus risquées et plus coûteuses à chaque itération.",
+    "mots_cles_attendus": [
+      "dette de tests",
+      "couverture insuffisante",
+      "risque",
+      "coût"
+    ]
+  },
+  {
+    "id": "tests_qualite-031",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle différence entre un test unitaire et un test fonctionnel ?",
+    "reponse_reference": "Le test unitaire cible une unité de code isolée et vérifie son comportement interne à partir d'entrées connues. Le test fonctionnel valide une fonctionnalité métier du point de vue de l'utilisateur, sans se préoccuper de la façon dont le code est découpé.",
+    "mots_cles_attendus": [
+      "unité de code",
+      "fonctionnalité métier",
+      "point de vue utilisateur",
+      "découpage interne"
+    ]
+  },
+  {
+    "id": "tests_qualite-032",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Pourquoi utiliser des valeurs limites dans les données de test ?",
+    "reponse_reference": "Les valeurs limites sont les cas où les conditions aux bornes d'un domaine se concentrent : zéro, minimum, maximum, juste avant et juste après. Les erreurs de comparaison se manifestent presque toujours à ces endroits, d'où leur importance dans les jeux de test.",
+    "mots_cles_attendus": [
+      "valeurs limites",
+      "bornes",
+      "cas limites",
+      "comparaison"
+    ]
+  },
+  {
+    "id": "tests_qualite-033",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un utilisateur signale qu'un panier vide plante à l'affichage. Quelle est la bonne pratique de test à appliquer ?",
+    "reponse_reference": "Il faut écrire un test de non-régression reproduisant le cas du panier vide, vérifier qu'il échoue avec la version actuelle, puis corriger le code. Ce test sera conservé pour empêcher la réapparition du bug.",
+    "mots_cles_attendus": [
+      "test de non-régression",
+      "cas reproduit",
+      "échec",
+      "correction"
+    ]
+  },
+  {
+    "id": "tests_qualite-034",
+    "domaine": "tests_qualite",
+    "sous_theme": "assertions",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe de test ajoute une assertion sur le nombre exact de lignes retournées par une requête SQL. Pourquoi cette pratique est-elle risquée ?",
+    "reponse_reference": "Tester un détail d'implémentation rend le test fragile : toute évolution légitime du schéma ou de la requête fera échouer le test sans que le comportement métier change. Il vaut mieux asserter sur le contenu métier pertinent plutôt que sur la structure physique des données.",
+    "mots_cles_attendus": [
+      "implémentation",
+      "fragilité",
+      "détail technique",
+      "comportement métier"
+    ]
+  },
+  {
+    "id": "tests_qualite-035",
+    "domaine": "tests_qualite",
+    "sous_theme": "environnement_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Deux tests échouent uniquement lorsqu'ils sont lancés en parallèle sur la même base de données. Comment résoudre ce problème ?",
+    "reponse_reference": "Les tests partagent un état, ce qui viole le principe d'isolation. Il faut créer un schéma ou une base distincte par test, utiliser des transactions avec rollback, ou s'appuyer sur une base jetable recréée à chaque exécution.",
+    "mots_cles_attendus": [
+      "état partagé",
+      "isolation",
+      "rollback",
+      "base jetable"
+    ]
+  },
+  {
+    "id": "tests_qualite-036",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un test de calcul de remise ne couvre que le cas d'une remise de 10 %. Que doit-on lui ajouter ?",
+    "reponse_reference": "Il faut couvrir les cas limites : remise nulle, remise maximale, valeurs interdites, montants justo après un seuil et arrondis. Un test paramétré permet de couvrir ces variantes sans dupliquer le code.",
+    "mots_cles_attendus": [
+      "cas limites",
+      "test paramétré",
+      "seuil",
+      "arrondi"
+    ]
+  },
+  {
+    "id": "tests_qualite-037",
+    "domaine": "tests_qualite",
+    "sous_theme": "pyramide_de_tests",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une équipe veut réduire la durée de sa pipeline qui dure 45 minutes. Quelle action a le plus d'impact sur la pyramide de tests ?",
+    "reponse_reference": "Il faut déplacer une partie des scénarios de bout en bout vers des tests d'intégration ou unitaires plus rapides et plus fiables. Réduire le nombre de scénarios de bout en bout garde la couverture métier tout en raccourcissant la boucle de rétroaction.",
+    "mots_cles_attendus": [
+      "boucle de rétroaction",
+      "tests unitaires",
+      "durée de pipeline",
+      "couverture"
+    ]
+  },
+  {
+    "id": "tests_qualite-038",
+    "domaine": "tests_qualite",
+    "sous_theme": "donnees_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Des tests échouent de manière aléatoire parce qu'ils utilisent l'horloge système. Comment rendre ces tests fiables ?",
+    "reponse_reference": "Il faut injecter l'heure comme dépendance du code testé, par exemple via une interface de type horloge, afin de pouvoir la contrôler dans les tests. Le test devient alors déterministe au lieu de dépendre de l'exécution réelle.",
+    "mots_cles_attendus": [
+      "horloge injectée",
+      "déterministe",
+      "dépendance",
+      "contrôle du temps"
+    ]
+  },
+  {
+    "id": "tests_qualite-039",
+    "domaine": "tests_qualite",
+    "sous_theme": "outillage_de_test",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Chaque poste de développement utilise une version différente du framework de test et les résultats diffèrent. Que faut-il mettre en place ?",
+    "reponse_reference": "Il faut versionner et verrouiller les dépendances de test dans un fichier de lock, et exécuter la suite via un script unique partagé par l'équipe. La reproductibilité des résultats exige un environnement d'outillage identique pour tous.",
+    "mots_cles_attendus": [
+      "verrouillage des versions",
+      "reproductibilité",
+      "script partagé",
+      "lock"
+    ]
+  },
+  {
+    "id": "tests_qualite-040",
+    "domaine": "tests_qualite",
+    "sous_theme": "pourquoi_tester",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un chef de projet impose que la couverture de code du projet dépasse 80 %. Quel est le risque de cet objectif ?",
+    "reponse_reference": "La couverture mesurée est un indicateur indirect qui peut être atteint par des tests sans valeur (valeurs nulles, code mort). Fixer un seuil sur cet indicateur seul peut dégrader la qualité réelle si aucune revue de pertinence des tests n accompanye la mesure.",
+    "mots_cles_attendus": [
+      "indicateur indirect",
+      "tests sans valeur",
+      "seuil",
+      "pertinence"
+    ]
+  },
+  {
+    "id": "tests_qualite-041",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un double de test (test double) ?",
+    "reponse_reference": "Un double de test est un substitut qui remplace une dépendance réelle pendant l'exécution d'un test afin de contrôler son comportement. Les principaux types sont le stub, le mock, le spy et le fake, chacun ayant un rôle distinct dans la vérification.",
+    "mots_cles_attendus": [
+      "stub",
+      "mock",
+      "spy",
+      "fake",
+      "substitut"
+    ]
+  },
+  {
+    "id": "tests_qualite-042",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelle différence entre un mock et un stub ?",
+    "reponse_reference": "Un stub fournit des réponses préprogrammées pour permettre l'exécution du code testé sans vérifier les interactions. Un mock enregistre les appels et échoue si le code ne les effectue pas comme attendu, c'est donc un stub enrichi d'un mécanisme de vérification.",
+    "mots_cles_attendus": [
+      "stub",
+      "mock",
+      "vérification des appels",
+      "réponses préprogrammées"
+    ]
+  },
+  {
+    "id": "tests_qualite-043",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un spy dans un test unitaire ?",
+    "reponse_reference": "Un spy est un double qui enregistre les appels reçus tout en laissant le comportement réel s'exécuter, éventuellement avec des valeurs de retour configurables. Il permet d'observer une interaction sans imposer d'échec, contrairement au mock.",
+    "mots_cles_attendus": [
+      "spy",
+      "enregistrement des appels",
+      "observation",
+      "comportement réel"
+    ]
+  },
+  {
+    "id": "tests_qualite-044",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un fake object dans un test ?",
+    "reponse_reference": "Un fake est une implémentation simplifiée mais fonctionnelle d'une dépendance, par exemple une base de données en mémoire au lieu d'une vraie base. Contrairement au stub, il ne renvoie pas des valeurs figées mais simule un comportement cohérent.",
+    "mots_cles_attendus": [
+      "fake",
+      "implémentation simplifiée",
+      "base en mémoire",
+      "simulation"
+    ]
+  },
+  {
+    "id": "tests_qualite-045",
+    "domaine": "tests_qualite",
+    "sous_theme": "tdd",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quelles sont les étapes du cycle TDD (développement piloté par les tests) ?",
+    "reponse_reference": "Le cycle TDD est le suivant : écrire un test qui échoue parce que la fonctionnalité n'existe pas encore, écrire le code minimal pour le faire passer, puis refactorer le code en conservant le test au vert. Ce cycle court et répété garantit une couverture continue du code écrit.",
+    "mots_cles_attendus": [
+      "test rouge",
+      "code minimal",
+      "refactoring",
+      "test vert"
+    ]
+  },
+  {
+    "id": "tests_qualite-046",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que mesure la couverture de code (code coverage) ?",
+    "reponse_reference": "La couverture de code mesure la proportion de lignes, branches ou instructions du code source exécutée par la suite de tests. C'est un indicateur quantitatif qui ne dit rien de la pertinence des assertions ni de la qualité des cas testés.",
+    "mots_cles_attendus": [
+      "lignes",
+      "branches",
+      "exécuté",
+      "indicateur quantitatif"
+    ]
+  },
+  {
+    "id": "tests_qualite-047",
+    "domaine": "tests_qualite",
+    "sous_theme": "revue_de_code",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quel est le rôle de la revue de code dans la stratégie de qualité ?",
+    "reponse_reference": "La revue de code permet à un pair d'examiner les modifications avant intégration, détectant erreurs de conception, failles de sécurité et cas de test manquants. Elle diffuse aussi les bonnes pratiques et constitue un deflecteur de qualite peu couteux avant la mise en production.",
+    "mots_cles_attendus": [
+      "relecture par les pairs",
+      "défauts de conception",
+      "sécurité",
+      "coût réduit"
+    ]
+  },
+  {
+    "id": "tests_qualite-048",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Pourquoi un test d'intégration est-il plus difficile à diagnostiquer qu'un test unitaire ?",
+    "reponse_reference": "Un test d'intégration sollicite plusieurs composants et souvent des ressources externes, donc l'anomalie peut provenir de n'importe lequel d'eux. La chaîne d'échec est plus longue et l'isolation de la cause demande une investigation plus lourde.",
+    "mots_cles_attendus": [
+      "chaîne d'échec",
+      "ressources externes",
+      "investigation",
+      "isolation de la cause"
+    ]
+  },
+  {
+    "id": "tests_qualite-049",
+    "domaine": "tests_qualite",
+    "sous_theme": "outillage_de_test",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un « mock server » ou « serveur simulé » dans un contexte de test ?",
+    "reponse_reference": "Un serveur simulé reproduit le comportement d'une API ou d'un service tiers sur le réseau local, en renvoyant des réponses configurées. Il permet de tester un client de façon réaliste sans dépendre de la disponibilité du service réel.",
+    "mots_cles_attendus": [
+      "serveur simulé",
+      "réponses configurées",
+      "service tiers",
+      "réalisme"
+    ]
+  },
+  {
+    "id": "tests_qualite-050",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Pourquoi un test unitaire ne doit-il pas accéder à une base de données réelle ?",
+    "reponse_reference": "Accéder à une base réelle rend le test lent, non déterministe et dépendant d'un état externe partagé. Cela masque les défauts d'isolation et expose le test aux pannes d'infrastructure, ce qui compromet la valeur du feedback unitaire.",
+    "mots_cles_attendus": [
+      "lenteur",
+      "non-déterminisme",
+      "état externe",
+      "isolation"
+    ]
+  },
+  {
+    "id": "tests_qualite-051",
+    "domaine": "tests_qualite",
+    "sous_theme": "tdd",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Quel est l'intérêt du refactoring dans le cycle TDD ?",
+    "reponse_reference": "Le refactoring consiste à améliorer la structure du code sans modifier son comportement observable, en s'appuyant sur la suite de tests verte comme filet de sécurité. Il permet d produire un code propre sans jamais sacrifier la correction du comportement attendu.",
+    "mots_cles_attendus": [
+      "structure du code",
+      "comportement inchangé",
+      "filet de sécurité",
+      "tests verts"
+    ]
+  },
+  {
+    "id": "tests_qualite-052",
+    "domaine": "tests_qualite",
+    "sous_theme": "revue_de_code",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Que faut-il vérifier lors de la revue d'un test ajouté à une pull request ?",
+    "reponse_reference": "Il faut vérifier que le test vérifie un comportement métier explicite, qu'il échouerait sans la correction qu'il accompanye, et qu'il est déterministe. On regarde aussi la lisibilité du nom, la présence d'assertions sur les conséquences importantes et l'absence de tests redondants.",
+    "mots_cles_attendus": [
+      "comportement métier",
+      "test utile",
+      "déterministe",
+      "lisibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-053",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un test unitaire d'un service de paiement utilise un mock qui lève une erreur si la méthode facturer n'est jamais appelée. Quel est l'intérêt de ce mock ?",
+    "reponse_reference": "Le mock garantit que le code testé déclenche effectivement l'appel vers la passerelle de paiement, et pas seulement le calcul du montant. Il transforme une collaboration non vérifiée en une attente explicite qui fait échouer le test si l'interaction attendue n'a pas eu lieu.",
+    "mots_cles_attendus": [
+      "vérification d'interaction",
+      "attente explicite",
+      "échec du test",
+      "collaboration"
+    ]
+  },
+  {
+    "id": "tests_qualite-054",
+    "domaine": "tests_qualite",
+    "sous_theme": "tdd",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une équipe applique TDD sur une nouvelle règle de calcul. Elle écrit un test qui passe déjà. Que doit-on en déduire ?",
+    "reponse_reference": "Le test n'est pas un vrai test rouge : soit la fonctionnalité existe déjà, soit le test est mal écrit et ne vérifie pas ce qu'il prétend. Un test qui passe dès le départ ne prouve rien sur la capacité du test à détecter le défaut.",
+    "mots_cles_attendus": [
+      "test rouge",
+      "test mal écrit",
+      "capacité de détection",
+      "existence préalable"
+    ]
+  },
+  {
+    "id": "tests_qualite-055",
+    "domaine": "tests_qualite",
+    "sous_theme": "doubles_de_test",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un test d'un service de commande interroge une base de données réelle via un fake en mémoire. Le test passe en local mais échoue en intégration continue. Que vérifier ?",
+    "reponse_reference": "Il faut vérifier que le fake reproduit fidèlement les contraintes du SGBD réel : types stricts, collation, transactions, comportement sur valeurs nulles. Un fake trop permissif masque des défauts qui n'apparaissent qu'avec le moteur de production.",
+    "mots_cles_attendus": [
+      "fidélité du fake",
+      "contraintes du SGBD",
+      "valeurs nulles",
+      "masquage de défaut"
+    ]
+  },
+  {
+    "id": "tests_qualite-056",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Le rapport de couverture d'un module passe de 40 % à 95 % en une semaine, mais le nombre de bugs en production reste identique. Comment interpréter ce résultat ?",
+    "reponse_reference": "La hausse de couverture a probablement été obtenue par des tests peu discriminants, du type assertion triviale ou exécution de code mort. La couverture doit être complétée par des indicateurs de qualité de test, comme le taux de détection de mutants ou la couverture des cas d'erreur.",
+    "mots_cles_attendus": [
+      "tests peu discriminants",
+      "mutation",
+      "cas d'erreur",
+      "indicateur qualité"
+    ]
+  },
+  {
+    "id": "tests_qualite-057",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un nouveau microservice ne peut pas être testé en intégration continue car sa base de données est provisionnée manuellement. Que faut-il mettre en place ?",
+    "reponse_reference": "Il faut industrialiser la provision de l'environnement de test, par exemple avec des conteneurs éphémères lancés pour chaque exécution ou une base in-cluster créée dynamiquement. L'automatisation de l'infrastructure de test conditionne la fiabilité et la vitesse de la suite d'intégration.",
+    "mots_cles_attendus": [
+      "provision automatisée",
+      "conteneurs éphémères",
+      "environnement de test",
+      "reproductibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-058",
+    "domaine": "tests_qualite",
+    "sous_theme": "revue_de_code",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Lors d'une revue, un développeur propose un test qui capture la sortie console du code plutôt que de vérifier la valeur retournée. Que doit signaler le relecteur ?",
+    "reponse_reference": "Il faut signaler que ce test vérifie un effet de bord technique et non un résultat exploitable, ce qui le rend fragile et peu explicatif. Il faut demander une assertion sur la valeur retournée ou sur un état observable, plus stable et plus parlant.",
+    "mots_cles_attendus": [
+      "effet de bord",
+      "valeur retournée",
+      "fragile",
+      "état observable"
+    ]
+  },
+  {
+    "id": "tests_qualite-059",
+    "domaine": "tests_qualite",
+    "sous_theme": "tdd",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un développeur TDD est bloqué car le test nécessite une dépendance externe encore non disponible. Quelle est la bonne pratique ?",
+    "reponse_reference": "Il faut introduire une abstraction sur la dépendance et en tester une implémentation de test contrôlée, ce qui correspond au principe de inversion des dépendances. Le test reste ainsi unitaire et rapide tout en décrivant précisément le contrat attendu.",
+    "mots_cles_attendus": [
+      "abstraction",
+      "inversion des dépendances",
+      "implémentation de test",
+      "contrat"
+    ]
+  },
+  {
+    "id": "tests_qualite-060",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_unitaires",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une classe.dispose d'un constructeur qui envoie un e-mail d'accueil. Comment tester un métier qui ne dépend pas de cet e-mail ?",
+    "reponse_reference": "Il faut rendre l'envoi d'e-mail substituable en l'injectant dans le constructeur, puis en fournissant un double qui n_effectue aucun envoi. Le test porte alors uniquement sur le métier concerné, sans effet de bord externe.",
+    "mots_cles_attendus": [
+      "injection de dépendances",
+      "double de test",
+      "effet de bord",
+      "métier isolé"
+    ]
+  },
+  {
+    "id": "tests_qualite-061",
+    "domaine": "tests_qualite",
+    "sous_theme": "mocking_avance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un mock partiel (partial mock) et quand peut-il être utile ?",
+    "reponse_reference": "Un mock partiel remplace uniquement certaines méthodes d'un objet réel tout en conservant le comportement réel des autres. Il est parfois utile pour neutraliser un appel coûteux, mais il est généralement préféré de découper la classe en dépendances plus petites plutôt que d'en mocker des parties.",
+    "mots_cles_attendus": [
+      "mock partiel",
+      "objet réel",
+      "méthodes ciblées",
+      "découpage"
+    ]
+  },
+  {
+    "id": "tests_qualite-062",
+    "domaine": "tests_qualite",
+    "sous_theme": "mocking_avance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'abus de mocks peut-il rendre une suite de tests fragile et peu fiable ?",
+    "reponse_reference": "Un mock encode les hypothèses du test sur la façon dont le code est censé interagir avec ses dépendances : si l'implémentation change sans changer le comportement observable, le test échoue à tort. Trop de mocks fige l'implémentation et empêche le refactoring, tout en donnant une fausse confiance sur l'intégration réelle.",
+    "mots_cles_attendus": [
+      "fragilité",
+      "implémentation figée",
+      "fausse confiance",
+      "refactoring"
+    ]
+  },
+  {
+    "id": "tests_qualite-063",
+    "domaine": "tests_qualite",
+    "sous_theme": "mocking_avance",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un test d'inscription utilise un mock du service d'e-mails pour vérifier que la méthode envoyer() est appelée exactement une fois. Pourquoi est-ce une bonne vérification dans ce cas ?",
+    "reponse_reference": "L'envoi d'un e-mail est un effet de bord externe qui ne retourne rien d'observable : la seule façon de vérifier le comportement attendu est de contrôler l'interaction avec la dépendance. Vérifier un appel unique garantit aussi qu'aucun doublon d'e-mail n'est envoyé lors d'une inscription.",
+    "mots_cles_attendus": [
+      "effet de bord",
+      "vérification d'interaction",
+      "appel unique",
+      "doublon"
+    ]
+  },
+  {
+    "id": "tests_qualite-064",
+    "domaine": "tests_qualite",
+    "sous_theme": "mocking_avance",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle différence entre la vérification d'état et la vérification de comportement dans un test ?",
+    "reponse_reference": "La vérification d'état contrôle les valeurs retournées ou l'état de l'objet après l'exécution, sans se préoccuper de la façon dont le résultat a été produit. La vérification de comportement, typique des mocks, contrôle que certaines interactions ont eu lieu, comme l'appel d'une méthode avec des paramètres précis.",
+    "mots_cles_attendus": [
+      "état",
+      "comportement",
+      "interaction",
+      "mock"
+    ]
+  },
+  {
+    "id": "tests_qualite-065",
+    "domaine": "tests_qualite",
+    "sous_theme": "mocking_avance",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un test configure un mock pour retourner une valeur, mais le code testé n'appelle jamais ce mock et le test passe. Que doit-on corriger ?",
+    "reponse_reference": "Le test passe pour de mauvaises raisons : l'interaction attendue n'a jamais eu lieu, ce qui peut cacher une erreur de logique. Il faut soit vérifier explicitement l'appel du mock, soit utiliser un mock strict qui échoue si l'interaction configurée n'est pas utilisée.",
+    "mots_cles_attendus": [
+      "interaction non vérifiée",
+      "mock strict",
+      "faux positif",
+      "vérification d'appel"
+    ]
+  },
+  {
+    "id": "tests_qualite-066",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test d'intégration de base de données et comment garantir sa reproductibilité ?",
+    "reponse_reference": "Il vérifie que le code interagit correctement avec un vrai moteur de base de données : requêtes, transactions, contraintes et migrations. Pour être reproductible, il faut partir d'un schéma connu, charger des données maîtrisées à chaque exécution et isoler les tests entre eux.",
+    "mots_cles_attendus": [
+      "schéma",
+      "transactions",
+      "reproductibilité",
+      "isolation"
+    ]
+  },
+  {
+    "id": "tests_qualite-067",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Deux microservices partagent la même base de données de test en intégration continue et leurs tests se marchent dessus. Quelle est la bonne solution ?",
+    "reponse_reference": "Il faut isoler les environnements : chaque exécution de test doit disposer de sa propre base, par exemple via un conteneur éphémère provisionné au début de la pipeline. Le partage d'une base commune crée des dépendances entre services et des échecs non reproductibles.",
+    "mots_cles_attendus": [
+      "conteneur éphémère",
+      "isolation",
+      "environnement dédié",
+      "reproductibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-068",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle différence entre une intégration « big bang » et une intégration incrémentale pour tester un système ?",
+    "reponse_reference": "L'intégration « big bang » assemble tous les composants d'un coup, ce qui rend la localisation des défauts très difficile. L'intégration incrémentale ajoute les composants progressivement, ce qui permet de tester chaque nouvelle interaction et d'identifier plus vite le composant fautif.",
+    "mots_cles_attendus": [
+      "big bang",
+      "incrémental",
+      "localisation",
+      "progressive"
+    ]
+  },
+  {
+    "id": "tests_qualite-069",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'apporte l'utilisation de conteneurs (Testcontainers) dans les tests d'intégration ?",
+    "reponse_reference": "Testcontainers permet de démarrer de vraies dépendances (PostgreSQL, Redis, Kafka) dans des conteneurs éphémères pilotés depuis le code de test. Les tests obtiennent ainsi un environnement réaliste, isolé et reproductible, sans installer ni configurer ces services sur chaque machine.",
+    "mots_cles_attendus": [
+      "conteneurs",
+      "dépendances réelles",
+      "éphémère",
+      "reproductible"
+    ]
+  },
+  {
+    "id": "tests_qualite-070",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_d_integration",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Les tests d'intégration d'une équipe échouent de façon aléatoire car deux exécutions de la pipeline tournent en parallèle sur la même base. Que faut-il mettre en place ?",
+    "reponse_reference": "Il faut garantir une base dédiée par exécution, par exemple un schéma ou un conteneur unique par build, et nettoyer l'état entre les tests. L'isolation complète des exécutions parallèles élimine cette flakiness et rend les échecs reproductibles.",
+    "mots_cles_attendus": [
+      "parallélisme",
+      "base dédiée",
+      "flakiness",
+      "nettoyage"
+    ]
+  },
+  {
+    "id": "tests_qualite-071",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le BDD (Behavior-Driven Development) et qu'apporte le format Given/When/Then ?",
+    "reponse_reference": "Le BDD consiste à décrire le comportement attendu d'une fonctionnalité dans un langage commun au métier et aux développeurs, avant de l'implémenter. Le format Given/When/Then structure chaque scénario en contexte initial, action et résultat attendu, ce qui facilite la lecture et l'automatisation.",
+    "mots_cles_attendus": [
+      "comportement",
+      "langage commun",
+      "Given/When/Then",
+      "scénario"
+    ]
+  },
+  {
+    "id": "tests_qualite-072",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quel est le rôle d'un scénario dans un fichier Gherkin et par qui doit-il être rédigé ?",
+    "reponse_reference": "Un scénario Gherkin décrit un exemple concret du comportement attendu, rédigé en langage naturel avec les mots-clés Given, When, Then. Il doit être co-écrit par le métier, les testeurs et les développeurs pour refléter fidèlement les règles métier et servir de spécification exécutable.",
+    "mots_cles_attendus": [
+      "exemple concret",
+      "spécification exécutable",
+      "collaboration",
+      "règles métier"
+    ]
+  },
+  {
+    "id": "tests_qualite-073",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle différence entre TDD et BDD dans la manière d'exprimer les tests ?",
+    "reponse_reference": "Le TDD exprime les attentes en code, généralement au niveau d'une unité, et guide l'implémentation par petits cycles rouge-vert-refactor. Le BDD exprime le comportement en langage naturel orienté métier, au niveau d'une fonctionnalité, et sert de pont entre les exigences et les tests automatisés.",
+    "mots_cles_attendus": [
+      "unité",
+      "fonctionnalité",
+      "langage naturel",
+      "rouge-vert-refactor"
+    ]
+  },
+  {
+    "id": "tests_qualite-074",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Rédigez un scénario Gherkin pour la fonctionnalité « mot de passe oublié » : l'utilisateur saisit son e-mail, reçoit un lien, et se connecte avec un nouveau mot de passe.",
+    "reponse_reference": "Un scénario possible : Given un utilisateur enregistré avec l'e-mail « a@b.fr »; When il demande la réinitialisation de son mot de passe; Then il reçoit un e-mail contenant un lien de réinitialisation; When il ouvre le lien et saisit un nouveau mot de passe; Then il peut se connecter avec ce nouveau mot de passe. Le scénario reste lisible par le métier et automatisable par les développeurs.",
+    "mots_cles_attendus": [
+      "Given",
+      "When",
+      "Then",
+      "e-mail de réinitialisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-075",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un fichier Gherkin décrit « Quand l'utilisateur clique sur le bouton id=btn-valider » pour tester une commande. Pourquoi ce scénario est-il mal rédigé ?",
+    "reponse_reference": "Le scénario décrit l'implémentation de l'interface au lieu du comportement métier, ce qui le rend fragile et illisible pour le métier. Il faut le reformuler en termes fonctionnels, par exemple « Quand l'utilisateur valide sa commande », et laisser les détails techniques dans l'automatisation.",
+    "mots_cles_attendus": [
+      "implémentation",
+      "comportement métier",
+      "fragilité",
+      "reformulation"
+    ]
+  },
+  {
+    "id": "tests_qualite-076",
+    "domaine": "tests_qualite",
+    "sous_theme": "gestion_anomalies",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un rapport d'anomalie efficace ?",
+    "reponse_reference": "C'est une description précise et exploitable d'un défaut : titre clair, étapes de reproduction, résultat attendu, résultat observé, environnement et gravité. Un bon rapport permet à un développeur de reproduire et de corriger l'anomalie sans demander d'informations complémentaires.",
+    "mots_cles_attendus": [
+      "étapes de reproduction",
+      "résultat attendu",
+      "environnement",
+      "exploitable"
+    ]
+  },
+  {
+    "id": "tests_qualite-077",
+    "domaine": "tests_qualite",
+    "sous_theme": "gestion_anomalies",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quels sont les champs essentiels d'un ticket d'anomalie dans un outil de suivi ?",
+    "reponse_reference": "Un ticket doit contenir un titre, une description, les étapes de reproduction, le résultat attendu et observé, la sévérité, la priorité, l'environnement (version, navigateur, système) et si possible une capture ou une vidéo. Ces champs permettent le triage et la correction sans allers-retours.",
+    "mots_cles_attendus": [
+      "sévérité",
+      "priorité",
+      "reproduction",
+      "environnement"
+    ]
+  },
+  {
+    "id": "tests_qualite-078",
+    "domaine": "tests_qualite",
+    "sous_theme": "gestion_anomalies",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un testeur observe un plantage intermittent de l'application : une fois sur trois, la page de facturation devient blanche. Comment doit-il rapporter cette anomalie ?",
+    "reponse_reference": "Il doit documenter le contexte exact de chaque occurrence : actions réalisées, données saisies, navigateur, logs et capture d'écran, ainsi que la fréquence observée. Mentionner le caractère intermittent évite que le ticket soit fermé comme non reproductible lors d'un premier essai.",
+    "mots_cles_attendus": [
+      "intermittent",
+      "contexte",
+      "logs",
+      "fréquence"
+    ]
+  },
+  {
+    "id": "tests_qualite-079",
+    "domaine": "tests_qualite",
+    "sous_theme": "gestion_anomalies",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un bug bloquant est découvert le dernier jour du sprint, alors que la release est prévue. Que doit faire l'équipe ?",
+    "reponse_reference": "L'équipe doit d'abord évaluer la sévérité et l'impact réel, puis décider collectivement : corriger immédiatement si la release est bloquante, sinon documenter l'anomalie et en informer les parties prenantes. Le bug doit être intégré au suivi avec une priorité adaptée et un test de non-régression ajouté après correction.",
+    "mots_cles_attendus": [
+      "sévérité",
+      "décision collective",
+      "release",
+      "test de non-régression"
+    ]
+  },
+  {
+    "id": "tests_qualite-080",
+    "domaine": "tests_qualite",
+    "sous_theme": "gestion_anomalies",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le triage des anomalies et quel est son objectif ?",
+    "reponse_reference": "Le triage est une réunion régulière où l'équipe passe en revue les anomalies signalées pour les confirmer, les classer par sévérité et priorité, et les affecter. Son objectif est de traiter en premier les défauts qui ont le plus d'impact sur les utilisateurs et le produit.",
+    "mots_cles_attendus": [
+      "confirmation",
+      "sévérité",
+      "priorité",
+      "affectation"
+    ]
+  },
+  {
+    "id": "tests_qualite-081",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le rôle d'un test de bout en bout (E2E) automatisé et quel niveau de confiance apporte-t-il ?",
+    "reponse_reference": "Un test E2E pilote l'application réelle, navigateur compris, pour valider un parcours utilisateur complet à travers toutes les couches du système. Il apporte une confiance élevée sur le fonctionnement global, mais reste lent et fragile, ce qui justifie de le réserver aux parcours critiques.",
+    "mots_cles_attendus": [
+      "parcours utilisateur",
+      "confiance globale",
+      "lent",
+      "fragile"
+    ]
+  },
+  {
+    "id": "tests_qualite-082",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un sélecteur stable en test E2E et pourquoi éviter les sélecteurs fragiles ?",
+    "reponse_reference": "Un sélecteur stable identifie un élément indépendamment des détails de mise en page, via un attribut dédié comme data-testid, un rôle ou un libellé accessible. Les sélecteurs basés sur la structure du DOM ou des classes de style cassent à la moindre modification d'interface et rendent la suite non maintenable.",
+    "mots_cles_attendus": [
+      "data-testid",
+      "rôle",
+      "DOM",
+      "maintenabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-083",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelles différences majeures entre Playwright, Cypress et Selenium pour les tests E2E ?",
+    "reponse_reference": "Selenium pilote de nombreux navigateurs via le protocole WebDriver et convient à des parcs hétérogènes, mais demande une gestion manuelle des attentes. Cypress s'exécute dans le navigateur, très simple à prendre en main, mais limite le multi-onglets. Playwright offre une attente automatique, plusieurs langages, le multi-navigateur et de bonnes capacités de parallélisation.",
+    "mots_cles_attendus": [
+      "WebDriver",
+      "attente automatique",
+      "multi-navigateur",
+      "parallélisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-084",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un test E2E échoue de façon aléatoire car il clique sur un bouton avant que les données réseau ne soient affichées. Comment stabiliser ce test ?",
+    "reponse_reference": "Il faut remplacer les attentes fixes par des attentes explicites sur l'état de l'interface, par exemple attendre qu'un élément soit visible ou que le réseau ait répondu. Les outils modernes comme Playwright attendent automatiquement les éléments, ce qui élimine la plupart de ces courses entre le test et l'application.",
+    "mots_cles_attendus": [
+      "attente explicite",
+      "course",
+      "flakiness",
+      "visibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-085",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une équipe veut tester E2E le paiement d'un panier sans déclencher de vrais paiements. Quelle approche adopter ?",
+    "reponse_reference": "Il faut intercepter ou remplacer l'appel au prestataire de paiement par un mock d'API qui simule les réponses de succès et d'échec. Le test garde ainsi le réalisme du parcours utilisateur tout en restant rapide, gratuit et reproductible, sans risque d'encaisser de vraies transactions.",
+    "mots_cles_attendus": [
+      "mock d'API",
+      "prestataire de paiement",
+      "simulation",
+      "reproductible"
+    ]
+  },
+  {
+    "id": "tests_qualite-086",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de contrat (contract testing) entre deux services ?",
+    "reponse_reference": "Un test de contrat vérifie qu'un consommateur et un fournisseur d'API s'accordent sur le format des échanges : chemins, champs, types et codes de statut. Chaque partie teste indépendamment sa conformité au contrat partagé, ce qui détecte les incompatibilités sans déployer l'ensemble du système.",
+    "mots_cles_attendus": [
+      "consommateur",
+      "fournisseur",
+      "format d'échange",
+      "indépendance"
+    ]
+  },
+  {
+    "id": "tests_qualite-087",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le rôle de l'outil Pact dans les tests de contrats ?",
+    "reponse_reference": "Pact enregistre les interactions attendues par le consommateur dans un fichier de contrat, puis vérifie le fournisseur contre ce contrat dans sa propre pipeline. Ce mécanisme de « consumer-driven contracts » permet à chaque équipe de valider sa compatibilité sans environnement partagé.",
+    "mots_cles_attendus": [
+      "consumer-driven",
+      "fichier de contrat",
+      "vérification fournisseur",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "tests_qualite-088",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle différence entre le test de contrat côté consommateur et côté fournisseur ?",
+    "reponse_reference": "Côté consommateur, le test vérifie que le client sait formuler ses requêtes et traiter les réponses définies par le contrat. Côté fournisseur, le test vérifie que le service répond réellement avec le format attendu, en rejouant les interactions enregistrées par les consommateurs.",
+    "mots_cles_attendus": [
+      "requêtes",
+      "réponses",
+      "rejeu",
+      "format attendu"
+    ]
+  },
+  {
+    "id": "tests_qualite-089",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un microservice fournisseur renomme un champ de sa réponse API et casse deux applications clientes en production. Comment ce type d'incident aurait-il pu être évité ?",
+    "reponse_reference": "Des tests de contrats entre le fournisseur et chacun de ses consommateurs auraient échoué dès la modification, dans la pipeline du fournisseur, avant tout déploiement. Il faut aussi prévoir une stratégie de versioning et d'évolution compatible de l'API, par exemple en conservant l'ancien champ durant une transition.",
+    "mots_cles_attendus": [
+      "contrat",
+      "pipeline fournisseur",
+      "versioning",
+      "évolution compatible"
+    ]
+  },
+  {
+    "id": "tests_qualite-090",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une entreprise remplace une grande suite E2E fragile par des tests de contrats entre ses douze microservices. Quels bénéfices peut-elle attendre et que perd-elle ?",
+    "reponse_reference": "Elle gagne en rapidité, en stabilité et en indépendance des équipes, chaque service étant validé contre ses contrats. Elle perd en revanche la vérification du système complet, donc il faut conserver un petit nombre de tests E2E sur les parcours critiques.",
+    "mots_cles_attendus": [
+      "rapidité",
+      "indépendance",
+      "stabilité",
+      "parcours critiques"
+    ]
+  },
+  {
+    "id": "tests_qualite-091",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que sont les WCAG et sur quels principes fondamentaux reposent-elles ?",
+    "reponse_reference": "Les WCAG (Web Content Accessibility Guidelines) sont les règles internationales d'accessibilité des contenus web publiées par le W3C. Elles reposent sur quatre principes : perceptible, utilisable, compréhensible et robuste, déclinés en critères de succès de niveaux A, AA et AAA.",
+    "mots_cles_attendus": [
+      "W3C",
+      "perceptible",
+      "utilisable",
+      "critères de succès"
+    ]
+  },
+  {
+    "id": "tests_qualite-092",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Pourquoi automatiser les tests d'accessibilité avec des outils comme axe ou Lighthouse ?",
+    "reponse_reference": "Ces outils analysent le DOM et détectent automatiquement une partie des violations WCAG, comme les contrastes insuffisants ou les attributs alt manquants, à chaque build. Ils donnent un retour rapide et continu, mais ne couvrent qu'une fraction des critères, d'où la nécessité de les compléter par des tests manuels.",
+    "mots_cles_attendus": [
+      "violations WCAG",
+      "DOM",
+      "automatisé",
+      "complément manuel"
+    ]
+  },
+  {
+    "id": "tests_qualite-093",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelles sont les limites des tests d'accessibilité automatisés ?",
+    "reponse_reference": "Ils détectent bien les problèmes structurels du code, mais ne peuvent pas juger de la qualité des textes alternatifs, de l'ordre de navigation au clavier ou de l'expérience réelle avec un lecteur d'écran. Une partie importante de l'audit d'accessibilité reste donc manuelle ou assistée par des utilisateurs en situation de handicap.",
+    "mots_cles_attendus": [
+      "structure",
+      "lecteur d'écran",
+      "navigation clavier",
+      "audit manuel"
+    ]
+  },
+  {
+    "id": "tests_qualite-094",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Une fenêtre modale s'ouvre mais le focus reste sur la page d'arrière-plan et la touche Échap ne la ferme pas. Quels problèmes d'accessibilité cela pose-t-il et comment les tester ?",
+    "reponse_reference": "Les utilisateurs au clavier ou avec un lecteur d'écran restent piégés hors de la modale et ne peuvent pas interagir avec elle. Il faut tester que le focus est déplacé dans la modale à l'ouverture, qu'il est piégé à l'intérieur, puis restitué à l'élément déclencheur à la fermeture, et qu'Échap fonctionne.",
+    "mots_cles_attendus": [
+      "piège à focus",
+      "clavier",
+      "restauration du focus",
+      "Échap"
+    ]
+  },
+  {
+    "id": "tests_qualite-095",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un audit automatisé signale des contrastes de texte insuffisants sur la page d'accueil. Quelle démarche adopter pour corriger et prévenir ces problèmes ?",
+    "reponse_reference": "Il faut ajuster les couleurs du thème pour atteindre au minimum le ratio 4,5:1 exigé au niveau AA pour le texte normal, puis faire valider le rendu. Pour prévenir, l'équipe doit intégrer le contrôle des contrastes dans la CI et dans la revue de code de chaque nouveau composant.",
+    "mots_cles_attendus": [
+      "ratio 4,5:1",
+      "thème",
+      "CI",
+      "revue de code"
+    ]
+  },
+  {
+    "id": "tests_qualite-096",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quel est le rôle de la pipeline d'intégration continue dans l'exécution des tests ?",
+    "reponse_reference": "La pipeline CI exécute automatiquement les tests à chaque commit ou pull request, dans un environnement propre et reproductible. Elle hiérarchise les tests du plus rapide au plus complet et bloque le merge tant que la qualité minimale n'est pas atteinte.",
+    "mots_cles_attendus": [
+      "automatique",
+      "environnement propre",
+      "blocage du merge",
+      "hiérarchie"
+    ]
+  },
+  {
+    "id": "tests_qualite-097",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un « gate » de qualité dans une pipeline CI/CD ?",
+    "reponse_reference": "Un gate est un point de contrôle qui bloque la progression du code si certains critères ne sont pas remplis, par exemple des tests en échec ou une couverture sous le seuil. Il garantit que seul un code conforme à la définition de qualité de l'équipe atteint les étapes suivantes.",
+    "mots_cles_attendus": [
+      "point de contrôle",
+      "critères",
+      "blocage",
+      "définition de qualité"
+    ]
+  },
+  {
+    "id": "tests_qualite-098",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test « flaky » et comment doit-on le traiter en intégration continue ?",
+    "reponse_reference": "Un test flaky échoue ou réussit de façon aléatoire pour le même code, souvent à cause de dépendances temporelles, d'état partagé ou de ressources externes. Il faut le diagnostiquer et le corriger rapidement, car il érode la confiance de l'équipe dans la pipeline et peut masquer de vrais défauts.",
+    "mots_cles_attendus": [
+      "aléatoire",
+      "confiance",
+      "diagnostic",
+      "correction"
+    ]
+  },
+  {
+    "id": "tests_qualite-099",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "La pipeline de tests dure trente minutes et les développeurs attendent longtemps avant chaque merge. Quelles pistes pour la raccourcir ?",
+    "reponse_reference": "On peut paralléliser les tests sur plusieurs machines, découper la suite en shards, exécuter d'abord les tests rapides et les plus pertinents, et déplacer les tests longs vers une exécution nocturne. La sélection intelligente des tests liés au changement est aussi un levier majeur.",
+    "mots_cles_attendus": [
+      "parallélisation",
+      "shards",
+      "sélection de tests",
+      "exécution nocturne"
+    ]
+  },
+  {
+    "id": "tests_qualite-100",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un commit passe tous les tests sur la branche du développeur mais échoue une fois fusionné sur la branche principale. Quelles causes probables et comment l'éviter ?",
+    "reponse_reference": "La branche principale a probablement reçu d'autres changements entre-temps qui entrent en conflit avec ce commit. La solution consiste à exécuter les tests sur le résultat de la fusion, par exemple via un merge queue ou un re-test après rebase, avant de valider l'intégration.",
+    "mots_cles_attendus": [
+      "conflit",
+      "merge queue",
+      "rebase",
+      "état de la branche principale"
+    ]
+  },
+  {
+    "id": "tests_qualite-101",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de charge et quels indicateurs clés doit-on mesurer ?",
+    "reponse_reference": "Un test de charge soumet le système à un trafic simulé réaliste pour mesurer son comportement : temps de réponse moyen et par percentile, débit, taux d'erreur et consommation de ressources. Ces indicateurs permettent de vérifier que les exigences de performance sont tenues sous charge attendue.",
+    "mots_cles_attendus": [
+      "trafic simulé",
+      "percentile",
+      "débit",
+      "taux d'erreur"
+    ]
+  },
+  {
+    "id": "tests_qualite-102",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence entre un test de charge, un test de stress et un test de montée en charge ?",
+    "reponse_reference": "Le test de charge vérifie le comportement sous la charge attendue en production. Le test de stress pousse le système au-delà de ses limites pour identifier son point de rupture et son mode de dégradation. Le test de montée en charge (soak test) applique une charge prolongée pour détecter les fuites de mémoire ou la dégradation dans le temps.",
+    "mots_cles_attendus": [
+      "charge attendue",
+      "point de rupture",
+      "durée prolongée",
+      "dégradation"
+    ]
+  },
+  {
+    "id": "tests_qualite-103",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que k6 et quels avantages présente-t-il par rapport à JMeter ?",
+    "reponse_reference": "k6 est un outil de test de charge open source dont les scénarios s'écrivent en JavaScript, ce qui les rend versionnables et faciles à intégrer en CI. Il est plus léger que JMeter pour générer de la charge, mais offre moins d'options de reporting graphique sans outil externe comme Grafana.",
+    "mots_cles_attendus": [
+      "JavaScript",
+      "CI",
+      "léger",
+      "Grafana"
+    ]
+  },
+  {
+    "id": "tests_qualite-104",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une API répond en 200 ms en local, mais en 2 secondes lorsque 500 utilisateurs simultanés la sollicitent. Comment analyser cette dégradation ?",
+    "reponse_reference": "Il faut examiner les ressources partagées sous charge : connexions à la base de données, CPU, mémoire, files d'attente du serveur et dépendances externes. Le profilage et le suivi distribué (APM) permettent d'identifier le goulot d'étranglement précis, qu'il s'agisse d'une requête SQL lente ou d'une saturation de connexions.",
+    "mots_cles_attendus": [
+      "goulot d'étranglement",
+      "connexions",
+      "APM",
+      "ressources partagées"
+    ]
+  },
+  {
+    "id": "tests_qualite-105",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe doit concevoir un test de charge réaliste pour un site e-commerce avant le Black Friday. Quels éléments doit-elle modéliser ?",
+    "reponse_reference": "Elle doit modéliser des parcours utilisateurs réalistes avec leurs proportions (recherche, fiche produit, panier, paiement), les temps de réflexion, et la montée progressive du trafic attendu. Les données utilisées doivent être représentatives et l'environnement de test dimensionné comme la production pour que les résultats soient exploitables.",
+    "mots_cles_attendus": [
+      "parcours utilisateurs",
+      "proportions",
+      "montée en charge",
+      "environnement réaliste"
+    ]
+  },
+  {
+    "id": "tests_qualite-106",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelles différences entre la couverture de lignes, de branches et de conditions ?",
+    "reponse_reference": "La couverture de lignes indique quelles lignes ont été exécutées, mais ignore les chemins de décision. La couverture de branches vérifie que chaque issue d'une condition a été prise. La couverture de conditions (et MC/DC) va plus loin en vérifiant que chaque condition élémentaire influence réellement la décision.",
+    "mots_cles_attendus": [
+      "lignes",
+      "branches",
+      "conditions",
+      "MC/DC"
+    ]
+  },
+  {
+    "id": "tests_qualite-107",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Une couverture de code de 100 % garantit-elle l'absence de bugs ? Pourquoi ?",
+    "reponse_reference": "Non, la couverture mesure uniquement le code exécuté par les tests, pas la justesse des assertions ni les scénarios d'intégration. Un test peut parcourir toutes les lignes sans vérifier les résultats, et la couverture ne détecte pas les bugs liés aux interactions entre composants.",
+    "mots_cles_attendus": [
+      "exécution",
+      "assertions",
+      "interactions",
+      "fausse garantie"
+    ]
+  },
+  {
+    "id": "tests_qualite-108",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une branche non couverte dans un rapport de couverture ?",
+    "reponse_reference": "Une branche non couverte est un chemin de décision, comme le cas « faux » d'une condition if, qui n'a jamais été exécuté par les tests. Elle signale un comportement du code jamais vérifié, souvent lié à un cas limite ou à la gestion d'erreur absente des scénarios.",
+    "mots_cles_attendus": [
+      "chemin de décision",
+      "cas faux",
+      "gestion d'erreur",
+      "jamais exécuté"
+    ]
+  },
+  {
+    "id": "tests_qualite-109",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un module affiche 95 % de couverture de lignes, mais le chemin de traitement d'erreur n'est jamais testé. Que doit faire l'équipe ?",
+    "reponse_reference": "Elle doit ajouter des tests qui provoquent l'erreur : entrées invalides, dépendance en panne, données corrompues. Les chemins d'erreur sont souvent les plus sensibles en production et doivent être couverts en priorité malgré le bon score global.",
+    "mots_cles_attendus": [
+      "chemin d'erreur",
+      "entrées invalides",
+      "provoquer l'échec",
+      "priorité"
+    ]
+  },
+  {
+    "id": "tests_qualite-110",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe veut imposer un seuil de couverture de 80 % dans sa pipeline CI. Comment le mettre en place sans effets pervers ?",
+    "reponse_reference": "Il faut mesurer la couverture uniquement sur le code modifié ou nouveau, avec une tolérance de déclin configurable, plutôt que d'exiger un seuil global rigide. Le seuil doit s'accompagner d'une revue de la qualité des tests, car un seuil seul encourage des tests sans assertions pour « faire du pourcentage ».",
+    "mots_cles_attendus": [
+      "code modifié",
+      "seuil global",
+      "tests sans assertions",
+      "revue"
+    ]
+  },
+  {
+    "id": "tests_qualite-111",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de sécurité automatisé et quelles grandes familles d'outils existent ?",
+    "reponse_reference": "Un test de sécurité automatisé recherche des vulnérabilités connues dans le code ou l'application en cours d'exécution. On distingue les analyses statiques (SAST) qui inspectent le code source, les analyses dynamiques (DAST) qui attaquent l'application en fonctionnement, et les analyses de dépendances (SCA).",
+    "mots_cles_attendus": [
+      "SAST",
+      "DAST",
+      "SCA",
+      "vulnérabilités"
+    ]
+  },
+  {
+    "id": "tests_qualite-112",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence entre une analyse SAST et une analyse DAST ?",
+    "reponse_reference": "Le SAST analyse le code source sans l'exécuter et détecte tôt des défauts comme les injections ou les mauvaises pratiques, avec parfois des faux positifs. Le DAST attaque l'application déployée comme le ferait un attaquant et trouve des vulnérabilités réelles d'exploitation, mais seulement sur les parcours accessibles.",
+    "mots_cles_attendus": [
+      "code source",
+      "application déployée",
+      "faux positifs",
+      "exploitation réelle"
+    ]
+  },
+  {
+    "id": "tests_qualite-113",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que l'OWASP Top 10 et à quoi sert-il dans les tests ?",
+    "reponse_reference": "L'OWASP Top 10 est un classement régulièrement actualisé des risques de sécurité les plus critiques pour les applications web, comme les injections ou le contrôle d'accès défaillant. Il sert de référentiel pour orienter les campagnes de tests et les revues de sécurité sur les menaces les plus probables.",
+    "mots_cles_attendus": [
+      "classement",
+      "risques critiques",
+      "injection",
+      "référentiel"
+    ]
+  },
+  {
+    "id": "tests_qualite-114",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un test DAST révèle une injection SQL dans un champ de recherche d'un formulaire. Quelle démarche de correction et de prévention adopter ?",
+    "reponse_reference": "Il faut corriger immédiatement en utilisant des requêtes paramétrées plutôt que la concaténation de chaînes, puis vérifier que la faille est bien fermée en rejouant le test. Pour prévenir, on ajoute un test de non-régression avec des charges malveillantes et on intègre le SAST dans la pipeline.",
+    "mots_cles_attendus": [
+      "requêtes paramétrées",
+      "rejeu",
+      "test de non-régression",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "tests_qualite-115",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe souhaite intégrer des contrôles de sécurité dans sa pipeline CI/CD sans ralentir les livraisons. Quelles étapes proposer ?",
+    "reponse_reference": "Il faut commencer par des contrôles rapides à chaque commit : scan des dépendances (SCA) et analyse statique (SAST) sur le code modifié, avec blocage sur les vulnérabilités critiques. Les scans dynamiques plus lourds peuvent être planifiés sur l'environnement de préproduction, à fréquence régulière.",
+    "mots_cles_attendus": [
+      "SCA",
+      "SAST",
+      "scan des dépendances",
+      "préproduction"
+    ]
+  },
+  {
+    "id": "tests_qualite-116",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quels critères permettent de décider du niveau de test à appliquer à une fonctionnalité ?",
+    "reponse_reference": "On évalue le risque métier de la fonctionnalité, la probabilité de défaillance et l'impact d'un défaut sur les utilisateurs. Une fonctionnalité critique justifie davantage de tests, y compris E2E, tandis qu'une fonctionnalité annexe peut se contenter de tests unitaires et d'intégration.",
+    "mots_cles_attendus": [
+      "risque métier",
+      "impact",
+      "probabilité",
+      "effort proportionné"
+    ]
+  },
+  {
+    "id": "tests_qualite-117",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une stratégie de test et quels éléments doit-elle contenir ?",
+    "reponse_reference": "Une stratégie de test définit les objectifs qualité, les niveaux et types de tests, les outils, les environnements et les critères d'entrée et de sortie. Elle précise aussi les responsabilités et la gestion des risques pour aligner l'effort de test sur les enjeux du projet.",
+    "mots_cles_attendus": [
+      "objectifs qualité",
+      "niveaux de tests",
+      "outils",
+      "critères d'entrée/sortie"
+    ]
+  },
+  {
+    "id": "tests_qualite-118",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Que signifie l'approche « shift-left » du test ?",
+    "reponse_reference": "Le shift-left consiste à déplacer les activités de test le plus tôt possible dans le cycle de développement, dès la conception et le code. Les défauts sont ainsi détectés plus tôt, ce qui réduit fortement leur coût de correction par rapport à une détection tardive en recette ou en production.",
+    "mots_cles_attendus": [
+      "tôt dans le cycle",
+      "conception",
+      "coût de correction",
+      "détection précoce"
+    ]
+  },
+  {
+    "id": "tests_qualite-119",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Une équipe teste sans méthode : certains modules sont sur-testés, d'autres jamais vérifiés, et personne ne sait quoi tester avant une release. Comment établir une stratégie ?",
+    "reponse_reference": "Il faut d'abord cartographier les fonctionnalités et leurs risques, puis définir explicitement les niveaux de test, les critères de validation et les responsabilités. Une check-list de release et une revue de couverture régulière permettent ensuite de piloter l'effort de test au lieu de le subir.",
+    "mots_cles_attendus": [
+      "cartographie des risques",
+      "critères de validation",
+      "responsabilités",
+      "pilotage"
+    ]
+  },
+  {
+    "id": "tests_qualite-120",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Comment répartir l'effort de test entre une fonctionnalité critique de paiement et une page d'aide statique ?",
+    "reponse_reference": "Le paiement, à fort impact en cas de défaillance, mérite des tests unitaires approfondis, des tests d'intégration, des tests de sécurité et un ou plusieurs parcours E2E. La page d'aide, à faible risque, se contente d'un test de non-régression simple vérifiant son affichage et ses liens.",
+    "mots_cles_attendus": [
+      "impact",
+      "risque",
+      "effort proportionné",
+      "non-régression"
+    ]
+  },
+  {
+    "id": "tests_qualite-121",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le mutation testing et quel problème résout-il ?",
+    "reponse_reference": "Le mutation testing injecte de petites fautes volontaires dans le code, appelées mutants, puis vérifie si les tests existants les détectent. Il évalue ainsi la capacité réelle des tests à détecter des défauts, là où la couverture de lignes ne mesure que l'exécution du code.",
+    "mots_cles_attendus": [
+      "mutants",
+      "fautes injectées",
+      "détection",
+      "couverture de lignes"
+    ]
+  },
+  {
+    "id": "tests_qualite-122",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle différence entre un mutant tué et un mutant survivant ?",
+    "reponse_reference": "Un mutant tué est une mutation qu'au moins un test détecte, car un test échoue à cause d'elle. Un mutant survivant est une mutation qu'aucun test ne remarque, ce qui révèle un trou dans la suite de tests : le code modifié produit un comportement faux sans que personne ne le voie.",
+    "mots_cles_attendus": [
+      "détecté",
+      "aucun test",
+      "trou dans la suite",
+      "comportement faux"
+    ]
+  },
+  {
+    "id": "tests_qualite-123",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le mutation score et comment l'interpréter ?",
+    "reponse_reference": "Le mutation score est le ratio entre mutants tués et mutants générés ; il mesure l'efficacité réelle de la suite de tests à détecter des défauts. Un score bas indique des tests qui passent sans vraiment vérifier le comportement, même si la couverture de lignes est élevée.",
+    "mots_cles_attendus": [
+      "ratio",
+      "efficacité",
+      "score bas",
+      "détection réelle"
+    ]
+  },
+  {
+    "id": "tests_qualite-124",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un module métier affiche 92 % de couverture de lignes mais un mutation score de seulement 40 %. Que conclure et que faire ?",
+    "reponse_reference": "Les tests exécutent le code mais vérifient mal ses résultats : de nombreux défauts injectés passeraient inaperçus. Il faut renforcer les assertions sur les comportements observables, en particulier sur les branches et les cas limites, jusqu'à tuer les mutants survivants les plus critiques.",
+    "mots_cles_attendus": [
+      "assertions insuffisantes",
+      "mutants survivants",
+      "cas limites",
+      "renforcement"
+    ]
+  },
+  {
+    "id": "tests_qualite-125",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un mutant survit car il modifie du code mort jamais exécuté en production. Que faire de ce mutant ?",
+    "reponse_reference": "Il s'agit d'un mutant équivalent ou d'une zone de code morte : soit la mutation ne change rien au comportement observable, soit le code n'est jamais atteint. Il faut d'abord supprimer le code mort, puis marquer les mutants restants comme équivalents après analyse, car aucun test ne peut les tuer.",
+    "mots_cles_attendus": [
+      "mutant équivalent",
+      "code mort",
+      "suppression",
+      "analyse"
+    ]
+  },
+  {
+    "id": "tests_qualite-126",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le « testing trophy » et en quoi diffère-t-il de la pyramide classique ?",
+    "reponse_reference": "Le testing trophy, popularisé par Kent C. Dodds, place les tests d'intégration au centre de l'effort, avec moins de tests unitaires et quelques E2E. Il privilégie la vérification du comportement avec un minimum de mocks, ce qui le rend souvent plus adapté aux applications front-end.",
+    "mots_cles_attendus": [
+      "tests d'intégration",
+      "moins de mocks",
+      "front-end",
+      "comportement"
+    ]
+  },
+  {
+    "id": "tests_qualite-127",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quels sont les avantages et les limites de la pyramide de tests classique ?",
+    "reponse_reference": "La pyramide privilégie les tests unitaires rapides et peu coûteux, ce qui donne un retour très rapide et une bonne localisation des défauts. Sa limite est que des unités isolées par des mocks peuvent toutes passer alors que l'intégration entre elles est défaillante.",
+    "mots_cles_attendus": [
+      "rapidité",
+      "localisation",
+      "mocks",
+      "intégration non vérifiée"
+    ]
+  },
+  {
+    "id": "tests_qualite-128",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le « test honeycomb » (nid d'abeilles) défini par Spotify ?",
+    "reponse_reference": "Le test honeycomb prône un grand nombre de tests d'intégration rapprochés du code, en évitant les mocks excessifs, car l'intégration est la principale source de défauts dans les architectures distribuées. Il minimise les tests E2E et les implémentations de doubles complexes au profit de l'observabilité en production.",
+    "mots_cles_attendus": [
+      "intégration",
+      "architectures distribuées",
+      "peu de mocks",
+      "observabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-129",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une équipe React écrit des tests unitaires très mocqués qui cassent à chaque refactoring de composants. Quelle stratégie de test lui conseiller ?",
+    "reponse_reference": "Elle devrait adopter le testing trophy : tester le comportement via la bibliothèque de test du DOM (testing-library) plutôt que les détails d'implémentation, en remplaçant les mocks par des vrais rendus et des appels réseau interceptés. Les tests deviennent alors plus proches de l'usage réel et résistent au refactoring.",
+    "mots_cles_attendus": [
+      "trophy",
+      "testing-library",
+      "comportement",
+      "résistance au refactoring"
+    ]
+  },
+  {
+    "id": "tests_qualite-130",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une API backend a peu de logique métier, surtout de la transformation et du routage de données. La pyramide classique est-elle la meilleure stratégie ?",
+    "reponse_reference": "Pas nécessairement : quand l'essentiel du risque est dans l'intégration (base de données, appels entre services), le honeycomb ou le trophy sont plus pertinents. Il faut concentrer les tests sur les interactions réelles entre composants plutôt que sur des unités triviales qui apportent peu de valeur.",
+    "mots_cles_attendus": [
+      "risque d'intégration",
+      "honeycomb",
+      "valeur des tests",
+      "composants"
+    ]
+  },
+  {
+    "id": "tests_qualite-131",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une suite de tests de non-régression et comment doit-elle évoluer ?",
+    "reponse_reference": "C'est un ensemble de tests rejoués régulièrement pour vérifier qu'aucune fonctionnalité existante n'a été cassée par les évolutions. Elle doit s'enrichir d'un test à chaque anomalie corrigée et être purgée des tests obsolètes ou redondants pour rester rapide et maintenable.",
+    "mots_cles_attendus": [
+      "rejeu",
+      "enrichissement",
+      "purge",
+      "maintenabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-132",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une suite de smoke tests et à quel moment doit-on l'exécuter ?",
+    "reponse_reference": "Une suite de smoke tests vérifie rapidement que les fonctions vitales de l'application démarrent et répondent après un déploiement. Elle s'exécute en quelques minutes, juste après chaque mise en environnement, pour détecter immédiatement une panne bloquante avant de lancer des tests plus complets.",
+    "mots_cles_attendus": [
+      "fonctions vitales",
+      "post-déploiement",
+      "rapide",
+      "panne bloquante"
+    ]
+  },
+  {
+    "id": "tests_qualite-133",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de régression visuelle ?",
+    "reponse_reference": "Il compare des captures d'écran de l'interface avant et après une modification pour détecter tout changement d'apparence non intentionnel. Il protège le rendu visuel des régressions, mais exige une gestion fine des références et une tolérance aux différences attendues.",
+    "mots_cles_attendus": [
+      "captures d'écran",
+      "comparaison",
+      "rendu visuel",
+      "références"
+    ]
+  },
+  {
+    "id": "tests_qualite-134",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un correctif casse une ancienne fonctionnalité qui n'avait pas de test. Quelle démarche pour corriger et éviter que cela se reproduise ?",
+    "reponse_reference": "Il faut corriger la régression, puis écrire immédiatement un test de non-régression qui reproduit le défaut avant la correction et le verrouille après. À plus long terme, l'équipe doit auditer les zones sans test et prioriser la couverture des fonctionnalités les plus utilisées.",
+    "mots_cles_attendus": [
+      "test de non-régression",
+      "verrouillage",
+      "audit",
+      "priorisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-135",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_non_regression",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "La suite de non-régression est devenue si longue qu'elle ne tourne plus qu'une fois par semaine. Comment la rendre à nouveau utile en continu ?",
+    "reponse_reference": "Il faut prioriser les tests par criticité et par fréquence d'utilisation de la fonctionnalité, sélectionner en CI uniquement les tests impactés par le changement, et paralléliser l'exécution. Les tests secondaires peuvent rester sur une exécution planifiée moins fréquente.",
+    "mots_cles_attendus": [
+      "priorisation",
+      "sélection de tests",
+      "parallélisation",
+      "criticité"
+    ]
+  },
+  {
+    "id": "tests_qualite-136",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que la sélection de tests en CI (test impact analysis) ?",
+    "reponse_reference": "La sélection de tests analyse les fichiers modifiés par une pull request et n'exécute que les tests susceptibles d'être affectés. Elle raccourcit fortement le retour d'information tout en conservant une exécution complète périodique pour détecter les dépendances indirectes.",
+    "mots_cles_attendus": [
+      "fichiers modifiés",
+      "tests affectés",
+      "retour rapide",
+      "exécution complète"
+    ]
+  },
+  {
+    "id": "tests_qualite-137",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Pourquoi distinguer les tests exécutés à chaque pull request des tests planifiés la nuit ?",
+    "reponse_reference": "Les tests de chaque PR doivent être rapides et ciblés pour ne pas bloquer les développeurs, tandis que les tests longs, les tests de performance ou les parcours complets peuvent tourner la nuit. Cette répartition garantit à la fois un retour rapide et une couverture complète régulière.",
+    "mots_cles_attendus": [
+      "rapidité",
+      "blocage",
+      "tests longs",
+      "couverture complète"
+    ]
+  },
+  {
+    "id": "tests_qualite-138",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un déploiement canary et quel rôle y jouent les tests ?",
+    "reponse_reference": "Un déploiement canary achemine une petite fraction du trafic réel vers la nouvelle version tout en gardant l'ancienne pour le reste des utilisateurs. Des tests et des indicateurs surveillent la nouvelle version en conditions réelles, et le déploiement est interrompu automatiquement en cas de dégradation.",
+    "mots_cles_attendus": [
+      "fraction du trafic",
+      "surveillance",
+      "interruption",
+      "conditions réelles"
+    ]
+  },
+  {
+    "id": "tests_qualite-139",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Trois tests échouent aléatoirement dans la pipeline et l'équipe les ignore en relançant les jobs. Quelle politique mettre en place ?",
+    "reponse_reference": "Il faut mettre les tests flaky en quarantaine : les isoler de la suite bloquante, tracer leurs échecs et corriger leur cause racine dans un délai court. Ignorer les échecs érode la confiance et masque de vrais défauts, donc la quarantaine doit être limitée dans le temps.",
+    "mots_cles_attendus": [
+      "quarantaine",
+      "cause racine",
+      "tracer",
+      "confiance"
+    ]
+  },
+  {
+    "id": "tests_qualite-140",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un build est vert sur la pull request mais échoue une fois fusionné sur la branche principale. Quelles causes possibles et quelle parade ?",
+    "reponse_reference": "La branche principale a évolué entre le dernier test de la PR et le merge : les changements combinés peuvent être incompatibles. Un merge queue ou un re-test systématique après fusion, avec blocage et notification immédiate, empêche qu'un état cassé persiste sur la branche principale.",
+    "mots_cles_attendus": [
+      "état de la branche",
+      "merge queue",
+      "re-test",
+      "branche principale"
+    ]
+  },
+  {
+    "id": "tests_qualite-141",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test d'intrusion (pentest) et en quoi diffère-t-il d'un scan automatisé ?",
+    "reponse_reference": "Un pentest est une évaluation menée par un expert qui tente d'exploiter les vulnérabilités comme le ferait un attaquant, en enchaînant des scénarios créatifs. Il va au-delà des scans automatisés, qui détectent des signatures connues, en identifiant des failles logiques métier que seul un raisonnement humain peut trouver.",
+    "mots_cles_attendus": [
+      "expert",
+      "exploitation",
+      "scénarios créatifs",
+      "failles logiques"
+    ]
+  },
+  {
+    "id": "tests_qualite-142",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le fuzzing et que permet-il de détecter ?",
+    "reponse_reference": "Le fuzzing envoie des données aléatoires ou malformées à une entrée de l'application (formulaire, fichier, API) pour provoquer des comportements imprévus. Il permet de détecter des plantages, des fuites mémoire ou des failles exploitables que les tests fonctionnels classiques ne couvrent pas.",
+    "mots_cles_attendus": [
+      "données malformées",
+      "plantage",
+      "entrées imprévues",
+      "robustesse"
+    ]
+  },
+  {
+    "id": "tests_qualite-143",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'analyse des dépendances (SCA) et le SBOM dans les tests de sécurité ?",
+    "reponse_reference": "L'analyse de composition logicielle (SCA) compare les bibliothèques utilisées aux bases de vulnérabilités connues et signale les versions à risque. Le SBOM (Software Bill of Materials) inventorie précisément tous les composants, ce qui permet de réagir vite lorsqu'une faille comme Log4Shell est révélée.",
+    "mots_cles_attendus": [
+      "bibliothèques",
+      "vulnérabilités connues",
+      "inventaire",
+      "réactivité"
+    ]
+  },
+  {
+    "id": "tests_qualite-144",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une faille critique est révélée dans une bibliothèque utilisée en production. Quelle démarche l'équipe doit-elle suivre ?",
+    "reponse_reference": "Elle doit d'abord identifier, grâce à son inventaire de dépendances, toutes les applications concernées et vérifier si la faille est réellement exploitable dans son contexte. Ensuite, elle corrige en priorité les systèmes exposés, applique le correctif ou contourne le risque, puis ajoute un contrôle permanent du suivi des dépendances.",
+    "mots_cles_attendus": [
+      "inventaire",
+      "exploitabilité",
+      "correctif",
+      "suivi permanent"
+    ]
+  },
+  {
+    "id": "tests_qualite-145",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Quels scénarios de test essentiels pour vérifier la gestion des sessions et l'authentification d'une application web ?",
+    "reponse_reference": "Il faut tester l'expiration et l'invalidation des sessions à la déconnexion, la protection des cookies (HttpOnly, Secure, SameSite), les tentatives de force brute, la réinitialisation de mot de passe et la fixation de session. Chaque scénario doit vérifier qu'un utilisateur ne peut pas usurper la session d'un autre.",
+    "mots_cles_attendus": [
+      "expiration de session",
+      "cookies sécurisés",
+      "force brute",
+      "fixation de session"
+    ]
+  },
+  {
+    "id": "tests_qualite-146",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que recouvre l'accessibilité numérique et quelles catégories d'utilisateurs concerne-t-elle ?",
+    "reponse_reference": "L'accessibilité numérique vise à rendre les applications utilisables par tous, y compris les personnes en situation de handicap visuel, auditif, moteur ou cognitif. Elle profite aussi aux utilisateurs en situation temporaire ou contextuelle, par exemple un écran en plein soleil ou une navigation au clavier.",
+    "mots_cles_attendus": [
+      "handicap",
+      "visuel",
+      "moteur",
+      "situations temporaires"
+    ]
+  },
+  {
+    "id": "tests_qualite-147",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un lecteur d'écran et pourquoi les tests automatisés ne suffisent-ils pas à valider son usage ?",
+    "reponse_reference": "Un lecteur d'écran restitue vocalement le contenu et la structure de la page à partir de l'API d'accessibilité du navigateur. Les tests automatisés vérifient la présence des attributs, mais seule une restitution réelle avec un lecteur d'écran permet de juger de l'ordre, de la clarté et de l'expérience annoncée.",
+    "mots_cles_attendus": [
+      "restitution vocale",
+      "API d'accessibilité",
+      "ordre",
+      "expérience réelle"
+    ]
+  },
+  {
+    "id": "tests_qualite-148",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que le test d'accessibilité au clavier ?",
+    "reponse_reference": "Il consiste à vérifier que toutes les fonctionnalités sont utilisables uniquement au clavier : navigation à la tabulation, focus visible, activation des boutons, pièges de focus et raccourcis. C'est un critère essentiel des WCAG, car de nombreux utilisateurs à mobilité réduite ou déficients visuels ne peuvent pas utiliser la souris.",
+    "mots_cles_attendus": [
+      "tabulation",
+      "focus visible",
+      "sans souris",
+      "WCAG"
+    ]
+  },
+  {
+    "id": "tests_qualite-149",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un site e-commerce échoue à un audit RGAA : contrastes insuffisants, formulaires sans libellés et carrousel non accessible au clavier. Quel plan d'action proposer ?",
+    "reponse_reference": "Il faut prioriser les corrections par impact utilisateur : libellés et erreurs de formulaires, navigation clavier du carrousel, puis refonte des contrastes. L'équipe doit ensuite intégrer des contrôles automatisés en CI, former les développeurs et prévoir un ré-audit régulier pour maintenir la conformité.",
+    "mots_cles_attendus": [
+      "priorisation",
+      "libellés",
+      "CI",
+      "ré-audit"
+    ]
+  },
+  {
+    "id": "tests_qualite-150",
+    "domaine": "tests_qualite",
+    "sous_theme": "accessibilite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Les images produit d'un catalogue n'ont pas d'attribut alt. Quel impact pour les utilisateurs et comment corriger et tester cela ?",
+    "reponse_reference": "Les utilisateurs de lecteurs d'écran n'ont alors aucune information sur les produits, ce qui bloque leur achat. Il faut ajouter des textes alternatifs descriptifs, vides pour les images décoratives, puis tester avec un lecteur d'écran et un audit automatisé pour vérifier leur présence et leur pertinence.",
+    "mots_cles_attendus": [
+      "texte alternatif",
+      "lecteur d'écran",
+      "images décoratives",
+      "pertinence"
+    ]
+  },
+  {
+    "id": "tests_qualite-151",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une device farm (ferme d'appareils) dans le cloud ?",
+    "reponse_reference": "Une device farm est un service cloud donnant accès à distance à un parc de vrais téléphones, tablettes et navigateurs pour exécuter des tests. Elle évite à l'équipe d'acheter et de maintenir des dizaines d'appareils physiques et permet de lancer les tests sur de nombreuses combinaisons appareil-OS en parallèle.",
+    "mots_cles_attendus": [
+      "parc d'appareils",
+      "cloud",
+      "combinaisons appareil-OS",
+      "parallèle"
+    ]
+  },
+  {
+    "id": "tests_qualite-152",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quels avantages apportent des services comme BrowserStack ou Sauce Labs aux tests E2E ?",
+    "reponse_reference": "Ils exécutent les tests E2E sur un large éventail de navigateurs et d'appareils réels, y compris des configurations impossibles à maintenir en interne. Ils s'intègrent à la CI, fournissent des vidéos et journaux des exécutions, et facilitent le diagnostic des défauts spécifiques à un environnement.",
+    "mots_cles_attendus": [
+      "navigateurs réels",
+      "CI",
+      "vidéos",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "tests_qualite-153",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une matrice de compatibilité et comment la construire ?",
+    "reponse_reference": "Une matrice de compatibilité croise les environnements à tester : systèmes d'exploitation, navigateurs, tailles d'écran et appareils. Elle est construite à partir des statistiques d'usage réelles de l'application, en couvrant en priorité les combinaisons les plus utilisées, et non la totalité des combinaisons possibles.",
+    "mots_cles_attendus": [
+      "croisement",
+      "environnements",
+      "statistiques d'usage",
+      "priorité"
+    ]
+  },
+  {
+    "id": "tests_qualite-154",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "L'application web plante uniquement sur iPhone avec Safari, alors que les tests passent sur Chrome. Comment investiguer et corriger ?",
+    "reponse_reference": "Il faut reproduire le défaut sur un iPhone réel via une device farm, récupérer les journaux de console et identifier la fonctionnalité non supportée par Safari. Ensuite, on corrige le code, on ajoute cette combinaison à la matrice de compatibilité et on rejoue le test automatiquement dans la CI.",
+    "mots_cles_attendus": [
+      "reproduction",
+      "journaux de console",
+      "matrice de compatibilité",
+      "CI"
+    ]
+  },
+  {
+    "id": "tests_qualite-155",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Avec un budget limité, comment choisir les appareils et navigateurs à tester sur une device farm ?",
+    "reponse_reference": "Il faut s'appuyer sur l'analytique réelle : couvrir les appareils et navigateurs les plus utilisés par les visiteurs, puis les versions extrêmes (la plus ancienne encore supportée). Les combinaisons rares peuvent être vérifiées ponctuellement lors des releases plutôt qu'à chaque commit.",
+    "mots_cles_attendus": [
+      "analytique",
+      "usage réel",
+      "versions extrêmes",
+      "ponctuel"
+    ]
+  },
+  {
+    "id": "tests_qualite-156",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'ISTQB et quel rôle jouent ses certifications dans les tests ?",
+    "reponse_reference": "L'ISTQB (International Software Testing Qualifications Board) définit un référentiel international des compétences et du vocabulaire du test logiciel. Ses certifications, du niveau Foundation aux niveaux avancés, harmonisent les pratiques entre les équipes et donnent un cadre commun reconnu.",
+    "mots_cles_attendus": [
+      "référentiel",
+      "certification",
+      "vocabulaire",
+      "cadre commun"
+    ]
+  },
+  {
+    "id": "tests_qualite-157",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la norme ISO 25010 et quelles caractéristiques de qualité définit-elle ?",
+    "reponse_reference": "ISO 25010 définit un modèle de qualité du produit logiciel en huit caractéristiques, dont l'adéquation fonctionnelle, la performance, la compatibilité, l'utilisabilité, la fiabilité et la sécurité. Elle sert de référentiel pour définir des exigences de qualité mesurables et orienter les tests.",
+    "mots_cles_attendus": [
+      "modèle de qualité",
+      "caractéristiques",
+      "exigences mesurables",
+      "référentiel"
+    ]
+  },
+  {
+    "id": "tests_qualite-158",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que couvre la norme ISO 29119 pour les tests logiciels ?",
+    "reponse_reference": "ISO 29119 décrit les concepts, les processus et la documentation des tests à l'échelle de l'organisation, depuis la stratégie jusqu'aux cas de test. Elle fournit un cadre normatif pour industrialiser l'activité de test, en cohérence avec le vocabulaire ISTQB.",
+    "mots_cles_attendus": [
+      "processus",
+      "documentation",
+      "organisation",
+      "cadre normatif"
+    ]
+  },
+  {
+    "id": "tests_qualite-159",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un client exige que le produit respecte l'ISO 25010. Comment traduire cette exigence en tests concrets ?",
+    "reponse_reference": "Il faut sélectionner avec le client les caractéristiques pertinentes (performance, sécurité, utilisabilité...) et définir pour chacune des critères mesurables avec leurs seuils. Chaque critère est ensuite associé à des tests : tests de charge pour la performance, audits pour la sécurité, évaluations utilisateurs pour l'utilisabilité.",
+    "mots_cles_attendus": [
+      "caractéristiques",
+      "critères mesurables",
+      "seuils",
+      "tests associés"
+    ]
+  },
+  {
+    "id": "tests_qualite-160",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une équipe veut industrialiser son processus de test en s'appuyant sur des normes. Quelles premières étapes proposer ?",
+    "reponse_reference": "Elle peut adopter le vocabulaire ISTQB pour harmoniser les échanges, définir sa stratégie de test selon ISO 29119 et cartographier ses exigences qualité avec ISO 25010. Ensuite, elle documente les processus clés, forme les équipes et mesure les résultats avant d'étendre le dispositif.",
+    "mots_cles_attendus": [
+      "vocabulaire commun",
+      "stratégie",
+      "cartographie",
+      "formation"
+    ]
+  },
+  {
+    "id": "tests_qualite-161",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment le BDD favorise-t-il la collaboration entre métier, testeurs et développeurs ?",
+    "reponse_reference": "Le BDD réunit ces trois rôles, souvent appelés « three amigos », autour d'exemples concrets écrits en langage naturel avant le développement. Cette pratique lève les ambiguïtés sur les règles métier dès la conception et transforme ces exemples en spécification exécutable partagée.",
+    "mots_cles_attendus": [
+      "three amigos",
+      "exemples concrets",
+      "ambiguïtés",
+      "spécification exécutable"
+    ]
+  },
+  {
+    "id": "tests_qualite-162",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la « living documentation » dans une démarche BDD ?",
+    "reponse_reference": "C'est la documentation générée automatiquement à partir des scénarios Gherkin exécutés, qui reflète donc toujours le comportement réel du système. Contrairement à une documentation rédigée à part, elle reste à jour tant que les scénarios passent, et sert de référence vivante pour le métier et l'équipe.",
+    "mots_cles_attendus": [
+      "générée automatiquement",
+      "à jour",
+      "scénarios exécutés",
+      "référence vivante"
+    ]
+  },
+  {
+    "id": "tests_qualite-163",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelles sont les erreurs classiques lors de la rédaction de scénarios Gherkin ?",
+    "reponse_reference": "Les erreurs fréquentes sont de décrire des détails d'implémentation (boutons, sélecteurs), d'écrire des scénarios trop longs qui mélangent plusieurs comportements, ou de rester vague sur le résultat attendu. Un bon scénario décrit un comportement métier unique, avec un contexte précis et un résultat observable.",
+    "mots_cles_attendus": [
+      "détails d'implémentation",
+      "scénarios trop longs",
+      "résultat observable",
+      "comportement unique"
+    ]
+  },
+  {
+    "id": "tests_qualite-164",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un scénario Gherkin décrit « Quand l'utilisateur clique sur le bouton rouge en haut à droite » pour valider une déconnexion. Réécrivez-le correctement.",
+    "reponse_reference": "Il faut exprimer l'intention métier : « Given un utilisateur connecté; When il se déconnecte; Then sa session est invalidée et il revient à la page d'accueil ». La position et la couleur du bouton sont des détails d'interface qui appartiennent à l'automatisation, pas à la spécification.",
+    "mots_cles_attendus": [
+      "intention métier",
+      "session invalidée",
+      "détails d'interface",
+      "spécification"
+    ]
+  },
+  {
+    "id": "tests_qualite-165",
+    "domaine": "tests_qualite",
+    "sous_theme": "bdd",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une règle de tarification combine âge, statut et ancienneté, avec de nombreuses combinaisons. Comment structurer les scénarios BDD sans en écrire des centaines ?",
+    "reponse_reference": "Il faut utiliser un Scenario Outline avec une table d'exemples qui couvre les combinaisons représentatives : cas nominaux, limites et exceptions. On peut aussi sélectionner les combinaisons par analyse des classes d'équivalence et des valeurs limites plutôt que de toutes les énumérer.",
+    "mots_cles_attendus": [
+      "Scenario Outline",
+      "table d'exemples",
+      "classes d'équivalence",
+      "valeurs limites"
+    ]
+  },
+  {
+    "id": "tests_qualite-166",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la validation de schéma dans les tests de contrats d'API ?",
+    "reponse_reference": "La validation de schéma vérifie que les réponses d'une API respectent la structure déclarée, par exemple un schéma JSON Schema ou OpenAPI : types, champs requis, formats et énumérations. Elle détecte automatiquement tout écart structurel entre le contrat publié et la réalité du service.",
+    "mots_cles_attendus": [
+      "JSON Schema",
+      "OpenAPI",
+      "structure déclarée",
+      "champs requis"
+    ]
+  },
+  {
+    "id": "tests_qualite-167",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le versioning d'un contrat d'API et comment le tester ?",
+    "reponse_reference": "Le versioning définit des règles d'évolution de l'API : ajout de champs optionnels compatible, changement cassant nécessitant une nouvelle version ou une transition. Les tests de contrats vérifient chaque version contre ses consommateurs et détectent les changements cassants avant déploiement.",
+    "mots_cles_attendus": [
+      "règles d'évolution",
+      "changement cassant",
+      "versions",
+      "compatibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-168",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le consumer-driven contract testing et quel problème organisationnel résout-il ?",
+    "reponse_reference": "Chaque consommateur exprime ses attentes sous forme de contrats que le fournisseur doit satisfaire, ce qui inverse la dépendance traditionnelle. Cela permet à des équipes autonomes de faire évoluer leurs services sans coordination permanente ni environnement d'intégration partagé coûteux.",
+    "mots_cles_attendus": [
+      "attentes du consommateur",
+      "autonomie",
+      "sans environnement partagé",
+      "coordination réduite"
+    ]
+  },
+  {
+    "id": "tests_qualite-169",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Deux équipes modifient une API en même temps : l'une change un champ, l'autre ajoute un paramètre. Comment une pipeline de contrats peut-elle éviter la casse ?",
+    "reponse_reference": "Chaque pull request exécute les contrats : la modification du fournisseur est validée contre les contrats publiés par tous les consommateurs, et chaque consommateur vérifie ses attentes contre le fournisseur. Toute incompatibilité fait échouer la pipeline avant le merge, quel que soit l'ordre des changements.",
+    "mots_cles_attendus": [
+      "contrats publiés",
+      "vérification croisée",
+      "échec avant merge",
+      "ordre des changements"
+    ]
+  },
+  {
+    "id": "tests_qualite-170",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un fournisseur ajoute un champ optionnel à sa réponse et les tests de contrats d'un consommateur échouent. Le consommateur doit-il mettre à jour son contrat ?",
+    "reponse_reference": "Un contrat qui vérifie une correspondance stricte échouera à tort : un consommateur doit ignorer les champs qu'il n'utilise pas. Il faut donc relâcher la vérification côté consommateur sur les champs inconnus, puis faire évoluer le contrat uniquement si le nouveau champ est réellement consommé.",
+    "mots_cles_attendus": [
+      "correspondance stricte",
+      "champs inconnus",
+      "relâcher la vérification",
+      "faux échec"
+    ]
+  },
+  {
+    "id": "tests_qualite-171",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Pourquoi suivre les percentiles (p95, p99) plutôt que la moyenne des temps de réponse ?",
+    "reponse_reference": "La moyenne masque les cas extrêmes : quelques réponses très lentes passent inaperçues dans un calcul moyen. Les percentiles révèlent l'expérience des utilisateurs les moins bien servis, par exemple un p99 de trois secondes signifie qu'un utilisateur sur cent attend au moins trois secondes.",
+    "mots_cles_attendus": [
+      "moyenne trompeuse",
+      "cas extrêmes",
+      "expérience utilisateur",
+      "p99"
+    ]
+  },
+  {
+    "id": "tests_qualite-172",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment dimensionner correctement la charge d'un test de performance ?",
+    "reponse_reference": "La charge se dimensionne à partir des données réelles : nombre d'utilisateurs attendus, parcours et leurs proportions, taux d'arrivée aux heures de pointe, avec une marge de croissance. Elle doit modéliser le comportement, y compris les temps de réflexion, plutôt qu'un simple nombre de requêtes par seconde artificiel.",
+    "mots_cles_attendus": [
+      "données réelles",
+      "taux d'arrivée",
+      "marge de croissance",
+      "temps de réflexion"
+    ]
+  },
+  {
+    "id": "tests_qualite-173",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Pourquoi injecter la charge de test depuis plusieurs régions géographiques ?",
+    "reponse_reference": "La latence réseau et le routage varient selon la localisation des utilisateurs, et un test lancé près du datacenter peut masquer des lenteurs réelles. Une injection multi-régions mesure le temps de réponse perçu par les utilisateurs distants et valide la stratégie de CDN ou de répartition mondiale.",
+    "mots_cles_attendus": [
+      "latence réseau",
+      "localisation",
+      "CDN",
+      "temps perçu"
+    ]
+  },
+  {
+    "id": "tests_qualite-174",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Lors d'un test de charge, le p95 est correct mais le p99 explose à dix secondes. Comment interpréter et investiguer ?",
+    "reponse_reference": "Une minorité de requêtes rencontre un problème spécifique : contention sur une ressource, requête SQL non indexée sur un parcours rare, ramasse-miettes ou timeouts de dépendances. Il faut croiser les requêtes lentes avec les journaux applicatifs et l'APM pour isoler le chemin et la cause exacts.",
+    "mots_cles_attendus": [
+      "contention",
+      "parcours rare",
+      "journaux",
+      "APM"
+    ]
+  },
+  {
+    "id": "tests_qualite-175",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une équipe veut tester la performance en production en dupliquant une partie du trafic réel vers la nouvelle version. Quelles précautions prendre ?",
+    "reponse_reference": "Le shadowing du trafic doit être strictement en lecture seule pour la nouvelle version et ne jamais affecter les utilisateurs réels ni écrire dans les données de production. Il faut surveiller les ressources partagées et comparer les métriques des deux versions sur la même fenêtre de trafic.",
+    "mots_cles_attendus": [
+      "trafic dupliqué",
+      "lecture seule",
+      "sans impact utilisateur",
+      "comparaison"
+    ]
+  },
+  {
+    "id": "tests_qualite-176",
+    "domaine": "tests_qualite",
+    "sous_theme": "triage_anomalies",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le triage des anomalies et qui doit y participer ?",
+    "reponse_reference": "Le triage est une réunion régulière où les anomalies signalées sont examinées, confirmées, priorisées et affectées. Il réunit idéalement un représentant produit, un développeur, un testeur et parfois le support, pour croiser l'impact métier et la faisabilité technique.",
+    "mots_cles_attendus": [
+      "examen",
+      "priorisation",
+      "affectation",
+      "représentants croisés"
+    ]
+  },
+  {
+    "id": "tests_qualite-177",
+    "domaine": "tests_qualite",
+    "sous_theme": "triage_anomalies",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment distinguer la sévérité et la priorité d'une anomalie ?",
+    "reponse_reference": "La sévérité mesure l'impact technique du défaut sur le système, indépendamment du planning, tandis que la priorité exprime l'urgence de correction pour le produit et les utilisateurs. Un défaut cosmétique peut être sévère pour l'image de marque, et un défaut bloquant sur une fonctionnalité rare peut avoir une priorité moyenne.",
+    "mots_cles_attendus": [
+      "impact technique",
+      "urgence métier",
+      "indépendantes",
+      "exemple"
+    ]
+  },
+  {
+    "id": "tests_qualite-178",
+    "domaine": "tests_qualite",
+    "sous_theme": "triage_anomalies",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Que signifie fermer une anomalie en « won't fix » et comment gérer un désaccord ?",
+    "reponse_reference": "« Won't fix » signifie que l'équipe assume de ne pas corriger le défaut, par choix produit, coût ou risque de régression. La décision doit être documentée avec la justification, et en cas de désaccord, escaladée au responsable produit qui arbitre sur la base de l'impact utilisateur.",
+    "mots_cles_attendus": [
+      "choix assumé",
+      "justification documentée",
+      "escalade",
+      "arbitrage produit"
+    ]
+  },
+  {
+    "id": "tests_qualite-179",
+    "domaine": "tests_qualite",
+    "sous_theme": "triage_anomalies",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Une anomalie critique est signalée par un client mais personne ne parvient à la reproduire. Quelle démarche de triage adopter ?",
+    "reponse_reference": "Il faut recueillir le maximum de contexte auprès du client : données, environnement, actions précises, captures et journaux. L'anomalie reste ouverte avec un suivi dédié, des tentatives de reproduction instrumentées, et une communication régulière, plutôt que de la fermer hâtivement comme non reproductible.",
+    "mots_cles_attendus": [
+      "contexte client",
+      "instrumentation",
+      "suivi dédié",
+      "ne pas fermer hâtivement"
+    ]
+  },
+  {
+    "id": "tests_qualite-180",
+    "domaine": "tests_qualite",
+    "sous_theme": "triage_anomalies",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Le backlog contient 200 anomalies en attente et le triage déborde. Comment rendre le processus efficace ?",
+    "reponse_reference": "Il faut définir des critères de triage explicites (sévérité, impact, fréquence), automatiser la détection des doublons et la collecte d'informations, et limiter la réunion aux anomalies nouvelles ou contestées. Un nettoyage du backlog par campagnes, avec clôture motivée des tickets obsolètes, complète le dispositif.",
+    "mots_cles_attendus": [
+      "critères explicites",
+      "doublons",
+      "réunion limitée",
+      "clôture motivée"
+    ]
+  },
+  {
+    "id": "tests_qualite-181",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 10,
+    "type": "definition",
+    "question": "En quoi le mutation testing apporte-t-il une information que la couverture de lignes ne donne pas ?",
+    "reponse_reference": "La couverture de lignes indique seulement que le code a été exécuté, sans garantie que le test vérifie quoi que ce soit d'utile. Le mutation testing injecte des défauts réels et mesure si les tests les détectent, évaluant ainsi la sensibilité de la suite aux comportements faux.",
+    "mots_cles_attendus": [
+      "exécution",
+      "défauts injectés",
+      "sensibilité",
+      "comportements faux"
+    ]
+  },
+  {
+    "id": "tests_qualite-182",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le mutation testing incrémentiel et pourquoi est-il nécessaire sur un grand projet ?",
+    "reponse_reference": "Le mutation testing incrémentiel ne génère des mutants que sur le code modifié ou ajouté par une pull request, au lieu de l'ensemble du code. Il rend le coût d'exécution acceptable sur un grand projet et concentre l'attention de l'équipe sur la qualité des nouveaux tests.",
+    "mots_cles_attendus": [
+      "code modifié",
+      "coût d'exécution",
+      "pull request",
+      "nouveaux tests"
+    ]
+  },
+  {
+    "id": "tests_qualite-183",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Donnez des exemples d'opérateurs de mutation classiques et ce qu'ils modifient.",
+    "reponse_reference": "Les opérateurs courants remplacent un opérateur arithmétique (AOR, par exemple + devient -), inversent une condition (ROR, par exemple > devient <=), suppriment une instruction (SDL) ou modifient une valeur retournée. Chaque mutant ainsi créé simule une faute de programmation typique.",
+    "mots_cles_attendus": [
+      "AOR",
+      "ROR",
+      "SDL",
+      "faute typique"
+    ]
+  },
+  {
+    "id": "tests_qualite-184",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un projet legacy sans tests doit améliorer sa qualité. Comment introduire le mutation testing sans se noyer dans des milliers de mutants survivants ?",
+    "reponse_reference": "Il faut commencer par le code modifié : toute nouvelle fonctionnalité ou correction doit être accompagnée de tests qui tuent les mutants du périmètre touché. Le score global s'améliorera progressivement, sans exiger la couverture rétroactive de tout le code existant.",
+    "mots_cles_attendus": [
+      "périmètre modifié",
+      "progressif",
+      "nouveau code",
+      "sans rétrofit massif"
+    ]
+  },
+  {
+    "id": "tests_qualite-185",
+    "domaine": "tests_qualite",
+    "sous_theme": "mutation_testing",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un test « tue » un mutant en échouant pour la mauvaise raison : il vérifie un détail d'implémentation sans rapport avec le comportement. Comment qualifier cette situation ?",
+    "reponse_reference": "Le mutant est techniquement tué, mais la mort est accidentelle : le test ne protège pas le comportement, seulement un artefact d'implémentation. Il faut réécrire l'assertion sur un comportement observable pour que la mort du mutant garantisse réellement la détection d'une faute significative.",
+    "mots_cles_attendus": [
+      "mort accidentelle",
+      "détail d'implémentation",
+      "comportement observable",
+      "assertion"
+    ]
+  },
+  {
+    "id": "tests_qualite-186",
+    "domaine": "tests_qualite",
+    "sous_theme": "metriques_qualite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelles métriques de qualité suivre au-delà de la couverture de code ?",
+    "reponse_reference": "On peut suivre le taux de tests en échec, la flakiness, le temps d'exécution des suites, le temps moyen de correction (MTTR), le nombre d'incidents en production et le délai de détection. Ces indicateurs mesurent l'efficacité réelle du processus de test plutôt qu'un simple pourcentage.",
+    "mots_cles_attendus": [
+      "flakiness",
+      "MTTR",
+      "incidents en production",
+      "temps d'exécution"
+    ]
+  },
+  {
+    "id": "tests_qualite-187",
+    "domaine": "tests_qualite",
+    "sous_theme": "metriques_qualite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que sont les métriques DORA et comment se relient-elles aux tests ?",
+    "reponse_reference": "Les métriques DORA mesurent la fréquence de déploiement, le délai de mise en production, le taux d'échec des changements et le temps de restauration. Les tests les influencent directement : une bonne automatisation réduit le délai et le taux d'échec, et accélère la restauration.",
+    "mots_cles_attendus": [
+      "fréquence de déploiement",
+      "taux d'échec",
+      "temps de restauration",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-188",
+    "domaine": "tests_qualite",
+    "sous_theme": "metriques_qualite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que la densité de défauts et comment l'utiliser ?",
+    "reponse_reference": "La densité de défauts rapporte le nombre de défauts détectés à la taille du module, par exemple en milliers de lignes de code. Elle aide à repérer les modules les plus fragiles pour concentrer l'effort de test, à condition de comparer des périmètres et des périodes homogènes.",
+    "mots_cles_attendus": [
+      "ratio",
+      "taille du module",
+      "modules fragiles",
+      "comparaison homogène"
+    ]
+  },
+  {
+    "id": "tests_qualite-189",
+    "domaine": "tests_qualite",
+    "sous_theme": "metriques_qualite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "La direction demande un tableau de bord qualité. Quels indicateurs choisir pour éviter les comportements contre-productifs ?",
+    "reponse_reference": "Il faut combiner des indicateurs d'activité et de résultat, et les présenter en tendance plutôt qu'en objectifs individuels, pour éviter que les équipes optimisent le chiffre au détriment du sens. La couverture seule est dangereuse : il vaut mieux la coupler au taux de défauts échappés en production et à la flakiness.",
+    "mots_cles_attendus": [
+      "indicateurs combinés",
+      "tendances",
+      "défauts échappés",
+      "pas d'objectif individuel"
+    ]
+  },
+  {
+    "id": "tests_qualite-190",
+    "domaine": "tests_qualite",
+    "sous_theme": "metriques_qualite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Le temps d'exécution de la suite de tests a doublé en six mois et la pipeline devient un goulot d'étranglement. Comment analyser et agir ?",
+    "reponse_reference": "Il faut mesurer les tests les plus lents et leur progression, identifier les doublons et les attentes inutiles, puis paralléliser et sélectionner les tests pertinents par changement. Un budget de temps d'exécution par suite, surveillé en tendance, évite que la dérive ne revienne.",
+    "mots_cles_attendus": [
+      "tests les plus lents",
+      "doublons",
+      "parallélisation",
+      "budget de temps"
+    ]
+  },
+  {
+    "id": "tests_qualite-191",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une analyse DAST et quelles sont ses limites ?",
+    "reponse_reference": "Le DAST teste l'application en fonctionnement en envoyant des requêtes malveillantes et en observant les réponses, comme le ferait un attaquant externe. Ses limites : il ne voit que les parcours accessibles, ne couvre pas la logique métier profonde et peut manquer des vulnérabilités nécessitant une session authentifiée riche.",
+    "mots_cles_attendus": [
+      "application en fonctionnement",
+      "requêtes malveillantes",
+      "parcours accessibles",
+      "logique métier"
+    ]
+  },
+  {
+    "id": "tests_qualite-192",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quel lien entre l'analyse SCA, le SBOM et la gestion des vulnérabilités des dépendances ?",
+    "reponse_reference": "Le SBOM inventorie toutes les dépendances et leurs versions, tandis que le SCA croise cet inventaire avec les bases de vulnérabilités pour signaler les composants à risque. Ensemble, ils permettent de savoir précisément quelles applications sont exposées lorsqu'une nouvelle faille est publiée.",
+    "mots_cles_attendus": [
+      "inventaire",
+      "bases de vulnérabilités",
+      "composants à risque",
+      "exposition"
+    ]
+  },
+  {
+    "id": "tests_qualite-193",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le DevSecOps et comment intègre-t-il les tests de sécurité ?",
+    "reponse_reference": "Le DevSecOps intègre la sécurité dans toute la chaîne de livraison plutôt qu'en audit final : SAST et SCA à chaque commit, DAST sur les environnements de préproduction, scans d'images de conteneurs et gestion des secrets. La sécurité devient un critère de qualité continu, partagé par l'équipe.",
+    "mots_cles_attendus": [
+      "sécurité continue",
+      "chaîne de livraison",
+      "scans d'images",
+      "critère continu"
+    ]
+  },
+  {
+    "id": "tests_qualite-194",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une injection SQL est exploitée en production alors que la pipeline contient déjà un scan SAST. Comment analyser cette faille du processus ?",
+    "reponse_reference": "Il faut vérifier si le scan couvrait bien le code concerné, si ses règles étaient à jour et si les alertes ont été traitées ou ignorées. L'incident doit conduire à un renforcement : blocage des alertes critiques, ajout de tests de non-régression avec charges malveillantes, et revue de la gestion des exceptions du scan.",
+    "mots_cles_attendus": [
+      "couverture du scan",
+      "alertes ignorées",
+      "blocage",
+      "non-régression"
+    ]
+  },
+  {
+    "id": "tests_qualite-195",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une petite équipe sans expert sécurité doit mettre en place des tests de sécurité avec un budget limité. Quelles priorités ?",
+    "reponse_reference": "Il faut commencer par les contrôles automatisés à fort rapport valeur/coût : SCA sur les dépendances, SAST dans la CI, durcissement des en-têtes et des cookies, et tests ciblés sur l'authentification et le contrôle d'accès. Un pentest externe ponctuel sur les parcours critiques complète le dispositif.",
+    "mots_cles_attendus": [
+      "SCA",
+      "SAST",
+      "authentification",
+      "pentest ponctuel"
+    ]
+  },
+  {
+    "id": "tests_qualite-196",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le pattern Page Object Model et pourquoi l'utiliser ?",
+    "reponse_reference": "Le Page Object Model encapsule chaque page ou composant d'interface dans une classe qui expose ses éléments et ses actions. Les tests manipulent ces objets plutôt que des sélecteurs bruts, ce qui centralise la maintenance et rend les tests lisibles et résistants aux évolutions d'interface.",
+    "mots_cles_attendus": [
+      "encapsulation",
+      "sélecteurs centralisés",
+      "maintenance",
+      "lisibilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-197",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test E2E auto-réparant (self-healing) et quels en sont les risques ?",
+    "reponse_reference": "Un outil auto-réparant retrouve automatiquement un élément dont le sélecteur a changé, en analysant des attributs ou une empreinte visuelle, au lieu d'échouer. Cela réduit la maintenance, mais peut masquer de vrais changements de comportement et déplacer le problème vers des tests qui passent sans vraiment vérifier.",
+    "mots_cles_attendus": [
+      "sélecteur changé",
+      "retrouve l'élément",
+      "maintenance réduite",
+      "masque les changements"
+    ]
+  },
+  {
+    "id": "tests_qualite-198",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Pourquoi préférer des tests d'API aux tests d'interface utilisateur quand c'est possible ?",
+    "reponse_reference": "Les tests d'API vérifient la logique métier directement au niveau des services, sans la couche d'interface : ils sont plus rapides, plus stables et moins sensibles aux changements de design. Les tests UI sont réservés aux parcours où l'interaction utilisateur elle-même est le risque principal.",
+    "mots_cles_attendus": [
+      "logique métier",
+      "plus stables",
+      "changements de design",
+      "interaction utilisateur"
+    ]
+  },
+  {
+    "id": "tests_qualite-199",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une suite E2E de 200 tests dure quatre heures et bloque les releases. Quelle stratégie de réduction proposer ?",
+    "reponse_reference": "Il faut cartographier les parcours critiques réellement utilisés, supprimer ou déplacer les tests redondants vers l'API, et paralléliser l'exécution sur plusieurs workers. Les tests E2E restants doivent cibler les parcours à fort impact, les autres scénarios étant couverts par des tests plus rapides.",
+    "mots_cles_attendus": [
+      "parcours critiques",
+      "tests d'API",
+      "parallélisation",
+      "redondance"
+    ]
+  },
+  {
+    "id": "tests_qualite-200",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_e2e",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Des tests E2E dépendent de données d'un service externe non maîtrisé et échouent quand ces données changent. Comment stabiliser la suite ?",
+    "reponse_reference": "Il faut maîtriser les données de test : intercepter les appels externes avec des réponses versionnées, ou provisionner un jeu de données dédié et reproductible pour l'environnement de test. Le test ne doit plus dépendre d'un état externe variable pour rester déterministe.",
+    "mots_cles_attendus": [
+      "interception",
+      "données versionnées",
+      "jeu dédié",
+      "déterminisme"
+    ]
+  },
+  {
+    "id": "tests_qualite-201",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment construire une stratégie de test pour une architecture en microservices ?",
+    "reponse_reference": "Il faut combiner des tests unitaires au sein de chaque service, des tests de contrats entre consommateurs et fournisseurs, des tests d'intégration sur les dépendances réelles et un petit nombre de tests E2E sur les parcours critiques. L'observabilité en production complète le dispositif pour détecter les défauts que les tests n'ont pas vus.",
+    "mots_cles_attendus": [
+      "contrats",
+      "intégration",
+      "parcours critiques",
+      "observabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-202",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le test basé sur les risques (risk-based testing) ?",
+    "reponse_reference": "Le test basé sur les risques évalue pour chaque fonctionnalité la probabilité de défaillance et l'impact d'un défaut, puis concentre l'effort de test sur les zones à risque élevé. Cette approche optimise le rapport entre l'effort investi et la réduction du risque produit, sous contrainte de temps et de budget.",
+    "mots_cles_attendus": [
+      "probabilité",
+      "impact",
+      "effort concentré",
+      "réduction du risque"
+    ]
+  },
+  {
+    "id": "tests_qualite-203",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le design for testability (conception pour la testabilité) ?",
+    "reponse_reference": "C'est une approche de conception qui rend le code facile à tester : injection des dépendances, points d'extension, séparation des effets de bord, états observables. Un code conçu pour être testable réduit le besoin de mocks complexes et améliore la qualité de l'architecture elle-même.",
+    "mots_cles_attendus": [
+      "injection de dépendances",
+      "effets de bord",
+      "états observables",
+      "architecture"
+    ]
+  },
+  {
+    "id": "tests_qualite-204",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une organisation découpe son monolithe en microservices. Comment adapter sa stratégie de test existante, basée sur de gros tests E2E ?",
+    "reponse_reference": "Il faut réduire les E2E au profit de tests de contrats entre services et de tests d'intégration ciblés sur chaque service, car les interactions deviennent la principale source de défauts. La stratégie doit aussi intégrer des tests de chaos et une observabilité renforcée pour gérer la complexité distribuée.",
+    "mots_cles_attendus": [
+      "contrats",
+      "interactions",
+      "tests de chaos",
+      "observabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-205",
+    "domaine": "tests_qualite",
+    "sous_theme": "strategie_de_test",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Comment prioriser l'effort de test d'une fonctionnalité de paiement à haut risque métier dans un planning serré ?",
+    "reponse_reference": "Il faut appliquer le test basé sur les risques : couvrir d'abord les chemins critiques (montant, devise, remboursement), les cas limites et la sécurité, avec des tests unitaires, d'intégration et un parcours E2E. Les aspects secondaires comme les libellés ou le design peuvent être vérifiés plus légèrement.",
+    "mots_cles_attendus": [
+      "chemins critiques",
+      "cas limites",
+      "sécurité",
+      "risque"
+    ]
+  },
+  {
+    "id": "tests_qualite-206",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un merge queue et comment protège-t-il la branche principale ?",
+    "reponse_reference": "Un merge queue sérialise les fusions : chaque pull request est ajoutée à une file, re-testée avec l'état le plus récent de la branche principale, puis fusionnée automatiquement si tout passe. Cela garantit que la branche principale reste toujours verte, même avec un fort débit de merges.",
+    "mots_cles_attendus": [
+      "file d'attente",
+      "re-test",
+      "branche toujours verte",
+      "fusion automatique"
+    ]
+  },
+  {
+    "id": "tests_qualite-207",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quel rôle jouent les tests dans un déploiement blue/green ou canary ?",
+    "reponse_reference": "Dans un blue/green, les tests de validation s'exécutent sur le nouvel environnement complet avant bascule du trafic, avec retour arrière instantané possible. Dans un canary, des tests automatisés et des indicateurs surveillent la nouvelle version exposée à une fraction du trafic réel, et déclenchent le rollback en cas d'anomalie.",
+    "mots_cles_attendus": [
+      "validation avant bascule",
+      "fraction du trafic",
+      "surveillance",
+      "rollback"
+    ]
+  },
+  {
+    "id": "tests_qualite-208",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test A/B et en quoi diffère-t-il d'un test de non-régression ?",
+    "reponse_reference": "Un test A/B compare en production deux variantes d'une fonctionnalité auprès de groupes d'utilisateurs pour mesurer leur comportement réel, par exemple le taux de conversion. Il évalue une hypothèse produit, alors que le test de non-régression vérifie que le code existant continue de fonctionner comme spécifié.",
+    "mots_cles_attendus": [
+      "comparaison en production",
+      "variantes",
+      "hypothèse produit",
+      "spécification"
+    ]
+  },
+  {
+    "id": "tests_qualite-209",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "La pipeline de test est devenue le goulot d'étranglement : trente minutes par PR et des files d'attente de builds. Quel plan d'optimisation global proposer ?",
+    "reponse_reference": "Il faut agir sur plusieurs leviers : sélectionner les tests impactés par le changement, paralléliser et découper les suites en shards, déplacer les tests longs vers des jobs planifiés, et accélérer l'infrastructure (cache des dépendances, machines dédiées). Un suivi du temps d'exécution en tendance évite la re-dérive.",
+    "mots_cles_attendus": [
+      "sélection de tests",
+      "shards",
+      "cache",
+      "suivi en tendance"
+    ]
+  },
+  {
+    "id": "tests_qualite-210",
+    "domaine": "tests_qualite",
+    "sous_theme": "ci_cd",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Des tests échouent uniquement lorsque plusieurs pipelines tournent en parallèle sur une infrastructure partagée. Comment diagnostiquer et corriger ?",
+    "reponse_reference": "La cause est probablement une contention de ressources partagées : base de données, ports, fichiers ou quotas. Il faut isoler chaque exécution (conteneurs dédiés, schémas uniques, ports aléatoires), instrumenter les ressources pendant les échecs, puis supprimer tout état partagé entre builds.",
+    "mots_cles_attendus": [
+      "contention",
+      "ressources partagées",
+      "isolation par exécution",
+      "instrumentation"
+    ]
+  },
+  {
+    "id": "tests_qualite-211",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment le test sur appareils cloud s'intègre-t-il à une pipeline CI/CD mobile ?",
+    "reponse_reference": "La pipeline construit l'application, l'envoie à la device farm, puis exécute les tests sur une matrice d'appareils sélectionnés, en parallèle, avant de restituer résultats, vidéos et journaux. Les combinaisons courantes tournent à chaque commit, les matrices larges à chaque release.",
+    "mots_cles_attendus": [
+      "build",
+      "matrice d'appareils",
+      "parallèle",
+      "résultats"
+    ]
+  },
+  {
+    "id": "tests_qualite-212",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le test en conditions réseau dégradées (network throttling) sur appareils réels ?",
+    "reponse_reference": "Il simule sur l'appareil des conditions réseau réalistes : 3G, latence élevée, pertes de paquets, hors ligne. Ces tests révèlent les comportements dégradés que les utilisateurs subissent réellement : timeouts, états vides, reprise de connexion, ce que des tests sur réseau local rapide ne montrent jamais.",
+    "mots_cles_attendus": [
+      "3G",
+      "latence",
+      "pertes de paquets",
+      "comportements dégradés"
+    ]
+  },
+  {
+    "id": "tests_qualite-213",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quel est le rôle d'Appium dans les tests mobiles et comment s'articule-t-il avec les device farms ?",
+    "reponse_reference": "Appium automatise les applications mobiles natives, hybrides ou web via le protocole WebDriver, avec un même script pour iOS et Android. Les device farms exposent des grilles Appium sur leurs appareils réels, ce qui permet d'exécuter ces scripts sur un large parc sans infrastructure locale.",
+    "mots_cles_attendus": [
+      "WebDriver",
+      "iOS et Android",
+      "grille",
+      "parc réel"
+    ]
+  },
+  {
+    "id": "tests_qualite-214",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une application mobile plante uniquement sur un modèle Android ancien sous une version spécifique du système. Quelle démarche d'investigation ?",
+    "reponse_reference": "Il faut reproduire le crash sur ce modèle via la device farm, collecter les journaux et les crash reports, puis identifier la fonctionnalité ou l'API non prise en charge par cette version. Après correction, cette combinaison est ajoutée à la matrice de test pour verrouiller la non-régression.",
+    "mots_cles_attendus": [
+      "reproduction",
+      "crash reports",
+      "API non supportée",
+      "matrice"
+    ]
+  },
+  {
+    "id": "tests_qualite-215",
+    "domaine": "tests_qualite",
+    "sous_theme": "device_farms",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Une équipe veut automatiser les tests iOS et Android à partir d'un même référentiel. Quelle architecture de tests proposer ?",
+    "reponse_reference": "Il faut une couche d'automatisation commune fondée sur Appium ou un framework multiplateforme, avec des sélecteurs d'accessibilité stables par écran, et une abstraction des différences de plateforme. Les scénarios métier sont écrits une seule fois, les spécificités iOS ou Android étant isolées dans des helpers.",
+    "mots_cles_attendus": [
+      "Appium",
+      "sélecteurs stables",
+      "scénarios communs",
+      "abstraction des différences"
+    ]
+  },
+  {
+    "id": "tests_qualite-216",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un test de charge distribué multi-régions et quand est-il nécessaire ?",
+    "reponse_reference": "Un test distribué génère la charge depuis plusieurs machines d'injection situées dans différentes régions géographiques, comme le font les utilisateurs réels. Il est nécessaire quand la charge à simuler dépasse la capacité d'un seul générateur ou quand il faut mesurer la latence perçue selon la localisation.",
+    "mots_cles_attendus": [
+      "machines d'injection",
+      "régions",
+      "capacité",
+      "latence perçue"
+    ]
+  },
+  {
+    "id": "tests_qualite-217",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quel rôle jouent le profilage et les outils APM dans l'analyse des performances ?",
+    "reponse_reference": "Le profilage mesure le temps passé dans chaque fonction pendant l'exécution, tandis que l'APM trace les requêtes à travers tous les services et leurs dépendances. Ensemble, ils permettent de localiser précisément le goulot d'étranglement, qu'il soit dans le code, la base de données ou un service tiers.",
+    "mots_cles_attendus": [
+      "temps par fonction",
+      "traçage distribué",
+      "goulot d'étranglement",
+      "localisation précise"
+    ]
+  },
+  {
+    "id": "tests_qualite-218",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le chaos engineering et que teste-t-il ?",
+    "reponse_reference": "Le chaos engineering injecte volontairement des pannes en production ou en préproduction, comme la coupure d'un service ou la saturation d'un disque, pour observer comment le système résiste et se rétablit. Il valide la résilience réelle, les mécanismes de repli et les procédures d'alerte.",
+    "mots_cles_attendus": [
+      "pannes injectées",
+      "résilience",
+      "mécanismes de repli",
+      "rétablissement"
+    ]
+  },
+  {
+    "id": "tests_qualite-219",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un site prévoit une vente flash avec un trafic multiplié par dix pendant deux heures. Quel plan de test de performance établir ?",
+    "reponse_reference": "Il faut modéliser le parcours type de la vente flash, définir le pic attendu avec une marge, puis exécuter des tests de charge, de stress et de montée en charge sur un environnement dimensionné comme la production. Un plan de repli et une surveillance en temps réel le jour J complètent la préparation.",
+    "mots_cles_attendus": [
+      "pic attendu",
+      "test de stress",
+      "environnement réaliste",
+      "surveillance le jour J"
+    ]
+  },
+  {
+    "id": "tests_qualite-220",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_performance",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Après une mise à jour, les temps de réponse se dégradent en production alors que les tests de performance passaient en préproduction. Quelle méthodologie d'investigation ?",
+    "reponse_reference": "Il faut comparer les environnements et les données : charge réelle, volume de données, configuration des ressources, versions des dépendances, puis tracer les requêtes lentes avec l'APM. La différence se trouve souvent dans les données à l'échelle réelle, les configurations ou une interaction non simulée en test.",
+    "mots_cles_attendus": [
+      "comparaison d'environnements",
+      "volume de données",
+      "APM",
+      "configuration"
+    ]
+  },
+  {
+    "id": "tests_qualite-221",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment la norme ISO 25010 structure-t-elle la qualité d'un produit logiciel ?",
+    "reponse_reference": "ISO 25010 organise la qualité en huit caractéristiques principales (adéquation fonctionnelle, performance, compatibilité, utilisabilité, fiabilité, sécurité, maintenabilité, portabilité), chacune déclinée en sous-caractéristiques mesurables. Ce modèle permet de décliner les exigences de qualité en critères concrets et vérifiables par les tests.",
+    "mots_cles_attendus": [
+      "huit caractéristiques",
+      "sous-caractéristiques",
+      "critères mesurables",
+      "vérifiable"
+    ]
+  },
+  {
+    "id": "tests_qualite-222",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quels niveaux de certification ISTQB existent et à quels profils s'adressent-ils ?",
+    "reponse_reference": "Le niveau Foundation pose les bases communes, puis les niveaux avancés spécialisent : Test Manager, Test Analyst, Technical Test Analyst. Des certifications dédiées existent aussi pour l'agilité, l'automatisation des tests, la sécurité et le testing IA, afin d'accompagner les évolutions des métiers du test.",
+    "mots_cles_attendus": [
+      "Foundation",
+      "Test Manager",
+      "spécialisations",
+      "automatisation"
+    ]
+  },
+  {
+    "id": "tests_qualite-223",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la qualification d'outils de test dans un contexte réglementaire ?",
+    "reponse_reference": "La qualification d'outils consiste à démontrer, preuves à l'appui, qu'un outil utilisé dans le processus de test ou de production fonctionne conformément à son usage prévu. Elle est exigée dans des secteurs réglementés comme la santé ou l'aéronautique, où l'outillage lui-même doit être validé et tracé.",
+    "mots_cles_attendus": [
+      "preuves",
+      "usage prévu",
+      "secteurs réglementés",
+      "traçabilité"
+    ]
+  },
+  {
+    "id": "tests_qualite-224",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un éditeur vise un marché réglementé de la santé. Quelles exigences de traçabilité des tests doit-il mettre en place ?",
+    "reponse_reference": "Il doit établir une traçabilité complète entre exigences, risques, cas de test, exécutions et anomalies, avec versions des documents et signatures des validations. Chaque évolution doit démontrer que les exigences réglementaires restent couvertes par des tests rejouables, audités et archivés.",
+    "mots_cles_attendus": [
+      "traçabilité",
+      "exigences",
+      "archivage",
+      "audit"
+    ]
+  },
+  {
+    "id": "tests_qualite-225",
+    "domaine": "tests_qualite",
+    "sous_theme": "normes_qualite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un audit de qualité selon ISO 25010 approche. Comment préparer un dossier de preuves convaincant ?",
+    "reponse_reference": "Il faut cartographier chaque caractéristique retenue vers les exigences, les tests associés et leurs résultats, en montrant les tendances dans le temps. Le dossier doit inclure les non-conformités connues et leurs plans de traitement, car l'audit valorise davantage la maîtrise que la perfection affichée.",
+    "mots_cles_attendus": [
+      "cartographie",
+      "résultats",
+      "tendances",
+      "non-conformités maîtrisées"
+    ]
+  },
+  {
+    "id": "tests_qualite-226",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la matrice de traçabilité des exigences et à quoi sert-elle ?",
+    "reponse_reference": "La matrice de traçabilité relie chaque exigence aux cas de test qui la vérifient et aux résultats obtenus, dans les deux sens. Elle permet de prouver qu'aucune exigence n'est restée sans test et de mesurer l'impact d'un changement sur le périmètre à re-tester.",
+    "mots_cles_attendus": [
+      "exigences",
+      "cas de test",
+      "bidirectionnelle",
+      "analyse d'impact"
+    ]
+  },
+  {
+    "id": "tests_qualite-227",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la couverture MC/DC et dans quels domaines est-elle exigée ?",
+    "reponse_reference": "La couverture MC/DC (Modified Condition/Decision Coverage) exige que chaque condition d'une décision ait été démontrée capable d'influencer seule le résultat. Elle est imposée par des normes comme DO-178C en aéronautique ou ISO 26262 en automobile, où la criticité justifie ce niveau d'exigence.",
+    "mots_cles_attendus": [
+      "condition indépendante",
+      "décision",
+      "DO-178C",
+      "ISO 26262"
+    ]
+  },
+  {
+    "id": "tests_qualite-228",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Pourquoi la couverture de code doit-elle être traitée comme un indicateur d'équipe plutôt qu'un objectif individuel ?",
+    "reponse_reference": "Fixer un pourcentage par développeur encourage le gonflage artificiel : tests sans assertions, cas triviaux ou code blindé de branches inutiles. Au niveau de l'équipe, la couverture sert à repérer les zones à risque et à piloter la tendance, sans détourner l'effort vers l'optimisation du chiffre.",
+    "mots_cles_attendus": [
+      "gonflage artificiel",
+      "zones à risque",
+      "tendance",
+      "détournement d'effort"
+    ]
+  },
+  {
+    "id": "tests_qualite-229",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La couverture globale baisse alors que l'équipe ajoute des tests chaque semaine. Comment expliquer et corriger cette tendance ?",
+    "reponse_reference": "Le code nouveau croît plus vite que les tests : les nouvelles fonctionnalités arrivent avec une couverture inférieure à la moyenne. Il faut mesurer la couverture sur le code nouveau séparément, fixer un seuil sur ce périmètre et analyser les branches jamais exercées des anciens modules critiques.",
+    "mots_cles_attendus": [
+      "code nouveau",
+      "seuil par périmètre",
+      "croissance du code",
+      "branches non exercées"
+    ]
+  },
+  {
+    "id": "tests_qualite-230",
+    "domaine": "tests_qualite",
+    "sous_theme": "couverture_de_code",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "La direction exige 100 % de couverture de code. Comment argumenter pour un objectif plus pertinent ?",
+    "reponse_reference": "Il faut expliquer que le 100 % coûte très cher pour un gain décroissant : code trivial, getters ou cas défensifs, et que la couverture ne mesure pas la qualité des assertions. On propose à la place un seuil élevé sur le code critique et nouveau, complété par du mutation testing et un suivi des défauts échappés.",
+    "mots_cles_attendus": [
+      "gain décroissant",
+      "coût",
+      "mutation testing",
+      "défauts échappés"
+    ]
+  },
+  {
+    "id": "tests_qualite-231",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la modélisation des menaces et comment alimente-t-elle les tests de sécurité ?",
+    "reponse_reference": "La modélisation des menaces (threat modeling) identifie systématiquement les actifs, les points d'entrée et les scénarios d'attaque possibles, par exemple avec STRIDE. Elle produit une liste priorisée de menaces qui devient le référentiel des tests de sécurité à exécuter, plutôt que de tester au hasard.",
+    "mots_cles_attendus": [
+      "actifs",
+      "scénarios d'attaque",
+      "STRIDE",
+      "liste priorisée"
+    ]
+  },
+  {
+    "id": "tests_qualite-232",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'OWASP ASVS et comment définit-il des niveaux d'assurance ?",
+    "reponse_reference": "L'ASVS (Application Security Verification Standard) est un référentiel de vérifications de sécurité organisé en trois niveaux : basique, standard et avancé, selon la criticité de l'application. Il permet de définir précisément ce qui doit être testé et de mesurer objectivement le niveau de conformité atteint.",
+    "mots_cles_attendus": [
+      "vérifications",
+      "trois niveaux",
+      "criticité",
+      "conformité mesurable"
+    ]
+  },
+  {
+    "id": "tests_qualite-233",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles vulnérabilités spécifiques cibler dans les tests de sécurité des API ?",
+    "reponse_reference": "Les tests d'API doivent cibler la vérification de l'identité et des autorisations par objet (BOLA), les injections, la mauvaise gestion des secrets, le rate limiting et l'exposition excessive de données. Chaque endpoint doit être testé avec des identités et des rôles différents pour vérifier que les contrôles d'accès sont réellement appliqués.",
+    "mots_cles_attendus": [
+      "BOLA",
+      "autorisations",
+      "contrôles d'accès",
+      "exposition de données"
+    ]
+  },
+  {
+    "id": "tests_qualite-234",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un testeur découvre qu'en changeant l'identifiant dans une URL, un utilisateur peut lire les données d'un autre (BOLA). Quelle démarche de test et de correction ?",
+    "reponse_reference": "Il faut confirmer la faille sur plusieurs ressources, évaluer l'étendue de l'exposition, puis corriger par des contrôles d'autorisation systématiques côté serveur, jamais par la seule dissimulation de l'identifiant. Des tests de non-régression automatisés, exécutés avec plusieurs comptes de rôles différents, verrouillent ensuite chaque endpoint.",
+    "mots_cles_attendus": [
+      "contrôles côté serveur",
+      "étendue",
+      "rôles différents",
+      "non-régression"
+    ]
+  },
+  {
+    "id": "tests_qualite-235",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_securite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Comment intégrer la modélisation des menaces dans le cycle de développement d'une nouvelle fonctionnalité ?",
+    "reponse_reference": "Il faut organiser une session de threat modeling dès la conception, avec l'équipe, pour identifier les menaces sur les flux de données, puis traduire chaque menace en cas de test. Les menaces résiduelles acceptées sont documentées, et la revue est rejouée à chaque évolution significative du périmètre.",
+    "mots_cles_attendus": [
+      "dès la conception",
+      "flux de données",
+      "cas de test dérivés",
+      "menaces résiduelles"
+    ]
+  },
+  {
+    "id": "tests_qualite-236",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment appliquer le versionnement sémantique aux contrats d'API ?",
+    "reponse_reference": "Le versionnement sémantique distingue les corrections sans impact, les ajouts compatibles et les changements cassants qui imposent une nouvelle version majeure du contrat. Les tests de contrats automatisent cette classification en vérifiant la compatibilité de chaque évolution avec les consommateurs existants.",
+    "mots_cles_attendus": [
+      "compatible",
+      "changement cassant",
+      "version majeure",
+      "classification automatisée"
+    ]
+  },
+  {
+    "id": "tests_qualite-237",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que les tests de compatibilité ascendante et descendante d'une API ?",
+    "reponse_reference": "La compatibilité descendante vérifie qu'un nouveau fournisseur continue de servir les anciens consommateurs, tandis que la compatibilité ascendante vérifie qu'un ancien fournisseur supporte les nouveaux consommateurs. Tester les deux directions est indispensable lors des déploiements progressifs où plusieurs versions coexistent.",
+    "mots_cles_attendus": [
+      "nouveau fournisseur",
+      "anciens consommateurs",
+      "versions coexistantes",
+      "déploiements progressifs"
+    ]
+  },
+  {
+    "id": "tests_qualite-238",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment tester les contrats dans un maillage complexe de services interdépendants ?",
+    "reponse_reference": "Il faut maintenir un registre central des contrats publiés, faire vérifier chaque service contre les contrats de ses consommateurs et de ses fournisseurs, et cartographier les dépendances pour comprendre l'impact d'un changement. L'exécution s'automatise dans chaque pipeline, avec vérification croisée avant tout déploiement.",
+    "mots_cles_attendus": [
+      "registre central",
+      "vérification croisée",
+      "cartographie des dépendances",
+      "pipeline"
+    ]
+  },
+  {
+    "id": "tests_qualite-239",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un fournisseur d'API doit faire évoluer un champ sans casser ses vingt applications consommatrices, déployées à des rythmes différents. Quelle démarche adopter ?",
+    "reponse_reference": "Il faut déployer l'évolution de façon compatible : ajouter le nouveau champ ou une nouvelle version en parallèle, maintenir l'ancien format, et vérifier les contrats de tous les consommateurs avant chaque étape. Une fois tous les consommateurs migrés et vérifiés, l'ancien format peut être retiré avec un préavis.",
+    "mots_cles_attendus": [
+      "évolution compatible",
+      "ancien format maintenu",
+      "contrats vérifiés",
+      "retrait progressif"
+    ]
+  },
+  {
+    "id": "tests_qualite-240",
+    "domaine": "tests_qualite",
+    "sous_theme": "tests_de_contrats",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une équipe génère ses tests de contrats automatiquement depuis une spécification OpenAPI. Quels avantages et quelles limites ?",
+    "reponse_reference": "La génération garantit la cohérence entre la documentation et les tests, et couvre rapidement la structure des endpoints. Ses limites : elle ne vérifie que ce qui est déclaré, pas les règles métier ni les combinaisons implicites, donc il faut la compléter par des scénarios métier et une revue de la qualité de la spécification elle-même.",
+    "mots_cles_attendus": [
+      "cohérence documentation",
+      "structure couverte",
+      "règles métier absentes",
+      "complément nécessaire"
+    ]
+  }
+]

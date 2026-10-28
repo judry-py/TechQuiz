@@ -1,0 +1,3817 @@
+[
+  {
+    "id": "web3_blockchain-001",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une blockchain et à quoi sert-elle ?",
+    "reponse_reference": "Une blockchain est un registre de données découpé en blocs, répliqué sur de nombreux ordinateurs reliés entre eux. Chaque bloc est lié au précédent par un condensat cryptographique (hash), ce qui rend toute falsification immédiatement détectable. Elle sert à enregistrer des transactions de façon immuable, vérifiable et sans autorité centrale.",
+    "mots_cles_attendus": [
+      "registre",
+      "blocs",
+      "hash",
+      "répliqué",
+      "immuable"
+    ]
+  },
+  {
+    "id": "web3_blockchain-002",
+    "domaine": "web3_blockchain",
+    "sous_theme": "registre_distribue",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un registre distribué (distributed ledger) et en quoi diffère-t-il d'une base de données classique ?",
+    "reponse_reference": "Un registre distribué est une base de données répliquée sur plusieurs nœuds indépendants qui valident leurs transactions selon un consensus plutôt que sur un serveur central. Contrairement à une base classique où un administrateur contrôle les écritures, chaque détenteur de nœud conserve une copie complète et vérifiable de l'historique.",
+    "mots_cles_attendus": [
+      "répliqué",
+      "nœuds",
+      "consensus",
+      "pas d'autorité centrale"
+    ]
+  },
+  {
+    "id": "web3_blockchain-003",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quel est le rôle d'une fonction de hachage comme SHA-256 dans une blockchain ?",
+    "reponse_reference": "La fonction de hachage transforme une donnée de taille quelconque en une empreinte de longueur fixe, calculée déterministiquement et extrêmement difficile à inverser. Dans une blockchain, elle sert à condenser le contenu d'un bloc, à garantir son intégrité et à créer le lien avec le bloc précédent.",
+    "mots_cles_attendus": [
+      "empreinte",
+      "déterministe",
+      "irréversible",
+      "intégrité",
+      "sha-256"
+    ]
+  },
+  {
+    "id": "web3_blockchain-004",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce que la cryptographie asymétrique et pourquoi est-elle utilisée en blockchain ?",
+    "reponse_reference": "La cryptographie asymétrique repose sur une paire de clés liées mathématiquement : une clé publique diffusable et une clé privée secrète. En blockchain, elle permet à chacun de signer ses transactions avec sa clé privée, tandis que n'importe qui peut vérifier la signature avec la clé publique correspondante.",
+    "mots_cles_attendus": [
+      "clé publique",
+      "clé privée",
+      "signature",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-005",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un portefeuille (wallet) en cryptomonnaie et que contient-il réellement ?",
+    "reponse_reference": "Un portefeuille est un outil logiciel ou matériel qui gère les clés privées associées à un ou plusieurs comptes. Il ne stocke généralement pas les cryptomonnaies elles-mêmes mais permet de signer des transactions et de consulter l'historique du compte sur la chaîne.",
+    "mots_cles_attendus": [
+      "clés privées",
+      "signer",
+      "transactions",
+      "compte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-006",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une transaction sur une blockchain et quelles informations contient-elle ?",
+    "reponse_reference": "Une transaction est une demande d'enregistrement d'un transfert de valeur ou d'un appel à un contrat intelligent, signée cryptographiquement par l'expéditeur. Elle contient au minimum l'expéditeur, le destinataire, le montant, les frais (gas) et la signature, le tout étant diffusée dans le réseau pour être incluse dans un bloc.",
+    "mots_cles_attendus": [
+      "transfert",
+      "signature",
+      "expéditeur",
+      "destinataire",
+      "gas"
+    ]
+  },
+  {
+    "id": "web3_blockchain-007",
+    "domaine": "web3_blockchain",
+    "sous_theme": "noeud",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un nœud (node) dans un réseau blockchain et à quoi sert-il ?",
+    "reponse_reference": "Un nœud est un programme qui participate au réseau en conservant une copie du registre, en propageant les transactions et en validant les blocs selon les règles du protocole. Les nœuds peuvent soit valider et relayer les transactions (full node), soit seulement les relayer (light node).",
+    "mots_cles_attendus": [
+      "copie du registre",
+      "validation",
+      "propagation",
+      "full node"
+    ]
+  },
+  {
+    "id": "web3_blockchain-008",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une collision de hachage et pourquoi est-ce un problème pour une blockchain ?",
+    "reponse_reference": "Une collision de hachage se produit lorsque deux données différentes produisent la même empreinte de hachage. Si cela arrivait pour le condensat d'un bloc, un attaquant pourrait substituer un contenu frauduleux sans que le lien de chaînage ne soit rompu, ce qui ruinerait la garantie d'intégrité.",
+    "mots_cles_attendus": [
+      "collision",
+      "même empreinte",
+      "substitution",
+      "intégrité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-009",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un ami vous envoie 0,05 ETH sur l'adresse de votre portefeuille. La transaction n'apparaît pas immédiatement sur l'explorateur de blocs. Que se passe-t-il ?",
+    "reponse_reference": "La transaction a été diffusée dans le réseau mais n'est pas encore incluse dans un bloc : elle se trouve dans la mémoire d'attente (mempool) en attente de confirmation par les validateurs. Le délai dépend du temps de bloc, de la priorité donnée par les frais de gas et du niveau de congestion du réseau.",
+    "mots_cles_attendus": [
+      "mempool",
+      "en attente",
+      "bloc",
+      "frais de gas",
+      "congestion"
+    ]
+  },
+  {
+    "id": "web3_blockchain-010",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une entreprise vous affirme qu'elle a déployé une blockchain parce que ses données sont sur une chaîne. Qu'est-ce qui manque généralement dans ce type de projet ?",
+    "reponse_reference": "Le plus souvent, il manque un véritable consensus décentralisé : la chaîne est en réalité un serveur unique (souvent une blockchain d'entreprise ou un réseau privé) et non un réseau répliqué. Stocker des données sur une chaîne publique ne suffit pas à créer de la décentralisation, il faut des validateurs indépendants et un mécanisme de consensus ouvert.",
+    "mots_cles_attendus": [
+      "consensus décentralisé",
+      "réplication",
+      "validateurs indépendants",
+      "chaîne privée"
+    ]
+  },
+  {
+    "id": "web3_blockchain-011",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un mécanisme de consensus dans une blockchain ?",
+    "reponse_reference": "Un mécanisme de consensus est la règle qui permet à des participants indépendants de s'accorder sur l'ordre et le contenu des blocs malgré la présence de participants malveillants ou de pannes réseau. Sans lui, chaque nœud pourrait détenir une version différente de l'historique.",
+    "mots_cles_attendus": [
+      "accord",
+      "ordre des blocs",
+      "règle",
+      "nœuds indépendants"
+    ]
+  },
+  {
+    "id": "web3_blockchain-012",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre un portefeuille custodial et un portefeuille non custodial ?",
+    "reponse_reference": "Dans un portefeuille custodial (custody), un tiers détient les clés privées, par exemple une plateforme d'échange, ce qui simplifie l'usage mais crée un risque de contrepartie et de perte d'accès. Dans un portefeuille non custodial, l'utilisateur détient lui-même ses clés, ce qui supprime ce risque mais impose de sauvegarder la phrase de récupération.",
+    "mots_cles_attendus": [
+      "custodial",
+      "non custodial",
+      "tiers",
+      "phrase de récupération"
+    ]
+  },
+  {
+    "id": "web3_blockchain-013",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Vous copiez l'adresse de destination d'une transaction depuis un explorateur de blocs et l'envoyez à un tiers. Quel est le risque principal ?",
+    "reponse_reference": "Une adresse doit toujours être vérifiée caractère par caractère : une seule erreur ou une substitution par une adresse contrôlée par l'attaquant entraîne une perte irréversible des fonds. Les adresses tronquées ou mal copiées sont une cause classique de vol, car il n'existe aucun service central pour annuler une transaction.",
+    "mots_cles_attendus": [
+      "adresse",
+      "vérification",
+      "perte irréversible",
+      "fraude"
+    ]
+  },
+  {
+    "id": "web3_blockchain-014",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token (jeton) sur une blockchain ?",
+    "reponse_reference": "Un token est un actif numérique créé et géré par un contrat intelligent plutôt que par le protocole de la blockchain elle-même. Il peut représenter un droit, un actif, un point de vote ou une utilité, et ses règles d'émission et de transfert sont programmées dans le code du contrat.",
+    "mots_cles_attendus": [
+      "contrat intelligent",
+      "actif numérique",
+      "émission",
+      "droits"
+    ]
+  },
+  {
+    "id": "web3_blockchain-015",
+    "domaine": "web3_blockchain",
+    "sous_theme": "explorateur",
+    "niveau": 1,
+    "type": "definition",
+    "question": "À quoi sert un explorateur de blocs (block explorer) ?",
+    "reponse_reference": "Un explorateur de blocs est un site web qui indexe l'ensemble des transactions, des blocs, des comptes et des contrats d'une blockchain. Il permet de vérifier l'état d'une transaction, de consulter les soldes et le code d'un contrat, et de tracer le flux de fonds.",
+    "mots_cles_attendus": [
+      "indexation",
+      "transactions",
+      "blocs",
+      "comptes",
+      "contrats"
+    ]
+  },
+  {
+    "id": "web3_blockchain-016",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Un collègue vous explique que sa blockchain est décentralisée car personne ne possède le serveur qui héberge les données. Qu'est-ce qui manque dans son raisonnement ?",
+    "reponse_reference": "La décentralisation ne se résume pas à l'hébergement : elle concerne le contrôle des règles de validation. Si un seul opérateur peut réécrire l'historique ou censurer les transactions, la chaîne reste centralisée sur le plan du contrôle, même si les fichiers sont répliqués.",
+    "mots_cles_attendus": [
+      "contrôle",
+      "validation",
+      "censure",
+      "centralisé"
+    ]
+  },
+  {
+    "id": "web3_blockchain-017",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une phrase de récupération (seed phrase) et quels sont ses risques ?",
+    "reponse_reference": "Une phrase de récupération est une suite de mots, ordinairement 12 ou 24, qui encode la racine de votre portefeuille et permet de le reconstituer. Quiconque en prend connaissance peut voler tous les fonds associés, il faut donc la conserver hors ligne et ne jamais la saisir sur un site ou un service inconnu.",
+    "mots_cles_attendus": [
+      "seed phrase",
+      "mots",
+      "hors ligne",
+      "vol de fonds",
+      "sauvegarde"
+    ]
+  },
+  {
+    "id": "web3_blockchain-018",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Quelle est la différence entre une blockchain publique et une blockchain privée ?",
+    "reponse_reference": "Une blockchain publique est ouverte à la lecture et à la participation : n'importe qui peut lire les transactions, exécuter des nœuds et, selon le protocole, valider des blocs. Une blockchain privée (ou permissionnée) impose une liste d'autorisés pour lire, écrire et valider, ce qui apporte de la performance mais réduit la décentralisation.",
+    "mots_cles_attendus": [
+      "publique",
+      "ouverte",
+      "privée",
+      "permissionnée",
+      "autorisés"
+    ]
+  },
+  {
+    "id": "web3_blockchain-019",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 1,
+    "type": "scenario",
+    "question": "Une transaction reçoit 12 confirmations mais reste marquée « failed » sur l'explorateur. Que s'est-il passé ?",
+    "reponse_reference": "L'exécution de la transaction a été révoquée par la machine virtuelle, le plus souvent à cause d'un dépassement de gas ou d'une condition non satisfaite dans un contrat intelligent. Les confirmations indiquent seulement que le bloc qui la contient est définitif, elles ne garantissent pas la réussite de l'exécution.",
+    "mots_cles_attendus": [
+      "échec d'exécution",
+      "gas",
+      "machine virtuelle",
+      "confirmations"
+    ]
+  },
+  {
+    "id": "web3_blockchain-020",
+    "domaine": "web3_blockchain",
+    "sous_theme": "faucet",
+    "niveau": 1,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un faucet (robinet) sur un réseau de test ?",
+    "reponse_reference": "Un faucet est un service qui distribue gratuitement de petites quantités de jeton de test aux développeurs. Il permet de s'entraîner sur un réseau de test sans argent réel, généralement en échange d'une adresse de portefeuille et d'un captcha.",
+    "mots_cles_attendus": [
+      "jetons de test",
+      "réseau de test",
+      "gratuit",
+      "développeurs"
+    ]
+  },
+  {
+    "id": "web3_blockchain-021",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un condensat de bloc (block hash) et l'empreinte de la transaction (transaction hash) ?",
+    "reponse_reference": "Le condensat de bloc identifie un bloc entier et inclut l'empreinte du bloc précédent, alors que l'empreinte de transaction identifie une seule transaction et ne dépend pas de son placement dans la chaîne. Tous deux sont produits par une fonction de hachage, mais le premier sert de lien structurel et le second de référence de suivi.",
+    "mots_cles_attendus": [
+      "block hash",
+      "transaction hash",
+      "bloc précédent",
+      "empreinte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-022",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une signature numérique et comment est-elle vérifiée dans une blockchain ?",
+    "reponse_reference": "Une signature numérique est une valeur produite à partir du message à signer et de la clé privée du signataire via un algorithme de type ECDSA ou Schnorr. La vérification consiste à recalculer la signature à partir du message et de la clé publique, ce qui prouve la possession de la clé privée sans la transmettre.",
+    "mots_cles_attendus": [
+      "signature",
+      "clé privée",
+      "clé publique",
+      "ecdsa",
+      "schnorr"
+    ]
+  },
+  {
+    "id": "web3_blockchain-023",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mempool",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la mempool (mémoire d'attente) et quel rôle joue-t-elle ?",
+    "reponse_reference": "La mempool est le pool de transactions valides et non encore incluses dans un bloc, maintenu par chaque nœud du réseau. Elle sert de zone d'attente pour la sélection des transactions et détermine l'ordre dans lequel elles seront empaquetées, en fonction notamment du prix du gas offered.",
+    "mots_cles_attendus": [
+      "transactions en attente",
+      "pool",
+      "sélection",
+      "gas",
+      "ordre"
+    ]
+  },
+  {
+    "id": "web3_blockchain-024",
+    "domaine": "web3_blockchain",
+    "sous_theme": "bloc",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quels sont les principaux composants d'un bloc sur une blockchain ?",
+    "reponse_reference": "Un bloc contient un en-tête (header) et un corps (body). L'en-tête regroupe notamment le condensat du bloc précédent, le condensat de la racine de transactions (Merkle root), l'horodatage, la difficulté ou le numéro d'époque, et l'identifiant du validateur. Le corps contient la liste des transactions incluses.",
+    "mots_cles_attendus": [
+      "en-tête",
+      "corps",
+      "merkle root",
+      "horodatage",
+      "transactions"
+    ]
+  },
+  {
+    "id": "web3_blockchain-025",
+    "domaine": "web3_blockchain",
+    "sous_theme": "arbre_merkle",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un arbre de Merkle et à quoi sert-il dans une blockchain ?",
+    "reponse_reference": "Un arbre de Merkle est une structure hiérarchique de condensats où chaque nœud interne est le hachage de la concaténation de ses enfants, la racine condensant toutes les transactions. Il permet de prouver l'inclusion d'une transaction avec un logarithmicme de preuves, sans avoir à fournir l'ensemble du bloc.",
+    "mots_cles_attendus": [
+      "merkle root",
+      "inclusion",
+      "preuve",
+      "logarithme",
+      "transactions"
+    ]
+  },
+  {
+    "id": "web3_blockchain-026",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Deux transactions identiques (mêmes expéditeur, même destinataire, même montant) sont envoyées simultanément avec la même valeur de nonce. Que se passe-t-il ?",
+    "reponse_reference": "Les deux transactions se retrouvent dans la mempool mais une seule peut être incluse dans un bloc, car un compte ne peut exécuter qu'une transaction par nonce. La seconde est ensuite rejetée ou remplacée (transaction replacement) si la première est confirmée ; c'est un comportement normal qui n'implique pas de doublon de débit.",
+    "mots_cles_attendus": [
+      "nonce",
+      "remplacement",
+      "une seule incluse",
+      "mempool"
+    ]
+  },
+  {
+    "id": "web3_blockchain-027",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une adresse de compte sur une blockchain de type Ethereum et comment est-elle dérivée ?",
+    "reponse_reference": "L'adresse est un condensat de 20 octets obtenu en prenant les 20 derniers octets du condensat de la clé publique Keccak-256 de la clé publique du compte. Sur les chaînes compatibles EVM, elle est affichée sous forme hexadécimale préfixée par 0x et sert d'identifiant de compte unique.",
+    "mots_cles_attendus": [
+      "20 octets",
+      "keccak-256",
+      "clé publique",
+      "0x",
+      "compte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-028",
+    "domaine": "web3_blockchain",
+    "sous_theme": "noeud",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Quelle est la différence entre un full node, un light node et un archive node ?",
+    "reponse_reference": "Un full node valide l'intégralité des transactions et des blocs en appliquant les règles du consensus. Un light node ne conserve que les en-têtes et télécharge les preuves de Merkle pour vérifier l'inclusion d'une transaction, ce qui est plus léger mais dépend d'un serveur de confiance. Un archive node conserve en plus tout l'historique des états passés, au prix d'un stockage important.",
+    "mots_cles_attendus": [
+      "full node",
+      "light node",
+      "archive node",
+      "état",
+      "stockage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-029",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un attaquant modifie une transaction déjà confirmée dans un bloc ancien. Pourquoi la modification est-elle immédiatement visible ?",
+    "reponse_reference": "Modifier la transaction change sa empreinte et donc celle de la feuille correspondante de l'arbre de Merkle, ce qui invalide la racine de Merkle stockée dans l'en-tête du bloc. Le condensat du bloc change à son tour et le lien vers le bloc suivant est rompu, ce qui invalide toute la chaîne descendante.",
+    "mots_cles_attendus": [
+      "merkle root",
+      "condensat",
+      "chaînage",
+      "détection"
+    ]
+  },
+  {
+    "id": "web3_blockchain-030",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un nonce de transaction et à quoi sert-il ?",
+    "reponse_reference": "Le nonce est un compteur croissant associé à chaque compte émetteur, qui garantit que les transactions d'un même compte sont exécutées dans un ordre strict et sans doublon. Il permet notamment de remplacer une transaction en attente en soumettant une autre avec le même nonce et des frais plus élevés.",
+    "mots_cles_attendus": [
+      "compteur",
+      "ordre d'exécution",
+      "remplacement",
+      "compte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-031",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que la finalité des transactions et pourquoi est-elle importante ?",
+    "reponse_reference": "La finalité désigne le moment où une transaction est considérée comme immuable et ne peut plus être réorganisée ni annulée. Sur les chaînes à preuve de travail, elle est probabiliste (six confirmations réduisent fortement le risque) alors que sur les chaînes à preuve d'enjeu, elle est souvent économique et reached par protocole en quelques époques.",
+    "mots_cles_attendus": [
+      "finalité",
+      "immuabilité",
+      "reorganisation",
+      "confirmations"
+    ]
+  },
+  {
+    "id": "web3_blockchain-032",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une fonction de dérivation de clé (HD wallet) et à quoi sert-elle ?",
+    "reponse_reference": "Un portefeuille hiérarchique déterministe (HD) dérive un nombre illimité de paires de clés à partir d'une seule graine en utilisant un chemin de dérivation. Les chemins de dérivation menés et le concept de compte dérivé permettent d'obtenir des adresses distinctes tout en gardant un seul sauvegardé, ce qui facilite les sauvegardes et la récupération.",
+    "mots_cles_attendus": [
+      "dérivation",
+      "graine",
+      "chemin de dérivation",
+      "comptes multiples"
+    ]
+  },
+  {
+    "id": "web3_blockchain-033",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Une dApp vous demande de signer une transaction dont vous ne comprenez pas le contenu. Que devez-vous faire ?",
+    "reponse_reference": "Vous devez refuser la signature : dans une dApp, la signature de transaction autorise un transfert de fonds ou l'approbation d'un token, et le contenu peut être illisible ou trompeur. Avant de signer, il faut vérifier l'adresse du contrat, les spending limits accordées et l'origine de la dApp, ideally via un simulateur de transaction.",
+    "mots_cles_attendus": [
+      "refuser",
+      "signature",
+      "approbation",
+      "simulation",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-034",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un hard fork et en quoi diffère-t-il d'un soft fork ?",
+    "reponse_reference": "Un hard fork est une modification du protocole incompatible avec les règles précédentes, ce qui oblige les nœuds à se séparer en deux réseaux divergents si la mise à jour n'est pas adoptée par tous. Un soft fork est rétrocompatible : les nœuds non mis à jour continuent de suivre l'ancienne règle, mais cette règle restrictive peut rendre le réseau vulnérable si la majorité ne l'applique pas.",
+    "mots_cles_attendus": [
+      "hard fork",
+      "soft fork",
+      "incompatible",
+      "rétrocompatible",
+      "division du réseau"
+    ]
+  },
+  {
+    "id": "web3_blockchain-035",
+    "domaine": "web3_blockchain",
+    "sous_theme": "noeud",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Votre full node est hors ligne pendant deux heures puis se reconnecte. Que se passe-t-il pour votre copie du registre ?",
+    "reponse_reference": "Au redémarrage, le nœud détecte que des blocs ont été produits pendant son absence et les récupère via le protocole pair-à-pair, en général par une synchronisation accélérée (snap sync) ou un simple rattrapage de la blockchain. Les transactions de la mempool sont également rejouées si elles n'ont pas été confirmées.",
+    "mots_cles_attendus": [
+      "synchronisation",
+      "rattrapage",
+      "blocs manquants",
+      "mempool",
+      "p2p"
+    ]
+  },
+  {
+    "id": "web3_blockchain-036",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'attaque par rainbow table et comment y remédier dans un contexte blockchain ?",
+    "reponse_reference": "Une attaque par rainbow table consiste à précalculer des hachés de mots de passe courants pour retrouver un secret par correspondance. Sur une blockchain, l'équivalent est l'attaque par dictionnaire contre une clé privée ou une phrase de récupération faible : l'utilisation de wallets modernes avec PBKDF2/argon2, sel et mnémonique long rend cette attaque prohibitivement coûteuse.",
+    "mots_cles_attendus": [
+      "dictionnaire",
+      "précalcul",
+      "sel",
+      "pbkdf2",
+      "phrase longue"
+    ]
+  },
+  {
+    "id": "web3_blockchain-037",
+    "domaine": "web3_blockchain",
+    "sous_theme": "transaction",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'adresse de destination d'une transaction et pourquoi faut-il éviter les adresses contractuelles pour recevoir des fonds du quotidien ?",
+    "reponse_reference": "L'adresse de destination est le compte qui recevra la valeur. Les contrats intelligents, eux, ne peuvent généralement pas exécuter de logique arbitraire lors d'un simple transfert : certains ne savent même pas traiter un transfert natif, ce qui peut envoyer les fonds vers une impasse. Il faut donc vérifier le type de compte avant d'envoyer des actifs.",
+    "mots_cles_attendus": [
+      "compte contractuel",
+      "transfert",
+      "impasse",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-038",
+    "domaine": "web3_blockchain",
+    "sous_theme": "hachage",
+    "niveau": 2,
+    "type": "definition",
+    "question": "Qu'est-ce que l'audit d'une fonction de hachage (ex. SHA-256) et pourquoi est-il utile ?",
+    "reponse_reference": "Un audit cryptographique consiste à vérifier publiquement qu'une implémentation de hachage ne dévie pas du standard et ne fuit pas d'information. Il permet de détecter des vecteurs d'attaque par extension de longueur, des biais ou des failles d'implémentation qui affaibliraient la sécurité du hachage et donc de toute la chaîne.",
+    "mots_cles_attendus": [
+      "audit",
+      "conformité au standard",
+      "biais",
+      "extension de longueur",
+      "sécurité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-039",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Vous constatez que deux blocs ont le même condensat dans votre explorateur local. Que faut-il en conclure ?",
+    "reponse_reference": "Cela est virtuellement impossible sur une blockchain fonctionnelle : le condensat d'un bloc inclut l'empreinte du bloc précédent, de l'horodatage et d'autres données uniques. Une telle situation signale plutôt un bug de votre outil d'indexation, une confusion entre deux chaînes ou des données corrompues localement.",
+    "mots_cles_attendus": [
+      "condensat",
+      "quasi impossible",
+      "bug d'indexation",
+      "corruption"
+    ]
+  },
+  {
+    "id": "web3_blockchain-040",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 2,
+    "type": "scenario",
+    "question": "Un service de portefeuille en ligne vous demande de déposer des fonds sur une adresse unique à chaque connectique. Pourquoi est-ce risqué ?",
+    "reponse_reference": "Déposer des fonds sur une adresse unique générée par un tiers revient à lui confier la garde des actifs et à lui donner le pouvoir de les déplacer. La bonne pratique est l'auto-garde (self-custody) : générer les clés localement, les sauvegarder hors ligne, et ne jamais saisir une phrase de récupération sur un site.",
+    "mots_cles_attendus": [
+      "garde",
+      "auto-garde",
+      "adresse unique",
+      "phrase de récupération",
+      "risque"
+    ]
+  },
+  {
+    "id": "web3_blockchain-041",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment fonctionne le consensus par preuve de travail (Proof of Work) ?",
+    "reponse_reference": "Les mineurs cherchent un nombre tel que le condensat du bloc, complété de ce nombre, soit inférieur à une cible fixée par la difficulté. Ce calcul, coûteux en énergie, est la preuve de travail : le premier mineur à trouver la solution fait valider son bloc par le réseau, qui continue à vérifier la solution. Ce mécanisme est résistant aux attaques sybil mais très énergivore.",
+    "mots_cles_attendus": [
+      "minage",
+      "difficulté",
+      "nonce",
+      "énergie",
+      "résistance sybil"
+    ]
+  },
+  {
+    "id": "web3_blockchain-042",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Comment fonctionne le consensus par preuve d'enjeu (Proof of Stake) ?",
+    "reponse_reference": "Les validateurs immobilisent une quantité de jetons (mise) qui les qualifie pour proposer et valider des blocs selon un tirage pondéré par le montant misé. Un validateur qui se comporte de façon malveillante peut être sanctionné par confiscation d'une partie de sa mise, mécanisme appelé slashing, qui dissuade la triche.",
+    "mots_cles_attendus": [
+      "validateurs",
+      "mise",
+      "tirage pondéré",
+      "slashing"
+    ]
+  },
+  {
+    "id": "web3_blockchain-043",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un taux de hachage (hashrate) et que mesure-t-il ?",
+    "reponse_reference": "Le taux de hachage mesure la puissance de calcul totale du réseau de minage, généralement exprimée en hachages par seconde (H/s). Il détermine la probabilité de trouver un bloc et sert à convertir la difficulté du réseau en puissance nécessaire. Un hashrate élevé signifie une course plus serrée entre mineurs et une probabilité d'attaque à 51 % plus élevée pour un acteur majoritaire.",
+    "mots_cles_attendus": [
+      "hachages par seconde",
+      "puissance de calcul",
+      "difficulté",
+      "51 %"
+    ]
+  },
+  {
+    "id": "web3_blockchain-044",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un contrat intelligent (smart contract) ?",
+    "reponse_reference": "Un contrat intelligent est un programme déployé sur une blockchain qui s'exécute automatiquement de façon déterministe lorsque les conditions d'appel sont réunies. Il peut transférer des actifs, enregistrer des données ou appliquer une règle métier sans intervention d'un intermédiaire, et son code est public et immuable une fois déployé.",
+    "mots_cles_attendus": [
+      "code déployé",
+      "exécution automatique",
+      "déterministe",
+      "immuable",
+      "public"
+    ]
+  },
+  {
+    "id": "web3_blockchain-045",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la machine virtuelle Ethereum (EVM) et pourquoi est-elle importante ?",
+    "reponse_reference": "L'EVM est une machine à registres déterministe qui exécute le bytecode des contrats intelligents de type Solidity ou Vyper. Sa standardisation est à l'origine de l'interopérabilité entre des centaines de chaînes compatibles EVM, qui partagent le même modèle de gas, de comptes et de bytecode, facilitant le portage des applications décentralisées.",
+    "mots_cles_attendus": [
+      "machine virtuelle",
+      "bytecode",
+      "deterministe",
+      "compatible evm",
+      "interopérabilité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-046",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le gas dans une blockchain compatible EVM et à quoi sert-il ?",
+    "reponse_reference": "Le gas est une unité de mesure de computation qui permet de facturer l'exécution des opérations en fonction de leur coût réel en ressources (calcul, stockage, accès disque). Chaque instruction du bytecode consomme un certain nombre de gaz, et la transaction échoue si la limite de gaz fournie est dépassée, ce qui protège le réseau contre les boucles infinies.",
+    "mots_cles_attendus": [
+      "unité de computation",
+      "opcode",
+      "limite de gas",
+      "échec",
+      "protection"
+    ]
+  },
+  {
+    "id": "web3_blockchain-047",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un standard de token ERC-20 et que définit-il ?",
+    "reponse_reference": "ERC-20 est une norme d'interface pour les jetons fongibles sur Ethereum, qui définit un ensemble de fonctions comme totalSupply, balanceOf, transfer et approve, ainsi que les événements Transfer et Approval. Elle permet aux contrats, aux portefeuilles et aux marchés d'interagir de façon standardisée avec n'importe quel jeton fongible.",
+    "mots_cles_attendus": [
+      "interface standard",
+      "fongible",
+      "transfer",
+      "approve",
+      "événements"
+    ]
+  },
+  {
+    "id": "web3_blockchain-048",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un contrat de marché décentralisé lève 100 000 ETH en une heure. Quelle weakness structurelle ce raz de liquidité révèle-t-il ?",
+    "reponse_reference": "Il révèle un risque de concentration des liquidités et de dépendance à quelques fournisseurs de liquidité. Un pool dont la totalité de la liquidité est retirable en un bloc devient facile à vider par arbitrage, ce qui provoque un effondrement du prix et des pertes pour les créanciers de actifs empruntés.",
+    "mots_cles_attendus": [
+      "liquidité",
+      "concentration",
+      "arbitrage",
+      "pool",
+      "effondrement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-049",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la finalité économique dans une blockchain à preuve d'enjeu ?",
+    "reponse_reference": "La finalité économique est la garantie qu'un bloc définitif ne sera jamais réorganisé parce que le coût de sa réorganisation (confiscation de la mise des validateurs fautifs) dépasse le gain attendu. Elle est plus rapide et plus déterministe que la finalité probabiliste de la preuve de travail, mais elle repose sur des hypothèses économiques et sur une distribution de mise suffisamment décentralisée.",
+    "mots_cles_attendus": [
+      "coût de réorganisation",
+      "slashing",
+      "déterministe",
+      "distribution de mise"
+    ]
+  },
+  {
+    "id": "web3_blockchain-050",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que le stockage versus la mémoire (storage versus memory) dans l'EVM et pourquoi la différence est-elle coûteuse ?",
+    "reponse_reference": "Les variables déclarées en mémoire (memory) ne persistent qu pendant l'exécution de l'appel et coûtent relativement peu. Les variables de stockage (storage), elles, sont écrites dans l'état persistant de la chaîne : chaque écriture (SSTORE) coûte très cher car elle modifie un Merkle Patricia Trie global dont la racine est inscribed dans chaque bloc. Les modifications de stockage sont donc le principal poste de coût des contrats.",
+    "mots_cles_attendus": [
+      "storage",
+      "memory",
+      "sstore",
+      "merkle patricia trie",
+      "coût"
+    ]
+  },
+  {
+    "id": "web3_blockchain-051",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un validateur est détecté comme ayant validé deux blocs contradictoires à la même hauteur. Que se passe-t-il ?",
+    "reponse_reference": "Le protocole détecte la double signature (equivocation) et déclenche une sanction : une partie de la mise est confisquée et le validateur est retiré du jeu, ce qui est appelé slashing. La preuve cryptographique de l'équivocation est elle-même diffusée sur le réseau, ce qui permet à n'importe qui de déclencher la sanction.",
+    "mots_cles_attendus": [
+      "equivocation",
+      "double signature",
+      "slashing",
+      "confiscation",
+      "sanction"
+    ]
+  },
+  {
+    "id": "web3_blockchain-052",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un stablecoin et quelles sont ses deux principales modalités d'émission ?",
+    "reponse_reference": "Un stablecoin est un jeton conçu pour suivre la valeur d'un actif de référence, le plus souvent le dollar américain. Les stablecoins adossés à des réserves sont émis et brûlés par un émetteur qui dépose la contrepartie auprès d'un custodian, tandis que les stablecoins algorithmiques maintiennent leur parité par des mécanismes de mint/burn, de collatéralisation et de liquidations automatiques.",
+    "mots_cles_attendus": [
+      "parité",
+      "adossé aux réserves",
+      "algorithmique",
+      "collateralisation",
+      "liquidations"
+    ]
+  },
+  {
+    "id": "web3_blockchain-053",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un appel de transaction (transaction call) et comment se distingue-t-il d'un appel de contrat à contrat ?",
+    "reponse_reference": "Un appel de transaction est une transaction signée par un compte externe (EOA) qui déclenche l'exécution d'un contrat. Un appel interne, à l'inverse, est l'invocation d'un contrat par un autre contrat via CALL ou DELEGATECALL, et il ne crée pas de transaction distincte mais un sous-appel dans la même exécution, partageant le même contexte de gas.",
+    "mots_cles_attendus": [
+      "eoa",
+      "appel externe",
+      "appel interne",
+      "delegatecall",
+      "contexte de gas"
+    ]
+  },
+  {
+    "id": "web3_blockchain-054",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_work",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Un groupe contrôle plus de 51 % du taux de hachage d'une blockchain à preuve de travail. Quelles attaques lui sont possibles ?",
+    "reponse_reference": "L'attaquant peut réorganiser les blocs récents (réécriture de l'historique), censurer des transactions en ne les incluant jamais, et de remplir des blocs vides pour exclure les transactions concurrentes. Ces attaques ne détectent pas directement le hash mais modifient la vision de la chaîne qu'ont les autres participants.",
+    "mots_cles_attendus": [
+      "51 %",
+      "réorganisation",
+      "censure",
+      "doubles dépenses",
+      "puissance majoritaire"
+    ]
+  },
+  {
+    "id": "web3_blockchain-055",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un pool de liquidité et comment le prix d'un actif y est-il déterminé ?",
+    "reponse_reference": "Un pool de liquidité réunit deux actifs dans un smart contract afin de permettre des échanges instantanés. Dans un modèle à produit constant (x*y=k), le prix est déterminé par le rapport des quantités détenues ; les fournisseurs de liquidité gagnent les frais de transaction mais subissent un risque de perte impermanente lorsque les prix des deux actifs évoluent fortement.",
+    "mots_cles_attendus": [
+      "pool",
+      "x*y=k",
+      "prix",
+      "frais",
+      "perte impermanente"
+    ]
+  },
+  {
+    "id": "web3_blockchain-056",
+    "domaine": "web3_blockchain",
+    "sous_theme": "consensus",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une epoch dans un protocole à preuve d'enjeu et à quoi sert-elle ?",
+    "reponse_reference": "Une epoch est une période de temps découpant l'activité du réseau, souvent de quelques minutes, pendant laquelle la configuration des validateurs est figée. Ce découpage permet de réorganiser les ensembles de validateurs, d'ajuster les récompenses et de déclencher les mécanismes de sortie et d'entrée des validateurs sans déstabiliser le protocole.",
+    "mots_cles_attendus": [
+      "epoch",
+      "validateurs",
+      "réorganisation",
+      "récompenses",
+      "période"
+    ]
+  },
+  {
+    "id": "web3_blockchain-057",
+    "domaine": "web3_blockchain",
+    "sous_theme": "smart_contracts",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un proxy de contrat et pourquoi cette architecture est-elle populaire ?",
+    "reponse_reference": "Un proxy est un contrat qui délègue l'exécution à un contrat d'implémentation, dont l'adresse est stockée dans l'état du proxy. Les appels sont exécutés via delegatecall, ce qui permet de corriger ou remplacer la logique sans changer l'adresse du proxy et sans migrer les fonds ni les positions des utilisateurs. Le risque majeur est qu'une implémentation compromise puisse être branchée sur le proxy.",
+    "mots_cles_attendus": [
+      "proxy",
+      "implémentation",
+      "delegatecall",
+      "adresse stable",
+      "risque"
+    ]
+  },
+  {
+    "id": "web3_blockchain-058",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 3,
+    "type": "scenario",
+    "question": "Une dApp affiche « out of gas » alors que l'utilisateur a payé des frais très élevés. Que s'est-il passé ?",
+    "reponse_reference": "Le montant total payé en wei n'est pas la même chose que la limite de gas : les frais correspondent à gas utilisé × prix du gas. Si la limite de gas fixée est inférieure à celle requise par l'exécution, la transaction est annulée et le gas non consommé est remboursé. Un prix du gas élevé avec une limite insuffisante produit donc systématiquement cet échec.",
+    "mots_cles_attendus": [
+      "out of gas",
+      "limite de gas",
+      "gas utilisé",
+      "prix du gas",
+      "remboursement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-059",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que l'approbation de jetons (approve) et quels dangers présente-t-elle ?",
+    "reponse_reference": "L'approbation autorise un contrat à retirer un montant de jetons au nom du détenteur, sans transfert immédiat de fonds. Une approbation illimitée donnée à un contrat compromis ou malveillant ou malveillant permet à celui-ci de vider le compte dès qu'il le souhaite ; c'est pourquoi les interfaces modernes proposent des approbations par montant exact ou par expiration.",
+    "mots_cles_attendus": [
+      "approve",
+      "autorisation",
+      "montant illimité",
+      "revocation",
+      "vol de jetons"
+    ]
+  },
+  {
+    "id": "web3_blockchain-060",
+    "domaine": "web3_blockchain",
+    "sous_theme": "blockchain",
+    "niveau": 3,
+    "type": "definition",
+    "question": "Qu'est-ce que la « réorganisation » (reorg) d'une blockchain et quand se produit-elle ?",
+    "reponse_reference": "Une réorganisation se produit quand un nœud remplace la chaîne qu'il avait suivie par une chaîne concurrente plus lourde (preuve de travail) ou mieux justifiée (preuve d'enjeu). Elle concerne généralement les derniers blocs sur les chaînes à finalité probabiliste et nécessite plusieurs confirmations pour être considérée comme définitive.",
+    "mots_cles_attendus": [
+      "reorg",
+      "chaîne concurrente",
+      "confirmations",
+      "derniers blocs"
+    ]
+  },
+  {
+    "id": "web3_blockchain-061",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un event en Solidity et à quoi sert-il ?",
+    "reponse_reference": "Un event est une déclaration qui permet à un contrat d'émettre des entrées dans les journaux (logs) de la transaction, sans les stocker dans l'état du contrat. Les paramètres marqués indexed deviennent des topics interrogeables, ce qui permet aux applications hors chaîne (indexeurs, dApps) de surveiller l'activité du contrat à faible coût.",
+    "mots_cles_attendus": [
+      "event",
+      "logs",
+      "indexed",
+      "topics",
+      "hors chaîne"
+    ]
+  },
+  {
+    "id": "web3_blockchain-062",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une fonction view, une fonction pure et une fonction qui modifie l'état en Solidity ?",
+    "reponse_reference": "Une fonction view peut lire l'état du contrat sans le modifier, une fonction pure ne lit ni ne modifie l'état, et une fonction classique peut le modifier. Les appels view et pure exécutés localement (eth_call) ne consomment pas de gas et ne produisent pas de transaction, contrairement à un appel qui modifie l'état.",
+    "mots_cles_attendus": [
+      "view",
+      "pure",
+      "état",
+      "eth_call",
+      "gas"
+    ]
+  },
+  {
+    "id": "web3_blockchain-063",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre le prix du gas (gas price) et la limite de gas (gas limit) d'une transaction ?",
+    "reponse_reference": "Le prix du gas est le montant que l'expéditeur accepte de payer par unité de gas, tandis que la limite de gas est le maximum d'unités que la transaction est autorisée à consommer. Le coût total maximal est donc le produit des deux : le gas non consommé est remboursé, mais dépasser la limite fait échouer toute la transaction.",
+    "mots_cles_attendus": [
+      "gas price",
+      "gas limit",
+      "unités",
+      "remboursement",
+      "échec"
+    ]
+  },
+  {
+    "id": "web3_blockchain-064",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un modifier en Solidity et quel est son usage typique ?",
+    "reponse_reference": "Un modifier est un morceau de code réutilisable exécuté avant ou après le corps d'une fonction, souvent utilisé pour contrôler l'accès (par exemple onlyOwner) ou valider des conditions. Il s'écrit avec le symbole _; qui marque l'emplacement où le corps de la fonction cible est inséré.",
+    "mots_cles_attendus": [
+      "modifier",
+      "contrôle d'accès",
+      "réutilisable",
+      "onlyOwner",
+      "_;"
+    ]
+  },
+  {
+    "id": "web3_blockchain-065",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelles sont les fonctions imposées par le standard ERC-20 et quel est le rôle de chacune ?",
+    "reponse_reference": "L'ERC-20 impose totalSupply, balanceOf, transfer, transferFrom, approve et allowance, complétés par les événements Transfer et Approval. Les trois premières gèrent l'offre et les soldes, tandis que transferFrom, approve et allowance permettent à un tiers (un DEX par exemple) de dépenser des jetons au nom du détenteur.",
+    "mots_cles_attendus": [
+      "totalSupply",
+      "balanceOf",
+      "transfer",
+      "approve",
+      "allowance"
+    ]
+  },
+  {
+    "id": "web3_blockchain-066",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un keystore chiffré (fichier JSON de portefeuille) et comment protège-t-il la clé privée ?",
+    "reponse_reference": "Un keystore est un fichier JSON contenant la clé privée chiffrée à l'aide d'un algorithme de dérivation de clé (souvent scrypt) à partir d'un mot de passe. La clé privée n'apparaît jamais en clair dans le fichier : il faut le mot de passe pour la déchiffrer, ce qui protège la clé en cas de vol du fichier, mais pas contre un mot de passe faible.",
+    "mots_cles_attendus": [
+      "keystore",
+      "chiffré",
+      "scrypt",
+      "mot de passe",
+      "clé privée"
+    ]
+  },
+  {
+    "id": "web3_blockchain-067",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur envoie un simple transfert d'ETH avec une limite de gas de 21 000 exactement. La transaction échoue avec un statut « out of gas ». Comment expliquer cet échec ?",
+    "reponse_reference": "Un transfert simple d'ETH coûte exactement 21 000 unités de gas, mais toute donnée supplémentaire (calldata, passage par un contrat) augmente le coût. Si le portefeuille a joint des données ou si une mise à jour du protocole a relevé le coût d'une opération, la limite est dépassée et l'exécution est intégralement annulée.",
+    "mots_cles_attendus": [
+      "21 000",
+      "gas limit",
+      "out of gas",
+      "calldata",
+      "annulée"
+    ]
+  },
+  {
+    "id": "web3_blockchain-068",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une interface en Solidity et pourquoi l'utiliser plutôt que de réécrire un contrat complet ?",
+    "reponse_reference": "Une interface déclare la signature des fonctions et des événements d'un contrat sans leur implémentation, ce qui permet d'appeler un contrat externe en ne connaissant que son interface. Elle réduit le code déployé, limite les erreurs et sert de contrat standard (IERC20 par exemple) que tous les contrats peuvent respecter.",
+    "mots_cles_attendus": [
+      "interface",
+      "signatures",
+      "sans implémentation",
+      "appel externe",
+      "standard"
+    ]
+  },
+  {
+    "id": "web3_blockchain-069",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur a approuvé 1 000 USDC à un DEX quelques mois plus tôt. Le DEX est ensuite compromis par une faille. Ses jetons sont-ils en danger et pourquoi ?",
+    "reponse_reference": "Oui, si l'approbation est encore active (allowance non consommée), le contrat compromis peut appeler transferFrom pour déplacer les jetons de l'utilisateur sans nouvelle signature de sa part. C'est pourquoi il faut révoquer les approbations inutilisées ou utiliser des allowances exactes plutôt qu'illimitées.",
+    "mots_cles_attendus": [
+      "allowance",
+      "approve",
+      "transferFrom",
+      "révocation",
+      "approbation illimitée"
+    ]
+  },
+  {
+    "id": "web3_blockchain-070",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un mapping en Solidity et quelles sont ses limites ?",
+    "reponse_reference": "Un mapping associe une clé (adresse, identifiant) à une valeur, comme un dictionnaire, et tout accès à une clé absente renvoie la valeur zéro du type. Il n'est ni itérable ni énumérable directement : pour lister les clés, il faut maintenir un tableau séparé, et il n'existe pas de fonction pour connaître sa taille.",
+    "mots_cles_attendus": [
+      "mapping",
+      "clé",
+      "valeur zéro",
+      "non itérable",
+      "tableau séparé"
+    ]
+  },
+  {
+    "id": "web3_blockchain-071",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce que le calldata d'une transaction et quelle place occupe-t-il dans l'EVM ?",
+    "reponse_reference": "Le calldata est la zone de données immuable et peu coûteuse attachée à une transaction, qui contient le sélecteur de fonction et les arguments. Contrairement à la memory et au storage, il ne peut pas être modifié pendant l'exécution, et sa lecture coûte nettement moins cher que celle de la memory.",
+    "mots_cles_attendus": [
+      "calldata",
+      "immuable",
+      "sélecteur",
+      "arguments",
+      "peu coûteux"
+    ]
+  },
+  {
+    "id": "web3_blockchain-072",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un utilisateur perd son téléphone où était installé son portefeuille, mais il a conservé sa phrase de récupération de 12 mots. Peut-il récupérer ses fonds et comment ?",
+    "reponse_reference": "Oui : la phrase de récupération encode la graine (seed) à partir de laquelle toutes les clés privées sont dérivées de façon déterministe selon le standard BIP-39 et un chemin de dérivation BIP-32/44. En la saisissant dans un nouveau portefeuille compatible, il régénère exactement les mêmes comptes et retrouve l'accès à ses fonds.",
+    "mots_cles_attendus": [
+      "seed phrase",
+      "BIP-39",
+      "dérivation déterministe",
+      "restauration",
+      "clés privées"
+    ]
+  },
+  {
+    "id": "web3_blockchain-073",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Quelle est la différence entre une fonction external et une fonction public en Solidity ?",
+    "reponse_reference": "Les deux sont appelables de l'extérieur, mais une fonction external ne peut être appelée depuis l'intérieur du contrat que via this.f(), tandis qu'une fonction public est directement appelable en interne. external permet une optimisation : les paramètres restent en calldata au lieu d'être copiés en memory, ce qui réduit le coût en gas.",
+    "mots_cles_attendus": [
+      "external",
+      "public",
+      "calldata",
+      "this.f()",
+      "gas"
+    ]
+  },
+  {
+    "id": "web3_blockchain-074",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "definition",
+    "question": "À quoi sert le champ decimals d'un token ERC-20 et pourquoi ne faut-il pas le confondre avec le solde réel ?",
+    "reponse_reference": "decimals indique en combien de sous-unités le token est divisible : un solde stocké de 1 000 000 avec 6 decimals représente 1 token affichable. Les soldes et transferts sont exprimés en unités de base, et les interfaces doivent diviser par 10^decimals pour afficher la valeur lisible par l'humain.",
+    "mots_cles_attendus": [
+      "decimals",
+      "sous-unités",
+      "divisibilité",
+      "10^decimals",
+      "affichage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-075",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un contrat de loterie tire son gagnant en utilisant block.timestamp comme source d'aléa. Pourquoi cette approche est-elle dangereuse ?",
+    "reponse_reference": "block.timestamp est fixé par le validateur qui produit le bloc, lequel peut le manipuler dans une petite fenêtre pour influencer le résultat du tirage. L'aléa doit donc provenir d'une source externe vérifiable comme un VRF (Chainlink VRF) ou d'un schéma commit-reveal, jamais de données de bloc.",
+    "mots_cles_attendus": [
+      "block.timestamp",
+      "manipulation",
+      "aléa",
+      "VRF",
+      "commit-reveal"
+    ]
+  },
+  {
+    "id": "web3_blockchain-076",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un constructor en Solidity et quelles opérations y réalise-t-on ?",
+    "reponse_reference": "Le constructor est une fonction spéciale exécutée une seule fois lors du déploiement du contrat, et qui ne fait pas partie du bytecode déployé. On l'utilise pour initialiser les variables d'état, définir le propriétaire, configurer les adresses de dépendances ou stocker des valeurs immuables.",
+    "mots_cles_attendus": [
+      "constructor",
+      "déploiement",
+      "une seule fois",
+      "initialisation",
+      "état"
+    ]
+  },
+  {
+    "id": "web3_blockchain-077",
+    "domaine": "web3_blockchain",
+    "sous_theme": "token",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Une dApp appelle transferFrom avec un montant supérieur à l'allowance accordée par l'utilisateur. Que se passe-t-il lors de l'exécution ?",
+    "reponse_reference": "L'appel échoue avec un revert : le contrat ERC-20 vérifie que le montant est inférieur ou égal à l'allowance et à la balance de l'expéditeur avant de décrémenter. Aucun jeton n'est déplacé et l'état reste inchangé, l'échec étant visible sur l'explorateur sous forme de transaction reverted.",
+    "mots_cles_attendus": [
+      "transferFrom",
+      "allowance",
+      "revert",
+      "état inchangé",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-078",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Pourquoi l'écriture en storage (SSTORE) est-elle l'opération la plus coûteuse de l'EVM ?",
+    "reponse_reference": "Le storage est persistant et répliqué sur tous les nœuds du réseau : chaque écriture doit être conservée indéfiniment et intégrée à l'état global, ce qui engendre un coût permanent. L'EVM facture donc cher l'écriture d'un slot non nul (20 000 unités) et accorde un remboursement limité lors de la remise à zéro pour inciter à nettoyer l'état.",
+    "mots_cles_attendus": [
+      "SSTORE",
+      "persistant",
+      "réplication",
+      "20 000",
+      "remboursement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-079",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 4,
+    "type": "scenario",
+    "question": "Un contrat contient une boucle for qui itère sur un tableau dynamique dont la taille augmente à chaque appel. Quel risque cette conception fait-elle courir ?",
+    "reponse_reference": "Le coût en gas croît avec la taille du tableau : au-delà d'un certain nombre d'itérations, la transaction dépasse la limite de gas du bloc et devient impossible à exécuter. Le contrat est alors bloqué (déni de service) pour cette fonction, et les fonds ou les états associés peuvent devenir inaccessibles.",
+    "mots_cles_attendus": [
+      "boucle",
+      "gas",
+      "limite de bloc",
+      "déni de service",
+      "inaccessible"
+    ]
+  },
+  {
+    "id": "web3_blockchain-080",
+    "domaine": "web3_blockchain",
+    "sous_theme": "portefeuille",
+    "niveau": 4,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un portefeuille matériel (hardware wallet) et comment protège-t-il la clé privée ?",
+    "reponse_reference": "Un portefeuille matériel est un petit appareil dédié qui stocke la clé privée dans un composant sécurisé isolé et signe les transactions en interne, sans jamais exposer la clé à l'ordinateur connecté. Même sur une machine infectée par un malware, l'attaquant ne peut ni lire la clé ni faire signer une transaction sans validation physique sur l'appareil.",
+    "mots_cles_attendus": [
+      "hardware wallet",
+      "clé isolée",
+      "signature interne",
+      "malware",
+      "validation physique"
+    ]
+  },
+  {
+    "id": "web3_blockchain-081",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token non fongible selon le standard ERC-721 et que représente son tokenId ?",
+    "reponse_reference": "Un token ERC-721 est un actif unique et indivisible, identifié par un couple (adresse du contrat, tokenId) : chaque tokenId désigne un objet distinct qui n'est pas interchangeable avec un autre. Le standard définit les fonctions ownerOf, transferFrom, approve et balanceOf, ainsi que l'événement Transfer, pour suivre la propriété de chaque identifiant.",
+    "mots_cles_attendus": [
+      "ERC-721",
+      "non fongible",
+      "tokenId",
+      "unique",
+      "ownerOf"
+    ]
+  },
+  {
+    "id": "web3_blockchain-082",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le standard ERC-1155 et en quoi se distingue-t-il de l'ERC-721 ?",
+    "reponse_reference": "L'ERC-1155 est un standard multi-token qui gère dans un seul contrat des actifs fongibles, non fongibles et semi-fongibles, chaque type étant identifié par un id associé à une quantité. Il permet des transferts par lots (batch transfer) de plusieurs types de tokens en une seule transaction, ce qui réduit fortement les coûts de gas par rapport à des contrats séparés.",
+    "mots_cles_attendus": [
+      "ERC-1155",
+      "multi-token",
+      "semi-fongible",
+      "batch transfer",
+      "un seul contrat"
+    ]
+  },
+  {
+    "id": "web3_blockchain-083",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Où sont stockées les métadonnées d'un NFT et quel est le rôle de la fonction tokenURI ?",
+    "reponse_reference": "Les métadonnées (image, nom, attributs) ne sont généralement pas stockées dans le contrat, mais sur un stockage externe référencé par la fonction tokenURI, qui renvoie l'URL ou l'identifiant du fichier. Les bonnes pratiques utilisent un contenu adressé par son contenu, comme un CID IPFS, afin que le fichier ne puisse pas être modifié ou disparaître avec un serveur.",
+    "mots_cles_attendus": [
+      "métadonnées",
+      "tokenURI",
+      "IPFS",
+      "CID",
+      "hors contrat"
+    ]
+  },
+  {
+    "id": "web3_blockchain-084",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionne un teneur de marché automatisé (AMM) à produit constant de type Uniswap ?",
+    "reponse_reference": "Un AMM remplace le carnet d'ordres par un pool de liquidité contenant deux actifs, régi par la formule x*y=k où x et y sont les réserves et k une constante. Un échange modifie les réserves de sorte que le produit reste constant, ce qui déplace mécaniquement le prix : plus l'échange est gros, plus le prix obtenu se dégrade (slippage).",
+    "mots_cles_attendus": [
+      "AMM",
+      "pool",
+      "x*y=k",
+      "réserves",
+      "prix mécanique"
+    ]
+  },
+  {
+    "id": "web3_blockchain-085",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que la perte impermanente (impermanent loss) d'un fournisseur de liquidité ?",
+    "reponse_reference": "La perte impermanente est l'écart entre la valeur des actifs détenus dans un pool AMM et leur valeur s'ils avaient été simplement conservés, causé par l'évolution des prix. Elle est dite impermanente car elle peut se résorber si les prix reviennent à leur niveau initial, mais elle devient définitive si le fournisseur retire sa liquidité entre-temps, et elle n'est pas compensée par les frais si l'écart de prix est trop grand.",
+    "mots_cles_attendus": [
+      "impermanent loss",
+      "pool",
+      "écart de valeur",
+      "prix",
+      "frais"
+    ]
+  },
+  {
+    "id": "web3_blockchain-086",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un oracle dans une blockchain et pourquoi parle-t-on du « problème de l'oracle » ?",
+    "reponse_reference": "Un oracle est un service qui apporte à la chaîne des données externes (prix, météo, résultat sportif) qu'un contrat ne peut pas obtenir seul, la blockchain étant un système fermé. Le problème de l'oracle est que la donnée doit être fiable : un contrat ne vaut que ce que vaut sa source, d'où la nécessité de réseaux d'oracles décentralisés qui agrègent plusieurs sources et nœuds.",
+    "mots_cles_attendus": [
+      "oracle",
+      "données externes",
+      "source fiable",
+      "agrégation",
+      "décentralisé"
+    ]
+  },
+  {
+    "id": "web3_blockchain-087",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Dans quels cas préférer l'ERC-1155 à l'ERC-721 pour un projet de collection ?",
+    "reponse_reference": "L'ERC-1155 est préférable pour les jeux ou les collections comportant de nombreux exemplaires du même objet (armes, cartes, skins), car un seul contrat gère tous les types et les transferts par lots réduisent les coûts. L'ERC-721 reste adapté aux œuvres réellement uniques où chaque jeton doit avoir sa propre histoire et ses propres métadonnées.",
+    "mots_cles_attendus": [
+      "ERC-1155",
+      "exemplaires",
+      "jeux",
+      "coûts",
+      "ERC-721"
+    ]
+  },
+  {
+    "id": "web3_blockchain-088",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur dépose 1 ETH et 2 000 USDC dans un pool ETH/USDC. Quelques semaines plus tard, le prix de l'ETH a doublé. Que constate-t-il en retirant sa liquidité ?",
+    "reponse_reference": "Il récupère une quantité d'ETH inférieure et une quantité d'USDC supérieure à son dépôt initial, car le pool a vendu de l'ETH en hausse pour rééquilibrer les réserves. La valeur totale de ses parts est supérieure au dépôt mais inférieure à ce qu'il aurait eu en conservant simplement ses actifs : c'est la perte impermanente, partiellement compensée par les frais de trading perçus.",
+    "mots_cles_attendus": [
+      "rééquilibrage",
+      "perte impermanente",
+      "frais de trading",
+      "réserves",
+      "valeur"
+    ]
+  },
+  {
+    "id": "web3_blockchain-089",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le slippage dans un échange sur AMM et comment s'en prémunir ?",
+    "reponse_reference": "Le slippage est l'écart entre le prix affiché au moment de la soumission et le prix réellement obtenu, dû au fait qu'un gros ordre déplace la courbe x*y=k et que d'autres transactions peuvent passer avant. On s'en prémunit en fixant un slippage maximal toléré : si le prix d'exécution s'en écarte trop, la transaction est annulée automatiquement.",
+    "mots_cles_attendus": [
+      "slippage",
+      "écart de prix",
+      "tolérance",
+      "annulation",
+      "x*y=k"
+    ]
+  },
+  {
+    "id": "web3_blockchain-090",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un NFT acheté récemment ne s'affiche plus : son image est remplacée par un message d'erreur. Quelles causes techniques peuvent l'expliquer ?",
+    "reponse_reference": "Le plus souvent, les métadonnées pointaient vers un serveur centralisé (URL http) aujourd'hui hors ligne, ou vers un stockage dont l'opérateur a modifié ou supprimé le fichier. Le token existe toujours sur la chaîne, mais son visuel dépend d'un stockage externe : un projet sérieux référence un CID IPFS, adressé par le contenu, qui reste disponible tant qu'au moins un nœud IPFS l'héberge.",
+    "mots_cles_attendus": [
+      "serveur centralisé",
+      "hors ligne",
+      "tokenURI",
+      "IPFS",
+      "métadonnées"
+    ]
+  },
+  {
+    "id": "web3_blockchain-091",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment fonctionnent les royalties d'un NFT et quel standard les encadre sur Ethereum ?",
+    "reponse_reference": "Les royalties reversent automatiquement à l'auteur un pourcentage du prix à chaque revente du NFT sur un marché compatible. Le standard EIP-2981 expose la fonction royaltyInfo qui renvoie le destinataire et le pourcentage dus, mais leur application dépend des places de marché, qui doivent choisir de les honorer lors du règlement.",
+    "mots_cles_attendus": [
+      "royalties",
+      "revente",
+      "EIP-2981",
+      "royaltyInfo",
+      "pourcentage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-092",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Comment un réseau d'oracles comme Chainlink produit-il un prix fiable pour un contrat DeFi ?",
+    "reponse_reference": "Chainlink fait rapporter un même prix par de nombreux nœuds indépendants qui puisent dans plusieurs sources (agrégateurs d'échanges, flux institutionnels), puis agrège leurs réponses en éliminant les valeurs aberrantes. Le résultat médian est publié dans un contrat agrégateur avec un horodatage et un seuil de fraîcheur, et les nœuds sont incités financièrement à répondre correctement.",
+    "mots_cles_attendus": [
+      "nœuds",
+      "agrégation",
+      "médiane",
+      "agrégateur",
+      "fraîcheur"
+    ]
+  },
+  {
+    "id": "web3_blockchain-093",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un utilisateur voit son swap échouer alors que le prix affiché était acceptable quelques secondes plus tôt. Que s'est-il probablement passé dans le mempool ?",
+    "reponse_reference": "Des transactions concurrentes ont probablement été exécutées juste avant la sienne, déplaçant le prix du pool au-delà de sa tolérance de slippage. Le protocole a alors annulé son échange pour le protéger d'un prix dégradé, éventuellement sous l'effet d'un robot de front-running qui exploite la visibilité des ordres dans le mempool.",
+    "mots_cles_attendus": [
+      "mempool",
+      "front-running",
+      "slippage",
+      "prix dégradé",
+      "annulation"
+    ]
+  },
+  {
+    "id": "web3_blockchain-094",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce que le lazy minting d'un NFT et quel avantage économique apporte-t-il ?",
+    "reponse_reference": "Le lazy minting consiste à ne pas écrire le token dans le contrat à la création : l'auteur signe hors chaîne un bon (voucher) décrivant l'œuvre, et le NFT n'est frappé que lorsque l'acheteur paie. Le coût de la frappe est ainsi transféré à l'acheteur, et l'auteur peut lister des œuvres gratuitement sans payer de gas tant qu'elles ne se vendent pas.",
+    "mots_cles_attendus": [
+      "lazy minting",
+      "signature hors chaîne",
+      "voucher",
+      "gas",
+      "à l'achat"
+    ]
+  },
+  {
+    "id": "web3_blockchain-095",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un protocole de prêt calcule les prix de ses garanties en lisant directement le solde de réserves d'un DEX. Pourquoi un auditeur qualifierait-il ce choix de dangereux ?",
+    "reponse_reference": "Le prix instantané d'un pool (spot price) peut être manipulé en une seule transaction : un attaquant fait un gros swap, fausse le prix lu, emprunte plus que la valeur réelle de la garantie puis s'enfuit avec les fonds. Un protocole doit utiliser un oracle résistant comme un prix moyen pondéré dans le temps (TWAP) ou un agrégateur décentralisé comme Chainlink.",
+    "mots_cles_attendus": [
+      "spot price",
+      "manipulation",
+      "swap",
+      "TWAP",
+      "oracle décentralisé"
+    ]
+  },
+  {
+    "id": "web3_blockchain-096",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un jeton LP (liquidity provider token) et que représente-t-il ?",
+    "reponse_reference": "Un jeton LP est un token reçu en échange d'un dépôt de liquidité dans un pool, qui représente la part du déposant dans les réserves. Il peut être échangé, transféré ou déposé dans d'autres protocoles (farming), et doit être restitué au pool pour récupérer la part des réserves plus les frais accumulés.",
+    "mots_cles_attendus": [
+      "jeton LP",
+      "part du pool",
+      "dépôt",
+      "frais accumulés",
+      "farming"
+    ]
+  },
+  {
+    "id": "web3_blockchain-097",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Que signifie « brûler » (burn) un NFT et pourquoi le fait-on ?",
+    "reponse_reference": "Brûler un NFT consiste à l'envoyer à une adresse sans clé privée (adresse de gravure) ou à appeler une fonction burn du contrat, ce qui le rend définitivement inutilisable. On le fait pour réduire l'offre, pour échanger un ancien token contre une nouvelle version (migration) ou pour détruire une œuvre compromise.",
+    "mots_cles_attendus": [
+      "burn",
+      "adresse de gravure",
+      "définitif",
+      "réduire l'offre",
+      "migration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-098",
+    "domaine": "web3_blockchain",
+    "sous_theme": "nft",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Deux NFT d'une même collection affichent exactement la même image et les mêmes métadonnées, mais possèdent des tokenId différents. Sont-ils interchangeables et qu'est-ce que cela révèle ?",
+    "reponse_reference": "Non : ils restent distincts sur la chaîne car chaque tokenId est unique et traçable, mais le fait qu'ils partagent les mêmes métadonnées affaiblit la rareté affichée de la collection. Cela révèle souvent une génération d'images mal gérée ou une collection semi-fongible qui aurait dû utiliser l'ERC-1155 plutôt qu'un ERC-721 avec des doublons visuels.",
+    "mots_cles_attendus": [
+      "tokenId",
+      "unicité",
+      "métadonnées identiques",
+      "rareté",
+      "ERC-1155"
+    ]
+  },
+  {
+    "id": "web3_blockchain-099",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 5,
+    "type": "definition",
+    "question": "Quelle différence existe-t-il entre un AMM à produit constant et un pool de type stableswap ?",
+    "reponse_reference": "Le produit constant (x*y=k) fonctionne pour toutes les paires mais entraîne un fort slippage près du prix d'équilibre. Un stableswap (comme Curve) combine le produit constant avec un invariant linéaire pour concentrer la liquidité autour d'un prix cible, ce qui donne un slippage minimal pour des actifs de valeur proche comme des stablecoins.",
+    "mots_cles_attendus": [
+      "produit constant",
+      "stableswap",
+      "slippage",
+      "stablecoins",
+      "invariant"
+    ]
+  },
+  {
+    "id": "web3_blockchain-100",
+    "domaine": "web3_blockchain",
+    "sous_theme": "oracle",
+    "niveau": 5,
+    "type": "scenario",
+    "question": "Un protocole de liquidation lit un prix d'oracle mis à jour il y a plusieurs heures, alors que le marché vient de chuter brutalement. Quel risque cela crée-t-il ?",
+    "reponse_reference": "Un prix obsolète (stale) sous-évalue la baisse : les positions sous-garanties ne sont pas liquidées à temps, et le protocole accumule de la dette irrécouvrable. Les contrats doivent donc vérifier l'horodatage et la fraîcheur du prix retourné par l'oracle, et déclencher un circuit breaker ou une mise à jour forcée avant d'agir.",
+    "mots_cles_attendus": [
+      "prix obsolète",
+      "stale",
+      "liquidation",
+      "dette irrécouvrable",
+      "horodatage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-101",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Comment fonctionne un protocole de prêt décentralisé comme Aave ou Compound ?",
+    "reponse_reference": "Les déposants fournissent des actifs dans un pool et perçoivent un intérêt, tandis que les emprunteurs déposent une garantie (collatéral) d'une valeur supérieure au prêt, selon un ratio de sur-garantie fixé par le protocole. Les taux d'intérêt sont calculés algorithmiquement en fonction de l'utilisation du pool, et si la garantie ne couvre plus le prêt, la position est liquidée automatiquement par des tiers rémunérés.",
+    "mots_cles_attendus": [
+      "pool",
+      "collatéral",
+      "sur-garantie",
+      "taux d'utilisation",
+      "liquidation"
+    ]
+  },
+  {
+    "id": "web3_blockchain-102",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le health factor d'une position de prêt DeFi et que signifie sa valeur ?",
+    "reponse_reference": "Le health factor est le ratio entre la valeur de la garantie (ajustée de son facteur de pondération) et la valeur de la dette : au-dessus de 1, la position est saine, à 1 elle est à la limite. S'il passe sous 1, la position devient liquidable : un liquidateur peut rembourser une partie de la dette et saisir la garantie correspondante avec une décote.",
+    "mots_cles_attendus": [
+      "health factor",
+      "garantie",
+      "dette",
+      "liquidable",
+      "décote"
+    ]
+  },
+  {
+    "id": "web3_blockchain-103",
+    "domaine": "web3_blockchain",
+    "sous_theme": "stablecoin",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle est la différence entre un stablecoin collatéralisé et un stablecoin algorithmique ?",
+    "reponse_reference": "Un stablecoin collatéralisé est adossé à des réserves d'actifs (fiat, obligations, crypto sur-garanties) qui garantissent sa valeur de rachat. Un stablecoin algorithmique tente de maintenir son ancrage uniquement par des mécanismes d'incitation entre deux jetons (mint/burn, arbitrage), sans réserve suffisante, ce qui le rend vulnérable aux spirales de perte de confiance.",
+    "mots_cles_attendus": [
+      "collatéralisé",
+      "réserves",
+      "algorithmique",
+      "ancrage",
+      "arbitrage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-104",
+    "domaine": "web3_blockchain",
+    "sous_theme": "stablecoin",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Par quels mécanismes un stablecoin sur-garanti comme le DAI maintient-il son ancrage au dollar ?",
+    "reponse_reference": "Le DAI est créé en verrouillant un excédent de garantie crypto dans une position de dette (vault) et détruit au remboursement, ce qui lie sa quantité à la demande. L'arbitrage fait le reste : si le DAI vaut plus d'un dollar, il est rentable d'en frapper, si il vaut moins, il est rentable de rembourser, ramenant le prix vers l'ancrage.",
+    "mots_cles_attendus": [
+      "vault",
+      "sur-garantie",
+      "mint",
+      "burn",
+      "arbitrage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-105",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un rollup et comment augmente-t-il la capacité d'Ethereum ?",
+    "reponse_reference": "Un rollup exécute les transactions sur une chaîne secondaire (L2), regroupe un grand nombre d'entre elles et ne publie sur Ethereum (L1) qu'un résumé compressé : données de transaction et nouvel état. La sécurité du L1 hérite ainsi de la L1, car n'importe qui peut reconstruire et vérifier l'état à partir des données publiées, tout en multipliant le débit.",
+    "mots_cles_attendus": [
+      "rollup",
+      "L2",
+      "regroupement",
+      "données publiées",
+      "héritage de sécurité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-106",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle est la différence entre un optimistic rollup et un ZK rollup ?",
+    "reponse_reference": "Un optimistic rollup publie un nouvel état en le supposant honnête et laisse une fenêtre de contestation (environ 7 jours) pendant laquelle une preuve de fraude peut invalider un état incorrect. Un ZK rollup joint à chaque lot une preuve de validité cryptographique que le contrat L1 vérifie immédiatement, ce qui donne une finalité rapide mais exige une infrastructure de preuve plus lourde.",
+    "mots_cles_attendus": [
+      "optimistic",
+      "preuve de fraude",
+      "fenêtre de contestation",
+      "preuve de validité",
+      "finalité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-107",
+    "domaine": "web3_blockchain",
+    "sous_theme": "bridge",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un bridge entre blockchains et quels sont ses principaux modèles de fonctionnement ?",
+    "reponse_reference": "Un bridge transfère des actifs ou des messages entre deux chaînes qui ne communiquent pas nativement. Le modèle lock-and-mint verrouille l'actif sur la chaîne source et émet un équivalent sur la chaîne cible ; le modèle burn-and-mint détruit l'actif d'un côté et le recrée de l'autre ; le modèle de liquidité s'appuie sur des pools pré-financés sur chaque chaîne.",
+    "mots_cles_attendus": [
+      "bridge",
+      "lock-and-mint",
+      "burn-and-mint",
+      "pool de liquidité",
+      "inter-chaînes"
+    ]
+  },
+  {
+    "id": "web3_blockchain-108",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quels rôles jouent le séquenceur et le proposant (proposer/batcher) dans un rollup ?",
+    "reponse_reference": "Le séquenceur ordonne les transactions des utilisateurs sur la L2 et leur donne une confirmation rapide, puis le proposant regroupe ces transactions en lots (batches) et publie les données compressées sur la L1. Le séquenceur apporte l'expérience utilisateur, tandis que le proposant ancre la sécurité : sans publication sur L1, les transactions restent non finales.",
+    "mots_cles_attendus": [
+      "séquenceur",
+      "proposant",
+      "batches",
+      "ordre",
+      "publication L1"
+    ]
+  },
+  {
+    "id": "web3_blockchain-109",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un emprunteur voit sa position liquidée alors que la valeur de sa garantie n'a baissé que de 8 %. Comment expliquer cette liquidation ?",
+    "reponse_reference": "Le protocole applique un facteur de pondération à la garantie (loan-to-value) : une garantie volatile n'est prise en compte qu'à 75 % ou moins de sa valeur. Si la dette représentait déjà près du maximum autorisé, une baisse de 8 % du prix de la garantie suffit à faire passer le health factor sous 1 et à déclencher la liquidation par un liquidateur.",
+    "mots_cles_attendus": [
+      "loan-to-value",
+      "pondération",
+      "health factor",
+      "liquidateur",
+      "volatilité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-110",
+    "domaine": "web3_blockchain",
+    "sous_theme": "stablecoin",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une position de dette collatéralisée (vault ou CDP) dans un système comme MakerDAO ?",
+    "reponse_reference": "Un vault est une position individuelle dans laquelle l'utilisateur verrouille une garantie (par exemple de l'ETH) pour frapper une quantité de DAI plafonnée par un ratio de collatéralisation minimum. L'utilisateur doit surveiller le prix de la garantie et rembourser ou renforcer sa position, sous peine de liquidation automatique avec pénalité par le protocole.",
+    "mots_cles_attendus": [
+      "vault",
+      "CDP",
+      "garantie verrouillée",
+      "ratio",
+      "pénalité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-111",
+    "domaine": "web3_blockchain",
+    "sous_theme": "bridge",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un utilisateur verrouille des tokens sur la chaîne A via un bridge, mais l'équivalent n'apparaît jamais sur la chaîne B. Quelles explications possibles et quelle leçon en tirer ?",
+    "reponse_reference": "Le verrou est enregistré, mais l'émission côté destination dépend d'un relais ou d'un groupe de validateurs du bridge : si celui-ci est en panne, censure ou a été compromis, les fonds restent bloqués. La leçon est que les bridges introduisent une hypothèse de confiance supplémentaire (le relais), qui n'existe pas dans un transfert natif au sein d'une même chaîne.",
+    "mots_cles_attendus": [
+      "verrou",
+      "relais",
+      "validateurs du bridge",
+      "blocage",
+      "hypothèse de confiance"
+    ]
+  },
+  {
+    "id": "web3_blockchain-112",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Quelle différence fondamentale existe-t-il entre un rollup et une sidechain ?",
+    "reponse_reference": "Un rollup publie ses données et ses preuves sur la L1, ce qui permet à quiconque de vérifier ou de contester son état : il hérite donc de la sécurité d'Ethereum. Une sidechain possède son propre consensus et ses propres validateurs : elle publie parfois des points de contrôle sur la L1, mais sa sécurité repose sur son propre réseau, généralement bien plus petit.",
+    "mots_cles_attendus": [
+      "rollup",
+      "sidechain",
+      "consensus propre",
+      "héritage de sécurité",
+      "points de contrôle"
+    ]
+  },
+  {
+    "id": "web3_blockchain-113",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Pourquoi les retraits d'un optimistic rollup vers la L1 prennent-ils plusieurs jours, et comment y remédier ?",
+    "reponse_reference": "Le retrait doit attendre la fin de la fenêtre de contestation (environ 7 jours) pour être certain qu'aucune preuve de fraude ne viendra invalider l'état qui le fonde. Des ponts de liquidité tiers proposent des retraits instantanés en achetant la créance moyennant une petite commission, et assument eux-mêmes le risque de contestation.",
+    "mots_cles_attendus": [
+      "fenêtre de contestation",
+      "7 jours",
+      "preuve de fraude",
+      "pont de liquidité",
+      "retrait instantané"
+    ]
+  },
+  {
+    "id": "web3_blockchain-114",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Le taux d'emprunt d'un pool de lending passe soudainement de 3 % à plus de 40 % en quelques heures. Qu'est-ce qui explique cette hausse ?",
+    "reponse_reference": "Les taux des protocoles de lending sont fonction de l'utilisation du pool : quand les emprunts approchent de la totalité des dépôts, la courbe de taux devient exponentielle pour inciter au remboursement et attirer de nouveaux dépôts. Une forte demande d'emprunt (levier, farming) sans dépôts supplémentaires fait donc exploser le taux.",
+    "mots_cles_attendus": [
+      "taux d'utilisation",
+      "courbe de taux",
+      "demande d'emprunt",
+      "dépôts",
+      "levier"
+    ]
+  },
+  {
+    "id": "web3_blockchain-115",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un flash loan et pourquoi n'exige-t-il aucune garantie ?",
+    "reponse_reference": "Un flash loan est un prêt emprunté et remboursé dans la même transaction : si le remboursement (avec commission) n'a pas lieu avant la fin de l'exécution, toute la transaction est annulée atomiquement. Le prêteur ne court donc aucun risque de défaut, ce qui rend la garantie inutile, et l'emprunteur l'utilise pour des arbitrages ou des opérations de refinancement instantanées.",
+    "mots_cles_attendus": [
+      "flash loan",
+      "même transaction",
+      "atomicité",
+      "sans garantie",
+      "remboursement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-116",
+    "domaine": "web3_blockchain",
+    "sous_theme": "stablecoin",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un stablecoin algorithmique décroche de son ancrage : son prix tombe à 0,60 dollar puis à 0,20 en deux jours. Décrivez le mécanisme de la spirale qui l'emporte.",
+    "reponse_reference": "La chute du prix déclenche la création massive du jeton d'équilibrage prévu pour le racheter, ce qui dilue encore la valeur des deux jetons : les détenteurs vendent, le prix baisse davantage, et le mécanisme émet encore plus. Cette spirale de mort s'auto-entretient car il n'existe aucune réserve réelle pour absorber la pression vendeuse, seulement la promesse du mécanisme.",
+    "mots_cles_attendus": [
+      "décrochage",
+      "spirale de mort",
+      "dilution",
+      "vente",
+      "pas de réserve"
+    ]
+  },
+  {
+    "id": "web3_blockchain-117",
+    "domaine": "web3_blockchain",
+    "sous_theme": "bridge",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un wrapped token comme le WBTC et quel rôle joue-t-il ?",
+    "reponse_reference": "Un wrapped token est un token émis sur une chaîne en représentation d'un actif natif d'une autre chaîne, comme le WBTC qui représente le Bitcoin sur Ethereum à parité 1:1. Il rend l'actif d'origine utilisable dans les protocoles DeFi de la chaîne hôte, sa valeur reposant sur le verrouillage du sous-jacent auprès d'un dépositaire ou d'un bridge.",
+    "mots_cles_attendus": [
+      "wrapped token",
+      "WBTC",
+      "parité",
+      "dépositaire",
+      "DeFi"
+    ]
+  },
+  {
+    "id": "web3_blockchain-118",
+    "domaine": "web3_blockchain",
+    "sous_theme": "layer_2",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Pourquoi un rollup doit-il publier les données de ses transactions sur la L1 et que se passe-t-il s'il ne le fait pas ?",
+    "reponse_reference": "La publication des données (disponibilité des données) garantit que n'importe qui peut reconstruire l'état de la L2 et détecter une fraude ou une censure : c'est elle qui fonde l'héritage de sécurité. Sans publication, les utilisateurs ne peuvent ni vérifier leurs soldes ni prouver un retrait, et la chaîne devient un système fermé à la merci de son opérateur.",
+    "mots_cles_attendus": [
+      "disponibilité des données",
+      "reconstruction",
+      "censure",
+      "sécurité",
+      "publication"
+    ]
+  },
+  {
+    "id": "web3_blockchain-119",
+    "domaine": "web3_blockchain",
+    "sous_theme": "bridge",
+    "niveau": 6,
+    "type": "scenario",
+    "question": "Un bridge repose sur un multisig de 5 signatures dont 3 sont requises pour libérer les fonds. Deux détenteurs de clés sont compromis. Que risque-t-il de se produire ?",
+    "reponse_reference": "Avec deux clés compromises, l'attaquant ne lui manque qu'une signature sur cinq pour atteindre le seuil de trois : le bridge est à une compromission près de permettre la frappe ou le déblocage arbitraire de fonds sur la chaîne cible. C'est pourquoi les bridges gardiens concentrent un risque énorme : ils valident souvent la totalité des fonds verrouillés.",
+    "mots_cles_attendus": [
+      "multisig",
+      "seuil",
+      "clés compromises",
+      "bridge gardien",
+      "déblocage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-120",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 6,
+    "type": "definition",
+    "question": "Qu'est-ce que le yield farming et pourquoi des rendements très élevés sont-ils suspects ?",
+    "reponse_reference": "Le yield farming consiste à déposer des actifs dans des protocoles pour percevoir des rendements, souvent versés en jetons de gouvernance émis par le protocole. Un rendement extrême provient généralement d'une émission inflationniste du jeton de récompense dont le prix chute à mesure que les fermiers le revendent, et peut aussi masquer un ponzi ou un risque de perte du capital déposé.",
+    "mots_cles_attendus": [
+      "yield farming",
+      "jetons de gouvernance",
+      "inflation",
+      "revente",
+      "risque"
+    ]
+  },
+  {
+    "id": "web3_blockchain-121",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que l'attaque par réentrance (reentrancy) sur un smart contract ?",
+    "reponse_reference": "La réentrance survient lorsqu'un contrat appelle un contrat externe (transfert de fonds, appel arbitraire) avant d'avoir mis à jour son propre état : le contrat appelé, s'il est malveillant, rappelle alors la même fonction avant la fin de la première exécution. L'attaquant peut ainsi retirer des fonds plusieurs fois alors que son solde n'a été débité qu'une seule fois.",
+    "mots_cles_attendus": [
+      "réentrance",
+      "appel externe",
+      "état non mis à jour",
+      "rappel",
+      "double retrait"
+    ]
+  },
+  {
+    "id": "web3_blockchain-122",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le patron checks-effects-interactions et pourquoi prévient-il la réentrance ?",
+    "reponse_reference": "Ce patron impose d'ordonner le code en trois temps : vérifier les conditions (checks), mettre à jour l'état du contrat (effects), puis seulement effectuer les appels externes (interactions). Comme l'état est déjà à jour avant tout appel sortant, un contrat malveillant qui rappelle la fonction ne peut plus exploiter un solde ou un droit déjà consommé.",
+    "mots_cles_attendus": [
+      "checks",
+      "effects",
+      "interactions",
+      "état à jour",
+      "ordre"
+    ]
+  },
+  {
+    "id": "web3_blockchain-123",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un dépassement d'entier (overflow/underflow) et comment Solidity s'en protège-t-il ?",
+    "reponse_reference": "Un dépassement se produit quand une opération arithmétique sort de la plage du type (par exemple 2^256-1 + 1) et « reboucle » vers une petite valeur, faussant soldes et compteurs. Depuis Solidity 0.8, les opérations contrôlées provoquent un revert automatique en cas de dépassement ; avant cette version, il fallait utiliser des bibliothèques comme SafeMath.",
+    "mots_cles_attendus": [
+      "overflow",
+      "underflow",
+      "revert",
+      "Solidity 0.8",
+      "SafeMath"
+    ]
+  },
+  {
+    "id": "web3_blockchain-124",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le front-running dans le mempool et pourquoi est-il possible ?",
+    "reponse_reference": "Le front-running consiste à observer une transaction en attente dans le mempool et à soumettre la sienne avec un prix de gas supérieur pour qu'elle soit incluse juste avant. Comme les transactions sont publiques avant inclusion, un robot peut copier un arbitrage, devancer un achat de NFT ou un dépôt dans un pool, au détriment de la victime.",
+    "mots_cles_attendus": [
+      "front-running",
+      "mempool",
+      "gas supérieur",
+      "ordre d'inclusion",
+      "robot"
+    ]
+  },
+  {
+    "id": "web3_blockchain-125",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Comment une signature ECDSA est-elle produite et vérifiée sur Ethereum ?",
+    "reponse_reference": "Le signataire calcule une signature (r, s) sur le condensat du message avec sa clé privée et une valeur aléatoire (nonce), puis ajoute un bit de parité v pour identifier quelle clé publique candidate a signé. N'importe qui peut vérifier la signature avec la clé publique, et la fonction ecrecover permet de retrouver l'adresse du signataire à partir du message et de la signature.",
+    "mots_cles_attendus": [
+      "ECDSA",
+      "r, s, v",
+      "clé privée",
+      "ecrecover",
+      "nonce"
+    ]
+  },
+  {
+    "id": "web3_blockchain-126",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un audit de smart contract et que couvre-t-il ?",
+    "reponse_reference": "Un audit est une revue méthodique du code d'un contrat par un tiers spécialisé, qui combine lecture manuelle, outils d'analyse statique, fuzzing et tests de scénarios d'attaque. Il délivre un rapport classant les vulnérabilités par gravité et propose des correctifs, sans toutefois constituer une garantie absolue d'absence de failles.",
+    "mots_cles_attendus": [
+      "audit",
+      "revue de code",
+      "analyse statique",
+      "gravité",
+      "rapport"
+    ]
+  },
+  {
+    "id": "web3_blockchain-127",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelle est la différence entre tx.origin et msg.sender, et pourquoi tx.origin est-il dangereux pour le contrôle d'accès ?",
+    "reponse_reference": "msg.sender est l'appelant immédiat du contrat, tandis que tx.origin est le compte qui a initié toute la transaction, sans changer à travers les appels intermédiaires. Un contrôle basé sur tx.origin est vulnérable : si la victime appelle un contrat malveillant, celui-ci peut appeler en retour le contrat protégé et hériter du tx.origin légitime de la victime.",
+    "mots_cles_attendus": [
+      "tx.origin",
+      "msg.sender",
+      "appelant immédiat",
+      "contrat malveillant",
+      "contrôle d'accès"
+    ]
+  },
+  {
+    "id": "web3_blockchain-128",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un contrat de retrait débite le solde de l'utilisateur seulement après lui avoir envoyé les fonds. Un utilisateur malveillant déploie un contrat qui rappelle withdraw dans sa fonction receive. Que se passe-t-il ?",
+    "reponse_reference": "L'appel de retrait réactive withdraw avant que le solde interne ne soit débité, si bien que le contrat malveillant peut retirer encore et encore, jusqu'à épuiser les fonds du contrat victime ou manquer de gas. C'est l'attaque de réentrance classique : il fallait débiter le solde avant d'envoyer les fonds ou utiliser un verrou de réentrance.",
+    "mots_cles_attendus": [
+      "réentrance",
+      "receive",
+      "solde non débité",
+      "épuisement",
+      "verrou"
+    ]
+  },
+  {
+    "id": "web3_blockchain-129",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Quelles sont les principales approches de contrôle d'accès dans les smart contracts ?",
+    "reponse_reference": "On distingue le modèle à propriétaire unique (ownable), où une seule adresse détient les droits d'administration, et le modèle à rôles (role-based access control), où plusieurs rôles nommés sont attribués à plusieurs adresses. Les droits doivent être structurés, révocables et si possible protégés par un multisig ou un timelock pour éviter qu'une clé compromise ne prenne le contrôle total.",
+    "mots_cles_attendus": [
+      "ownable",
+      "rôles",
+      "RBAC",
+      "révocation",
+      "multisig"
+    ]
+  },
+  {
+    "id": "web3_blockchain-130",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Pourquoi la réutilisation d'un même nonce aléatoire dans deux signatures ECDSA permet-elle de retrouver la clé privée ?",
+    "reponse_reference": "Avec deux signatures (r, s1) et (r, s2) partageant le même nonce, la différence s1-s2 élimine la clé privée de l'équation, ne laissant que des valeurs publiques : un simple calcul algébrique en extrait directement la clé. C'est pourquoi les implémentations modernes tirent le nonce de façon déterministe (RFC 6979) à partir de la clé et du message.",
+    "mots_cles_attendus": [
+      "nonce réutilisé",
+      "clé privée",
+      "r, s",
+      "RFC 6979",
+      "déterministe"
+    ]
+  },
+  {
+    "id": "web3_blockchain-131",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une enchère NFT permet de soumissionner pendant 24 heures, le meilleur prix l'emportant. Pourquoi son mécanisme est-il vulnérable aux robots du mempool ?",
+    "reponse_reference": "Chaque offre étant visible dans le mempool avant inclusion, un robot peut surenchérir de justesse en payant un gas supérieur, ou attendre la dernière seconde pour emporter l'enchère au prix plancher. Les enchères doivent utiliser des schémas d'engagement (commit-reveal), des offres scellées ou des mécanismes hors chaîne pour rendre la surenchère imprévisible.",
+    "mots_cles_attendus": [
+      "enchère",
+      "mempool",
+      "surenchère",
+      "commit-reveal",
+      "offres scellées"
+    ]
+  },
+  {
+    "id": "web3_blockchain-132",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce que le fuzzing appliqué aux smart contracts et que permet-il de détecter ?",
+    "reponse_reference": "Le fuzzing consiste à envoyer au contrat des milliers d'entrées aléatoires ou semi-aléatoires et à vérifier que ses invariants (solde total constant, accès restreints) tiennent. Il révèle des chemins d'exécution inattendus, des états cassés ou des dépassements que la revue manuelle n'aurait pas anticipés, en complément de l'analyse statique et des tests unitaires.",
+    "mots_cles_attendus": [
+      "fuzzing",
+      "entrées aléatoires",
+      "invariants",
+      "chemins d'exécution",
+      "tests"
+    ]
+  },
+  {
+    "id": "web3_blockchain-133",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un programme de bug bounty et en quoi diffère-t-il d'un audit ponctuel ?",
+    "reponse_reference": "Un bug bounty rémunère des chercheurs externes pour la découverte de vulnérabilités selon un barème lié à la gravité, en continu et sur le code réellement déployé. Contrairement à l'audit ponctuel réalisé avant lancement, il couvre les mises à jour successives et mobilise une communauté large, à condition que les règles de divulgation responsable et de périmètre soient claires.",
+    "mots_cles_attendus": [
+      "bug bounty",
+      "récompense",
+      "gravité",
+      "continu",
+      "divulgation responsable"
+    ]
+  },
+  {
+    "id": "web3_blockchain-134",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un générateur de portefeuilles en ligne promet de créer des adresses « chanceuses ». Plusieurs utilisateurs de ce service se font voler leurs fonds quelques semaines plus tard. Quelle est l'explication la plus probable ?",
+    "reponse_reference": "Le générateur produisait probablement des clés privées à partir d'un générateur aléatoire faible ou prévisible, voire renvoyait des clés pré-calculées connues de l'opérateur. Toute clé dont la graine n'est pas issue d'un aléa cryptographique de qualité peut être rejouée par un attaquant : la génération de clés doit se faire localement avec un générateur sûr et audité.",
+    "mots_cles_attendus": [
+      "aléa faible",
+      "clés prévisibles",
+      "générateur",
+      "clé privée",
+      "local"
+    ]
+  },
+  {
+    "id": "web3_blockchain-135",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Pourquoi un contrat proxy et son implémentation doivent-ils respecter des layouts de stockage identiques ?",
+    "reponse_reference": "Dans un schéma proxy, le code de l'implémentation s'exécute mais lit et écrit dans le stockage du proxy : les variables sont donc rangées selon les slots du proxy. Si une nouvelle implémentation réordonne ou ajoute des variables au début, elle lit des slots décalés et corrompt silencieusement l'état : d'où l'usage de conventions comme des gaps de stockage réservés et des règles de versionnement strictes.",
+    "mots_cles_attendus": [
+      "proxy",
+      "layout de stockage",
+      "slots",
+      "collision",
+      "storage gap"
+    ]
+  },
+  {
+    "id": "web3_blockchain-136",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 7,
+    "type": "definition",
+    "question": "À quoi sert la fonction ecrecover en Solidity et comment est-elle utilisée ?",
+    "reponse_reference": "ecrecover reconstruit l'adresse du signataire à partir du condensat d'un message et d'une signature (r, s, v). Elle permet d'implémenter des meta-transactions, des airdrops à réclamation signée ou des autorisations hors chaîne : le contrat vérifie que l'adresse retrouvée correspond à celle attendue avant d'exécuter l'action.",
+    "mots_cles_attendus": [
+      "ecrecover",
+      "signataire",
+      "r, s, v",
+      "meta-transaction",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-137",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Une DAO découvre qu'un attaquant a fait passer une proposition transférant sa trésorerie vers son adresse. Comment a-t-il pu réussir alors que la majorité des votes s'y opposait ?",
+    "reponse_reference": "L'attaquant a probablement acheté ou emprunté (via un flash loan) une quantité de jetons de gouvernance suffisante juste avant le vote, ou utilisé la délégation de jetons inactifs, pour atteindre le quorum et le seuil de majorité. Les DAO protègent leurs votes par des verrous de participation (snapshot antérieur à la proposition) et un délai d'exécution (timelock) permettant de réagir.",
+    "mots_cles_attendus": [
+      "flash loan",
+      "gouvernance",
+      "quorum",
+      "snapshot",
+      "timelock"
+    ]
+  },
+  {
+    "id": "web3_blockchain-138",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un honey pot en DeFi et comment l'identifier avant d'interagir avec un contrat ?",
+    "reponse_reference": "Un honey pot est un contrat qui semble offrir une opportunité de profit (token au rendement prometteur, jeu d'arbitrage) mais dont le code empêche en réalité le retrait des fonds, par une condition cachée ou un mécanisme de blocage. Il faut lire le code vérifié sur l'explorateur, tester le contrat sur un fork local ou un réseau de test, et se méfier des contrats non vérifiés ou récemment déployés.",
+    "mots_cles_attendus": [
+      "honey pot",
+      "retrait bloqué",
+      "code vérifié",
+      "fork local",
+      "méfiance"
+    ]
+  },
+  {
+    "id": "web3_blockchain-139",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une faille de contrôle d'accès « missing authorization » et pourquoi est-elle si fréquente ?",
+    "reponse_reference": "Une fonction sensible (mint, changement de frais, retrait de fonds) est déclarée publique ou external sans vérifier qui l'appelle, permettant à n'importe qui de l'invoquer. Elle est fréquente car Solidity rend les fonctions publiques par défaut si l'on omet le mot-clé, et parce que les développeurs oublient souvent de restreindre les fonctions de configuration après le déploiement.",
+    "mots_cles_attendus": [
+      "missing authorization",
+      "publique",
+      "sans restriction",
+      "mint",
+      "configuration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-140",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 7,
+    "type": "scenario",
+    "question": "Un protocole passe par un proxy et son équipe déploie une nouvelle implémentation qui écrase par erreur un slot de stockage utilisé par l'ancienne version. Quelles conséquences concrètes pour les utilisateurs ?",
+    "reponse_reference": "Les variables lues et écrites aux mêmes slots changent de signification : soldes, allowances ou propriétés peuvent être réinterprétés comme d'autres valeurs, corrompant l'état du protocole. Les utilisateurs peuvent voir leurs soldes devenir faux, des fonds devenir inaccessibles, voire des droits d'administration tomber entre de mauvaises mains, sans qu'aucune transaction d'attaque n'ait eu lieu.",
+    "mots_cles_attendus": [
+      "proxy",
+      "slots écrasés",
+      "corruption d'état",
+      "soldes faux",
+      "administration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-141",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une DAO et comment prend-elle ses décisions ?",
+    "reponse_reference": "Une DAO (organisation autonome décentralisée) est une organisation dont les règles sont encodées dans des smart contracts et dont les décisions sont prises par les détenteurs de jetons de gouvernance. Les membres soumettent des propositions (changement de paramètre, dépense de la trésorerie) qui sont votées on-chain, puis exécutées automatiquement par les contrats si le quorum et la majorité requis sont atteints.",
+    "mots_cles_attendus": [
+      "DAO",
+      "smart contracts",
+      "jetons de gouvernance",
+      "propositions",
+      "quorum"
+    ]
+  },
+  {
+    "id": "web3_blockchain-142",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un token de gouvernance et quels pouvoirs confère-t-il ?",
+    "reponse_reference": "Un token de gouvernance est un jeton qui donne le droit de voter sur les propositions du protocole, proportionnellement ou selon un barème défini par le système. Il confère un pouvoir de décision sur les paramètres (frais, émissions, trésorerie) et représente une valeur marchande, ce qui expose la gouvernance à des attaques économiques si le coût d'achat des votes est inférieur à la valeur extorquée.",
+    "mots_cles_attendus": [
+      "gouvernance",
+      "droit de vote",
+      "paramètres",
+      "trésorerie",
+      "attaque économique"
+    ]
+  },
+  {
+    "id": "web3_blockchain-143",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment Solidity résout-il l'héritage multiple et qu'est-ce que la linéarisation C3 ?",
+    "reponse_reference": "Solidity permet à un contrat d'hériter de plusieurs contrats de base, et ordonne les fonctions héritées selon la linéarisation C3 : un ordre unique et déterministe qui règle les conflits de même nom en donnant la priorité au contrat le plus dérivé. L'ordre de déclaration des parents détermine cet ordre, et les fonctions overridden doivent être marquées virtual et override.",
+    "mots_cles_attendus": [
+      "héritage multiple",
+      "linéarisation C3",
+      "override",
+      "virtual",
+      "ordre"
+    ]
+  },
+  {
+    "id": "web3_blockchain-144",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle est la différence entre une library et un contrat en Solidity ?",
+    "reponse_reference": "Une library est un ensemble de fonctions déployé une seule fois et réutilisé par de nombreux contrats, sans état propre ni stockage : ses fonctions internes sont intégrées (inlined) dans le code appelant, et ses fonctions publiques sont appelées via delegatecall. Contrairement à un contrat, elle ne peut pas recevoir d'ether ni posséder de variables d'état persistantes.",
+    "mots_cles_attendus": [
+      "library",
+      "réutilisable",
+      "pas d'état",
+      "delegatecall",
+      "inline"
+    ]
+  },
+  {
+    "id": "web3_blockchain-145",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que sont les accès « froids » et « chauds » au stockage introduits par l'EIP-2929 ?",
+    "reponse_reference": "Depuis l'EIP-2929, la première lecture ou écriture d'un slot de stockage ou d'une adresse dans une transaction est « froide » et facturée plus cher, les accès suivants aux mêmes emplacements étant « chauds » et moins coûteux. Cette tarification reflète le coût réel des accès disque des nœuds et protège contre les attaques par déni de service reposant sur des accès massifs à froid.",
+    "mots_cles_attendus": [
+      "EIP-2929",
+      "froid",
+      "chaud",
+      "slot",
+      "coût réel"
+    ]
+  },
+  {
+    "id": "web3_blockchain-146",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un portefeuille multisig et en quoi renforce-t-il la sécurité d'une organisation ?",
+    "reponse_reference": "Un multisig est un contrat qui exige la signature de plusieurs détenteurs de clés (par exemple 3 sur 5) avant d'exécuter une transaction. Il répartit le risque de compromission : un attaquant doit prendre le contrôle de plusieurs clés indépendantes, et l'organisation peut remplacer une clé perdue ou compromise par un vote des autres signataires.",
+    "mots_cles_attendus": [
+      "multisig",
+      "seuil",
+      "clés multiples",
+      "compromission",
+      "vote des signataires"
+    ]
+  },
+  {
+    "id": "web3_blockchain-147",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment fonctionne l'upgradeability des contrats via delegatecall et quelles sont les deux grandes familles de proxy ?",
+    "reponse_reference": "Le proxy stocke l'adresse de l'implémentation et délègue tous les appels via delegatecall, qui exécute le code de l'implémentation dans le contexte de stockage du proxy ; une mise à jour ne fait que changer l'adresse pointée. Le transparent proxy sépare les fonctions d'administration des fonctions métier, tandis que le schéma UUPS place la logique de mise à niveau dans l'implémentation elle-même, réduisant le code du proxy.",
+    "mots_cles_attendus": [
+      "delegatecall",
+      "proxy",
+      "implémentation",
+      "transparent proxy",
+      "UUPS"
+    ]
+  },
+  {
+    "id": "web3_blockchain-148",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un timelock dans une DAO et pourquoi est-il indispensable ?",
+    "reponse_reference": "Un timelock impose un délai obligatoire (souvent 24 à 48 heures) entre l'adoption d'une proposition et son exécution effective. Il laisse aux membres le temps de vérifier la proposition, d'en mesurer les conséquences et, en cas de gouvernance détournée, de réagir ou de sortir leurs fonds avant que la décision ne soit appliquée.",
+    "mots_cles_attendus": [
+      "timelock",
+      "délai",
+      "exécution différée",
+      "réaction",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-149",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Pourquoi les boucles dépendant de données non bornées exposent-elles un contrat à un déni de service ?",
+    "reponse_reference": "Chaque itération consomme du gas : dès que le nombre d'éléments à parcourir dépasse la limite de gas du bloc, plus personne ne peut exécuter la fonction, quelles que soient les frais proposés. Un attaquant peut aggraver la situation en faisant grossir la collection visée à bas coût, rendant définitivement inutilisable une fonction critique comme un retrait ou une distribution.",
+    "mots_cles_attendus": [
+      "boucle",
+      "gas",
+      "limite de bloc",
+      "DoS",
+      "fonction critique"
+    ]
+  },
+  {
+    "id": "web3_blockchain-150",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un attaquant emprunte par flash loan une énorme quantité de jetons de gouvernance, vote une proposition qui lui verse la trésorerie, et rembourse le prêt dans la même transaction. Comment une DAO peut-elle se prémunir contre ce scénario ?",
+    "reponse_reference": "Le vote doit se fonder sur un instantané des soldes pris avant l'ouverture du vote (snapshot), de sorte que les jetons empruntés pendant le vote ne confèrent aucun droit. Les DAO ajoutent en général un délai d'exécution (timelock), un quorum élevé et parfois un verrouillage des jetons votants pour rendre l'attaque économiquement irréalisable.",
+    "mots_cles_attendus": [
+      "flash loan",
+      "snapshot",
+      "quorum",
+      "timelock",
+      "verrouillage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-151",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelle est la différence entre les variables constant et immutable en Solidity ?",
+    "reponse_reference": "Une variable constant doit être connue à la compilation et son usage est remplacé directement dans le bytecode, sans occuper de slot de stockage. Une variable immutable est assignée une seule fois, dans le constructor, et est intégrée au bytecode déployé : elle ne consomme pas non plus de slot à l'exécution, tout en pouvant dépendre des arguments de déploiement.",
+    "mots_cles_attendus": [
+      "constant",
+      "immutable",
+      "compilation",
+      "constructor",
+      "pas de slot"
+    ]
+  },
+  {
+    "id": "web3_blockchain-152",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que la délégation de vote dans un protocole de gouvernance et pourquoi existe-t-elle ?",
+    "reponse_reference": "La délégation permet à un détenteur de jetons de transférer son pouvoir de vote à une autre adresse (un délégué) sans céder ses jetons. Elle augmente la participation effective : les petits porteurs confient leur vote à des experts, tandis que les délégataires actifs accumulent une influence qui les rend responsables devant la communauté.",
+    "mots_cles_attendus": [
+      "délégation",
+      "délégué",
+      "pouvoir de vote",
+      "participation",
+      "sans céder les jetons"
+    ]
+  },
+  {
+    "id": "web3_blockchain-153",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Un contrat reçoit de l'ether sans qu'aucune de ses fonctions ne soit appelée, puis ne répond plus aux appels. Quels mécanismes Solidity expliquent ce comportement ?",
+    "reponse_reference": "Le contrat a reçu l'ether via sa fonction receive (envoi sans données) ou son fallback (données ne correspondant à aucune fonction), qui sont les points d'entrée par défaut de l'EVM. Si ces fonctions sont déclarées payable mais vides, l'ether entre sans logique associée ; si elles sont absentes ou non payable, l'envoi aurait échoué, d'où l'importance de les déclarer explicitement.",
+    "mots_cles_attendus": [
+      "receive",
+      "fallback",
+      "payable",
+      "ether",
+      "point d'entrée"
+    ]
+  },
+  {
+    "id": "web3_blockchain-154",
+    "domaine": "web3_blockchain",
+    "sous_theme": "gas",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Quelles techniques courantes permettent de réduire le coût en gas d'un smart contract ?",
+    "reponse_reference": "On compacte les petites variables dans un même slot de stockage (packing), on privilégie les types de 256 bits pour l'arithmétique, on utilise calldata et immutable plutôt que memory et storage, et on minimise le nombre de SSTORE en regroupant les écritures. La suppression de code mort, les erreurs custom plutôt que les longues chaînes require et les transferts par lots complètent l'arsenal.",
+    "mots_cles_attendus": [
+      "packing",
+      "SSTORE",
+      "calldata",
+      "immutable",
+      "erreurs custom"
+    ]
+  },
+  {
+    "id": "web3_blockchain-155",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Comment structurer des données complexes en storage Solidity et pourquoi éviter les tableaux dynamiques de grande taille ?",
+    "reponse_reference": "Les structures (struct) groupent des champs dans un ou plusieurs slots, et les tableaux dynamiques stockent leur longueur suivie de leurs éléments dans des slots calculés par hachage. Les grands tableaux rendent les itérations coûteuses ou impossibles : on préfère des mappings associés à des index, ou des traitements par lots hors chaîne, pour garder les opérations bornées en gas.",
+    "mots_cles_attendus": [
+      "struct",
+      "tableau dynamique",
+      "slots",
+      "mapping",
+      "borné"
+    ]
+  },
+  {
+    "id": "web3_blockchain-156",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Une proposition de gouvernance « légitime » (transfert de 5 ETH à un prestataire) est remplacée, après le vote, par un appel à une fonction qui vide la trésorerie. Comment est-ce possible et quelle protection l'empêche ?",
+    "reponse_reference": "Le texte voté et l'action exécutée sont souvent deux objets distincts : l'attaquant a pu exploiter une confusion entre la description affichée et le calldata réellement exécuté par la proposition. Les DAO matures imposent que les actions soient encodées et vérifiables dans la proposition elle-même, et que l'exécution passe par un timelock qui laisse le temps à la communauté de détecter l'écart.",
+    "mots_cles_attendus": [
+      "calldata",
+      "description",
+      "exécution",
+      "timelock",
+      "vérification"
+    ]
+  },
+  {
+    "id": "web3_blockchain-157",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce que l'opcode CREATE2 et quel problème résout-il ?",
+    "reponse_reference": "CREATE2 calcule l'adresse d'un futur contrat à partir du déployeur, d'un sel (salt) choisi et du bytecode, ce qui rend l'adresse prévisible avant même le déploiement. Il permet de pré-engager des fonds vers un contrat pas encore déployé, de créer des adresses déterministes reproductibles d'une chaîne à l'autre et de mettre en œuvre des comptoirs (counterfactual) ou des factory avancées.",
+    "mots_cles_attendus": [
+      "CREATE2",
+      "salt",
+      "adresse prévisible",
+      "déterministe",
+      "factory"
+    ]
+  },
+  {
+    "id": "web3_blockchain-158",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Que sont le quorum et le seuil d'approbation dans un vote de gouvernance ?",
+    "reponse_reference": "Le quorum est la part minimale du pouvoir de vote total qui doit participer pour qu'un vote soit valide, et le seuil d'approbation est la majorité (souvent relative ou absolue) que la proposition doit atteindre parmi les votants. Un quorum trop bas expose aux attaques par faible participation, un quorum trop haut paralyse la prise de décision.",
+    "mots_cles_attendus": [
+      "quorum",
+      "seuil",
+      "participation",
+      "majorité",
+      "validité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-159",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "scenario",
+    "question": "Deux fonctions d'un contrat produisent le même sélecteur de fonction (4 premiers octets du hachage). Quel risque cela fait-il courir et comment l'éviter ?",
+    "reponse_reference": "L'EVM aiguille les appels uniquement sur ce sélecteur : les deux signatures étant en collision, l'une des fonctions devient impossible à appeler, ou pire, un appel destiné à l'une peut exécuter l'autre selon l'ordre de résolution. Il faut vérifier les sélecteurs avec un outil d'analyse au moment du build et renommer les fonctions en cas de collision.",
+    "mots_cles_attendus": [
+      "sélecteur",
+      "collision",
+      "4 octets",
+      "aiguillage",
+      "renommage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-160",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 8,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une erreur custom (custom error) en Solidity et quels avantages a-t-elle sur require et revert ?",
+    "reponse_reference": "Une erreur custom est un type d'erreur nommé, déclaré avec le mot-clé error et levé par revert MonErreur(param), qui encode seulement son sélecteur et ses arguments. Elle consomme moins de gas qu'une chaîne require longue, produit des données structurées décodables par les clients, et permet de tester précisément les conditions d'échec dans les tests.",
+    "mots_cles_attendus": [
+      "custom error",
+      "revert",
+      "gas",
+      "sélecteur",
+      "décodable"
+    ]
+  },
+  {
+    "id": "web3_blockchain-161",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment l'EVM exécute-t-elle le bytecode d'un contrat et quels composants y participent ?",
+    "reponse_reference": "L'EVM est une machine à pile quasi-Turing-complète : elle lit le bytecode opcode par opcode, manipule une pile (stack) de 1024 éléments, utilise la memory pour les données temporaires et le storage pour l'état persistant. Chaque opcode a un coût en gas, et l'exécution prend fin par un retour, un revert ou l'épuisement du gas alloué.",
+    "mots_cles_attendus": [
+      "machine à pile",
+      "opcodes",
+      "stack",
+      "memory",
+      "storage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-162",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment les variables d'état d'un contrat sont-elles rangées dans les slots de storage ?",
+    "reponse_reference": "Chaque slot fait 32 octets et les variables sont assignées dans l'ordre de déclaration, plusieurs petites variables (uint8, bool, adresse) pouvant être compactées dans un même slot si elles tiennent ensemble. Les mappings et tableaux dynamiques n'occupent qu'un slot d'en-tête, leurs éléments étant rangés à des emplacements calculés par keccak256 à partir du slot et de la clé.",
+    "mots_cles_attendus": [
+      "slot",
+      "32 octets",
+      "packing",
+      "keccak256",
+      "ordre de déclaration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-163",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mev",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le MEV (Maximal Extractable Value) et d'où provient-il ?",
+    "reponse_reference": "Le MEV est la valeur que des acteurs (chercheurs, validateurs, builders) peuvent extraire en choisissant, ordonnant ou insérant des transactions dans un bloc, au-delà des récompenses du protocole. Il provient de la visibilité du mempool et du pouvoir d'ordonnancement : arbitrages prioritaires, liquidations devancées et attaques sandwich en sont les formes les plus courantes.",
+    "mots_cles_attendus": [
+      "MEV",
+      "ordonnancement",
+      "mempool",
+      "arbitrage",
+      "liquidations"
+    ]
+  },
+  {
+    "id": "web3_blockchain-164",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment fonctionne une preuve de fraude dans un optimistic rollup ?",
+    "reponse_reference": "Si un participant détecte un état publié incorrect, il soumet une preuve de fraude au contrat L1, qui rejoue de façon interactive le segment de calcul contesté pour identifier l'étape fautive, puis exécute cette seule étape pour trancher. L'état fautif est annulé, le proposant fautif est pénalisé et la chaîne revient à l'état correct, le tout sans devoir rejouer l'intégralité du lot.",
+    "mots_cles_attendus": [
+      "preuve de fraude",
+      "contestation",
+      "rejeu interactif",
+      "étape fautive",
+      "pénalité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-165",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comparez les preuves de validité et les preuves de fraude pour la sécurité d'un rollup.",
+    "reponse_reference": "La preuve de validité démontre cryptographiquement que l'état publié est correct, vérifiée en une fois sur L1 : aucune fenêtre d'attente n'est nécessaire, mais la génération de la preuve est coûteuse et suppose la confiance dans le circuit et le prouveur. La preuve de fraude suppose la présence d'au moins un surveillant honnête pendant la fenêtre de contestation, ce qui est moins coûteux en calcul mais allonge les retraits.",
+    "mots_cles_attendus": [
+      "preuve de validité",
+      "preuve de fraude",
+      "vérification",
+      "fenêtre",
+      "coût"
+    ]
+  },
+  {
+    "id": "web3_blockchain-166",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un précompile de l'EVM et quels exemples notables existent sur Ethereum ?",
+    "reponse_reference": "Un précompile est un contrat natif, intégré au protocole, qui exécute des opérations trop coûteuses ou impossibles en pur bytecode, comme ecrecover (vérification ECDSA), les opérations sur la courbe bn254 ou le hachage blake2f. Ils sont appelés comme des contrats normaux à des adresses réservées, mais leur coût en gas est fixé par le protocole.",
+    "mots_cles_attendus": [
+      "précompile",
+      "natifs",
+      "ecrecover",
+      "bn254",
+      "adresses réservées"
+    ]
+  },
+  {
+    "id": "web3_blockchain-167",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mev",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Comment se déroule une attaque sandwich contre un utilisateur d'un DEX ?",
+    "reponse_reference": "L'attaquant place une transaction d'achat juste avant celle de la victime, ce qui fait monter le prix qu'elle paie, puis une transaction de vente juste après, qui profite du prix gonflé. La victime subit ainsi un slippage maximal alors que l'attaquant encaisse la différence, le tout étant orchestré en surveillant le mempool et en payant des frais de gas supérieurs.",
+    "mots_cles_attendus": [
+      "sandwich",
+      "avant",
+      "après",
+      "slippage",
+      "gas supérieur"
+    ]
+  },
+  {
+    "id": "web3_blockchain-168",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Dans un optimistic rollup, un proposant publie un état frauduleux qui crédite son compte de millions de jetons. Aucune preuve de fraude n'est soumise pendant la fenêtre de contestation. Que se passe-t-il et que révèle ce scénario ?",
+    "reponse_reference": "L'état frauduleux devient définitif et l'attaquant conserve ses jetons : la sécurité du rollup reposait sur l'hypothèse qu'au moins un surveillant honnête contesterait. Ce scénario montre la faiblesse théorique des optimistic rollups, et les réseaux sérieux font tourner leurs propres surveillants et audits, tout en gardant la possibilité de geler ou d'intervenir d'urgence.",
+    "mots_cles_attendus": [
+      "état frauduleux",
+      "fenêtre de contestation",
+      "surveillant",
+      "définitif",
+      "hypothèse"
+    ]
+  },
+  {
+    "id": "web3_blockchain-169",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un remboursement de gas (gas refund) et quelles opérations en produisent ?",
+    "reponse_reference": "Certaines opérations donnent droit à un remboursement comptabilisé en fin de transaction : remettre un slot de storage à zéro (SSTORE inverse) ou détruire un contrat (SELFDESTRUCT, avant sa suppression par le fork Cancun). Le remboursement est plafonné à une fraction du gas consommé, pour éviter que les contrats ne spéculent sur les fluctuations de prix du gas.",
+    "mots_cles_attendus": [
+      "gas refund",
+      "SSTORE",
+      "SELFDESTRUCT",
+      "plafonné",
+      "remise à zéro"
+    ]
+  },
+  {
+    "id": "web3_blockchain-170",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Que sont les blobs introduits par l'EIP-4844 (proto-danksharding) et que changent-ils pour les rollups ?",
+    "reponse_reference": "Les blobs sont de grands blocs de données (environ 128 Ko) publiés dans un espace dédié, avec un marché de frais séparé de celui des transactions, et conservés par les nœuds seulement quelques semaines. Les rollups y publient leurs données à un coût très inférieur à celui du calldata, ce qui a fortement réduit les frais des L2 sans alourdir durablement les nœuds.",
+    "mots_cles_attendus": [
+      "EIP-4844",
+      "blobs",
+      "128 Ko",
+      "marché séparé",
+      "conservation temporaire"
+    ]
+  },
+  {
+    "id": "web3_blockchain-171",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mev",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un arbitrageur détecte dans le mempool un écart de prix de 2 % entre deux DEX pour le même couple d'actifs. Décrivez sa stratégie et les risques qu'il court.",
+    "reponse_reference": "Il construit une transaction qui achète sur le DEX le moins cher et revend sur le plus cher, en calquant le gas pour devancer ses concurrents, et encaisse la différence moins les frais. Les risques sont la concurrence d'autres robots (guerre de gas qui érode le profit), un prix déplacé par une transaction insérée entre les siennes, ou un écart apparent qui disparaît au moment de l'exécution.",
+    "mots_cles_attendus": [
+      "arbitrage",
+      "écart de prix",
+      "gas",
+      "concurrence",
+      "profit"
+    ]
+  },
+  {
+    "id": "web3_blockchain-172",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quel est le rôle de l'opcode SELFDESTRUCT et pourquoi a-t-il été neutralisé par le fork Cancun ?",
+    "reponse_reference": "SELFDESTRUCT supprimait le code et le stockage d'un contrat et renvoyait son solde à une adresse désignée, en accordant un remboursement de gas. Il a été neutralisé car il rendait l'état global imprévisible (re-création possible à la même adresse, invalidation des invariants de Verkle à venir) : depuis Cancun, il se contente d'envoyer le solde sans effacer le code.",
+    "mots_cles_attendus": [
+      "SELFDESTRUCT",
+      "suppression de code",
+      "Cancun",
+      "remboursement",
+      "neutralisé"
+    ]
+  },
+  {
+    "id": "web3_blockchain-173",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une trappe de sortie (escape hatch) dans un rollup et pourquoi est-elle essentielle ?",
+    "reponse_reference": "Une trappe de sortie est un mécanisme par lequel un utilisateur peut forcer l'inclusion de sa transaction ou retirer ses fonds directement via le contrat L1, sans passer par le séquenceur. Elle protège contre la censure ou la panne du séquenceur : même si l'opérateur de la L2 disparaît, les utilisateurs conservent un chemin vérifiable vers leurs actifs.",
+    "mots_cles_attendus": [
+      "escape hatch",
+      "forçage L1",
+      "censure",
+      "séquenceur",
+      "retrait"
+    ]
+  },
+  {
+    "id": "web3_blockchain-174",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le langage Yul et quand écrit-on de l'assembleur dans un contrat Solidity ?",
+    "reponse_reference": "Yul est un langage intermédiaire proche de l'assembleur, utilisable dans des blocs assembly de Solidity, qui donne un contrôle fin sur la pile, la memory et les opcodes. On y recourt pour des optimisations de gas extrêmes, des manipulations de calldata ou de storage non exprimables en Solidity, au prix d'une lisibilité et d'une sécurité bien moindres.",
+    "mots_cles_attendus": [
+      "Yul",
+      "assembly",
+      "opcodes",
+      "optimisation",
+      "risque"
+    ]
+  },
+  {
+    "id": "web3_blockchain-175",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un contrat exécute une boucle dont la borne dépend d'un paramètre fourni par l'appelant. Un utilisateur transmet une valeur énorme. Que se passe-t-il exactement dans l'EVM ?",
+    "reponse_reference": "L'EVM consomme le gas à chaque itération : soit la transaction dépasse sa limite de gas et l'exécution est annulée intégralement (revert out-of-gas, l'appelant perd les frais), soit le contrat réussit mais au prix d'un bloc saturé. Si la fonction est critique et le paramètre non borné, n'importe qui peut la rendre inutilisable, ce qui constitue un vecteur de déni de service.",
+    "mots_cles_attendus": [
+      "boucle non bornée",
+      "out of gas",
+      "revert",
+      "déni de service",
+      "paramètre"
+    ]
+  },
+  {
+    "id": "web3_blockchain-176",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mev",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que la séparation proposant-constructeur (PBS) et quel problème de MEV résout-elle ?",
+    "reponse_reference": "La PBS sépare le rôle de celui qui construit le contenu des blocs (le builder, qui ordonne les transactions) de celui qui les propose au consensus (le validateur). Le validateur ne choisit plus les transactions lui-même mais parmi des blocs déjà construits, ce qui réduit la concentration du MEV chez les grands opérateurs et professionnalise la concurrence entre builders via des relais.",
+    "mots_cles_attendus": [
+      "PBS",
+      "builder",
+      "validateur",
+      "relais",
+      "concurrence"
+    ]
+  },
+  {
+    "id": "web3_blockchain-177",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Quelle différence existe-t-il entre un zkEVM et un rollup ZK à circuits spécialisés ?",
+    "reponse_reference": "Un zkEVM prouve l'exécution du bytecode EVM lui-même, ce qui permet de déployer sans modification n'importe quel contrat Solidity, au prix d'un prouveur très complexe et plus lent. Un circuit spécialisé (type zkVM ou rollup applicatif) prouve un format d'exécution dédié plus simple et plus rapide, mais impose aux développeurs de réécrire ou d'adapter leurs applications.",
+    "mots_cles_attendus": [
+      "zkEVM",
+      "bytecode EVM",
+      "circuits spécialisés",
+      "prouveur",
+      "compatibilité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-178",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le mécanisme de frais de base de l'EIP-1559 et comment stabilise-t-il les coûts ?",
+    "reponse_reference": "L'EIP-1559 instaure une base fee, ajustée par le protocole selon l'occupation des blocs (elle monte quand ils sont pleins, descend quand ils sont vides) et brûlée à chaque transaction, plus un pourboire (tip) au validateur. La base fee rend le coût prévisible et réduit les guerres de gas, et sa destruction crée une pression déflationniste sur l'ether.",
+    "mots_cles_attendus": [
+      "EIP-1559",
+      "base fee",
+      "brûlée",
+      "pourboire",
+      "occupation"
+    ]
+  },
+  {
+    "id": "web3_blockchain-179",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 9,
+    "type": "scenario",
+    "question": "Un utilisateur initie un retrait d'un optimistic rollup et découvre que ses fonds n'arrivent sur la L1 que 7 jours plus tard. Pourquoi ce délai et comment l'éviter ?",
+    "reponse_reference": "Le retrait attend la fin de la fenêtre de contestation pour garantir qu'aucune preuve de fraude n'invalidera l'état qui le justifie. Pour obtenir la liquidité immédiatement, l'utilisateur peut passer par un pont de liquidité tiers, qui lui verse la somme sur L1 contre une commission et récupère lui-même les fonds à la fin du délai en assumant le risque de contestation.",
+    "mots_cles_attendus": [
+      "7 jours",
+      "contestation",
+      "preuve de fraude",
+      "pont de liquidité",
+      "commission"
+    ]
+  },
+  {
+    "id": "web3_blockchain-180",
+    "domaine": "web3_blockchain",
+    "sous_theme": "mev",
+    "niveau": 9,
+    "type": "definition",
+    "question": "Qu'est-ce que le backrunning et en quoi se distingue-t-il du front-running ?",
+    "reponse_reference": "Le backrunning consiste à placer sa transaction juste après une transaction ciblée, pour profiter de l'état qu'elle vient de créer, par exemple en arbitrant l'écart de prix généré par un gros swap. Contrairement au front-running, il ne nuit pas forcément à la victime (l'arbitrage rééquilibre même le marché), et il est considéré comme la forme la plus acceptable de MEV.",
+    "mots_cles_attendus": [
+      "backrunning",
+      "après",
+      "état créé",
+      "arbitrage",
+      "MEV"
+    ]
+  },
+  {
+    "id": "web3_blockchain-181",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une preuve à divulgation nulle de connaissance (zero-knowledge proof) ?",
+    "reponse_reference": "Une preuve à divulgation nulle permet à un prouveur de convaincre un vérificateur qu'une affirmation est vraie (par exemple « je connais x tel que h = hash(x) ») sans révéler aucune information sur la solution elle-même. Elle repose sur un protocole interactif ou non-interactif entre prouveur et vérificateur, et sert à la fois à la confidentialité et à la compression de vérifications.",
+    "mots_cles_attendus": [
+      "preuve",
+      "prouveur",
+      "vérificateur",
+      "sans révéler",
+      "convaincre"
+    ]
+  },
+  {
+    "id": "web3_blockchain-182",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelles sont les trois propriétés fondamentales d'un système de preuve à divulgation nulle ?",
+    "reponse_reference": "La complétude garantit qu'un prouveur honnête convainc toujours le vérificateur d'une affirmation vraie. La robustesse (soundness) garantit qu'aucun prouveur malhonnête ne peut convaincre d'une affirmation fausse, sauf probabilité négligeable. Le zero-knowledge garantit que le vérificateur n'apprend rien d'autre que la vérité de l'affirmation, même en analysant la preuve.",
+    "mots_cles_attendus": [
+      "complétude",
+      "robustesse",
+      "soundness",
+      "zero-knowledge",
+      "probabilité négligeable"
+    ]
+  },
+  {
+    "id": "web3_blockchain-183",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qui distingue les signatures BLS des signatures ECDSA ?",
+    "reponse_reference": "Les signatures BLS reposent sur les couplages de courbes elliptiques et possèdent une propriété d'agrégation : de nombreuses signatures peuvent être combinées en une seule signature compacte vérifiable en une opération. Elles permettent aussi des schémas de seuil élégants, au prix de courbes moins standardisées et de vérifications plus coûteuses que l'ECDSA.",
+    "mots_cles_attendus": [
+      "BLS",
+      "couplages",
+      "agrégation",
+      "signature unique",
+      "seuil"
+    ]
+  },
+  {
+    "id": "web3_blockchain-184",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le slashing et quels comportements de validateur sanctionne-t-il ?",
+    "reponse_reference": "Le slashing est la pénalité automatique qui retire une partie du stake d'un validateur fautif et l'exclut du réseau, sans intervention humaine. Il sanctionne le double vote (proposer deux blocs contradictoires à la même hauteur) et le vote enveloppant (contredire un checkpoint déjà justifié), comportements détectables cryptographiquement et traités en quelques semaines d'expulsion.",
+    "mots_cles_attendus": [
+      "slashing",
+      "stake retiré",
+      "double vote",
+      "vote enveloppant",
+      "exclusion"
+    ]
+  },
+  {
+    "id": "web3_blockchain-185",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment fonctionne la finalité par checkpoints dans Casper FFG sur Ethereum ?",
+    "reponse_reference": "Les validateurs votent à chaque epoch (32 créneaux) pour le checkpoint le plus récent et le précédent : quand un checkpoint réunit deux tiers des votes, il est justifié, et quand son successeur direct l'est à son tour, il devient finalisé. Un bloc finalisé ne peut plus être réorganisé sans brûler un tiers du stake total, ce qui donne une finalité économique forte.",
+    "mots_cles_attendus": [
+      "Casper FFG",
+      "checkpoint",
+      "justifié",
+      "finalisé",
+      "deux tiers"
+    ]
+  },
+  {
+    "id": "web3_blockchain-186",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quel rôle joue LMD-GHOST dans le choix de fourche d'Ethereum ?",
+    "reponse_reference": "LMD-GHOST est la règle de choix de fourche : à chaque création de bloc, chaque validateur choisit la branche qui a reçu le plus de votes (attestations) du comité le plus récent, en partant du dernier checkpoint justifié. Elle rend les réorganisations courtes très coûteuses et assure que le réseau converge rapidement vers une chaîne unique entre deux finalisations.",
+    "mots_cles_attendus": [
+      "LMD-GHOST",
+      "choix de fourche",
+      "attestations",
+      "branche",
+      "convergence"
+    ]
+  },
+  {
+    "id": "web3_blockchain-187",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un atomic swap et quelle garantie offre-t-il entre deux chaînes ?",
+    "reponse_reference": "Un atomic swap est un échange de deux actifs natifs de chaînes différentes réalisé grâce à des contrats de verrouillage temporisé (HTLC, hash time-locked contract) : chaque partie révèle le même secret pour débloquer les fonds, sinon tout est remboursé après expiration. La garantie est l'atomicité : soit l'échange se réalise intégralement, soit chacun récupère ses fonds, sans intermédiaire de confiance.",
+    "mots_cles_attendus": [
+      "atomic swap",
+      "HTLC",
+      "secret",
+      "atomicité",
+      "remboursement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-188",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment un message ou un état circule-t-il d'une blockchain à une autre via un relais ?",
+    "reponse_reference": "Un contrat émetteur enregistre le message sur la chaîne source, puis un réseau de relais (ou de validateurs) le détecte, le signe et le soumet au contrat récepteur sur la chaîne cible, qui vérifie les signatures avant d'exécuter l'action. La sécurité du système repose entièrement sur l'honnêteté du relais : sa compromission permet de forger des messages et de débloquer des fonds.",
+    "mots_cles_attendus": [
+      "relais",
+      "message",
+      "signature",
+      "contrat récepteur",
+      "compromission"
+    ]
+  },
+  {
+    "id": "web3_blockchain-189",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que le règlement MiCA et quel est son objectif pour le secteur crypto ?",
+    "reponse_reference": "MiCA (Markets in Crypto-Assets) est le règlement européen qui encadre l'émission et les services sur crypto-actifs dans l'Union européenne. Il impose aux émetteurs de tokens et de stablecoins des obligations de livre blanc, de réserves et de transparence, et aux prestataires de services (CASP) un agrément, des exigences de fonds propres et des règles anti-blanchiment.",
+    "mots_cles_attendus": [
+      "MiCA",
+      "Union européenne",
+      "livre blanc",
+      "CASP",
+      "agrément"
+    ]
+  },
+  {
+    "id": "web3_blockchain-190",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Pourquoi les obligations KYC et AML s'appliquent-elles aux plateformes d'échange crypto ?",
+    "reponse_reference": "Les plateformes d'échange sont des points de passage entre monnaie fiduciaire et crypto-actifs : elles doivent identifier leurs clients (KYC) et surveiller les flux (AML/LCB-FT) pour empêcher le blanchiment et le financement du terrorisme. Ces obligations découlent des lois financières nationales et européennes, et les exposent à des sanctions et à la perte d'agrément en cas de manquement.",
+    "mots_cles_attendus": [
+      "KYC",
+      "AML",
+      "blanchiment",
+      "identification",
+      "sanctions"
+    ]
+  },
+  {
+    "id": "web3_blockchain-191",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un validateur Ethereum signe deux blocs concurrents à la même hauteur, espérant profiter d'un arbitrage sur les deux branches. Que lui arrive-t-il concrètement ?",
+    "reponse_reference": "Ses deux signatures contradictoires constituent une preuve de double vote que n'importe qui peut soumettre : il est alors slashe, perd une part fixe de son stake (au moins 1 ETH) et subit une pénalité de corrélation proportionnelle au nombre de validateurs fautifs sur la même période. Il est ensuite exclu du réseau avec un délai d'attente, et ses récompenses accumulées sont confisquées.",
+    "mots_cles_attendus": [
+      "double vote",
+      "slashing",
+      "preuve",
+      "pénalité de corrélation",
+      "exclusion"
+    ]
+  },
+  {
+    "id": "web3_blockchain-192",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quelles différences principales existent entre un zk-SNARK et un zk-STARK ?",
+    "reponse_reference": "Les SNARK sont des preuves très courtes à vérification rapide, mais leur mise en place historique exige une cérémonie de confiance (trusted setup) et repose sur des courbes elliptiques. Les STARK s'appuient sur des fonctions de hachage et l'hypothèse quantique-résistante de leur sécurité : pas de trusted setup, mais des preuves nettement plus volumineuses et des vérifications plus lourdes.",
+    "mots_cles_attendus": [
+      "SNARK",
+      "STARK",
+      "trusted setup",
+      "taille de preuve",
+      "post-quantique"
+    ]
+  },
+  {
+    "id": "web3_blockchain-193",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un circuit arithmétique et comment une preuve ZK s'y rapporte-t-elle ?",
+    "reponse_reference": "Un circuit est une représentation du calcul à prouver sous forme de portes d'addition et de multiplication sur un corps fini, dont les entrées comprennent les données publiques et le témoin secret (witness). Prouver revient à montrer, sans le révéler, qu'il existe un témoin qui satisfait toutes les contraintes du circuit, le système de preuve transformant cette satisfaction en preuve vérifiable.",
+    "mots_cles_attendus": [
+      "circuit",
+      "portes",
+      "witness",
+      "contraintes",
+      "corps fini"
+    ]
+  },
+  {
+    "id": "web3_blockchain-194",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une application de contrôle d'âge souhaite vérifier qu'un utilisateur est majeur sans jamais connaître sa date de naissance. Comment une preuve ZK résout-elle ce problème ?",
+    "reponse_reference": "L'utilisateur construit une preuve que sa date de naissance, connue de lui seul, satisfait la contrainte « âge >= 18 ans », et la soumet avec une donnée publique minimale comme un engagement ou un identifiant de session. Le serveur vérifie la preuve en un temps court et n'apprend que le booléen : la date exacte, le nom et toute autre donnée restent secrets.",
+    "mots_cles_attendus": [
+      "contrainte",
+      "âge",
+      "preuve",
+      "vérification",
+      "secret"
+    ]
+  },
+  {
+    "id": "web3_blockchain-195",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Que sont les attestations et les comités de validateurs dans le consensus Ethereum ?",
+    "reponse_reference": "À chaque créneau de 12 secondes, un comité de quelques centaines de validateurs, tirés aléatoirement, est chargé d'attester le bloc de tête : chaque membre vote pour la tête de chaîne et pour le checkpoint courant. Ces attestations, agrégées par signatures BLS, alimentent à la fois LMD-GHOST (choix de fourche) et Casper FFG (justification des checkpoints).",
+    "mots_cles_attendus": [
+      "attestation",
+      "comité",
+      "créneau",
+      "agrégation",
+      "checkpoint"
+    ]
+  },
+  {
+    "id": "web3_blockchain-196",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Un bridge gardien reliant deux grandes blockchains est piraté : des centaines de millions de dollars sont frappés sans dépôt correspondant. Expliquez la mécanique de l'attaque et sa conséquence sur la chaîne cible.",
+    "reponse_reference": "L'attaquant a compromis le seuil de signatures des validateurs du bridge et leur a fait signer un message de frappe (mint) qu'il a soumis au contrat de la chaîne cible, sans verrouiller d'actif en face. La chaîne cible voit apparaître des tokens adossés à rien, dont la valeur se reporte ensuite sur les autres détenteurs du wrapped asset, provoquant une décote ou une course aux retraits.",
+    "mots_cles_attendus": [
+      "bridge gardien",
+      "seuil de signatures",
+      "mint frauduleux",
+      "wrapped asset",
+      "décote"
+    ]
+  },
+  {
+    "id": "web3_blockchain-197",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Quels critères permettent de distinguer un utility token d'un security token ?",
+    "reponse_reference": "Le critère central est économique : un token est assimilable à un titre financier s'il donne des droits de profit dépendant des efforts d'un tiers (dividendes, part de revenus, attente de plus-value), comme le teste la jurisprudence Howey aux États-Unis. Un utility token donne accès à un service ou un produit, mais la qualification dépend de la substance du projet et peut être réévaluée par le régulateur.",
+    "mots_cles_attendus": [
+      "utility token",
+      "security token",
+      "test de Howey",
+      "profit",
+      "régulateur"
+    ]
+  },
+  {
+    "id": "web3_blockchain-198",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Qu'est-ce que l'inactivity leak et quand se déclenche-t-il ?",
+    "reponse_reference": "L'inactivity leak est une pénalité progressive qui réduit continuellement le solde des validateurs hors ligne lorsque la chaîne ne parvient plus à finaliser depuis plusieurs epochs. Elle vise à diluer les validateurs absents jusqu'à ce que les validateurs en ligne redeviennent majoritaires aux deux tiers et que la finalité reprenne, quitte à expulser massivement les défaillants.",
+    "mots_cles_attendus": [
+      "inactivity leak",
+      "non-finalisation",
+      "pénalité",
+      "hors ligne",
+      "deux tiers"
+    ]
+  },
+  {
+    "id": "web3_blockchain-199",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 10,
+    "type": "scenario",
+    "question": "Une DAO émet un token dont les détenteurs touchent une part des revenus du protocole et espèrent une plus-value portée par le travail de l'équipe fondatrice. Pourquoi un régulateur pourrait-il requalifier ce token ?",
+    "reponse_reference": "Les deux éléments (part des revenus et profit attendu des efforts d'un tiers) correspondent aux branches du test de Howey et suffisent généralement à qualifier le token de contrat d'investissement, donc de titre financier. L'émission et la revente seraient alors soumises au droit des valeurs mobilières (enregistrement, prospectus), et la DAO s'exposerait à des sanctions si elle ne s'y conforme pas.",
+    "mots_cles_attendus": [
+      "test de Howey",
+      "titre financier",
+      "revenus",
+      "prospectus",
+      "sanctions"
+    ]
+  },
+  {
+    "id": "web3_blockchain-200",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 10,
+    "type": "definition",
+    "question": "Comment un schéma de signature à seuil BLS permet-il un multisig plus efficace ?",
+    "reponse_reference": "Chaque participant détient une part de la clé secrète issue d'un partage de secret, et produit une part de signature sur le même message. Les parts sont combinées en une signature unique qui vérifie contre la clé publique agrégée : la transaction finale est aussi compacte qu'une signature simple, quelle que soit la taille du comité, et les participants restent identifiables en cas de part fautive.",
+    "mots_cles_attendus": [
+      "signature à seuil",
+      "partage de secret",
+      "part de signature",
+      "clé agrégée",
+      "compacte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-201",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un trusted setup dans un zk-SNARK et que signifie la notion de « toxic waste » ?",
+    "reponse_reference": "Le trusted setup est une cérémonie initiale qui génère les paramètres publics du système de preuve à partir d'un secret aléatoire, lequel doit être détruit ensuite : s'il subsistait, son détenteur pourrait forger des preuves de fausses affirmations, d'où le nom de toxic waste. Les cérémonies modernes sont multi-parties : il suffit qu'un seul participant détruise honnêtement sa part pour que le secret complet soit perdu.",
+    "mots_cles_attendus": [
+      "trusted setup",
+      "paramètres",
+      "toxic waste",
+      "cérémonie multi-parties",
+      "forger"
+    ]
+  },
+  {
+    "id": "web3_blockchain-202",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un engagement polynomial KZG et quel usage les rollups en font-ils ?",
+    "reponse_reference": "KZG est un schéma d'engagement qui condense un polynôme en une valeur unique de courbe elliptique, permettant de prouver une évaluation du polynôme en un point avec une preuve de taille constante. Les rollups et le proto-danksharding l'utilisent pour engager les données d'un blob : on peut vérifier un point de donnée sans révéler l'ensemble, ce qui fonde l'échantillonnage de disponibilité des données.",
+    "mots_cles_attendus": [
+      "KZG",
+      "polynôme",
+      "engagement",
+      "évaluation",
+      "blob"
+    ]
+  },
+  {
+    "id": "web3_blockchain-203",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le danksharding et comment s'articule-t-il avec les rollups ?",
+    "reponse_reference": "Le danksharding est la feuille de route qui transforme Ethereum en couche de disponibilité des données pour les rollups : au lieu d'exécuter les transactions, la L1 stocke temporairement de grands blobs dont l'intégrité est garantie par KZG. Les blobs sont échantillonnés par les nœuds sans être intégralement téléchargés, ce qui permet d'augmenter massivement la capacité tout en gardant des nœuds légers.",
+    "mots_cles_attendus": [
+      "danksharding",
+      "couche de données",
+      "échantillonnage",
+      "blobs",
+      "rollups"
+    ]
+  },
+  {
+    "id": "web3_blockchain-204",
+    "domaine": "web3_blockchain",
+    "sous_theme": "account_abstraction",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que l'account abstraction et que change le standard ERC-4337 ?",
+    "reponse_reference": "L'account abstraction consiste à rendre les comptes programmables comme des contrats, au lieu des simples comptes externes signés par une clé. L'ERC-4337 introduit les userOperations et les paymasters : un bundler regroupe ces opérations et les soumet au réseau, ce qui permet la récupération sociale, les règles de dépense, les frais payés par un tiers ou en stablecoin, sans modifier le protocole L1.",
+    "mots_cles_attendus": [
+      "account abstraction",
+      "ERC-4337",
+      "userOperation",
+      "paymaster",
+      "bundler"
+    ]
+  },
+  {
+    "id": "web3_blockchain-205",
+    "domaine": "web3_blockchain",
+    "sous_theme": "solidity",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles erreurs classiques guettent la mise à niveau d'un contrat via proxy, au-delà de la collision de stockage ?",
+    "reponse_reference": "Outre le réordonnancement des variables, les pièges classiques sont l'oubli d'initialiser la nouvelle version (et l'absence de verrou d'initialisation, exposant à un piratage par initialisation), la non-compatibilité des types ou des constructeurs (le constructor ne s'exécute pas dans un proxy), et la délégation de droits d'administration à une implémentation malveillante. Des storage gaps, des initializers protégés et des audits de compatibilité sont indispensables.",
+    "mots_cles_attendus": [
+      "initializer",
+      "constructor",
+      "storage gap",
+      "compatibilité",
+      "administration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-206",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que la « read-only reentrancy » et en quoi diffère-t-elle de la réentrance classique ?",
+    "reponse_reference": "La read-only reentrancy exploite des fonctions de lecture (view) d'un protocole A appelées depuis le callback d'un protocole B, pendant que l'état de A est incohérent (une liquidation à moitié faite, par exemple). Aucun état de A n'est modifié par l'attaque elle-même, mais la valeur fausse lue sert à tromper B et à en extraire des fonds, ce qui échappe aux verrous anti-réentrance classiques.",
+    "mots_cles_attendus": [
+      "read-only reentrancy",
+      "fonction view",
+      "état incohérent",
+      "callback",
+      "verrous"
+    ]
+  },
+  {
+    "id": "web3_blockchain-207",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Comment un protocole de lending calcule-t-il ses taux d'intérêt à partir du taux d'utilisation, et pourquoi la courbe devient-elle exponentielle ?",
+    "reponse_reference": "Le taux d'emprunt est une fonction du taux d'utilisation (dette rapportée aux dépôts), avec une courbe plate puis une pente raide au-delà d'un seuil optimal : plus les dépôts sont mobilisés, plus le coût marginal d'emprunt croît. La partie exponentielle force les emprunteurs à rembourser et attire de nouveaux dépôts, tout en évitant que le pool se vide et que les déposants ne puissent plus retirer.",
+    "mots_cles_attendus": [
+      "taux d'utilisation",
+      "courbe de taux",
+      "seuil optimal",
+      "emprunteurs",
+      "liquidité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-208",
+    "domaine": "web3_blockchain",
+    "sous_theme": "account_abstraction",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un nouvel utilisateur possède des USDC mais aucun ETH pour payer le gas de sa première transaction. Comment un paymaster ERC-4337 peut-il l'aider ?",
+    "reponse_reference": "L'utilisateur signe une userOperation qui délègue le paiement des frais au paymaster, un contrat qui accepte de sponsoriser le gas. Le paymaster vérifie en amont qu'il sera remboursé (par exemple en prélevant des USDC sur le compte de l'utilisateur dans le même lot) et valide l'opération, puis le bundler l'inclut en avançant l'ETH du gas.",
+    "mots_cles_attendus": [
+      "paymaster",
+      "userOperation",
+      "sponsoriser",
+      "USDC",
+      "bundler"
+    ]
+  },
+  {
+    "id": "web3_blockchain-209",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'apporte l'EIP-7702 aux comptes externes (EOA) existants ?",
+    "reponse_reference": "L'EIP-7702 permet à un compte externe d'adopter ponctuellement le code d'un contrat en une transaction : l'EOA délègue alors son exécution à une implémentation choisie, sans changer d'adresse ni migrer ses fonds. C'est une voie d'account abstraction native pour les comptes existants : règles de dépense, multisig ou paymaster deviennent possibles tout en conservant l'identité du compte.",
+    "mots_cles_attendus": [
+      "EIP-7702",
+      "EOA",
+      "délégation",
+      "code",
+      "même adresse"
+    ]
+  },
+  {
+    "id": "web3_blockchain-210",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Quelles hypothèses de confiance faut-il auditer dans un bridge, au-delà de la simple solidité du code ?",
+    "reponse_reference": "Il faut auditer l'ensemble du modèle de sécurité : qui signe les messages (multisig, validateurs, preuves), quel seuil de compromission suffit, si le relais peut être corrompu ou censurer, et ce qui se passe en cas de divergence entre les chaînes. Les failles historiques proviennent moins du code des contrats que de la compromission des clés du relais ou de l'absence de limite de frappe (mint caps) et de pause d'urgence.",
+    "mots_cles_attendus": [
+      "modèle de sécurité",
+      "relais",
+      "seuil",
+      "mint caps",
+      "pause d'urgence"
+    ]
+  },
+  {
+    "id": "web3_blockchain-211",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une preuve récursive et quel intérêt présente-t-elle pour les rollups ?",
+    "reponse_reference": "Une preuve récursive est une preuve qui atteste la validité d'autres preuves : les calculs sont prouvés en parallèle, puis leurs preuves sont agrégées en une seule qui vérifie toutes les autres. Un rollup peut ainsi paralléliser la génération de preuves sur plusieurs machines, réduire la latence entre lot et preuve, et ne publier qu'une preuve unique et compacte pour un grand volume de transactions.",
+    "mots_cles_attendus": [
+      "preuve récursive",
+      "agrégation",
+      "parallélisation",
+      "latence",
+      "compacte"
+    ]
+  },
+  {
+    "id": "web3_blockchain-212",
+    "domaine": "web3_blockchain",
+    "sous_theme": "rollups",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un ZK rollup publie sur la L1 un nouvel état accompagné d'une preuve de validité. Décrivez précisément ce que vérifie le contrat L1 avant d'accepter l'état.",
+    "reponse_reference": "Le contrat vérifie que la preuve est valide contre les engagements publics : le hash de l'état précédent, le hash du nouvel état et les données de transaction publiées, selon le circuit du rollup. Si la vérification passe, l'état est accepté immédiatement et de façon définitive ; sinon, le lot est rejeté et l'état reste inchangé, le tout sans aucune fenêtre d'attente.",
+    "mots_cles_attendus": [
+      "preuve de validité",
+      "engagements publics",
+      "état précédent",
+      "nouvel état",
+      "rejet"
+    ]
+  },
+  {
+    "id": "web3_blockchain-213",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le liquid staking et qu'apporte un jeton comme le stETH ?",
+    "reponse_reference": "Le liquid staking permet de déléguer son ETH à des validateurs via un protocole qui émet en retour un jeton liquide représentant le dépôt et ses récompenses. Le détenteur continue de percevoir le rendement du staking tout en utilisant le jeton dans la DeFi (collatéral, pools), ce qui élimine le coût d'opportunité du verrouillage classique.",
+    "mots_cles_attendus": [
+      "liquid staking",
+      "stETH",
+      "jeton liquide",
+      "rendement",
+      "DeFi"
+    ]
+  },
+  {
+    "id": "web3_blockchain-214",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que le restaking et quel principe EigenLayer introduit-il ?",
+    "reponse_reference": "Le restaking consiste à réutiliser le stake d'un validateur (ou un jeton de staking liquide) pour sécuriser d'autres services, appelés AVS chez EigenLayer : la même garantie économique protège à la fois le consensus Ethereum et des oracles, ponts ou data layers. En cas de faute sur un AVS, le restaker s'expose à un slashing supplémentaire, et l'enjeu du débat porte sur les risques systémiques que cette extension fait peser sur la couche de base.",
+    "mots_cles_attendus": [
+      "restaking",
+      "EigenLayer",
+      "AVS",
+      "réutilisation",
+      "slashing"
+    ]
+  },
+  {
+    "id": "web3_blockchain-215",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un protocole de lending A appelle une fonction de lecture d'un protocole B dans son flux de liquidation, et B lui renvoie une valeur manipulée via un callback. Comment l'attaque fonctionne-t-elle et pourquoi les verrous classiques ne l'arrêtent pas ?",
+    "reponse_reference": "Pendant que A est en pleine liquidation, son état interne est partiellement à jour ; l'attaquant, dans le callback de B, rappelle une vue de A qui lit cet état incohérent et la transmet à un autre protocole C, qui prend alors une décision fausse (prêt, prix) au profit de l'attaquant. Les verrous anti-réentrance ne bloquent que les appels qui modifient l'état : une simple lecture n'est pas interceptée, d'où le nom de read-only reentrancy.",
+    "mots_cles_attendus": [
+      "read-only reentrancy",
+      "callback",
+      "état incohérent",
+      "vue",
+      "verrou"
+    ]
+  },
+  {
+    "id": "web3_blockchain-216",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Pourquoi Ethereum envisage-t-il de passer des arbres de Merkle Patricia aux arbres de Verkle ?",
+    "reponse_reference": "Les arbres de Verkle remplacent les preuves de Merkle, longues et liées à chaque branche, par des preuves vectorielles de taille constante grâce aux engagements polynomiaux. Un client léger peut alors prouver un état avec une preuve minuscule, ce qui rend les nœuds sans état (statelessness) réalistes et réduit drastiquement les besoins de stockage des validateurs.",
+    "mots_cles_attendus": [
+      "Verkle",
+      "preuve constante",
+      "statelessness",
+      "engagements",
+      "clients légers"
+    ]
+  },
+  {
+    "id": "web3_blockchain-217",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une attaque Sybil contre un vote de gouvernance et comment la limiter ?",
+    "reponse_reference": "Une attaque Sybil consiste à multiplier des identités ou des adresses peu coûteuses pour accumuler artificiellement du pouvoir de vote ou atteindre un quorum. On la limite en pondérant le vote par des enjeux vérifiables (jetons verrouillés, identité, réputation), en exigeant un staking minimum ou en rendant la création d'identités coûteuse.",
+    "mots_cles_attendus": [
+      "Sybil",
+      "identités multiples",
+      "quorum",
+      "pondération",
+      "verrouillage"
+    ]
+  },
+  {
+    "id": "web3_blockchain-218",
+    "domaine": "web3_blockchain",
+    "sous_theme": "account_abstraction",
+    "niveau": 11,
+    "type": "scenario",
+    "question": "Un bundler ERC-4337 reçoit une userOperation dont la signature est valide mais dont le paymaster refuse soudainement de payer. Que fait le bundler pour ne pas perdre d'argent ?",
+    "reponse_reference": "Le bundler simule l'exécution complète de l'opération (y compris le paiement au paymaster) avant de l'inclure : si la simulation échoue, il la rejette sans la soumettre. La séparation entre validation et exécution garantit en outre que le paymaster est débité dans la même transaction que l'exécution, de sorte que le bundler est toujours remboursé des frais qu'il avance.",
+    "mots_cles_attendus": [
+      "bundler",
+      "simulation",
+      "paymaster",
+      "validation",
+      "remboursement"
+    ]
+  },
+  {
+    "id": "web3_blockchain-219",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce que l'invariant testing et en quoi dépasse-t-il les tests unitaires classiques ?",
+    "reponse_reference": "L'invariant testing consiste à soumettre le contrat à des séquences aléatoires d'appels et à vérifier en permanence des propriétés qui doivent toujours être vraies (somme des soldes constante, réserves supérieures aux dettes). Là où les tests unitaires vérifient des cas précis imaginés par le développeur, l'invariant testing explore des combinaisons d'états imprévues et révèle des chemins de corruption rarement atteints manuellement.",
+    "mots_cles_attendus": [
+      "invariant",
+      "propriétés",
+      "séquences aléatoires",
+      "combinaisons",
+      "toujours vraie"
+    ]
+  },
+  {
+    "id": "web3_blockchain-220",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 11,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une architecture à intents et solvers, et en quoi diffère-t-elle d'une transaction classique ?",
+    "reponse_reference": "L'utilisateur ne signe plus le chemin d'exécution exact mais un « intent » : un résultat souhaité (échanger au meilleur prix, transférer d'une chaîne à l'autre) accompagné de contraintes. Des solveurs en concurrence construisent la transaction optimale, parfois à cheval sur plusieurs chaînes, et se font payer sur l'écart entre le prix contraint et le prix obtenu, déplaçant la complexité d'exécution du côté des professionnels.",
+    "mots_cles_attendus": [
+      "intent",
+      "solveurs",
+      "résultat souhaité",
+      "concurrence",
+      "exécution"
+    ]
+  },
+  {
+    "id": "web3_blockchain-221",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que le MEV-burn et quel objectif poursuit-il pour Ethereum ?",
+    "reponse_reference": "Le MEV-burn est une proposition visant à brûler une partie de la valeur extractible (MEV) captée lors de la construction des blocs, en tarifant le droit de construire via une enchère dont le produit est détruit comme la base fee. L'objectif est de réduire le surplus capté par les validateurs et les builders, de lisser les incitations à la censure et de renforcer la valeur de l'ether comme actif.",
+    "mots_cles_attendus": [
+      "MEV-burn",
+      "enchère",
+      "brûlage",
+      "incitations",
+      "valeur"
+    ]
+  },
+  {
+    "id": "web3_blockchain-222",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que la finalité en un seul créneau (single slot finality) et quels obstacles techniques la retardent ?",
+    "reponse_reference": "La finalité en un seul créneau vise à finaliser chaque bloc dès sa proposition, au lieu des deux epochs actuelles, en faisant voter tout le comité des validateurs sur chaque bloc. Les obstacles sont la charge d'agrégation des signatures de centaines de milliers de validateurs en 12 secondes, les besoins en bande passante et la nécessité de mécanismes comme Orbit SSF qui répartissent les validateurs en comités tournants.",
+    "mots_cles_attendus": [
+      "single slot finality",
+      "créneau",
+      "agrégation",
+      "comités",
+      "Orbit SSF"
+    ]
+  },
+  {
+    "id": "web3_blockchain-223",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'une zkVM comme RISC Zero ou SP1 et quel changement de paradigme introduit-elle ?",
+    "reponse_reference": "Une zkVM est une machine virtuelle générale (souvent RISC-V) dont chaque exécution peut être prouvée : n'importe quel programme, écrit dans n'importe quel langage compilé pour cette architecture, produit une preuve de son exécution. Elle remplace les circuits spécialisés écrits à la main : la preuve est générée par le programme lui-même, ce qui abaisse massivement le coût de développement de nouvelles applications ZK.",
+    "mots_cles_attendus": [
+      "zkVM",
+      "RISC-V",
+      "preuve d'exécution",
+      "programme général",
+      "circuits"
+    ]
+  },
+  {
+    "id": "web3_blockchain-224",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un séquenceur partagé (shared sequencer) et quel problème d'interopérabilité résout-il ?",
+    "reponse_reference": "Un séquenceur partagé ordonne les transactions de plusieurs rollups en un même flux, au lieu que chaque L2 ait son séquenceur propriétaire. Il permet des transactions atomiques inter-rollups, une exécution quasi instantanée entre chaînes du même écosystème et une meilleure résistance à la censure, au prix d'une dépendance partagée qui devient un point critique à décentraliser.",
+    "mots_cles_attendus": [
+      "shared sequencer",
+      "plusieurs rollups",
+      "flux unique",
+      "atomicité",
+      "censure"
+    ]
+  },
+  {
+    "id": "web3_blockchain-225",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles obligations spécifiques MiCA impose-t-elle aux émetteurs de stablecoins adossés à des actifs ?",
+    "reponse_reference": "Les émetteurs de stablecoins référencés à des actifs (ART) et de monnaie électronique (EMT) doivent obtenir un agrément, publier un livre blanc approuvé, détenir des réserves suffisantes et séparées, et garantir le droit de remboursement à tout moment à la valeur nominale. Des plafonds de transaction et d'émission peuvent s'appliquer aux jetons libellés dans une monnaie non européenne, pour préserver la souveraineté monétaire.",
+    "mots_cles_attendus": [
+      "MiCA",
+      "agrément",
+      "réserves",
+      "remboursement",
+      "plafonds"
+    ]
+  },
+  {
+    "id": "web3_blockchain-226",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment la liquidité concentrée d'Uniswap v3 transforme-t-elle le modèle x*y=k ?",
+    "reponse_reference": "Chaque fournisseur choisit une fourchette de prix dans laquelle sa liquidité est active, au lieu de la répartir sur toute la courbe : le capital est concentré là où se font les échanges, ce qui décuple l'efficacité et les frais perçus à capital égal. En contrepartie, la position ne gagne plus rien hors de la fourchette, et la perte impermanente y est amplifiée jusqu'à devenir totale.",
+    "mots_cles_attendus": [
+      "liquidité concentrée",
+      "fourchette de prix",
+      "Uniswap v3",
+      "efficacité",
+      "perte impermanente"
+    ]
+  },
+  {
+    "id": "web3_blockchain-227",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un fournisseur de liquidité concentrée place toute sa position sur une fourchette étroite autour du prix courant. Le prix sort définitivement de la fourchette. Que devient sa position ?",
+    "reponse_reference": "Sa position ne contient plus que l'actif faible : toute sa liquidité a été convertie au fil des échanges au prix sortant, et elle ne perçoit plus aucun frais tant que le prix ne revient pas dans la fourchette. S'il retire, il matérialise une perte impermanente proche de 100 % sur la part convertie, alors qu'une position large aurait conservé une exposition mixte.",
+    "mots_cles_attendus": [
+      "fourchette",
+      "actif faible",
+      "plus de frais",
+      "perte impermanente",
+      "retrait"
+    ]
+  },
+  {
+    "id": "web3_blockchain-228",
+    "domaine": "web3_blockchain",
+    "sous_theme": "securite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment un TWAP (prix moyen pondéré dans le temps) protège-t-il un protocole contre la manipulation d'oracle ?",
+    "reponse_reference": "Le TWAP accumule le prix sur une fenêtre de temps (par exemple 30 minutes) à partir des observations passées du pool : un swap unique, même énorme, ne déplace que marginalement la moyenne. L'attaquant devrait maintenir un prix faussé pendant une grande partie de la fenêtre, ce qui coûte cher en frais et en arbitrage adverse, rendant la manipulation économiquement dissuasive.",
+    "mots_cles_attendus": [
+      "TWAP",
+      "fenêtre",
+      "moyenne",
+      "manipulation",
+      "coût"
+    ]
+  },
+  {
+    "id": "web3_blockchain-229",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment un bridge à clients légers (type light client) atteint-il une sécurité supérieure à celle d'un bridge gardien ?",
+    "reponse_reference": "Le contrat du bridge vérifie lui-même une preuve de consensus de la chaîne source : en-têtes de blocs, signatures des validateurs et finalité, comme le ferait un nœud léger, sans faire confiance à un groupe de relais. Même si tous les relais mentent, aucune transaction non finalisée ne peut être acceptée : la confiance est déléguée au consensus de la chaîne source elle-même, pas à des gardiens.",
+    "mots_cles_attendus": [
+      "light client",
+      "preuve de consensus",
+      "en-têtes",
+      "finalité",
+      "sans confiance"
+    ]
+  },
+  {
+    "id": "web3_blockchain-230",
+    "domaine": "web3_blockchain",
+    "sous_theme": "cryptographie",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment un DKG (génération de clé distribuée) construit-il une clé partagée sans qu'aucun participant ne la connaisse jamais ?",
+    "reponse_reference": "Chaque participant génère un polynôme aléatoire dont il garde le terme constant secret et distribue des évaluations aux autres ; en sommant les parts reçues, chacun détient une part du polynôme global sans que personne ne connaisse le secret complet. La clé publique agrégée est calculée à partir des engagements publics, et le groupe peut ensuite signer par seuil avec les parts individuelles.",
+    "mots_cles_attendus": [
+      "DKG",
+      "polynôme",
+      "parts",
+      "secret complet",
+      "seuil"
+    ]
+  },
+  {
+    "id": "web3_blockchain-231",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment une preuve zkEmail permet-elle de vérifier une identité ou un fait sans tiers de confiance ?",
+    "reponse_reference": "Une preuve zkEmail prouve cryptographiquement le contenu d'un courriel (expéditeur, sujet, corps) en vérifiant la signature DKIM du fournisseur de messagerie, le tout hors chaîne, puis ne révèle au vérificateur que l'extrait nécessaire. L'utilisateur peut ainsi prouver qu'il a reçu un virement de telle banque ou qu'il possède tel compte, sans montrer le courriel et sans dépendre d'une API du fournisseur.",
+    "mots_cles_attendus": [
+      "zkEmail",
+      "DKIM",
+      "signature",
+      "extrait",
+      "sans API"
+    ]
+  },
+  {
+    "id": "web3_blockchain-232",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Un bridge vérifie ses messages par une signature de gardiens, mais un attaquant forge un message valide sans compromettre aucune clé, en exploitant une confusion de formats. Comment est-ce possible et quelle leçon d'audit en tirer ?",
+    "reponse_reference": "Les gardiens ont signé un message légitime dont l'encodage (domaine, chaîne cible, charge utile) pouvait être réinterprété par le contrat récepteur comme un ordre différent, par exemple un dépôt transformé en frappe massive. La leçon est que la sécurité d'un bridge ne tient pas seulement aux signatures : les domaines de séparation, les formats de message et les vérifications de réentrée doivent être audités comme des frontières de confiance.",
+    "mots_cles_attendus": [
+      "confusion de formats",
+      "encodage",
+      "domaine",
+      "réinterprétation",
+      "frontière de confiance"
+    ]
+  },
+  {
+    "id": "web3_blockchain-233",
+    "domaine": "web3_blockchain",
+    "sous_theme": "evm",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce que l'EOF (EVM Object Format) et quels bénéfices apporte-t-il à l'EVM ?",
+    "reponse_reference": "L'EOF est une refonte du format du bytecode EVM : code et données sont séparés en sections déclarées, avec des règles de validité statiques (pas de sauts arbitraires, types de sections explicites). Il améliore la vitesse d'analyse des nœuds, la sécurité (fini les jumps dans les données) et ouvre la voie à des optimisations de compilation, au prix d'une migration des chaînes d'outils et des contrats non conformes.",
+    "mots_cles_attendus": [
+      "EOF",
+      "sections",
+      "bytecode",
+      "validation statique",
+      "migration"
+    ]
+  },
+  {
+    "id": "web3_blockchain-234",
+    "domaine": "web3_blockchain",
+    "sous_theme": "account_abstraction",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Que sont les session keys dans un compte à abstraction de compte et quel compromis sécuritaire représentent-elles ?",
+    "reponse_reference": "Les session keys sont des clés temporaires à permissions restreintes (plafond de dépense, durées, contrats autorisés) que le compte principal autorise à signer en son nom. Elles fluidifient l'usage quotidien, notamment les jeux, en évitant de signer chaque transaction avec la clé maîtresse ; le compromis est qu'une clé de session volée peut agir dans les limites accordées, d'où des garde-fous stricts et une révocation immédiate.",
+    "mots_cles_attendus": [
+      "session keys",
+      "permissions restreintes",
+      "plafond",
+      "révocation",
+      "clé maîtresse"
+    ]
+  },
+  {
+    "id": "web3_blockchain-235",
+    "domaine": "web3_blockchain",
+    "sous_theme": "defi",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment MakerDAO protège-t-il ses liquidations contre les pics de volatilité via l'oracle OSM ?",
+    "reponse_reference": "L'OSM (Oracle Security Module) retarde d'une heure la publication des prix dans le système, empêchant qu'une chute éclair suivie d'un rebond ne déclenche des liquidations injustes. Ce délai laisse aussi le temps d'intervenir (arrêt d'urgence) en cas d'anomalie, mais il oblige à dimensionner les ratios de collatéralisation pour absorber une heure de dérive du marché.",
+    "mots_cles_attendus": [
+      "OSM",
+      "délai d'une heure",
+      "liquidations",
+      "ratio",
+      "urgence"
+    ]
+  },
+  {
+    "id": "web3_blockchain-236",
+    "domaine": "web3_blockchain",
+    "sous_theme": "reglementation",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une plateforme DeFi européenne propose des échanges, du prêt et un rendement sur stablecoins, sans entité juridique identifiable, en se revendiquant « code uniquement ». En quoi cette posture ne la protège pas face à MiCA ?",
+    "reponse_reference": "MiCA s'applique aux services sur crypto-actifs fournis à des clients de l'Union, qu'ils soient rendus par une société ou par un protocole décentralisé : les régulateurs analysent la substance (qui contrôle l'interface, perçoit des frais, détient des clés d'administration) plutôt que la forme juridique. Le « code only » ne dispense ni d'agrément, ni de KYC, ni des règles de communication, et les personnes derrière le front-end ou la gouvernance peuvent être tenues responsables.",
+    "mots_cles_attendus": [
+      "MiCA",
+      "substance",
+      "contrôle",
+      "agrément",
+      "responsabilité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-237",
+    "domaine": "web3_blockchain",
+    "sous_theme": "proof_of_stake",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Quelles attaques de réseau peuvent viser les validateurs d'un protocole PoS, au-delà du slashing ?",
+    "reponse_reference": "Un attaquant peut cibler la couche réseau : attaques par éclipse (isoler un validateur en saturant ses pairs), déni de service sur les producteurs de blocs, ou division du réseau (partition) pour faire voter les comités sur des vues différentes. Ces attaques ne compromettent pas les clés mais retardent la finalité, déclenchent l'inactivity leak et peuvent être combinées à des stratégies de réorganisation ou d'extraction de MEV.",
+    "mots_cles_attendus": [
+      "éclipse",
+      "partition",
+      "déni de service",
+      "finalité",
+      "pairs"
+    ]
+  },
+  {
+    "id": "web3_blockchain-238",
+    "domaine": "web3_blockchain",
+    "sous_theme": "zero_knowledge",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Qu'est-ce qu'un marché de preuves (proving market) et pourquoi est-il stratégique pour les rollups ZK ?",
+    "reponse_reference": "Un marché de preuves met en concurrence des prouveurs spécialisés qui produisent des preuves pour le compte des rollups, facturées à la tâche ou aux enchères, avec vérification avant paiement. Il évite à chaque rollup d'exploiter sa propre ferme de calcul, lisse les pics de charge et garantit la disponibilité des preuves, tout en soulevant des questions de centralisation et de censure si peu d'acteurs dominent le marché.",
+    "mots_cles_attendus": [
+      "marché de preuves",
+      "prouveurs",
+      "enchères",
+      "sous-traitance",
+      "disponibilité"
+    ]
+  },
+  {
+    "id": "web3_blockchain-239",
+    "domaine": "web3_blockchain",
+    "sous_theme": "dao",
+    "niveau": 12,
+    "type": "scenario",
+    "question": "Une DAO subit une attaque où l'attaquant délègue massivement des jetons empruntés à des adresses Sybil pour faire passer une proposition, puis retire tout juste après le vote. Quelles défenses combinées auraient pu l'arrêter ?",
+    "reponse_reference": "Un snapshot des pouvoirs de vote pris avant l'ouverture du vote aurait neutralisé les jetons empruntés ; un verrouillage des jetons votants ou une décroissance du pouvoir de délégation auraient rendu l'opération coûteuse. Enfin, un quorum élevé, un timelock d'exécution et un garde-fou de sécurité (conseil pouvant opposer un veto temporaire) auraient permis à la communauté de bloquer l'exécution de la proposition frauduleuse.",
+    "mots_cles_attendus": [
+      "snapshot",
+      "Sybil",
+      "verrouillage",
+      "timelock",
+      "veto"
+    ]
+  },
+  {
+    "id": "web3_blockchain-240",
+    "domaine": "web3_blockchain",
+    "sous_theme": "interoperabilite",
+    "niveau": 12,
+    "type": "definition",
+    "question": "Comment le protocole IBC permet-il à des chaînes indépendantes de communiquer sans passer par un pont central ?",
+    "reponse_reference": "IBC (Inter-Blockchain Communication) fait communiquer deux chaînes par des contrats légers mutuels : chacune vérifie directement les en-têtes et la finalité de l'autre, et les paquets transitent par des relais permissionless qui ne font que transporter des preuves. Il n'existe aucun intermédiaire de confiance central : la sécurité de chaque transfert repose sur le consensus des deux chaînes impliquées.",
+    "mots_cles_attendus": [
+      "IBC",
+      "clients légers",
+      "relais",
+      "paquets",
+      "consensus"
+    ]
+  }
+]
